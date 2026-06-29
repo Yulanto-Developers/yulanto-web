@@ -1,0 +1,44 @@
+"use client";
+
+import { SERVICE_CAPSULE_ITEMS } from "@/data/service-capsule-data";
+import { useThrowable } from "@/hooks/useThrowable";
+
+const AboutMeService = () => {
+    const sceneRef = useThrowable({ scrollGravity: false });
+
+    return (
+        <div className="px-capsule-area am-capsule-style">
+            <div className="container">
+                <div className="row">
+                    <div className="col-xl-12">
+                        <div className="px-capsule-inner p-relative">
+                            <div className="px-capsule-top-wrapper p-relative">
+                                {/* Title */}
+                                <div className="px-capsule-title-wrapper">
+                                    <span className="px-capsule-subtitle">About</span>
+                                    <h3 className="px-section-title ff-thunder fs-80">Toolbox</h3>
+                                </div>
+                                {/* Items */}
+                                <div data-px-throwable-scene="true" ref={sceneRef}>
+                                    <div className="px-capsule-item-wrapper">
+                                        {SERVICE_CAPSULE_ITEMS.map((item) => (
+                                            <p data-px-throwable-el="" key={item.id}>
+                                                <span
+                                                    className="px-capsule-item"
+                                                    style={{ width: item.width, height: item.height, backgroundColor: item.bg }}>
+                                                    {item.label}
+                                                </span>
+                                            </p>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default AboutMeService;

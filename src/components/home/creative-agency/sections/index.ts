@@ -1,0 +1,13 @@
+export { default as CreativeAgencyHero } from "./CreativeAgencyHero";
+export { default as CreativeAgencyTextSlider } from "./CreativeAgencyTextSlider";
+export { default as CreativeAgencyAbout } from "./CreativeAgencyAbout";
+export { default as CreativeAgencyService } from "./CreativeAgencyService";
+export { default as CreativeAgencyCapsule } from "./CreativeAgencyCapsule";
+export { default as CreativeAgencyProject } from "./CreativeAgencyProject";
+export { default as CreativeAgencyFunfact } from "./CreativeAgencyFunfact";
+export { default as CreativeAgencyTestimonial } from "./CreativeAgencyTestimonial";
+export { default as CreativeAgencyBrand } from "./CreativeAgencyBrand";
+export { default as CreativeAgencyStep } from "./CreativeAgencyStep";
+export { default as CreativeAgencyTeam } from "./CreativeAgencyTeam";
+export { default as CreativeAgencyAward } from "./CreativeAgencyAward";
+export { default as CreativeAgencySocial } from "./CreativeAgencySocial";

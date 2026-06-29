@@ -1,0 +1,10 @@
+export { default as ServiceBanner } from "./ServiceBanner";
+export { default as ServiceTextSlider } from "./ServiceTextSlider";
+export { default as ServiceAbout } from "./ServiceAbout";
+export { default as ServiceOfferings } from "../../../home/creative-agency/sections/CreativeAgencyService";
+export { default as ServiceCapsule } from "./ServiceCapsule";
+export { default as ServiceTestimonial } from "./ServiceTestimonial";
+export { default as ServiceBrand } from "../../../home/creative-agency/sections/CreativeAgencyBrand";
+export { default as ServiceStep } from "../../../home/creative-agency/sections/CreativeAgencyStep";
+export { default as ServiceFaq } from "./ServiceFaq";
+export { default as ServiceSocial } from "../../../home/creative-agency/sections/CreativeAgencySocial";

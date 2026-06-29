@@ -1,0 +1,188 @@
+import { blogDt } from "@/types/custom-dt";
+
+export const blogs: blogDt[] = [
+    {
+        id: 1,
+        title: "Keep Goals in Sight",
+        image: "/assets/img/project/project-2.jpg",
+        tags: ["Design", "Branding"],
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "James Carter",
+        date: "February 12, 2026",
+        comment: 12,
+    },
+    {
+        id: 2,
+        title: "Always Remember Your Goals!",
+        image: "/assets/img/project/project-1.jpg",
+        tags: ["UX", "Web experience"],
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Sophia Bennett",
+        date: "February 18, 2026",
+        comment: 9,
+    },
+    {
+        id: 3,
+        title: "Never Lose Purpose",
+        image: "/assets/img/project/project-3.jpg",
+        tags: ["AI Tools", "Design"],
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Daniel Brooks",
+        date: "March 01, 2026",
+        comment: 15,
+    },
+    {
+        id: 4,
+        title: "Vision Drives Action",
+        image: "/assets/img/project/project-4.jpg",
+        tags: ["Motion design", "3d modeling"],
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Olivia Harper",
+        date: "March 05, 2026",
+        comment: 7,
+    },
+    {
+        id: 5,
+        title: "Always Remember Your Goals!",
+        image: "/assets/img/project/project-5.jpg",
+        tags: ["Design", "UX"],
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Ethan Walker",
+        date: "March 10, 2026",
+        comment: 11,
+    },
+    {
+        id: 6,
+        title: "Never Lose Purpose",
+        image: "/assets/img/project/project-6.jpg",
+        tags: ["AI Tools", "Web experience"],
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Liam Anderson",
+        date: "March 14, 2026",
+        comment: 6,
+    },
+    //blog standard blog data start
+    {
+        id: 7,
+        type: "image",
+        image: "/assets/img/blog/blog-1.jpg",
+        title: "The role of social media in shaping society",
+        desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Phil Martinez",
+        designation: "Co-Founder of Pixora",
+        date: "March 15, 2026"
+    },
+    {
+        id: 8,
+        type: "video",
+        image: "/assets/img/blog/blog-2.jpg",
+        videoId: "VCPGMjCW0is",
+        title: "The role of social media in shaping society",
+        desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Devon Lane",
+        designation: "Co-Founder of Pixora",
+        date: "March 17, 2026"
+    },
+    {
+        id: 9,
+        type: "quote",
+        image: "/assets/img/blog/blog-standard/blog-s-4.jpg",
+        title: "Quote post",
+        desc: `Pixora created something better then I ecer could have imagined Dipiscing elit, sed do eiusmod`,
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Phil Martinez",
+        designation: "Floyd Miles",
+        date: "March 21, 2026"
+    },
+    {
+        id: 10,
+        type: "slider",
+        image: "/assets/img/blog/blog-3.jpg",
+        images: [
+            "/assets/img/blog/blog-1.jpg",
+            "/assets/img/blog/blog-3.jpg",
+            "/assets/img/blog/blog-4.jpg",
+        ],
+        title: "Fueling ambition and achieving your goals",
+        desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Jacob Jones",
+        designation: "Co-Founder of Pixora",
+        date: "March 18, 2026"
+    },
+    //blog standard blog data end
+    //related blog data start
+    {
+        id: 11,
+        image: "/assets/img/blog/blog-details/blog-rel-1.jpg",
+        category: "Studio News",
+        title: "Keep Goals in Sight",
+        desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Jacob Jones",
+        designation: "Co-Founder of Pixora",
+        date: "March 18, 2026"
+    },
+    {
+        id: 12,
+        image: "/assets/img/blog/blog-details/blog-rel-2.jpg",
+        category: "Studio News",
+        title: "Always Remember your Goals!",
+        desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Jacob Jones",
+        designation: "Co-Founder of Pixora",
+        date: "March 18, 2026"
+    },
+    {
+        id: 13,
+        image: "/assets/img/blog/blog-details/blog-rel-3.jpg",
+        category: "Studio News",
+        title: "Never Lose Purpose",
+        desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Jacob Jones",
+        designation: "Co-Founder of Pixora",
+        date: "March 18, 2026"
+    },
+    //minimal portfolio blog data start
+    {
+        id: 14,
+        image: "/assets/img/update/blog/bg.jpg",
+        category: "Graphics",
+        title:
+            "Dive deep into creative process design choices, and the tools",
+        desc: "Step inside the creative workflow and uncover how ideas evolve into polished designs. From brainstorming concepts to selecting the right tools, this guide reveals how thoughtful decisions shape impactful visual experiences.",
+        authorImg: "/assets/img/blog/blog-details/user-1.jpg",
+        authorName: "Alex Carter",
+        designation: "Senior Graphic Designer",
+        date: "February 12, 2026",
+    },
+    {
+        id: 15,
+        image: "/assets/img/update/blog/bg-2.jpg",
+        category: "Branding",
+        title:
+            "Stay updated with the latest design trends, favorite",
+        desc: "Explore the latest trends dominating the design industry, from bold typography to minimal branding. Stay informed and inspired with insights that help you keep your creative work fresh and competitive.",
+        authorImg: "/assets/img/blog/blog-details/user-2.jpg",
+        authorName: "Sophie Williams",
+        designation: "Brand Strategist",
+        date: "March 05, 2026",
+    },
+    {
+        id: 16,
+        image: "/assets/img/update/blog/bg-3.jpg",
+        category: "Illustration",
+        title:
+            "Detailed breakdowns of selected works, showcasing",
+        desc: "Get an inside look at carefully selected illustration projects. This article breaks down techniques, creative direction, and storytelling approaches that bring each artwork to life.",
+        authorImg: "/assets/img/blog/blog-details/user-3.jpg",
+        authorName: "Daniel Lee",
+        designation: "Illustration Artist",
+        date: "January 28, 2026",
+    },
+    //minimal portfolio blog data end
+];
