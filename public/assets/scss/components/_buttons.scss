@@ -142,14 +142,14 @@
 		padding: 7px 24px;
 		border-radius: 50px;
 		display: inline-block;
-		background: #F8F8F8;
+		background-color: var(--tp-common-px-orange);
 		letter-spacing: -0.6px;
 		text-transform: uppercase;
 		color: var(--tp-common-px-black);
 		&:hover{
 			color: var(--tp-common-px-white);
 			border-color: var(--tp-common-px-orange);
-			background-color: var(--tp-common-px-orange);
+			 background: linear-gradient(135deg, #53AE7D 0%, #275674 100%);
 		}
 	}
 }

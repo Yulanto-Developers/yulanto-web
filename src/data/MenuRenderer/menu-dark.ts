@@ -11,7 +11,7 @@ export const darkMenu: MenuItem[] = [
         title: "Light Version",
         links: [
           { label: "Startup Agency", href: "/" },
-          { label: "Design Studio", href: "/design-studio" },
+          { label: "Design Studio", href: "/home" },
           { label: "Creative Studio", href: "/creative-studio" },
           { label: "Modern Agency", href: "/modern-agency" },
           { label: "Creative Agency", href: "/creative-agency" },

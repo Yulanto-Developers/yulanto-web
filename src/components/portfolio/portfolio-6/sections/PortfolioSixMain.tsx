@@ -1,4 +1,4 @@
-import PortfolioCard from "@/components/home/design-studio/components/PortfolioCard";
+import PortfolioCard from "@/components/home/home/components/PortfolioCard";
 import { portfolioProjects } from "@/data/portfolio-projects";
 
 const PortfolioSixMain = () => {

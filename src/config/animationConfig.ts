@@ -9,7 +9,7 @@ import { aboutSkewAnimation, brandSkewAnimation, headerLogoAnimAnimation, initAw
 export const animationConfig: Record<string, (() => void)[]> = {
     //Light page animation
     "/startup-agency": [aboutSkewAnimation, brandSkewAnimation, initScrollSkewParallaxSections, textEffectAnimation],
-    "/design-studio": [portfolioPanelAnimation, textEffectAnimation],
+    "/home": [portfolioPanelAnimation, textEffectAnimation],
     "/modern-agency": [textEffectAnimation],
     "/creative-agency": [headerLogoAnimAnimation, textEffectAnimation, stepScrollPinAnimation],
     "/personal-portfolio": [initHoverImageAnimation],
