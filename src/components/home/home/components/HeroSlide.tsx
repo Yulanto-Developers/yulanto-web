@@ -1,5 +1,5 @@
 "use client";
-import { Navigation, Controller } from "swiper/modules";
+import { Navigation, Controller, Autoplay } from "swiper/modules"; // Added Autoplay import
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { useState, useRef } from "react";
@@ -31,10 +31,14 @@ const HeroSlide = () => {
             <div className="row justify-content-center">
                 <div className="col-lg-8">
                     <Swiper
-                        modules={[Navigation, Controller]}
+                        modules={[Navigation, Controller, Autoplay]} // Added Autoplay module here
                         slidesPerView={1}
                         centeredSlides={true}
                         loop={false} 
+                        autoplay={{
+                            delay: 5000, // 5 seconds interval
+                            disableOnInteraction: false, // Keeps autoplay running even after manual swipes
+                        }}
                         navigation={{
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
