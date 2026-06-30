@@ -1,6 +1,7 @@
 export interface MenuLink {
   label: string;
   href: string;
+  subLinks?: MenuLink[];
 }
 
 export interface MenuColumn {

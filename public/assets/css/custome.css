@@ -8,7 +8,7 @@
 }
 
 .dropdown-icon {
-    margin-left:7px;
+    margin-left: 7px;
     font-size: 12px;
     transition: transform 0.3s ease;
 }
@@ -27,7 +27,7 @@
 
 .submenu-icon {
     font-size: 12px;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
     padding-right: 2px;
 }
 
@@ -43,41 +43,273 @@
 
 
 /* child menu  */
-.has-submenu {
+/* Container adjustments for the top navigation */
+/* ==========================================================================
+   1. MAIN HEADER NAVIGATION NAVIGATION LINKS & ICON ANIMATIONS
+   ========================================================================== */
+
+/* .main-nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+} */
+
+.has-dropdown {
     position: relative;
 }
 
-.has-submenu > a {
+.menu-link {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 6px;
+    text-decoration: none;
 }
 
-.nested-icon {
-    font-size: 11px;
-    transition: .3s;
+.dropdown-icon {
+    margin-left: 7px;
+    font-size: 12px;
+    transition: transform 0.3s ease;
 }
 
-.has-submenu:hover > a .nested-icon {
-    transform: rotate(-90deg);
+/* Rotate Chevron Down on Main Menu Link Hover */
+.has-dropdown:hover>.menu-link .dropdown-icon {
+    transform: rotate(180deg);
 }
 
-.nested-submenu {
+
+/* ==========================================================================
+   DYNAMIC SLIDING DRAWER SUBMENU
+   ========================================================================== */
+
+/* The main dropdown box wrapper starts out NARROW */
+.has-dropdown .split-dropdown-menu.tp-submenu {
     position: absolute;
-    left: 100%;
-    top: 0;
-    min-width: 240px;
-    background: #fff;
+    top: 100%;
+    left: 0;
+    width: 260px !important;
+    /*Initialnarrowwidth(LeftSidebaronly)*/
+    height: 280px !important;
+    /*Consistentstructuralheight*/
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    padding: 0 !important;
+    margin: 0 !important;
     visibility: hidden;
     opacity: 0;
-    transition: .3s;
-    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transform: translateY(15px);
+    /*Added"width"tothetransitionslistforasmoothexpandingeffect*/
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease, visibility 0.3s ease, width 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    z-index: 9999 !important;
+    overflow: hidden !important;
+    /* Crucial to hide the hidden pane contents */
+    -webkit-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), ;
+    -moz-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), ;
+    -ms-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), ;
+    -o-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), ;
 }
 
-.has-submenu:hover > .nested-submenu {
-    visibility: visible;
-    opacity: 1;
+/* On header menu item hover, display the initial narrow box */
+.has-dropdown:hover>.split-dropdown-menu.tp-submenu {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
+/* CRITICAL: When hovering over an item with sublinks, EXPAND the total container width! */
+.split-dropdown-menu.tp-submenu:has(.sidebar-item:hover .dropdown-content-pane) {
+    width: 680px !important;
+    /* Expands smoothly to make space for the right panel */
+}
+
+/* Left Sidebar - Always stable on the left */
+.split-dropdown-menu .dropdown-sidebar {
+    width: 260px !important;
+    /* Hard-coded absolute pixel width */
+    flex: 0 0 260px !important;
+    /* Prevents collapsing/flexing */
+    background-color: #fafbfe !important;
+    padding: 24px 0 !important;
+    border-right: 1px solid #edf2f7 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.split-dropdown-menu .sidebar-item {
+    position: static !important;
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.split-dropdown-menu .sidebar-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 14px 24px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    color: #4a5568 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    transition: color 0.2s ease, background-color 0.2s ease !important;
+}
+
+.split-dropdown-menu .sidebar-arrow {
+    font-size: 11px !important;
+    color: #a0aec0 !important;
+    transition: transform 0.2s ease, color 0.2s ease !important;
+}
+
+.split-dropdown-menu .sidebar-item:hover .sidebar-link {
+    color: #53ae7d !important;
+    background-color: #ffffff !important;
+}
+
+.split-dropdown-menu .sidebar-item:hover .sidebar-arrow {
+    color: #53ae7d !important;
+    transform: translateX(3px) !important;
+}
+
+/* Right Content Pane Drawer */
+.split-dropdown-menu .dropdown-content-pane {
+    position: absolute !important;
+    top: 0 !important;
+    left: 260px !important;
+    /* Begins exactly where the sidebar finishes */
+    width: 420px !important;
+    /* Explicit space allocation (680px - 260px) */
+    height: 100% !important;
+    background: #ffffff !important;
+    padding: 32px 36px !important;
+    box-sizing: border-box !important;
+    border-radius: 0 12px 12px 0 !important;
+    list-style: none !important;
+    margin: 0 !important;
+
+    /* Fades and slides cleanly into view */
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateX(-10px) !important;
+    /* Subtle slide-in direction */
+    transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.2s ease !important;
+}
+
+/* Show the pane content beautifully when parent item row is hovered */
+.split-dropdown-menu .sidebar-item:hover .dropdown-content-pane {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
+    transition-delay: 0.05s !important;
+    /* Gives the container a tiny headstart to open */
+}
+
+/* Header Text Title Components */
+.split-dropdown-menu .pane-title {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    color: #1a202c !important;
+    margin: 0 0 20px 0 !important;
+    padding-bottom: 8px !important;
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.split-dropdown-menu .pane-title::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    background-color: rgb(39, 86, 116) !important;
+}
+
+.split-dropdown-menu .pane-links-list {
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.split-dropdown-menu .pane-link {
+    font-size: 15px !important;
+    color: #4a5568 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease, transform 0.2s ease !important;
+    display: block !important;
+    white-space: nowrap !important;
+}
+
+.split-dropdown-menu .pane-link:hover {
+    color: #53ae7d !important;
+    transform: translateX(4px) !important;
+}
 
 /* child menu  ends */
+
+
+
+
+/* Alignment for the inner content block containing the double chevron icon */
+.split-dropdown-menu .sidebar-link-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Clean gap spacing between icon and text string */
+}
+
+/* Base style for the icon */
+.split-dropdown-menu .submenu-icon {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    color: #a0aec0;
+    /* Matches muted default look */
+}
+
+/* Hover effect on double-chevrons */
+.split-dropdown-menu .sidebar-item:hover .submenu-icon {
+    transform: translateX(4px);
+    color: rgb(39, 86, 116);
+    /* Changes to theme orange matching your reference image */
+}
+
+.icon-color {
+    color: #53ae7d;
+}
+
+.px-line-lr:hover .icon-color {
+    color: #1a202c;
+}
+
+/* header start */
+.header-fixed {
+    transition: transform .35s ease;
+}
+
+.header-show {
+    transform: translateY(0);
+}
+
+.header-hide {
+    transform: translateY(-100%);
+}
+
+
+/* header ends */
+
+.innerText{
+    font-size: 14px !important;
+}

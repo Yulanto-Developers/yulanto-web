@@ -9,12 +9,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const PersonalPortfolioHeader = () => {
   const { toggleMainSidebar } = useGlobalContext();
   const isDarkTheme = useIsDarkRoute();
   const [sticky, setSticky] = React.useState(false);
+  const [showHeader, setShowHeader] = React.useState(true);
 
   // Apply theme-specific dropdown background styles (light or dark)
   const dropdownBackgroundCls = isDarkTheme
@@ -36,17 +37,45 @@ const PersonalPortfolioHeader = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  React.useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Sticky background after scrolling 100px
+      setSticky(currentScrollY > 100);
+
+      // Always show header near the top
+      if (currentScrollY < 100) {
+        setShowHeader(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down → hide
+        setShowHeader(false);
+      } else {
+        // Scrolling up → show
+        setShowHeader(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
       <header>
         <div
           className={`
-        px-header-6-ptb
-        px-header-style-black
-        header-fixed
-        ${sticky ? "sticky-bg" : ""}
-    `}
+    px-header-6-ptb
+    px-header-style-black
+    header-fixed
+    ${sticky ? "sticky-bg" : ""}
+    ${showHeader ? "header-show" : "header-hide"}
+  `}
         >
           <div className="container-fluid container-1870 ps-5 pe-5">
             <div className="row align-items-center">
@@ -77,14 +106,15 @@ const PersonalPortfolioHeader = () => {
                       height={75}
                       src="/assets/img/logo/Yulanto-logo.png"
                       alt="logo"
-                    style={{ marginLeft: "-75%" }}/>
+                      style={{ marginLeft: "-75%" }} />
                   </Link>
                 </div>
               </div>
               <div className="col-4">
                 <div className="px-header-6-action d-flex justify-content-end align-items-center">
                   <div className="px-header-6-info d-none d-xl-block">
-                    <Link className="px-line-lr" href="mailto:info@yulanto.com">
+                    <Link className="px-line-lr d-flex align-items-center gap-1" href="mailto:info@yulanto.com">
+                      <FontAwesomeIcon icon={faEnvelope} className="icon-color" />
                       info@yulanto.com
                     </Link>
                   </div>
@@ -104,8 +134,9 @@ const PersonalPortfolioHeader = () => {
                       className="px-header-bar tp-offcanvas-open-btn"
                       aria-label="Open sidebar menu"
                     >
-                      <span></span>
-                      <span></span>
+                      <FontAwesomeIcon icon={faEnvelope} />
+                      {/* <span></span>
+                      <span></span> */}
                     </button>
                   </div>
                 </div>

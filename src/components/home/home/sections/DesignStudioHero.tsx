@@ -9,7 +9,7 @@ const heroContent = [
         col: "col-lg-2", img: "/assets/img/hero/s-1.jpg",
         title: "Boost Website Traffic to Your <br/> Business and Generate Revenue.",
         subtitle: "You Are In The Right Spot",
-        spacingCls: "", alignCls: "justify-content-start"
+        spacingCls: "pl-10", alignCls: "justify-content-start"
     },
     {
         col: "col-lg-4", img: "/assets/img/hero/hero-2-2.jpg",
@@ -19,32 +19,32 @@ const heroContent = [
     {
         col: "col-lg-4", img: "/assets/img/hero/hero-2-3.jpg",
         title: " ", subtitle: " ",
-        spacingCls: "pr-80", alignCls: "justify-content-end"
+        spacingCls: "pr-10", alignCls: "justify-content-end"
     },
     {
-        col: "col-lg-2", img: "/assets/img/hero/hero-2-4.jpg",
+        col: "col-lg-2", img: "/assets/img/hero/s-1.jpg",
         title: "A Professional Approach <br/> in Every Aspect of Our Work.", subtitle: "Awesome Website Creation in Chennai For Your Business",
-        spacingCls: "", alignCls: "justify-content-end"
+        spacingCls: "pl-10", alignCls: "justify-content-end"
     },
     {
-        col: "col-lg-3", img: "/assets/img/hero/hero-2-5.jpg",
-        title: "Yulanto", subtitle: "Production, Design Studio",
-        spacingCls: "pr-85", alignCls: "justify-content-end"
+        col: "col-lg-3", img: "/assets/img/hero/s-1.jpg",
+        title: "Cultivate Your Business Brand <br/>and Reputation Worldwide.", subtitle: "Handle Your Business With Experienced Web Experts in Chennai",
+        spacingCls: "pr-10", alignCls: "justify-content-end"
     },
     {
-        col: "col-lg-3", img: "/assets/img/hero/hero-2-6.jpg",
-        title: "Yulanto", subtitle: "Storytelling, Digital Agency",
-        spacingCls: "pl-105", alignCls: "justify-content-start"
+        col: "col-lg-3", img: "/assets/img/hero/s-1.jpg",
+        title: "Enhance Your Business<br />Presence and Reliability Online.", subtitle: "Transform Your Business Into The Next Level",
+        spacingCls: "pl-10", alignCls: "justify-content-start"
     },
     {
-        col: "col-lg-3", img: "/assets/img/hero/hero-2-7.jpg",
-        title: "Yulanto", subtitle: "Media, Branding Studio",
-        spacingCls: "pl-100", alignCls: "justify-content-start"
+        col: "col-lg-3", img: "/assets/img/hero/s-1.jpg",
+        title: "Our web designers commit to take your business", subtitle: "innovative strategies, dedication and effort",
+        spacingCls: "pl-10", alignCls: "justify-content-start"
     },
     {
-        col: "col-lg-3", img: "/assets/img/hero/hero-2-8.jpg",
-        title: "Yulanto", subtitle: "Design, Creative Studio",
-        spacingCls: "pl-100", alignCls: "justify-content-start"
+        col: "col-lg-3", img: "/assets/img/hero/s-1.jpg",
+        title: " We specialize in guiding you towards the right path", subtitle: "create websites in Chennai with a multitude of impressive features",
+        spacingCls: "pl-10", alignCls: "justify-content-start"
     },
 ];
 
@@ -68,7 +68,7 @@ const Hero = () => {
 
                 return nextIndex;
             });
-        }, 100000); // 3 seconds
+        }, 300000); // 3 seconds
 
         return () => clearInterval(interval);
     }, []);
@@ -105,7 +105,7 @@ const Hero = () => {
                                                 <span dangerouslySetInnerHTML={{ __html: item.title }} />
                                             </div>
                                             <div className="fix">
-                                                <span dangerouslySetInnerHTML={{ __html: item.subtitle }} />
+                                                <span  dangerouslySetInnerHTML={{ __html: item.subtitle }} />
                                             </div>
                                         </div>
                                     </div>

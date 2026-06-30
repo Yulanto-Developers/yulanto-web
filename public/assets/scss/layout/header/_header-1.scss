@@ -249,7 +249,7 @@
             display: inline-block;
             background: #bababa86;
             letter-spacing: -0.6px;
-            text-transform: uppercase;
+            text-transform: capitalize;
             color: var(--tp-common-px-black);
             transition:
               background 0.3s ease,
@@ -261,12 +261,12 @@
             }
 
             @media #{$xl} {
-              font-size: 12px;
+              font-size: 14px;
               padding: 4px 10px;
             }
 
             &:hover {
-              background: linear-gradient(135deg, #53ae7d 0%, #275674 100%);
+              background: linear-gradient(135deg, #53ae7d 0%, rgb(39, 86, 116) 100%);
               color: #ffffff;
             }
           }

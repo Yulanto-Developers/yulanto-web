@@ -124,7 +124,7 @@
     &-2{
         &-thumb{
             display: flex;
-            width: 170px;
+            // width: 170px;
             justify-content: center; 
             align-items: center;
             filter: saturate(0);
@@ -133,7 +133,8 @@
             transform-origin: center center;
             transition: all 1s cubic-bezier(.19,1,.22,1);
             & img{
-                height: 100%;
+                // height: 100%;
+                width: 250px;
                 object-fit: cover;
                 transform: scale(1.2);
                 transform-origin: center center;
@@ -155,8 +156,8 @@
             overflow: hidden;
             text-align: center;
             & span {
-                font-weight: 700;
-                font-size: 30px;
+                // font-weight: 700;
+                font-size: 19px;
                 line-height: 1.07;
                 display: inline-block;
                 letter-spacing: -0.05em;
