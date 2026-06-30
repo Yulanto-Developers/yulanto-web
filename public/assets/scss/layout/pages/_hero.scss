@@ -127,7 +127,7 @@
             // width: 170px;
             justify-content: center; 
             align-items: center;
-            filter: saturate(0);
+            // filter: saturate(0);
             overflow: hidden;
             transform: scale(1);
             transform-origin: center center;
@@ -141,7 +141,7 @@
                 transition: transform 1s cubic-bezier(.19,1,.22,1);
             }
             &:hover{
-                filter: saturate(1);
+                // filter: saturate(1);
                 transform: scale(1.2);
                 & img {
                     transform: scale(1);

@@ -239,7 +239,7 @@
     list-style: none !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 10px !important;
+    gap: 1px !important;
     padding: 0 !important;
     margin: 0 !important;
 }
@@ -312,4 +312,8 @@
 
 .innerText{
     font-size: 14px !important;
+}
+
+.tp-header-dropdown nav ul li .tp-submenu li a{
+    padding: 9px 18px;
 }
