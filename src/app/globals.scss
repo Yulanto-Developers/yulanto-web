@@ -7,6 +7,7 @@
 @forward '../../public/assets/css/nice-select.css';
 @forward "react-toastify/dist/ReactToastify.css";
 @import 'react-photo-view/dist/react-photo-view.css';
+@import '../../public/assets/css/custome.css';
 
 :root {
     /* Default = Light Theme */
@@ -105,11 +106,12 @@
 
 //service 1 faq section style
 .accordion-body-wrapper {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.45s ease;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease;
 }
 
 .accordion-body-wrapper.open {
-  max-height: 500px; /* or 1000px if content big */
+    max-height: 500px;
+    /* or 1000px if content big */
 }

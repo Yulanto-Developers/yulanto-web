@@ -1,0 +1,18 @@
+/* arrow animation */
+
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-icon {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate on hover */
+.has-dropdown:hover>.menu-link .dropdown-icon {
+    transform: rotate(180deg);
+}

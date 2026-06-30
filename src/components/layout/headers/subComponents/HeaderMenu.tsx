@@ -4,6 +4,8 @@ import { darkMenu } from "@/data/MenuRenderer/menu-dark";
 import { lightMenu } from "@/data/MenuRenderer/menu-light";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
 import { MenuItem } from "@/types/menu-dt";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function HeaderMenu() {
     const isDark = useIsDarkRoute();
@@ -13,7 +15,19 @@ export default function HeaderMenu() {
         <ul>
             {menu.map((item) => (
                 <li key={item.label} className={`has-dropdown ${item.isLastMenu ? 'tp-menu-last' : ''}`}>
-                    <a href={item.href} style={{marginRight:"4px"}}>{item.label}</a>
+                    <a
+                        href={item.href}
+                        className="menu-link"
+                    >
+                        {item.label}
+
+                        {item.type === "dropdown" && (
+                            <FontAwesomeIcon
+                                icon={faChevronDown}
+                                className="dropdown-icon"
+                            />
+                        )}
+                    </a>
 
                     {item.type === "mega" && (
                         <div className="tp-submenu submenu px-megamenu">
