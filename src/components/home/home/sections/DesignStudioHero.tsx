@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const heroContent = [
     {
-        col: "col-lg-2", img: "/assets/img/hero/hero-2-1.jpg",
+        col: "col-lg-2", img: "/assets/img/hero/s-1.jpg",
         title: "Yulanto", subtitle: "Branding, Digital Studio",
         spacingCls: "", alignCls: "justify-content-start"
     },
