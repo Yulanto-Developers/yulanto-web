@@ -42,6 +42,7 @@ export const lightMenu: MenuItem[] = [
       { label: "Our Philosophy & Focus", href: "/" },
       { label: "Why Choose Us", href: "/" },
     ],
+
   },
 
   {

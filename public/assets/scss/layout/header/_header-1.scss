@@ -1,4 +1,5 @@
 @use "../../utils" as *;
+
 /*----------------------------------------*/
 /*  3.1 Header Style 1
 /*----------------------------------------*/
@@ -9,8 +10,9 @@
   right: 0;
   z-index: 9;
   width: 100%;
-//   border-bottom: 1px dotted #bcbcbc;
+  //   border-bottom: 1px dotted #bcbcbc;
 }
+
 .header-fixed {
   position: fixed;
   top: 0;
@@ -18,6 +20,7 @@
   right: 0;
   width: 100%;
   z-index: 9;
+
   &::after {
     position: absolute;
     opacity: 0;
@@ -37,82 +40,101 @@
     box-shadow: 0 1px 3px 0 rgba(19, 19, 22, 0.08);
     animation: 0.95s ease 0s normal forwards 1 running headerSlideUp;
     -webkit-animation: 0.95s ease 0s normal forwards 1 running headerSlideUp;
+
     @media #{$lg,$md,$xs} {
       top: 0;
       height: 100%;
     }
   }
+
   &.sticky-bg {
     transition: 0.3s;
+
     &::after {
-    //   opacity: 1;
+      //   opacity: 1;
       visibility: visible;
       transition: 0.3s ease-in-out;
       animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
       -webkit-animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
     }
+
     & .px-header-logo {
       padding-top: 25px;
       transition: 0.3s;
+
       @media #{$lg,$md,$xs} {
         padding-top: 0;
       }
+
       &.px-logo-pt {
         padding-top: 0;
       }
     }
   }
+
   &.px-header-2-area {
     @media #{$xs} {
       padding-top: 15px;
     }
+
     &::after {
       display: none;
     }
+
     &.sticky-bg .px-header-logo {
       padding-top: 0;
       transition: 0.3s;
     }
   }
 }
+
 .px-header-logo {
   @media #{$lg,$md,$xs} {
     padding-top: 0;
   }
+
   &-anim {
     transform-origin: top left;
   }
 }
+
 .px-header-6-ptb {
   border-bottom: 2px dotted #bcbcbc;
 }
+
 .px-header {
   &-ptb {
     @media #{$lg,$md,$xs} {
       padding: 15px 0;
     }
   }
+
   &-menu {
-    & > nav {
-      & > ul {
-        & > li {
+    &>nav {
+      &>ul {
+        &>li {
           display: inline-block;
           list-style-type: none;
+
           &:not(:last-child) {
             margin-right: 35px;
+
             @media #{$xl} {
               margin-right: 10px;
             }
+
             @media #{$lg} {
               margin-right: 20px;
             }
           }
+
           & a {
             padding: 30px 0;
             font-weight: 600;
             font-size: 16px;
             display: inline-block;
             color: var(--tp-common-px-white);
+
             @media #{$xl} {
               font-size: 15px;
             }
@@ -120,11 +142,12 @@
         }
       }
     }
+
     &.tp-header-dropdown {
       & nav {
         & ul {
           & li.has-dropdown {
-            & > a {
+            &>a {
               &::after {
                 color: var(--tp-common-px-white);
               }
@@ -134,17 +157,20 @@
       }
     }
   }
+
   &-bar {
-    margin-left: 40px;
+    margin-left: 20px;
+
     & span {
       margin: 8px auto;
-      width: 60px;
+      width: 30px;
       height: 2px;
       display: block;
       transform: translateY(5px);
       background-color: var(--tp-common-px-white);
     }
   }
+
   &-2 {
     &-bar {
       & button {
@@ -156,6 +182,7 @@
         display: inline-block;
         border-radius: 50%;
         background-color: var(--tp-common-px-black);
+
         & span {
           margin: 8px auto;
           width: 26px;
@@ -166,15 +193,17 @@
       }
     }
   }
+
   &-style-black {
     & .px-header-menu {
       & nav {
-        & > ul {
-          & > li {
-            & > a {
+        &>ul {
+          &>li {
+            &>a {
               text-transform: uppercase;
               color: var(--tp-common-px-black);
             }
+
             &.has-dropdown {
               & a {
                 &::after {
@@ -186,6 +215,7 @@
         }
       }
     }
+
     & .px-header-bar span {
       background-color: var(--tp-common-px-black);
     }
@@ -198,18 +228,20 @@
       padding: 15px 0;
     }
   }
+
   &-menu {
     & nav {
-      & > ul {
-        & > li {
+      &>ul {
+        &>li {
           // margin: 20px 2px;
           display: inline-block;
           list-style-type: none;
 
           @media #{$x3l,$xxl,$xl} {
-            margin: 20px 1px;
+            margin: 25px 5px;
           }
-          & > a {
+
+          &>a {
             font-size: 15px;
             font-weight: 500;
             padding: 4px 10px;
@@ -222,14 +254,17 @@
             transition:
               background 0.3s ease,
               color 0.3s ease;
+
             @media #{$xxl} {
               font-size: 14px;
               padding: 4px 10px;
             }
+
             @media #{$xl} {
               font-size: 12px;
               padding: 4px 10px;
             }
+
             &:hover {
               background: linear-gradient(135deg, #53ae7d 0%, #275674 100%);
               color: #ffffff;
@@ -238,12 +273,13 @@
         }
       }
     }
+
     &.tp-header-dropdown {
       & nav {
         & ul {
           & li {
             &.has-dropdown {
-              & > {
+              &> {
                 & a {
                   &::after {
                     content: none;
@@ -256,6 +292,7 @@
       }
     }
   }
+
   &-info {
     & a {
       font-size: 15px;

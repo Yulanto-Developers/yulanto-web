@@ -7,7 +7,8 @@ import Link from "next/link";
 const heroContent = [
     {
         col: "col-lg-2", img: "/assets/img/hero/s-1.jpg",
-        title: "Yulanto", subtitle: "Branding, Digital Studio",
+        title: "Boost Website Traffic to Your <br/> Business and Generate Revenue.",
+        subtitle: "You Are In The Right Spot",
         spacingCls: "", alignCls: "justify-content-start"
     },
     {
@@ -22,7 +23,7 @@ const heroContent = [
     },
     {
         col: "col-lg-2", img: "/assets/img/hero/hero-2-4.jpg",
-        title: "Yulanto", subtitle: "Branding, Creative Agency",
+        title: "A Professional Approach <br/> in Every Aspect of Our Work.", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "", alignCls: "justify-content-end"
     },
     {
@@ -56,18 +57,18 @@ const Hero = () => {
         const interval = setInterval(() => {
             setActiveIndex((prevIndex) => {
                 let nextIndex = (prevIndex + 1) % heroContent.length;
-                
+
                 // Optional: If you want the auto-play to skip index 1 and 2 entirely 
                 // because they have empty text, uncomment the lines below:
-                
+
                 while (nextIndex === 1 || nextIndex === 2) {
                     nextIndex = (nextIndex + 1) % heroContent.length;
                 }
-                
-                
+
+
                 return nextIndex;
             });
-        }, 3000); // 3 seconds
+        }, 100000); // 3 seconds
 
         return () => clearInterval(interval);
     }, []);
@@ -101,10 +102,10 @@ const Hero = () => {
                                         </div>
                                         <div className="px-hero-2-content text-center z-index-1">
                                             <div className="fix">
-                                                <span>{item.title}</span>
+                                                <span dangerouslySetInnerHTML={{ __html: item.title }} />
                                             </div>
                                             <div className="fix">
-                                                <span>{item.subtitle}</span>
+                                                <span dangerouslySetInnerHTML={{ __html: item.subtitle }} />
                                             </div>
                                         </div>
                                     </div>

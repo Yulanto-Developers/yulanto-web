@@ -5,7 +5,8 @@ import { lightMenu } from "@/data/MenuRenderer/menu-light";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
 import { MenuItem } from "@/types/menu-dt";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faAnglesRight, } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function HeaderMenu() {
     const isDark = useIsDarkRoute();
@@ -56,7 +57,13 @@ export default function HeaderMenu() {
                         <ul className="tp-submenu submenu">
                             {item.links?.map((link, index) => (
                                 <li key={`${link.href}-${index}`}>
-                                    <a href={link.href}>{link.label}</a>
+                                    <a href={link.href}>
+                                        <FontAwesomeIcon
+                                            icon={faAnglesRight}
+                                            className="submenu-icon"
+                                        />
+                                        {link.label}
+                                    </a>
                                 </li>
                             ))}
                         </ul>
