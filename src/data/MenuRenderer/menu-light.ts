@@ -1,3 +1,5 @@
+import { MenuItem } from "@/types/menu-dt";
+
 export const lightMenu: MenuItem[] = [
   {
     id: 1,
