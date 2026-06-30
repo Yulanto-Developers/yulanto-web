@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from 'react';
 import PrimaryOffCanvas from "@/components/offcanvas/PrimaryOffCanvas";
 import HeaderMenu from "./subComponents/HeaderMenu";
 import useGlobalContext from "@/hooks/useContext";
@@ -8,7 +9,6 @@ import Link from "next/link";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react";
 
 const PersonalPortfolioHeader = () => {
   const { toggleMainSidebar } = useGlobalContext();

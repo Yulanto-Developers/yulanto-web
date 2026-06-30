@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Pixora || Creative Portfolio Nextjs Template",
-  description: "A modern creative portfolio template built with Next.js.",
+  title: "Yulanto Web Creation",
+  description: "Web Design and Development Company",
   icons:'/assets/img/logo/favicon.png'
 };
 

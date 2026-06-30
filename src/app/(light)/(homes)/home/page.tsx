@@ -10,7 +10,7 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Design Studio - Creative Portfolio Nextjs Template",
+  title: "Yulanto - Home",
 };
 const page = () => {
   return (
