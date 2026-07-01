@@ -7,7 +7,7 @@ import Link from "next/link";
 const heroContent = [
     {
         col: "col-lg-2", img: "/assets/img/hero/s-1.jpg",
-        title: "Boost Website Traffic to Your <br/> Business and Generate Revenue.",
+        title: "Boost Website Traffic to Your Business and Generate Revenue.",
         subtitle: "You Are In The Right Spot",
         spacingCls: "pl-10", alignCls: "justify-content-start"
     },
@@ -23,17 +23,17 @@ const heroContent = [
     },
     {
         col: "col-lg-2", img: "/assets/img/hero/s-1.jpg",
-        title: "A Professional Approach <br/> in Every Aspect of Our Work.", subtitle: "Awesome Website Creation in Chennai For Your Business",
+        title: "A Professional Approach  in Every Aspect of Our Work.", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pl-10", alignCls: "justify-content-end"
     },
     {
         col: "col-lg-3", img: "/assets/img/hero/s-1.jpg",
-        title: "Cultivate Your Business Brand <br/>and Reputation Worldwide.", subtitle: "Handle Your Business With Experienced Web Experts in Chennai",
+        title: "Cultivate Your Business Brand and Reputation Worldwide.", subtitle: "Handle Your Business With Experienced Web Experts in Chennai",
         spacingCls: "pr-10", alignCls: "justify-content-end"
     },
     {
         col: "col-lg-3", img: "/assets/img/hero/s-1.jpg",
-        title: "Enhance Your Business<br />Presence and Reliability Online.", subtitle: "Transform Your Business Into The Next Level",
+        title: "Enhance Your Business Presence and Reliability Online.", subtitle: "Transform Your Business Into The Next Level",
         spacingCls: "pl-10", alignCls: "justify-content-start"
     },
     {
@@ -43,7 +43,7 @@ const heroContent = [
     },
     {
         col: "col-lg-3", img: "/assets/img/hero/s-1.jpg",
-        title: " We specialize in guiding you towards the right path", subtitle: "create websites in Chennai with a multitude of impressive features",
+        title: " We specialize in guiding you towards the right path", subtitle: "create websites in Chennai with a multitude features",
         spacingCls: "pl-10", alignCls: "justify-content-start"
     },
 ];
@@ -105,13 +105,16 @@ const Hero = () => {
                                                 <span dangerouslySetInnerHTML={{ __html: item.title }} />
                                             </div>
                                             <div className="fix">
-                                                <span  dangerouslySetInnerHTML={{ __html: item.subtitle }} />
+                                                <span className="desc" dangerouslySetInnerHTML={{ __html: item.subtitle }} />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             );
                         })}
+                        <div className="text-center">
+                            <Link href='/' className="button-style">Ask Pricing</Link>
+                        </div>
                     </div>
                 </div>
             </div>

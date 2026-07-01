@@ -125,7 +125,7 @@
 
 /* CRITICAL: When hovering over an item with sublinks, EXPAND the total container width! */
 .split-dropdown-menu.tp-submenu:has(.sidebar-item:hover .dropdown-content-pane) {
-    width: 680px !important;
+    width: 600px !important;
     /* Expands smoothly to make space for the right panel */
 }
 
