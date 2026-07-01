@@ -178,17 +178,18 @@
 
         &-content {
             position: absolute;
-            top: 50;
-            left: 0;
+            top: 5%;
+            left: 25%;
             right: 0;
             overflow: hidden;
             text-align: center;
+            width: 700px;
 
 
             & span {
                 font-weight: 700;
-                font-size: 23px;
-                line-height: 1.5;
+                font-size: 30px;
+                line-height: 1.35;
                 display: inline-block;
                 letter-spacing: -0.02em;
                 // text-transform: uppercase;
@@ -197,7 +198,7 @@
                 animation: text_upper 1s cubic-bezier(.19, 1, .22, 1) forwards;
 
                 &.desc {
-                    font-size: 18px;
+                    font-size: 22px;
                     color: #000;
                     line-height: 1.2;
                     font-weight: normal;
@@ -875,10 +876,18 @@
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
-    -o-border-radius: 50px;
+    -o-border-radius: 50px; 
+   
 }
 
 .button-style:hover {
     color: #fff;
     background: linear-gradient(135deg, #53ae7d 0%, rgb(39, 86, 116) 100%);
+}
+
+.btn-partent{
+ position: absolute;
+    top: 32.5%;
+    left: 0;
+    
 }

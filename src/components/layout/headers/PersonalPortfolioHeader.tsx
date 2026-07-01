@@ -77,7 +77,7 @@ const PersonalPortfolioHeader = () => {
     ${showHeader ? "header-show" : "header-hide"}
   `}
         >
-          <div className="container-fluid container-1870 ps-sm-5 pe-4 pe-xl-5">
+          <div className="container-fluid container-1870 pe-3">
             <div className="row align-items-center">
               <div className="col-6">
                 <div
@@ -102,8 +102,8 @@ const PersonalPortfolioHeader = () => {
                 <div className="px-header-logo d-none d-xl-block">
                   <Link href="/">
                     <Image
-                      width={170}
-                      height={75}
+                      width={177} //170
+                      height={85} //75
                       src="/assets/img/logo/Yulanto-logo.png"
                       alt="logo"
                       style={{ marginLeft: "-50%" }} />

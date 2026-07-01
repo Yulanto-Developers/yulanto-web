@@ -68,7 +68,7 @@ const Hero = () => {
 
                 return nextIndex;
             });
-        }, 3000); // 3 seconds
+        }, 300000); // 3 seconds
 
         return () => clearInterval(interval);
     }, []);
@@ -77,7 +77,7 @@ const Hero = () => {
         <div className="px-hero-2-area pt-120 pb-20">
             <div className="px-hero-2-main d-none d-xl-block mb-110 p-relative">
                 <div className="container container-1630">
-                    <div className="row">
+                    <div className="row pt-50">
                         {heroContent.map((item, index) => {
                             const isActive = activeIndex === index;
                             const shouldHideImage = index === 1 || index === 2;
@@ -112,7 +112,7 @@ const Hero = () => {
                                 </div>
                             );
                         })}
-                        <div className="text-center">
+                        <div className="text-center btn-partent">
                             <Link href='/' className="button-style">Ask Pricing</Link>
                         </div>
                     </div>
