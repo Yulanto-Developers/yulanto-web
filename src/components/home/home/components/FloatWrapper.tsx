@@ -10,9 +10,12 @@ export default function FloatingActionsWrapper() {
   };
 
   return (
-    <FloatingActions 
-      whatsappNumber="911234567890" 
-      onChatClick={handleChatOpen} 
-    />
+    // <FloatingActions 
+    //   whatsappNumber="911234567890" 
+    //   onChatClick={handleChatOpen} 
+    // />
+    <div>
+      eror
+      </div>
   );
 }

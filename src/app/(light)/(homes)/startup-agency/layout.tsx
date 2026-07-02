@@ -1,5 +1,5 @@
 
-import FloatingActions from "@/components/home/home/components/FloatingIcon";
+// import FloatingActions from "@/components/home/home/components/FloatingIcon";
 import { MainFooter, StartupAgencyHeader } from "@/components/layout";
 import { ClientProviders } from "@/providers";
 
@@ -16,8 +16,8 @@ export default function StartupAgencyLayout({ children }: {
                 <div id="smooth-wrapper" style={{ backgroundColor: "#f5f5f5" }}>
                     <div id="smooth-content">
                         {children}
-                        <FloatingActions whatsappNumber="911234567890"
-                            onChatClick={handleChatOpen} />
+                        {/* <FloatingActions whatsappNumber="911234567890"
+                            onChatClick={handleChatOpen} /> */}
                         <MainFooter />
                     </div>
                 </div>
