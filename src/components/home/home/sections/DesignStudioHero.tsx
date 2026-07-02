@@ -3,6 +3,11 @@ import HeroSlide from "../components/HeroSlide";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Autoplay, FreeMode } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { text_slider_params } from "@/constant";
+import { SLIDER_TEXTS } from "@/data/site-data";
+import { StarIcon } from "@/svg/StarIcons";
 
 const heroContent = [
     {
@@ -75,7 +80,7 @@ const Hero = () => {
 
     return (
         <div className="px-hero-2-area pt-120 pb-20">
-            <div className="px-hero-2-main d-none d-xl-block mb-110 p-relative">
+            <div className="px-hero-2-main d-none d-xl-block p-relative">
                 <div className="container container-1630">
                     <div className="row pt-50">
                         {heroContent.map((item, index) => {
@@ -123,7 +128,29 @@ const Hero = () => {
                     <HeroSlide />
                 </div>
             </div>
-            <div className="container-fluid">
+            <div
+                className="px-text-slider-wrap pt-25 pb-25"
+                style={{ backgroundColor: "#053456" }}>
+                <div className="px-text-slider-active tp-slider-transtion">
+                    <Swiper
+                        modules={[FreeMode, Autoplay]}
+                        {...text_slider_params}
+                    >
+                        {SLIDER_TEXTS.map((item) => (
+                            <SwiperSlide key={item.id}>
+                                <div className="px-text-slider-item d-flex align-items-center">
+                                    <span>{item.text}</span>
+                                    <span className="pl-40">
+                                        <StarIcon />
+                                    </span>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+
+            </div>
+            {/* <div className="container-fluid">
                 <div className="row">
                     <div className="col-xl-12">
                         <div className="px-hero-2-bottom text-center p-relative px-fade-anim" data-delay=".3">
@@ -133,7 +160,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

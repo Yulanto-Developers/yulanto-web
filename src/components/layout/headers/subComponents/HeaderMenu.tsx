@@ -53,7 +53,10 @@ export default function HeaderMenu() {
                                                         {link.subLinks?.map((subLink, subIndex) => (
                                                             <li key={`${subLink.label}-${subIndex}`}>
                                                                 <a href={subLink.href} className="pane-link">
-                                                                    {subLink.label}
+                                                                    <FontAwesomeIcon
+                                                                        icon={faAnglesRight}
+                                                                        className="submenu-icon"
+                                                                    /> {subLink.label}
                                                                 </a>
                                                             </li>
                                                         ))}

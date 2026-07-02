@@ -31,15 +31,20 @@
     right: 0;
     width: 99%;
     height: 77%;
+    border-radius: 20px;
     z-index: -1;
     margin: 0 auto;
     text-align: center;
     transition: 0.3s ease-in-out;
-    // backdrop-filter: blur(40px);
-    // background-color: transparent;
+    backdrop-filter: blur(40px);
+    background-color: rgba(255, 255, 255, 0.555);
     box-shadow: 0 1px 3px 0 rgba(19, 19, 22, 0.08);
     animation: 0.95s ease 0s normal forwards 1 running headerSlideUp;
     -webkit-animation: 0.95s ease 0s normal forwards 1 running headerSlideUp;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 
     @media #{$lg,$md,$xs} {
       top: 0;
@@ -51,7 +56,7 @@
     transition: 0.3s;
 
     &::after {
-      //   opacity: 1;
+      opacity: 1;
       visibility: visible;
       transition: 0.3s ease-in-out;
       animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;

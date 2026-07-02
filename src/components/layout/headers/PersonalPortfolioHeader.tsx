@@ -102,7 +102,7 @@ const PersonalPortfolioHeader = () => {
                 <div className="px-header-logo d-none d-xl-block">
                   <Link href="/">
                     <Image
-                      width={177} //170
+                      width={240} //170
                       height={85} //75
                       src="/assets/img/logo/Yulanto-logo.png"
                       alt="logo"

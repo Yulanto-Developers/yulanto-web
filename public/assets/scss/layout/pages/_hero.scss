@@ -235,7 +235,7 @@
             line-height: .7;
             letter-spacing: -0.01em;
             text-transform: uppercase;
-            color: var(--tp-common-px-red);
+            color:#053456;
             font-family: var(--tp-ff-thunder);
 
             @media only screen and (min-width: 1800px) and (max-width: 1900px) {
@@ -279,7 +279,7 @@
                 margin-right: 15px;
                 display: inline-block;
                 transform: translateY(-50px);
-                background-color: var(--tp-common-px-red);
+                background-color: #053456;
 
                 @media #{$xl} {
                     transform: translateY(-22px);

@@ -91,7 +91,7 @@
     left: 0;
     width: 260px !important;
     /*Initialnarrowwidth(LeftSidebaronly)*/
-    height: 280px !important;
+    height: auto !important;
     /*Consistentstructuralheight*/
     background: #ffffff !important;
     border-radius: 12px !important;
@@ -310,10 +310,15 @@
 
 /* header ends */
 
-.innerText{
+.innerText {
     font-size: 14px !important;
 }
 
-.tp-header-dropdown nav ul li .tp-submenu li a{
+.tp-header-dropdown nav ul li .tp-submenu li a {
     padding: 9px 18px;
 }
+
+/* ball animation */
+
+
+/* ball animation ends/ */
