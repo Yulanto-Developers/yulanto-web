@@ -101,10 +101,10 @@ const PersonalPortfolioHeader = () => {
               <div className="col-2">
                 <div className="px-header-logo d-none d-xl-block">
                   <Link href="/">
-                    <Image
-                      width={240} //170
-                      height={85} //75
-                      src="/assets/img/logo/Yulanto-logo.png"
+                    <img
+                      // width={170}
+                      height={75}
+                      src="/assets/img/logo/L2.png"
                       alt="logo"
                       style={{ marginLeft: "-50%" }} />
                   </Link>

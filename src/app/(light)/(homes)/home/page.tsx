@@ -7,6 +7,7 @@ import {
   DesignStudioService,
   DesignStudioTextMarquee,
 } from "@/components/home/home/sections";
+import { PersonalPortfolioAbout } from "@/components/home/personal-portfolio/sections";
 import { StartupAgencyAbout } from "@/components/home/startup-agency/sections";
 import { Metadata } from "next";
 
@@ -19,6 +20,7 @@ const page = () => {
       <DesignStudioHero />
       <DesignStudioTextMarquee />
       <StartupAgencyAbout />
+      {/* <PersonalPortfolioAbout/> */}
       {/* <DesignStudioBanner
         src="/assets/img/banner/banner-1.jpg"
         imageClass="w-100"

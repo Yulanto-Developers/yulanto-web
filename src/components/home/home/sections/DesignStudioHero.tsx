@@ -11,43 +11,43 @@ import { StarIcon } from "@/svg/StarIcons";
 
 const heroContent = [
     {
-        col: "col-lg-2", img: "/assets/img/hero/s-1.jpg",
+        col: "col-lg-2", img: "/assets/img/banner/bd.jpg",
         title: "Boost Website Traffic to Your Business and Generate Revenue.",
         subtitle: "You Are In The Right Spot",
         spacingCls: "pl-10", alignCls: "justify-content-start"
     },
     {
-        col: "col-lg-4", img: "/assets/img/hero/hero-2-2.jpg",
+        col: "col-lg-4", img: "/assets/img/banner/bd.jpg",
         title: " ", subtitle: " ",
         spacingCls: "pl-80", alignCls: "justify-content-start"
     },
     {
-        col: "col-lg-4", img: "/assets/img/hero/hero-2-3.jpg",
+        col: "col-lg-4", img: "/assets/img/banner/bd.jpg",
         title: " ", subtitle: " ",
         spacingCls: "pr-10", alignCls: "justify-content-end"
     },
     {
-        col: "col-lg-2", img: "/assets/img/hero/s-1.jpg",
+        col: "col-lg-2", img: "/assets/img/banner/dm.jpg",
         title: "A Professional Approach  in Every Aspect of Our Work.", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pl-10", alignCls: "justify-content-end"
     },
     {
-        col: "col-lg-3", img: "/assets/img/hero/s-1.jpg",
+        col: "col-lg-3", img: "/assets/img/banner/ec.jpg",
         title: "Cultivate Your Business Brand and Reputation Worldwide.", subtitle: "Handle Your Business With Experienced Web Experts in Chennai",
         spacingCls: "pr-10", alignCls: "justify-content-end"
     },
     {
-        col: "col-lg-3", img: "/assets/img/hero/s-1.jpg",
+        col: "col-lg-3", img: "/assets/img/banner/cms.jpg",
         title: "Enhance Your Business Presence and Reliability Online.", subtitle: "Transform Your Business Into The Next Level",
         spacingCls: "pl-10", alignCls: "justify-content-start"
     },
     {
-        col: "col-lg-3", img: "/assets/img/hero/s-1.jpg",
+        col: "col-lg-3", img: "/assets/img/banner/wd.jpg",
         title: "Our web designers commit to take your business", subtitle: "innovative strategies, dedication and effort",
         spacingCls: "pl-10", alignCls: "justify-content-start"
     },
     {
-        col: "col-lg-3", img: "/assets/img/hero/s-1.jpg",
+        col: "col-lg-3", img: "/assets/img/banner/wdp.jpg",
         title: " We specialize in guiding you towards the right path", subtitle: "create websites in Chennai with a multitude features",
         spacingCls: "pl-10", alignCls: "justify-content-start"
     },
