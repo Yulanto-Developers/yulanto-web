@@ -68,7 +68,7 @@ const Hero = () => {
 
                 return nextIndex;
             });
-        }, 300000); // 3 seconds
+        }, 3000); // 3 seconds
 
         return () => clearInterval(interval);
     }, []);
