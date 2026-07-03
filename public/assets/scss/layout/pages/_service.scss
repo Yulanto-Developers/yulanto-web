@@ -656,11 +656,11 @@
     &-text{
         & span{
             font-weight: 600;
-            font-size: 130px;
+            font-size: 120px;
             line-height: .85;
             letter-spacing: -0.01em;
             text-transform: uppercase;
-            color: var(--tp-common-px-black);
+            color: #053456;
             font-family: var(--tp-ff-thunder);
             @media #{$lg}{
                 font-size: 100px;

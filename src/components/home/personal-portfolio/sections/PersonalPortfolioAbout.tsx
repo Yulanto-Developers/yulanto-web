@@ -5,6 +5,8 @@ import { Autoplay } from "swiper/modules";
 import { TextArrowIcon } from "@/svg";
 import Image from "next/image";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
+import { DesignStudioService } from "../../home/sections";
+import { DigitalStudioService } from "../../digital-studio/sections";
 
 // Data
 const services = ["Branding", "Development", "Design", "Branding", "Development", "Design"];
@@ -13,14 +15,14 @@ const PersonalPortfolioAbout = () => {
     const isDarkTheme = useIsDarkRoute();
     // about configuration based on active theme (dark / light)
     const aboutConfig = {
-        sectionBg: isDarkTheme ? "#1C1D20" : "#f9f9f9",
-        textColor : isDarkTheme ? "text-white":"text-black"
+        sectionBg: "#fff",
+        textColor: isDarkTheme ? "text-white" : "text-black"
 
     };
 
     return (
         <div
-            className="px-about-6-area pt-110 pb-110"
+            className="px-about-6-area pt-80 pb-110"
             style={{ backgroundColor: aboutConfig.sectionBg }}
         >
             <div className="container">
@@ -30,10 +32,11 @@ const PersonalPortfolioAbout = () => {
                         {/* TITLE */}
                         <div className="col-xl-5 col-lg-6">
                             <div className="px-about-6-title-box">
-                                <span className="px-section-subtitle mb-35">About me</span>
+                                <span className="px-section-subtitle mb-35">Our Service</span>
                                 <h4 className="px-section-title ff-thunder fs-130">
-                                    What i do
+                                    What We do
                                 </h4>
+
                             </div>
                         </div>
 
@@ -69,8 +72,8 @@ const PersonalPortfolioAbout = () => {
                 </div>
 
                 {/* CONTENT */}
-                <div className="row">
-                    {/* IMAGE */}
+                {/* <div className="row">
+                 
                     <div className="col-xl-5 col-lg-5">
                         <div className="px-about-6-thumb pt-25">
                             <Image
@@ -83,7 +86,7 @@ const PersonalPortfolioAbout = () => {
                         </div>
                     </div>
 
-                    {/* TEXT */}
+                   
                     <div className="offset-xl-1 col-xl-6 col-lg-7">
                         <div className="px-about-6-content">
                         <p>
@@ -105,7 +108,8 @@ const PersonalPortfolioAbout = () => {
                             </SmartLink>
                         </div>
                     </div>
-                </div>
+                </div> */}
+                <DigitalStudioService />
             </div>
         </div>
     );

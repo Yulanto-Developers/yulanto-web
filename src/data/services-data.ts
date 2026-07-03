@@ -108,7 +108,7 @@ your audience.`,
     {
         id: 9,
         title: "Development",
-        image: "/assets/img/update/service/service-3/st-service-1.jpg",
+        image: "/assets/img/project/d1.png",
         description: "Building scalable, high-performance web and mobile applications.",
         categories: [
             "UX Design",
@@ -121,7 +121,7 @@ your audience.`,
     {
         id: 10,
         title: "Marketing",
-        image: "/assets/img/update/service/service-3/st-service-2.jpg",
+        image: "/assets/img/project/d1.png",
         description: "Driving growth through strategic digital marketing and branding.",
         categories: [
             "UX Design",
@@ -134,7 +134,7 @@ your audience.`,
     {
         id: 11,
         title: "Graphics",
-        image: "/assets/img/update/service/service-3/st-service-3.jpg",
+        image: "/assets/img/project/d1.png",
         description: "Creating visually compelling designs that elevate brand identity.",
         categories: [
             "UX Design",
@@ -147,7 +147,7 @@ your audience.`,
     {
         id: 12,
         title: "Technology",
-        image: "/assets/img/update/service/service-3/st-service-4.jpg",
+        image: "/assets/img/project/d1.png",
         description: "Leveraging modern technologies to deliver innovative solutions.",
         categories: [
             "UX Design",

@@ -7,7 +7,7 @@ const DigitalStudioService = () => {
 
     return (
         <div
-            className="bf-service-area bf-service-3-rounded pt-150 pb-160"
+            className="bf-service-area bf-service-3-rounded pt-30 pb-160"
             style={{ backgroundColor: "#151515" }}
         >
             <div className="container container-1320">
@@ -18,7 +18,7 @@ const DigitalStudioService = () => {
                             data-delay=".3"
                         >
                             <span className="tp-section-subtitle text-white">
-                                OUR SERVICES
+                                We Offered
                             </span>
                         </div>
                     </div>
@@ -33,9 +33,9 @@ const DigitalStudioService = () => {
                             </h3>
                             <div className="tp_text_anim">
                                 <p className="bf-service-3-dec">
-                                    Pixora power of our 8+ years of experience. We build excellence
-                                    works. <br />
-                                    That will help you to grow your business products.
+                                    Our dedicated team of web Designers in Chennai excels in web design, web development, e-commerce
+                                    websites, logo
+                                    design, custom development, SEO, and SMM, ensuring top-notch services.
                                 </p>
                             </div>
                         </div>

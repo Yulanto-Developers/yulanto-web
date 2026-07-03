@@ -3,7 +3,7 @@ import { ServiceArrowIcon } from "@/svg";
 import { ServiceItemDT } from "@/types";
 import Image from "next/image";
 
-const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categories }) => {
+const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categories, description }) => {
     return (
         <div className="bf-service-item-3 fix">
             <div className="row gx-0">
@@ -14,7 +14,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
                                 <Image className="img-fluid" width={290} height={202} src={image} alt="service image" />
                             </SmartLink>
                         </div>
-                        <div className="bf-service-item-3-text">
+                        <div className="bf-service-item-3-text left-title">
                             <h4 className="bf-service-item-3-title">
                                 <SmartLink className="common-underline" href="/service-1">
                                     {title}
@@ -33,14 +33,20 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
                                 </span>
                             </SmartLink>
                         </div>
-
+                        <div className="bf-service-item-3-wrap2">
+                            <div className="bf-service-item-3-text">
+                                <h4 className="bf-service-item-3-title">
+                                    <SmartLink className="common-underline" href="/service-1">
+                                        {title}
+                                    </SmartLink>
+                                </h4>
+                                <p>{description}</p>
+                            </div></div>
                         <div className="bf-service-item-3-slider">
                             <div className="bf-service-item-3-tags">
-                                {[...Array(3)].map((_, idx) =>
-                                    categories?.map((tag, tIndex) => (
-                                        <span key={`${idx}-${tIndex}`}>{tag}</span>
-                                    ))
-                                )}
+                                {categories?.map((tag, tIndex) => (
+                                    <span key={tIndex}>{tag}</span>
+                                ))}
                             </div>
                         </div>
                     </div>

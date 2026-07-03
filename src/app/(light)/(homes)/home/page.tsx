@@ -20,7 +20,8 @@ const page = () => {
       <DesignStudioHero />
       <DesignStudioTextMarquee />
       <StartupAgencyAbout />
-      {/* <PersonalPortfolioAbout/> */}
+      <PersonalPortfolioAbout/>
+      
       {/* <DesignStudioBanner
         src="/assets/img/banner/banner-1.jpg"
         imageClass="w-100"
