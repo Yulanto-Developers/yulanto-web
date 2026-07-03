@@ -299,18 +299,26 @@
                 [class*="col-"] {
                     & .bf-service-item-3 {
                         &-wrap {
-                            transform: translateX(0);                           
+                            transform: translateX(0);
                         }
 
                         &-wrap2 {
                             transform: translateX(0);
                         }
 
-                         &-text.left-title{
+                        &-wrap3 {
+                            transform: translateX(-540px);
+                            -webkit-transform: translateX(-540px);
+                            -moz-transform: translateX(-540px);
+                            -ms-transform: translateX(-540px);
+                            -o-transform: translateX(-540px);
+                        }
+
+                        &-text.left-title {
                             display: none;
                         }
 
-                        
+
                     }
                 }
             }
@@ -331,7 +339,24 @@
 
         &-wrap2 {
             transition: .9s;
-            transform: translateX(540px);
+            transform: translateX(740px);
+
+            @media #{$md,$sm,$xs} {
+                transform: translateX(0);
+            }
+
+            @media #{$sm,$xs} {
+                flex-wrap: wrap;
+            }
+        }
+
+        &-wrap3 {
+            transition: .9s;
+            transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            -moz-transform: translateX(0px);
+            -ms-transform: translateX(0px);
+            -o-transform: translateX(0px);
 
             @media #{$md,$sm,$xs} {
                 transform: translateX(0);
@@ -423,7 +448,7 @@
                 height: 100%;
                 width: 160px;
                 display: inline-block;
-                background: linear-gradient(-90deg, #151515 0%, rgba(21, 21, 21, 0.00) 100%);
+                // background: linear-gradient(-90deg, #151515 0%, rgba(21, 21, 21, 0.00) 100%);
             }
 
             &::before {
@@ -435,7 +460,7 @@
                 width: 160px;
                 z-index: 1;
                 display: inline-block;
-                background: linear-gradient(90deg, #151515 0%, rgba(21, 21, 21, 0.00) 100%);
+                // background: linear-gradient(90deg, #151515 0%, rgba(21, 21, 21, 0.00) 100%);
             }
         }
 

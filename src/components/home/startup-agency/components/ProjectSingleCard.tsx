@@ -2,7 +2,7 @@ import { PortfolioProjectDT } from "@/types/portfolio-dt";
 import SmartLink from "@/components/common/SmartLink";
 import Image from "next/image";
 
-const ProjectSingleCard:React.FC<PortfolioProjectDT> = ({ id, title, year, image }) => {
+const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({ id, title, year, image, description, categories }) => {
     return (
         <div className="col-lg-6">
             <div className="px-project-item mb-20">
@@ -15,11 +15,45 @@ const ProjectSingleCard:React.FC<PortfolioProjectDT> = ({ id, title, year, image
 
                 <div className="px-project-thumb">
                     <SmartLink href={`/portfolio-details-1/${id}`}>
-                        <div className="ripple-image">
-                            <Image style={{ width: "100%", height: "auto" }} width={905} height={680} src={image} alt={title} />
+                        <div className="ripple-image project-hover-card">
+                            <Image
+                                style={{ width: "100%", height: "auto" }}
+                                width={905}
+                                height={680}
+                                src={image}
+                                alt={title}
+                            />
+
+                            <div className="project-hover-overlay">
+                                <div className="project-hover-content">
+                                    {/* <h5>{title}</h5> */}
+
+
+
+                                    {description && (
+                                        <p>{description}</p>
+                                    )}
+
+                                </div>
+                            </div>
                         </div>
                     </SmartLink>
                 </div>
+                {categories && (
+                    <div className="project-categories">
+                        {Array.isArray(categories)
+                            ? categories.map((category, index) => (
+                                <span key={index} className="project-category">
+                                    #{category}
+                                </span>
+                            ))
+                            : (
+                                <span className="project-category">
+                                    #{categories}
+                                </span>
+                            )}
+                    </div>
+                )}
             </div>
         </div>
     );

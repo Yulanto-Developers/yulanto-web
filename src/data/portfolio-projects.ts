@@ -4,18 +4,19 @@ export const portfolioProjects: PortfolioProjectDT[] = [
     //startup agency portfolio project data start
     {
         id: 1,
-        title: "Olivia Rivers",
+        title: "Naturographer",
         year: 2026,
         image: "/assets/img/project/project-1.jpg",
-        categories: ["Website", "Services"],
+        categories: ["Php", "Mysql", "Bootstrap", "Javascript"],
         client: "Envato",
         role: "Branding",
         duration: "8 March 2026",
         designer: "ThemePure",
+        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
     },
     {
         id: 2,
-        title: "Graphic Hunters",
+        title: "Core",
         year: 2026,
         image: "/assets/img/project/project-2.jpg",
         categories: ["Website", "Services"],
@@ -23,10 +24,11 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         role: "UI/UX Design",
         duration: "18 February 2026",
         designer: "ThemePure",
+        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
     },
     {
         id: 3,
-        title: "Bli for livet",
+        title: "360 Abroad",
         year: 2026,
         image: "/assets/img/project/project-3.jpg",
         categories: ["Website", "Services"],
@@ -34,6 +36,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         role: "Web Development",
         duration: "22 January 2026",
         designer: "ThemePure",
+        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
     },
     {
         id: 4,
@@ -45,6 +48,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         role: "Brand Identity",
         duration: "3 January 2026",
         designer: "ThemePure",
+        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
     },
     //startup agency portfolio project data end
     //design studio portfolio data start

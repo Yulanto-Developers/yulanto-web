@@ -8,7 +8,7 @@ import {
   DesignStudioTextMarquee,
 } from "@/components/home/home/sections";
 import { PersonalPortfolioAbout } from "@/components/home/personal-portfolio/sections";
-import { StartupAgencyAbout } from "@/components/home/startup-agency/sections";
+import { StartupAgencyAbout, StartupAgencyProject } from "@/components/home/startup-agency/sections";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,14 +20,15 @@ const page = () => {
       <DesignStudioHero />
       <DesignStudioTextMarquee />
       <StartupAgencyAbout />
-      <PersonalPortfolioAbout/>
-      
+      <PersonalPortfolioAbout />
+
       {/* <DesignStudioBanner
         src="/assets/img/banner/banner-1.jpg"
         imageClass="w-100"
       /> */}
       <DesignStudioAbout />
-      <DesignStudioService />
+      {/* <DesignStudioService /> */}
+      <StartupAgencyProject />
       <DesignStudioPortfolio />
       <DesignStudioAward />
     </main>

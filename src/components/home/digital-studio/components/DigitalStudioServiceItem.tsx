@@ -7,7 +7,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
     return (
         <div className="bf-service-item-3 fix">
             <div className="row gx-0">
-                <div className="col-lg-6">
+                <div className="col-lg-4">
                     <div className="bf-service-item-3-wrap d-flex align-items-center">
                         <div className="bf-service-item-3-thumb">
                             <SmartLink href="/service-1">
@@ -24,7 +24,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
                     </div>
                 </div>
 
-                <div className="col-lg-6">
+                <div className="col-lg-8">
                     <div className="bf-service-item-3-wrapper p-relative fix">
                         <div className="bf-service-item-3-btn">
                             <SmartLink href="/service-1">
@@ -33,15 +33,23 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
                                 </span>
                             </SmartLink>
                         </div>
-                        <div className="bf-service-item-3-wrap2">
-                            <div className="bf-service-item-3-text">
-                                <h4 className="bf-service-item-3-title">
-                                    <SmartLink className="common-underline" href="/service-1">
-                                        {title}
-                                    </SmartLink>
-                                </h4>
-                                <p>{description}</p>
-                            </div></div>
+                        <div>
+                            <div className="bf-service-item-3-wrap3">
+                                <div className="bf-service-item-3-text">
+                                    <p>{description}</p>
+                                </div>
+                            </div>
+                            <div className="bf-service-item-3-wrap2">
+                                <div className="bf-service-item-3-text">
+                                    <h4 className="bf-service-item-3-title">
+                                        <SmartLink className="common-underline" href="/service-1">
+                                            {title}
+                                        </SmartLink>
+                                    </h4>
+                                    <p>{description}</p>
+                                </div></div>
+                        </div>
+
                         <div className="bf-service-item-3-slider">
                             <div className="bf-service-item-3-tags">
                                 {categories?.map((tag, tIndex) => (
