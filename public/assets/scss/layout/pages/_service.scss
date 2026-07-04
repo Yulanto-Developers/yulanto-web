@@ -758,6 +758,10 @@
 
         & .swiper-wrapper {
             padding-top: 15px;
+
+            & .swiper-slide-next .px-service-6-text span {
+                color: #53AE7D;
+            }
         }
     }
 
@@ -1386,7 +1390,7 @@
             margin: 0;
             color: rgba(255, 255, 255, .9);
             line-height: 1.7;
-            font-size: 15px;
+            font-size: 17px;
         }
     }
 
@@ -1401,7 +1405,7 @@
             opacity: 1;
             visibility: visible;
 
-            background: rgba(18, 18, 18, .35);
+            background: #0534568e;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
@@ -1435,8 +1439,8 @@
     padding: 8px 18px;
     border-radius: 50px;
 
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .15);
 
     color: #fff;
     font-size: 13px;
@@ -1476,16 +1480,78 @@
     padding: 8px 18px;
     border-radius: 50px;
 
-   background: #fff;
+    background: #fff;
     color: #111;
-    border: 1px solid rgba(255,255,255,.15);
+    border: 1px solid rgba(255, 255, 255, .15);
 
     transition: all .35s ease;
 }
 
 //  .project-category {
 //     transform: translateY(-4px);
-    
+
 // }
 
 // category ends
+
+// swiper css hover text
+
+.project-image-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.project-image-swiper .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.project-image-swiper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all .45s ease;
+}
+
+/* Keep your existing hover effect */
+
+.project-hover-card:hover .project-image-swiper img {
+    filter: blur(6px);
+    transform: scale(1.08);
+}
+
+
+// hover ends
+
+
+
+
+
+// swiper start
+
+.project-hover-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image-swiper {
+    position: relative;
+    z-index: 1;
+}
+
+.project-hover-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 99; // <-- Add this
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .45s;
+}
+
+
+// swiper ends

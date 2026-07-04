@@ -7,7 +7,8 @@ export interface ServiceItemDT {
     image: string;
     description: string;
     categories?: ServiceCategory[];
-    active?:boolean
+    active?:boolean,
+    subDesc:string
 }
 
 //modern agency service data type

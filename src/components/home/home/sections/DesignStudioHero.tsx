@@ -11,7 +11,7 @@ import { StarIcon } from "@/svg/StarIcons";
 
 const heroContent = [
     {
-        col: "col-lg-2", img: "/assets/img/banner/bd.jpg",
+        col: "col-lg-2 he-10", img: "/assets/img/banner/bd.jpg",
         title: "Boost Website Traffic to Your Business and Generate Revenue.",
         subtitle: "You Are In The Right Spot",
         spacingCls: "pl-10", alignCls: "justify-content-start"
@@ -27,7 +27,7 @@ const heroContent = [
         spacingCls: "pr-10", alignCls: "justify-content-end"
     },
     {
-        col: "col-lg-2", img: "/assets/img/banner/dm.jpg",
+        col: "col-lg-2 he-10", img: "/assets/img/banner/dm.jpg",
         title: "A Professional Approach  in Every Aspect of Our Work.", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pl-10", alignCls: "justify-content-end"
     },
@@ -82,7 +82,7 @@ const Hero = () => {
         <div className="px-hero-2-area pt-120 pb-20">
             <div className="px-hero-2-main d-none d-xl-block p-relative">
                 <div className="container container-1630">
-                    <div className="row pt-50">
+                    <div className="row pt-30">
                         {heroContent.map((item, index) => {
                             const isActive = activeIndex === index;
                             const shouldHideImage = index === 1 || index === 2;

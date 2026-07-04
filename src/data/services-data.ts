@@ -9,6 +9,7 @@ export const servicesData: ServiceItemDT[] = [
         description: `Strategic, data-driven social media campaigns
 designed to build brand awareness & connect
 with your target audience.`,
+        subDesc: "",
         categories: [
             "Content strategy",
             "Analytics & reporting",
@@ -24,6 +25,7 @@ with your target audience.`,
         description: `Strategic, data-driven social media campaigns
 designed to build brand awareness & connect
 with your target audience.`,
+        subDesc: "",
         categories: [
             "Content strategy",
             "Analytics & reporting",
@@ -39,6 +41,7 @@ with your target audience.`,
         description: `Strategic, data-driven social media campaigns
 designed to build brand awareness & connect
 with your target audience.`,
+        subDesc: "",
         categories: [
             "Content strategy",
             "Analytics & reporting",
@@ -54,6 +57,7 @@ with your target audience.`,
         description: `Strategic, data-driven social media campaigns
 designed to build brand awareness & connect
 with your target audience.`,
+        subDesc: "",
         categories: [
             "Content strategy",
             "Analytics & reporting",
@@ -71,6 +75,7 @@ with your target audience.`,
 identities that differentiate your
 business and connect with
 your audience.`,
+        subDesc: "",
         active: false,
     },
     {
@@ -81,6 +86,7 @@ your audience.`,
 identities that differentiate your
 business and connect with
 your audience.`,
+        subDesc: "",
         active: true,
     },
     {
@@ -91,6 +97,7 @@ your audience.`,
 identities that differentiate your
 business and connect with
 your audience.`,
+        subDesc: "",
         active: false,
     },
     {
@@ -101,6 +108,7 @@ your audience.`,
 identities that differentiate your
 business and connect with
 your audience.`,
+        subDesc: "",
         active: false,
     },
     //design studio service data end
@@ -110,6 +118,7 @@ your audience.`,
         title: "Development",
         image: "/assets/img/project/d1.png",
         description: "Building scalable, high-performance web and mobile applications.",
+        subDesc: "Our team of skilled graphic designers in Chennai specializes in producing visual content to effectively convey messages. We offer services such as logo design in Chennai, brochure creationin Chennai, poster design, company profile, and more.",
         categories: [
             "UX Design",
             "User Testing",
@@ -123,6 +132,7 @@ your audience.`,
         title: "Marketing",
         image: "/assets/img/project/d1.png",
         description: "Driving growth through strategic digital marketing and branding.",
+        subDesc: "Our team of skilled graphic designers in Chennai specializes in producing visual content to effectively convey messages. We offer services such as logo design in Chennai, brochure creationin Chennai, poster design, company profile, and more.",
         categories: [
             "UX Design",
             "User Testing",
@@ -136,6 +146,7 @@ your audience.`,
         title: "Graphics",
         image: "/assets/img/project/d1.png",
         description: "Creating visually compelling designs that elevate brand identity.",
+        subDesc: "Our team of skilled graphic designers in Chennai specializes in producing visual content to effectively convey messages. We offer services such as logo design in Chennai, brochure creationin Chennai, poster design, company profile, and more.",
         categories: [
             "UX Design",
             "User Testing",
@@ -149,6 +160,7 @@ your audience.`,
         title: "Technology",
         image: "/assets/img/project/d1.png",
         description: "Leveraging modern technologies to deliver innovative solutions.",
+        subDesc: "Our team of skilled graphic designers in Chennai specializes in producing visual content to effectively convey messages. We offer services such as logo design in Chennai, brochure creationin Chennai, poster design, company profile, and more.",
         categories: [
             "UX Design",
             "User Testing",

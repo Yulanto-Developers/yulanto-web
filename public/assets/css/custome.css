@@ -323,10 +323,29 @@
 
 /* ball animation ends/ */
 
+/* ase swiper start */
+/* 
 
+.project-image-swiper {
+    width: 100%;
+    height: 100%;
+}
 
-/* case study */
+.project-image-swiper .swiper-slide {
+    width: 100%;
+}
 
+.project-image-swiper img {
+    display: block;
+    width: 100%;
+    height: auto;
+} */
+/* ase swiper ends */
 
+/* bane height image start */
+.he-10 img {
+    height: 230px !important;
+    /* width: 200px !important; */
+}
 
-/* case study */
+/* bane height image ends */

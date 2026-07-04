@@ -16,7 +16,7 @@
         font-weight: 600;
         font-size: 60px;
         line-height: 1.1;
-        color: #686868;
+        color: #000000;
         letter-spacing: -0.05em;
 
         @media #{$xl} {
@@ -59,7 +59,7 @@
         & p {
             font-size: 22px;
             line-height: 1.36;
-            color: #686868;
+            color: #000000;
             letter-spacing: -0.04em;
 
             @media #{$xl,$md} {

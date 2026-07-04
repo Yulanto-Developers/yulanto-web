@@ -3,7 +3,7 @@ import { ServiceArrowIcon } from "@/svg";
 import { ServiceItemDT } from "@/types";
 import Image from "next/image";
 
-const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categories,subDesc,description }) => {
+const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categories, description, subDesc }) => {
     return (
         <div className="bf-service-item-3 fix">
             <div className="row gx-0">
@@ -33,7 +33,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
                                 </span>
                             </SmartLink>
                         </div>
-                         <div className="position-relative">
+                        <div className="position-relative">
                             <div className="bf-service-item-3-wrap3">
                                 <div className="bf-service-item-3-text">
                                     <p className="text-white">{subDesc}</p>
@@ -52,14 +52,13 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
 
                         <div className="bf-service-item-3-slider">
                             <div className="bf-service-item-3-tags">
-                                {[...Array(3)].map((_, idx) =>
-                                    categories?.map((tag, tIndex) => (
-                                        <span key={`${idx}-${tIndex}`}>{tag}</span>
-                                    ))
-                                )}
+                                {categories?.map((tag, tIndex) => (
+                                    <span key={tIndex}>{tag}</span>
+                                ))}
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
