@@ -26,13 +26,6 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
 
                 <div className="col-lg-8">
                     <div className="bf-service-item-3-wrapper p-relative fix">
-                        <div className="bf-service-item-3-btn">
-                            <SmartLink href="/service-1">
-                                <span>
-                                    <ServiceArrowIcon />
-                                </span>
-                            </SmartLink>
-                        </div>
                          <div className="position-relative">
                             <div className="bf-service-item-3-wrap3">
                                 <div className="bf-service-item-3-text">
@@ -43,7 +36,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
                                 <div className="bf-service-item-3-text">
                                     <h4 className="bf-service-item-3-title">
                                         <SmartLink className="common-underline" href="/service-1">
-                                            {title}
+                                            {title} <span className="servicearrow"><ServiceArrowIcon /></span>
                                         </SmartLink>
                                     </h4>
                                     <p className="text-white">{description}</p>

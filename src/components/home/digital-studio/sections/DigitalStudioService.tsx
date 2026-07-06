@@ -7,7 +7,7 @@ const DigitalStudioService = () => {
 
     return (
         <div
-            className="bf-service-area bf-service-3-rounded pt-30 pb-160"
+            className="bf-service-area bf-service-3-rounded pt-30 pb-50"
             style={{ backgroundColor: "#053456" }}
         >
             <div className="container container-1320">

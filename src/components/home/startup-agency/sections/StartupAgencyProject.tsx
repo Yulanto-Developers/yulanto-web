@@ -1,21 +1,27 @@
+"use client";
 
 import { portfolioProjects } from "@/data/portfolio-projects";
 import ProjectSingleCard from "../components/ProjectSingleCard";
-import { PlusIcon } from "@/svg";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 const StartupAgencyProject = () => {
-    // display project items
-    const displayProjectData = portfolioProjects.slice(0,4);
+    const displayProjectData = portfolioProjects.slice(0, 4);
 
     return (
-        <section className="px-project-area pt-0 pb-130">
+        <section className="px-project-area pt-50 pb-130">
             <div className="container container-1550">
+
                 {/* TITLE */}
                 <div className="px-project-title-wrap mb-80">
                     <div className="row">
+
                         <div className="col-xl-3">
                             <span className="px-section-subtitle pt-40 blink-ball">
-                               
                                 Case Study
                             </span>
                         </div>
@@ -26,22 +32,67 @@ const StartupAgencyProject = () => {
                                     <span>Recent </span>
                                     <span>Case</span>
                                 </h3>
+
                                 <p>
-                                    We&apos;ve helped businesses across industries achieve their goals.
+                                    We've helped businesses across industries achieve
+                                    their goals.
                                     <br />
                                     Here are some of our recent projects.
                                 </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
-                {/* PROJECT LIST */}
-                <div className="row gx-20">
-                    {displayProjectData.map((project) => (
-                        <ProjectSingleCard key={project.id} {...project} />
-                    ))}
+                {/* SWIPER */}
+                <div className="portfolio-project-swiper-wrapper">
+
+                    <div className="portfolio-project-prev">
+                        &#10094;
+                    </div>
+
+                    <Swiper
+                        modules={[Navigation, Autoplay]}
+                        className="portfolio-project-swiper"
+                        navigation={{
+                            prevEl: ".portfolio-project-prev",
+                            nextEl: ".portfolio-project-next",
+                        }}
+                        spaceBetween={20}
+                        slidesPerView={2}
+                        loop={true}
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        }}
+                        speed={700}
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                            },
+                            768: {
+                                slidesPerView: 1,
+                            },
+                            992: {
+                                slidesPerView: 2,
+                            },
+                        }}
+                    >
+                        {displayProjectData.map((project) => (
+                            <SwiperSlide key={project.id}>
+                                <ProjectSingleCard {...project} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+
+                    <div className="portfolio-project-next">
+                        &#10095;
+                    </div>
+
                 </div>
+
             </div>
         </section>
     );

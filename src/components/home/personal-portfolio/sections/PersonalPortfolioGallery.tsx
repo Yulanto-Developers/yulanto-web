@@ -73,8 +73,8 @@ const PersonalPortfolioGallery = () => {
                             <div className="col-xl-9">
                                 <div className="px-project-title-box">
                                     <h3 className="px-section-title text-effect">
-                                        <span>Recent </span>
-                                        <span>Case</span>
+                                        <span>Our </span>
+                                        <span>Portfolio</span>
                                     </h3>
                                     <p>
                                         We&apos;ve helped businesses across industries achieve their goals.
