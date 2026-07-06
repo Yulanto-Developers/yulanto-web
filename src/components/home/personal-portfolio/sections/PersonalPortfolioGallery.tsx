@@ -23,14 +23,14 @@ const galleryOne: GalleryItemType[] = [
 ];
 
 const galleryTwo: GalleryItemType[] = [
-    { type: "image", src: "/assets/img/gallery/gallery-4.jpg" },
+    { type: "image", src: "/assets/img/sample/b1.jpg" },
     { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
-    { type: "image", src: "/assets/img/gallery/gallery-5.jpg" },
-    { type: "image", src: "/assets/img/gallery/gallery-6.jpg" },
-    { type: "image", src: "/assets/img/gallery/gallery-7.jpg" },
-    { type: "image", src: "/assets/img/gallery/gallery-4.jpg" },
+    { type: "image", src: "/assets/img/sample/b2.jpg" },
+    { type: "image", src: "/assets/img/sample/b1.jpg" },
+    { type: "image", src: "/assets/img/sample/b2.jpg" },
+    { type: "image", src: "/assets/img/sample/b1.jpg" },
     { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
-    { type: "image", src: "/assets/img/gallery/gallery-5.jpg" },
+    { type: "image", src: "/assets/img/sample/b2.jpg" },
 ];
 
 // Props type
