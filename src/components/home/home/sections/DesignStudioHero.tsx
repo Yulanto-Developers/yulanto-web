@@ -82,7 +82,7 @@ const Hero = () => {
         <div className="px-hero-2-area pt-120 pb-20">
             <div className="px-hero-2-main d-none d-xl-block p-relative">
                 <div className="container container-1630">
-                    <div className="row pt-30">
+                    <div className="row">
                         {heroContent.map((item, index) => {
                             const isActive = activeIndex === index;
                             const shouldHideImage = index === 1 || index === 2;
