@@ -21,7 +21,8 @@ $container: (
     }
 }
 
-.common-underline:hover .servicearrow {
+
+.common-underline:hover .servicearrow svg {
     transform: rotate(45deg);
     transition: transform .4s ease;
     transform-origin: center;
@@ -38,6 +39,7 @@ $container: (
 
 
 }
+
 
 
 
