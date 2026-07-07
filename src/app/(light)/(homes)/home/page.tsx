@@ -1,3 +1,4 @@
+import { CreativeStudioService } from "@/components/home/creative-studio/sections";
 import {
   DesignStudioAbout,
   DesignStudioAward,
@@ -31,6 +32,7 @@ const page = () => {
       <StartupAgencyProject />
       <PersonalPortfolioGallery />
       <DesignStudioPortfolio />
+      <CreativeStudioService />
       <DesignStudioAward />
     </main>
   );

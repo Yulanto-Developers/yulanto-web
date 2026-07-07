@@ -17,4 +17,5 @@ export interface PortfolioProjectDT {
   customClass?:string;
   type?:string;
   filters?:string[];
+  portFolio?:any[];
 }

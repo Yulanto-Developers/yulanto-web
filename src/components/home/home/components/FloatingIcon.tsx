@@ -23,7 +23,7 @@ function FloatingActions({
       style={{
         position: 'fixed',
         bottom: '24px',
-        left: '24px',
+        left: '18px',
         display: 'flex',
         flexDirection: 'column',
         gap: '16px',

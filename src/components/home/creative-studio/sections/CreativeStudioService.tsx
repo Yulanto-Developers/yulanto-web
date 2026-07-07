@@ -3,7 +3,7 @@ import { services } from "@/data/site-data";
 const Service = () => {
     return (
         <div
-            className="px-service-area px-service-3-style pt-120 z-index-1"
+            className="px-service-area px-service-3-style pt-120 pb-50 z-index-1"
             style={{ backgroundColor: "#000000" }}
         >
             <div className="container container-1750">
@@ -15,7 +15,7 @@ const Service = () => {
                             data-delay=".3"
                         >
                             <h2 className="px-about-3-bigtext text-white">
-                                Our Services
+                                Our Development Process
                             </h2>
                         </div>
                     </div>
@@ -23,9 +23,9 @@ const Service = () => {
 
                 <div className="row align-items-start">
                     {/* Video */}
-                    <div className="col-xl-6 d-none d-xl-block">
+                    <div className="col-xl-3 d-none d-xl-block">
                         <div className="px-service-3-video">
-                            <video width={650} loop muted autoPlay playsInline>
+                            <video width={350} loop muted autoPlay playsInline>
                                 <source
                                     src="https://html.aqlova.com/videos/pixora/service-video.mp4"
                                     type="video/mp4"
@@ -35,7 +35,7 @@ const Service = () => {
                     </div>
 
                     {/* Accordion */}
-                    <div className="col-xl-6">
+                    <div className="col-xl-9">
                         <div className="px-service-accordion-wrap">
                             <div className="accordion" id="accordionExample1">
                                 {services.map((service, index) => {
@@ -47,8 +47,9 @@ const Service = () => {
                                         <div key={service.id} className="accordion-items">
                                             <h2 className="accordion-header" id={headingId}>
                                                 <button
-                                                    className={`accordion-buttons ${!isFirst ? "collapsed" : ""
-                                                        }`}
+                                                    className={`accordion-buttons ${
+                                                        !isFirst ? "collapsed" : ""
+                                                    }`}
                                                     type="button"
                                                     data-bs-toggle="collapse"
                                                     data-bs-target={`#${collapseId}`}
@@ -58,25 +59,58 @@ const Service = () => {
                                                     <i>
                                                         <service.Icon />
                                                     </i>
+
                                                     {service.title}
+
                                                     <span className="accordion-icon"></span>
                                                 </button>
                                             </h2>
 
                                             <div
                                                 id={collapseId}
-                                                className={`accordion-collapse collapse ${isFirst ? "show" : ""
-                                                    }`}
+                                                className={`accordion-collapse collapse ${
+                                                    isFirst ? "show" : ""
+                                                }`}
                                                 data-bs-parent="#accordionExample1"
                                             >
                                                 <div className="accordion-body">
-                                                    <p>{service.description}</p>
 
-                                                    <div className="px-service-accordion-category">
-                                                        {service.categories.map((cat) => (
-                                                            <span key={`${service.id}-${cat}`}>{cat}</span>
-                                                        ))}
-                                                    </div>
+                                                    {service.description.map((item, i) => (
+                                                        <div key={i} className="mb-4">
+
+                                                            {typeof item === "string" ? (
+                                                                <p>{item}</p>
+                                                            ) : (
+                                                                <>
+                                                                    <h5
+                                                                        style={{
+                                                                            color: "#fff",
+                                                                            marginBottom: "10px",
+                                                                            fontWeight: 600,
+                                                                        }}
+                                                                    >
+                                                                        {item.desTitle}
+                                                                    </h5>
+
+                                                                    <p>
+                                                                        {item.descPara}
+                                                                    </p>
+                                                                </>
+                                                            )}
+
+                                                        </div>
+                                                    ))}
+
+                                                    {service.categories && (
+                                                        <div className="px-service-accordion-category">
+                                                            {service.categories.map((cat) => (
+                                                                <span key={`${service.id}-${cat}`}>
+                                                                    {cat}
+                                                                </span>
+                                                            ))}
+                                                        </div>
+                                                    )}
+
                                                 </div>
                                             </div>
                                         </div>

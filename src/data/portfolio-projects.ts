@@ -59,8 +59,8 @@ export const portfolioProjects: PortfolioProjectDT[] = [
     //design studio portfolio data start
     {
         id: 5,
-        title: "Electro Hub",
-        image: "/assets/img/project/project-2-1.jpg",
+        title: "Our Success Mantra",
+        image: "/assets/img/award/award/mantra.jpg",
         secImage: [],
         categories: ["Web Design", "Web Development"],
         year: 2026,
@@ -68,11 +68,37 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         role: "Brand Identity",
         duration: "3 January 2026",
         designer: "ThemePure",
+        portFolio: [
+            {
+                icon: 'faPalette', // Fits "Unique designs"
+                text: "Tailored Unique designs are offered based on your business needs and requirements following extensive market analysis of your industry and competitors."
+            },
+            {
+                icon: 'faCode', // Fits "cutting-edge technologies / HTML5 & CSS3"
+                text: "Our websites design in Chennai are crafted utilizing cutting-edge technologies such as HTML5 and CSS3.0."
+            },
+            {
+                icon: 'faShieldHalved', // Fits "safety advantages / SSL certificate"
+                text: "Our website design services in Chennai offer a range of safety advantages for your websites, such as an SSL certificate, bug-free operation, and regular updates."
+            },
+            {
+                icon: 'faChartLine', // Fits "SEO expertise / dynamic SEO-optimized website"
+                text: "Our SEO expertise in Chennai lies in delivering a dynamic SEO-optimized website in Chennai that will set you apart from your rivals."
+            },
+            {
+                icon: 'faWrench', // Fits "Web maintenance and support services"
+                text: "At Yulanto, we also offer Web maintenance and support services in Chennai following the delivery of your website."
+            },
+            {
+                icon: 'faLaptopMobile', // Fits "responsive websites / various platforms and devices"
+                text: "The responsive websites in Chennai created can function seamlessly on various platforms and devices, enabling a broader reach to the audience."
+            },
+        ]
     },
     {
         id: 6,
-        title: "Energy Grid",
-        image: "/assets/img/project/project-2-2.jpg",
+        title: "FAQ?",
+        image: "/assets/img/award/award/faq.jpg",
         secImage: ['/assets/img/sample/s2.jpg'],
         categories: ["Web Design", "Web Development"],
         year: 2026,
@@ -80,11 +106,26 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         role: "Brand Identity",
         duration: "3 January 2026",
         designer: "ThemePure",
+        portFolio: [
+            {
+                ques: "1. What makes having a top-notch online presence so essential for your business?",
+                ans1: "* The company's strong online visibility positions it to become a recognized brand and appeal to a wider audience. A well-designed website supports this growth. This enhances customer perception, credibility, and trust in your brand.",
+                ans2: '* Yulanto, a prominent web design and website development company based in Chennai, has played a crucial role in enhancing the online presence of numerous brands in diverse industries.'
+            },
+            {
+                ques: "2. What other services are included with your website design offerings?",
+                ans1: "* We offer an extensive array of web services and solutions in  Chennai to our clients worldwide. In addition to website design and development in chennai, we offer website maintenance in Chennai, domain registration, web hosting, web app development in Chennai, e-commerce website development in Chennai, digital marketing in Chennai, SEO in Chennai, branding, graphic design in Chennai, and more. We've got you covered."
+            },
+            {
+                ques: "3. What is the expected timeline for the completion of my web project?",
+                ans1: "* Our team ensures timely completion of web design in Chennai, Web development in Chennai, and ecommerce projects in Chennai based on the agreed-upon timelines. Any extra features needed may result in a slight delay, but we will discuss and agree upon additional timelines. Rest assured, we prioritize the quality of our project deliveries."
+            }
+        ]
     },
     {
         id: 7,
-        title: "Circuit Core",
-        image: "/assets/img/project/project-2-3.jpg",
+        title: "Why Choose Us",
+        image: "/assets/img/award/award/why-choose-us.jpg",
         secImage: ['/assets/img/sample/s2.jpg'],
         categories: ["Web Design", "Web Development"],
         year: 2026,
@@ -92,77 +133,101 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         role: "Brand Identity",
         duration: "3 January 2026",
         designer: "ThemePure",
+        portFolio: [
+            {
+                para: 'Our high-performance web solutions are designed to bring added value to your products and services, ultimately boosting your business\'s market share.',
+                cat: [
+                    {
+                        catTile: 'Quality Design',
+                        content: 'Our motto is centered around quality, and each project we undertake showcases our dedication to prioritizing excellence.'
+                    },
+                    {
+                        catTile: 'Innovative Attitude',
+                        content: 'We constantly seek fresh ideas and embrace innovation throughout every phase of development, valuingtheir uniqueness.'
+                    },
+                    {
+                        catTile: 'Excellent Customizations',
+                        content: 'We are able to gain a thorough understanding of the requirements and provide uniquely customized solutions that set us apart from the competition.'
+                    },
+                    {
+                        catTile: 'Professional Team',
+                        content: 'Our team consists of highly skilled and experienced professionals in the field of web design, ensuring the creation of exceptional websites.'
+                    },
+                ]
+            }
+        ]
     },
-    {
-        id: 8,
-        title: "Volt Zone",
-        image: "/assets/img/project/project-2-4.jpg",
-        secImage: ['/assets/img/sample/s2.jpg'],
-        categories: ["Web Design", "Web Development"],
-        year: 2026,
-        client: "Dribbble",
-        role: "Brand Identity",
-        duration: "3 January 2026",
-        designer: "ThemePure",
-    },
-    {
-        id: 9,
-        title: "Power Nexus",
-        image: "/assets/img/project/project-2-5.jpg",
-        secImage: ['/assets/img/sample/s2.jpg'],
-        categories: ["Web Design", "Web Development"],
-        year: 2026,
-        client: "Dribbble",
-        role: "Brand Identity",
-        duration: "3 January 2026",
-        designer: "ThemePure",
-    },
+    // {
+    //     id: 8,
+    //     title: "Volt Zone",
+    //     image: "/assets/img/project/project-2-4.jpg",
+    //     secImage: ['/assets/img/sample/s2.jpg'],
+    //     categories: ["Web Design", "Web Development"],
+    //     year: 2026,
+    //     client: "Dribbble",
+    //     role: "Brand Identity",
+    //     duration: "3 January 2026",
+    //     designer: "ThemePure",
+    //     portFolio: ["", ""]
+    // },
+    // {
+    //     id: 9,
+    //     title: "Power Nexus",
+    //     image: "/assets/img/project/project-2-5.jpg",
+    //     secImage: ['/assets/img/sample/s2.jpg'],
+    //     categories: ["Web Design", "Web Development"],
+    //     year: 2026,
+    //     client: "Dribbble",
+    //     role: "Brand Identity",
+    //     duration: "3 January 2026",
+    //     designer: "ThemePure",
+    // },
     //design studio portfolio data end
-    {
-        id: 10,
-        title: "Times One Hundred",
-        image: "/assets/img/project/project-1.jpg",
-        secImage: ['/assets/img/sample/s2.jpg'],
-        categories: ["Technology", "Branding", "UI/UX"],
-        year: 2024,
-        client: "Spotify",
-        role: "Product Branding",
-        duration: "12 March 2024",
-        designer: "John Carter",
-    },
-    {
-        id: 11,
-        title: "Moments Infinity",
-        image: "/assets/img/project/project-2.jpg", secImage: ['/assets/img/sample/s2.jpg'],
-        categories: ["Creative", "Photography", "Design"],
-        year: 2025,
-        client: "Airbnb",
-        role: "Visual Identity",
-        duration: "8 July 2025",
-        designer: "Sophia Williams",
-    },
-    {
-        id: 12,
-        title: "Countless Times",
-        image: "/assets/img/project/project-3.jpg", secImage: ['/assets/img/sample/s2.jpg'],
-        categories: ["Technology", "Web Design", "Development"],
-        year: 2023,
-        client: "Adobe",
-        role: "Frontend Development",
-        duration: "21 September 2023",
-        designer: "Michael Brown",
-    },
-    {
-        id: 13,
-        title: "One Hundred Beats",
-        image: "/assets/img/project/project-4.jpg", secImage: ['/assets/img/sample/s2.jpg'],
-        categories: ["Music", "Branding", "Creative Direction"],
-        year: 2026,
-        client: "Universal Music",
-        role: "Creative Direction",
-        duration: "3 January 2026",
-        designer: "Emma Thompson",
-    },
+    // {
+    //     id: 10,
+    //     title: "Times One Hundred",
+    //     image: "/assets/img/project/project-1.jpg",
+    //     secImage: ['/assets/img/sample/s2.jpg'],
+    //     categories: ["Technology", "Branding", "UI/UX"],
+    //     year: 2024,
+    //     client: "Spotify",
+    //     role: "Product Branding",
+    //     duration: "12 March 2024",
+    //     designer: "John Carter",
+    // },
+    // {
+    //     id: 11,
+    //     title: "Moments Infinity",
+    //     image: "/assets/img/project/project-2.jpg", secImage: ['/assets/img/sample/s2.jpg'],
+    //     categories: ["Creative", "Photography", "Design"],
+    //     year: 2025,
+    //     client: "Airbnb",
+    //     role: "Visual Identity",
+    //     duration: "8 July 2025",
+    //     designer: "Sophia Williams",
+    // },
+    // {
+    //     id: 12,
+    //     title: "Countless Times",
+    //     image: "/assets/img/project/project-3.jpg", secImage: ['/assets/img/sample/s2.jpg'],
+    //     categories: ["Technology", "Web Design", "Development"],
+    //     year: 2023,
+    //     client: "Adobe",
+    //     role: "Frontend Development",
+    //     duration: "21 September 2023",
+    //     designer: "Michael Brown",
+    // },
+    // {
+    //     id: 13,
+    //     title: "One Hundred Beats",
+    //     image: "/assets/img/project/project-4.jpg", secImage: ['/assets/img/sample/s2.jpg'],
+    //     categories: ["Music", "Branding", "Creative Direction"],
+    //     year: 2026,
+    //     client: "Universal Music",
+    //     role: "Creative Direction",
+    //     duration: "3 January 2026",
+    //     designer: "Emma Thompson",
+    // },
     //Modern agency portfolio data start
     // {
     //     id: 14,
