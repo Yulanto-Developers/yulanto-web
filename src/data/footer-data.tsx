@@ -3,16 +3,14 @@ import { DribbleIcon, FacebookIcon, InstragramIconTwo, TwittorIcon } from "@/svg
 export const socialLinks = [
   { icon: <FacebookIcon />, href: "#" },
   { icon: <TwittorIcon />, href: "#" },
-  { icon: <DribbleIcon />, href: "#" },
+  // { icon: <DribbleIcon />, href: "#" },
   { icon: <InstragramIconTwo />, href: "#" },
 ];
 
 export const quickLinks = [
-  { label: "About", href: "#" },
-  { label: "Who we are", href: "#" },
-  { label: "Services", href: "#" },
-  { label: "Projects", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Pricing", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "Payment & Refund Policy", href: "#" },
+  { label: "Privacy Policy", href: "#" },
+  { label: "Terms & Conditionss", href: "#" },
+  { label: "License & Copyright", href: "#" },
+
 ];

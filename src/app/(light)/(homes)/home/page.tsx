@@ -1,4 +1,4 @@
-import { CreativeStudioService } from "@/components/home/creative-studio/sections";
+import { CreativeStudioBrand, CreativeStudioService } from "@/components/home/creative-studio/sections";
 import {
   DesignStudioAbout,
   DesignStudioAward,
@@ -14,6 +14,7 @@ import { StartupAgencyAbout, StartupAgencyProject } from "@/components/home/star
 import { Metadata } from "next";
 import { } from "@/data/testimonial-data";
 import Testimonial from "@/components/home/modern-agency/sections/ModernAgencyTestimonial";
+import { CreativeAgencyBrand } from "@/components/home/creative-agency/sections";
 
 export const metadata: Metadata = {
   title: "Yulanto - Home",
@@ -37,10 +38,12 @@ const page = () => {
       <DesignStudioPortfolio />
       <CreativeStudioService />
       {/* <MinimalPortfolioTextSlider/> */}
-      <MinimalPortfolioAward />
+      {/* <MinimalPortfolioAward /> */}
       <Testimonial />
 
-      <DesignStudioAward />
+      {/* <DesignStudioAward /> */}
+      {/* <CreativeAgencyBrand/> */}
+      <CreativeStudioBrand />
     </main>
   );
 };

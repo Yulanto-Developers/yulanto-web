@@ -1,5 +1,6 @@
 import { quickLinks, socialLinks } from "@/data/footer-data";
 import Link from "next/link";
+import Image from "next/image";
 
 interface footerPropsDt {
     sectionBgClass?: string;
@@ -20,9 +21,13 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                                 className="px-footer-widget px-footer-col-1 pb-40 px-fade-anim"
                                 data-delay=".3"
                             >
-                                <h4 className="px-footer-widget-title">
+                                <div>
+                                    <Image src="/assets/img/logo/logo-white.png" alt="Pixora Logo" width={150} height={70} />
+                                    {/* <h4 className="px-footer-widget-title">
                                     Helping<br />start-ups scale & grow.
-                                </h4>
+                                </h4> */}
+                                    <h5 className="text-white pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas cum assumenda quae. Tempore nobis dolorum autem corporis nulla provident harum culpa.</h5>
+                                </div>
 
                                 <div className="px-footer-widget-social">
                                     {socialLinks.map((item, index) => (
@@ -53,7 +58,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                                         {quickLinks.map((item, index) => (
                                             <li style={{ marginRight: "5px" }} key={`${item.label}-${index}`}>
                                                 <Link href={item.href}>{item.label}</Link>
-                                            </li>   
+                                            </li>
                                         ))}
                                     </ul>
                                 </div>
@@ -71,11 +76,14 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                                 </h4>
 
                                 <div className="px-footer-widget-info">
-                                    <Link href="mailto:pixora@studio.com">
-                                        pixora@studio.com
+                                    <Link href="mailto:info@yulanto.com">
+                                        info@yulanto.com
                                     </Link>
-                                    <Link href="tel:+3025550107">
-                                        +(302) 555-0107
+                                    <Link href="mailto:operations@yulanto.com">
+                                        operations@yulanto.com
+                                    </Link>
+                                    <Link href="tel:+919962157250  ">
+                                        +91 99621 57250
                                     </Link>
                                 </div>
 
@@ -84,8 +92,8 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                                         href="https://www.google.com/maps/"
                                         target="_blank"
                                     >
-                                        4517 Washington Ave. Manchester, <br />
-                                        Kentucky 39495
+                                        F3, #4/608, First Floor,<br /> V.O.C Street, Kottivakkam, OMR,<br />
+                                        Chennai - 600 041, India
                                     </Link>
                                 </div>
                             </div>
@@ -101,7 +109,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                         <div className="col-xl-12">
                             <div className="px-copyright-content text-center">
                                 <h2 className="px-copyright-big-text">
-                                    Pixora.Studio
+                                    Yuanto Web Creation
                                 </h2>
                             </div>
                         </div>

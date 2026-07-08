@@ -129,7 +129,7 @@
                         background-color: rgba($color: #fff, $alpha: 0.1);
                         &:hover{
                             color: var(--tp-common-px-white);
-                            background-color: var(--tp-common-px-red);
+                            background-color: #1F5859;
                         }
                     }
                 }
@@ -157,22 +157,22 @@
 
 .px-copyright{
     &-big-text{
-        font-size: 290px;
+        font-size: 120px;
         font-weight: 700;
         line-height: 1;
         letter-spacing: -0.06em;
         transform: translateX(-10px);
-        color: var(--tp-common-px-red);
+        color: #1F5859;
         @media #{$xxl}{
-            font-size: 234px;
+            font-size: 120px;
         }
         @media #{$xl}{
-            font-size: 185px;
+            font-size: 120px;
             letter-spacing: -10px;
             margin-bottom: 0;
         }
         @media #{$lg}{
-            font-size: 150px;
+            font-size: 120px;
             letter-spacing: -7px;
             margin-bottom: 0;
         }
@@ -730,7 +730,7 @@
                 & li{
                     & a{
                         &:hover{
-                            background-color: var(--tp-common-px-orange);
+                            background-color: #1F5859;
                         }
                     }
                 }

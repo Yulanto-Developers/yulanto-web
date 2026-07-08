@@ -39,20 +39,22 @@ const Brand = () => {
     const brands = isDark ? darkBrandLogos : lightBrandLogos;
 
     return (
-        <div className="px-brand-area px-brand-style-3 pb-110 px-fade-anim">
+        <div className="px-brand-area px-brand-style-3 pt-60 pb-110 px-fade-anim">
             <div className="container container-1750">
                 {/* Subtitle */}
                 <div className="row">
                     <div className="col-xl-3">
                         <div className="px-brand-subtitle-box mb-20">
-                            <span className="px-section-subtitle">Our Clients</span>
+                             <span className="px-section-subtitle pt-40 blink-ball fw-bold text-uppercase text-muted" style={{ fontSize: '0.9rem', letterSpacing: '1px' }}>
+                              Our Clients
+                            </span>
                         </div>
                     </div>
                 </div>
                 {/* Slider */}
                 <div className={`px-brand-slider-wrap mb-10 tp ${!isDark ? "brand-light-bg" : ""}`}>
                     <div className="px-brand-3-active tp-slider-transtion">
-                        <Swiper modules={[FreeMode, Autoplay]} {...brand_slider_two_params}>
+                        <Swiper modules={[Autoplay]} {...brand_slider_two_params}>
                             {brands.map((brand) => (
                                 <SwiperSlide key={brand.id}>
                                     <div className="px-brand-item">
