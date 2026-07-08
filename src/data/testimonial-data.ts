@@ -16,7 +16,7 @@ export const modernAgencyTestimonials: TestimonialItemDT[] = [
             "“I had a great experience with Web Design in Yulanto. The team really understood my needs to create a great website creation in Chennai for my business.Theteam was proactive andsuggested me some incredible features to give my customers a wonderful experience.Thank you”",
         name: "Mr. Raffi Barsoumian",
         designation: "Client",
-        avatar: "/assets/img/testimonial/g.png",
+        avatar: "/assets/img/award/testi/g.png",
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const modernAgencyTestimonials: TestimonialItemDT[] = [
             "“ One of our channel partners referred Yulanto to us and we found all these qualities in them, there team is very good in their work, they were very patient, and they delivered exactly what we have visualised. I will highlyrecommend Yulanto for all Website design work in Chennai.”",
         name: "Mr. Soundar Rajan V",
         designation: "Aerovan Express",
-        avatar: "/assets/img/testimonial/g.png",
+        avatar: "/assets/img/award/testi/g.png",
     },
     {
         id: 4,
@@ -32,7 +32,7 @@ export const modernAgencyTestimonials: TestimonialItemDT[] = [
             "“I would highly recommend Yulanto for website designing in Chennai. Because,they have completed my entire site with on page seo optimisation in Chennai for better rankings.”",
         name: "Mr. Antony Raja",
         designation: "Truimph Hub",
-        avatar: "/assets/img/testimonial/g.png",
+        avatar: "/assets/img/award/testi/g.png",
     },
     {
         id: 5,
@@ -40,7 +40,7 @@ export const modernAgencyTestimonials: TestimonialItemDT[] = [
             "“I strongly recommend Yulanto to people from all walks of life; who wish to develop a professional website in Chennai that will give them the absolute best in visibility, opportunity, and exposure to Kick start your business.”",
         name: "Mr. Ganesh",
         designation: "Traventure Homes",
-        avatar: "/assets/img/testimonial/g.png",
+        avatar: "/assets/img/award/testi/g.png",
     },
     //modern agency testimonial data start
 ];
