@@ -65,7 +65,7 @@ export const testimonial_slide_params: SwiperOptions = {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
-    speed: 200,
+    speed: 2000,
     autoplay: true,
     pagination: {
         el: ".px-testimonial-dot",

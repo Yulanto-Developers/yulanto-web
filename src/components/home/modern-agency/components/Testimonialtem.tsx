@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Testimonialtem: React.FC<TestimonialItemProps> = ({ quote, avatar, name, designation }) => {
     return (
         <div className="px-testimonial-item">
-            <p>
+            <p className='text-black'>
                 {quote}
             </p>
             <div className="px-testimonial-client d-flex align-items-center">
@@ -18,7 +18,7 @@ const Testimonialtem: React.FC<TestimonialItemProps> = ({ quote, avatar, name, d
                 </div>
 
                 <div className="px-testimonial-client-info">
-                    <h4 className="px-testimonial-client-name">
+                    <h4 className="px-testimonial-client-name text-black">
                         {name}
                     </h4>
                     <span>{designation}</span>

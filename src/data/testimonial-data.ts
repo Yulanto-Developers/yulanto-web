@@ -5,26 +5,42 @@ export const modernAgencyTestimonials: TestimonialItemDT[] = [
     {
         id: 1,
         quote:
-            "“This team excelled under pressure delivering a standout UX/UI update to our booking section that redefined our collaboration and became a highlight for Royal Caribbean.”",
-        name: "Royal Caribbean",
-        designation: "Commodity & Marketing Manager",
-        avatar: "/assets/img/testimonial/avater-1.jpg",
+            "“I have been using Yulanto website creation in Chennai for years, I'm very happy to work with team Yulanto.They are the best web designer in Chennai.The price is very decentand work they do is awesome, believe me it's above 10 star 💯 i recommend you to choose Yulanto, please try them and you will never be disappointed.”",
+        name: "Mr.Prasanna",
+        designation: "Flavor One",
+        avatar: "/assets/img/award/testi/g.png",
     },
     {
         id: 2,
         quote:
-            "“This team excelled under pressure delivering a standout UX/ UI update to our booking section that redefined ou collaboration and became a highlight for Royal Caribbean.”",
-        name: "Royal Caribbean",
-        designation: "Commodity & Marketing Manager",
-        avatar: "/assets/img/testimonial/avater-2.jpg",
+            "“I had a great experience with Web Design in Yulanto. The team really understood my needs to create a great website creation in Chennai for my business.Theteam was proactive andsuggested me some incredible features to give my customers a wonderful experience.Thank you”",
+        name: "Mr. Raffi Barsoumian",
+        designation: "Client",
+        avatar: "/assets/img/testimonial/g.png",
     },
     {
         id: 3,
         quote:
-            "“This team excelled under pressure delivering a standout UX/UI update to our booking section that redefined our collaboration and became a highlight for Royal Caribbean.”",
-        name: "Royal Caribbean",
-        designation: "Commodity & Marketing Manager",
-        avatar: "/assets/img/testimonial/avater-3.jpg",
+            "“ One of our channel partners referred Yulanto to us and we found all these qualities in them, there team is very good in their work, they were very patient, and they delivered exactly what we have visualised. I will highlyrecommend Yulanto for all Website design work in Chennai.”",
+        name: "Mr. Soundar Rajan V",
+        designation: "Aerovan Express",
+        avatar: "/assets/img/testimonial/g.png",
+    },
+    {
+        id: 4,
+        quote:
+            "“I would highly recommend Yulanto for website designing in Chennai. Because,they have completed my entire site with on page seo optimisation in Chennai for better rankings.”",
+        name: "Mr. Antony Raja",
+        designation: "Truimph Hub",
+        avatar: "/assets/img/testimonial/g.png",
+    },
+    {
+        id: 5,
+        quote:
+            "“I strongly recommend Yulanto to people from all walks of life; who wish to develop a professional website in Chennai that will give them the absolute best in visibility, opportunity, and exposure to Kick start your business.”",
+        name: "Mr. Ganesh",
+        designation: "Traventure Homes",
+        avatar: "/assets/img/testimonial/g.png",
     },
     //modern agency testimonial data start
 ];

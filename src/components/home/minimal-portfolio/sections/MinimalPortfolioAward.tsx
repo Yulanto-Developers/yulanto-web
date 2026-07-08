@@ -6,12 +6,13 @@ const MinimalPortfolioAward = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const awards = [
-    {id:1, title: "A' Design Awards & competition", subtitle: "Silver Medal" },
-    {id:2, title: "AWWWARDS", subtitle: "2X - Honnerable" },
-    {id:3, title: "CSS Design Awards", subtitle: "2X - Website of the day" },
-    {id:4, title: "2X - Website of the day", subtitle: "2X - Website of the day" },
-    {id:5, title: "CSS Reels", subtitle: "Featured of the day" },
-    {id:6, title: "Web Gurus", subtitle: "2X - Guru of the day" },
+    { id: 1, title: "A' Design Awards & competition", subtitle: "Customer First" },
+    { id: 2, title: "AWWWARDS", subtitle: "Humility" },
+    { id: 3, title: "CSS Design Awards", subtitle: "Passion" },
+    { id: 4, title: "2X - Website of the day", subtitle: "Customer Satisfaction" },
+    { id: 5, title: "CSS Reels", subtitle: "Pursits of Exellence" },
+    { id: 6, title: "Web Gurus", subtitle: "Honest Relationship" },
+    { id: 7, title: "Web Gurus", subtitle: "People Before Profit" },
   ];
 
   // Check if current route is a dark-themed page 

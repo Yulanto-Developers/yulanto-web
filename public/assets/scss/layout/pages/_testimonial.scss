@@ -50,19 +50,19 @@
     &-item{
         & p{
             font-weight: 500;
-            font-size: 46px;
+            font-size: 25px;
             line-height: 1.1;
             margin-bottom: 55px;
             letter-spacing: -0.04em;
             color: var(--tp-common-px-white);
             @media #{$xl}{
-                font-size: 40px;
+                font-size: 27px;
             }
             @media #{$md}{
-                font-size: 35px;
+                font-size: 20px;
             }
             @media #{$xs}{
-                font-size: 25px;
+                font-size: 15px;
                 & br{
                     display: none;
                 }
