@@ -192,7 +192,7 @@ const Testimonial = () => {
                             <div className="d-flex gap-5 " style={{ maxWidth: '100%' }}>
                                 <div className="text-center">
                                     <Image
-                                        src="/assets/img/award/testi/google-review.png"
+                                        src="/assets/img/award/testi/google-review-1.png"
                                         alt="Google Rating"
                                         width={100}
                                         height={80}
