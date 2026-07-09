@@ -57,6 +57,7 @@
             color: var(--tp-common-px-white);
             @media #{$xl}{
                 font-size: 27px;
+                line-height: 36px;
             }
             @media #{$md}{
                 font-size: 20px;

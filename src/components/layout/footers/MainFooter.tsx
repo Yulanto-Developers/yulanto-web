@@ -1,6 +1,13 @@
 import { quickLinks, socialLinks } from "@/data/footer-data";
 import Link from "next/link";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faEnvelope,
+    faPhone,
+    faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
 interface footerPropsDt {
     sectionBgClass?: string;
@@ -11,7 +18,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
     return (
         <footer className="px-footer" style={{ backgroundColor: sectionBgClass }}>
             {/* Top Footer */}
-            <div className="px-footer-area pt-125 pb-35">
+            <div className="px-footer-area pt-85 pb-35">
                 <div className="container container-1550">
                     <div className="row align-items-center">
 
@@ -22,14 +29,26 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                                 data-delay=".3"
                             >
                                 <div>
-                                    <Image src="/assets/img/logo/logo-white.png" alt="Pixora Logo" width={150} height={70} />
+                                    <Image src="/assets/img/logo/logo-white.png" alt="Pixora Logo" width={200} height={90} />
                                     {/* <h4 className="px-footer-widget-title">
                                     Helping<br />start-ups scale & grow.
                                 </h4> */}
-                                    <h5 className="text-white pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas cum assumenda quae. Tempore nobis dolorum autem corporis nulla provident harum culpa.</h5>
+                                    <h4 className="px-footer-widget-title">
+                                        Helping<br />start-ups scale & grow.
+                                    </h4>
                                 </div>
-
                                 <div className="px-footer-widget-social">
+                                    <a
+                                        href="/pdf/company-profile.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="pdf-link d-flex gap-2 align-items-center"
+                                    >
+                                        <FontAwesomeIcon icon={faFilePdf} className="pdf-icon" />
+                                        <span className="pdf-text">Company Profile</span>
+                                    </a>
+                                </div>
+                                {/* <div className="px-footer-widget-social">
                                     {socialLinks.map((item, index) => (
                                         <Link
                                             key={`${item.href}-${index}`}
@@ -39,7 +58,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                                             <span>{item.icon}</span>
                                         </Link>
                                     ))}
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 
@@ -50,7 +69,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                                 data-delay=".5"
                             >
                                 <h4 className="px-footer-widget-title-sm pre mb-25">
-                                    Quick links
+                                    Menu
                                 </h4>
 
                                 <div className="px-footer-widget-menu">
@@ -72,30 +91,46 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                                 data-delay=".7"
                             >
                                 <h4 className="px-footer-widget-title-sm pre mb-20">
-                                    Contact
+                                    Reach Us
                                 </h4>
-
-                                <div className="px-footer-widget-info">
-                                    <Link href="mailto:info@yulanto.com">
-                                        info@yulanto.com
-                                    </Link>
-                                    <Link href="mailto:operations@yulanto.com">
-                                        operations@yulanto.com
-                                    </Link>
-                                    <Link href="tel:+919962157250  ">
-                                        +91 99621 57250
-                                    </Link>
-                                </div>
-
                                 <div className="px-footer-widget-info">
                                     <Link
-                                        href="https://www.google.com/maps/"
-                                        target="_blank"
+                                        href="https://maps.app.goo.gl/dgzUBaL7ZPhhDwA97"
+                                        target="_blank" className="d-flex align-items-start"
                                     >
+                                        <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />
                                         F3, #4/608, First Floor,<br /> V.O.C Street, Kottivakkam, OMR,<br />
                                         Chennai - 600 041, India
                                     </Link>
                                 </div>
+                                <div className="px-footer-widget-info">
+                                    <Link href="mailto:info@yulanto.com">
+                                        <FontAwesomeIcon icon={faEnvelope} className="me-2" />
+                                        info@yulanto.com
+                                    </Link>
+
+                                    {/* <Link href="mailto:operations@yulanto.com">
+                                        <FontAwesomeIcon icon={faEnvelope} className="me-2" />
+                                        operations@yulanto.com
+                                    </Link> */}
+
+                                    <Link href="tel:+919962157250">
+                                        <FontAwesomeIcon icon={faPhone} className="me-2" />
+                                        +91 99621 57250
+                                    </Link>
+                                </div>
+                                <div className="footer-social-circle">
+                                    {socialLinks.map((item, index) => (
+                                        <Link
+                                            key={`${item.href}-${index}`}
+                                            href={item.href}
+                                            className="footer-social-circle__item"
+                                        >
+                                            {item.icon}
+                                        </Link>
+                                    ))}
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -109,7 +144,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                         <div className="col-xl-12">
                             <div className="px-copyright-content text-center">
                                 <h2 className="px-copyright-big-text">
-                                    Yuanto Web Creation
+                                    Web <span className="text-blue-pr">Creation</span>
                                 </h2>
                             </div>
                         </div>
