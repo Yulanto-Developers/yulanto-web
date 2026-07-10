@@ -357,67 +357,67 @@
  Portfolio Project Swiper
 ===========================*/
 
-.portfolio-project-swiper-wrapper{
-    position:relative;
+.portfolio-project-swiper-wrapper {
+    position: relative;
 }
 
-.portfolio-project-swiper{
-    width:100%;
-    overflow:hidden;
-    padding-bottom:20px;
+.portfolio-project-swiper {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 20px;
 }
 
-.portfolio-project-swiper .swiper-slide{
-    height:auto;
+.portfolio-project-swiper .swiper-slide {
+    height: auto;
 }
 
-.portfolio-project-card{
-    width:100%;
+.portfolio-project-card {
+    width: 100%;
 }
 
 /* Navigation */
 
 .portfolio-project-prev,
-.portfolio-project-next{
-    position:absolute;
-    top:50%;
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    background:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-    z-index:20;
-    transform:translateY(-50%);
-    box-shadow:0 5px 20px rgba(0,0,0,.12);
+.portfolio-project-next {
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transform: translateY(-50%);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .12);
 }
 
-.portfolio-project-prev{
-    left:-20px;
+.portfolio-project-prev {
+    left: -20px;
 }
 
-.portfolio-project-next{
-    right:-20px;
+.portfolio-project-next {
+    right: -20px;
 }
 
 .portfolio-project-prev:hover,
-.portfolio-project-next:hover{
-    background:#053456;
-    color:#fff;
+.portfolio-project-next:hover {
+    background: #053456;
+    color: #fff;
 }
 
 .portfolio-project-prev i,
-.portfolio-project-next i{
-    font-size:18px;
+.portfolio-project-next i {
+    font-size: 18px;
 }
 
-@media(max-width:991px){
+@media(max-width:991px) {
 
     .portfolio-project-prev,
-    .portfolio-project-next{
-        display:none;
+    .portfolio-project-next {
+        display: none;
     }
 
 }
@@ -472,3 +472,34 @@
 }
 
 /* image scroll section ends */
+
+
+/* text-animation */
+
+.reveal-heading {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 55px;
+}
+
+.reveal-gray {
+    display: block;
+    color: #b5b5b5;
+
+    .blue {
+        color: #b5b5b5;
+    }
+}
+
+.reveal-color {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+    color: #000;
+
+    .blue {
+        color: #053456;
+    }
+}

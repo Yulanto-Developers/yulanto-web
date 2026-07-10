@@ -11,6 +11,7 @@ import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion'; // Imported Framer Motion
 import { Variants } from 'framer-motion';
+import ScrollRevealText from '@/components/ScrollRevealText';
 
 const TextArrowIcon = () => (
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +85,7 @@ const cardContainerVariants: Variants = {
     hidden: {},
     visible: {
         transition: {
-            staggerChildren: 0.15 
+            staggerChildren: 0.15
         }
     }
 };
@@ -122,15 +123,7 @@ const StartupAgencyAbout = () => {
                         <div className="px-about-content-wrap">
 
                             {/* Main Heading - Slide from Right */}
-                            <motion.h4
-                                initial="hidden"
-                                animate={inView ? "visible" : "hidden"}
-                                variants={rightToLeftVariants}
-                                className="px-about-title mb-55"
-                            >
-                                <span>We are a digital studio</span> specializing <br />
-                                in website development, SEO, <br /> and marketing.
-                            </motion.h4>
+                            <ScrollRevealText />
 
                             <div className="row">
                                 <div className="col-12">
@@ -167,7 +160,7 @@ const StartupAgencyAbout = () => {
                             className="px-about-info-wrap"
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
-                            // variants={cardContainerVariants}
+                        // variants={cardContainerVariants}
                         >
                             <div className="row gx-5">
                                 {aboutStats.map((item) => {
