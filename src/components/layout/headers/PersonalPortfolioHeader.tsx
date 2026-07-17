@@ -67,12 +67,12 @@ const PersonalPortfolioHeader = () => {
 
   return (
     <>
-      <header>
+      <header className=''>
         <div
           className={`
     px-header-6-ptb
     px-header-style-black
-    header-fixed
+    header-fixed dash-bottom
     ${sticky ? "sticky-bg" : ""}
     ${showHeader ? "header-show" : "header-hide"}
   `}
