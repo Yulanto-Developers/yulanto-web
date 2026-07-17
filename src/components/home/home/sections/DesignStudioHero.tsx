@@ -11,7 +11,7 @@
 
 // const heroContent = [
 //     {
-//         col: "col-lg-2 he-10", img: "/assets/img/banner/Image-1.jpg",
+//         col: "col-lg-2 he-10", img: "/assets/img/banner/bd.jpg",
 //         title: "Boost Website Traffic to Your Business and Generate Revenue.",
 //         subtitle: "You Are In The Right Spot",
 //         spacingCls: "pl-10", alignCls: "justify-content-start"
@@ -27,27 +27,27 @@
 //         spacingCls: "pr-10", alignCls: "justify-content-end"
 //     },
 //     {
-//         col: "col-lg-2 he-10", img: "/assets/img/banner/Image-2.jpg",
+//         col: "col-lg-2 he-10", img: "/assets/img/banner/bd.jpg",
 //         title: "A Professional Approach  in Every Aspect of Our Work.", subtitle: "Awesome Website Creation in Chennai For Your Business",
 //         spacingCls: "pl-10", alignCls: "justify-content-end"
 //     },
 //     {
-//         col: "col-lg-3", img: "/assets/img/banner/Image-3.png",
+//         col: "col-lg-3", img: "/assets/img/banner/bd.png",
 //         title: "Cultivate Your Business Brand and Reputation Worldwide.", subtitle: "Handle Your Business With Experienced Web Experts in Chennai",
 //         spacingCls: "pr-10", alignCls: "justify-content-end"
 //     },
 //     {
-//         col: "col-lg-3", img: "/assets/img/banner/Image-4.png",
+//         col: "col-lg-3", img: "/assets/img/banner/bd.jpg",
 //         title: "Enhance Your Business Presence and Reliability Online.", subtitle: "Transform Your Business Into The Next Level",
 //         spacingCls: "pl-10", alignCls: "justify-content-start"
 //     },
 //     {
-//         col: "col-lg-3", img: "/assets/img/banner/Image-5.png",
+//         col: "col-lg-3", img: "/assets/img/banner/bd.jpg",
 //         title: "Our web designers commit to take your business", subtitle: "innovative strategies, dedication and effort",
 //         spacingCls: "pl-10", alignCls: "justify-content-start"
 //     },
 //     {
-//         col: "col-lg-3", img: "/assets/img/banner/Image-6.jpg",
+//         col: "col-lg-3", img: "/assets/img/banner/bd.jpg",
 //         title: " We specialize in guiding you towards the right path", subtitle: "create websites in Chennai with a multitude features",
 //         spacingCls: "pl-10", alignCls: "justify-content-start"
 //     },
@@ -168,7 +168,6 @@
 // export default Hero;
 
 
-
 "use client";
 import HeroSlide from "../components/HeroSlide";
 import { useState, useEffect } from "react";
@@ -183,14 +182,14 @@ import { StarIcon } from "@/svg/StarIcons";
 const heroContent = [
     {
         col: "col-lg-2 he-10", img: "/assets/img/banner/Image-1.jpg",
-        title: "Boost Website Traffic to Your Business and Generate Revenue.",
-        subtitle: "You Are In The Right Spot",
+        title: "Make a Enquiry",
+        subtitle: "We start by listening closely to your goals, ensuring you feel understood from the very beginning.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Traffic"
+        head: "Make a enquiry"
     },
     {
         col: "col-lg-4", img: "/assets/img/banner/bd.jpg",
-        title: "Boost Website Traffic to Your Business", subtitle: " ",
+        title: "Make a Enquiry", subtitle: "We start by listening closely to your goals, ensuring you feel understood from the very beginning. ",
         spacingCls: "pl-80", alignCls: "justify-content-start",
         head: "Boost"
     },
@@ -202,33 +201,33 @@ const heroContent = [
     },
     {
         col: "col-lg-2 he-10", img: "/assets/img/banner/Image-2.jpg",
-        title: "A Professional Approach in Every Aspect of Our Work.", subtitle: "Awesome Website Creation in Chennai For Your Business",
+        title: "Collect the requirement", subtitle: "Every detail is carefully noted and aligned with your vision, so nothing important is ever missed.",
         spacingCls: "pl-10", alignCls: "justify-content-end",
-        head: "Professional"
+        head: "Collect the requirement"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-3.png",
-        title: "Cultivate Your Business Brand and Reputation Worldwide.", subtitle: "Handle Your Business With Experienced Web Experts in Chennai",
+        title: "Write the code", subtitle: "Our expert team converts your ideas into robust solutions that work seamlessly for your business.",
         spacingCls: "pr-10", alignCls: "justify-content-end",
-        head: "Brand"
+        head: "Write the code"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-4.png",
-        title: "Enhance Your Business Presence and Reliability Online.", subtitle: "Transform Your Business Into The Next Level",
+        title: "Design the website", subtitle: "We craft a polished digital presence that reflects your brand’s strength and professionalism.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Presence"
+        head: "Design the website"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-5.png",
-        title: "Our web designers commit to take your business", subtitle: "innovative strategies, dedication and effort",
+        title: "Grow the sales", subtitle: "The result is a platform built to attract opportunities and drive your business forward.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Commitment"
+        head: "Grow the sales"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-6.jpg",
-        title: " We specialize in guiding you towards the right path", subtitle: "create websites in Chennai with a multitude features",
+        title: "Work together Longtime", subtitle: "Beyond delivery, we stand committed to building a lasting relationship that supports your growth for years to come.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Guidance"
+        head: "Work together Longtime"
     },
 ];
 
@@ -242,7 +241,6 @@ const Hero = () => {
             setActiveIndex((prevIndex) => {
                 let nextIndex = (prevIndex + 1) % heroContent.length;
 
-                // Optional auto-play skip index logic
                 while (nextIndex === 1 || nextIndex === 2) {
                     nextIndex = (nextIndex + 1) % heroContent.length;
                 }
@@ -254,23 +252,6 @@ const Hero = () => {
         return () => clearInterval(interval);
     }, []);
 
-    // Helper to calculate which slide is "next" to the active/hovered one
-    // Helper to calculate which slide is "next" to the active/hovered one, skipping index 1 and 2
-    const getNextIndex = (current: number) => {
-        let next = (current + 1) % heroContent.length;
-
-        // Skip index 1 and 2 because they are layout placeholders/hidden images
-        while (next === 1 || next === 2) {
-            next = (next + 1) % heroContent.length;
-        }
-
-        return next;
-    };
-
-    const nextIndex = getNextIndex(activeIndex);
-
-    // const nextIndex = getNextIndex(activeIndex);
-
     return (
         <div className="px-hero-2-area pt-120 pb-20">
             <div className="px-hero-2-main d-none d-xl-block p-relative">
@@ -278,7 +259,6 @@ const Hero = () => {
                     <div className="row">
                         {heroContent.map((item, index) => {
                             const isActive = activeIndex === index;
-                            const isNextSlide = nextIndex === index;
                             const shouldHideImage = index === 1 || index === 2;
 
                             return (
@@ -302,13 +282,13 @@ const Hero = () => {
                                                             alt={item.title}
                                                             style={{
                                                                 transition: "filter 0.3s ease",
-                                                                filter: isNextSlide ? "grayscale(100%) brightness(50%)" : "none"
+                                                                filter: isActive ? "grayscale(100%) brightness(50%)" : "none"
                                                             }}
                                                         />
                                                     </Link>
 
-                                                    {/* Gray overlay with Head title for the next slide */}
-                                                    {isNextSlide && (
+                                                    {/* Gray overlay with Head title on the currently hovered/active image */}
+                                                    {isActive && (
                                                         <div style={{
                                                             position: 'absolute',
                                                             top: 0,
@@ -318,7 +298,7 @@ const Hero = () => {
                                                             display: 'flex',
                                                             alignItems: 'center',
                                                             justifyContent: 'center',
-                                                            pointerEvents: 'none', // Allows hover triggers to pass through smoothly
+                                                            pointerEvents: 'none',
                                                             padding: '4px'
                                                         }}>
                                                             <span style={{

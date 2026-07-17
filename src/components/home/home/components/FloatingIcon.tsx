@@ -22,8 +22,8 @@ function FloatingActions({
       className="floating-actions-container-gold" 
       style={{
         position: 'fixed',
-        bottom: '100px',
-        right: '18px',
+        bottom: '24px',
+        left: '18px',
         display: 'flex',
         flexDirection: 'column',
         gap: '16px',
