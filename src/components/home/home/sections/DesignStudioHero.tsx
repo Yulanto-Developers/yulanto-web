@@ -206,19 +206,19 @@ const heroContent = [
         head: "Collect the requirement"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/Image-3.png",
+        col: "col-lg-3", img: "/assets/img/banner/Image-3.jpg",
         title: "Write the code", subtitle: "Our expert team converts your ideas into robust solutions that work seamlessly for your business.",
         spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Write the code"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/Image-4.png",
+        col: "col-lg-3", img: "/assets/img/banner/Image-4.jpg",
         title: "Design the website", subtitle: "We craft a polished digital presence that reflects your brand’s strength and professionalism.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Design the website"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/Image-5.png",
+        col: "col-lg-3", img: "/assets/img/banner/Image-5.jpg",
         title: "Grow the sales", subtitle: "The result is a platform built to attract opportunities and drive your business forward.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Grow the sales"
