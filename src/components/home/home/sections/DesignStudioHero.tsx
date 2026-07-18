@@ -168,6 +168,7 @@
 // export default Hero;
 
 
+
 "use client";
 import HeroSlide from "../components/HeroSlide";
 import { useState, useEffect } from "react";
@@ -182,14 +183,14 @@ import { StarIcon } from "@/svg/StarIcons";
 const heroContent = [
     {
         col: "col-lg-2 he-10", img: "/assets/img/banner/Image-1.jpg",
-        title: "Make a Enquiry",
-        subtitle: "We start by listening closely to your goals, ensuring you feel understood from the very beginning.",
+        title: "We start by listening closely to your goals, ensuring you feel understood from the very beginning.",
+        subtitle: "",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Make a enquiry"
     },
     {
         col: "col-lg-4", img: "/assets/img/banner/bd.jpg",
-        title: "Make a Enquiry", subtitle: "We start by listening closely to your goals, ensuring you feel understood from the very beginning. ",
+        title: "We start by listening closely to your goals, ensuring you feel understood from the very beginning.", subtitle: "",
         spacingCls: "pl-80", alignCls: "justify-content-start",
         head: "Boost"
     },
@@ -201,31 +202,31 @@ const heroContent = [
     },
     {
         col: "col-lg-2 he-10", img: "/assets/img/banner/Image-2.jpg",
-        title: "Collect the requirement", subtitle: "Every detail is carefully noted and aligned with your vision, so nothing important is ever missed.",
+        title: "Every detail is carefully noted and aligned with your vision, so nothing important is ever missed.", subtitle: "",
         spacingCls: "pl-10", alignCls: "justify-content-end",
         head: "Collect the requirement"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-3.jpg",
-        title: "Write the code", subtitle: "Our expert team converts your ideas into robust solutions that work seamlessly for your business.",
+        title: "Our expert team converts your ideas into robust solutions that work seamlessly for your business.", subtitle: "",
         spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Write the code"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-4.jpg",
-        title: "Design the website", subtitle: "We craft a polished digital presence that reflects your brand’s strength and professionalism.",
+        title: "We craft a polished digital presence that reflects your brand’s strength and professionalism.", subtitle: "",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Design the website"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-5.jpg",
-        title: "Grow the sales", subtitle: "The result is a platform built to attract opportunities and drive your business forward.",
+        title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Grow the sales"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-6.jpg",
-        title: "Work together Longtime", subtitle: "Beyond delivery, we stand committed to building a lasting relationship that supports your growth for years to come.",
+        title: "Beyond delivery, we stand committed to building a lasting relationship that supports your growth for years to come.", subtitle: "",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Work together Longtime"
     },
