@@ -248,7 +248,7 @@ const Hero = () => {
 
                 return nextIndex;
             });
-        }, 3000);
+        }, 300000);
 
         return () => clearInterval(interval);
     }, []);
