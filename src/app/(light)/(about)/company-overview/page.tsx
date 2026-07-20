@@ -2,6 +2,7 @@
 import Breadcrumb from "@/components/about/sections/breadcrumb";
 import { Metadata } from "next";
 import { AboutCompany, } from "@/components/home/home/aboutcomponents";
+import breadcrumbimg from "../../../../../public/assets/images/breadcrumb/Company-Overview.jpg"
 export const metadata: Metadata = {
     title: "About Me - Creative Portfolio Nextjs Template",
 };
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 const page = () => {
     return(
         <>
-        <Breadcrumb title="Company Overview" currentPage="Company Overview" />
+        <Breadcrumb title="Company Overview" currentPage="Company Overview"  />
         <AboutCompany/>
         </>
      
