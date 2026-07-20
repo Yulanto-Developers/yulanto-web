@@ -1,16 +1,19 @@
-import { PageHeader, PersonalPortfolioFooter } from "@/components/layout";
+
+import { MainFooter, PageHeader, PersonalPortfolioFooter } from "@/components/layout";
+import PersonalPortfolioHeader from "@/components/layout/headers/PersonalPortfolioHeader";
 import { ClientProviders } from "@/providers";
- 
+import "../../../../public/assets/css/style.css";
+
 export default function AboutMeLayout({ children }: {
     children: React.ReactNode;
 }) {
     return (
         <ClientProviders>
-            <PageHeader />
+            <PersonalPortfolioHeader />
             <div id="smooth-wrapper">
                 <div id="smooth-content">
                     {children}
-                    <PersonalPortfolioFooter />
+                    <MainFooter />
                 </div>
             </div>
         </ClientProviders>

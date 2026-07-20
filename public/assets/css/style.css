@@ -1,0 +1,113 @@
+/* ===========================
+   Breadcrumb Banner
+=========================== */
+
+.breadcrumb-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.breadcrumb-banner .overlay{
+    position:absolute;
+    inset:0;
+   background: linear-gradient(315deg, #50a778, #053456);
+}
+
+.breadcrumb-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding: 130px 0 50px;
+}
+
+.breadcrumb-content h1{
+    color:#fff;
+    font-size:55px;
+    font-weight:700;
+    margin-bottom:20px;
+    line-height:1.1;
+}
+
+.breadcrumb-list{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:14px;
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+.breadcrumb-list li{
+    color:#fff;
+    font-size:17px;
+}
+
+.breadcrumb-list a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.breadcrumb-list a:hover{
+    color:#50a778;
+}
+
+.breadcrumb-list .active{
+    color:#50a778;
+    font-weight:600;
+}
+
+/* Decorative Circle */
+
+.breadcrumb-banner::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+   border: 1px solid #ffffff42;
+    border-radius:50%;
+    left:-120px;
+    bottom:-120px;
+}
+
+/* Responsive */
+
+@media (max-width:991px){
+
+.breadcrumb-banner{
+    min-height:300px;
+}
+
+.breadcrumb-content h1{
+    font-size:42px;
+}
+
+}
+
+@media (max-width:767px){
+
+.breadcrumb-banner{
+    min-height:240px;
+    padding:70px 0;
+}
+
+.breadcrumb-content h1{
+    font-size:32px;
+}
+
+.breadcrumb-list{
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.breadcrumb-list li{
+    font-size:15px;
+}
+
+}
