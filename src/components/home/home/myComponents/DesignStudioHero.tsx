@@ -248,7 +248,7 @@ const Hero = () => {
 
                 return nextIndex;
             });
-        }, 3000);
+        }, 300000);
 
         return () => clearInterval(interval);
     }, []);
@@ -275,7 +275,7 @@ const Hero = () => {
                                         >
                                             {!shouldHideImage && (
                                                 <div className="px-hero-2-thumb rounded" style={{ position: 'relative', overflow: 'hidden' }}>
-                                                    <Link href="/portfolio-details-1">
+                                                    <Link href="/">
                                                         <Image
                                                             width={130}
                                                             height={168}

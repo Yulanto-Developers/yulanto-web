@@ -179,7 +179,7 @@
         &-content {
             position: absolute;
             top: 5%;
-            left: 20%;
+            left: 19%;
             right: 0;
             overflow: hidden;
             text-align: center;
@@ -235,7 +235,7 @@
             line-height: .7;
             letter-spacing: -0.01em;
             text-transform: uppercase;
-            color:#53ae7d;
+            color: #53ae7d;
             font-family: var(--tp-ff-thunder);
 
             @media only screen and (min-width: 1800px) and (max-width: 1900px) {
@@ -279,7 +279,7 @@
                 margin-right: 15px;
                 display: inline-block;
                 transform: translateY(-50px);
-                background-color: #053456 ;
+                background-color: #053456;
 
                 @media #{$xl} {
                     transform: translateY(-22px);
@@ -876,8 +876,8 @@
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
-    -o-border-radius: 50px; 
-   
+    -o-border-radius: 50px;
+
 }
 
 .button-style:hover {
@@ -885,9 +885,9 @@
     background: linear-gradient(135deg, #53ae7d 0%, rgb(39, 86, 116) 100%);
 }
 
-.btn-partent{
- position: absolute;
+.btn-partent {
+    position: absolute;
     top: 37.5%;
     left: 0;
-    
+
 }
