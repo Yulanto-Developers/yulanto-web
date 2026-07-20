@@ -307,11 +307,11 @@
                         }
 
                         &-wrap3 {
-                            transform: translateX(-740px);
-                            -webkit-transform: translateX(-740px);
-                            -moz-transform: translateX(-740px);
-                            -ms-transform: translateX(-740px);
-                            -o-transform: translateX(-740px);
+                            transform: translateX(-780px);
+                            -webkit-transform: translateX(-780px);
+                            -moz-transform: translateX(-780px);
+                            -ms-transform: translateX(-780px);
+                            -o-transform: translateX(-780px);
                         }
 
                         &-text.left-title {
@@ -339,7 +339,11 @@
 
         &-wrap2 {
             transition: .9s;
-            transform: translateX(740px);
+            transform: translateX(780px);
+            -webkit-transform: translateX(780px);
+            -moz-transform: translateX(780px);
+            -ms-transform: translateX(780px);
+            -o-transform: translateX(780px);
 
             @media #{$md,$sm,$xs} {
                 transform: translateX(0);
