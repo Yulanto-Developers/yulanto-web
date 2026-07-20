@@ -3,7 +3,7 @@ import {
   DesignStudioAbout,
   DesignStudioAward,
   DesignStudioBanner,
-  DesignStudioHero,
+  // DesignStudioHero,
   DesignStudioPortfolio,
   DesignStudioService,
   DesignStudioTextMarquee,
@@ -14,7 +14,7 @@ import { StartupAgencyAbout, StartupAgencyProject } from "@/components/home/star
 import { Metadata } from "next";
 import { } from "@/data/testimonial-data";
 import Testimonial from "@/components/home/modern-agency/sections/ModernAgencyTestimonial";
-import { CreativeAgencyBrand } from "@/components/home/creative-agency/sections";
+import { DesignStudioHero, Marquee, Abouthome, Portfolio, Gallery, Projects, Mantra, OurPartner, Services, ClientTestimonial } from "@/components/home/home/myComponents";
 
 export const metadata: Metadata = {
   title: "Yulanto - Home",
@@ -23,9 +23,9 @@ const page = () => {
   return (
     <main>
       <DesignStudioHero />
-      <DesignStudioTextMarquee />
-      <StartupAgencyAbout />
-      <PersonalPortfolioAbout />
+      <Marquee />
+      <Abouthome />
+      <Portfolio />
 
       {/* <DesignStudioBanner
         src="/assets/img/banner/banner-1.jpg"
@@ -33,17 +33,17 @@ const page = () => {
       /> */}
       {/* <DesignStudioAbout /> */}
       {/* <DesignStudioService /> */}
-      <StartupAgencyProject />
-      <PersonalPortfolioGallery />
-      <DesignStudioPortfolio />
-      <CreativeStudioService />
+      <Projects />
+      <Gallery />
+      <Mantra />
+      <Services />
       {/* <MinimalPortfolioTextSlider/> */}
       {/* <MinimalPortfolioAward /> */}
-      <Testimonial />
+      <ClientTestimonial />
 
       {/* <DesignStudioAward /> */}
       {/* <CreativeAgencyBrand/> */}
-      <CreativeStudioBrand />
+      <OurPartner />
     </main>
   );
 };

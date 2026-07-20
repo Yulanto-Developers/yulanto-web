@@ -1,4 +1,5 @@
 import { MainFooter, PageHeader } from "@/components/layout";
+import PersonalPortfolioHeader from "@/components/layout/headers/PersonalPortfolioHeader";
 import { ClientProviders } from "@/providers";
 
 export default function AboutUsLayout({ children }: {
@@ -6,7 +7,7 @@ export default function AboutUsLayout({ children }: {
 }) {
     return (
         <ClientProviders>
-            <PageHeader />
+            <PersonalPortfolioHeader />
             <div id="smooth-wrapper">
                 <div id="smooth-content">
                     {children}
