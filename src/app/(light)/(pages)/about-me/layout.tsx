@@ -1,7 +1,6 @@
-
 import { PageHeader, PersonalPortfolioFooter } from "@/components/layout";
 import { ClientProviders } from "@/providers";
-
+ 
 export default function AboutMeLayout({ children }: {
     children: React.ReactNode;
 }) {

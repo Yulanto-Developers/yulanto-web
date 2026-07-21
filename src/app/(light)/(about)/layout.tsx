@@ -1,8 +1,11 @@
+
 import { MainFooter, PageHeader } from "@/components/layout";
 import PersonalPortfolioHeader from "@/components/layout/headers/PersonalPortfolioHeader";
 import { ClientProviders } from "@/providers";
+import "../../../../public/assets/css/style.css";
 
 export default function AboutUsLayout({ children }: {
+
     children: React.ReactNode;
 }) {
     return (
