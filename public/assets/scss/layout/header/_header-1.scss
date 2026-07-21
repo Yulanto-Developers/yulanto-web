@@ -259,6 +259,7 @@
             transition:
               background 0.3s ease,
               color 0.3s ease;
+            font-family: var(--font-figtree);
 
             @media #{$xxl} {
               font-size: 14px;
@@ -289,7 +290,7 @@
                   &::after {
                     content: none;
                   }
-                
+
                 }
               }
             }

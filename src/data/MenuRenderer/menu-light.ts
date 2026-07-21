@@ -7,10 +7,11 @@ export const lightMenu: MenuItem[] = [
     label: "About Us",
     href: "#",
     links: [
-      { label: "Company Overview", href: "/company-overview" },
+      { label: "Our Story", href: "/company-overview" },
       { label: "Vision & Mission", href: "/" },
-      { label: "Our Philosophy & Focus", href: "/" },
+      { label: "Our Philosophy", href: "/" },
       { label: "Why Choose Us", href: "/" },
+      { label: "Meet Our Team", href: "/" },
     ],
   },
   {
@@ -20,46 +21,56 @@ export const lightMenu: MenuItem[] = [
     href: "#",
     links: [
       {
-        label: "Web Designing",
+        label: "Website Design",
         href: "#",
         subLinks: [
-          { label: "Corporate Web Designing", href: "/" },
-          { label: "Web Desiging for Startups", href: "/" },
-          { label: "Web Redesiging", href: "/" },
+          { label: "Startup Website Design", href: "/" },
+          { label: "Corporate Website Design", href: "/" },
+          { label: "Website Redesign", href: "/" },
           { label: "Landing Page Design", href: "/" },
+          { label: "UI/UX Design", href: "/" },
+          { label: "Website Maintenance", href: "/" },
         ]
       },
       {
-        label: "Web Development", href: "/",
+        label: "Website Development", href: "/",
         subLinks: [
-          { label: "Dynamic Webiste Design", href: "/" },
-          { label: "Custom Web Development", href: "/" },
+          { label: "Dynamic Website Development", href: "/" },
+          { label: "Custom Website Development", href: "/" },
           { label: "PHP Development", href: "/" },
+          { label: "PHP Development", href: "/" },
+          { label: "React Development", href: "/" },
+          { label: "API Integration", href: "/" },
         ]
       },
       {
-        label: "CMS & Ecommerce", href: "/",
+        label: "CMS & E-commerce Development", href: "/",
         subLinks: [
-          { label: " WordPress Development", href: "/" },
-          { label: "Portal Development", href: "/" },
-          { label: "Ecommerce Development", href: "/" },
+          { label: "WordPress Development", href: "/" },
+          { label: "WooCommerce Development", href: "/" },
           { label: "Shopify Development", href: "/" },
+          { label: "Portal Development", href: "/" },
+          { label: "E-commerce Website Development", href: "/" },
         ]
       },
       {
-        label: "Branding Design", href: "/",
+        label: "Graphic Design", href: "/",
         subLinks: [
-          { label: "Logo Design", href: "/" },
-          { label: "Brochure Design", href: "/" },
+          { label: "Logo Design & Branding", href: "/" },
+          { label: "Brochure & Company Profile Design", href: "/" },
+          { label: "Flyer & Poster Design", href: "/" },
+          { label: "Packaging Design", href: "/" },
+          { label: "Social Media Creative Design", href: "/" },
 
         ]
       },
       {
         label: "Digital Marketing", href: "/",
         subLinks: [
-          { label: "SEO", href: "/" },
+          { label: "Search Engine Optimization (SEO)", href: "/" },
+          { label: "Google Ads Management (PPC)", href: "/" },
           { label: "Social Media Marketing", href: "/" },
-          { label: "Google Ad Words", href: "/" },
+          { label: "OFF Page SEO", href: "/" },
         ]
       },
     ],
@@ -67,13 +78,14 @@ export const lightMenu: MenuItem[] = [
   {
     id: 3,
     type: "dropdown",
-    label: "Our Works",
+    label: "Our Work",
     href: "#",
     links: [
-      { label: "Latest Work", href: "/" },
-      { label: "Major Client Work", href: "/" },
-      { label: "Our Portfolio", href: "/" },
-      { label: "All Works", href: "/" },
+      { label: "Recent Projects", href: "/recent-project" },
+      { label: "Portfolio", href: "/" },
+      { label: "Case Studies", href: "/" },
+      { label: "Industries We Serve", href: "/" },
+      // { label: "Industry Wise", href: "/" },
     ],
   },
   {

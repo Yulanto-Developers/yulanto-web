@@ -14,7 +14,13 @@ export default function HeaderMenu() {
     return (
         <ul className="main-nav-list">
             {menu.map((item) => (
-                <li key={item.label} className={`has-dropdown ${item.isLastMenu ? 'tp-menu-last' : ''}`}>
+                <li
+                    key={item.label}
+                    className={`has-dropdown 
+    ${item.isLastMenu ? "tp-menu-last" : ""}
+    ${item.label === "Services" ? "services-menu" : ""}
+  `}
+                >
                     <a href={item.href} className="menu-link">
                         {item.label}
                         {item.type === "dropdown" && (

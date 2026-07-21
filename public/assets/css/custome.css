@@ -89,9 +89,9 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 260px !important;
+    width: auto !important;
     /*Initialnarrowwidth(LeftSidebaronly)*/
-    height: auto !important;
+
     /*Consistentstructuralheight*/
     background: #ffffff !important;
     border-radius: 12px !important;
@@ -116,6 +116,14 @@
     -o-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), ;
 }
 
+.has-dropdown .split-dropdown-menu.tp-submenu {
+    height: auto !important;
+}
+
+.services-menu:hover>.split-dropdown-menu.tp-submenu {
+    min-height: 350px;
+}
+
 /* On header menu item hover, display the initial narrow box */
 .has-dropdown:hover>.split-dropdown-menu.tp-submenu {
     visibility: visible !important;
@@ -125,13 +133,13 @@
 
 /* CRITICAL: When hovering over an item with sublinks, EXPAND the total container width! */
 .split-dropdown-menu.tp-submenu:has(.sidebar-item:hover .dropdown-content-pane) {
-    width: 600px !important;
+    width: 700px !important;
     /* Expands smoothly to make space for the right panel */
 }
 
 /* Left Sidebar - Always stable on the left */
 .split-dropdown-menu .dropdown-sidebar {
-    width: 260px !important;
+    /* width: 260px !important; */
     /* Hard-coded absolute pixel width */
     flex: 0 0 260px !important;
     /* Prevents collapsing/flexing */
@@ -183,11 +191,11 @@
 .split-dropdown-menu .dropdown-content-pane {
     position: absolute !important;
     top: 0 !important;
-    left: 260px !important;
+    left: 49% !important;
     /* Begins exactly where the sidebar finishes */
-    width: 420px !important;
+    width: auto !important;
     /* Explicit space allocation (680px - 260px) */
-    height: 100% !important;
+    height: auto !important;
     background: #ffffff !important;
     padding: 32px 36px !important;
     box-sizing: border-box !important;
@@ -214,6 +222,7 @@
 
 /* Header Text Title Components */
 .split-dropdown-menu .pane-title {
+    font-family: var(--font-figtree);
     font-size: 14px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
@@ -517,12 +526,13 @@
     content: '';
     width: 100%;
     height: 100%;
-  
+
     top: 0px;
     position: absolute;
     padding: 0px 2p 0px 2px;
     border-bottom: dashed 2px #bcbcbc;
 }
+
 .dash-bottom::after {
     content: '';
     width: 100%;
@@ -532,6 +542,7 @@
     position: absolute;
     border-bottom: dotted 2px #bcbcbc;
 }
+
 .dash-bottom::after {
     content: '';
     width: 100%;

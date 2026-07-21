@@ -320,10 +320,10 @@ const Hero = () => {
                                         </div>
                                         <div className="px-hero-2-content text-center z-index-1">
                                             <div className="fix">
-                                                <span dangerouslySetInnerHTML={{ __html: item.title }} />
+                                                <span className="title-cls" dangerouslySetInnerHTML={{ __html: item.title }} />
                                             </div>
                                             <div className="fix">
-                                                <span className="desc" dangerouslySetInnerHTML={{ __html: item.subtitle }} />
+                                                <span className="desc desc-cls" dangerouslySetInnerHTML={{ __html: item.subtitle }} />
                                             </div>
                                         </div>
                                     </div>

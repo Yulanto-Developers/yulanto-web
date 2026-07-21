@@ -197,6 +197,10 @@
                 transform: translateY(-105%);
                 animation: text_upper 1s cubic-bezier(.19, 1, .22, 1) forwards;
 
+                &.title-cls{
+                    font-family: var(--font-tenor);
+                }
+
                 &.desc {
                     font-size: 22px;
                     color: #000;
@@ -204,7 +208,13 @@
                     font-weight: normal;
                     // animation: text_upper 1s cubic-bezier(.19, 1, .22, 1) forwards;
                 }
+
+                &.desc-cls {
+                    font-family: var(--font-figtree);
+                }
             }
+
+
         }
 
         &-item {
