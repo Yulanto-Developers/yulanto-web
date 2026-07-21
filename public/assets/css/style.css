@@ -69,11 +69,11 @@
 }
 
 .breadcrumb-list a:hover{
-    color:#50a778;
+    color:#fdfdfd;
 }
 
 .breadcrumb-list .active{
-    color:#50a778;
+    color:#f3f3f3;
     font-weight:600;
 }
 
