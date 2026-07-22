@@ -248,7 +248,7 @@ const Hero = () => {
 
                 return nextIndex;
             });
-        }, 300000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, []);
@@ -309,7 +309,9 @@ const Hero = () => {
                                                                 textTransform: 'uppercase',
                                                                 letterSpacing: '1px',
                                                                 textShadow: '1px 1px 4px rgba(0,0,0,0.8)',
-                                                                textAlign: 'center'
+                                                                textAlign: 'center',
+                                                                fontFamily: 'var(--font-tenor)'
+
                                                             }}>
                                                                 {item.head}
                                                             </span>

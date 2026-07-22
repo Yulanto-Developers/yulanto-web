@@ -73,7 +73,7 @@ const PersonalPortfolioHeader = () => {
     px-header-6-ptb
     px-header-style-black
     header-fixed dash-bottom
-    ${sticky ? "sticky-bg" : ""}
+    ${sticky ? "sticky-bg" : "sticky-bg"}
     ${showHeader ? "header-show" : "header-hide"}
   `}
         >
@@ -87,26 +87,29 @@ const PersonalPortfolioHeader = () => {
                     <HeaderMenu />
                   </nav>
                 </div>
-                <div className="px-header-logo d-block d-xl-none">
-                  <Link href="/">
+                {/* mobile logo */}
+                <div className="px-header-logo d-block d-xl-none cursor-pointer">
+                  <Link href="/" className=''>
                     <Image
                       width={95}
                       height={33}
                       src="/assets/img/logo/Yulanto-logo.png"
-                      alt="logo"
+                      alt="logo" className=''
                     />
                   </Link>
                 </div>
               </div>
               <div className="col-2">
-                <div className="px-header-logo d-none d-xl-block">
+                {/* desktop logo */}
+                <div className="px-header-logo d-none d-xl-block  relative-cls-header">
                   <Link href="/">
                     <img
                       // width={170}
                       height={75}
                       src="/assets/img/logo/L2.png"
                       alt="logo"
-                      style={{ marginLeft: "-50%" }} />
+                      style={{ marginLeft: "-50%" }}
+                    />
                   </Link>
                 </div>
               </div>
@@ -118,25 +121,27 @@ const PersonalPortfolioHeader = () => {
                       info@yulanto.com
                     </Link>
                   </div>
-                  <div className="px-header-6-btn ml-25 d-none d-xl-block">
+                  <div className="px-header-6-btn ml-25 d-none d-xl-block relative-cls-header">
                     <SmartLink
-                      className="px-btn-grey d-flex align-items-center gap-2"
+                      className="px-btn-grey d-flex align-items-center gap-2 "
                       href="tel:+919962157250"
                     >
                       <FontAwesomeIcon icon={faPhone} />
                       +91 99621 57250
                     </SmartLink>
                   </div>
-                  <div className="px-header-action">
+                  <div className="px-header-action relative-cls-header">
                     <button
                       type="button"
-                      onClick={toggleMainSidebar}
-                      className="px-header-bar tp-offcanvas-open-btn"
-                      aria-label="Open sidebar menu"
+                      onClick={() => {
+                        console.log("Button clicked");
+                        console.log(toggleMainSidebar);
+                        toggleMainSidebar();
+                      }}
+                      style={{ cursor: 'pointer' }}
+                      className="px-header-bar tp-offcanvas-open-btn cursor-pointer"
                     >
                       <FontAwesomeIcon icon={faEnvelope} />
-                      {/* <span></span>
-                      <span></span> */}
                     </button>
                   </div>
                 </div>
