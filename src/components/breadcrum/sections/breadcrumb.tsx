@@ -1,22 +1,28 @@
-
 import Link from "next/link";
-import breadcrumbimg from "../../../../public/assets/images/breadcrumb/Company-Overview.jpg"
+import type { StaticImageData } from "next/image";
+
 interface BreadcrumbBannerProps {
   title: string;
   currentPage: string;
-  backgroundImage?: string;
+  backgroundImage?: string | StaticImageData;
 }
 
 export default function BreadcrumbBanner({
   title,
   currentPage,
-  backgroundImage = "/images/breadcrumb/banner.jpg",
+  backgroundImage,
 }: BreadcrumbBannerProps) {
+  const image =
+    typeof backgroundImage === "string"
+      ? backgroundImage
+      : backgroundImage?.src;
+      
+
   return (
     <section
       className="breadcrumb-banner"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${image})`,
       }}
     >
       <div className="overlay"></div>
@@ -31,9 +37,7 @@ export default function BreadcrumbBanner({
                 <Link href="/">Home</Link>
               </li>
 
-              <li>
-                <span>/</span>
-              </li>
+              <li>/</li>
 
               <li className="active">{currentPage}</li>
             </ul>

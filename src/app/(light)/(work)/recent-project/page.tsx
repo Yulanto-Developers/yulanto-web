@@ -1,5 +1,5 @@
 
-import Breadcrumb from "@/components/about/sections/breadcrumb";
+import Breadcrumb from "@/components/breadcrum/sections/breadcrumb";
 import { Metadata } from "next";
 import breadcrumbimg from "../../../../../public/assets/images/breadcrumb/Company-Overview.jpg"
 import { RecentProject } from "@/components/home/home/workComponents";
