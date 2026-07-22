@@ -10,6 +10,7 @@
         line-height: 167%;
         letter-spacing: -0.02em;
         color: var(--tp-common-px-white);
+
     }
 
     &-category {
@@ -361,6 +362,7 @@
             -moz-transform: translateX(0px);
             -ms-transform: translateX(0px);
             -o-transform: translateX(0px);
+            font-family: var(--font-figtree);
 
             @media #{$md,$sm,$xs} {
                 transform: translateX(0);
@@ -394,6 +396,7 @@
 
         &-text {
             text-align: left;
+            
 
             @media #{$sm,$xs} {
                 padding-top: 30px;
@@ -407,6 +410,7 @@
             font-weight: 500;
             letter-spacing: -1px;
             color: var(--tp-common-px-white);
+            font-family: var(--font-tenor);
             text-align: left;
             margin-bottom: 20px;
 
@@ -533,7 +537,9 @@
     &-dec {
         font-size: 18px;
         line-height: 167%;
-        color: rgba(255, 255, 255, 0.65);
+        color: rgba(255, 255, 255, 0.87);
+       
+       
 
         @media #{$lg,$md,$sm,$xs} {
             & br {

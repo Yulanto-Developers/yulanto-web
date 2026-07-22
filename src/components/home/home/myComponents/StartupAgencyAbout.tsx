@@ -103,10 +103,10 @@ const StartupAgencyAbout = () => {
     });
 
     return (
-        <section ref={ref} className="px-about-area about-skew-anim pt-50 pb-75 overflow-hidden">
+        <section ref={ref} className="px-about-area about-skew-anim pt-50 overflow-hidden">
             <div className="container container-1550">
 
-                {/* Subtitle Header - Slide from Left */}
+
                 <motion.div
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
@@ -114,7 +114,7 @@ const StartupAgencyAbout = () => {
                     className=""
                 >
                     <span className="px-section-subtitle px-about-subtitle-box blink-ball">
-                        Welcome to Yulanto
+                        Welcome to Yulanto Web Creations
                     </span>
                 </motion.div>
 
@@ -122,22 +122,22 @@ const StartupAgencyAbout = () => {
                     <div className="col-xl-12">
                         <div className="px-about-content-wrap">
 
-                            {/* Main Heading - Slide from Right */}
-                            <ScrollRevealText />
+
+                            <h4 className="px-about-title mb-55">
+                                <span className='text-blue-about'>We are a professional design agency  </span> specializing in <br />
+                                website design, web development, E-commerce, Graphic Design,<br />  SEO, and digital marketing.
+                            </h4>
 
                             <div className="row">
                                 <div className="col-12">
-                                    {/* Description Text & Button - Slide from Left */}
+
                                     <motion.div
-                                        initial="hidden"
-                                        animate={inView ? "visible" : "hidden"}
-                                        variants={leftToRightVariants}
+
                                         className="px-about-content mb-70"
                                     >
                                         <p>
-                                            We are a comprehensive company that provides a wide range of website
-                                            creation in Chennai. <span> Yulanto web creations </span>is a reputable web design company based in Chennai,
-                                            known for its professionalism, uniqueness and exceptional creativity since 2015.
+                                            Yulanto Web Creations is recognized as a top web design company in Chennai, <span> offering professional website design and web development services since 2015. </span> We excel in developing unique, creative, and high-performing websites that are customized to support businesses in establishing a solid online presence and achieving long-term growth.
+
                                         </p>
 
                                         <Link
@@ -155,8 +155,8 @@ const StartupAgencyAbout = () => {
                             </div>
                         </div>
 
-                        {/* STATS - Staggered fade and slide up presentation */}
-                        <motion.div
+
+                        {/* <motion.div
                             className="px-about-info-wrap"
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
@@ -226,12 +226,15 @@ const StartupAgencyAbout = () => {
                                     );
                                 })}
                             </div>
-                        </motion.div>
+                        </motion.div> */}
                     </div>
                 </div>
             </div>
         </section>
     );
+
+
+
 };
 
 export default StartupAgencyAbout;

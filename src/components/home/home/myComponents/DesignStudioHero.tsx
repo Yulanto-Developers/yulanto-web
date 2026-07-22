@@ -183,10 +183,10 @@ import { StarIcon } from "@/svg/StarIcons";
 const heroContent = [
     {
         col: "col-lg-2 he-10", img: "/assets/img/banner/Image-1.jpg",
-        title: "We start by listening closely to your goals, ensuring you feel understood from the very beginning.",
-        subtitle: "Awesome Website Creation in Chennai For Your Business",
+        title: "We start by listening closely to your goals, ensuring you feel understood from day one.",
+        subtitle: "Leading Web Design Company in Chennai for Business Growth.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Make a enquiry"
+        head: "Make an inquiry"
     },
     {
         col: "col-lg-4", img: "/assets/img/banner/bd.jpg",
@@ -202,33 +202,33 @@ const heroContent = [
     },
     {
         col: "col-lg-2 he-10", img: "/assets/img/banner/Image-2.jpg",
-        title: "Every detail is carefully noted and aligned with your vision, so nothing important is ever missed.", subtitle: "Awesome Website Creation in Chennai For Your Business",
+        title: "Every detail is noted and aligned with your vision, so nothing important is ever missed.", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.",
         spacingCls: "pl-10", alignCls: "justify-content-end",
-        head: "Collect the requirement"
+        head: "Gather Requirements"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-3.jpg",
-        title: "Our expert team converts your ideas into robust solutions that work seamlessly for your business.", subtitle: "Awesome Website Creation in Chennai For Your Business",
+        title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.",
         spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Write the code"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-4.jpg",
-        title: "We craft a polished digital presence that reflects your brand’s strength and professionalism.", subtitle: "Awesome Website Creation in Chennai For Your Business",
+        title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Design the website"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-5.jpg",
-        title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Awesome Website Creation in Chennai For Your Business",
+        title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Custom Website creations company for Growing Businesses in Chennai",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Grow the sales"
+        head: "Increase Sales"
     },
     {
         col: "col-lg-3", img: "/assets/img/banner/Image-6.jpg",
-        title: "Beyond delivery, we stand committed to building a lasting relationship that supports your growth for years to come.", subtitle: "Awesome Website Creation in Chennai For Your Business",
+        title: "Our commitment is to a long-term partnership that supports your business growth.", subtitle: "Elevate Your Business with Chennai's Best Web Design Company",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Work together Longtime"
+        head: "Continuous Success"
     },
 ];
 
@@ -333,7 +333,7 @@ const Hero = () => {
                             );
                         })}
                         <div className="text-center btn-partent">
-                            <Link href='/' className="button-style">Ask Pricing</Link>
+                            <Link href='/' className="button-style">Get a Free Quote</Link>
                         </div>
                     </div>
                 </div>

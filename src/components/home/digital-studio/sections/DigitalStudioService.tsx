@@ -16,7 +16,7 @@ const DigitalStudioService = () => {
                     data-delay=".3"
                 >
                     <span className="tp-section-subtitle text-white blink-ball">
-                        We Offered
+                        Services We Offer
                     </span>
                 </div>
                 <div className="row">
@@ -29,23 +29,22 @@ const DigitalStudioService = () => {
                                 className="bf-section-title-3 text-white mb-20 tp_fade_anim"
                                 data-delay=".3"
                             >
-                                Service we&apos;re
-                                 always provides
+                                Empowering businesses with creative digital excellence.
+                                {/* Service we&apos;re
+                                always provides */}
                             </h3>
                             <div className="tp_text_anim">
-                                <p className="bf-service-3-dec">
-                                    Our dedicated team of web Designers in Chennai excels in web design, web development, e-commerce
-                                    websites, logo
-                                    design, custom development, SEO, and SMM, ensuring top-notch services.
+                                <p className="bf-service-3-dec" style={{ fontFamily: "var(--font-figtree) !important" }}>
+                                    Our dedicated team of web designers in Chennai specializes in website design, web development, eCommerce website development, logo design, custom web development, SEO, and social media marketing (SMM). We deliver innovative, high-quality digital solutions that help businesses build a strong online presence and achieve lasting success.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                {serviceItems.map((service) => (
-                    <DigitalStudioServiceItem {...service} key={service.id} />
-                ))}
             </div>
+            {serviceItems.map((service) => (
+                <DigitalStudioServiceItem {...service} key={service.id} />
+            ))}
         </div>
     );
 };

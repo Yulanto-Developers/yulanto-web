@@ -260,6 +260,7 @@
               background 0.3s ease,
               color 0.3s ease;
             font-family: var(--font-tenor);
+            font-weight: bold;
 
             @media #{$xxl} {
               font-size: 14px;
@@ -307,6 +308,7 @@
       // font-weight: bold;
       letter-spacing: -0.6px;
       // text-transform: uppercase;
+      font-family: var(--font-tenor);
       color: var(--tp-common-px-black);
     }
   }

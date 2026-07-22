@@ -191,7 +191,7 @@
 .split-dropdown-menu .dropdown-content-pane {
     position: absolute !important;
     top: 0 !important;
-    left: 49% !important;
+    left: 40% !important;
     /* Begins exactly where the sidebar finishes */
     width: auto !important;
     /* Explicit space allocation (680px - 260px) */
@@ -324,10 +324,13 @@
 .innerText {
     font-size: 14px !important;
 }
-
-.tp-header-dropdown nav ul li .tp-submenu li a {
+/* .tp-header-dropdown nav ul li .tp-submenu li a {
+   
+    padding: 12px 10px !important;
+} */
+/* .tp-header-dropdown nav ul li .tp-submenu li a {
     padding: 9px 18px;
-}
+} */
 
 /* ball animation */
 
@@ -561,4 +564,11 @@
 .relative-cls-header{
     position: relative;
     z-index: 999;
+}
+
+.text-blue-about{
+    color:#053456 !important;
+}
+.text-figtree{
+    font-family: var(--font-figtree) !important;
 }

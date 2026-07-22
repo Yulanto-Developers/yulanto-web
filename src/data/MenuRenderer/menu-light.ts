@@ -36,7 +36,7 @@ export const lightMenu: MenuItem[] = [
         label: "Website Development", href: "/",
         subLinks: [
           { label: "Dynamic Website Development", href: "/" },
-          { label: "Custom Website Development", href: "/" },
+          { label: "Custom Website", href: "/" },
           { label: "PHP Development", href: "/" },
           { label: "PHP Development", href: "/" },
           { label: "React Development", href: "/" },
@@ -44,13 +44,14 @@ export const lightMenu: MenuItem[] = [
         ]
       },
       {
-        label: "CMS & E-commerce Development", href: "/",
+        label: "CMS & E-commerce", href: "/",
+        sublabel: 'CMS & E-commerce Development',
         subLinks: [
           { label: "WordPress Development", href: "/" },
           { label: "WooCommerce Development", href: "/" },
           { label: "Shopify Development", href: "/" },
           { label: "Portal Development", href: "/" },
-          { label: "E-commerce Website Development", href: "/" },
+          { label: "Custom E-commerce Development", href: "/" },
         ]
       },
       {

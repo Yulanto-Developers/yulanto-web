@@ -18,6 +18,7 @@
         line-height: 1.1;
         color: #000000;
         letter-spacing: -0.05em;
+        font-family: var(--font-tenor);
 
         @media #{$xl} {
             font-size: 55px;
@@ -61,6 +62,7 @@
             line-height: 1.36;
             color: #000000;
             letter-spacing: -0.04em;
+            font-family: var(--font-figtree);
 
             @media #{$xl,$md} {
                 & br {
@@ -145,6 +147,7 @@
         font-size: 16px;
         line-height: 1;
         color: var(--tp-common-px-black);
+        font-family: var(--font-tenor);
 
         &>span {
             display: inline-block;
@@ -324,7 +327,7 @@
             display: inline-block;
             text-transform: uppercase;
             color: var(--tp-common-px-black);
-            font-family: var(--tp-ff-thunder);
+            // font-family: var(--tp-ff-thunder);
 
             &.fs-130 {
                 font-size: 130px;
