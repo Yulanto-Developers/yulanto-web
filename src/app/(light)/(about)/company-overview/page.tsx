@@ -1,21 +1,20 @@
 
-import Breadcrumb from "@/components/about/sections/breadcrumb";
+import Breadcrumbdata from "@/components/breadcrum/sections/breadcrumbdata";
 import { Metadata } from "next";
 import { AboutCompany, } from "@/components/home/home/aboutcomponents";
-import breadcrumbimg from "../../../../../public/assets/images/breadcrumb/Company-Overview.jpg"
 export const metadata: Metadata = {
     title: "About Me - Creative Portfolio Nextjs Template",
 };
 
 const page = () => {
-    return(
+    return (
         <>
-        <Breadcrumb title="Company Overview" currentPage="Company Overview"  />
-        <AboutCompany/>
+            <Breadcrumbdata />
+            <AboutCompany />
         </>
-     
+
     );
- 
+
 }
 
 export default page;
