@@ -16,7 +16,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
 
                 <div className="px-project-content d-flex align-items-center justify-content-between">
                     <h4 className="px-project-title">
-                        <SmartLink href={`/portfolio-details-1/${id}`}>
+                        <SmartLink href={`/`}>
                             {title}
                         </SmartLink>
                     </h4>
@@ -25,7 +25,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                 </div>
 
                 <div className="px-project-thumb">
-                    <SmartLink href={`/portfolio-details-1/${id}`}>
+                    <SmartLink href={`/`}>
                         <div className="ripple-image project-hover-card">
 
                             <Image
@@ -43,7 +43,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                                 <div className="project-hover-content">
 
                                     {description && (
-                                        <p>{description}</p>
+                                        <p className="text-figtree">{description}</p>
                                     )}
 
                                 </div>

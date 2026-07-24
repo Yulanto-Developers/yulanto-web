@@ -307,15 +307,15 @@
                 right: 0%;
                 margin: 0 auto;
                 font-weight: 700;
-                font-size: 10px;
-                line-height: 1.07;
+                font-size: 15px;
+                line-height: 1.2;
                 letter-spacing: -0.05em;
-                text-transform: uppercase;
+                text-transform: capitalize !important;
                 color: var(--tp-common-px-black);
                 font-family: var(--font-tenor);
 
                 @media #{$xl} {
-                    font-size: 15px;
+                    font-size: 22px;
                 }
             }
         }

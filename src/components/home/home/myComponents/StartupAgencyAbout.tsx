@@ -103,7 +103,7 @@ const StartupAgencyAbout = () => {
     });
 
     return (
-        <section ref={ref} className="px-about-area about-skew-anim pt-50 overflow-hidden">
+        <section ref={ref} className="px-about-area about-skew-anim pt-50 pb-50 overflow-hidden">
             <div className="container container-1550">
 
 
@@ -156,7 +156,7 @@ const StartupAgencyAbout = () => {
                         </div>
 
 
-                        {/* <motion.div
+                        <motion.div
                             className="px-about-info-wrap"
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
@@ -226,7 +226,7 @@ const StartupAgencyAbout = () => {
                                     );
                                 })}
                             </div>
-                        </motion.div> */}
+                        </motion.div>
                     </div>
                 </div>
             </div>

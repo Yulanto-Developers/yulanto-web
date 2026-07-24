@@ -48,24 +48,26 @@
 
     &-title {
         font-weight: 700;
-        font-size: 144px;
+        font-size: 38px;
         line-height: .83;
         letter-spacing: -0.06em;
+        font-family: var(--font-tenor) !important;
+        
 
         @media #{$xl} {
-            font-size: 125px;
+            font-size: 38px;
         }
 
         @media #{$lg} {
-            font-size: 110px;
+            font-size: 38px;
         }
 
         @media #{$md} {
-            font-size: 100px;
+            font-size: 38px;
         }
 
         @media #{$xs} {
-            font-size: 55px;
+            font-size: 38px;
         }
 
         &.white-style {
@@ -116,7 +118,7 @@
 
             &.fs-130 {
                 font-weight: 600;
-                font-size: 65px;
+                font-size: 50px;
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 color: var(--tp-common-px-black);
@@ -188,13 +190,13 @@
 
 .tp-section {
     &-subtitle {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
         line-height: 1;
         margin-right: 15px;
         display: inline-block;
-        text-transform: uppercase;
-        color: var(--tp-common-px-black);
+        text-transform: capitalize !important;
+        // color: var(--tp-common-px-black);
         font-family: var(--font-tenor);
 
         &.pre {

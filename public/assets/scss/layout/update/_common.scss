@@ -162,17 +162,17 @@ $container: (
 
         &-3 {
             font-weight: 500;
-            font-size: 70px;
+            font-size: 38px;
             line-height: 105%;
             letter-spacing: -0.02em;
             font-family: var(--font-tenor);
 
             @media #{$lg,$md,$sm} {
-                font-size: 60px;
+                font-size: 38px;
             }
 
             @media #{$xs} {
-                font-size: 40px;
+                font-size: 38px;
             }
         }
     }

@@ -81,72 +81,96 @@
 /*----------------------------------------*/
 
 @media (min-width: 1400px) {
-	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
 		max-width: 1510px;
 	}
-	.container-1870{
+
+	.container-1870 {
 		max-width: 1870px;
 	}
+
 	.container-1830 {
 		max-width: 1830px,
 	}
-	.container-1800{
+
+	.container-1800 {
 		max-width: 1800px,
 	}
-	.container-1750{
+
+	.container-1750 {
 		max-width: 1750px,
 	}
-	.container-1730{
+
+	.container-1730 {
 		max-width: 1730px,
 	}
-	.container-1680{
+
+	.container-1680 {
 		max-width: 1680px,
 	}
-	.container-1630{
+
+	.container-1630 {
 		max-width: 1630px,
 	}
-	.container-1580{
+
+	.container-1580 {
 		max-width: 1580px,
 	}
-	.container-1550{
+
+	.container-1550 {
 		max-width: 1550px,
 	}
-	.container-1460{
+
+	.container-1460 {
 		max-width: 1460px,
 	}
-	.container-1430{
+
+	.container-1430 {
 		max-width: 1430px,
 	}
-	.container-1350{
+
+	.container-1350 {
 		max-width: 1350px,
 	}
-	.container-1330{
+
+	.container-1330 {
 		max-width: 1330px,
 	}
-	.container-1320{
+
+	.container-1320 {
 		max-width: 1320px,
 	}
-	.container-1300{
+
+	.container-1300 {
 		max-width: 1300px,
 	}
-	.container-1230{
+
+	.container-1230 {
 		max-width: 1230px,
 	}
-	.container-1200{
+
+	.container-1200 {
 		max-width: 1200px,
 	}
-	.container-1030{
+
+	.container-1030 {
 		max-width: 1030px,
 	}
 }
 
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-html{
+html {
 	scroll-behavior: smooth;
 }
 
@@ -162,16 +186,18 @@ body {
 	font-family: var(--tp-ff-body);
 }
 
-img{
+img {
 	max-width: 100%;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
-.text-effect{
-	span, a {
+.text-effect {
+
+	span,
+	a {
 		display: inline-block;
 		color: inherit;
 		font-weight: inherit;
@@ -196,25 +222,25 @@ h6 {
 h1 {
 	font-size: 40px;
 }
-  
+
 h2 {
-font-size: 36px;
+	font-size: 36px;
 }
 
 h3 {
-font-size: 28px;
+	font-size: 28px;
 }
 
 h4 {
-font-size: 24px;
+	font-size: 24px;
 }
 
 h5 {
-font-size: 20px;
+	font-size: 20px;
 }
 
 h6 {
-font-size: 16px;
+	font-size: 16px;
 }
 
 ul {
@@ -227,7 +253,7 @@ p {
 	font-weight: 400;
 	margin-bottom: 15px;
 	line-height: 26px;
-	font-family: var(--tp-ff-p);
+	font-family: var(--font-figtree);
 	color: var(--tp-text-px-body);
 }
 
@@ -239,11 +265,11 @@ input,
 select,
 textarea,
 li,
-.transition-3{
+.transition-3 {
 	@extend %transition;
 }
 
-a:not([href]):not([class]), 
+a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
 	color: inherit;
 	text-decoration: none;
@@ -256,7 +282,7 @@ a:focus,
 }
 
 a:focus,
-a:hover{
+a:hover {
 	color: inherit;
 	text-decoration: none;
 }
@@ -269,17 +295,18 @@ button {
 	background: transparent;
 }
 
-button:hover{
+button:hover {
 	cursor: pointer;
 }
 
-button:focus{
-    outline: 0; 
+button:focus {
+	outline: 0;
 }
 
 .uppercase {
 	text-transform: uppercase;
 }
+
 .capitalize {
 	text-transform: capitalize;
 }
@@ -290,7 +317,7 @@ input[type="tel"],
 input[type="number"],
 input[type="password"],
 input[type="url"],
-textarea{
+textarea {
 	outline: none;
 	height: 56px;
 	width: 100%;
@@ -301,19 +328,22 @@ textarea{
 	color: var(--tp-common-px-black);
 	border: 1px solid var(--tp-common-px-black);
 	background-color: var(--tp-common-px-white);
-	@include tp-placeholder{
+
+	@include tp-placeholder {
 		color: var(--tp-common-px-black);
 	}
-	&:focus{
+
+	&:focus {
 		border-color: var(--tp-common-px-black);
-		&::placeholder{
+
+		&::placeholder {
 			opacity: 0;
 		}
 	}
 
 }
 
-textarea{
+textarea {
 	line-height: 1.4;
 	padding-top: 17px;
 	padding-bottom: 17px;
@@ -337,11 +367,13 @@ input[type="color"] {
 	color: var(--tp-common-px-white);
 	text-shadow: none;
 }
+
 ::-moz-selection {
 	background: var(--tp-common-px-black);
 	color: var(--tp-common-px-white);
 	text-shadow: none;
 }
+
 ::selection {
 	background: var(--tp-common-px-black);
 	color: var(--tp-common-px-white);
@@ -353,6 +385,7 @@ input[type="color"] {
 	font-size: 14px;
 	opacity: 1;
 }
+
 *::placeholder {
 	color: var(--tp-common-px-black);
 	font-size: 14px;

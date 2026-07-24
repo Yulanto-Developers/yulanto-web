@@ -22,7 +22,7 @@ const StartupAgencyProject = () => {
                     <div className="row">
 
                         <div className="col-xl-3">
-                            <span className="px-section-subtitle pt-40 blink-ball">
+                            <span className="px-section-subtitle pt-40 blink-ball text-tenor">
                                 Case Study
                             </span>
                         </div>
@@ -34,7 +34,7 @@ const StartupAgencyProject = () => {
                                     <span>Case</span>
                                 </h3>
 
-                                <p>
+                                <p className="text-figtree font-paragraph-cls text-black">
                                     We've helped businesses across industries achieve
                                     their goals.
                                     <br />
@@ -64,7 +64,7 @@ const StartupAgencyProject = () => {
                         slidesPerView={2}
                         loop={true}
                         autoplay={{
-                            delay: 3000,
+                            delay: 30000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: true,
                         }}

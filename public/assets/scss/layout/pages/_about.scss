@@ -14,14 +14,14 @@
 
     &-title {
         font-weight: 600;
-        font-size: 60px;
+        font-size: 38px;
         line-height: 1.1;
         color: #000000;
         letter-spacing: -0.05em;
         font-family: var(--font-tenor);
 
         @media #{$xl} {
-            font-size: 55px;
+            font-size: 38px;
 
             & br {
                 display: none;
@@ -59,7 +59,7 @@
 
         & p {
             font-size: 22px;
-            line-height: 1.36;
+            line-height: 1.6;
             color: #000000;
             letter-spacing: -0.04em;
             font-family: var(--font-figtree);
@@ -122,6 +122,7 @@
                 margin-bottom: 40px;
                 letter-spacing: -0.03em;
                 color: var(--tp-common-px-black);
+                font-family: var(--font-tenor) !important;
             }
 
             & p {
@@ -131,6 +132,7 @@
                 color: #6d6868;
                 margin-bottom: 0;
                 letter-spacing: -0.04em;
+                font-family: var(--font-figtree) !important;
 
                 @media #{$xl,$lg} {
                     & br {
@@ -760,7 +762,7 @@
                 font-weight: 600;
                 margin-bottom: 50px;
                 letter-spacing: -2px;
-                font-family: var(--tp-ff-p);
+                font-family: var(--font-figtree);
 
                 @media #{$md} {
                     font-size: 42px;
@@ -1147,4 +1149,3 @@
         /* Slightly shrinks for a nicer effect */
     }
 }
-

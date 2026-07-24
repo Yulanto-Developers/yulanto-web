@@ -53,7 +53,7 @@ const PersonalPortfolioAbout = () => {
                                         loop={true}
                                         modules={[Autoplay]}
                                         autoplay={{
-                                            delay: 1000,
+                                            delay: 100000,
                                             disableOnInteraction: false,
                                         }}
                                     >
