@@ -40,7 +40,7 @@ const PortfolioCard = ({
 
                     <div className="portfolio-image-description">
                         <div className="portfolio-hover-title">
-                            <h2 className="text-white title-cls">{title}</h2>
+                            <h2 className="text-white text-tenor font-title-cls">{title}</h2>
                         </div>
                         {/* OUR MANTRA */}
                         {title === "Our Success Mantra" && Array.isArray(portFolio) && (

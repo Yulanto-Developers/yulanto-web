@@ -3,24 +3,28 @@
 /*----------------------------------------*/
 /*  2.8 Section Title
 /*----------------------------------------*/
-.px-section{
-    &-subtitle{
+.px-section {
+    &-subtitle {
         font-size: 16px;
         font-weight: 500;
         display: inline-block;
         letter-spacing: -0.03em;
         color: var(--tp-common-px-black);
+        font-family: var(--font-tenor);
+
         // color: var(--tp-common-px-black);
-        @media #{$lg}{
+        @media #{$lg} {
             padding-top: 0;
             padding-bottom: 20px;
         }
-        @media #{$md,$xs}{
+
+        @media #{$md,$xs} {
             padding-top: 0;
             padding-bottom: 20px;
             margin-bottom: 0;
         }
-        & i{
+
+        & i {
             height: 20px;
             width: 20px;
             margin-right: 10px;
@@ -28,90 +32,114 @@
             border-radius: 50%;
             text-align: center;
             place-content: center;
-            background-color:#E8E9E3;
+            background-color: #E8E9E3;
             color: var(--tp-common-px-black);
         }
-        &.white-style{
+
+        &.white-style {
             color: var(--tp-common-px-white);
-            & i{
+
+            & i {
                 color: var(--tp-common-px-white);
                 background-color: rgba(255, 255, 255, 0.1);
             }
         }
     }
-    &-title{
+
+    &-title {
         font-weight: 700;
-        font-size: 144px;
+        font-size: 38px;
         line-height: .83;
         letter-spacing: -0.06em;
-        @media #{$xl}{
-            font-size: 125px;
+        font-family: var(--font-tenor) !important;
+        
+
+        @media #{$xl} {
+            font-size: 38px;
         }
-        @media #{$lg}{
-            font-size: 110px;
+
+        @media #{$lg} {
+            font-size: 38px;
         }
-        @media #{$md}{
-            font-size: 100px;
+
+        @media #{$md} {
+            font-size: 38px;
         }
-        @media #{$xs}{
-            font-size: 55px;
+
+        @media #{$xs} {
+            font-size: 38px;
         }
-        &.white-style{
+
+        &.white-style {
             color: var(--tp-common-px-white);
         }
-        &.ff-thunder{
+
+        &.ff-thunder {
             font-weight: 700;
             font-size: 350px;
             line-height: 0.8;
             letter-spacing: 1px;
             color: var(--tp-common-px-red);
             font-family: var(--tp-ff-thunder);
-            @media #{$xl}{
+
+            @media #{$xl} {
                 font-size: 330px;
             }
-            @media #{$lg}{
+
+            @media #{$lg} {
                 font-size: 300px;
             }
-            @media #{$md}{
+
+            @media #{$md} {
                 font-size: 230px;
             }
-            @media #{$xs}{
+
+            @media #{$xs} {
                 font-size: 150px;
                 padding-bottom: 10px;
             }
-            &.fs-100{
+
+            &.fs-100 {
                 font-weight: 600;
                 font-size: 100px;
                 line-height: .9;
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 color: var(--tp-common-px-black);
-                @media #{$md}{
+
+                @media #{$md} {
                     font-size: 75px;
                 }
-                @media #{$xs}{
+
+                @media #{$xs} {
                     font-size: 60px;
                 }
             }
-            &.fs-130{
+
+            &.fs-130 {
                 font-weight: 600;
-                font-size: 120px;
+                font-size: 50px;
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 color: var(--tp-common-px-black);
-                @media #{$lg}{
-                    font-size: 75px;
-                }
-                @media #{$md}{
-                    font-size: 60px;
-                }
-                @media #{$xs}{
-                    font-size: 80px;
-                    padding-bottom: 0;
-                    margin-bottom: 0;
-                }
+                font-family: var(--font-tenor);
+
+                // @media #{$lg} {
+                //     font-size: 75px;
+                // }
+
+                // @media #{$md} {
+                //     font-size: 60px;
+                // }
+
+                // @media #{$xs} {
+                //     font-size: 80px;
+                //     padding-bottom: 0;
+                //     margin-bottom: 0;
+                // }
             }
-            &.fs-80{
+
+            &.fs-80 {
                 font-size: 80px;
                 font-weight: 500;
                 letter-spacing: 1px;
@@ -119,7 +147,8 @@
                 font-family: var(--tp-ff-thundermed);
             }
         }
-        &.ff-inter{
+
+        &.ff-inter {
             font-weight: 600;
             font-size: 130px;
             line-height: .92;
@@ -127,24 +156,31 @@
             text-transform: uppercase;
             color: var(--tp-common-px-white);
             font-family: var(--tp-ff-body);
-            @media #{$xxl}{
+
+            @media #{$xxl} {
                 font-size: 100px;
             }
-            @media #{$xl}{
+
+            @media #{$xl} {
                 font-size: 85px;
             }
-            @media #{$lg}{
+
+            @media #{$lg} {
                 font-size: 70px;
             }
-            @media #{$md}{
+
+            @media #{$md} {
                 font-size: 85px;
-                & br{
+
+                & br {
                     display: none;
                 }
             }
-            @media #{$xs}{
+
+            @media #{$xs} {
                 font-size: 40px;
-                & br{
+
+                & br {
                     display: none;
                 }
             }
@@ -152,17 +188,19 @@
     }
 }
 
-.tp-section{
-    &-subtitle{
-        font-size: 18px;
+.tp-section {
+    &-subtitle {
+        font-size: 16px;
         font-weight: 400;
         line-height: 1;
         margin-right: 15px;
         display: inline-block;
-        text-transform: uppercase;
-        color: var(--tp-common-px-black); 
-        &.pre{
-            &::before{
+        text-transform: capitalize !important;
+        // color: var(--tp-common-px-black);
+        font-family: var(--font-tenor);
+
+        &.pre {
+            &::before {
                 content: '';
                 height: 8px;
                 width: 8px;
@@ -174,27 +212,33 @@
             }
         }
     }
-    &-title{
+
+    &-title {
         font-size: 120px;
         font-weight: 700;
         line-height: 1;
         letter-spacing: -4.8px;
         color: var(--tp-common-px-black);
+
         @media #{$xl} {
             font-size: 100px;
         }
+
         @media #{$lg} {
             font-size: 90px;
         }
+
         @media #{$md} {
             font-size: 70px;
             letter-spacing: -1.8px;
         }
+
         @media #{$xs} {
             font-size: 52px;
             letter-spacing: -1.8px;
         }
-        & br{
+
+        & br {
             @media #{$xs} {
                 display: none;
             }

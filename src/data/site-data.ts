@@ -1,18 +1,18 @@
 import { BrandingIcon, CreativeIcon, DesignIcon, TechnologyIcon } from "@/svg/ServiceIcons";
 
 export const SLIDER_TEXTS = [
-    { id: 1, text: "Brand Identity Design" },
-    { id: 2, text: "Infographic and other" },
-    { id: 3, text: "Branding & Identity" },
-    { id: 4, text: "Web Design & Development" },
-    { id: 5, text: "UI / UX Design" },
-    { id: 6, text: "Complex brand design" },
-    { id: 7, text: "Complex brand design" },
-    { id: 8, text: "Brand Identity Design" },
-    { id: 9, text: "Brand Identity Design" },
-    { id: 10, text: "Infographic and other" },
-    { id: 11, text: "Branding & Identity" },
-    { id: 12, text: "Web Design & Development" },
+    { id: 1, text: "Website Design" },
+    { id: 2, text: "Web Development" },
+    { id: 3, text: "UI/UX Design" },
+    { id: 4, text: "Ecommerce Design" },
+    { id: 5, text: "Dynamic Website" },
+    { id: 6, text: "PHP Development" },
+    { id: 7, text: "React Development" },
+    { id: 8, text: "Logo Design" },
+    { id: 9, text: "Branding & Identity" },
+    { id: 10, text: "Digital Marketing" },
+    { id: 11, text: "SEO & SMM" },
+    // { id: 12, text: "Web Design & Development" },
 ];
 
 //Creative Studio Service data

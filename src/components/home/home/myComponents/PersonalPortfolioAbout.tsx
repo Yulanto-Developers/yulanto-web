@@ -9,7 +9,7 @@ import { DesignStudioService } from "../../home/sections";
 import { DigitalStudioService } from "../../digital-studio/sections";
 
 // Data
-const services = ["Branding", "Development", "Design", "Branding", "Development", "Design"];
+const services = ["Web Design", "Web Development", "Ecommerce Design", "Graphic Design", "Digital Marketing"];
 
 const PersonalPortfolioAbout = () => {
     const isDarkTheme = useIsDarkRoute();
@@ -22,7 +22,7 @@ const PersonalPortfolioAbout = () => {
 
     return (
         <div
-            className="px-about-6-area pt-80 pb-110"
+            className="px-about-6-area pt-50 pb-110"
             style={{ backgroundColor: aboutConfig.sectionBg }}
         >
             <div className="container">
@@ -53,7 +53,7 @@ const PersonalPortfolioAbout = () => {
                                         loop={true}
                                         modules={[Autoplay]}
                                         autoplay={{
-                                            delay: 1000,
+                                            delay: 100000,
                                             disableOnInteraction: false,
                                         }}
                                     >

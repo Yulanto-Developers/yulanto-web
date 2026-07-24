@@ -1,78 +1,128 @@
-import { SmartLink } from "@/components/common";
-import { HeroArrowIcon } from "@/svg/ArrowIcons";
-import Image from "next/image";
+import { services } from "@/data/site-data";
 
-const SERVICES = [
-	{
-		id:1,
-		icon: "/assets/img/service/icon/icon-1.png",
-		title: "Brand Strategy",
-		href: "/service-2",
-	},
-	{
-		id:2,
-		icon: "/assets/img/service/icon/icon-2.png",
-		title: "Web Development",
-		href: "/service-2",
-	},
-	{
-		id:3,
-		icon: "/assets/img/service/icon/icon-3.png",
-		title: "UI/UX Design",
-		href: "/service-2",
-	},
-	{
-		id:4,
-		icon: "/assets/img/service/icon/icon-4.png",
-		title: "Digital Marketing",
-		href: "/service-2",
-	},
-];
-
-const CreativeAgencyService = () => {
+const Service = () => {
 	return (
-		<div className="px-service-5-area">
-			<div className="container container-1550">
+		<div
+			className="px-service-area px-service-3-style pt-120 pb-50 z-index-1"
+			style={{ backgroundColor: "#000000" }}
+		>
+			<div className="container container-1750">
+				{/* Title */}
 				<div className="row">
-					{SERVICES.map((service) => (
-						<div className="col-xl-3 col-lg-4 col-md-6" key={service.id}>
-							<div className="px-service-5-item mb-25 px-fade-anim">
+					<div className="col-xl-12">
+						<div
+							className="px-service-text text-center mb-50 px-fade-anim"
+							data-delay=".3"
+						>
+							<h2 className="px-about-3-bigtext text-white">
+								Our Development Process
+							</h2>
+						</div>
+					</div>
+				</div>
 
-								{/* ICON */}
-								<div className="px-service-5-icon">
-									<Image className="img-fluid w-auto h-auto" width={90} height={60} src={service.icon} alt={service.title} />
-								</div>
+				<div className="row align-items-start">
+					{/* Video */}
+					<div className="col-xl-3 d-none d-xl-block">
+						<div className="px-service-3-video">
+							<video width={350} loop muted autoPlay playsInline>
+								<source
+									src="https://html.aqlova.com/videos/pixora/service-video.mp4"
+									type="video/mp4"
+								/>
+							</video>
+						</div>
+					</div>
 
-								{/* CONTENT */}
-								<div className="px-service-5-content">
-									<h4 className="px-service-5-title">
-										<SmartLink className="px-line-lr" href={service.href}>
-											{service.title}
-										</SmartLink>
-									</h4>
+					{/* Accordion */}
+					<div className="col-xl-9">
+						<div className="px-service-accordion-wrap">
+							<div className="accordion" id="accordionExample1">
+								{services.map((service, index) => {
+									const collapseId = `collapse${service.id}`;
+									const headingId = `heading${service.id}`;
+									const isFirst = index === 0;
 
-									<p>
-										Brand identity design a the have to success whether you
-										breath onfire quanto agency.
-									</p>
-								</div>
-								{/* LINK */}
-								<div className="px-service-5-link">
-									<SmartLink className="px-doubble-effect" href={service.href}>
-										View details
-										<i>
-											<HeroArrowIcon />
-											<HeroArrowIcon />
-										</i>
-									</SmartLink>
-								</div>
+									return (
+										<div key={service.id} className="accordion-items">
+											<h2 className="accordion-header" id={headingId}>
+												<button
+													className={`accordion-buttons ${
+														!isFirst ? "collapsed" : ""
+													}`}
+													type="button"
+													data-bs-toggle="collapse"
+													data-bs-target={`#${collapseId}`}
+													aria-expanded={isFirst}
+													aria-controls={collapseId}
+												>
+													<i>
+														<service.Icon />
+													</i>
+
+													{service.title}
+
+													<span className="accordion-icon"></span>
+												</button>
+											</h2>
+
+											<div
+												id={collapseId}
+												className={`accordion-collapse collapse ${
+													isFirst ? "show" : ""
+												}`}
+												data-bs-parent="#accordionExample1"
+											>
+												<div className="accordion-body">
+
+													{service.description.map((item, i) => (
+														<div key={i} className="mb-4">
+
+															{typeof item === "string" ? (
+																<p>{item}</p>
+															) : (
+																<>
+																	<h5
+																		style={{
+																			color: "#fff",
+																			marginBottom: "10px",
+																			fontWeight: 600,
+																		}}
+																	>
+																		{item.desTitle}
+																	</h5>
+
+																	<p>
+																		{item.descPara}
+																	</p>
+																</>
+															)}
+
+														</div>
+													))}
+
+													{service.categories && (
+														<div className="px-service-accordion-category">
+															{service.categories.map((cat) => (
+																<span key={`${service.id}-${cat}`}>
+																	{cat}
+																</span>
+															))}
+														</div>
+													)}
+
+												</div>
+											</div>
+										</div>
+									);
+								})}
 							</div>
 						</div>
-					))}
+					</div>
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default CreativeAgencyService;
+export default Service;

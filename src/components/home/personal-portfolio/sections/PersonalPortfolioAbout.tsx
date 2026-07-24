@@ -32,7 +32,7 @@ const PersonalPortfolioAbout = () => {
                         {/* TITLE */}
                         <div className="col-xl-5 col-lg-6">
                             <div className="px-about-6-title-box">
-                                <span className="px-section-subtitle mb-35">Our Service</span>
+                                <span className="px-section-subtitle mb-35">Our Services</span>
                                 <h4 className="px-section-title ff-thunder fs-130">
                                     What We do
                                 </h4>

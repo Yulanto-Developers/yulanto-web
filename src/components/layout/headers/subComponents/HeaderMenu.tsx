@@ -21,7 +21,7 @@ export default function HeaderMenu() {
     ${item.label === "Services" ? "services-menu" : ""}
   `}
                 >
-                    <a href={item.href} className="menu-link">
+                    <a className="menu-link">
                         {item.label}
                         {item.type === "dropdown" && (
                             <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
@@ -54,7 +54,7 @@ export default function HeaderMenu() {
                                             {/* Right Side Pane: Automatically visible when parent li is hovered */}
                                             {hasSubLinks && (
                                                 <div className="dropdown-content-pane">
-                                                    <h4 className="pane-title">{link.label}</h4>
+                                                    <h4 className="pane-title">{link.sublabel ? link.sublabel : link.label}</h4>
                                                     <ul className="pane-links-list">
                                                         {link.subLinks?.map((subLink, subIndex) => (
                                                             <li key={`${subLink.label}-${subIndex}`}>

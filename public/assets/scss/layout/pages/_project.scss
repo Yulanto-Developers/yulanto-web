@@ -42,6 +42,7 @@
         margin-bottom: 0;
         letter-spacing: -0.03em;
         color: var(--tp-common-px-black);
+        font-family: var(--font-tenor);
 
         & a {
             &:hover {
@@ -897,7 +898,7 @@
                 display: inline-block;
                 letter-spacing: -0.2px;
                 text-transform: uppercase;
-                font-family: var(--tp-ff-p);
+                font-family: var(--font-figtree);
                 color: var(--tp-common-px-black-2);
             }
 
@@ -1054,7 +1055,7 @@
                         border-radius: 30px;
                         letter-spacing: -0.2px;
                         @include tp-transition();
-                        font-family: var(--tp-ff-p);
+                        font-family: var(--font-figtree);
                         border: 1px solid rgba(30, 30, 30, 0.10);
 
                         &:hover,
@@ -1090,7 +1091,7 @@
                     font-weight: 600;
                     color: #BCBCBC;
                     letter-spacing: -0.52px;
-                    font-family: var(--tp-ff-p);
+                    font-family: var(--font-figtree);
 
                     &:hover,
                     &.active {
@@ -1124,7 +1125,7 @@
                 line-height: 1;
                 display: inline-block;
                 letter-spacing: -0.4px;
-                font-family: var(--tp-ff-p);
+                font-family: var(--font-figtree);
             }
         }
     }
@@ -1555,7 +1556,7 @@
                 margin-bottom: 65px;
                 letter-spacing: -0.64px;
                 text-transform: uppercase;
-                font-family: var(--tp-ff-p);
+                font-family: var(--font-figtree);
                 color: var(--tp-common-px-black);
             }
 
@@ -1609,7 +1610,7 @@
                 font-size: 16px;
                 font-weight: 500;
                 text-transform: uppercase;
-                font-family: var(--tp-ff-p);
+                font-family: var(--font-figtree);
                 color: var(--tp-common-px-black);
             }
 
@@ -1633,7 +1634,7 @@
                     font-weight: 600;
                     margin-right: 45px;
                     letter-spacing: -1px;
-                    font-family: var(--tp-ff-p);
+                    font-family: var(--font-figtree);
                     color: var(--tp-common-px-black);
 
                     & i {
@@ -1803,6 +1804,7 @@
     opacity: 1;
     visibility: visible;
     transition: all .35s ease;
+  
 }
 
 /* On card hover */
@@ -1817,7 +1819,8 @@
     visibility: visible;
     transform: translateY(0);
 }
-.title-cls{
+
+.title-cls {
     font-weight: bold;
     font-size: 30px;
 }

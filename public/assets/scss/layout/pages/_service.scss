@@ -768,15 +768,15 @@
     &-text {
         & span {
             font-weight: 600;
-            font-size: 120px;
+            font-size: 50px;
             line-height: .85;
             letter-spacing: -0.01em;
             text-transform: uppercase;
             color: #053456;
-            font-family: var(--tp-ff-thunder);
+            font-family: var(--font-tenor);
 
             @media #{$lg} {
-                font-size: 100px;
+                font-size: 70px;
             }
 
             @media #{$xs} {
@@ -970,7 +970,7 @@
             letter-spacing: -3px;
             text-transform: uppercase;
             font-family: var(--tp-ff-thunder);
-            color: var(--tp-common-px-black-2);
+            color: var(--tp-common-px-orange);
 
             @media #{$xl} {
                 font-size: 200px;
@@ -1112,7 +1112,7 @@
                 display: inline-block;
                 letter-spacing: 0.02em;
                 text-transform: uppercase;
-                font-family: var(--tp-ff-p);
+                font-family: var(--font-figtree);
                 color: var(--tp-common-px-black-2);
             }
 
@@ -1130,7 +1130,7 @@
                         line-height: 1;
                         letter-spacing: 0.02em;
                         text-transform: uppercase;
-                        font-family: var(--tp-ff-p);
+                        font-family: var(--font-figtree);
                         color: var(--tp-common-px-orange);
                     }
                 }
@@ -1150,7 +1150,7 @@
                 margin-top: 7px;
                 letter-spacing: 0.02em;
                 text-transform: uppercase;
-                font-family: var(--tp-ff-p);
+                font-family: var(--font-figtree);
                 color: var(--tp-common-px-orange);
 
                 @media #{$xl} {
@@ -1367,6 +1367,7 @@
         max-width: 85%;
         transform: translateY(20px);
         transition: all .45s ease;
+        font-family: var(--font-figtree);
 
         h5 {
             font-size: 26px;

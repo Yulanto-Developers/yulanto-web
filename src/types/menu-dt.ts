@@ -2,6 +2,7 @@ export interface MenuLink {
   label: string;
   href: string;
   subLinks?: MenuLink[];
+  sublabel?:string
 }
 
 export interface MenuColumn {

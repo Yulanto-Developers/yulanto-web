@@ -69,7 +69,7 @@ with your target audience.`,
     //design studio service data start
     {
         id: 5,
-        title: "Branding",
+        title: "Web Design",
         image: "/assets/img/service/service-2-1.jpg",
         description: `We create impactful brand
 identities that differentiate your
@@ -115,10 +115,10 @@ your audience.`,
     //digital studio service data start
     {
         id: 9,
-        title: "Development",
+        title: "Web Design",
         image: "/assets/img/project/d1.png",
-        description: "Building scalable, high-performance web and mobile applications.",
-        subDesc: "Our team of skilled graphic designers in Chennai specializes in producing visual content to effectively convey messages. We offer services such as logo design in Chennai, brochure creationin Chennai, poster design, company profile, and more.",
+        description: "Create a powerful online presence with our professional web design services in Chennai. We design responsive, SEO-friendly, and user-focused websites that help businesses attract more customers and grow online.",
+        subDesc: "As a trusted web design company in Chennai, we combine creativity, user experience (UX), and the latest web technologies to create websites that are visually appealing, mobile-friendly, fast-loading, and optimized for search engines. Every website we build is designed to deliver an exceptional user experience while increasing engagement, leads, and conversions.",
         categories: [
             "UX Design",
             "User Testing",
