@@ -93,7 +93,7 @@ export const lightMenu: MenuItem[] = [
     id: 4,
     type: "none",
     label: "Our Clients",
-    href: "#",
+    href: "our-clients",
   },
   {
     id: 5,
