@@ -21,10 +21,7 @@ export default function HeaderMenu() {
     ${item.label === "Services" ? "services-menu" : ""}
   `}
                 >
-                    <a
-                        href={!item.sublinkTrue ? item.href : undefined}
-                        className="menu-link"
-                    >
+                    <a className="menu-link">
                         {item.label}
                         {item.type === "dropdown" && (
                             <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />

@@ -8,7 +8,7 @@ export const lightMenu: MenuItem[] = [
     label: "About Us",
     href: "#",
     links: [
-      { label: "Our Story", href: "/company-overview" },
+      { label: "Our Story", href: "/our-story" },
       { label: "Vision & Mission", href: "/" },
       { label: "Our Philosophy", href: "/" },
       { label: "Why Choose Us", href: "/" },
@@ -31,7 +31,7 @@ export const lightMenu: MenuItem[] = [
           { label: "Website Redesign", href: "/" },
           { label: "Landing Page Design", href: "/" },
           { label: "UI/UX Design", href: "/" },
-          // { label: "Website Maintenance", href: "/" },
+          { label: "Website Maintenance", href: "/" },
         ]
       },
       {
@@ -40,7 +40,7 @@ export const lightMenu: MenuItem[] = [
           { label: "Dynamic Website Development", href: "/" },
           { label: "Custom Website", href: "/" },
           { label: "PHP Development", href: "/" },
-          // { label: "PHP Development", href: "/" },
+          { label: "PHP Development", href: "/" },
           { label: "React Development", href: "/" },
           { label: "API Integration", href: "/" },
         ]
@@ -97,13 +97,13 @@ export const lightMenu: MenuItem[] = [
     type: "none",
     sublinkTrue: false,
     label: "Our Clients",
-    href: "/clients",
+    href: "#",
   },
   {
     id: 5,
     type: "none",
-    sublinkTrue: false,
     label: "Careers",
+    sublinkTrue: false,
     isLastMenu: true,
     href: "/careers",
   },

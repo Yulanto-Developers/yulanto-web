@@ -6,9 +6,9 @@ import Breadcrumb from "@/components/breadcrum/sections/breadcrumb";
 
 const data = [
     {
-        path: '/company-overview',
-        title: "Company Overview",
-        currentPage: "Company Overview",
+        path: '/our-story',
+        title: "Our Story",
+        currentPage: "Our Story",
         backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
     }
 ];

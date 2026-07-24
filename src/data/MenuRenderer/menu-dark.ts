@@ -6,6 +6,7 @@ export const darkMenu: MenuItem[] = [
     type: "mega",
     label: "Home",
     href: "/dark",
+    sublinkTrue:true,
     columns: [
       {
         title: "Light Version",
@@ -41,6 +42,7 @@ export const darkMenu: MenuItem[] = [
   {
     id:2,
     type: "dropdown",
+    sublinkTrue:true,
     label: "Pages",
     href: "#",
     links: [
@@ -57,6 +59,7 @@ export const darkMenu: MenuItem[] = [
     id:3,
     type: "dropdown",
     label: "Project",
+    sublinkTrue:true,
     href: "#",
     links: [
       { label: "Portfolio One", href: "/dark/portfolio-1" },
@@ -73,6 +76,7 @@ export const darkMenu: MenuItem[] = [
   {
     id:4,
     type: "dropdown",
+    sublinkTrue:false,
     label: "Blog",
     href: "#",
     links: [
@@ -85,6 +89,7 @@ export const darkMenu: MenuItem[] = [
   {
     id:5,
     type: "dropdown",
+    sublinkTrue:false,
     isLastMenu: true,
     label: "Contact",
     href: "#",

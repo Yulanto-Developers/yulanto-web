@@ -36,6 +36,7 @@
             margin-bottom: 0;
             letter-spacing: -0.03em;
             color: var(--tp-common-px-white);
+            font-family: var(--font-tenor);
         }
     }
     &-avater{
@@ -50,13 +51,14 @@
     &-item{
         & p{
             font-weight: 500;
-            font-size: 25px;
+            font-size: 22px;
             line-height: 1.1;
             margin-bottom: 55px;
             letter-spacing: -0.04em;
             color: var(--tp-common-px-white);
+            font-family: var(--font-figtree);
             @media #{$xl}{
-                font-size: 27px;
+                font-size: 22px;
                 line-height: 36px;
             }
             @media #{$md}{

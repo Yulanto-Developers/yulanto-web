@@ -44,6 +44,7 @@ interface StatCardProps {
     countLabel: string;
     borderColor: string;
     hoverBgColor: string;
+    className?: string;
 }
 
 const StatCard: React.FC<StatCardProps> = ({
@@ -53,11 +54,12 @@ const StatCard: React.FC<StatCardProps> = ({
     targetNumber,
     countLabel,
     borderColor,
-    hoverBgColor
+    hoverBgColor,
+    className
 }) => {
     return (
         <motion.div
-            className="card mb-3 border-0 p-3 w-100"
+            className={`card mb-3 border-0 p-3 w-100 ${className ?? ""}`}
             whileHover={{
                 y: -6,
                 scale: 1.02,
@@ -77,12 +79,12 @@ const StatCard: React.FC<StatCardProps> = ({
         >
             <div className="d-flex align-items-center justify-content-between px-2">
                 <div className="text-start">
-                    <h5 className="fw-bold mb-1" style={{ color: '#2b2d42', fontSize: '1.25rem' }}>
+                    <h5 className="fw-bold mb-1 text-tenor" style={{ color: '#2b2d42', fontSize: '1.25rem' }}>
                         {titleBeforeNumber}
                         <AnimatedCounter value={targetNumber} />
                         {titleAfterNumber}
                     </h5>
-                    <span className="text-muted fw-semibold" style={{ fontSize: '0.95rem' }}>
+                    <span className="text-muted text-figtree fw-semibold" style={{ fontSize: '0.95rem' }}>
                         {countLabel}
                     </span>
                 </div>
@@ -103,12 +105,12 @@ const Testimonial = () => {
                 <div className="row align-items-baseline mb-5">
                     <div className="col-xl-3 col-md-4">
                         <motion.div
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, x: -10 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: false, amount: 0.3 }}
+                            viewport={{ once: false, amount: 0.1 }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
                         >
-                            <span className="px-section-subtitle pt-40 blink-ball fw-bold text-uppercase text-muted" style={{ fontSize: '0.9rem', letterSpacing: '1px' }}>
+                            <span className="px-section-subtitle pt-40 blink-ball text-tenor   text-muted" style={{ fontSize: '0.9rem', letterSpacing: '1px' }}>
                                 Testimonial
                             </span>
                         </motion.div>
@@ -122,12 +124,12 @@ const Testimonial = () => {
                             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
                         >
                             <div className="px-project-title-box">
-                                <h3 className="px-section-title mb-25 text-effect" style={{ fontSize: '90px' }}>
+                                <h3 className="px-section-title mb-25 text-effect" style={{ fontSize: '80px' }}>
                                     <span>Our Client </span>
                                     <span>Words</span>
                                 </h3>
 
-                                <p className="ms-4">
+                                <p className="ms-4 font-paragraph-cls">
                                     We've helped businesses across industries achieve
                                     their goals.
                                     <br />
@@ -147,6 +149,7 @@ const Testimonial = () => {
 
                             {/* Card 1: Trusted By */}
                             <StatCard
+                                className="text-tenor"
                                 borderColor="#198754"
                                 hoverBgColor="#e8f5e9"
                                 titleBeforeNumber="Trusted by "
@@ -162,6 +165,7 @@ const Testimonial = () => {
 
                             {/* Card 2: Active Clients */}
                             <StatCard
+                                className="text-tenor"
                                 borderColor="#0dcaf0"
                                 hoverBgColor="#e0f7fa"
                                 targetNumber={350}
@@ -176,6 +180,7 @@ const Testimonial = () => {
 
                             {/* Card 3: Global Clients */}
                             <StatCard
+                                className="text-tenor"
                                 borderColor="#198754"
                                 hoverBgColor="#e8f5e9"
                                 targetNumber={50}
