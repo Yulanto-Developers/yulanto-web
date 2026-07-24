@@ -7,7 +7,7 @@ export const lightMenu: MenuItem[] = [
     label: "About Us",
     href: "#",
     links: [
-      { label: "Our Story", href: "/company-overview" },
+      { label: "Our Story", href: "/our-story" },
       { label: "Vision & Mission", href: "/" },
       { label: "Our Philosophy", href: "/" },
       { label: "Why Choose Us", href: "/" },
