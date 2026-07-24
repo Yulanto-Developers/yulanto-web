@@ -1,46 +1,44 @@
 /* arrow animation */
 
-
 .menu-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .dropdown-icon {
-    margin-left: 7px;
-    font-size: 12px;
-    transition: transform 0.3s ease;
+  margin-left: 7px;
+  font-size: 12px;
+  transition: transform 0.3s ease;
 }
 
 /* Rotate on hover */
-.has-dropdown:hover>.menu-link .dropdown-icon {
-    transform: rotate(180deg);
+.has-dropdown:hover > .menu-link .dropdown-icon {
+  transform: rotate(180deg);
 }
 
 /* submenu */
 .tp-submenu li a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .submenu-icon {
-    font-size: 12px;
-    transition: transform 0.3s ease;
-    padding-right: 2px;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+  padding-right: 2px;
 }
 
 .tp-submenu li:hover .submenu-icon {
-    transform: translateX(4px);
-    -webkit-transform: translateX(4px);
-    -moz-transform: translateX(4px);
-    -ms-transform: translateX(4px);
-    -o-transform: translateX(4px);
+  transform: translateX(4px);
+  -webkit-transform: translateX(4px);
+  -moz-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  -o-transform: translateX(4px);
 }
 
 /* sub ends */
-
 
 /* child menu  */
 /* Container adjustments for the top navigation */
@@ -58,27 +56,26 @@
 } */
 
 .has-dropdown {
-    position: relative;
+  position: relative;
 }
 
 .menu-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
 }
 
 .dropdown-icon {
-    margin-left: 7px;
-    font-size: 12px;
-    transition: transform 0.3s ease;
+  margin-left: 7px;
+  font-size: 12px;
+  transition: transform 0.3s ease;
 }
 
 /* Rotate Chevron Down on Main Menu Link Hover */
-.has-dropdown:hover>.menu-link .dropdown-icon {
-    transform: rotate(180deg);
+.has-dropdown:hover > .menu-link .dropdown-icon {
+  transform: rotate(180deg);
 }
-
 
 /* ==========================================================================
    DYNAMIC SLIDING DRAWER SUBMENU
@@ -86,243 +83,254 @@
 
 /* The main dropdown box wrapper starts out NARROW */
 .has-dropdown .split-dropdown-menu.tp-submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: auto !important;
-    /*Initialnarrowwidth(LeftSidebaronly)*/
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: auto !important;
+  /*Initialnarrowwidth(LeftSidebaronly)*/
 
-    /*Consistentstructuralheight*/
-    background: #ffffff !important;
-    border-radius: 12px !important;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1) !important;
-    border: 1px solid rgba(0, 0, 0, 0.06) !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: stretch !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(15px);
-    /*Added"width"tothetransitionslistforasmoothexpandingeffect*/
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease, visibility 0.3s ease, width 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
-    z-index: 9999 !important;
-    overflow: hidden !important;
-    /* Crucial to hide the hidden pane contents */
-    -webkit-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), ;
-    -moz-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), ;
-    -ms-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), ;
-    -o-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), ;
+  /*Consistentstructuralheight*/
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(15px);
+  /*Added"width"tothetransitionslistforasmoothexpandingeffect*/
+  transition:
+    transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    width 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  z-index: 9999 !important;
+  overflow: hidden !important;
+  /* Crucial to hide the hidden pane contents */
+  -webkit-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  -moz-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  -ms-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  -o-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .has-dropdown .split-dropdown-menu.tp-submenu {
-    height: auto !important;
+  height: auto !important;
 }
 
-.services-menu:hover>.split-dropdown-menu.tp-submenu {
-    min-height: 350px;
+.services-menu:hover > .split-dropdown-menu.tp-submenu {
+  min-height: 350px;
 }
 
 /* On header menu item hover, display the initial narrow box */
-.has-dropdown:hover>.split-dropdown-menu.tp-submenu {
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+.has-dropdown:hover > .split-dropdown-menu.tp-submenu {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 /* CRITICAL: When hovering over an item with sublinks, EXPAND the total container width! */
-.split-dropdown-menu.tp-submenu:has(.sidebar-item:hover .dropdown-content-pane) {
-    width: 700px !important;
-    /* Expands smoothly to make space for the right panel */
+.split-dropdown-menu.tp-submenu:has(
+    .sidebar-item:hover .dropdown-content-pane
+  ) {
+  width: 700px !important;
+  /* Expands smoothly to make space for the right panel */
 }
 
 /* Left Sidebar - Always stable on the left */
 .split-dropdown-menu .dropdown-sidebar {
-    /* width: 260px !important; */
-    /* Hard-coded absolute pixel width */
-    flex: 0 0 260px !important;
-    /* Prevents collapsing/flexing */
-    background-color: #fafbfe !important;
-    padding: 24px 0 !important;
-    border-right: 1px solid #edf2f7 !important;
-    list-style: none !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
+  /* width: 260px !important; */
+  /* Hard-coded absolute pixel width */
+  flex: 0 0 260px !important;
+  /* Prevents collapsing/flexing */
+  background-color: #fafbfe !important;
+  padding: 24px 0 !important;
+  border-right: 1px solid #edf2f7 !important;
+  list-style: none !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
 }
 
 .split-dropdown-menu .sidebar-item {
-    position: static !important;
-    list-style-type: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  position: static !important;
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .split-dropdown-menu .sidebar-link {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding: 14px 24px !important;
-    font-size: 15px !important;
-    font-weight: 500 !important;
-    color: #4a5568 !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    transition: color 0.2s ease, background-color 0.2s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 14px 24px !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #4a5568 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease !important;
 }
 
 .split-dropdown-menu .sidebar-arrow {
-    font-size: 11px !important;
-    color: #a0aec0 !important;
-    transition: transform 0.2s ease, color 0.2s ease !important;
+  font-size: 11px !important;
+  color: #a0aec0 !important;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease !important;
 }
 
 .split-dropdown-menu .sidebar-item:hover .sidebar-link {
-    color: #53ae7d !important;
-    background-color: #ffffff !important;
+  color: #53ae7d !important;
+  background-color: #ffffff !important;
 }
 
 .split-dropdown-menu .sidebar-item:hover .sidebar-arrow {
-    color: #53ae7d !important;
-    transform: translateX(3px) !important;
+  color: #53ae7d !important;
+  transform: translateX(3px) !important;
 }
 
 /* Right Content Pane Drawer */
 .split-dropdown-menu .dropdown-content-pane {
-    position: absolute !important;
-    top: 0 !important;
-    left: 40% !important;
-    /* Begins exactly where the sidebar finishes */
-    width: auto !important;
-    /* Explicit space allocation (680px - 260px) */
-    height: auto !important;
-    background: #ffffff !important;
-    padding: 32px 36px !important;
-    box-sizing: border-box !important;
-    border-radius: 0 12px 12px 0 !important;
-    list-style: none !important;
-    margin: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 40% !important;
+  /* Begins exactly where the sidebar finishes */
+  width: auto !important;
+  /* Explicit space allocation (680px - 260px) */
+  height: auto !important;
+  background: #ffffff !important;
+  padding: 32px 36px !important;
+  box-sizing: border-box !important;
+  border-radius: 0 12px 12px 0 !important;
+  list-style: none !important;
+  margin: 0 !important;
 
-    /* Fades and slides cleanly into view */
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: translateX(-10px) !important;
-    /* Subtle slide-in direction */
-    transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.2s ease !important;
+  /* Fades and slides cleanly into view */
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateX(-10px) !important;
+  /* Subtle slide-in direction */
+  transition:
+    opacity 0.2s ease,
+    transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    visibility 0.2s ease !important;
 }
 
 /* Show the pane content beautifully when parent item row is hovered */
 .split-dropdown-menu .sidebar-item:hover .dropdown-content-pane {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateX(0) !important;
-    transition-delay: 0.05s !important;
-    /* Gives the container a tiny headstart to open */
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(0) !important;
+  transition-delay: 0.05s !important;
+  /* Gives the container a tiny headstart to open */
 }
 
 /* Header Text Title Components */
 .split-dropdown-menu .pane-title {
-    font-family: var(--font-figtree);
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
-    color: #1a202c !important;
-    margin: 0 0 20px 0 !important;
-    padding-bottom: 8px !important;
-    position: relative !important;
-    display: inline-block !important;
+  font-family: var(--font-figtree);
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #1a202c !important;
+  margin: 0 0 20px 0 !important;
+  padding-bottom: 8px !important;
+  position: relative !important;
+  display: inline-block !important;
 }
 
 .split-dropdown-menu .pane-title::after {
-    content: '' !important;
-    position: absolute !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 2px !important;
-    background-color: rgb(39, 86, 116) !important;
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 2px !important;
+  background-color: rgb(39, 86, 116) !important;
 }
 
 .split-dropdown-menu .pane-links-list {
-    list-style: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    font-family: var(--font-tenor) !important;
+  list-style: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: var(--font-tenor) !important;
 }
 
 .split-dropdown-menu .pane-link {
-    font-size: 15px !important;
-    color: #4a5568 !important;
-    text-decoration: none !important;
-    transition: color 0.2s ease, transform 0.2s ease !important;
-    display: block !important;
-    white-space: nowrap !important;
+  font-size: 15px !important;
+  color: #4a5568 !important;
+  text-decoration: none !important;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease !important;
+  display: block !important;
+  white-space: nowrap !important;
 }
 
 .split-dropdown-menu .pane-link:hover {
-    color: #53ae7d !important;
-    transform: translateX(4px) !important;
+  color: #53ae7d !important;
+  transform: translateX(4px) !important;
 }
 
 /* child menu  ends */
 
-
-
-
 /* Alignment for the inner content block containing the double chevron icon */
 .split-dropdown-menu .sidebar-link-content {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-tenor);
-    /* Clean gap spacing between icon and text string */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-tenor);
+  /* Clean gap spacing between icon and text string */
 }
 
 /* Base style for the icon */
 .split-dropdown-menu .submenu-icon {
-    font-size: 12px;
-    transition: transform 0.3s ease;
-    color: #a0aec0;
-    /* Matches muted default look */
+  font-size: 12px;
+  transition: transform 0.3s ease;
+  color: #a0aec0;
+  /* Matches muted default look */
 }
 
 /* Hover effect on double-chevrons */
 .split-dropdown-menu .sidebar-item:hover .submenu-icon {
-    transform: translateX(4px);
-    color: rgb(39, 86, 116);
-    /* Changes to theme orange matching your reference image */
+  transform: translateX(4px);
+  color: rgb(39, 86, 116);
+  /* Changes to theme orange matching your reference image */
 }
 
 .icon-color {
-    color: #53ae7d;
+  color: #53ae7d;
 }
 
 .px-line-lr:hover .icon-color {
-    color: #1a202c;
+  color: #1a202c;
 }
 
 /* header start */
 .header-fixed {
-    transition: transform .35s ease;
+  transition: transform 0.35s ease;
 }
 
 .header-show {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .header-hide {
-    transform: translateY(-100%);
+  transform: translateY(-100%);
 }
-
 
 /* header ends */
 
 .innerText {
-    font-size: 14px !important;
+  font-size: 14px !important;
 }
 /* .tp-header-dropdown nav ul li .tp-submenu li a {
    
@@ -331,9 +339,17 @@
 /* .tp-header-dropdown nav ul li .tp-submenu li a {
     padding: 9px 18px;
 } */
+.split-dropdown-menu .pane-link {
+  padding: 0px 18px 18px 5px !important;
+}
+
+.tp-header-dropdown nav ul li .tp-submenu li {
+  border-radius: 8px;
+  width: 100%;
+  padding: 0 10px 0 0;
+}
 
 /* ball animation */
-
 
 /* ball animation ends/ */
 
@@ -358,164 +374,157 @@
 
 /* bane height image start */
 .he-10 img {
-    height: 200px !important;
-    /* width: 200px !important; */
+  height: 200px !important;
+  /* width: 200px !important; */
 }
 
 /* bane height image ends */
-
-
-
 
 /*==========================
  Portfolio Project Swiper
 ===========================*/
 
 .portfolio-project-swiper-wrapper {
-    position: relative;
+  position: relative;
 }
 
 .portfolio-project-swiper {
-    width: 100%;
-    overflow: hidden;
-    padding-bottom: 20px;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 20px;
 }
 
 .portfolio-project-swiper .swiper-slide {
-    height: auto;
+  height: auto;
 }
 
 .portfolio-project-card {
-    width: 100%;
+  width: 100%;
 }
 
 /* Navigation */
 
 .portfolio-project-prev,
 .portfolio-project-next {
-    position: absolute;
-    top: 50%;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 20;
-    transform: translateY(-50%);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .12);
+  position: absolute;
+  top: 50%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  transform: translateY(-50%);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-project-prev {
-    left: -20px;
+  left: -20px;
 }
 
 .portfolio-project-next {
-    right: -20px;
+  right: -20px;
 }
 
 .portfolio-project-prev:hover,
 .portfolio-project-next:hover {
-    background: #053456;
-    color: #fff;
+  background: #053456;
+  color: #fff;
 }
 
 .portfolio-project-prev i,
 .portfolio-project-next i {
-    font-size: 18px;
+  font-size: 18px;
 }
 
-@media(max-width:991px) {
-
-    .portfolio-project-prev,
-    .portfolio-project-next {
-        display: none;
-    }
-
+@media (max-width: 991px) {
+  .portfolio-project-prev,
+  .portfolio-project-next {
+    display: none;
+  }
 }
-
 
 /* potfolo wiper ends */
 
 /* image scroll section */
 
 .px-portfolio-thumb {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio-image-description {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    padding: 30px;
+  padding: 30px;
 
-    background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.55);
 
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 
-    transition: all .4s ease;
-    z-index: 2;
+  transition: all 0.4s ease;
+  z-index: 2;
 }
 
 .portfolio-image-description p {
-    color: #fff;
-    margin: 0;
-    text-align: center;
-    transform: translateY(20px);
-    transition: all .4s ease;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
 }
 
 .px-portfolio-thumb:hover .portfolio-image-description {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .px-portfolio-thumb:hover .portfolio-image-description p {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 /* image scroll section ends */
 
-
 /* text-animation */
 
 .reveal-heading {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 55px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 55px;
 }
 
 .reveal-gray {
-    display: block;
-    color: #b5b5b5;
+  display: block;
+  color: #b5b5b5;
 
-    .blue {
-        color: #b5b5b5;
-    }
+  .blue {
+    color: #b5b5b5;
+  }
 }
 
 .reveal-color {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    pointer-events: none;
-    color: #000;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+  color: #000;
 
-    .blue {
-        color: #053456;
-    }
+  .blue {
+    color: #053456;
+  }
 }
 
 /* .dash-bottom {
@@ -558,26 +567,26 @@
     border-bottom: dotted 2px #bcbcbc;
 } */
 
-.cursor-pointer{
-    cursor: pointer !important;
+.cursor-pointer {
+  cursor: pointer !important;
 }
-.relative-cls-header{
-    position: relative;
-    z-index: 999;
+.relative-cls-header {
+  position: relative;
+  z-index: 999;
 }
 
-.text-blue-about{
-    color:#053456 !important;
+.text-blue-about {
+  color: #053456 !important;
 }
-.text-figtree{
-    font-family: var(--font-figtree) !important;
+.text-figtree {
+  font-family: var(--font-figtree) !important;
 }
-.text-tenor{
-    font-family: var(--font-tenor);
+.text-tenor {
+  font-family: var(--font-tenor);
 }
-.font-paragraph-cls{
-    font-size: 22px;
+.font-paragraph-cls {
+  font-size: 22px;
 }
-.font-title-cls{
-    font-size: 32px;
+.font-title-cls {
+  font-size: 32px;
 }
