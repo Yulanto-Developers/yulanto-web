@@ -20,4 +20,5 @@ export interface MenuItem {
   columns?: MenuColumn[];
   // `links` exists only for "dropdown" type, optional otherwise
   links?: MenuLink[];
+  sublinkTrue:boolean;
 }
