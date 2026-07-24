@@ -25,28 +25,29 @@ const aboutStats = [
         value: "11+",
         index: <FontAwesomeIcon icon={faBriefcase} />,
         title: "Years of Experience",
-        desc: "We have had quite a run in our 11+ years of working.",
+        desc: "Celebrating 11+ years of creativity, innovation, and digital excellence.",
     },
     {
         id: 2,
         value: "10+",
         index: <FontAwesomeIcon icon={faUsers} />,
         title: "Experienced Web Experts",
-        desc: "We've delivered 50+ projects that help companies generate real results.",
+        desc: "Driven by Experience. Powered by Innovation. Delivered by Experienced Web Design Experts.",
     },
     {
         id: 3,
         value: "300+",
         index: <FontAwesomeIcon icon={faSmile} />,
         title: "Satisfaction Client",
-        isBrandSlider: true,
+        desc: "We've successfully delivered 450+ projects, including 50+ international projects, driving real business results.",
+        isBrandSlider: false,
     },
     {
         id: 4,
         value: "1",
         index: <FontAwesomeIcon icon={faTrophy} />,
         title: "Award Winning",
-        desc: "Recognized for delivering outstanding digital solutions worldwide.",
+        desc: "Recognized with design awards for delivering outstanding web design solutions worldwide.",
         isBrandSlider: false,
     },
 ];
@@ -125,7 +126,7 @@ const StartupAgencyAbout = () => {
 
                             <h4 className="px-about-title mb-55">
                                 <span className='text-blue-about'>We are a professional design agency  </span> specializing in <br />
-                                website design, web development, E-commerce, Graphic Design,<br />  SEO, and digital marketing.
+                                <Link href={'/website'}>website design</Link> ,<Link href={'/development'}>web development</Link> , <Link href={'/e-comerce'}>E-commerce</Link>, <Link href={'/graphic-desgin'}>Graphic Design</Link>,<br />  <Link href={'/seo'}>SEO</Link>, and <Link href={'/digital'}>digital marketing</Link>.
                             </h4>
 
                             <div className="row">

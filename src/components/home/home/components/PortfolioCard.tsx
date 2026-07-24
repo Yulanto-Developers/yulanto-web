@@ -60,6 +60,7 @@ const PortfolioCard = ({
                                                 gap: "12px",
                                                 marginBottom: "12px",
                                             }}
+                                            className="text-figtree font-paragraph-cls"
                                         >
                                             {chosenIcon && (
                                                 <FontAwesomeIcon
@@ -106,7 +107,7 @@ const PortfolioCard = ({
                                                 color: "#fff",
                                                 fontWeight: 600,
                                             }}
-                                            className="fs-6"
+                                            className="fs-6 text-tenor"
                                         >
                                             {item.ques}
                                         </div>
@@ -124,7 +125,7 @@ const PortfolioCard = ({
                                                     .filter(([key]) => key.startsWith("ans"))
                                                     .sort(([a], [b]) => a.localeCompare(b))
                                                     .map(([key, value]) => (
-                                                        <p key={key} style={{ marginBottom: "5px", textAlign: 'left' }}>
+                                                        <p key={key} className="text-figtree" style={{ marginBottom: "5px", textAlign: 'left' }}>
                                                             {value as string}
                                                         </p>
                                                     ))}
@@ -141,7 +142,7 @@ const PortfolioCard = ({
                                     <div key={index}>
                                         {/* Paragraph */}
                                         <p
-                                            className="text-white mb-3"
+                                            className="text-white mb-3 text-figtree"
                                             style={{
                                                 fontSize: "16px",
                                                 lineHeight: "1.6",
@@ -177,6 +178,7 @@ const PortfolioCard = ({
                                                             marginBottom: "8px",
                                                             fontWeight: 600,
                                                         }}
+                                                        className="text-tenor"
                                                     >
                                                         {cat.catTile}
                                                     </h5>
@@ -188,6 +190,7 @@ const PortfolioCard = ({
                                                             margin: 0,
                                                             lineHeight: "1.5",
                                                         }}
+                                                        className="text-figtree text-start"
                                                     >
                                                         {cat.content}
                                                     </p>

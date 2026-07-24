@@ -48,18 +48,18 @@
 
     &-title {
         font-weight: 700;
-        font-size: 38px;
+        font-size: 80px;
         line-height: .83;
         letter-spacing: -0.06em;
         font-family: var(--font-tenor) !important;
         
 
         @media #{$xl} {
-            font-size: 38px;
+            font-size: 80px;
         }
 
         @media #{$lg} {
-            font-size: 38px;
+            font-size: 80px;
         }
 
         @media #{$md} {

@@ -39,7 +39,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
                                             {title} <span className="servicearrow"><ServiceArrowIcon /></span>
                                         </SmartLink>
                                     </h4>
-                                    <p className="text-white">{description}</p>
+                                    <p className="text-white text-justify">{description}</p>
                                 </div></div>
                         </div>
 

@@ -26,10 +26,10 @@ const PersonalPortfolioAbout = () => {
             style={{ backgroundColor: aboutConfig.sectionBg }}
         >
             <div className="container">
-                {/* TOP */}
-                <div className="px-about-6-top mb-100">
+               
+                {/* <div className="px-about-6-top mb-100">
                     <div className="row align-items-center">
-                        {/* TITLE */}
+                     
                         <div className="col-xl-5 col-lg-6">
                             <div className="px-about-6-title-box">
                                 <span className="px-section-subtitle mb-35">Our Service</span>
@@ -40,9 +40,7 @@ const PersonalPortfolioAbout = () => {
                             </div>
                         </div>
 
-                        {/* SLIDER */}
-
-                        {/* SLIDER */}
+                       
                         <div className="offset-xl-1 col-xl-6 col-lg-6">
                             <div className="px-service-6-wrap pt-15">
                                 <div className="px-service-6-slide-wrap fix">
@@ -69,46 +67,9 @@ const PersonalPortfolioAbout = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                {/* CONTENT */}
-                {/* <div className="row">
-                 
-                    <div className="col-xl-5 col-lg-5">
-                        <div className="px-about-6-thumb pt-25">
-                            <Image
-                                className="img-fluid"
-                                width={440}
-                                height={260}
-                                src="/assets/img/about/about-6-1.jpg"
-                                alt="about"
-                            />
-                        </div>
-                    </div>
-
-                   
-                    <div className="offset-xl-1 col-xl-6 col-lg-7">
-                        <div className="px-about-6-content">
-                        <p>
-                              {`I'm`} a French digital designer and web
-                              developer with over 10 years of experience.
-                              At the crossroads of <span>design,</span> <span>motion</span> and <span>web
-                              development,</span> the diversity of my skills allows
-                              me to approach design
-                           </p>
-                            <SmartLink
-                                className={`px-about-4-link ${aboutConfig.textColor} px-doubble-effect`}
-                                href="/about-me"
-                            >
-                                <span>More about me</span>
-                                <i>
-                                    <TextArrowIcon />
-                                    <TextArrowIcon />
-                                </i>
-                            </SmartLink>
-                        </div>
-                    </div>
                 </div> */}
+
+              
                 <DigitalStudioService />
             </div>
         </div>

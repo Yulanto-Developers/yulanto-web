@@ -449,7 +449,7 @@ const Hero = () => {
         if (!isHovered) {
             intervalRef.current = setInterval(() => {
                 setCurrent((prev) => (prev + 1) % ACTIVE_ITEMS.length);
-            }, 3000);
+            }, 6000);
         }
 
         return () => {
@@ -460,7 +460,7 @@ const Hero = () => {
     }, [isHovered]);
 
     return (
-        <div className="px-hero-2-area pt-120 pb-20">
+        <div className="px-hero-2-area pt-120 pb-20 bg-white">
             <div className="px-hero-2-main d-none d-xl-block p-relative">
                 <div className="container container-1630">
                     <div className="row">
@@ -580,8 +580,8 @@ const Hero = () => {
                         })}
 
                         <div className="text-center btn-partent">
-                            <Link href="/" className="button-style">
-                                Get a Free Quote
+                            <Link href="/" className="button-style relative-cls-header">
+                                <span className="text-tenor" style={{ fontSize: '16px' }}>Get a Free Quote</span>
                             </Link>
                         </div>
                     </div>

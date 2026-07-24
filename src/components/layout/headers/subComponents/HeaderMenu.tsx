@@ -21,7 +21,10 @@ export default function HeaderMenu() {
     ${item.label === "Services" ? "services-menu" : ""}
   `}
                 >
-                    <a className="menu-link">
+                    <a
+                        href={!item.sublinkTrue ? item.href : undefined}
+                        className="menu-link"
+                    >
                         {item.label}
                         {item.type === "dropdown" && (
                             <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
@@ -58,7 +61,7 @@ export default function HeaderMenu() {
                                                     <ul className="pane-links-list">
                                                         {link.subLinks?.map((subLink, subIndex) => (
                                                             <li key={`${subLink.label}-${subIndex}`}>
-                                                                <a href={subLink.href} className="pane-link">
+                                                                <a href={subLink.href} className="pane-link" style={{ paddingLeft: 'none !important' }}>
                                                                     <FontAwesomeIcon
                                                                         icon={faAnglesRight}
                                                                         className="submenu-icon"

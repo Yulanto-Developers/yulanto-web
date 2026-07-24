@@ -163,28 +163,28 @@
     }
 
     &-title {
-        font-size: 180px;
+        font-size: 100px;
         font-weight: 600;
         line-height: 1;
         margin-bottom: 0;
         display: inline-block;
-        font-family: var(--tp-ff-thunder);
+        font-family: var(--font-tenor);
         color: var(--tp-common-px-white);
 
         @media #{$xl} {
-            font-size: 125px;
+            font-size: 80px;
         }
 
         @media #{$lg} {
-            font-size: 110px;
+            font-size: 80px;
         }
 
         @media #{$md} {
-            font-size: 90px;
+            font-size: 60px;
         }
 
         @media #{$xs} {
-            font-size: 60px;
+            font-size: 40px;
         }
     }
 
@@ -1804,7 +1804,7 @@
     opacity: 1;
     visibility: visible;
     transition: all .35s ease;
-  
+
 }
 
 /* On card hover */

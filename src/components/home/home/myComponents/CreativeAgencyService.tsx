@@ -79,7 +79,7 @@ const Service = () => {
 														<div key={i} className="mb-4">
 
 															{typeof item === "string" ? (
-																<p>{item}</p>
+																<p >{item}</p>
 															) : (
 																<>
 																	<h5
@@ -88,11 +88,12 @@ const Service = () => {
 																			marginBottom: "10px",
 																			fontWeight: 600,
 																		}}
+																		className="text-tenor"
 																	>
 																		{item.desTitle}
 																	</h5>
 
-																	<p>
+																	<p className="text-figtree">
 																		{item.descPara}
 																	</p>
 																</>

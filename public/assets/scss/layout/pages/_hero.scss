@@ -249,23 +249,23 @@
             font-family: var(--font-tenor);
 
             @media only screen and (min-width: 1800px) and (max-width: 1900px) {
-                font-size: 320px;
-            }
-
-            @media #{$x4l} {
                 font-size: 200px;
             }
 
-            @media #{$x3l} {
-                font-size: 180px;
-            }
-
-            @media #{$xxl} {
+            @media #{$x4l} {
                 font-size: 150px;
             }
 
-            @media #{$xl} {
+            @media #{$x3l} {
                 font-size: 100px;
+            }
+
+            @media #{$xxl} {
+                font-size: 100px;
+            }
+
+            @media #{$xl} {
+                font-size: 80px;
             }
 
             @media #{$lg} {
@@ -273,7 +273,7 @@
             }
 
             @media #{$md} {
-                font-size: 175px;
+                font-size: 50px;
             }
 
             @media #{$xs} {
@@ -302,20 +302,20 @@
 
             & span {
                 position: absolute;
-                bottom: 30px;
+                bottom: 10px;
                 left: 0%;
                 right: 0%;
                 margin: 0 auto;
                 font-weight: 700;
                 font-size: 15px;
-                line-height: 1.2;
+                line-height: 1.4;
                 letter-spacing: -0.05em;
                 text-transform: capitalize !important;
                 color: var(--tp-common-px-black);
                 font-family: var(--font-tenor);
 
                 @media #{$xl} {
-                    font-size: 22px;
+                    font-size: 20px;
                 }
             }
         }
@@ -891,6 +891,7 @@
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
+   
 
 }
 

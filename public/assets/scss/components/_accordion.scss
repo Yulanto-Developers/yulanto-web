@@ -23,6 +23,7 @@
                             cursor: pointer;
                             letter-spacing: -0.03em;
                             color: var(--tp-common-px-white);
+                            font-family: var(--font-tenor);
                             @media #{$xl}{
                                 font-size: 25px;
                             }

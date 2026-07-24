@@ -73,6 +73,9 @@
                                 @media #{$x3l,$xxl,$xl}{
                                     font-size: 14px;
                                 }
+                                & a.pane-link{
+                                    padding-left: 0;
+                                }
                             }
                             & .tp-submenu{
                                 top: 0;

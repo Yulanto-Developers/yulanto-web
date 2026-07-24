@@ -20,9 +20,7 @@ const DigitalStudioService = () => {
                     </span>
                 </div>
                 <div className="row">
-                    {/* <div className="col-lg-5">
 
-                    </div> */}
                     <div className="col-lg-12">
                         <div className="bf-service-heading mb-60">
                             <h3
@@ -30,11 +28,10 @@ const DigitalStudioService = () => {
                                 data-delay=".3"
                             >
                                 Empowering businesses with creative digital excellence.
-                                {/* Service we&apos;re
-                                always provides */}
+
                             </h3>
                             <div className="tp_text_anim">
-                                <p className="bf-service-3-dec" style={{ fontFamily: "var(--font-figtree) !important" }}>
+                                <p className="bf-service-3-dec font-paragraph-cls" style={{ fontFamily: "var(--font-figtree) !important" }}>
                                     Our dedicated team of web designers in Chennai specializes in website design, web development, eCommerce website development, logo design, custom web development, SEO, and social media marketing (SMM). We deliver innovative, high-quality digital solutions that help businesses build a strong online presence and achieve lasting success.
                                 </p>
                             </div>

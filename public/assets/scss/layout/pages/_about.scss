@@ -15,7 +15,7 @@
     &-title {
         font-weight: 600;
         font-size: 38px;
-        line-height: 1.1;
+        line-height: 1.5;
         color: #000000;
         letter-spacing: -0.05em;
         font-family: var(--font-tenor);
@@ -129,7 +129,7 @@
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 1.5;
-                color: #6d6868;
+                color: #000000;
                 margin-bottom: 0;
                 letter-spacing: -0.04em;
                 font-family: var(--font-figtree) !important;
@@ -445,28 +445,28 @@
         }
 
         &-bigtext {
-            font-size: 410px;
+            font-size: 80px;
             font-weight: 600;
             line-height: 1;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--tp-common-px-black);
-            font-family: var(--tp-ff-thunder);
+            font-family: var(--font-tenor);
 
             @media #{$x4l} {
-                font-size: 350px;
-            }
-
-            @media #{$x3l} {
-                font-size: 350px;
-            }
-
-            @media #{$xxl} {
                 font-size: 200px;
             }
 
+            @media #{$x3l} {
+                font-size: 150px;
+            }
+
+            @media #{$xxl} {
+                font-size: 100px;
+            }
+
             @media #{$xl} {
-                font-size: 132px;
+                font-size: 80px;
             }
 
             @media #{$lg} {
@@ -474,15 +474,15 @@
             }
 
             @media #{$md} {
-                font-size: 155px;
+                font-size: 50px;
             }
 
             @media #{$xs} {
-                font-size: 80px;
+                font-size: 30px;
             }
 
             @media #{$sm} {
-                font-size: 115px;
+                font-size: 30px;
             }
         }
 
