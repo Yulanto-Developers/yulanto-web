@@ -26,7 +26,27 @@ const PersonalPortfolioAbout = () => {
             style={{ backgroundColor: aboutConfig.sectionBg }}
         >
             <div className="container">
-               
+                <div className="row py-5">
+                    <div className="col-xl-3">
+                        {/* <span className="px-section-subtitle pt-40 blink-ball">
+
+                            Our Works
+                        </span> */}
+                    </div>
+
+                    <div className="col-xl-9">
+                        <div className="px-project-title-box">
+                            <h3 className="px-section-title text-tenor text-effect">
+                                <span>Our </span>
+                                <span>Services</span>
+                            </h3>
+                            <p className="text-figtree text-black mt-2 font-paragraph-cls">
+                                Our dedicated team of web designers in Chennai specializes in website design,<br /> web development, eCommerce website development, logo design, custom web development, SEO, and social media marketing (SMM).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 {/* <div className="px-about-6-top mb-100">
                     <div className="row align-items-center">
                      
@@ -69,7 +89,7 @@ const PersonalPortfolioAbout = () => {
                     </div>
                 </div> */}
 
-              
+
                 <DigitalStudioService />
             </div>
         </div>
