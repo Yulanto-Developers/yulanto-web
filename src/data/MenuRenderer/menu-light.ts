@@ -31,15 +31,13 @@ export const lightMenu: MenuItem[] = [
           { label: "Website Redesign", href: "/" },
           { label: "Landing Page Design", href: "/" },
           { label: "UI/UX Design", href: "/" },
-          { label: "Website Maintenance", href: "/" },
         ]
       },
       {
         label: "Website Development", href: "/",
         subLinks: [
           { label: "Dynamic Website Development", href: "/" },
-          { label: "Custom Website", href: "/" },
-          { label: "PHP Development", href: "/" },
+          { label: "Custom Website Development", href: "/" },
           { label: "PHP Development", href: "/" },
           { label: "React Development", href: "/" },
           { label: "API Integration", href: "/" },

@@ -3,7 +3,7 @@ import SmartLink from '@/components/common/SmartLink';
 import Image from 'next/image';
 import React from 'react';
 
-const ProjectCard: React.FC<PortfolioProjectDT> = ({ id, image, title, categories }) => {
+const ProjectCard: React.FC<PortfolioProjectDT> = ({ id, image, title }) => {
     return (
         <div key={id} className="col-lg-6">
             <div className="px-project-3-item mb-55">
@@ -22,11 +22,11 @@ const ProjectCard: React.FC<PortfolioProjectDT> = ({ id, image, title, categorie
                     <h4 className="px-project-3-title">
                         <SmartLink href={`/portfolio-details-2/${id}`}>{title}</SmartLink>
                     </h4>
-                    <div className="px-project-3-category">
+                    {/* <div className="px-project-3-category">
                         {categories.map((cat) => (
                             <span key={`${cat}-${id}`}>{cat}</span>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

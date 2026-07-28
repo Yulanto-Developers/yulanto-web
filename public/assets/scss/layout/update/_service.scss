@@ -305,6 +305,7 @@
 
                         &-wrap2 {
                             transform: translateX(0);
+                            padding-right: 20px;
                         }
 
                         &-wrap3 {
@@ -344,6 +345,7 @@
         }
 
         &-wrap2 {
+            padding-right: 20px;
             transition: .9s;
             transform: translateX(800px);
             -webkit-transform: translateX(800px);

@@ -1,5 +1,11 @@
 /* arrow animation */
+.px-35 {
+    padding: 0px 35px !important;
+}
 
+.key-text {
+    white-space: nowrap;
+}
 
 .menu-link {
     display: flex;
@@ -120,9 +126,9 @@
     height: auto !important;
 }
 
-.services-menu:hover>.split-dropdown-menu.tp-submenu {
+/* .services-menu:hover>.split-dropdown-menu.tp-submenu {
     min-height: 300px;
-}
+} */
 
 /* On header menu item hover, display the initial narrow box */
 .has-dropdown:hover>.split-dropdown-menu.tp-submenu {
@@ -447,7 +453,7 @@
     overflow: hidden;
 }
 
-.portfolio-image-description {
+/* .portfolio-image-description {
     position: absolute;
     left: 0;
     top: 0;
@@ -467,7 +473,7 @@
 
     transition: all .4s ease;
     z-index: 2;
-}
+} */
 
 .portfolio-image-description p {
     color: #fff;
@@ -1058,7 +1064,7 @@
 .portfolio-image-description {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -50;
     width: 100%;
     height: 100%;
 
@@ -1126,46 +1132,6 @@
     }
 }
 
-/* .dash-bottom {
-    width: 100%;
-    height: auto;
-    left: 0px;
-    top: 0px;
-    position: absolute; 
-    background-color: lightblue;
-   
-} */
-/* .dash-bottom::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-
-    top: 0px;
-    position: absolute;
-    padding: 0px 2p 0px 2px;
-    border-bottom: dashed 2px #bcbcbc;
-}
-
-.dash-bottom::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    left: -6px;
-    top: 0px;
-    position: absolute;
-    border-bottom: dotted 2px #bcbcbc;
-}
-
-.dash-bottom::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    left: -6px;
-    top: 0px;
-    position: absolute;
-    border-bottom: dotted 2px #bcbcbc;
-} */
-
 .cursor-pointer {
     cursor: pointer !important;
 }
@@ -1193,4 +1159,9 @@
 
 .font-title-cls {
     font-size: 32px;
+}
+
+.og-height {
+    line-height: 1.5xx;
+
 }

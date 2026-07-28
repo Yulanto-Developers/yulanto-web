@@ -391,7 +391,7 @@ const heroContent = [
         title: "We start by listening closely to your goals, ensuring you feel understood from day one.",
         subtitle: "Leading Web Design Company in Chennai for Business Growth.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Make an inquiry"
+        head: "Make an Enquiry"
     },
     {
         col: "col-lg-4", img: "/assets/img/banner/bd.jpg",
@@ -460,7 +460,7 @@ const Hero = () => {
     }, [isHovered]);
 
     return (
-        <div className="px-hero-2-area pt-120 pb-20 bg-white">
+        <div className="px-hero-2-area pt-120 bg-white">
             <div className="px-hero-2-main d-none d-xl-block p-relative">
                 <div className="container container-1630">
                     <div className="row">

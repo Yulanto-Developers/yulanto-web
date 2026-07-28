@@ -18,9 +18,10 @@ export default function HeaderMenu() {
                     key={item.label}
                     className={`has-dropdown 
     ${item.isLastMenu ? "tp-menu-last" : ""}
-    ${item.label === "Services" ? "services-menu" : ""}
+    
   `}
                 >
+                    {/*  ${item.label === "Services" ? "services-menu" : ""} serivoc heigh code */}
                     <a className="menu-link">
                         {item.label}
                         {item.type === "dropdown" && (

@@ -26,12 +26,11 @@ const PersonalPortfolioAbout = () => {
             style={{ backgroundColor: aboutConfig.sectionBg }}
         >
             <div className="container">
-                <div className="row py-5">
+                <div className="row py-5 align-items-center">
                     <div className="col-xl-3">
-                        {/* <span className="px-section-subtitle pt-40 blink-ball">
-
-                            Our Works
-                        </span> */}
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            Services We Offer
+                        </span>
                     </div>
 
                     <div className="col-xl-9">

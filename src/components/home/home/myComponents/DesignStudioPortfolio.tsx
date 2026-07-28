@@ -3,7 +3,7 @@ import PortfolioCard from "../components/PortfolioCard";
 
 const Portfolio = () => {
     // display portfolio items
-    const displayPortfolioData = portfolioProjects.slice(4, 9);
+    const displayPortfolioData = portfolioProjects.slice(4, 8);
 
     return (
         <>

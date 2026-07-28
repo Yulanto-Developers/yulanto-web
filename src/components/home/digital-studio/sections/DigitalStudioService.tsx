@@ -3,7 +3,7 @@ import { servicesData } from "@/data/services-data";
 
 const DigitalStudioService = () => {
     //service item
-    const serviceItems = servicesData.slice(8, 12);
+    const serviceItems = servicesData.slice(8, 13);
 
     return (
         <div
@@ -11,14 +11,14 @@ const DigitalStudioService = () => {
             style={{ backgroundColor: "#053456" }}
         >
             <div className="container container-1320">
-                <div
+                {/* <div
                     className="bf-service-heading mb-10 tp_fade_anim"
                     data-delay=".3"
                 >
                     <span className="tp-section-subtitle text-white blink-ball">
                         Services We Offer
                     </span>
-                </div>
+                </div> */}
                 <div className="row">
 
                     <div className="col-lg-12">
@@ -32,7 +32,7 @@ const DigitalStudioService = () => {
                             </h3>
                             <div className="tp_text_anim">
                                 <p className="bf-service-3-dec font-paragraph-cls" style={{ fontFamily: "var(--font-figtree) !important" }}>
-                                    Our dedicated team of web designers in Chennai specializes in website design, web development, eCommerce website development, logo design, custom web development, SEO, and social media marketing (SMM). We deliver innovative, high-quality digital solutions that help businesses build a strong online presence and achieve lasting success.
+                                    As a leading Web Design and Development Company in Chennai, our experienced team specializes in creating responsive, user-friendly, and high-performing websites tailored to your business needs. Our innovative digital solutions help businesses build a strong online presence, improve search engine visibility, generate quality leads, and achieve long-term business growth.
                                 </p>
                             </div>
                         </div>

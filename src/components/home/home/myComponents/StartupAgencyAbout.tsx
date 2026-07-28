@@ -25,7 +25,7 @@ const aboutStats = [
         value: "11+",
         index: <FontAwesomeIcon icon={faBriefcase} />,
         title: "Years of Experience",
-        desc: "Celebrating 11+ years of creativity, innovation, and digital excellence.",
+        desc: "Celebrating 11+ Years of Excellence in Creativity, Innovation & Digital Solutions.",
     },
     {
         id: 2,
@@ -36,17 +36,17 @@ const aboutStats = [
     },
     {
         id: 3,
-        value: "300+",
+        value: "450+",
         index: <FontAwesomeIcon icon={faSmile} />,
-        title: "Satisfaction Client",
-        desc: "We've successfully delivered 450+ projects, including 50+ international projects, driving real business results.",
+        title: "Satisfied Clients",
+        desc: "Successfully delivered 450 websites, including 50+ international websites, driving real business results.",
         isBrandSlider: false,
     },
     {
         id: 4,
         value: "1",
         index: <FontAwesomeIcon icon={faTrophy} />,
-        title: "Award Winning",
+        title: " Design Award",
         desc: "Recognized with design awards for delivering outstanding web design solutions worldwide.",
         isBrandSlider: false,
     },
@@ -190,37 +190,12 @@ const StartupAgencyAbout = () => {
 
                                                 <div className="px-about-info-body d-flex flex-column justify-content-between">
                                                     <h4>
-                                                        {item.title.split(" ").map((word, idx) => (
-                                                            <span key={idx}>
-                                                                {word} {idx === 1 && <br />}
-                                                            </span>
-                                                        ))}
+                                                        {item.title}
                                                     </h4>
 
-                                                    {!item.isBrandSlider ? (
+                                                   
                                                         <p>{item.desc}</p>
-                                                    ) : (
-                                                        <div className="px-about-brand-slider fix pb-25">
-                                                            <div className="px-about-brand-active">
-                                                                <div className="slide-transtion">
-                                                                    <Swiper
-                                                                        modules={[FreeMode, Autoplay]}
-                                                                        {...brand_slider_params}
-                                                                    >
-                                                                        {brandImages.map((brand) => (
-                                                                            <SwiperSlide key={brand.id}>
-                                                                                <div className="px-about-brand">
-                                                                                    <span>
-                                                                                        <Image width={brand.width} height={brand.height} src={brand.img} alt="brand logo" />
-                                                                                    </span>
-                                                                                </div>
-                                                                            </SwiperSlide>
-                                                                        ))}
-                                                                    </Swiper>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    )}
+                                                   
                                                 </div>
                                             </motion.div>
                                         </div>

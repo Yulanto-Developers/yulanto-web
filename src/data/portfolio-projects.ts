@@ -17,17 +17,17 @@ export const portfolioProjects: PortfolioProjectDT[] = [
     },
     {
         id: 2,
-        title: "Core",
+        title: "CORE Energy Systems Limited",
         year: 2026,
         image: "/assets/img/sample/s4.webp",
         // image: "/assets/img/project/project-2.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
-        categories: ["Website", "Services"],
+        categories: ["WebDesign", "CorporateWebsite", "EngineeringWebsite", "ResponsiveDesign", "UIUXDesign"],
         client: "Creative Market",
         role: "UI/UX Design",
         duration: "18 February 2026",
         designer: "ThemePure",
-        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
+        description: 'Designed and developed a high-performance corporate website for CORE Energy Systems Limited, showcasing its expertise across nuclear, defence, EPC, O&M, and sustainable engineering sectors. The website combines structured navigation, engaging visuals, and technical content to deliver a professional digital experience that builds credibility and drives business enquiries.'
     },
     {
         id: 3,
@@ -62,45 +62,112 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         title: "Our Success Mantra",
         image: "/assets/img/award/award/mantra.jpg",
         secImage: [],
-        categories: ["Web Design", "Web Development"],
+        // categories: ["Web Design", "Web Development"],
         year: 2026,
         client: "Dribbble",
         role: "Brand Identity",
+        description: "At Yulanto Web Creations, we are a trusted Web Design and Development Company in Chennai, committed to delivering innovative, user-focused, and business-driven digital solutions.",
         duration: "3 January 2026",
         designer: "ThemePure",
         portFolio: [
             {
                 icon: 'faPalette', // Fits "Unique designs"
-                text: "Tailored Unique designs are offered based on your business needs and requirements following extensive market analysis of your industry and competitors."
+                key: 'Custom Website Solutions',
+                text: "We create unique, business-focused website designs after conducting in-depth research on your industry, competitors, and target audience."
             },
             {
                 icon: 'faCode', // Fits "cutting-edge technologies / HTML5 & CSS3"
-                text: "Our websites design in Chennai are crafted utilizing cutting-edge technologies such as HTML5 and CSS3.0."
+                key: "Modern Web Technologies",
+                text: "Our websites are developed using the latest technologies, ensuring speed, security, and scalability."
             },
             {
                 icon: 'faShieldHalved', // Fits "safety advantages / SSL certificate"
-                text: "Our website design services in Chennai offer a range of safety advantages for your websites, such as an SSL certificate, bug-free operation, and regular updates."
+                key: "Secure & Reliable Websites",
+                text: "Every website includes essential security features such as SSL integration, clean coding standards, regular updates, and optimized performance for a safe browsing experience."
             },
             {
                 icon: 'faChartLine', // Fits "SEO expertise / dynamic SEO-optimized website"
-                text: "Our SEO expertise in Chennai lies in delivering a dynamic SEO-optimized website in Chennai that will set you apart from your rivals."
+                key: "SEO-Ready Development",
+                text: "As an experienced Web Design and Development Company in Chennai, we build SEO-friendly websites with optimized structure, fast loading speed, and mobile responsiveness to improve your search engine rankings."
             },
             {
                 icon: 'faWrench', // Fits "Web maintenance and support services"
-                text: "At Yulanto, we also offer Web maintenance and support services in Chennai following the delivery of your website."
+                key: "Responsive Across All Devices",
+                text: "Our websites provide a seamless user experience on desktops, laptops, tablets, and smartphones, helping you reach customers on every device."
             },
             {
                 icon: 'faLaptopMobile', // Fits "responsive websites / various platforms and devices"
-                text: "The responsive websites in Chennai created can function seamlessly on various platforms and devices, enabling a broader reach to the audience."
+                key: "Ongoing Website Maintenance & Support",
+                text: "We offer continuous website maintenance, updates, backups, security monitoring, and technical support to keep your website running smoothly."
+            },
+            {
+                icon: 'faLaptopMobile', // Fits "responsive websites / various platforms and devices"
+                key: "On-Time Project Delivery",
+                text: "Our dedicated web designers and developers in Chennai ensure every project is delivered on schedule without compromising quality or functionality."
+            },
+            {
+                icon: 'faLaptopMobile', // Fits "responsive websites / various platforms and devices"
+                key: "Results-Driven Approach",
+                text: " We focus on creating visually appealing, high-converting websites that strengthen your online presence, generate quality leads, and support long-term business success."
             },
         ]
     },
     {
         id: 6,
+        title: "Invest in Your Website – The Difference Between Cheap and Quality Web Design",
+        image: "/assets/img/award/award/faq.jpg",
+        secImage: ["/assets/img/sample/s2.jpg"],
+        year: 2026,
+        client: "Dribbble",
+        role: "Brand Identity",
+        description:
+            "Your website is more than just an online presence—it's your most valuable digital asset and often the first impression customers have of your business. While a low-cost website may seem like a smart way to save money, it can end up costing more in lost opportunities, poor performance, and frequent redesigns.",
+        duration: "3 January 2026",
+        designer: "ThemePure",
+
+        portFolio: [
+            {
+                section: "Cheap Web Design",
+                points: [
+                    "Generic templates with little or no customization.",
+                    "Slow loading speed and poor performance.",
+                    "Limited SEO optimization, making it difficult to rank on Google.",
+                    "Poor mobile responsiveness and user experience.",
+                    "Weak security and limited technical support.",
+                    "Difficult to scale as your business grows.",
+                    "Lower conversion rates and reduced customer trust."
+                ]
+            },
+            {
+                section: "Quality Web Design",
+                points: [
+                    "Custom, professional design tailored to your brand.",
+                    "Fast, secure, and high-performance website.",
+                    "SEO-friendly structure to improve search engine visibility.",
+                    "Fully responsive across desktops, tablets, and mobile devices.",
+                    "Better user experience that increases engagement and conversions.",
+                    "Scalable solutions that grow with your business.",
+                    "Ongoing maintenance, support, and future enhancements."
+                ]
+            },
+            {
+                section: "Invest Once, Benefit for Years",
+                description:
+                    "A professionally designed website is an investment, not an expense. A quality website helps you build credibility, attract more visitors, generate qualified leads, and increase sales. Choosing a trusted Web Design and Development Company in Chennai ensures your website becomes a powerful business tool that delivers long-term value and a strong return on investment."
+            },
+            {
+                section: "Remember",
+                description:
+                    "A cheap website saves money today. A quality website earns money for years."
+            }
+        ]
+    },
+    {
+        id: 7,
         title: "FAQ?",
         image: "/assets/img/award/award/faq.jpg",
         secImage: ['/assets/img/sample/s2.jpg'],
-        categories: ["Web Design", "Web Development"],
+        // categories: ["Web Design", "Web Development"],
         year: 2026,
         client: "Dribbble",
         role: "Brand Identity",
@@ -123,11 +190,11 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         ]
     },
     {
-        id: 7,
+        id: 8,
         title: "Why Choose Us",
         image: "/assets/img/award/award/why-choose-us.jpg",
         secImage: ['/assets/img/sample/s2.jpg'],
-        categories: ["Web Design", "Web Development"],
+        // categories: ["Web Design", "Web Development"],
         year: 2026,
         client: "Dribbble",
         role: "Brand Identity",

@@ -5,7 +5,7 @@ export interface PortfolioProjectDT {
   year: number;
   image: string;
   secImage:string[];
-  categories: string[];
+  categories?: string[];
   client: string;
   role: string;
   duration: string;
