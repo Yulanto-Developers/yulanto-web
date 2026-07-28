@@ -36,11 +36,11 @@ const PersonalPortfolioAbout = () => {
                     <div className="col-xl-9">
                         <div className="px-project-title-box">
                             <h3 className="px-section-title text-tenor text-effect">
-                                <span>Our </span>
+                                <span>Our {" "}</span>
                                 <span>Services</span>
                             </h3>
                             <p className="text-figtree text-black mt-2 font-paragraph-cls">
-                                Our dedicated team of web designers in Chennai specializes in website design,<br /> web development, eCommerce website development, logo design, custom web development, SEO, and social media marketing (SMM).
+                                Our dedicated team of web designers in Chennai specializes in website design, web development, eCommerce website development, logo design, custom web development, SEO, and social media marketing (SMM).
                             </p>
                         </div>
                     </div>

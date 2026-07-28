@@ -114,14 +114,14 @@ export const portfolioProjects: PortfolioProjectDT[] = [
     },
     {
         id: 6,
-        title: "Invest in Your Website – The Difference Between Cheap and Quality Web Design",
+        title: "Invest in Your Website",
         image: "/assets/img/award/award/faq.jpg",
         secImage: ["/assets/img/sample/s2.jpg"],
         year: 2026,
         client: "Dribbble",
         role: "Brand Identity",
-        description:
-            "Your website is more than just an online presence—it's your most valuable digital asset and often the first impression customers have of your business. While a low-cost website may seem like a smart way to save money, it can end up costing more in lost opportunities, poor performance, and frequent redesigns.",
+        // description:
+        //     "Your website is more than just an online presence—it's your most valuable digital asset and often the first impression customers have of your business. While a low-cost website may seem like a smart way to save money, it can end up costing more in lost opportunities, poor performance, and frequent redesigns.",
         duration: "3 January 2026",
         designer: "ThemePure",
 

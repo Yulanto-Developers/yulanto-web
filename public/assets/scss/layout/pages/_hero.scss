@@ -302,7 +302,7 @@
 
             & span {
                 position: absolute;
-                bottom: 10px;
+                bottom: 15px;
                 left: 0%;
                 right: 0%;
                 margin: 0 auto;
@@ -885,7 +885,8 @@
 .button-style {
     background: linear-gradient(135deg, rgb(39, 86, 116) 0%, #53ae7d 100%);
     color: #fff;
-    padding: 10px 40px;
+    font-size: 22px;
+    padding: 10px 20px;
     border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;

@@ -135,13 +135,11 @@ const PersonalPortfolioHeader = () => {
                       type="button"
                       onClick={() => {
                         console.log("Button clicked");
-                        console.log(toggleMainSidebar);
                         toggleMainSidebar();
                       }}
-                      style={{ cursor: 'pointer' }}
-                      className="px-header-bar tp-offcanvas-open-btn cursor-pointer"
+                      className="px-header-bar tp-offcanvas-open-btn"
                     >
-                      <FontAwesomeIcon icon={faEnvelope} />
+                      <i className="fa-solid fa-comments chat-btn"></i>
                     </button>
                   </div>
                 </div>

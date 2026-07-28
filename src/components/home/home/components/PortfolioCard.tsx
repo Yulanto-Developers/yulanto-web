@@ -209,7 +209,7 @@ const PortfolioCard = ({
                         )}
 
                         {/* intative contents */}
-                        {title === "Invest in Your Website – The Difference Between Cheap and Quality Web Design" &&
+                        {title === "Invest in Your Website" &&
     Array.isArray(portFolio) && (
         <div>
             {/* Two Comparison Cards */}
@@ -218,7 +218,7 @@ const PortfolioCard = ({
                     display: "grid",
                     gridTemplateColumns: "repeat(2,1fr)",
                     gap: "20px",
-                    marginBottom: "25px",
+                    marginBottom: "15px",
                 }}
             >
                 {portFolio.slice(0, 2).map((item, index) => (
@@ -273,9 +273,9 @@ const PortfolioCard = ({
                 style={{
                     background: "rgba(255,255,255,.08)",
                     borderLeft: "4px solid #f6b73c",
-                    padding: "18px",
+                    padding: "10px 20px",
                     borderRadius: "10px",
-                    marginBottom: "20px",
+                    marginBottom: "10px",
                 }}
             >
                 <h4
@@ -290,6 +290,7 @@ const PortfolioCard = ({
                     style={{
                         color: "#fff",
                         margin: 0,
+                        fontSize:'16px',
                         lineHeight: "1.7",
                         textAlign: "justify",
                     }}
@@ -304,10 +305,10 @@ const PortfolioCard = ({
                     background: "#053456",
                     color: "#fff",
                     borderRadius: "12px",
-                    padding: "18px",
+                    padding: "16px",
                     textAlign: "center",
                     fontWeight: 600,
-                    fontSize: "18px",
+                    fontSize: "16px",
                 }}
                 className="text-tenor"
             >
@@ -325,7 +326,7 @@ const PortfolioCard = ({
                 <div className="px-portfolio-category portfolio-meta">
                     <span>{year}</span>
                 </div> */}
-                <div className="px-portfolio-content portfolio-bottom-title">
+                <div className="px-portfolio-content ">
                     <h2 className="px-portfolio-title">{title}</h2>
                 </div>
             </Link>

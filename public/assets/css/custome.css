@@ -1,4 +1,10 @@
 /* arrow animation */
+
+p {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+}
+
 .px-35 {
     padding: 0px 35px !important;
 }
@@ -1165,3 +1171,62 @@
     line-height: 1.5xx;
 
 }
+
+.px-about-info-body p {
+    font-size: 16px !important;
+}
+
+/* header button css statrs */
+.chat-btn {
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(5, 52, 86, 0.7);
+    animation: chatShake 3s infinite;
+    transition: all 0.3s ease;
+}
+
+.chat-btn:hover {
+    transform: scale(1.08);
+    /* box-shadow: 0 0 25px rgba(5, 52, 86, 0.9); */
+}
+
+@keyframes chatShake {
+
+    0%,
+    90%,
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    91% {
+        transform: translateX(-4px) rotate(-8deg);
+    }
+
+    92% {
+        transform: translateX(4px) rotate(8deg);
+    }
+
+    93% {
+        transform: translateX(-4px) rotate(-8deg);
+    }
+
+    94% {
+        transform: translateX(4px) rotate(8deg);
+    }
+
+    95% {
+        transform: translateX(-2px) rotate(-4deg);
+    }
+
+    96% {
+        transform: translateX(2px) rotate(4deg);
+    }
+
+    97%,
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+/* header button css endss */

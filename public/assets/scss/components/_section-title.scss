@@ -52,7 +52,11 @@
         line-height: .83;
         letter-spacing: -0.06em;
         font-family: var(--font-tenor) !important;
-        
+
+        & .word {
+            margin-right: 10px;
+        }
+
 
         @media #{$xl} {
             font-size: 80px;

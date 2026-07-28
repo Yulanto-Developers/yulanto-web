@@ -38,8 +38,8 @@ export const lightMenu: MenuItem[] = [
         subLinks: [
           { label: "Dynamic Website Development", href: "/" },
           { label: "Custom Website Development", href: "/" },
-          { label: "PHP Development", href: "/" },
-          { label: "React Development", href: "/" },
+          { label: "PHP Website Development", href: "/" },
+          { label: "React Website Development", href: "/" },
           { label: "API Integration", href: "/" },
         ]
       },
@@ -49,8 +49,8 @@ export const lightMenu: MenuItem[] = [
         subLinks: [
           { label: "WordPress Development", href: "/" },
           { label: "WooCommerce Development", href: "/" },
-          { label: "Shopify Development", href: "/" },
-          { label: "Portal Development", href: "/" },
+          { label: "Shopify E-commerce Development", href: "/" },
+          { label: "Portal Web Development", href: "/" },
           { label: "Custom E-commerce Development", href: "/" },
         ]
       },
