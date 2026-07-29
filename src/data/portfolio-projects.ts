@@ -79,26 +79,26 @@ export const portfolioProjects: PortfolioProjectDT[] = [
             {
                 icon: 'faPalette', // Fits "Unique designs"
                 key: 'Custom Website Solutions',
-                text: "We create unique, business-focused website designs after conducting in-depth research on your industry, competitors, and target audience."
+                text: "We create unique, business-focused website design in Chennai after conducting in-depth research on your industry, competitors, and target audience."
             },
             {
                 icon: 'faCode', // Fits "cutting-edge technologies / HTML5 & CSS3"
                 key: "Modern Web Technologies",
-                text: "Our websites are developed using the latest technologies, ensuring speed, security, and scalability."
+                text: "Our website Designers in Chennai are developed using the latest technologies, ensuring speed, security, and scalability."
             },
             {
                 icon: 'faShieldHalved', // Fits "safety advantages / SSL certificate"
                 key: "Secure & Reliable Websites",
-                text: "Every website includes essential security features such as SSL integration, clean coding standards, regular updates, and optimized performance for a safe browsing experience."
+                text: "Every website includes SSL integration, clean coding standards, regular updates, and performance optimization for a safe browsing experience."
             },
             {
                 icon: 'faChartLine', // Fits "SEO expertise / dynamic SEO-optimized website"
                 key: "SEO-Ready Development",
-                text: "As an experienced Web Design and Development Company in Chennai, we build SEO-friendly websites with optimized structure, fast loading speed, and mobile responsiveness to improve your search engine rankings."
+                text: "As an experienced Web Design and Development Company in Chennai, we build SEO-friendly websites with optimized structure, fast loading speeds, and mobile responsiveness to improve your search engine rankings."
             },
             {
                 icon: 'faWrench', // Fits "Web maintenance and support services"
-                key: "Responsive Across All Devices",
+                key: "Ongoing Website Maintenance & Support",
                 text: "Our websites provide a seamless user experience on desktops, laptops, tablets, and smartphones, helping you reach customers on every device."
             },
             {
