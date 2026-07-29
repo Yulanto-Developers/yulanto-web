@@ -35,7 +35,7 @@ const CreativeAgencyBrand = () => {
     const brands = isDarkTheme ? brandLogosWhite : brandLogosDark;
 
     return (
-        <div className="px-brand-area px-brand-style-5 pt-120 pb-120">
+        <div className="px-brand-area px-brand-style-5">
             <div className="container container-1550">
                 <div className="row gx-0">
                     <div className="col-12">
@@ -75,12 +75,12 @@ const CreativeAgencyBrand = () => {
                             {brands.map((img, index) => (
                                 <SwiperSlide key={img}>
                                     <div className="px-brand-item text-center">
-                                        <Image 
-                                            className="img-fluid object-contain mx-auto" 
-                                            width={90} 
-                                            height={40} 
-                                            src={img} 
-                                            alt={`brand-${index + 1}`} 
+                                        <Image
+                                            className="img-fluid object-contain mx-auto"
+                                            width={90}
+                                            height={40}
+                                            src={img}
+                                            alt={`brand-${index + 1}`}
                                         />
                                     </div>
                                 </SwiperSlide>

@@ -43,7 +43,7 @@ const page = () => {
 
       {/* <DesignStudioAward /> */}
       {/* <CreativeAgencyBrand/> */}
-      <OurPartner />
+      
     </main>
   );
 };

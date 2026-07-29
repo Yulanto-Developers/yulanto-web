@@ -7,6 +7,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
+import {OurPartner} from '@/components/home/home/myComponents'
 
 // Counter Animation Component
 const AnimatedCounter = ({ value }: { value: number }) => {
@@ -98,7 +99,7 @@ const StatCard: React.FC<StatCardProps> = ({
 
 const Testimonial = () => {
     return (
-        <section className="px-testimonial-area pt-120 pb-5" style={{ backgroundColor: '#F5F5F5', overflow: 'hidden' }}>
+        <section className="px-testimonial-area pt-120 pb-30" style={{ backgroundColor: '#F5F5F5', overflow: 'hidden' }}>
             <div className="container">
 
                 {/* Top Animated Header Row */}
@@ -130,10 +131,7 @@ const Testimonial = () => {
                                 </h3>
 
                                 <p className="ms-4 font-paragraph-cls">
-                                    We've helped businesses across industries achieve
-                                    their goals.
-                                    <br />
-                                    Here are some of our recent projects.
+                                    We've worked with clients globally across various industries and helped them achieve their business goals. Here are some of our recent success stories.
                                 </p>
                             </div>
                         </motion.div>
@@ -234,6 +232,7 @@ const Testimonial = () => {
                                 </Swiper>
                             </div>
                         </div>
+                        <OurPartner />
                     </div>
 
                 </div>
