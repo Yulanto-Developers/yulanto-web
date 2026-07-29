@@ -445,7 +445,7 @@
         }
 
         &-bigtext {
-            font-size: 80px;
+            font-size: 38px;
             font-weight: 600;
             line-height: 1;
             letter-spacing: 1px;
@@ -454,27 +454,27 @@
             font-family: var(--font-tenor);
 
             @media #{$x4l} {
-                font-size: 200px;
+                font-size: 38px;
             }
 
             @media #{$x3l} {
-                font-size: 150px;
+                font-size: 38px;
             }
 
             @media #{$xxl} {
-                font-size: 100px;
+                font-size: 38px;
             }
 
             @media #{$xl} {
-                font-size: 80px;
+                font-size: 38px;
             }
 
             @media #{$lg} {
-                font-size: 212px;
+                font-size: 38px;
             }
 
             @media #{$md} {
-                font-size: 50px;
+                font-size: 38px;
             }
 
             @media #{$xs} {
@@ -482,7 +482,7 @@
             }
 
             @media #{$sm} {
-                font-size: 30px;
+                font-size: 38px;
             }
         }
 
