@@ -99,22 +99,12 @@ export const portfolioProjects: PortfolioProjectDT[] = [
             {
                 icon: 'faWrench', // Fits "Web maintenance and support services"
                 key: "Ongoing Website Maintenance & Support",
-                text: "Our websites provide a seamless user experience on desktops, laptops, tablets, and smartphones, helping you reach customers on every device."
-            },
-            {
-                icon: 'faLaptopMobile', // Fits "responsive websites / various platforms and devices"
-                key: "Ongoing Website Maintenance & Support",
-                text: "We offer continuous website maintenance, updates, backups, security monitoring, and technical support to keep your website running smoothly."
-            },
-            {
-                icon: 'faLaptopMobile', // Fits "responsive websites / various platforms and devices"
-                key: "On-Time Project Delivery",
-                text: "Our dedicated web designers and developers in Chennai ensure every project is delivered on schedule without compromising quality or functionality."
+                text: "We provide continuous website maintenance, updates, backups, security monitoring, and technical support to keep your website running smoothly."
             },
             {
                 icon: 'faLaptopMobile', // Fits "responsive websites / various platforms and devices"
                 key: "Results-Driven Approach",
-                text: " We focus on creating visually appealing, high-converting websites that strengthen your online presence, generate quality leads, and support long-term business success."
+                text: "Our dedicated web designers and developers in Chennai create visually appealing, high-converting websites that strengthen your online presence, generate quality leads, and support long-term business growth."
             },
         ]
     },
@@ -179,18 +169,33 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         designer: "ThemePure",
         portFolio: [
             {
-                ques: "1. What makes having a top-notch online presence so essential for your business?",
-                ans1: "* The company's strong online visibility positions it to become a recognized brand and appeal to a wider audience. A well-designed website supports this growth. This enhances customer perception, credibility, and trust in your brand.",
-                ans2: '* Yulanto, a prominent web design and website development company based in Chennai, has played a crucial role in enhancing the online presence of numerous brands in diverse industries.'
+                ques: "1. Why should I invest in a professional website?",
+                ans1: "A professional website designers in Chennai builds brand credibility, increases online visibility, attracts more customers, and helps your business grow. At Yulanto, we create high-quality websites design that deliver real business results."
             },
             {
-                ques: "2. What other services are included with your website design offerings?",
-                ans1: "* We offer an extensive array of web services and solutions in  Chennai to our clients worldwide. In addition to website design and development in chennai, we offer website maintenance in Chennai, domain registration, web hosting, web app development in Chennai, e-commerce website development in Chennai, digital marketing in Chennai, SEO in Chennai, branding, graphic design in Chennai, and more. We've got you covered."
+                ques: "2. What services do you provide?",
+                ans1: "We offer website design and development, eCommerce websites, web applications, website maintenance, domain registration, web hosting, SEO, digital marketing, branding, and graphic design in Chennai."
             },
             {
-                ques: "3. What is the expected timeline for the completion of my web project?",
-                ans1: "* Our team ensures timely completion of web design in Chennai, Web development in Chennai, and ecommerce projects in Chennai based on the agreed-upon timelines. Any extra features needed may result in a slight delay, but we will discuss and agree upon additional timelines. Rest assured, we prioritize the quality of our project deliveries."
-            }
+                ques: "3. How long does it take to complete a website?",
+                ans1: "Most website design projects are completed within the agreed timeline. The duration depends on the project's size, features, and client feedback. Any additional requirements may extend the schedule."
+            },
+            {
+                ques: "4. How can I track my project?",
+                ans1: "Our dedicated web designers and developers in Chennai team provides regular updates, demo links, and review sessions throughout the development process, ensuring transparency until the website goes live."
+            },
+            {
+                ques: "5. How much does a website cost?",
+                ans1: "Website design and web development pricing in Chennai depends on your business requirements, features, design complexity, and functionality. Contact us for a customized website design and web development quote that fits your budget."
+            },
+            {
+                ques: "6. Why is responsive web design important?",
+                ans1: "A responsive website automatically adapts to desktops, tablets, and mobile devices, providing a seamless user experience while improving SEO and conversion rates."
+            },
+            {
+                ques: "7. How can my website rank on Google?",
+                ans1: "A website ranks better with SEO-friendly design, quality content, relevant keywords, fast loading speed, mobile responsiveness, and ongoing SEO optimization. We build websites optimized for search engines and long-term growth."
+            },
         ]
     },
     {

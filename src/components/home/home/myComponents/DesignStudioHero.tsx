@@ -400,7 +400,7 @@ const heroContent = [
         head: "Boost"
     },
     {
-        col: "col-lg-4", img: "/assets/img/banner/bd.jpg",
+        col: "col-lg-4", img: "/assets/img/banner/banner-1.jpg",
         title: " ", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Design"
@@ -412,7 +412,7 @@ const heroContent = [
         head: "Gather Requirements"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/web-img-2.jpg",
+        col: "col-lg-3", img: "/assets/img/banner/a-1.jpg",
         title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.",
         spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Write the code"
@@ -499,15 +499,18 @@ const Hero = () => {
                                                         <Image
                                                             src={item.img}
                                                             alt={item.title}
-                                                            width={130}
-                                                            height={168}
+                                                            width={0}
+                                                            height={0}
+                                                            unoptimized
                                                             style={{
                                                                 transition:
                                                                     "0.3s",
                                                                 filter: isActive
                                                                     ? "grayscale(100%) brightness(50%)"
                                                                     : "none",
+                                                                width: '100%', height: 'auto'
                                                             }}
+
                                                         />
                                                     </Link>
 
