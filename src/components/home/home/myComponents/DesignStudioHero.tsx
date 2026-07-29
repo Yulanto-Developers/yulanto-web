@@ -412,7 +412,7 @@ const heroContent = [
         head: "Gather Requirements"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/a-1.jpg",
+        col: "col-lg-3", img: "/assets/img/banner/v-3.jpg",
         title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.",
         spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Write the code"
@@ -424,13 +424,13 @@ const heroContent = [
         head: "Design the website"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/web-img-4.jpg",
+        col: "col-lg-3", img: "/assets/img/banner/v-1.jpg",
         title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Custom Website creations company for Growing Businesses in Chennai",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Increase Sales"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/web-img-5.jpg",
+        col: "col-lg-3", img: "/assets/img/banner/v-2.jpg",
         title: "Our commitment is to a long-term partnership that supports your business growth.", subtitle: "Elevate Your Business with Chennai's Best Web Design Company",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Continuous Success"
