@@ -153,7 +153,7 @@ p {
 .split-dropdown-menu .dropdown-sidebar {
     /* width: 260px !important; */
     /* Hard-coded absolute pixel width */
-    flex: 0 0 260px !important;
+    flex: 0 0 220px !important;
     /* Prevents collapsing/flexing */
     background-color: #fafbfe !important;
     padding: 24px 0 !important;
@@ -745,7 +745,7 @@ p {
 
 /* CRITICAL: When hovering over an item with sublinks, EXPAND the total container width! */
 .split-dropdown-menu.tp-submenu:has(.sidebar-item:hover .dropdown-content-pane) {
-    width: 700px !important;
+    width: 620px !important;
     /* Expands smoothly to make space for the right panel */
 }
 
@@ -753,7 +753,7 @@ p {
 .split-dropdown-menu .dropdown-sidebar {
     /* width: 260px !important; */
     /* Hard-coded absolute pixel width */
-    flex: 0 0 260px !important;
+    flex: 0 0 220px !important;
     /* Prevents collapsing/flexing */
     background-color: #fafbfe !important;
     padding: 24px 0 !important;
@@ -1078,7 +1078,7 @@ p {
     align-items: center;
     justify-content: center;
 
-    padding: 30px;
+    padding: 20px;
 
     background: rgba(0, 0, 0, 0.55);
 
@@ -1230,3 +1230,98 @@ p {
 }
 
 /* header button css endss */
+
+.project-hover-content p {
+    font-size: 18px !important;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 18px;
+}
+
+/* Container */
+.project-highlights {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+}
+
+/* Title */
+.key-cls {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.key-cls::before {
+    content: "";
+    width: 4px;
+    height: 18px;
+    background: #053456;
+    border-radius: 10px;
+}
+
+/* List */
+.list-style-cls {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* List Item */
+.list-style-cls li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 12px;
+    line-height: 1.6;
+    transition: all .3s ease;
+}
+
+/* Hover */
+.list-style-cls li:hover {
+    transform: translateX(7px);
+    color: #fff;
+    -webkit-transform: translateX(7px);
+    -moz-transform: translateX(7px);
+    -ms-transform: translateX(7px);
+    -o-transform: translateX(7px);
+}
+
+/* Icon */
+.highlight-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #053456, #6366f1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 11px;
+    margin-top: 2px;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, .35);
+}
+
+
+.portfolio-fixed-title{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    z-index: 2;
+    transition: .3s;
+}
+
+/* Hide the fixed title once the overlay appears */
+.px-portfolio-item:hover .portfolio-fixed-title{
+    opacity: 0;
+}

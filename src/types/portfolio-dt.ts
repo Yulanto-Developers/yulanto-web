@@ -4,7 +4,7 @@ export interface PortfolioProjectDT {
   title: string;
   year: number;
   image: string;
-  secImage:string[];
+  secImage: string[];
   categories?: string[];
   client: string;
   role: string;
@@ -13,9 +13,10 @@ export interface PortfolioProjectDT {
   video?: string; // Optional video field 
   description?: string; // Optional description field 
   large?: boolean; // Optional field to indicate if the project should be displayed larger
-  reverse?:boolean;
-  customClass?:string;
-  type?:string;
-  filters?:string[];
-  portFolio?:any[];
+  reverse?: boolean;
+  customClass?: string;
+  type?: string;
+  filters?: string[];
+  portFolio?: any[];
+  highlights?: string[];
 }

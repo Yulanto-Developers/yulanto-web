@@ -1340,31 +1340,11 @@
         display: block;
     }
 
-    .project-hover-overlay {
-        position: absolute;
-        inset: 0;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        padding: 30px;
-        text-align: center;
-
-        opacity: 0;
-        visibility: hidden;
-
-        transition: all .45s ease;
-
-        backdrop-filter: blur(0px);
-        -webkit-backdrop-filter: blur(0px);
-
-        background: rgba(0, 0, 0, 0);
-    }
+   
 
     .project-hover-content {
         color: #fff;
-        max-width: 85%;
+        // max-width: 85%;
         transform: translateY(20px);
         transition: all .45s ease;
         font-family: var(--font-figtree);
@@ -1421,39 +1401,8 @@
 
 
 //category start
-.project-categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 18px;
 
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-}
 
-.project-category {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 8px 18px;
-    border-radius: 50px;
-
-    background: rgba(255, 255, 255, .08);
-    border: 1px solid rgba(255, 255, 255, .15);
-
-    color: #fff;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .5px;
-    text-transform: uppercase;
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    transition: all .3s ease;
-}
 
 .px-project-item .project-categories {
     opacity: 1;
@@ -1469,8 +1418,8 @@
 .project-categories {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 18px;
+    // gap: 10px;
+    // margin-top: 18px;
 }
 
 .project-category {
@@ -1478,11 +1427,12 @@
     align-items: center;
     justify-content: center;
 
-    padding: 8px 18px;
+    padding: 8px 8px;
     border-radius: 50px;
 
     background: #fff;
     color: #111;
+    font-weight: bold;
     border: 1px solid rgba(255, 255, 255, .15);
 
     transition: all .35s ease;
@@ -1544,10 +1494,10 @@
     position: absolute;
     inset: 0;
     z-index: 99; // <-- Add this
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    padding: 20px 10px;
     opacity: 0;
     visibility: hidden;
 

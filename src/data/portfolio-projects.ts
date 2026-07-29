@@ -27,6 +27,12 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         role: "UI/UX Design",
         duration: "18 February 2026",
         designer: "ThemePure",
+        highlights: [
+            "Industry-focused design with clear service navigation.",
+            "Interactive case studies showcasing landmark engineering projects.",
+            "Dedicated Suppliers Connect portal for seamless collaboration.",
+            "ESG-focused content with modern, responsive user experience."
+        ],
         description: 'Designed and developed a high-performance corporate website for CORE Energy Systems Limited, showcasing its expertise across nuclear, defence, EPC, O&M, and sustainable engineering sectors. The website combines structured navigation, engaging visuals, and technical content to deliver a professional digital experience that builds credibility and drives business enquiries.'
     },
     {

@@ -581,7 +581,7 @@ const Hero = () => {
 
                         <div className="text-center btn-partent">
                             <Link href="/" className="button-style relative-cls-header">
-                                <span className="text-tenor" style={{ fontSize: '16px' }}>Get a Free Quote</span>
+                                <span className="text-tenor">Get a Free Quote</span>
                             </Link>
                         </div>
                     </div>

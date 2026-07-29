@@ -1,6 +1,7 @@
 import { PortfolioProjectDT } from "@/types/portfolio-dt";
 import SmartLink from "@/components/common/SmartLink";
 import Image from "next/image";
+import { moveItem } from "framer-motion";
 
 const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
     id,
@@ -9,6 +10,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
     image,
     description,
     categories,
+    highlights
 }) => {
     return (
         <div className="portfolio-project-card">
@@ -43,8 +45,26 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                                 <div className="project-hover-content">
 
                                     {description && (
-                                        <p className="text-figtree">{description}</p>
+                                        <p className="text-figtree text-justify">{description}</p>
                                     )}
+                                    {highlights && (
+                                        <div className="project-highlights">
+                                            <h6 className="key-cls">Key Highlights</h6>
+
+                                            <ul className="list-style-cls">
+                                                {highlights.map((item, index) => (
+                                                    <li key={index} className="text-figtree">
+                                                        <span className="highlight-icon">
+                                                            <i className="fa-solid fa-check"></i>
+                                                        </span>
+                                                        {item}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+
+
 
                                 </div>
                             </div>
@@ -59,13 +79,13 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                             ? categories.map((category, index) => (
                                 <span
                                     key={index}
-                                    className="project-category"
+                                    className="project-category text-figtree"
                                 >
                                     #{category}
                                 </span>
                             ))
                             : (
-                                <span className="project-category">
+                                <span className="project-category text-figtree">
                                     #{categories}
                                 </span>
                             )}

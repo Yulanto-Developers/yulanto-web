@@ -39,9 +39,11 @@ const PortfolioCard = ({
                         alt={title}
                     />
 
+
+
                     <div className="portfolio-image-description">
                         <div className="portfolio-hover-title px-35">
-                            <h2 className="text-white text-tenor font-title-cls">{title}</h2>
+                            <h2 className="text-white text-tenor font-title-cls">{title !== "Invest in Your Website" ? title : ""}</h2>
                             <p className="text-figtree" style={{ fontSize: '17px', textAlign: 'justify' }}>{description}</p>
 
                             {/* OUR MANTRA */}
@@ -210,112 +212,112 @@ const PortfolioCard = ({
 
                         {/* intative contents */}
                         {title === "Invest in Your Website" &&
-    Array.isArray(portFolio) && (
-        <div>
-            {/* Two Comparison Cards */}
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(2,1fr)",
-                    gap: "20px",
-                    marginBottom: "15px",
-                }}
-            >
-                {portFolio.slice(0, 2).map((item, index) => (
-                    <div
-                        key={index}
-                        style={{
-                            background: "rgba(255,255,255,.10)",
-                            border: "1px solid rgba(255,255,255,.15)",
-                            borderRadius: "12px",
-                            padding: "18px",
-                            backdropFilter: "blur(8px)",
-                        }}
-                    >
-                        <h4
-                            className="text-tenor"
-                            style={{
-                                color: "#fff",
-                                marginBottom: "15px",
-                                textAlign: "center",
-                            }}
-                        >
-                            {item.section}
-                        </h4>
+                            Array.isArray(portFolio) && (
+                                <div>
+                                    {/* Two Comparison Cards */}
+                                    <div
+                                        style={{
+                                            display: "grid",
+                                            gridTemplateColumns: "repeat(2,1fr)",
+                                            gap: "20px",
+                                            
+                                        }}
+                                    >
+                                        {portFolio.slice(0, 2).map((item, index) => (
+                                            <div
+                                                key={index}
+                                                style={{
+                                                    // background: "rgba(255,255,255,.10)",
+                                                    // border: "1px solid rgba(255,255,255,.15)",
+                                                    // borderRadius: "12px",
+                                                    padding: "18px",
+                                                    // backdropFilter: "blur(5px)",
+                                                }}
+                                            >
+                                                <h4
+                                                    className="text-tenor"
+                                                    style={{
+                                                        color: "#fff",
+                                                        marginBottom: "15px",
+                                                        textAlign: "center",
+                                                    }}
+                                                >
+                                                    {item.section}
+                                                </h4>
 
-                        <ul
-                            style={{
-                                margin: 0,
-                                paddingLeft: "20px",
-                                color: "#fff",
-                            }}
-                            className="text-figtree"
-                        >
-                            {item.points.map((point: string, i: number) => (
-                                <li
-                                    key={i}
-                                    style={{
-                                        marginBottom: "10px",
-                                        lineHeight: "1.6",
-                                        fontSize: "15px",
-                                    }}
-                                >
-                                    {point}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
+                                                <ul
+                                                    style={{
+                                                        margin: 0,
+                                                        paddingLeft: "20px",
+                                                        color: "#fff",
+                                                    }}
+                                                    className="text-figtree"
+                                                >
+                                                    {item.points.map((point: string, i: number) => (
+                                                        <li
+                                                            key={i}
+                                                            style={{
+                                                                marginBottom: "10px",
+                                                                lineHeight: "1.6",
+                                                                fontSize: "15px",
+                                                            }}
+                                                        >
+                                                            {point}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        ))}
+                                    </div>
 
-            {/* Investment Section */}
-            <div
-                style={{
-                    background: "rgba(255,255,255,.08)",
-                    borderLeft: "4px solid #f6b73c",
-                    padding: "10px 20px",
-                    borderRadius: "10px",
-                    marginBottom: "10px",
-                }}
-            >
-                <h4
-                    className="text-tenor"
-                    style={{ color: "#fff", marginBottom: "10px" }}
-                >
-                    {portFolio[2].section}
-                </h4>
+                                    {/* Investment Section */}
+                                    <div
+                                        style={{
+                                            background: "rgba(255,255,255,.08)",
+                                            borderLeft: "4px solid #f6b73c",
+                                            padding: "10px 20px",
+                                            borderRadius: "10px",
+                                            marginBottom: "10px",
+                                        }}
+                                    >
+                                        <h4
+                                            className="text-tenor"
+                                            style={{ color: "#fff" }}
+                                        >
+                                            {portFolio[2].section}
+                                        </h4>
 
-                <p
-                    className="text-figtree"
-                    style={{
-                        color: "#fff",
-                        margin: 0,
-                        fontSize:'16px',
-                        lineHeight: "1.7",
-                        textAlign: "justify",
-                    }}
-                >
-                    {portFolio[2].description}
-                </p>
-            </div>
+                                        <span
+                                            className="text-figtree"
+                                            style={{
+                                                color: "#fff",
+                                                margin: 0,
+                                                fontSize: '16px',
+                                                lineHeight: "1.5",
+                                                textAlign: "justify",
+                                            }}
+                                        >
+                                            {portFolio[2].description}
+                                        </span>
+                                    </div>
 
-            {/* Bottom Quote */}
-            <div
-                style={{
-                    background: "#053456",
-                    color: "#fff",
-                    borderRadius: "12px",
-                    padding: "16px",
-                    textAlign: "center",
-                    fontWeight: 600,
-                    fontSize: "16px",
-                }}
-                className="text-tenor"
-            >
-                💡 {portFolio[3].description}
-            </div>
-        </div>
-    )}
+                                    {/* Bottom Quote */}
+                                    <div
+                                        style={{
+                                            background: "#053456",
+                                            color: "#fff",
+                                            borderRadius: "12px",
+                                            padding: "10px",
+                                            textAlign: "center",
+                                            fontWeight: 600,
+                                            fontSize: "16px",
+                                        }}
+                                        className="text-tenor"
+                                    >
+                                        💡 {portFolio[3].description}
+                                    </div>
+                                </div>
+                            )}
                     </div>
                 </div>
                 {/* <div className="px-portfolio-category">
