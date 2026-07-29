@@ -111,7 +111,7 @@ const Testimonial = () => {
                             transition={{ duration: 0.6, ease: "easeOut" }}
                         >
                             <span className="px-section-subtitle pt-40 blink-ball text-tenor   text-muted" style={{ fontSize: '0.9rem', letterSpacing: '1px' }}>
-                                Testimonial
+                                Trusted by Our Clients
                             </span>
                         </motion.div>
                     </div>
@@ -125,8 +125,8 @@ const Testimonial = () => {
                         >
                             <div className="px-project-title-box">
                                 <h3 className="px-section-title mb-25 text-effect" style={{ fontSize: '80px' }}>
-                                    <span>Our Client </span>
-                                    <span>Words</span>
+                                    <span className="word">Client </span>
+                                    <span>Testimonials</span>
                                 </h3>
 
                                 <p className="ms-4 font-paragraph-cls">

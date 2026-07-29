@@ -66,20 +66,18 @@ const PersonalPortfolioGallery = () => {
                             <div className="col-xl-3">
                                 <span className="px-section-subtitle pt-40 blink-ball">
 
-                                    Our Works
+                                    Project Showcase
                                 </span>
                             </div>
 
                             <div className="col-xl-9">
                                 <div className="px-project-title-box">
-                                    <h3 className="px-section-title text-effect">
-                                        <span>Our </span>
-                                        <span>Portfolio</span>
+                                    <h3 className="px-section-title text-tenor font-title-cls text-effect">
+                                        <span className="word">Featured  </span>
+                                        <span>Projects</span>
                                     </h3>
-                                    <p>
-                                        We&apos;ve helped businesses across industries achieve their goals.
-                                        <br />
-                                        Here are some of our recent projects.
+                                    <p className="text-figtree">
+                                        From startups to established brands, we've delivered successful website solutions that help businesses grow. Explore our recent web design and development projects.
                                     </p>
                                 </div>
                             </div>

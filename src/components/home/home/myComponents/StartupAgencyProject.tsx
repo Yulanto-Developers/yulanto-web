@@ -23,22 +23,19 @@ const StartupAgencyProject = () => {
 
                         <div className="col-xl-3">
                             <span className="px-section-subtitle pt-40 blink-ball text-tenor">
-                                Case Study
+                                Client Success Stories
                             </span>
                         </div>
 
                         <div className="col-xl-9">
                             <div className="px-project-title-box">
                                 <h3 className="px-section-title mb-25 text-effect">
-                                    <span>Recent </span>
-                                    <span>Case</span>
+                                    <span className="word">Recent </span>
+                                    <span>Case Studies </span>
                                 </h3>
 
                                 <p className="text-figtree font-paragraph-cls text-black">
-                                    We've helped businesses across industries achieve
-                                    their goals.
-                                    <br />
-                                    Here are some of our recent projects.
+                                    We partner with businesses across industries to deliver impactful digital solutions and measurable results. Discover our recent success stories.
                                 </p>
                             </div>
                         </div>
