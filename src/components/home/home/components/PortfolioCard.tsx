@@ -43,7 +43,11 @@ const PortfolioCard = ({
 
                     <div className="portfolio-image-description">
                         <div className="portfolio-hover-title px-35">
-                            <h2 className="text-white text-tenor font-title-cls">{title !== "Invest in Your Website" ? title : ""}</h2>
+                            {title !== "Invest in Your Website" && (
+                                <h2 className="text-white text-tenor font-title-cls">
+                                    {title}
+                                </h2>
+                            )}
                             <p className="text-figtree" style={{ fontSize: '17px', textAlign: 'justify' }}>{description}</p>
 
                             {/* OUR MANTRA */}
@@ -63,6 +67,7 @@ const PortfolioCard = ({
                                                     alignItems: "flex-start",
                                                     gap: "12px",
                                                     marginBottom: "12px",
+                                                    textAlign: 'left'
                                                 }}
                                                 className="text-figtree font-paragraph-cls"
                                             >
@@ -82,7 +87,7 @@ const PortfolioCard = ({
                                                 <span className="text-white fs-6"></span>
 
                                                 <span className="text-white text-figtree fs-6 d-flex align-items-start">
-                                                    <span className="text-nowrap">{item.key}</span>
+                                                    <span className="text-nowrap text-bold-cls">{item.key}</span>
                                                     <span className="mx-2">:</span>
                                                     <span>{item.text}</span>
                                                 </span>
@@ -220,18 +225,18 @@ const PortfolioCard = ({
                                             display: "grid",
                                             gridTemplateColumns: "repeat(2,1fr)",
                                             gap: "20px",
-                                            
+
                                         }}
                                     >
                                         {portFolio.slice(0, 2).map((item, index) => (
                                             <div
                                                 key={index}
                                                 style={{
-                                                    // background: "rgba(255,255,255,.10)",
-                                                    // border: "1px solid rgba(255,255,255,.15)",
-                                                    // borderRadius: "12px",
+                                                    background: "rgba(255,255,255,.10)",
+                                                    border: "1px solid rgba(255,255,255,.15)",
+                                                    borderRadius: "12px",
                                                     padding: "18px",
-                                                    // backdropFilter: "blur(5px)",
+                                                    backdropFilter: "blur(5px)",
                                                 }}
                                             >
                                                 <h4
@@ -274,7 +279,7 @@ const PortfolioCard = ({
                                     <div
                                         style={{
                                             background: "rgba(255,255,255,.08)",
-                                            borderLeft: "4px solid #f6b73c",
+                                            borderLeft: "4px solid #53AE7D",
                                             padding: "10px 20px",
                                             borderRadius: "10px",
                                             marginBottom: "10px",
@@ -304,7 +309,7 @@ const PortfolioCard = ({
                                     {/* Bottom Quote */}
                                     <div
                                         style={{
-                                            background: "#053456",
+                                            background: "#53AE7D",
                                             color: "#fff",
                                             borderRadius: "12px",
                                             padding: "10px",
@@ -328,7 +333,7 @@ const PortfolioCard = ({
                 <div className="px-portfolio-category portfolio-meta">
                     <span>{year}</span>
                 </div> */}
-                <div className="px-portfolio-content ">
+                <div className="px-portfolio-content portfolio-bottom-title">
                     <h2 className="px-portfolio-title">{title}</h2>
                 </div>
             </Link>

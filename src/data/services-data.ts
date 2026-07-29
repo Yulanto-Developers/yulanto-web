@@ -188,7 +188,7 @@ your audience.`,
         id: 13,
         title: "Digital Marketing",
         image: "/assets/img/project/d1.png",
-        description: "Grow your business online with our professional Digital Marketing Services in Chennai. We provide SEO, Google Ads, Social Media Marketing (SMM), Meta Ads to increase your website traffic, generate quality leads, and improve your online visibility.",
+        description: "Grow your business online with our professional Digital Marketing Services in Chennai. We provide SEO, Google Ads, Social Media Marketing (SMM), Meta Ads to increase your website traffic, generate quality leads, and improve online visibility.",
         subDesc: "we provide result-oriented Digital Marketing Services in Chennai to help businesses increase their online visibility, attract qualified leads, and achieve sustainable growth. As a trusted Digital Marketing Company in Chennai, we create customized marketing strategies tailored to your business goals and target audience.",
         categories: [
             "Digital Marketing",

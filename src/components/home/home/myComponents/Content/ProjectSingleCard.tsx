@@ -45,7 +45,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                                 <div className="project-hover-content">
 
                                     {description && (
-                                        <p className="text-figtree text-justify">{description}</p>
+                                        <p className="text-figtree ">{description}</p>
                                     )}
                                     {highlights && (
                                         <div className="project-highlights">
@@ -81,12 +81,12 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                                     key={index}
                                     className="project-category text-figtree"
                                 >
-                                    #{category}
+                                    {category}
                                 </span>
                             ))
                             : (
                                 <span className="project-category text-figtree">
-                                    #{categories}
+                                    {categories}
                                 </span>
                             )}
                     </div>

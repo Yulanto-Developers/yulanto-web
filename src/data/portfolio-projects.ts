@@ -22,7 +22,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         image: "/assets/img/sample/s4.webp",
         // image: "/assets/img/project/project-2.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
-        categories: ["WebDesign", "CorporateWebsite", "EngineeringWebsite", "ResponsiveDesign", "UIUXDesign"],
+        categories: ["WebDesign", "CorporateWebsite", "EngineeringWebsite", "ResponsiveDesign"],
         client: "Creative Market",
         role: "UI/UX Design",
         duration: "18 February 2026",
@@ -138,7 +138,6 @@ export const portfolioProjects: PortfolioProjectDT[] = [
                     "Generic templates with little or no customization.",
                     "Slow loading speed and poor performance.",
                     "Limited SEO optimization, making it difficult to rank on Google.",
-                    "Poor mobile responsiveness and user experience.",
                     "Weak security and limited technical support.",
                     "Difficult to scale as your business grows.",
                     "Lower conversion rates and reduced customer trust."
@@ -150,7 +149,6 @@ export const portfolioProjects: PortfolioProjectDT[] = [
                     "Custom, professional design tailored to your brand.",
                     "Fast, secure, and high-performance website.",
                     "SEO-friendly structure to improve search engine visibility.",
-                    "Fully responsive across desktops, tablets, and mobile devices.",
                     "Better user experience that increases engagement and conversions.",
                     "Scalable solutions that grow with your business.",
                     "Ongoing maintenance, support, and future enhancements."
