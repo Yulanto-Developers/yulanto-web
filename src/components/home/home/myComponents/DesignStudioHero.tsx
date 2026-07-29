@@ -508,7 +508,7 @@ const Hero = () => {
                                                                 filter: isActive
                                                                     ? "grayscale(100%) brightness(50%)"
                                                                     : "none",
-                                                                width: '80%', height: 'auto'
+                                                                width: 'auto', height: 'auto'
                                                             }}
 
                                                         />
