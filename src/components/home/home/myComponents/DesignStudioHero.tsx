@@ -387,7 +387,7 @@ import { StarIcon } from "@/svg/StarIcons";
 
 const heroContent = [
     {
-        col: "col-lg-2 he-10", img: "/assets/img/banner/web-img-1.jpg",
+        col: "col-lg-2 he-10", img: "/assets/img/banner/hero-img-1.webp",
         title: "We start by listening closely to your goals, ensuring you feel understood from day one.",
         subtitle: "Leading Web Design Company in Chennai for Business Growth.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
@@ -406,31 +406,31 @@ const heroContent = [
         head: "Design"
     },
     {
-        col: "col-lg-2 he-10", img: "/assets/img/banner/web-img-6.jpg",
+        col: "col-lg-2 he-10", img: "/assets/img/banner/hero-img-6.webp",
         title: "Every detail is noted and aligned with your vision, so nothing important is ever missed.", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.",
         spacingCls: "pl-10", alignCls: "justify-content-end",
         head: "Gather Requirements"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/y-3.webp",
+        col: "col-lg-3", img: "/assets/img/banner/hero-img-2.webp",
         title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.",
         spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Write the code"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/web-img-3.jpg",
+        col: "col-lg-3", img: "/assets/img/banner/hero-img-3.webp",
         title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Design the website"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/y-1.webp",
+        col: "col-lg-3", img: "/assets/img/banner/hero-img-4.webp",
         title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Custom Website creations company for Growing Businesses in Chennai",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Increase Sales"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/y-2.webp",
+        col: "col-lg-3", img: "/assets/img/banner/hero-img-5.webp",
         title: "Our commitment is to a long-term partnership that supports your business growth.", subtitle: "Elevate Your Business with Chennai's Best Web Design Company",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Continuous Success"
