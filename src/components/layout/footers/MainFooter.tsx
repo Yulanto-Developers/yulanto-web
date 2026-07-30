@@ -78,7 +78,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                     </ul>
                                 </div>
                             </div>
-                            <p className="text-figtree text-white" style={{ fontSize: '18px !important' }}>© 2026 Yulanto Web Creations. All Rights Reserved.</p>
+                            <p className="text-figtree text-white">© 2026 Yulanto Web Creations. All Rights Reserved.</p>
                         </div>
 
                         {/* Contact - Call Us */}

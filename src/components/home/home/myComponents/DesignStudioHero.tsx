@@ -464,7 +464,7 @@ const Hero = () => {
         if (!isHovered) {
             intervalRef.current = setInterval(() => {
                 setCurrent((prev) => (prev + 1) % ACTIVE_ITEMS.length);
-            }, 1000);
+            }, 6000);
         }
 
         return () => {

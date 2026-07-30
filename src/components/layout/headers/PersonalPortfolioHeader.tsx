@@ -114,7 +114,7 @@ const PersonalPortfolioHeader = () => {
                 </div>
               </div>
               <div className="col-4">
-                <div className="px-header-6-action d-flex justify-content-end align-items-center">
+                <div className="px-header-6-action d-flex  align-items-center">
                   <div className="px-header-6-info d-none d-xl-block">
                     <Link className="px-line-lr d-flex align-items-center gap-1" href="mailto:info@yulanto.com">
                       <FontAwesomeIcon icon={faEnvelope} className="icon-color" />
