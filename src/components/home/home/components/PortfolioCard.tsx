@@ -44,7 +44,7 @@ const PortfolioCard = ({
                     <div className="portfolio-image-description">
                         <div className="portfolio-hover-title px-35">
                             {title !== "Invest in Your Website" && (
-                                <h2 className="text-white text-tenor font-title-cls">
+                                <h2 className="text-white text-center text-tenor font-title-cls">
                                     {title}
                                 </h2>
                             )}
@@ -53,6 +53,7 @@ const PortfolioCard = ({
                             {/* OUR MANTRA */}
                             {title === "Our Success Mantra" && Array.isArray(portFolio) && (
                                 <ul style={{ listStyleType: "none", padding: 0 }}>
+                                    <span className="text-tenor text-white font-bold-cls text-start " style={{fontSize:'20px'}}>Benefits of Choosing Yulanto Web Creations</span>
                                     {portFolio.map((item, idx) => {
                                         const chosenIcon =
                                             typeof item.icon === "string"
@@ -148,72 +149,6 @@ const PortfolioCard = ({
                                 ))}
                             </div>
                         )}
-                        {/* WHY CHOOSE US */}
-                        {title === "Why Choose Us" && Array.isArray(portFolio) && (
-                            <div>
-                                {portFolio.map((item, index) => (
-                                    <div key={index}>
-                                        {/* Paragraph */}
-                                        <p
-                                            className="text-white mb-3 text-figtree"
-                                            style={{
-                                                fontSize: "16px",
-                                                lineHeight: "1.6",
-                                                textAlign: "left",
-                                            }}
-                                        >
-                                            {item.para}
-                                        </p>
-
-                                        {/* Cards */}
-                                        <div
-                                            style={{
-                                                display: "grid",
-                                                gridTemplateColumns: "repeat(2,1fr)",
-                                                gap: "12px",
-                                            }}
-                                        >
-                                            {item.cat?.map((cat: any, i: number) => (
-                                                <div
-                                                    key={i}
-                                                    style={{
-                                                        background: "rgba(255,255,255,.12)",
-                                                        backdropFilter: "blur(5px)",
-                                                        border: "1px solid rgba(255,255,255,.15)",
-                                                        borderRadius: "10px",
-                                                        padding: "12px",
-                                                    }}
-                                                >
-                                                    <h5
-                                                        style={{
-                                                            color: "#fff",
-                                                            fontSize: "18px",
-                                                            marginBottom: "8px",
-                                                            fontWeight: 600,
-                                                        }}
-                                                        className="text-tenor"
-                                                    >
-                                                        {cat.catTile}
-                                                    </h5>
-
-                                                    <p
-                                                        style={{
-                                                            color: "#fff",
-                                                            fontSize: "14px",
-                                                            margin: 0,
-                                                            lineHeight: "1.5",
-                                                        }}
-                                                        className="text-figtree text-start"
-                                                    >
-                                                        {cat.content}
-                                                    </p>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
 
                         {/* intative contents */}
                         {title === "Invest in Your Website" &&
@@ -231,13 +166,8 @@ const PortfolioCard = ({
                                         {portFolio.slice(0, 2).map((item, index) => (
                                             <div
                                                 key={index}
-                                                style={{
-                                                    background: "rgba(255,255,255,.10)",
-                                                    border: "1px solid rgba(255,255,255,.15)",
-                                                    borderRadius: "12px",
-                                                    padding: "18px",
-                                                    backdropFilter: "blur(5px)",
-                                                }}
+                                                className="box-grid"
+                                                
                                             >
                                                 <h4
                                                     className="text-tenor"
@@ -263,7 +193,7 @@ const PortfolioCard = ({
                                                             key={i}
                                                             style={{
                                                                 marginBottom: "10px",
-                                                                lineHeight: "1.6",
+                                                                lineHeight: "1.2",
                                                                 fontSize: "15px",
                                                             }}
                                                         >

@@ -14,7 +14,7 @@ interface footerPropsDt {
     copyrightClassName?: string;
 }
 
-const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyrightClassName = "" }) => {
+const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyrightClassName = "" }) => {
     return (
         <footer className="px-footer" style={{ backgroundColor: sectionBgClass }}>
             {/* Top Footer */}

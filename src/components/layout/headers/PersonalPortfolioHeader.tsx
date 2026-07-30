@@ -139,7 +139,7 @@ const PersonalPortfolioHeader = () => {
                       }}
                       className="px-header-bar tp-offcanvas-open-btn"
                     >
-                      <i className="fa-solid fa-comments chat-btn"></i>
+                      <i className="fa-solid fa-location-dot chat-btn"></i>
                     </button>
                   </div>
                 </div>

@@ -99,7 +99,7 @@ const StatCard: React.FC<StatCardProps> = ({
 
 const Testimonial = () => {
     return (
-        <section className="px-testimonial-area pt-120 pb-30" style={{ backgroundColor: '#F5F5F5', overflow: 'hidden' }}>
+        <section className="px-testimonial-area pt-120 pb-100" style={{ backgroundColor: '#F5F5F5', overflow: 'hidden' }}>
             <div className="container">
 
                 {/* Top Animated Header Row */}
@@ -148,7 +148,7 @@ const Testimonial = () => {
                             {/* Card 1: Trusted By */}
                             <StatCard
                                 className="text-tenor"
-                                borderColor="#198754"
+                                borderColor="#53AE7D"
                                 hoverBgColor="#e8f5e9"
                                 titleBeforeNumber="Trusted by "
                                 targetNumber={450}
@@ -164,7 +164,7 @@ const Testimonial = () => {
                             {/* Card 2: Active Clients */}
                             <StatCard
                                 className="text-tenor"
-                                borderColor="#0dcaf0"
+                                borderColor="#053456"
                                 hoverBgColor="#e0f7fa"
                                 targetNumber={350}
                                 titleAfterNumber=" +"
@@ -179,7 +179,7 @@ const Testimonial = () => {
                             {/* Card 3: Global Clients */}
                             <StatCard
                                 className="text-tenor"
-                                borderColor="#198754"
+                                borderColor="#53AE7D"
                                 hoverBgColor="#e8f5e9"
                                 targetNumber={50}
                                 titleAfterNumber=" +"

@@ -1134,6 +1134,10 @@
     animation: ball-blink 1.2s ease-in-out infinite;
 }
 
+.our-development.blink-ball::before {
+    background-color: #053456 !important;
+}
+
 /* The Blink Animation (Smooth Pulse) */
 @keyframes ball-blink {
 

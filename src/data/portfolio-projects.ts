@@ -159,7 +159,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
     {
         id: 7,
         title: "FAQ?",
-        image: "/assets/img/award/award/faq.jpg",
+        image: "/assets/img/award/award/why-choose-us.jpg",
         secImage: ['/assets/img/sample/s2.jpg'],
         // categories: ["Web Design", "Web Development"],
         year: 2026,

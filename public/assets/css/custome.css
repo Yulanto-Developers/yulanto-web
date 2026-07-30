@@ -13,8 +13,17 @@ p {
     white-space: nowrap;
 }
 
-.text-bold-cls{
+.px-200-cls {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.text-bold-cls {
     font-weight: bold;
+}
+
+.text-start {
+    text-align: left !important;
 }
 
 .menu-link {
@@ -609,6 +618,10 @@ p {
     font-size: 32px;
 }
 
+.font-bold-cls {
+    font-weight: bold;
+}
+
 .text-justify {
     text-align: justify;
 }
@@ -1182,54 +1195,77 @@ p {
 
 /* header button css statrs */
 .chat-btn {
+    position: relative;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(5, 52, 86, 0.7);
-    animation: chatShake 3s infinite;
-    transition: all 0.3s ease;
+    animation: chatBounce 2s infinite ease-in-out;
+    color: #53AE7D;
 }
 
-.chat-btn:hover {
-    transform: scale(1.08);
-    /* box-shadow: 0 0 25px rgba(5, 52, 86, 0.9); */
+/* Blue glow below the button */
+.chat-btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%) scaleX(0.5);
+    width: 60%;
+    height: 6px;
+    background: rgba(0, 123, 255, 0.8);
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0;
+    animation: groundGlow 2s infinite ease-in-out;
+    -webkit-filter: blur(2px);
 }
 
-@keyframes chatShake {
+@keyframes chatBounce {
 
     0%,
-    90%,
     100% {
-        transform: translateX(0) rotate(0deg);
+        transform: translateY(0);
     }
 
-    91% {
-        transform: translateX(-4px) rotate(-8deg);
+    20% {
+        transform: translateY(-20px);
     }
 
-    92% {
-        transform: translateX(4px) rotate(8deg);
+    40% {
+        transform: translateY(0);
     }
 
-    93% {
-        transform: translateX(-4px) rotate(-8deg);
+    55% {
+        transform: translateY(-8px);
     }
 
-    94% {
-        transform: translateX(4px) rotate(8deg);
+    70% {
+        transform: translateY(0);
     }
+}
 
-    95% {
-        transform: translateX(-2px) rotate(-4deg);
-    }
+@keyframes groundGlow {
 
-    96% {
-        transform: translateX(2px) rotate(4deg);
-    }
-
-    97%,
+    0%,
     100% {
-        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+        transform: translateX(-50%) scaleX(0.5);
+        -webkit-transform: translateX(-50%) scaleX(0.5);
+        -moz-transform: translateX(-50%) scaleX(0.5);
+        -ms-transform: translateX(-50%) scaleX(0.5);
+        -o-transform: translateX(-50%) scaleX(0.5);
+    }
+
+    20%,
+    55% {
+        opacity: 0;
+    }
+
+    /* Show glow when button touches the ground */
+    40%,
+    70% {
+        opacity: 1;
+        transform: translateX(-50%) scaleX(1.3);
     }
 }
 
@@ -1300,6 +1336,8 @@ p {
     -o-transform: translateX(7px);
 }
 
+
+
 /* Icon */
 .highlight-icon {
     width: 24px;
@@ -1317,7 +1355,7 @@ p {
 }
 
 
-.portfolio-fixed-title{
+.portfolio-fixed-title {
     position: absolute;
     left: 30px;
     bottom: 30px;
@@ -1326,6 +1364,32 @@ p {
 }
 
 /* Hide the fixed title once the overlay appears */
-.px-portfolio-item:hover .portfolio-fixed-title{
+.px-portfolio-item:hover .portfolio-fixed-title {
     opacity: 0;
+}
+
+
+.box-grid {
+    background: rgba(255, 255, 255, .10);
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 12px;
+    padding: 18px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.grid-section {
+    color: "#fff";
+    margin-bottom: "10px";
+    text-align: "center";
+}
+
+@media screen and (max-width:1300px) {
+    .box-grid {
+        padding: 10px;
+    }
+
+    .grid-section {
+        margin-bottom: "5px";
+    }
 }

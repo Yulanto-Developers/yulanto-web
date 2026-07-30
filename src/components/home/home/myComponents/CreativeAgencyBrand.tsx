@@ -66,7 +66,7 @@ const CreativeAgencyBrand = () => {
                                     spaceBetween: 40
                                 },
                                 1200: {
-                                    slidesPerView: 6,
+                                    slidesPerView: 4,
                                     spaceBetween: 40
                                 }
                             }}

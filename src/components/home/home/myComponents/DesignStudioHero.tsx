@@ -385,8 +385,11 @@ import { text_slider_params } from "@/constant";
 import { SLIDER_TEXTS } from "@/data/site-data";
 import { StarIcon } from "@/svg/StarIcons";
 
+
+
 const heroContent = [
     {
+        // 0
         col: "col-lg-2 he-10", img: "/assets/img/banner/hero-img-1.webp",
         title: "We start by listening closely to your goals, ensuring you feel understood from day one.",
         subtitle: "Leading Web Design Company in Chennai for Business Growth.",
@@ -394,42 +397,49 @@ const heroContent = [
         head: "Make an Enquiry"
     },
     {
+        //1
         col: "col-lg-4", img: "/assets/img/banner/bd.jpg",
         title: "We start by listening closely to your goals, ensuring you feel understood from the very beginning.", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pl-80", alignCls: "justify-content-start",
         head: "Boost"
     },
     {
+        // 2
         col: "col-lg-4", img: "/assets/img/banner/banner-1.jpg",
         title: " ", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Design"
     },
     {
+        //3
         col: "col-lg-2 he-10", img: "/assets/img/banner/hero-img-6.webp",
         title: "Every detail is noted and aligned with your vision, so nothing important is ever missed.", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.",
         spacingCls: "pl-10", alignCls: "justify-content-end",
-        head: "Gather Requirements"
+        head: "Increase Sales"
     },
     {
+        //4
         col: "col-lg-3", img: "/assets/img/banner/hero-img-2.webp",
         title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.",
         spacingCls: "pr-10", alignCls: "justify-content-end",
-        head: "Write the code"
+        head: "Gather Requirements"
     },
     {
+        //5
         col: "col-lg-3", img: "/assets/img/banner/hero-img-3.webp",
         title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.",
+        spacingCls: "pl-10", alignCls: "justify-content-start",
+        head: " Write the code"
+    },
+    {
+        //6
+        col: "col-lg-3", img: "/assets/img/banner/hero-img-4.webp",
+        title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Custom Website creations company for Growing Businesses in Chennai",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Design the website"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/hero-img-4.webp",
-        title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Custom Website creations company for Growing Businesses in Chennai",
-        spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Increase Sales"
-    },
-    {
+        //7
         col: "col-lg-3", img: "/assets/img/banner/hero-img-5.webp",
         title: "Our commitment is to a long-term partnership that supports your business growth.", subtitle: "Elevate Your Business with Chennai's Best Web Design Company",
         spacingCls: "pl-10", alignCls: "justify-content-start",
@@ -437,7 +447,12 @@ const heroContent = [
     },
 ];
 
-const ACTIVE_ITEMS = [0, 3, 4, 5, 6, 7];
+const ACTIVE_ITEMS = [0,
+    4,
+    5,
+    6,
+    7,
+    3,];
 
 const Hero = () => {
     const [current, setCurrent] = useState(0);
@@ -449,7 +464,7 @@ const Hero = () => {
         if (!isHovered) {
             intervalRef.current = setInterval(() => {
                 setCurrent((prev) => (prev + 1) % ACTIVE_ITEMS.length);
-            }, 6000);
+            }, 1000);
         }
 
         return () => {

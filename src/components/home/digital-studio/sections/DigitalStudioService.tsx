@@ -7,10 +7,10 @@ const DigitalStudioService = () => {
 
     return (
         <div
-            className="bf-service-area bf-service-3-rounded pt-30 pb-50"
+            className="bf-service-area bf-service-3-rounded pt-30 pb-50 "
             style={{ backgroundColor: "#053456" }}
         >
-            <div className="container container-1320">
+            <div className="container container-1320 ">
                 {/* <div
                     className="bf-service-heading mb-10 tp_fade_anim"
                     data-delay=".3"
@@ -22,7 +22,7 @@ const DigitalStudioService = () => {
                 <div className="row">
 
                     <div className="col-lg-12">
-                        <div className="bf-service-heading mb-60">
+                        <div className="bf-service-heading mb-60 px-200-cls">
                             <h3
                                 className="bf-section-title-3 text-white mb-20 tp_fade_anim"
                                 data-delay=".3"
