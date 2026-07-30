@@ -1200,7 +1200,7 @@ p {
     font-size: 22px;
     border-radius: 50%;
     animation: chatBounce 2s infinite ease-in-out;
-    color: #53AE7D;
+    color: #053456;
 }
 
 /* Blue glow below the button */
@@ -1212,7 +1212,7 @@ p {
     transform: translateX(-50%) scaleX(0.5);
     width: 60%;
     height: 6px;
-    background: rgba(0, 123, 255, 0.8);
+    background: #53ae7de1;
     border-radius: 50%;
     filter: blur(2px);
     opacity: 0;
@@ -1376,6 +1376,10 @@ p {
     z-index: 999;
     bottom: 0;
 } */
+
+ .px-footer-widget p{
+    font-size: 18px;
+ }
 
 .box-grid {
     background: rgba(255, 255, 255, .10);
