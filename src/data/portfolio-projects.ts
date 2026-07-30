@@ -78,14 +78,10 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         portFolio: [
             {
                 icon: 'faPalette', // Fits "Unique designs"
-                key: 'Custom Website Solutions',
-                text: "We create unique, business-focused website design in Chennai after conducting in-depth research on your industry, competitors, and target audience."
+                key: 'Custom Modern Website',
+                text: "We create unique, business-focused website design in Chennai after conducting in-depth research on your industry, competitors, and target audience. Our website Designers in Chennai are developed using the latest technologies, ensuring speed, security, and scalability."
             },
-            {
-                icon: 'faCode', // Fits "cutting-edge technologies / HTML5 & CSS3"
-                key: "Modern Web Technologies",
-                text: "Our website Designers in Chennai are developed using the latest technologies, ensuring speed, security, and scalability."
-            },
+            
             {
                 icon: 'faShieldHalved', // Fits "safety advantages / SSL certificate"
                 key: "Secure & Reliable Websites",

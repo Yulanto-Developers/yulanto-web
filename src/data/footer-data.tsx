@@ -1,10 +1,21 @@
 import { DribbleIcon, FacebookIcon, InstragramIconTwo, TwittorIcon } from "@/svg/SocialIcons";
 
 export const socialLinks = [
-  { icon: <FacebookIcon />, href: "#" },
-  { icon: <TwittorIcon />, href: "#" },
-  // { icon: <DribbleIcon />, href: "#" },
-  { icon: <InstragramIconTwo />, href: "#" },
+  {
+    icon: <FacebookIcon />,
+    label: "Facebook",
+    href: "#",
+  },
+  {
+    icon: <TwittorIcon />,
+    label: "Twitter",
+    href: "#",
+  },
+  {
+    icon: <InstragramIconTwo />,
+    label: "Instagram",
+    href: "#",
+  },
 ];
 
 export const quickLinks = [

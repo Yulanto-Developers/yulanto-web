@@ -1368,6 +1368,14 @@ p {
     opacity: 0;
 }
 
+/* .postion-abs-cls{
+    position: relative;
+}
+.postion-abs{
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+} */
 
 .box-grid {
     background: rgba(255, 255, 255, .10);
@@ -1393,3 +1401,8 @@ p {
         margin-bottom: "5px";
     }
 }
+
+
+
+
+
