@@ -8,11 +8,11 @@ const Service = () => {
 		>
 			<div className="footer-shape-bg">
 				<ShapeGrid
-					shape="hexagon"
+					shape="square"
 					direction="diagonal"
 					speed={0.25}
 					squareSize={28}
-					borderColor="rgba(255,255,255,0.08)"
+					borderColor="rgba(255,255,255,0.15)"
 					hoverFillColor="rgba(255,255,255,0.15)"
 					hoverTrailAmount={0}
 				/>
