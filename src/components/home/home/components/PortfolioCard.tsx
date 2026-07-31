@@ -80,7 +80,7 @@ const PortfolioCard = ({
                                                             height: "20px",
                                                             marginTop: "3px",
                                                             flexShrink: 0,
-                                                            color: "#053456",
+                                                            color: "#53AE7D",
                                                         }}
                                                     />
                                                 )}
