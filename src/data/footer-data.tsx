@@ -21,7 +21,7 @@ export const socialLinks = [
 export const quickLinks = [
   { label: "Payment & Refund Policy", href: "#" },
   { label: "Privacy Policy", href: "#" },
-  { label: "Terms & Conditionss", href: "#" },
+  { label: "Terms & Conditions", href: "#" },
   { label: "License & Copyright", href: "#" },
 
 ];

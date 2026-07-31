@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import Dock from "@/components/layout/footers/Dock";
+import ShapeGrid from "@/components/home/home/myComponents/common/ShapeGrid";
 
 interface footerPropsDt {
     sectionBgClass?: string;
@@ -26,14 +27,27 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
     }));
 
     return (
-        <footer className="px-footer d-flex flex-column align-items-center" style={{ backgroundColor: sectionBgClass }}>
+        <footer className="px-footer footer-wrapper d-flex  flex-column align-items-center"
+            style={{ backgroundColor: sectionBgClass }}>
+            {/* hexognal shape  movidng slide */}
+            <div className="footer-shape-bg">
+                <ShapeGrid
+                    shape="hexagon"
+                    direction="diagonal"
+                    speed={0.25}
+                    squareSize={28}
+                    borderColor="rgba(255,255,255,0.08)"
+                    hoverFillColor="rgba(255,255,255,0.15)"
+                    hoverTrailAmount={0}
+                />
+            </div>
             {/* Top Footer */}
             <div className="px-footer-area pt-50">
                 <div className="container container-1550">
                     <div className="row align-items-start">
 
                         {/* About */}
-                        <div className="col-xl-4 col-lg-4">
+                        <div className="col-xl-3 col-lg-4">
                             <div
                                 className="px-footer-widget px-footer-col-1 pb-40 px-fade-anim"
                                 data-delay=".3"
@@ -82,25 +96,38 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                         </div>
 
                         {/* Contact - Call Us */}
-                        <div className="col-xl-2 col-lg-4 col-md-6">
+                        <div className="col-xl-3 col-lg-4 col-md-6">
                             <div
-                                className="px-footer-widget px-footer-col-3 pb-40 mb-30 px-fade-anim"
+                                className="px-footer-widget px-footer-col-3 px-fade-anim"
                                 data-delay=".7"
                             >
                                 <h4 className="px-footer-widget-title-sm pre mb-20">
                                     Call Us
                                 </h4>
                                 <div className="px-footer-widget-info">
-                                    <Link href="mailto:info@yulanto.com">
+                                    <Link href="mailto:info@yulanto.com" className="fw-bold font-size-18">
                                         <FontAwesomeIcon icon={faEnvelope} className="me-2" />
                                         info@yulanto.com
                                     </Link>
 
-                                    <Link href="tel:+919962157250" className="mt-2 d-inline-block">
+                                    <Link href="tel:+919962157250" className="mt-2 fw-bold d-inline-block font-size-18">
                                         <FontAwesomeIcon icon={faPhone} className="me-2" />
                                         +91 99621 57250
                                     </Link>
                                 </div>
+                            </div>
+                            <div>
+                                <h4 className="px-footer-widget-title-sm pre mb-20">
+                                    Follow Us
+                                </h4>
+                                {/* Apple macOS Dock Component */}
+                                <Dock
+                                    items={dockItems}
+                                    panelHeight={52}
+                                    baseItemSize={38}
+                                    magnification={54}
+                                    distance={120}
+                                />
                             </div>
                         </div>
 
@@ -119,7 +146,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                         target="_blank" className="d-flex align-items-start"
                                     >
                                         <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2 mt-1" />
-                                        <span>
+                                        <span className="font-size-18">
                                             F3, #4/608, First Floor,<br />
                                             V.O.C Street, Kottivakkam, OMR,<br />
                                             Chennai - 600 041, India
@@ -127,21 +154,14 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                     </Link>
                                 </div>
 
-                                {/* Apple macOS Dock Component */}
-                                <Dock
-                                    items={dockItems}
-                                    panelHeight={52}
-                                    baseItemSize={38}
-                                    magnification={54}
-                                    distance={120}
-                                />
+
                             </div>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <div>
+            <div className="position-abs">
                 <span className="text-tenor text-white">© 2026 Yulanto Web Creations. All Rights Reserved.</span>
             </div>
             {/* Copyright */}

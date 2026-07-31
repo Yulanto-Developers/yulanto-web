@@ -61,7 +61,7 @@
     &-widget {
         &-title {
             font-weight: 700;
-            font-size: 24px;
+            font-size: 20px;
             line-height: 1.5;
             margin-bottom: 30px;
             letter-spacing: -0.06em;
@@ -73,7 +73,7 @@
             }
 
             @media #{$xl} {
-                font-size: 24px;
+                font-size: 20px;
             }
 
             @media #{$md} {
@@ -90,7 +90,7 @@
 
             &-sm {
                 font-weight: 600;
-                font-size: 18px;
+                font-size: 24px;
                 line-height: 1;
                 letter-spacing: -0.02em;
                 color: var(--tp-common-px-white);
@@ -152,18 +152,40 @@
                         line-height: 1;
                         border-radius: 20px;
                         padding: 10px 20px;
-                        
-                        // display: inline-block;
+                        //display: inline-block;
+                        width: fit-content;
                         margin-bottom: 8px;
                         letter-spacing: -0.02em;
                         text-transform: capitalize;
                         color: var(--tp-common-px-white);
                         font-family: var(--font-figtree);
-                        // backgr/ound-color: rgba($color: #fff, $alpha: 0.1);
+                        position: relative;
+                        display: inline-block;
+                        transition: color 0.3s ease;
+                        -webkit-transition: color 0.3s ease;
+                        -moz-transition: color 0.3s ease;
+                        -ms-transition: color 0.3s ease;
+                        -o-transition: color 0.3s ease;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 20px;
+                            bottom: 4px;
+                            width: calc(100% - 17%);
+                            height: 1px;
+                            background-color: var(--tp-common-px-white);
+                            transform: scaleX(0);
+                            transform-origin: left;
+                            transition: transform 0.35s ease;
+                        }
 
                         &:hover {
                             color: var(--tp-common-px-white);
-                            background-color: #53AE7D;
+
+                            &::after {
+                                transform: scaleX(1);
+                            }
                         }
                     }
                 }

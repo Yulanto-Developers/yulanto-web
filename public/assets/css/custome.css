@@ -1377,6 +1377,48 @@ p {
     bottom: 0;
 } */
 
+/* footer starts */
+.footer-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-shape-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.footer-wrapper>*:not(.footer-shape-bg) {
+    position: relative;
+    z-index: 2;
+}
+
+/* .footer-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 3, 5, 0.432);
+    z-index: 1;
+} */
+
+
+/* fooer ends */
+
+/* .postion-relative{
+    position: relative;
+} */
+
+.font-size-18 {
+    font-size: 18px !important;
+}
+
+.position-abs {
+    position: absolute !important;
+    top: 65%;
+}
+
 .px-footer-widget p {
     font-size: 18px;
 }
@@ -1404,6 +1446,6 @@ p {
 
     .grid-section {
         margin-bottom: "5px";
-        
+
     }
 }

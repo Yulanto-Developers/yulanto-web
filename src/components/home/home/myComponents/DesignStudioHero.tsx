@@ -474,6 +474,11 @@ const Hero = () => {
         };
     }, [isHovered]);
 
+    function getQuotes() {
+        console.log('clickeds and give quotes');
+
+    }
+
     return (
         <div className="px-hero-2-area pt-120 bg-white">
             <div className="px-hero-2-main d-none d-xl-block p-relative">
@@ -598,9 +603,9 @@ const Hero = () => {
                         })}
 
                         <div className="text-center btn-partent">
-                            <Link href="/" className="button-style relative-cls-header">
+                            <button onClick={getQuotes} className="button-style relative-cls-header">
                                 <span className="text-tenor">Get a Free Quote</span>
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </div>

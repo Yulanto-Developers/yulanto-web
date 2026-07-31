@@ -116,7 +116,7 @@ your audience.`,
     {
         id: 9,
         title: "Web Design",
-        image: "/assets/img/project/d1.png",
+        image: "/assets/img/project/img-1.jpg",
         description: "Create a powerful online presence with our professional web design services in Chennai. We design responsive, SEO-friendly, and user-focused websites that help businesses attract more customers and grow online.",
         subDesc: "As a trusted web design company in Chennai, we combine creativity, user experience (UX), and the latest web technologies to create websites that are visually appealing, mobile-friendly, fast-loading, and optimized for search engines. Every website we build is designed to deliver an exceptional user experience while increasing engagement, leads, and conversions.",
         categories: [
@@ -134,7 +134,7 @@ your audience.`,
     {
         id: 10,
         title: "Web Development",
-        image: "/assets/img/project/d1.png",
+        image: "/assets/img/project/img-2.jpg",
         description: "As experienced web developers in Chennai, we build fast, secure, and scalable websites with custom web development solutions and responsive web applications tailored to achieve your business goals.",
         subDesc: "At Yulanto Web Creations, we provide reliable and result-driven web development services in Chennai to help businesses establish a strong online presence. As an experienced Web Development Company in Chennai, we develop responsive, secure, and high-performance websites tailored to your business requirements.",
         categories: [
