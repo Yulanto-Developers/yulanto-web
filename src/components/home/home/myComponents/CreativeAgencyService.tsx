@@ -1,11 +1,22 @@
 import { services } from "@/data/site-data";
-
+import ShapeGrid from "./common/ShapeGrid";
 const Service = () => {
 	return (
 		<div
 			className="px-service-area px-service-3-style pt-120 pb-50 z-index-1"
 			style={{ backgroundColor: "#53AE7D" }}
 		>
+			<div className="footer-shape-bg">
+				<ShapeGrid
+					shape="hexagon"
+					direction="diagonal"
+					speed={0.25}
+					squareSize={28}
+					borderColor="rgba(255,255,255,0.08)"
+					hoverFillColor="rgba(255,255,255,0.15)"
+					hoverTrailAmount={0}
+				/>
+			</div>
 			<div className="container container-1750">
 				{/* Title */}
 				<div className="row">

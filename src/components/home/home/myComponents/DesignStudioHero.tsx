@@ -475,7 +475,7 @@ const Hero = () => {
     }, [isHovered]);
 
     function getQuotes() {
-        console.log('clickeds and give quotes');
+       alert('Quotes Request')
 
     }
 
