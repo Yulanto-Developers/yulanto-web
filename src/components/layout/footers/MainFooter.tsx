@@ -57,6 +57,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                     <h4 className="px-footer-widget-title mt-3">
                                         We create professional websites that help businesses build a strong online presence, generate leads, and grow digitally.
                                     </h4>
+                                    <h4 className=" text-design">Design. Develop. Grow.</h4>
                                 </div>
                                 <div className="px-footer-widget-social mt-3">
                                     <a
@@ -148,8 +149,8 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                         <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2 mt-1" />
                                         <span className="font-size-18">
                                             F3, #4/608, First Floor,<br />
-                                            V.O.C Street, Kottivakkam, OMR,<br />
-                                            Chennai - 600 041, India
+                                            V.O.C Street, Kottivakkam,<br /> OMR,
+                                            Chennai - 600 041,<br /> Tamilnadu, India
                                         </span>
                                     </Link>
                                 </div>
@@ -162,7 +163,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                 </div>
             </div>
             <div className="position-abs">
-                <span className="text-tenor text-white">© 2026 Yulanto Web Creations. All Rights Reserved.</span>
+                <span className="text-tenor text-white" style={{fontSize:'18px'}}>© 2026 Yulanto Web Creations. All Rights Reserved.</span>
             </div>
             {/* Copyright */}
             <div className={`px-copyright-area ${copyrightClassName}`}>

@@ -8,8 +8,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const brandLogosDark = [
-    "/assets/img/brand/brand-1-1.png",
-    "/assets/img/brand/brand-1-2.png",
+    "/assets/img/brand/Logo-1.jpg",
+    "/assets/img/brand/Logo-1.png",
     "/assets/img/brand/brand-1-3.png",
     "/assets/img/brand/brand-1-4.png",
     "/assets/img/brand/brand-1-5.png",
@@ -19,8 +19,8 @@ const brandLogosDark = [
     "/assets/img/brand/brand-1-6.png",
 ];
 const brandLogosWhite = [
-    "/assets/img/brand/brand-white/brand-1.png",
-    "/assets/img/brand/brand-white/brand-2.png",
+    "/assets/img/brand/image-1.jpg",
+    "/assets/img/brand/brand-white/image-1.png",
     "/assets/img/brand/brand-white/brand-3.png",
     "/assets/img/brand/brand-white/brand-4.png",
     "/assets/img/brand/brand-white/brand-5.png",
@@ -44,7 +44,7 @@ const CreativeAgencyBrand = () => {
                             loop={true}
                             speed={1000}
                             autoplay={{
-                                delay: 2500,
+                                delay: 250000,
                                 disableOnInteraction: false,
                             }}
                             // Breakpoints match your original bootstrap layout grid flawlessly
