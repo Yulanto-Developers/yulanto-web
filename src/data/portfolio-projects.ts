@@ -94,7 +94,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
             },
             {
                 icon: 'faWrench', // Fits "Web maintenance and support services"
-                key: "Ongoing Website Maintenance & Support",
+                key: "Ongoing Website Maintenance",
                 text: "We provide continuous website maintenance, updates, backups, security monitoring, and technical support to keep your website running smoothly."
             },
             {

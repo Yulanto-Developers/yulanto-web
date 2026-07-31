@@ -26,9 +26,9 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
     }));
 
     return (
-        <footer className="px-footer" style={{ backgroundColor: sectionBgClass }}>
+        <footer className="px-footer d-flex flex-column align-items-center" style={{ backgroundColor: sectionBgClass }}>
             {/* Top Footer */}
-            <div className="px-footer-area pt-85">
+            <div className="px-footer-area pt-50">
                 <div className="container container-1550">
                     <div className="row align-items-start">
 
@@ -78,7 +78,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                     </ul>
                                 </div>
                             </div>
-                            <p className="text-figtree text-white">© 2026 Yulanto Web Creations. All Rights Reserved.</p>
+
                         </div>
 
                         {/* Contact - Call Us */}
@@ -141,9 +141,9 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                     </div>
                 </div>
             </div>
-            {/* <div>
-                                        
-                                    </div> */}
+            <div>
+                <span className="text-tenor text-white">© 2026 Yulanto Web Creations. All Rights Reserved.</span>
+            </div>
             {/* Copyright */}
             <div className={`px-copyright-area ${copyrightClassName}`}>
                 <div className="container container-1550">
