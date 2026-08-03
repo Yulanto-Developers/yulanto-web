@@ -1279,7 +1279,7 @@ p {
 
 /* Container */
 .project-highlights {
-    margin-top: 18px;
+    margin-top: 10px;
     padding: 18px;
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.08);
@@ -1394,6 +1394,284 @@ p {
     position: relative;
     z-index: 2;
 }
+
+/* pop up css starts */
+/* Overlay */
+/* Backdrop Overlay */
+.quote-modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(6px);
+    z-index: 999999;
+    padding: 20px;
+    animation: fadeIn 0.25s ease-out;
+}
+
+/* Modal Wrapper Container */
+.quote-modal-container {
+    display: flex;
+    width: 880px;
+    max-width: 100%;
+    max-height: 90vh;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: popup 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+/* Left Form Container */
+.quote-modal-left {
+    flex: 1.2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+}
+
+.form-header .subheading {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+/* Right Blue Container */
+.quote-modal-right {
+    flex: 1;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    padding: 40px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Background Ring for Blue Panel */
+.quote-modal-right::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.blue-section-content {
+    position: relative;
+    z-index: 1;
+}
+
+.blue-section-content .badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.blue-section-content h2 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.blue-section-content p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+}
+
+/* Floating Input Modern Styling */
+.floating-input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.floating-input input,
+.floating-input textarea {
+    width: 100%;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 16px 6px;
+    font-size: 15px;
+    outline: none;
+    background: #f8fafc;
+    color: #0f172a;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.floating-input textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.floating-input label {
+    position: absolute;
+    left: 16px;
+    top: 15px;
+    color: #94a3b8;
+    font-size: 15px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+/* Input Focus & Placeholder States */
+.floating-input input:focus,
+.floating-input textarea:focus {
+    border-color: #3b82f6;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.floating-input input:focus+label,
+.floating-input input:not(:placeholder-shown)+label,
+.floating-input textarea:focus+label,
+.floating-input textarea:not(:placeholder-shown)+label {
+    top: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #3b82f6;
+}
+
+/* Rest Form Reveal Smoothness */
+.quote-rest-form {
+    animation: fadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.welcome-text {
+    margin: 10px 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.welcome-text span {
+    color: #3b82f6;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    height: 48px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.submit-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+/* Animations */
+@keyframes popup {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .quote-modal-container {
+        flex-direction: column;
+        max-height: 85vh;
+    }
+
+    .quote-modal-right {
+        order: -1;
+        padding: 30px 24px;
+        min-height: 160px;
+    }
+
+    .quote-modal-left {
+        padding: 24px;
+    }
+}
+
+/* pop up css ends */
 
 /* .footer-wrapper::before {
     content: "";

@@ -4,22 +4,28 @@ export const portfolioProjects: PortfolioProjectDT[] = [
     //startup agency portfolio project data start
     {
         id: 1,
-        title: "Naturographer",
+        title: "Naturographers",
         year: 2026,
-        image: "/assets/img/sample/image-2.jpg",
+        image: "/assets/img/sample/Naturographers.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
-        categories: ["Php", "Mysql", "Bootstrap", "Javascript"],
+        categories: ["Wildlife Photography Website", "Safari Tour Website", "Travel Website Development", "Nature Photography", "Responsive Web Design"],
         client: "Envato",
         role: "Branding",
         duration: "8 March 2026",
         designer: "ThemePure",
-        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
+        highlights: [
+            "Modern website showcasing wildlife tours, safari expeditions, and photography workshops.",
+            "Interactive tour packages with online enquiry and booking features.",
+            "Stunning wildlife galleries with responsive, mobile-friendly user experience.",
+            "SEO-optimized website designed to increase visibility, engagement, and lead generation."
+        ],
+        description: 'Designed and developed a modern wildlife photography and travel website for Naturographers, showcasing wildlife tours, photography workshops, safari expeditions, and nature travel experiences. The website is optimized for search visibility, user engagement, and tour booking enquiries.'
     },
     {
         id: 2,
         title: "CORE Energy Systems Limited",
         year: 2026,
-        image: "/assets/img/sample/image-1.jpg",
+        image: "/assets/img/sample/core.jpg",
         // image: "/assets/img/project/project-2.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
         categories: ["WebDesign", "CorporateWebsite", "EngineeringWebsite", "ResponsiveDesign"],
@@ -37,34 +43,65 @@ export const portfolioProjects: PortfolioProjectDT[] = [
     },
     {
         id: 3,
-        title: "360 Abroad",
-        year: 2026,
-        image: "/assets/img/sample/s4.webp",
+        title: "Harithams Group of Companies",
+        year: 2025,
+        image: "/assets/img/sample/Harithams.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
-        categories: ["Website", "Services"],
+        categories: ["Real Estate Website Design", 'Corporate Website Development', 'Construction Company Website', 'Responsive Web Design', "UI/UX Design"],
+        highlights: [
+            "Unified website for Harithams Infra and Harithams Constructions.",
+            "Interactive portfolio of residential and infrastructure projects.",
+            "Trust-focused design with RERA and industry affiliations.",
+            "Responsive, SEO-friendly website with enquiry-driven features.",
+        ],
         client: "Behance",
         role: "Web Development",
         duration: "22 January 2026",
         designer: "ThemePure",
-        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
+        description: 'Designed and developed a professional corporate real estate website for Harithams Group of Companies, showcasing their expertise in real estate development, construction, and infrastructure across Chennai. The website is optimized for user experience, search visibility, and lead generation.'
     },
     {
         id: 4,
-        title: "Times One Hundred",
+        title: "Preserve Metals",
         year: 2026,
-        image: "/assets/img/sample/s4.webp",
+        image: "/assets/img/sample/Preserve-Metals.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
-        categories: ["Website", "Services"],
+        categories: ["Industrial Website Design", 'Metal Recycling Website', 'B2B Website Development', 'Scrap Metal Recycling', "Responsive Web Design"],
         client: "Dribbble",
         role: "Brand Identity",
         duration: "3 January 2026",
         designer: "ThemePure",
-        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
+        highlights: [
+            "Professional website for industrial scrap recycling and metal refining.",
+            "Dedicated RFQ system for qualified business enquiries.",
+            "Technical service pages with certifications and compliance details.",
+            "Responsive, SEO-friendly website with conversion-focused design."
+        ],
+        description: 'Designed and developed a professional industrial corporate website for Preserve Metals, showcasing expertise in scrap metal recycling, metal refining, and industrial processing. The website is optimized for user experience, search visibility, and B2B lead generation.'
+    },
+    {
+        id: 5,
+        title: "Raunaq Steels Pvt. Ltd.",
+        year: 2025,
+        image: "/assets/img/sample/Raunaq-Steels.jpg",
+        secImage: ['/assets/img/sample/s3.webp'],
+        categories: ["Steel Trading Website", 'Industrial Website Design', 'B2B Website Development', 'Steel Products Website', "Responsive Web Design"],
+        client: "Dribbble",
+        role: "Brand Identity",
+        duration: "3 January 2026",
+        designer: "ThemePure",
+        highlights: [
+            "Modern website showcasing steel products, industrial solutions, and processing services.",
+            "Structured product catalog with detailed specifications and technical information.",
+            "Responsive, SEO-optimized design focused on B2B enquiries and customer engagement.",
+            "Trust-focused interface highlighting quality standards, infrastructure, and company expertise."
+        ],
+        description: 'Designed and developed a modern steel trading and industrial website for Raunaq Steels Trading Pvt. Ltd., showcasing its extensive range of steel products, processing capabilities, and industry expertise. The website is optimized for search visibility, customer engagement, and B2B business enquiries.'
     },
     //startup agency portfolio project data end
     //design studio portfolio data start
     {
-        id: 5,
+        id: 6,
         title: "Our Success Mantra",
         image: "/assets/img/award/award/mantra.jpg",
         secImage: [],
@@ -81,7 +118,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
                 key: 'Custom Modern Website',
                 text: "We create unique, business-focused website design in Chennai after conducting in-depth research on your industry, competitors, and target audience. Our website Designers in Chennai are developed using the latest technologies, ensuring speed, security, and scalability."
             },
-            
+
             {
                 icon: 'faShieldHalved', // Fits "safety advantages / SSL certificate"
                 key: "Secure & Reliable Websites",
@@ -105,7 +142,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         ]
     },
     {
-        id: 6,
+        id: 7,
         title: "Invest in Your Website",
         image: "/assets/img/award/award/faq.jpg",
         secImage: ["/assets/img/sample/s2.jpg"],
@@ -153,7 +190,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         ]
     },
     {
-        id: 7,
+        id: 8,
         title: "FAQ?",
         image: "/assets/img/award/award/why-choose-us.jpg",
         secImage: ['/assets/img/sample/s2.jpg'],
@@ -195,7 +232,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         ]
     },
     {
-        id: 8,
+        id: 9,
         title: "Why Choose Us",
         image: "/assets/img/award/award/why-choose-us.jpg",
         secImage: ['/assets/img/sample/s2.jpg'],

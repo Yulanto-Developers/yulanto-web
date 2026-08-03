@@ -384,7 +384,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { text_slider_params } from "@/constant";
 import { SLIDER_TEXTS } from "@/data/site-data";
 import { StarIcon } from "@/svg/StarIcons";
-
+import { useQuoteModal } from "./Content/QuoteContext";
 
 
 const heroContent = [
@@ -460,6 +460,11 @@ const Hero = () => {
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
     const activeIndex = ACTIVE_ITEMS[current];
 
+    // function getQuotes() {
+    //     setShowModal(true);
+    // }
+    const { openModal } = useQuoteModal();
+
     useEffect(() => {
         if (!isHovered) {
             intervalRef.current = setInterval(() => {
@@ -474,10 +479,7 @@ const Hero = () => {
         };
     }, [isHovered]);
 
-    function getQuotes() {
-       alert('Quotes Request')
 
-    }
 
     return (
         <div className="px-hero-2-area pt-120 bg-white">
@@ -603,13 +605,20 @@ const Hero = () => {
                         })}
 
                         <div className="text-center btn-partent">
-                            <button onClick={getQuotes} className="button-style relative-cls-header">
-                                <span className="text-tenor">Get a Free Quote</span>
+                            <button
+                                onClick={openModal}
+                                className="button-style relative-cls-header"
+                            >
+                                <span className="text-tenor">
+                                    Get a Free Quote
+                                </span>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
+
+
 
             <div className="px-hero-2-slider d-xl-none">
                 <div className="container">
@@ -640,6 +649,9 @@ const Hero = () => {
                     </Swiper>
                 </div>
             </div>
+
+
+
         </div>
     );
 };
