@@ -28,7 +28,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         image: "/assets/img/sample/core.jpg",
         // image: "/assets/img/project/project-2.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
-        categories: ["WebDesign", "CorporateWebsite", "EngineeringWebsite", "ResponsiveDesign"],
+        categories: ["Web Design", "Corporate Website", "Engineering Website", "Responsive Design"],
         client: "Creative Market",
         role: "UI/UX Design",
         duration: "18 February 2026",

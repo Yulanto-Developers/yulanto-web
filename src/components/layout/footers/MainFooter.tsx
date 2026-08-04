@@ -12,6 +12,8 @@ import {
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import Dock from "@/components/layout/footers/Dock";
 import ShapeGrid from "@/components/home/home/myComponents/common/ShapeGrid";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 interface footerPropsDt {
     sectionBgClass?: string;
@@ -86,8 +88,16 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                 <div className="px-footer-widget-menu">
                                     <ul>
                                         {quickLinks.map((item, index) => (
-                                            <li style={{ marginRight: "5px" }} key={`${item.label}-${index}`}>
-                                                <Link href={item.href}>{item.label}</Link>
+                                            <li key={`${item.label}-${index}`}>
+                                                <Link href={item.href}>
+                                                    <span className="d-flex align-items-center">
+                                                        <FontAwesomeIcon
+                                                            icon={faAnglesRight}
+                                                            className="text-white"
+                                                        />
+                                                        {item.label}
+                                                    </span>
+                                                </Link>
                                             </li>
                                         ))}
                                     </ul>
@@ -154,6 +164,19 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                         </span>
                                     </Link>
                                 </div>
+                                <div className="px-footer-widget-info">
+                                    <Link
+                                        href="https://www.google.com/maps/dir/?api=1&destination=12.9724698,80.2510529"
+                                        target="_blank"
+                                        className="map-btn"
+                                    >
+                                        <span className="icon">
+                                            <i className="fa-solid fa-location-arrow"></i>
+                                        </span>
+
+                                        <span className="text">Get Direction</span>
+                                    </Link>
+                                </div>
 
 
                             </div>
@@ -163,7 +186,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                 </div>
             </div>
             <div className="position-abs">
-                <span className="text-tenor text-white" style={{fontSize:'18px'}}>© 2026 Yulanto Web Creations. All Rights Reserved.</span>
+                <span className="text-tenor text-white" style={{ fontSize: '18px' }}>© 2026 Yulanto Web Creations. All Rights Reserved.</span>
             </div>
             {/* Copyright */}
             <div className={`px-copyright-area ${copyrightClassName}`}>
@@ -172,7 +195,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                         <div className="col-xl-12">
                             <div className="px-copyright-content text-center">
                                 <h2 className="px-copyright-big-text">
-                                    Unique by Imagization
+                                    Unique by Imagination
                                 </h2>
                             </div>
                         </div>

@@ -13,34 +13,22 @@ type GalleryItemType = {
 // Data with type
 const galleryOne: GalleryItemType[] = [
     { type: "image", src: "/assets/img/sample/gallery/img- (1).jpg" },
-    { type: "image", src: "/assets/img/sample/galleryimg- (2).jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (2).jpg" },
+    { type: "video", src: "/assets/img/videos/video-1.mp4" },
     { type: "image", src: "/assets/img/sample/gallery/img- (3).jpg" },
     { type: "image", src: "/assets/img/sample/gallery/img- (4).jpg" },
     { type: "image", src: "/assets/img/sample/gallery/img- (5).jpg" },
-    // { type: "image", src: "/assets/img/sample/gallery/img- (1).jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
-    // { type: "image", src: "/assets/img/sample/gallery/img- (6).jpg" },
-    // { type: "image", src: "/assets/img/sample/gallery/img- (7).jpg" },
-    // { type: "image", src: "/assets/img/sample/gallery/img- (8).jpg" },
-    // { type: "image", src: "/assets/img/sample/gallery/img- (9).jpg" },
-    // { type: "image", src: "/assets/img/sample/gallery/img- (10).jpg" },
-    // { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
+    // { type: "video", src: "/assets/img/videos/video-2.mp4" },
 ];
 
 const galleryTwo: GalleryItemType[] = [
-    // { type: "image", src: "/assets/img/sample/gallery/img- (1).jpg" },
-    // { type: "image", src: "/assets/img/sample/gallery/img- (2).jpg" },
-    // { type: "image", src: "/assets/img/sample/gallery/img- (3).jpg" },
-    // { type: "image", src: "/assets/img/sample/gallery/img- (4).jpg" },
-    // { type: "image", src: "/assets/img/sample/gallery/img- (5).jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
     { type: "image", src: "/assets/img/sample/gallery/img- (6).jpg" },
     { type: "image", src: "/assets/img/sample/gallery/img- (7).jpg" },
+    // { type: "video", src: "/assets/img/videos/video-1.mp4" },
     { type: "image", src: "/assets/img/sample/gallery/img- (8).jpg" },
     { type: "image", src: "/assets/img/sample/gallery/img- (9).jpg" },
     { type: "image", src: "/assets/img/sample/gallery/img- (10).jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
+    { type: "video", src: "/assets/img/videos/video-2.mp4" },
 ];
 
 // Props type

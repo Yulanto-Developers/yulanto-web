@@ -125,8 +125,8 @@ const StartupAgencyAbout = () => {
 
 
                             <h4 className="px-about-title mb-55">
-                                <span className='text-blue-about'>We are a professional design agency  </span> specializing in <br />
-                                <Link href={'/website'}>website design</Link> ,<Link href={'/development'}>web development</Link> , <Link href={'/e-comerce'}>E-commerce</Link>, <Link href={'/graphic-desgin'}>Graphic Design</Link>,<br />  <Link href={'/seo'}>SEO</Link>, and <Link href={'/digital'}>digital marketing</Link>.
+                                <span className='text-blue-about'>We are a professional design agency</span> specializing in
+                                <Link href={'/website'}>website design</Link> ,<Link href={'/development'}>web development</Link> , <Link href={'/e-comerce'}>E-commerce</Link>, <Link href={'/graphic-desgin'}>Graphic Design</Link>, <Link href={'/seo'}>SEO</Link>, and <Link href={'/digital'}>digital marketing</Link>.
                             </h4>
 
                             <div className="row">
@@ -193,9 +193,9 @@ const StartupAgencyAbout = () => {
                                                         {item.title}
                                                     </h4>
 
-                                                   
-                                                        <p>{item.desc}</p>
-                                                   
+
+                                                    <p>{item.desc}</p>
+
                                                 </div>
                                             </motion.div>
                                         </div>
