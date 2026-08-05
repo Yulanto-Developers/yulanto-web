@@ -88,7 +88,7 @@
 	.container-sm,
 	.container-xl,
 	.container-xxl {
-		max-width: 1510px;
+		max-width: 90% !important;
 	}
 
 	.container-1870 {
@@ -96,7 +96,7 @@
 	}
 
 	.container-1830 {
-		max-width: 1830px,
+		max-width: 1830px;
 	}
 
 	.container-1800 {
@@ -161,6 +161,17 @@
 
 	.container-1030 {
 		max-width: 1030px,
+	}
+}
+
+@media (max-width:1200px){
+		.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+		max-width: 90% !important;
 	}
 }
 

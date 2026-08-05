@@ -484,7 +484,7 @@ const Hero = () => {
     return (
         <div className="px-hero-2-area pt-120 bg-white">
             <div className="px-hero-2-main d-none d-xl-block p-relative">
-                <div className="container container-1630">
+                <div className="container">
                     <div className="row">
                         {heroContent.map((item, index) => {
                             const shouldHideImage = index === 1 || index === 2;
