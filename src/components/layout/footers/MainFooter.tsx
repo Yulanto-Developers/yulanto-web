@@ -190,7 +190,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
             </div>
             {/* Copyright */}
             <div className={`px-copyright-area ${copyrightClassName}`}>
-                <div className="container container-1550">
+                <div className="container-1550">
                     <div className="row">
                         <div className="col-xl-12">
                             <div className="px-copyright-content text-center">

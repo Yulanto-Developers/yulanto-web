@@ -314,6 +314,13 @@
                             -moz-transform: translateX(-800px);
                             -ms-transform: translateX(-800px);
                             -o-transform: translateX(-800px);
+                             @media #{$xl}, #{$xxl} {
+                transform: translateX(-1100px);
+                -webkit-transform: translateX(-1100px);
+                -moz-transform: translateX(-1100px);
+                -ms-transform: translateX(-1100px);
+                -o-transform: translateX(-1100px);
+            }
                         }
 
                         &-text.left-title {
@@ -353,11 +360,22 @@
             -ms-transform: translateX(800px);
             -o-transform: translateX(800px);
 
-            @media #{$md,$sm,$xs} {
-                transform: translateX(0);
+            @media #{$md}, #{$sm}, #{$xs} {
+                transform: translateX(300px);
+                -webkit-transform: translateX(300px);
+                -moz-transform: translateX(300px);
+                -ms-transform: translateX(300px);
+                -o-transform: translateX(300px);
+            }
+            @media #{$xl}, #{$xxl} {
+                transform: translateX(1100px);
+                -webkit-transform: translateX(1100px);
+                -moz-transform: translateX(1100px);
+                -ms-transform: translateX(1100px);
+                -o-transform: translateX(1100px);
             }
 
-            @media #{$sm,$xs} {
+            @media #{$sm}, #{$xs} {
                 flex-wrap: wrap;
             }
 
@@ -378,6 +396,9 @@
 
             @media #{$md,$sm,$xs} {
                 transform: translateX(0);
+            }
+            @media #{xl,xxl} {
+                transform: translateX(-20px);
             }
 
             @media #{$sm,$xs} {

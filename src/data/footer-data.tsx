@@ -12,6 +12,11 @@ export const socialLinks = [
     href: "https://www.linkedin.com/company/yulanto-web-creations",
   },
   {
+    icon: <i className="fa-brands fa-x"></i>,
+    label: "Twitter",
+    href: "https://x.com/YulantoWeb",
+  },
+  {
     icon: <InstragramIconTwo />,
     label: "Instagram",
     href: "https://www.instagram.com/yulantoweb/",
