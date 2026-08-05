@@ -194,21 +194,12 @@ const Testimonial = () => {
                             {/* Ratings Section with 2 Small Images */}
                             <div className="d-flex gap-5 " style={{ maxWidth: '100%' }}>
                                 <div className="text-center">
-                                    <Image
-                                        src="/assets/img/award/testi/google-review-1.png"
+                                    <img
+                                        src="/assets/img/brand/review.png"
                                         alt="Google Rating"
-                                        width={100}
-                                        height={80}
+                                       
                                         className="img-fluid object-contain"
-                                    />
-                                </div>
-                                <div className="text-center">
-                                    <Image
-                                        src="/assets/img/award/testi/facebook-review.png"
-                                        alt="Facebook Rating"
-                                        width={100}
-                                        height={80}
-                                        className="img-fluid object-contain"
+                                        style={{width:'80%'}}
                                     />
                                 </div>
                             </div>
