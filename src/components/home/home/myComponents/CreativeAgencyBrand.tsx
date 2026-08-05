@@ -8,31 +8,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const brandLogosDark = [
-    "/assets/img/brand/Logo-1.jpg",
     "/assets/img/brand/Logo-1.png",
-    "/assets/img/brand/brand-1-3.png",
-    "/assets/img/brand/brand-1-4.png",
-    "/assets/img/brand/brand-1-5.png",
-    "/assets/img/brand/brand-1-6.png",
-    "/assets/img/brand/brand-1-6.png",
-    "/assets/img/brand/brand-1-6.png",
-    "/assets/img/brand/brand-1-6.png",
+   "/assets/img/brand/Logo-2.png",
+    "/assets/img/brand/Logo-3.png",
+   "/assets/img/brand/Logo-4.png",
+    "/assets/img/brand/Logo-5.png",
+    "/assets/img/brand/Logo-6.png",
+    "/assets/img/brand/Logo-7.png",
+   
 ];
-const brandLogosWhite = [
-    "/assets/img/brand/image-1.jpg",
-    "/assets/img/brand/brand-white/image-1.png",
-    "/assets/img/brand/brand-white/brand-3.png",
-    "/assets/img/brand/brand-white/brand-4.png",
-    "/assets/img/brand/brand-white/brand-5.png",
-    "/assets/img/brand/brand-white/brand-6.png",
-    "/assets/img/brand/brand-white/brand-6.png",
-    "/assets/img/brand/brand-white/brand-6.png",
-    "/assets/img/brand/brand-white/brand-6.png",
-];
+// const brandLogosWhite = [
+//     "/assets/img/brand/image-1.jpg",
+//     "/assets/img/brand/brand-white/image-1.png",
+//     "/assets/img/brand/brand-white/brand-3.png",
+//     "/assets/img/brand/brand-white/brand-4.png",
+//     "/assets/img/brand/brand-white/brand-5.png",
+//     "/assets/img/brand/brand-white/brand-6.png",
+//     "/assets/img/brand/brand-white/brand-6.png",
+//     "/assets/img/brand/brand-white/brand-6.png",
+//     "/assets/img/brand/brand-white/brand-6.png",
+// ];
 
 const CreativeAgencyBrand = () => {
     const isDarkTheme = useIsDarkRoute();
-    const brands = isDarkTheme ? brandLogosWhite : brandLogosDark;
+    const brands =  brandLogosDark;
 
     return (
         <div className="px-brand-area px-brand-style-5">
