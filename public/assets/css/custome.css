@@ -26,7 +26,7 @@ p {
     text-align: left !important;
 }
 
-.small-desc{
+.small-desc {
     font-size: 14px !important;
     line-height: 1.5 !important;
 }
@@ -41,7 +41,8 @@ p {
 .name-helper {
     margin-top: 8px;
     font-size: 12px !important;
-    color: #053456; /* Change color if left section is light */
+    color: #053456;
+    /* Change color if left section is light */
     animation: fadeIn 0.3s ease;
 }
 
@@ -50,11 +51,13 @@ p {
         opacity: 0;
         transform: translateY(-4px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 .dropdown-icon {
     margin-left: 7px;
     font-size: 12px;
@@ -1447,7 +1450,7 @@ p {
     color: #2563eb;
     background: #fff;
     transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
 }
 
 .social-icon svg {
@@ -1457,6 +1460,7 @@ p {
 .social-icon:hover svg {
     transform: scale(1.15);
 }
+
 .name-input-wrapper {
     position: relative;
 }
@@ -1466,8 +1470,8 @@ p {
     right: 8px;
     top: 50%;
     transform: translateY(-65%);
-    width: 38px;
-    height: 38px;
+    width: 25px;
+    height: 25px;
     border: none;
     border-radius: 50%;
     background: #0d6efd;
@@ -1480,6 +1484,7 @@ p {
     background: #0b5ed7;
     /* transform: translateY(-50%) scale(1.08); */
 }
+
 /* Overlay */
 /* Backdrop Overlay */
 .quote-modal-overlay {
@@ -1500,7 +1505,7 @@ p {
     display: flex;
     width: 880px;
     max-width: 100%;
-    max-height: 90vh;
+    /* max-height: 90vh; */
     background: #ffffff;
     border-radius: 20px;
     overflow-y: auto;
@@ -1537,7 +1542,7 @@ p {
 /* Left Form Container */
 .quote-modal-left {
     flex: 1.2;
-    padding: 40px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -1552,20 +1557,21 @@ p {
 .form-header .subheading {
     font-size: 14px;
     color: #64748b;
-    margin-bottom: 28px;
+    /* margin-bottom: 28px; */
 }
 
 /* Right Blue Container */
 .quote-modal-right {
     flex: 1;
-    background: linear-gradient(135deg, #275674 0%, #53ae7d 100%);
-    padding: 40px;
+    background: linear-gradient(115deg, #53ae7d 0%, #275674 100%);
+    padding: 20px;
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: relative;
     overflow: hidden;
+    /* height: 100vh; */
 }
 
 /* Decorative Background Ring for Blue Panel */
@@ -1615,7 +1621,7 @@ p {
 /* Floating Input Modern Styling */
 .floating-input {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .floating-input input,
@@ -1623,7 +1629,7 @@ p {
     width: 100%;
     border: 1.5px solid #e2e8f0;
     border-radius: 12px;
-    padding: 18px 16px 6px;
+    padding: 10px 16px 6px;
     font-size: 15px;
     outline: none;
     background: #f8fafc;
@@ -1659,10 +1665,16 @@ p {
 .floating-input input:not(:placeholder-shown)+label,
 .floating-input textarea:focus+label,
 .floating-input textarea:not(:placeholder-shown)+label {
-    top: 6px;
+   display:none;
     font-size: 11px;
     font-weight: 600;
     color: #3b82f6;
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="password"], input[type="url"], textarea ,select{
+    height:45px !important;
+   line-height: 45px !important;
+
+
 }
 /* Style select like input */
 .floating-input select {
@@ -1694,12 +1706,12 @@ p {
 .floating-input select:focus {
     border-color: #3b82f6;
     background-color: #fff;
-    box-shadow: 0 0 0 4px rgba(59,130,246,.1);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, .1);
 }
 
 /* Floating label */
-.floating-input select:focus + label,
-.floating-input select:not([value=""]) + label {
+.floating-input select:focus+label,
+.floating-input select:not([value=""])+label {
     top: 6px;
     font-size: 11px;
     font-weight: 600;
@@ -1713,13 +1725,14 @@ p {
 .floating-input select option {
     color: #0f172a;
 }
+
 /* Rest Form Reveal Smoothness */
 .quote-rest-form {
     animation: fadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .welcome-text {
-    margin: 10px 0 20px;
+    margin: 10px 0 10px;
     font-size: 18px;
     font-weight: 600;
     color: #1e293b;
@@ -1806,17 +1819,20 @@ p {
 /* Scroll modal for 1100px - 1350px screens */
 @media (min-width: 1100px) and (max-width: 1350px) {
     .quote-modal-container {
+
+
         width: 90%;
         max-height: 90vh;
         overflow-y: auto;
+        align-items: flex-start;
     }
+
 
     .quote-modal-left,
     .quote-modal-right {
         padding: 30px;
     }
 }
-
 
 /* pop contatc */
 
@@ -1840,7 +1856,7 @@ p {
 }
 
 .contact-card:hover {
-   
+
     transform: translateY(-5px);
     color: #fff;
 }
@@ -1973,11 +1989,12 @@ p {
 /* input phone */
 .phone-input-wrapper .react-tel-input {
     width: 100%;
+    
 }
 
 .phone-input-wrapper .form-control {
     width: 100% !important;
-    height: 54px !important;
+    height: 45px !important;
     border-radius: 10px !important;
     border: 1px solid #d9d9d9 !important;
     font-size: 16px !important;

@@ -173,7 +173,7 @@ export default function QuoteModal() {
     onChange={handleChange}
     className={formData.lookingFor ? "" : "placeholder-select"}
 >
-                                        <option value="">Select an option</option>
+                                        <option value=""></option>
                                         <option value="Landing Page">Landing Page</option>
                                         <option value="Website Re-Design">Website Re-Design</option>
                                         <option value="Website Maintenance">Website Maintenance</option>
@@ -246,8 +246,8 @@ export default function QuoteModal() {
                         </p>
                     </div>
                 </div> */}
-                <p className="text-tenor mb-0">Follow Us</p>
-                <div className="social-links mt-5">
+                {/* <p className="text-tenor mb-0">Follow Us</p> */}
+                {/* <div className="social-links mt-5">
                     {
                         socialLinks.map((item:any, index:number) => (
                             <a
@@ -262,7 +262,7 @@ export default function QuoteModal() {
                             </a>
                         ))
                     }
-                </div>
+                </div> */}
             </>
           )
                 }

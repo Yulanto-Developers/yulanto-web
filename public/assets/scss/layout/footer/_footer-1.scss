@@ -1003,10 +1003,10 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 28px;
+    padding: 10px 20px;
     border-radius: 20px;
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(255,255,255,.18);
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .18);
     color: #fff;
     text-decoration: none;
     overflow: hidden;
@@ -1015,33 +1015,31 @@
     backdrop-filter: blur(10px);
 
     i,
-    span{
+    span {
         position: relative;
-        z-index:2;
+        z-index: 2;
     }
 
-    &::before{
-        content:"";
-        position:absolute;
-        left:-120%;
-        top:0;
-        width:70%;
-        height:100%;
-        background:linear-gradient(
-            120deg,
-            transparent,
-            rgba(255,255,255,.35),
-            transparent
-        );
-        transform:skewX(-25deg);
-        transition:.7s;
+    &::before {
+        content: "";
+        position: absolute;
+        left: -120%;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        background: linear-gradient(120deg,
+                transparent,
+                rgba(255, 255, 255, .35),
+                transparent);
+        transform: skewX(-25deg);
+        transition: .7s;
     }
 
-    &:hover::before{
-        left:150%;
+    &:hover::before {
+        left: 150%;
     }
 
-    &:hover{
-        box-shadow:0 15px 40px rgba(255,255,255,.15);
+    &:hover {
+        box-shadow: 0 15px 40px rgba(255, 255, 255, .15);
     }
 }

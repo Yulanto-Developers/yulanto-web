@@ -43,7 +43,7 @@ const CreativeAgencyBrand = () => {
                             loop={true}
                             speed={1000}
                             autoplay={{
-                                delay: 2500,
+                                delay: 2500000,
                                 disableOnInteraction: false,
                             }}
                             // Breakpoints match your original bootstrap layout grid flawlessly
