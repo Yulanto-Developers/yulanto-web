@@ -1803,6 +1803,20 @@ p {
     }
 }
 
+/* Scroll modal for 1100px - 1350px screens */
+@media (min-width: 1100px) and (max-width: 1350px) {
+    .quote-modal-container {
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .quote-modal-left,
+    .quote-modal-right {
+        padding: 30px;
+    }
+}
+
 
 /* pop contatc */
 
