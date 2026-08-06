@@ -26,12 +26,35 @@ p {
     text-align: left !important;
 }
 
+.small-desc{
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
 .menu-link {
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
+
+.name-helper {
+    margin-top: 8px;
+    font-size: 12px !important;
+    color: #053456; /* Change color if left section is light */
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .dropdown-icon {
     margin-left: 7px;
     font-size: 12px;
@@ -1396,6 +1419,44 @@ p {
 }
 
 /* pop up css starts */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    /* margin-top: 24px; */
+}
+
+.social-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all .35s ease;
+}
+
+.social-icon:hover {
+    color: #2563eb;
+    background: #fff;
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+.social-icon svg {
+    transition: transform .35s ease;
+}
+
+.social-icon:hover svg {
+    transform: scale(1.15);
+}
 /* Overlay */
 /* Backdrop Overlay */
 .quote-modal-overlay {
@@ -1474,12 +1535,12 @@ p {
 /* Right Blue Container */
 .quote-modal-right {
     flex: 1;
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #275674 0%, #53ae7d 100%);
     padding: 40px;
     color: #ffffff;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
+    justify-content: space-between;
     position: relative;
     overflow: hidden;
 }
@@ -1512,7 +1573,7 @@ p {
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 5px;
 }
 
 .blue-section-content h2 {
@@ -1671,6 +1732,88 @@ p {
     }
 }
 
+
+/* pop contatc */
+
+
+
+/* Contact Section */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+   
+    transform: translateY(-5px);
+    color: #fff;
+}
+
+.contact-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+.contact-details span {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.contact-details p {
+    margin: 0;
+    font-size: 14px !important;
+    line-height: 1.6;
+    color: #fff;
+    font-weight: 500;
+}
+
+.address-card p {
+    font-size: 14px !important;
+    line-height: 1.7;
+}
+
+@media (max-width:768px) {
+
+    .contact-card {
+        padding: 14px;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 16px;
+    }
+
+    .contact-details p {
+        font-size: 13px;
+    }
+}
+
 /* pop up css ends */
 
 /* .footer-wrapper::before {
@@ -1687,6 +1830,9 @@ p {
 /* .postion-relative{
     position: relative;
 } */
+
+
+
 
 .font-size-18 {
     font-size: 20px !important;
@@ -1733,3 +1879,30 @@ p {
 
     }
 }
+
+
+/* input phone */
+.phone-input-wrapper .react-tel-input {
+    width: 100%;
+}
+
+.phone-input-wrapper .form-control {
+    width: 100% !important;
+    height: 54px !important;
+    border-radius: 10px !important;
+    border: 1px solid #d9d9d9 !important;
+    font-size: 16px !important;
+    padding-left: 52px !important;
+}
+
+.phone-input-wrapper .flag-dropdown {
+    border-radius: 10px 0 0 10px !important;
+    border: 1px solid #d9d9d9 !important;
+    background: #fff !important;
+}
+
+.phone-input-wrapper .country-list {
+    border-radius: 10px;
+}
+
+/* input ends */

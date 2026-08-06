@@ -19,7 +19,7 @@ const Service = () => {
 			</div> */}
 			<div className="container container-1750">
 				{/* Title */}
-				<div className="row">
+				<div className="row mb-50">
 					<div className="col-xl-3">
 						<span className="px-section-subtitle text-black our-development pt-40 blink-ball">
 

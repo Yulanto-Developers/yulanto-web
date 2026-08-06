@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles in your global CSS file or here if your framework setup allows it:
+// Import Swiper styles in your global CSS file or here if5 your framework setup allows it:
 import "swiper/css";
 
 const brandLogosDark = [
@@ -34,7 +34,7 @@ const CreativeAgencyBrand = () => {
     const brands =  brandLogosDark;
 
     return (
-        <div className="px-brand-area px-brand-style-5">
+        <div className="px-brand-area px-brand-style-5 ">
             <div className="container container-1550">
                 <div className="row gx-0">
                     <div className="col-12">
@@ -43,7 +43,7 @@ const CreativeAgencyBrand = () => {
                             loop={true}
                             speed={1000}
                             autoplay={{
-                                delay: 250000,
+                                delay: 2500,
                                 disableOnInteraction: false,
                             }}
                             // Breakpoints match your original bootstrap layout grid flawlessly
@@ -76,8 +76,8 @@ const CreativeAgencyBrand = () => {
                                     <div className="px-brand-item text-center">
                                         <Image
                                             className="img-fluid object-contain mx-auto"
-                                            width={90}
-                                            height={40}
+                                            width={200}
+                                            height={90}
                                             src={img}
                                             alt={`brand-${index + 1}`}
                                         />

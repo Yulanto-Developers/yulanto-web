@@ -2,6 +2,15 @@
 
 import { useState } from "react";
 import { useQuoteModal } from "./Content/QuoteContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faEnvelope,
+    faPhone,
+    faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
+import { socialLinks } from "@/data/footer-data";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 export default function QuoteModal() {
     const { open, closeModal } = useQuoteModal();
@@ -14,6 +23,7 @@ export default function QuoteModal() {
         lookingFor: "",
         message: "",
     });
+    const [phone, setPhone] = useState("");
 
     if (!open) return null;
 
@@ -33,6 +43,13 @@ export default function QuoteModal() {
             [name]: value,
         }));
     };
+
+    const handlePhoneChange = (value: string) => {
+    setFormData((prev) => ({
+        ...prev,
+        phone: value,
+    }));
+};
 
     const handleNameBlur = () => {
         if (formData.name.trim() !== "") {
@@ -62,28 +79,68 @@ export default function QuoteModal() {
 
                     <form onSubmit={handleSubmit} className="quote-form">
                         {/* Name Input */}
-                        <div className="floating-input">
-                            <input
-                                id="name"
-                                name="name"
-                                type="text"
-                                value={formData.name}
-                                placeholder=" "
-                                onChange={handleChange}
-                                onBlur={handleNameBlur}
-                                required
-                            />
-                            <label htmlFor="name">Enter Your Name</label>
-                        </div>
+                       <div className="floating-input">
+    <input
+        id="name"
+        name="name"
+        type="text"
+        value={formData.name}
+        placeholder=" "
+        onChange={handleChange}
+        onBlur={handleNameBlur}
+        required
+    />
+    <label htmlFor="name">Enter Your Name</label>
 
-                        {/* Revealed Form Section */}
+    {!showRestForm && formData.name.trim() !== "" && (
+        <p className="name-helper">
+            After entering your name, please click outside the text box to continue.
+        </p>
+    )}
+</div>
+
+                       
                         {showRestForm && (
                             <div className="quote-rest-form">
                                 <h4 className="welcome-text">
                                     {getGreeting()}, <span>{formData.name}</span> 👋
                                 </h4>
 
-                                <div className="floating-input">
+                              
+
+                                <div className="floating-input phone-input-wrapper">
+    <PhoneInput
+        country="in"
+    //     onlyCountries={[
+    //         "in",
+    //         "us",
+    //         "uk",
+    //         "ae",
+    //         "ca",
+    //         "au",
+    //         "nz",
+    //         "my",
+    //         "sg",
+    //         "uae",
+    //     ]
+    // }
+        value={formData.phone}
+        onChange={handlePhoneChange}
+        enableSearch
+        placeholder="Enter Phone Number"
+        inputStyle={{
+            width: "100%",
+            height: "54px",
+            borderRadius: "10px",
+            border: "1px solid #ddd",
+        }}
+        buttonStyle={{
+            borderTopLeftRadius: "10px",
+            borderBottomLeftRadius: "10px",
+        }}
+    />
+</div>
+  <div className="floating-input">
                                     <input
                                         type="email"
                                         id="email"
@@ -95,19 +152,6 @@ export default function QuoteModal() {
                                     />
                                     <label htmlFor="email">Email Address</label>
                                 </div>
-
-                                <div className="floating-input">
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        value={formData.phone}
-                                        placeholder=" "
-                                        onChange={handleChange}
-                                    />
-                                    <label htmlFor="phone">Phone Number</label>
-                                </div>
-
                                 <div className="floating-input">
                                     <input
                                         type="text"
@@ -142,12 +186,81 @@ export default function QuoteModal() {
 
                 {/* Right Side: Blue Accent Section (Ready for future content) */}
                 <div className="quote-modal-right">
-                    <div className="blue-section-content">
-                        <div className="badge text-tenor">Partner with us</div>
-                        <h2>Transform your digital presence.</h2>
-                        <p className="text-figtree">Fill out the form and our team will get back to you within 24 hours.</p>
-                    </div>
+    <div className="blue-section-content">
+        <div className="contact-info">
+
+            <a href="mailto:info@yulanto.com" className="contact-card">
+                <div className="contact-icon">
+                    <FontAwesomeIcon icon={faEnvelope} />
                 </div>
+                <div className="contact-details">
+                    <span>Email</span>
+                    <p>info@yulanto.com</p>
+                </div>
+            </a>
+
+            <a href="tel:+919962157250" className="contact-card">
+                <div className="contact-icon">
+                    <FontAwesomeIcon icon={faPhone} />
+                </div>
+                <div className="contact-details">
+                    <span className="text-figtree">Phone</span>
+                    <p>+91 99621 57250</p>
+                </div>
+            </a>
+
+            <div className="contact-card address-card">
+                <div className="contact-icon">
+                    <FontAwesomeIcon icon={faLocationDot} />
+                </div>
+                <div className="contact-details">
+                    <span className="text-figtree">Office Address</span>
+                    <p>
+                        First Floor, F3, #4/608, VOC St,<br />
+                        Near Turyaa Hotel, OMR,<br />
+                        Kottivakkam, Chennai,<br />
+                        Tamil Nadu 600096
+                    </p>
+                    
+                </div>
+               
+               
+            </div>
+              <div className="social-links">
+ 
+                        {
+                            socialLinks.map((item:any,index:number)=>(
+ <a
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-icon"
+        aria-label={item.label}
+    >
+        {item.icon}
+    </a>
+                            ))
+                        }
+
+</div>
+
+        </div>
+    </div>
+
+    <div className="blue-section-content">
+        <div className="badge text-tenor">Let's Get Started</div>
+        <h2 className="text-tenor text-white">
+            Your Digital Success Starts Here
+        </h2>
+        <p className="text-figtree">
+            Tell us about your project or business requirements. Fill out the
+            form, and our team will contact you within 24 hours.
+        </p>
+        <p className="text-figtree small-desc">
+            🔒 Your information is secure and confidential.
+        </p>
+    </div>
+</div>
             </div>
         </div>
     );

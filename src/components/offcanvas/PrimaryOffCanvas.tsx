@@ -14,6 +14,8 @@ import { ImageDT } from "@/types/custom-dt";
 import Image from "next/image";
 import Link from "next/link";
 import MobileMenus from "../layout/headers/subComponents/MobileMenus";
+import Dock from "../layout/footers/Dock";
+import {  socialLinks } from "@/data/footer-data";
 
 const galleryImages: ImageDT[] = [
   { id: 1, imgSrc: "/assets/img/offcanvas/offcanvas-1.jpg" },
@@ -28,6 +30,12 @@ const PrimaryOffCanvas = () => {
 
   // Detect dark version route
   const isDark = pathname?.startsWith("/dark") ?? false;
+
+   const dockItems = socialLinks.map((item) => ({
+          icon: item.icon,
+          label: item.label ?? "",
+          onClick: () => window.open(item.href, "_blank"),
+      }));
 
   return (
     <>
@@ -77,7 +85,7 @@ const PrimaryOffCanvas = () => {
                 <MobileMenus />
               </nav>
             </div>
-            <div className="tp-offcanvas-gallery d-none d-xl-block">
+            {/* <div className="tp-offcanvas-gallery d-none d-xl-block">
               <div className="row gx-2">
                 <PhotoProviderWrapper>
                   {galleryImages.map((image: ImageDT) => (
@@ -97,7 +105,7 @@ const PrimaryOffCanvas = () => {
                   ))}
                 </PhotoProviderWrapper>
               </div>
-            </div>
+            </div> */}
             <div className="tp-offcanvas-contact">
               <h3 className="tp-offcanvas-title sm">Information</h3>
               <ul>
@@ -118,7 +126,7 @@ const PrimaryOffCanvas = () => {
             </div>
             <div className="tp-offcanvas-social">
               <h3 className="tp-offcanvas-title sm">Follow Us</h3>
-              <ul>
+              {/* <ul>
                 <li>
                   <Link href="#">
                     <InstragramIcon />
@@ -139,7 +147,14 @@ const PrimaryOffCanvas = () => {
                     <YoutubeIcon />
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
+              <Dock   items={dockItems}
+              page=
+              "sidemenu"
+                                    panelHeight={52}
+                                    baseItemSize={38}
+                                    magnification={54}
+                                    distance={120}/>
             </div>
           </div>
         </div>

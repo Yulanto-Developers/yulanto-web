@@ -208,7 +208,7 @@ const Testimonial = () => {
                     </div>
 
                     {/* Right Column: Testimonial Content (Occupies 8 columns) */}
-                    <div className="col-xl-8 order-1 order-xl-2">
+                    <div className="col-xl-8 order-1 order-xl-2 pb-5">
                         <div className="px-testimonial-slider ">
                             <div className="px-testimonial-active">
                                 <Swiper

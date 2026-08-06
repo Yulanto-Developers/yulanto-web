@@ -134,6 +134,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                 {/* Apple macOS Dock Component */}
                                 <Dock
                                     items={dockItems}
+                                    page='footer'
                                     panelHeight={52}
                                     baseItemSize={38}
                                     magnification={54}
