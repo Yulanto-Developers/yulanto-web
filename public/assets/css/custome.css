@@ -1457,6 +1457,29 @@ p {
 .social-icon:hover svg {
     transform: scale(1.15);
 }
+.name-input-wrapper {
+    position: relative;
+}
+
+.name-next-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-60%);
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #0d6efd;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.name-next-btn:hover {
+    background: #0b5ed7;
+    /* transform: translateY(-50%) scale(1.08); */
+}
 /* Overlay */
 /* Backdrop Overlay */
 .quote-modal-overlay {
@@ -1539,7 +1562,7 @@ p {
     padding: 40px;
     color: #ffffff;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
@@ -1747,7 +1770,7 @@ p {
 
 .contact-card {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 14px;
     color: #fff;
     text-decoration: none;
@@ -1758,6 +1781,10 @@ p {
    
     transform: translateY(-5px);
     color: #fff;
+}
+
+.contact-card p {
+    font-size: 14px !important;
 }
 
 .contact-icon {

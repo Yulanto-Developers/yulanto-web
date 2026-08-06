@@ -11,6 +11,7 @@ import {
 import { socialLinks } from "@/data/footer-data";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function QuoteModal() {
     const { open, closeModal } = useQuoteModal();
@@ -79,7 +80,7 @@ export default function QuoteModal() {
 
                     <form onSubmit={handleSubmit} className="quote-form">
                         {/* Name Input */}
-                       <div className="floating-input">
+                      <div className="floating-input name-input-wrapper">
     <input
         id="name"
         name="name"
@@ -87,14 +88,26 @@ export default function QuoteModal() {
         value={formData.name}
         placeholder=" "
         onChange={handleChange}
-        onBlur={handleNameBlur}
         required
     />
+
     <label htmlFor="name">Enter Your Name</label>
 
-    {!showRestForm && formData.name.trim() !== "" && (
+    <button
+        type="button"
+        className="name-next-btn"
+        onClick={() => {
+            if (formData.name.trim() !== "") {
+                setShowRestForm(true);
+            }
+        }}
+    >
+        <FontAwesomeIcon icon={faArrowRight} />
+    </button>
+
+    {!showRestForm  && (
         <p className="name-helper">
-            After entering your name, please click outside the text box to continue.
+            Click the arrow button to continue.
         </p>
     )}
 </div>
@@ -185,67 +198,66 @@ export default function QuoteModal() {
                 </div>
 
                 {/* Right Side: Blue Accent Section (Ready for future content) */}
+               
                 <div className="quote-modal-right">
-    <div className="blue-section-content">
-        <div className="contact-info">
-
-            <a href="mailto:info@yulanto.com" className="contact-card">
-                <div className="contact-icon">
-                    <FontAwesomeIcon icon={faEnvelope} />
-                </div>
-                <div className="contact-details">
-                    <span>Email</span>
+    
+ <div className="blue-section-content">
+        <div className="contact-info py-10">
+{
+                   showRestForm && (
+            <>
+            <p className="text-tenor">Reach Us</p>
+                <a href="mailto:info@yulanto.com" className="contact-card">
+                    <div className="contact-icon">
+                        <FontAwesomeIcon icon={faEnvelope} />
+                    </div>
                     <p>info@yulanto.com</p>
-                </div>
-            </a>
+                </a>
 
-            <a href="tel:+919962157250" className="contact-card">
-                <div className="contact-icon">
-                    <FontAwesomeIcon icon={faPhone} />
-                </div>
-                <div className="contact-details">
-                    <span className="text-figtree">Phone</span>
+                <a href="tel:+919962157250" className="contact-card">
+                    <div className="contact-icon">
+                        <FontAwesomeIcon icon={faPhone} />
+                    </div>
                     <p>+91 99621 57250</p>
-                </div>
-            </a>
+                </a>
 
-            <div className="contact-card address-card">
-                <div className="contact-icon">
-                    <FontAwesomeIcon icon={faLocationDot} />
+                {/* <div className="contact-card address-card">
+                    <div className="contact-icon">
+                        <FontAwesomeIcon icon={faLocationDot} />
+                    </div>
+                    <div className="contact-details">
+                        <span className="text-figtree">Office Address</span>
+                        <p>
+                            First Floor, F3, #4/608, VOC St,<br />
+                            Near Turyaa Hotel, OMR,<br />
+                            Kottivakkam, Chennai,<br />
+                            Tamil Nadu 600096
+                        </p>
+                    </div>
+                </div> */}
+                <p className="text-tenor ">Follow Us</p>
+                <div className="social-links mt-5">
+                    {
+                        socialLinks.map((item:any, index:number) => (
+                            <a
+                                key={index}
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-icon"
+                                aria-label={item.label}
+                            >
+                                {item.icon}
+                            </a>
+                        ))
+                    }
                 </div>
-                <div className="contact-details">
-                    <span className="text-figtree">Office Address</span>
-                    <p>
-                        First Floor, F3, #4/608, VOC St,<br />
-                        Near Turyaa Hotel, OMR,<br />
-                        Kottivakkam, Chennai,<br />
-                        Tamil Nadu 600096
-                    </p>
-                    
-                </div>
-               
-               
-            </div>
-              <div className="social-links">
- 
-                        {
-                            socialLinks.map((item:any,index:number)=>(
- <a
-        href={item.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="social-icon"
-        aria-label={item.label}
-    >
-        {item.icon}
-    </a>
-                            ))
-                        }
-
-</div>
-
+            </>
+          )
+                }
         </div>
     </div>
+                  
 
     <div className="blue-section-content">
         <div className="badge text-tenor">Let's Get Started</div>
