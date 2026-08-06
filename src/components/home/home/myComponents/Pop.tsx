@@ -36,7 +36,7 @@ export default function QuoteModal() {
     };
 
     const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
     ) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
@@ -166,14 +166,25 @@ export default function QuoteModal() {
                                     <label htmlFor="email">Email Address</label>
                                 </div>
                                 <div className="floating-input">
-                                    <input
-                                        type="text"
-                                        id="lookingFor"
-                                        name="lookingFor"
-                                        value={formData.lookingFor}
-                                        placeholder=" "
-                                        onChange={handleChange}
-                                    />
+                                    <select
+    id="lookingFor"
+    name="lookingFor"
+    value={formData.lookingFor}
+    onChange={handleChange}
+    className={formData.lookingFor ? "" : "placeholder-select"}
+>
+                                        <option value="">Select an option</option>
+                                        <option value="Landing Page">Landing Page</option>
+                                        <option value="Website Re-Design">Website Re-Design</option>
+                                        <option value="Website Maintenance">Website Maintenance</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="CMS Development">CMS Development</option>
+                                        <option value="Ecommerce">Ecommerce</option>
+                                        <option value="Logo Design">Logo Design</option>
+                                        <option value="SEO">SEO</option>
+                                        <option value="Social Media Marketing">Social Media Marketing</option>
+                                        <option value="Google Ads">Google Ads</option>
+                                    </select>
                                     <label htmlFor="lookingFor">Looking For</label>
                                 </div>
 
@@ -235,7 +246,7 @@ export default function QuoteModal() {
                         </p>
                     </div>
                 </div> */}
-                <p className="text-tenor ">Follow Us</p>
+                <p className="text-tenor mb-0">Follow Us</p>
                 <div className="social-links mt-5">
                     {
                         socialLinks.map((item:any, index:number) => (
