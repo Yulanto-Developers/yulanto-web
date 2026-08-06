@@ -12,25 +12,23 @@ type GalleryItemType = {
 
 // Data with type
 const galleryOne: GalleryItemType[] = [
-    { type: "image", src: "/assets/img/sample/section-3.jpg" },
-    { type: "image", src: "/assets/img/sample/image-2.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
-    { type: "image", src: "/assets/img/sample/b1.jpg" },
-    { type: "image", src: "/assets/img/sample/b2.jpg" },
-    { type: "image", src: "/assets/img/sample/b1.jpg" },
-    { type: "image", src: "/assets/img/sample/b2.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (1).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (2).jpg" },
+    { type: "video", src: "/assets/img/videos/Video-1.mp4" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (3).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (7).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (9).jpg" },
+    // { type: "video", src: "/assets/img/videos/video-2.mp4" },
 ];
 
 const galleryTwo: GalleryItemType[] = [
-    { type: "image", src: "/assets/img/sample/b1.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
-    { type: "image", src: "/assets/img/sample/b2.jpg" },
-    { type: "image", src: "/assets/img/sample/b1.jpg" },
-    { type: "image", src: "/assets/img/sample/b2.jpg" },
-    { type: "image", src: "/assets/img/sample/b1.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
-    { type: "image", src: "/assets/img/sample/b2.jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (6).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (4).jpg" },
+    // { type: "video", src: "/assets/img/videos/video-1.mp4" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (8).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (5).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (10).jpg" },
+    { type: "video", src: "/assets/img/videos/Video-2.mp4" },
 ];
 
 // Props type
@@ -48,7 +46,7 @@ const GalleryItem = ({ item }: GalleryItemProps) => {
                         <source src={item.src} type="video/mp4" />
                     </video>
                 ) : (
-                    <Image className="img-fluid" src={item.src} alt="gallery" width={520} height={400} />
+                    <img className="img-fluid" src={item.src} alt="gallery" style={{ width: '100%', height: '100%' }} />
                 )}
             </div>
         </div>

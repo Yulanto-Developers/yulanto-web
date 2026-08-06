@@ -95,7 +95,7 @@ export const lightMenu: MenuItem[] = [
     type: "none",
     sublinkTrue: false,
     label: "Our Clients",
-    href: "#",
+    href: "/clients",
   },
   {
     id: 5,

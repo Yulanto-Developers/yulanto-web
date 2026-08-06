@@ -20,6 +20,7 @@ interface DockProps {
   panelHeight?: number;
   dockHeight?: number;
   baseItemSize?: number;
+  page?:string;
 }
 
 interface DockItemProps {
@@ -130,13 +131,14 @@ function DockIcon({ children, className = '' }: { children: React.ReactNode; cla
 
 export default function Dock({
   items,
-  className = '',
+  className = "",
   spring = { mass: 0.1, stiffness: 150, damping: 12 },
   magnification = 60,
   distance = 150,
   panelHeight = 20,
   dockHeight = 120,
   baseItemSize = 42,
+  page,
 }: DockProps) {
   const mouseX = useMotionValue(Infinity);
   const isHovered = useMotionValue(0);
@@ -159,7 +161,7 @@ export default function Dock({
           isHovered.set(0);
           mouseX.set(Infinity);
         }}
-        className={`dock-panel ${className}`}
+       className={`dock-panel ${page === "sidemenu" ? "dock-panel-blue" : ""} ${className}`}
         style={{ height: panelHeight }}
         role="toolbar"
         aria-label="Application dock"

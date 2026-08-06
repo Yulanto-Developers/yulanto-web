@@ -193,22 +193,13 @@ const Testimonial = () => {
 
                             {/* Ratings Section with 2 Small Images */}
                             <div className="d-flex gap-5 " style={{ maxWidth: '100%' }}>
-                                <div className="text-center">
-                                    <Image
-                                        src="/assets/img/award/testi/google-review-1.png"
+                                <div className="text-end">
+                                    <img
+                                        src="/assets/img/brand/review.png"
                                         alt="Google Rating"
-                                        width={100}
-                                        height={80}
+                                       
                                         className="img-fluid object-contain"
-                                    />
-                                </div>
-                                <div className="text-center">
-                                    <Image
-                                        src="/assets/img/award/testi/facebook-review.png"
-                                        alt="Facebook Rating"
-                                        width={100}
-                                        height={80}
-                                        className="img-fluid object-contain"
+                                        style={{width:'80%'}}
                                     />
                                 </div>
                             </div>
@@ -217,7 +208,7 @@ const Testimonial = () => {
                     </div>
 
                     {/* Right Column: Testimonial Content (Occupies 8 columns) */}
-                    <div className="col-xl-8 order-1 order-xl-2">
+                    <div className="col-xl-8 order-1 order-xl-2 pb-5">
                         <div className="px-testimonial-slider ">
                             <div className="px-testimonial-active">
                                 <Swiper

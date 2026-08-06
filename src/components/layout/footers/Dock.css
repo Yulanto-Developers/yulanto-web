@@ -11,15 +11,20 @@
   /* align-items: flex-end; */
   justify-content: center;
   gap:30px;
-  width: 80%;
+  width: 70%;
   gap: 0.75rem;
   border-radius: 1rem;
-  background-color: rgba(255, 255, 255, 0.08);
+  background: transparent;
+  transition: background 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 0.5rem;
   backdrop-filter: blur(10px);
 }
 
+
+.dock-panel-blue {
+    background: #053456 !important; /* blue */
+}
 .dock-item {
   position: relative;
   display: inline-flex;

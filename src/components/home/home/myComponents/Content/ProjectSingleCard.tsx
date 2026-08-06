@@ -37,7 +37,8 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                                 height={680}
                                 style={{
                                     width: "100%",
-                                    height: "auto",
+                                    height: "450px",
+                                    objectFit:"cover"
                                 }}
                             />
 

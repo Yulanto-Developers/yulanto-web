@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const StartupAgencyProject = () => {
-    const displayProjectData = portfolioProjects.slice(0, 4);
+    const displayProjectData = portfolioProjects.slice(0, 5);
 
     return (
         <section className="px-project-area pt-50 pb-130">

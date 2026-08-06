@@ -4,9 +4,9 @@ const Service = () => {
 	return (
 		<div
 			className="px-service-area px-service-3-style pt-120 pb-50 z-index-1"
-			style={{ backgroundColor: "#53AE7D" }}
+			style={{ backgroundColor: "#fff" }}
 		>
-			<div className="footer-shape-bg">
+			{/* <div className="footer-shape-bg">
 				<ShapeGrid
 					shape="square"
 					direction="diagonal"
@@ -16,12 +16,12 @@ const Service = () => {
 					hoverFillColor="rgba(255,255,255,0.15)"
 					hoverTrailAmount={0}
 				/>
-			</div>
+			</div> */}
 			<div className="container container-1750">
 				{/* Title */}
-				<div className="row">
+				<div className="row mb-50">
 					<div className="col-xl-3">
-						<span className="px-section-subtitle text-white our-development pt-40 blink-ball">
+						<span className="px-section-subtitle text-black our-development pt-40 blink-ball">
 
 							Our Website Development Process
 						</span>
@@ -29,7 +29,7 @@ const Service = () => {
 
 					<div className="col-xl-9">
 						<div className="px-project-title-box">
-							<h3 className="px-section-title text-white text-tenor font-title-cls text-effect">
+							<h3 className="px-section-title text-black text-tenor font-title-cls text-effect">
 								<span className="word">How  </span>
 								<span>We Work </span>
 							</h3>
@@ -42,7 +42,7 @@ const Service = () => {
 
 				<div className="row align-items-start">
 					{/* Video */}
-					<div className="col-xl-3 d-none d-xl-block">
+					{/* <div className="col-xl-3 d-none d-xl-block">
 						<div className="px-service-3-video">
 							<video width={350} loop muted autoPlay playsInline>
 								<source
@@ -51,10 +51,10 @@ const Service = () => {
 								/>
 							</video>
 						</div>
-					</div>
+					</div> */}
 
 					{/* Accordion */}
-					<div className="col-xl-9">
+					<div className="col-xl-12">
 						<div className="px-service-accordion-wrap">
 							<div className="accordion" id="accordionExample1">
 								{services.map((service, index) => {
@@ -101,7 +101,7 @@ const Service = () => {
 																<>
 																	<h5
 																		style={{
-																			color: "#fff",
+																			color: "#000000",
 																			marginBottom: "10px",
 																			fontWeight: 600,
 																		}}

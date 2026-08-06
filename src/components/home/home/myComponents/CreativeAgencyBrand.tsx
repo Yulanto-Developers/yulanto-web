@@ -4,38 +4,37 @@ import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles in your global CSS file or here if your framework setup allows it:
+// Import Swiper styles in your global CSS file or here if5 your framework setup allows it:
 import "swiper/css";
 
 const brandLogosDark = [
-    "/assets/img/brand/Logo-1.jpg",
     "/assets/img/brand/Logo-1.png",
-    "/assets/img/brand/brand-1-3.png",
-    "/assets/img/brand/brand-1-4.png",
-    "/assets/img/brand/brand-1-5.png",
-    "/assets/img/brand/brand-1-6.png",
-    "/assets/img/brand/brand-1-6.png",
-    "/assets/img/brand/brand-1-6.png",
-    "/assets/img/brand/brand-1-6.png",
+   "/assets/img/brand/Logo-2.png",
+    "/assets/img/brand/Logo-3.png",
+   "/assets/img/brand/Logo-4.png",
+    "/assets/img/brand/Logo-5.png",
+    "/assets/img/brand/Logo-6.png",
+    "/assets/img/brand/Logo-7.png",
+   
 ];
-const brandLogosWhite = [
-    "/assets/img/brand/image-1.jpg",
-    "/assets/img/brand/brand-white/image-1.png",
-    "/assets/img/brand/brand-white/brand-3.png",
-    "/assets/img/brand/brand-white/brand-4.png",
-    "/assets/img/brand/brand-white/brand-5.png",
-    "/assets/img/brand/brand-white/brand-6.png",
-    "/assets/img/brand/brand-white/brand-6.png",
-    "/assets/img/brand/brand-white/brand-6.png",
-    "/assets/img/brand/brand-white/brand-6.png",
-];
+// const brandLogosWhite = [
+//     "/assets/img/brand/image-1.jpg",
+//     "/assets/img/brand/brand-white/image-1.png",
+//     "/assets/img/brand/brand-white/brand-3.png",
+//     "/assets/img/brand/brand-white/brand-4.png",
+//     "/assets/img/brand/brand-white/brand-5.png",
+//     "/assets/img/brand/brand-white/brand-6.png",
+//     "/assets/img/brand/brand-white/brand-6.png",
+//     "/assets/img/brand/brand-white/brand-6.png",
+//     "/assets/img/brand/brand-white/brand-6.png",
+// ];
 
 const CreativeAgencyBrand = () => {
     const isDarkTheme = useIsDarkRoute();
-    const brands = isDarkTheme ? brandLogosWhite : brandLogosDark;
+    const brands =  brandLogosDark;
 
     return (
-        <div className="px-brand-area px-brand-style-5">
+        <div className="px-brand-area px-brand-style-5 ">
             <div className="container container-1550">
                 <div className="row gx-0">
                     <div className="col-12">
@@ -44,7 +43,7 @@ const CreativeAgencyBrand = () => {
                             loop={true}
                             speed={1000}
                             autoplay={{
-                                delay: 250000,
+                                delay: 2500000,
                                 disableOnInteraction: false,
                             }}
                             // Breakpoints match your original bootstrap layout grid flawlessly
@@ -77,8 +76,8 @@ const CreativeAgencyBrand = () => {
                                     <div className="px-brand-item text-center">
                                         <Image
                                             className="img-fluid object-contain mx-auto"
-                                            width={90}
-                                            height={40}
+                                            width={200}
+                                            height={90}
                                             src={img}
                                             alt={`brand-${index + 1}`}
                                         />

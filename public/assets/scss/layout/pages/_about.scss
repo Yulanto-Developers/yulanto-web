@@ -23,27 +23,27 @@
         @media #{$xl} {
             font-size: 38px;
 
-            & br {
-                display: none;
-            }
+            // & br {
+            //     display: none;
+            // }
         }
 
         @media #{$md} {
             font-size: 45px;
             margin-bottom: 20px;
 
-            & br {
-                display: none;
-            }
+            // & br {
+            //     display: none;
+            // }
         }
 
         @media #{$xs} {
             font-size: 35px;
             margin-bottom: 20px;
 
-            & br {
-                display: none;
-            }
+            // & br {
+            //     display: none;
+            // }
         }
 
         // & span {

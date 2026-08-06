@@ -384,7 +384,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { text_slider_params } from "@/constant";
 import { SLIDER_TEXTS } from "@/data/site-data";
 import { StarIcon } from "@/svg/StarIcons";
-
+import { useQuoteModal } from "./Content/QuoteContext";
 
 
 const heroContent = [
@@ -461,6 +461,11 @@ const Hero = () => {
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
     const activeIndex = ACTIVE_ITEMS[current];
 
+    // function getQuotes() {
+    //     setShowModal(true);
+    // }
+    const { openModal } = useQuoteModal();
+
     useEffect(() => {
         if (!isHovered) {
             intervalRef.current = setInterval(() => {
@@ -476,17 +481,14 @@ const Hero = () => {
     }, [isHovered]);
 
     function getQuotes() {
-        setShowQuoteModal(true);
-    }
+       alert('Quotes Request')
 
-    function closeQuoteModal() {
-        setShowQuoteModal(false);
     }
 
     return (
         <div className="px-hero-2-area pt-120 bg-white">
             <div className="px-hero-2-main d-none d-xl-block p-relative">
-                <div className="container container-1630">
+                <div className="container">
                     <div className="row">
                         {heroContent.map((item, index) => {
                             const shouldHideImage = index === 1 || index === 2;
@@ -607,8 +609,13 @@ const Hero = () => {
                         })}
 
                         <div className="text-center btn-partent">
-                            <button onClick={getQuotes} className="button-style relative-cls-header">
-                                <span className="text-tenor">Get a Free Quote</span>
+                            <button
+                                onClick={openModal}
+                                className="button-style relative-cls-header"
+                            >
+                                <span className="text-tenor">
+                                    Get a Free Quote
+                                </span>
                             </button>
                         </div>
 
@@ -620,6 +627,8 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+
+
 
             <div className="px-hero-2-slider d-xl-none">
                 <div className="container">
@@ -650,6 +659,9 @@ const Hero = () => {
                     </Swiper>
                 </div>
             </div>
+
+
+
         </div>
     );
 };
