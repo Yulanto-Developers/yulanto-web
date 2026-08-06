@@ -457,6 +457,7 @@ const ACTIVE_ITEMS = [0,
 const Hero = () => {
     const [current, setCurrent] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
+    const [showQuoteModal, setShowQuoteModal] = useState(false);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
     const activeIndex = ACTIVE_ITEMS[current];
 
@@ -475,8 +476,11 @@ const Hero = () => {
     }, [isHovered]);
 
     function getQuotes() {
-       alert('Quotes Request')
+        setShowQuoteModal(true);
+    }
 
+    function closeQuoteModal() {
+        setShowQuoteModal(false);
     }
 
     return (
@@ -607,6 +611,12 @@ const Hero = () => {
                                 <span className="text-tenor">Get a Free Quote</span>
                             </button>
                         </div>
+
+                        {showQuoteModal && (
+                            <div>
+                                hi
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
