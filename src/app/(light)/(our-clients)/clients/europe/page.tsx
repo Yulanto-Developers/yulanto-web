@@ -29,7 +29,6 @@ import {
   Anchor,
   Sparkles,
   Sparkle,
-  Bake,
   HeartHandshake,
   Cpu,
   Sparkles as SparklesIcon,
