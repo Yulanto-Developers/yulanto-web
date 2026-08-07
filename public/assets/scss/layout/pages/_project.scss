@@ -6,7 +6,7 @@
 
 .px-project {
     &-area {
-        @media #{$lg,$md,$xs} {
+        @media #{$lg,$md} {
             padding-bottom: 80px;
         }
     }
