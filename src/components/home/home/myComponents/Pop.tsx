@@ -6,8 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faEnvelope,
     faPhone,
-    faLocationDot,
-    faArrowRight
+    faLocationDot
 } from "@fortawesome/free-solid-svg-icons";
 import { socialLinks } from "@/data/footer-data";
 import PhoneInput from "react-phone-input-2";
@@ -126,6 +125,12 @@ export default function QuoteModal() {
                                 placeholder=" "
                                 onChange={handleChange}
                                 required
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter" && formData.name.trim() !== "") {
+                                        e.preventDefault();
+                                        setShowRestForm(true);
+                                    }
+                                }}
                             />
 
                             <label htmlFor="name">Enter Your Name</label>
@@ -138,15 +143,21 @@ export default function QuoteModal() {
                                         setShowRestForm(true);
                                     }
                                 }}
+                                style={{
+                                    fontSize: "13px",
+                                    fontWeight: "600",
+                                    padding: "4px 12px",
+                                    borderRadius: "6px"
+                                }}
                             >
-                                <FontAwesomeIcon icon={faArrowRight} />
+                                Enter
                             </button>
 
-                            {!showRestForm && (
+                            {/* {!showRestForm && (
                                 <p className="name-helper">
-                                    Click the arrow button to continue.
+                                    Click Enter or press your keyboard Enter key to continue.
                                 </p>
-                            )}
+                            )} */}
                         </div>
 
                         {showRestForm && (
@@ -262,13 +273,13 @@ export default function QuoteModal() {
 
                                 {/* Status Feedback Messages */}
                                 {captchaStatus === "correct" && (
-                                    <p style={{ color: "#22c55e", fontSize: "10px", fontWeight: "400", marginTop: "4px", marginBottom: "5px" }}>
+                                    <p className="verify" >
                                         ✓ Verified
                                     </p>
                                 )}
 
                                 {captchaStatus === "incorrect" && (
-                                    <p style={{ color: "#ef4444", fontSize: "10px", fontWeight: "400", marginTop: "4px", marginBottom: "5px" }}>
+                                    <p className="incorrect">
                                         ✕ Incorrect answer, please try again.
                                     </p>
                                 )}
@@ -276,6 +287,7 @@ export default function QuoteModal() {
                                 <button type="submit" className="submit-btn">
                                     Submit Request
                                 </button>
+                                🔒 Your information is secure and confidential.
                             </div>
                         )}
                     </form>
@@ -300,6 +312,15 @@ export default function QuoteModal() {
                                             <FontAwesomeIcon icon={faPhone} />
                                         </div>
                                         <p>+91 99621 57250</p>
+                                    </a>
+                                    <a href="https://maps.app.goo.gl/sHp8T3KXGXav9GuT9"
+                                        target="_blank"
+
+                                        className="contact-card">
+                                        <div className="contact-icon">
+                                            <FontAwesomeIcon icon={faLocationDot} />
+                                        </div>
+                                        <p>First Floor, F3, #4/608, VOC St, near Turyaa Hotel, OMR, Kottivakkam, Chennai, Greater Chennai, Tamil Nadu 600096</p>
                                     </a>
                                 </>
                             )}
