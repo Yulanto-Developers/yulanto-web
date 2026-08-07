@@ -1,13 +1,19 @@
-// import BreadcrumbBanner from "@/components/about/sections/breadcrumb";
+
 import Client from "@/components/ourclients/client";
 import Logoslider from "@/components/ourclients/logoslider";
+import GlobalComp from "@/components/ourclients/globalcomp";
+import Breadcrumbdata from "@/components/breadcrum/sections/breadcrumbdata";
+
+ 
 
 export default function Page() {
   return (
     <main>
-      {/* <BreadcrumbBanner title="Our Clients" currentPage="Our Clients" /> */}
+     <Breadcrumbdata />
+ 
       <Client />
       <Logoslider />
+      <GlobalComp />
     </main>
   );
 }

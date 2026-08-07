@@ -3,6 +3,8 @@ import PersonalPortfolioHeader from "@/components/layout/headers/PersonalPortfol
 import { ClientProviders } from "@/providers";
 // CHANGED: Imported directly from FloatingIcon where our wrapper now lives safely
 import FloatingActionsWrapper from "@/components/home/home/components/FloatingIcon"; 
+import "@/assets/css/style.css";
+
 
 export default function DesignStudioLayout({
   children,

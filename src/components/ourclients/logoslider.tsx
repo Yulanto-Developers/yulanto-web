@@ -12,7 +12,7 @@ export type LogoEntry = {
 
 export type LogoCloudSwapProps = {
   logos?: LogoEntry[];
-  title?: string;
+  title?: React.ReactNode;
   subtitle?: string;
   interval?: number;
   stagger?: number;
@@ -22,53 +22,33 @@ const WIPE_DURATION = 0.92;
 const WIPE_TIMES = [0, 0.4, 1];
 
 const DEFAULT_LOGOS: LogoEntry[] = [
-  { id: 1,  logo: "/assets/img/partners/AEROVON.png" },
-  { id: 2,  logo: "/assets/img/partners/AEZEN.png" },
-  { id: 3,  logo: "/assets/img/partners/ALPHONSA.png" },
-  { id: 4,  logo: "/assets/img/partners/ASTRO.png" },
-  { id: 5,  logo: "/assets/img/partners/BBI.png" },
-  { id: 6,  logo: "/assets/img/partners/bioxgreen.png" },
-  { id: 7,  logo: "/assets/img/partners/BISHMILLAH.png" },
-  { id: 8,  logo: "/assets/img/partners/CHENNAI-CLEANERS.png" },
-  { id: 9,  logo: "/assets/img/partners/CHOLAS.png" },
-  { id: 10,  logo: "/assets/img/partners/CLOUD-WALK.png" },
-  { id: 11,  logo: "/assets/img/partners/devior.png" },
-  { id: 12,  logo: "/assets/img/partners/DI.png" },
-  { id: 13,  logo: "/assets/img/partners/ebara.png" },
-  { id: 14,  logo: "/assets/img/partners/ELSH.png" },
-  { id: 15,  logo: "/assets/img/partners/EPC.png" },
-  { id: 16,  logo: "/assets/img/partners/EXPRESS.png" },
-  { id: 17,  logo: "/assets/img/partners/GOLDEN.png" },
-  { id: 18,  logo: "/assets/img/partners/grayeye.png" },
-  { id: 19,  logo: "/assets/img/partners/hub.png" },
-  { id: 20,  logo: "/assets/img/partners/KLEANTERRA.png" },
-  { id: 21,  logo: "/assets/img/partners/LEADTEQS.png" },
-  { id: 22,  logo: "/assets/img/partners/LOTUS.png" },
-  { id: 23,  logo: "/assets/img/partners/MARG.png" },
-  { id: 24,  logo: "/assets/img/partners/MAVERICK.png" },
-  { id: 25,  logo: "/assets/img/partners/pest-tech.png" },
-  // { id: 26,  logo: "/assets/img/partners/teyro.png" },
-  // { id: 27,  logo: "/assets/img/partners/PRANESH.png" },
-  // { id: 28,  logo: "/assets/img/partners/RIVER-BRIDGE.png" },
-  // { id: 29,  logo: "/assets/img/partners/ruby.png" },
-  // { id: 30,  logo: "/assets/img/partners/SOLOMON.png" },
-  // { id: 31,  logo: "/assets/img/partners/Sparky.png" },
-  // { id: 32,  logo: "/assets/img/partners/spi.png" },
-  // { id: 33,  logo: "/assets/img/partners/SPOTZ.png" },
-  // { id: 34,  logo: "/assets/img/partners/ssm.png" },
-  // { id: 35,  logo: "/assets/img/partners/stanson.png" },
-  // { id: 36,  logo: "/assets/img/partners/SWARNAN.png" },
-  // { id: 37,  logo: "/assets/img/partners/SYNDICATE.png" },
-  // { id: 38,  logo: "/assets/img/partners/talents.png" },
-  // { id: 39,  logo: "/assets/img/partners/TUTEE.png"},
-  // {id :40,  logo: "/assets/img/partners/tusker.png"},
-  // {id :41,  logo: "/assets/img/partners/vgs.png"},
-  // {id :42,  logo: "/assets/img/partners/violet.png"},
-  // {id :43,  logo: "/assets/img/partners/vishva.png"},
-  // {id :44,  logo: "/assets/img/partners/yu.png"},
-  // {id :45,  logo: "/assets/img/partners/ZHOUR.png"},
-
+  { id: 1, logo: "/assets/img/partners/AEROVON.png" },
+  { id: 2, logo: "/assets/img/partners/AEZEN.png" },
+  { id: 3, logo: "/assets/img/partners/ALPHONSA.png" },
+  { id: 4, logo: "/assets/img/partners/ASTRO.png" },
+  { id: 5, logo: "/assets/img/partners/BBI.png" },
+  { id: 6, logo: "/assets/img/partners/bioxgreen.png" },
+  { id: 7, logo: "/assets/img/partners/BISHMILLAH.png" },
+  { id: 8, logo: "/assets/img/partners/CHENNAI-CLEANERS.png" },
+  { id: 9, logo: "/assets/img/partners/CHOLAS.png" },
+  { id: 10, logo: "/assets/img/partners/CLOUD-WALK.png" },
+  { id: 11, logo: "/assets/img/partners/devior.png" },
+  { id: 12, logo: "/assets/img/partners/DI.png" },
+  { id: 13, logo: "/assets/img/partners/ebara.png" },
+  { id: 14, logo: "/assets/img/partners/ELSH.png" },
+  { id: 15, logo: "/assets/img/partners/EPC.png" },
+  { id: 16, logo: "/assets/img/partners/EXPRESS.png" },
+  { id: 17, logo: "/assets/img/partners/GOLDEN.png" },
+  { id: 18, logo: "/assets/img/partners/grayeye.png" },
+  { id: 19, logo: "/assets/img/partners/hub.png" },
+  { id: 20, logo: "/assets/img/partners/KLEANTERRA.png" },
+  { id: 21, logo: "/assets/img/partners/LEADTEQS.png" },
+  { id: 22, logo: "/assets/img/partners/LOTUS.png" },
+  { id: 23, logo: "/assets/img/partners/MARG.png" },
+  { id: 24, logo: "/assets/img/partners/MAVERICK.png" },
+  { id: 25, logo: "/assets/img/partners/pest-tech.png" },
 ];
+
 function LogoItem({
   logo,
   index,
@@ -194,7 +174,11 @@ function LogoItem({
 
 export default function LogoCloudSwap({
   logos = DEFAULT_LOGOS,
-  title = "Trusted by the best companies",
+  title = (
+    <>
+      <span className="text-blue-about">Trusted by the</span> best companies
+    </>
+  ),
   subtitle = "The world's most ambitious teams build with our platform.",
   interval = 5000,
   stagger = 0.11,
@@ -224,19 +208,11 @@ export default function LogoCloudSwap({
       }}
     >
       <div style={{ margin: "0 auto", maxWidth: "640px", textAlign: "center" }}>
-        <h2
-          style={{
-            margin: 0,
-            fontSize: "28px",
-            fontWeight: 700,
-            letterSpacing: "-0.01em",
-            color: "#111827",
-          }}
-        >
+        <h4 className="px-about-title mb-20">
           {title}
-        </h2>
+        </h4>
         {subtitle && (
-          <p style={{ margin: "12px 0 0", fontSize: "14px", color: "#6b7280" }}>
+          <p className="text-figtree text-black font-paragraph-cls">
             {subtitle}
           </p>
         )}

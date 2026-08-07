@@ -2,27 +2,30 @@
 
 import React from "react";
 import { CardStack, CardStackItem } from "./cardstack";
+// import { log } from "console";
 
 // Fallback used only if a local client photo fails to load
 const FALLBACK_IMG =
   "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=450&fit=crop";
 
 const clientData: CardStackItem[] = [
-  { id: 1, title: "Mr. Kassim", tag: "AEC Tech", description: "Nice meeting with Mr. Kassim from AEC Tech in Singapore", imageSrc: "/assets/img/Clients/AecTech.webp" },
-  { id: 2, title: "Mr. Anand Reddy", tag: "AEC Pvt. Ltd.", description: "AEC Pvt. Ltd., Owner Mr. Anand Reddy", imageSrc: "/assets/img/Clients/image-2.jpg" },
-  { id: 3, title: "Mr. Aaron Ben", tag: "EBITIMI Health Solution", description: "Nice meeting with Mr. Aaron Ben from EBITIMI Health Solution in Africa", imageSrc: "/assets/img/Clients/image-1.jpg" },
-  { id: 4, title: "Mr. Sam", tag: "B&F Roofing LLC", description: "Nice meeting with Mr. Sam from B&F Roofing LLC in USA", imageSrc: "/assets/img/Clients/image-3.jpg" },
-  { id: 5, title: "Mr. Danny", tag: "My Global Studies", description: "My Global Studies, Owner Mr. Danny", imageSrc: "/assets/img/Clients/danny-globalstudies.jpg" },
-  { id: 6, title: "Mr. Kosuke", tag: "EBARA MACHINERY", description: "EBARA MACHINERY's MD Mr. Kosuke", imageSrc: "/assets/img/Clients/ebara.webp" },
-  { id: 7, title: "Mr. Mu. Kazhanjiyam", tag: "Tamil Cinema", description: "Mr. Mu. Kazhanjiyam, Tamil Film Director and Producer", imageSrc: "/assets/img/Clients/kalanchiyam.webp" },
-  { id: 8, title: "Venkatesan & Joseph", tag: "Aerotech Innovation Pvt Ltd", description: "Venkatesan (CTO) and Joseph (Tech Lead) of Aerotech Innovation Pvt Ltd", imageSrc: "/assets/img/Clients/aerotech-alt.jpg" },
-  { id: 9, title: "Mr. Vishupriyan", tag: "Bigbox International", description: "Bigbox International, Owner Mr. Vishupriyan", imageSrc: "/assets/img/Clients/big-box-alt.jpg" },
-  { id: 10, title: "Jeba Babu", tag: "Binzn Babz", description: "Binzn Babz, Owner Jeba Babu", imageSrc: "/assets/img/Clients/binz-alt.jpg" },
-  { id: 11, title: "Mr. Babu", tag: "Digi Sound Studio", description: "Digi Sound Studio, Owner Mr. Babu", imageSrc: "/assets/img/Clients/digi-alt.jpg" },
-  { id: 12, title: "Shagaya Raj", tag: "HCL Technologies", description: "HCL Technologies, Shagaya Raj", imageSrc: "/assets/img/Clients/hcl-alt.jpg" },
-  { id: 13, title: "Mr. Paul Sunder Singh", tag: "Karunalaya Child Welfare Trust", description: "Mr. Paul Sunder Singh, Director of Karunalaya Child Welfare Trust", imageSrc: "/assets/img/Clients/karunalaya-alt.jpg" },
-  { id: 14, title: "Mr. Kumaran", tag: "Switzerland Client", description: "Nice meeting with Mr. Kumaran from Switzerland", imageSrc: "/assets/img/Clients/kumaran-alt.jpg" },
-  { id: 15, title: "Satheesh", tag: "My Pink Bay", description: "My Pink Bay, Owner Satheesh", imageSrc: "/assets/img/Clients/my-pink-alt.jpg" },
+  { id: 1, title: "Mr. Kassim", tag: "AEC Tech", description: "Nice meeting with Mr. Kassim from AEC Tech in Singapore", imageSrc: "/assets/img/clients/AecTech.webp" },
+  { id: 2, title: "Mr. Anand Reddy", tag: "AEC Pvt. Ltd.", description: "AEC Pvt. Ltd., Owner Mr. Anand Reddy", imageSrc: "/assets/img/clients/image-2.jpg" },
+  { id: 3, title: "Mr. Aaron Ben", tag: "EBITIMI Health Solution", description: "Nice meeting with Mr. Aaron Ben from EBITIMI Health Solution in Africa", imageSrc: "/assets/img/clients/image-1.jpg" },
+  { id: 4, title: "Jeba Babu", tag: "Binzn Babz", description: "Binzn Babz, Owner Jeba Babu", imageSrc: "/assets/img/clients/binz-alt.jpg" },
+  { id: 5, title: "Mr. Sam", tag: "B&F Roofing LLC", description: "Nice meeting with Mr. Sam from B&F Roofing LLC in USA", imageSrc: "/assets/img/clients/image-3.jpg" },
+  { id: 6, title: "Mr. Danny", tag: "My Global Studies", description: "My Global Studies, Owner Mr. Danny", imageSrc: "/assets/img/clients/danny-globalstudies.jpg" },
+  { id: 7, title: "Mr. Babu", tag: "Digi Sound Studio", description: "Digi Sound Studio, Owner Mr. Babu", imageSrc: "/assets/img/clients/digi-alt.jpg" },
+  { id: 8, title: "Mr. Kosuke", tag: "EBARA MACHINERY", description: "EBARA MACHINERY's MD Mr. Kosuke", imageSrc: "/assets/img/clients/ebara.webp" },
+  { id: 9, title: "Mr. Mu. Kazhanjiyam", tag: "Tamil Cinema", description: "Mr. Mu. Kazhanjiyam, Tamil Film Director and Producer", imageSrc: "/assets/img/clients/kalanchiyam.webp" },
+  { id: 10, title: "Venkatesan & Joseph", tag: "Aerotech Innovation Pvt Ltd", description: "Venkatesan (CTO) and Joseph (Tech Lead) of Aerotech Innovation Pvt Ltd", imageSrc: "/assets/img/clients/aerotech-alt.jpg" },
+  { id: 11, title: "Mr. Vishupriyan", tag: "Bigbox International", description: "Bigbox International, Owner Mr. Vishupriyan", imageSrc: "/assets/img/clients/big-box-alt.jpg" },
+  
+  
+  { id: 12, title: "Shagaya Raj", tag: "HCL Technologies", description: "HCL Technologies, Shagaya Raj", imageSrc: "/assets/img/clients/hcl-alt.jpg" },
+  { id: 13, title: "Mr. Paul Sunder Singh", tag: "Karunalaya Child Welfare Trust", description: "Mr. Paul Sunder Singh, Director of Karunalaya Child Welfare Trust", imageSrc: "/assets/img/clients/karunalaya-alt.jpg" },
+  { id: 14, title: "Mr. Kumaran", tag: "Switzerland Client", description: "Nice meeting with Mr. Kumaran from Switzerland", imageSrc: "/assets/img/clients/kumaran-alt.jpg" },
+  { id: 15, title: "Satheesh", tag: "My Pink Bay", description: "My Pink Bay, Owner Satheesh", imageSrc: "/assets/img/clients/my-pink-alt.jpg" },
 ];
 
 /**
@@ -39,6 +42,8 @@ function ClientCard(item: CardStackItem, { active }: { active: boolean }) {
         draggable={false}
         onError={(e) => {
           (e.target as HTMLImageElement).src = FALLBACK_IMG;
+          console.log(e);
+          
         }}
       />
 
@@ -72,9 +77,9 @@ function ClientCard(item: CardStackItem, { active }: { active: boolean }) {
             {item.tag}
           </span>
         ) : null}
-        <h3 style={{ margin: "0 0 4px", fontSize: "17px", fontWeight: 700, color: "#fff" }}>
+        <h4 style={{ margin: "0 0 4px", fontSize: "17px", fontWeight: 700, color: "#fff" }}>
           {item.title}
-        </h3>
+        </h4>
         {item.description ? (
           <p style={{ margin: 0, fontSize: "13px", fontWeight: 500, lineHeight: 1.45, color: "rgba(255,255,255,0.8)" }}>
             {item.description}
@@ -101,57 +106,26 @@ export default function Client() {
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto", width: "100%" }}>
         {/* Header */}
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "flex-end",
-            justifyContent: "space-between",
-            gap: "30px",
-            borderBottom: "1px solid #e2e8f0",
-            paddingBottom: "20px",
-            marginBottom: "32px",
-          }}
-        >
-          <div>
-            <span
-              style={{
-                display: "block",
-                marginBottom: "10px",
-                fontSize: "12px",
-                fontWeight: 700,
-                letterSpacing: "3px",
-                color: "#50a778",
-              }}
-            >
+        
+        <div className="row  align-items-center">
+          <div className="col-xl-3">
+            <span className="tp-section-subtitle text-black blink-ball">
               OUR NETWORK
+
             </span>
-            <h2
-              style={{
-                margin: 0,
-                fontSize: "38px",
-                fontWeight: 800,
-                letterSpacing: "-1px",
-                lineHeight: 1.1,
-                color: "#1c1d20",
-              }}
-            >
-              Meeting with our Clients
-            </h2>
           </div>
-          <p
-            style={{
-              margin: 0,
-              maxWidth: "500px",
-              fontSize: "15px",
-              lineHeight: 1.65,
-              color: "rgba(28,29,32,0.7)",
-            }}
-          >
-            We highly value the chance to engage with our clients, as it
-            ignites our enthusiasm for delivering outstanding projects. Each
-            meeting acts as a gateway to unlocking new levels of success.
-          </p>
+
+          <div className="col-xl-9">
+            <div className="px-project-title-box">
+            
+                <h4 className="px-about-title mb-20">
+              <span className="text-blue-about">Meeting with</span> our Clients
+            </h4>
+              <p className="text-figtree text-black mt-2 font-paragraph-cls">
+              We highly value the chance to engage with our clients, as it ignites our enthusiasm for delivering outstanding projects. Each meeting acts as a gateway to unlocking new levels of success.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Card stack */}
