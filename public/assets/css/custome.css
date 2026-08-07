@@ -1916,6 +1916,7 @@ select {
     .contact-card {
         padding: 14px;
     }
+    
 
     .contact-icon {
         width: 40px;
@@ -2091,3 +2092,9 @@ select {
 
 
 /* floating button nds  */
+
+@media screen and (min-width:990px) {
+    .pt-lg-50{
+        padding-top: 50px !important;
+    }
+}

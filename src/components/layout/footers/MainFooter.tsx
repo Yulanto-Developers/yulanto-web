@@ -44,7 +44,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                 />
             </div>
             {/* Top Footer */}
-            <div className="px-footer-area pt-20 pt-lg-50">
+            <div className="px-footer-area pt-lg-50">
                 <div className="container container-1550">
                     <div className="row align-items-start">
 
