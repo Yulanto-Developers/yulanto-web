@@ -21,8 +21,14 @@ export default function HeaderMenu() {
     
   `}
                 >
+<<<<<<< HEAD
                     {/*  ${item.label === "Services" ? "services-menu" : ""} serivoc heigh code */}
                     {
+=======
+                     {/* ${item.label === "Services" ? "services-menu" : ""} serivoc heigh code */}
+
+                     {
+>>>>>>> 888804cb71161dd0ec52bfc9a6fa2c5f01a803c4
                         item.sublinkTrue === true ? (
                             <a className="menu-link">
                                 {item.label}
@@ -38,7 +44,12 @@ export default function HeaderMenu() {
                                 )}
                             </a>
                         )
+<<<<<<< HEAD
                     }
+=======
+                     }
+                  
+>>>>>>> 888804cb71161dd0ec52bfc9a6fa2c5f01a803c4
 
                     {/* Split-pane side-opening dropdown */}
                     {item.type === "dropdown" && (

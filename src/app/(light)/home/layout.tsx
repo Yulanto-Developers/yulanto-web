@@ -5,6 +5,7 @@ import { ClientProviders } from "@/providers";
 import FloatingActionsWrapper from "@/components/home/home/components/FloatingIcon";
 import { QuoteProvider } from "@/components/home/home/myComponents/Content/QuoteContext";
 import QuoteModal from "@/components/home/home/myComponents/Pop";
+import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
 
 export default function DesignStudioLayout({
   children,
@@ -28,6 +29,7 @@ export default function DesignStudioLayout({
         {/* Renders perfectly outside the scroll wrapper track */}
         <FloatingActionsWrapper />
         <QuoteModal />
+        <FloatingQuoteButton />
       </ClientProviders>
     </QuoteProvider>
   );

@@ -85,7 +85,7 @@ const PersonalPortfolioGallery = () => {
                 </div>
             </div>
 
-            <div className="px-gallery-area pt-40 pb-140">
+            <div className="px-gallery-area pt-lg-40 pt-20 pb-140">
                 <div className="px-gallery-slider-one mb-20">
 
                     <div className="px-gallery-active tp-slider-transtion">

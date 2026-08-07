@@ -1,9 +1,11 @@
 import { services } from "@/data/site-data";
 import ShapeGrid from "./common/ShapeGrid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 const Service = () => {
 	return (
 		<div
-			className="px-service-area px-service-3-style pt-120 pb-50 z-index-1"
+			className="px-service-area px-service-3-style pt-lg--120 pt-80 pb-lg-50 pb-30 z-index-1"
 			style={{ backgroundColor: "#fff" }}
 		>
 			{/* <div className="footer-shape-bg">
@@ -19,7 +21,7 @@ const Service = () => {
 			</div> */}
 			<div className="container container-1750">
 				{/* Title */}
-				<div className="row">
+				<div className="row mb-50">
 					<div className="col-xl-3">
 						<span className="px-section-subtitle text-black our-development pt-40 blink-ball">
 
@@ -86,7 +88,7 @@ const Service = () => {
 
 											<div
 												id={collapseId}
-												className={`accordion-collapse collapse ${isFirst ? "show" : ""
+												className={`accordion-collapse collapse pt-10 pt-lg-0 ${isFirst ? "show" : ""
 													}`}
 												data-bs-parent="#accordionExample1"
 											>
@@ -99,17 +101,24 @@ const Service = () => {
 																<p >{item}</p>
 															) : (
 																<>
-																	<h5
-																		style={{
-																			color: "#000000",
-																			marginBottom: "10px",
-																			fontWeight: 600,
-																		}}
-																		className="text-tenor"
-																	>
-																		{item.desTitle}
-																	</h5>
+																	<div className="d-flex align-items-baseline gap-2">
 
+
+																		<FontAwesomeIcon
+																			icon={faAnglesRight}
+																			className="text-black"
+																		/>
+																		<h5
+																			style={{
+																				color: "#000000",
+																				marginBottom: "10px",
+																				fontWeight: 600,
+																			}}
+																			className="text-tenor"
+																		>
+																			{item.desTitle}
+																		</h5>
+																	</div>
 																	<p className="text-figtree">
 																		{item.descPara}
 																	</p>

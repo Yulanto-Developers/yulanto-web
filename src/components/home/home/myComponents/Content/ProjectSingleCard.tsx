@@ -14,7 +14,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
 }) => {
     return (
         <div className="portfolio-project-card">
-            <div className="px-project-item mb-20">
+            <div className="px-project-item mb-lg-20">
 
                 <div className="px-project-content d-flex align-items-center justify-content-between">
                     <h4 className="px-project-title">
@@ -37,8 +37,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                                 height={680}
                                 style={{
                                     width: "100%",
-                                    height: "450px",
-                                    objectFit:"cover"
+                                    objectFit: "cover"
                                 }}
                             />
 

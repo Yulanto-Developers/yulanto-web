@@ -7,7 +7,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
-import {OurPartner} from '@/components/home/home/myComponents'
+import { OurPartner } from '@/components/home/home/myComponents'
 
 // Counter Animation Component
 const AnimatedCounter = ({ value }: { value: number }) => {
@@ -99,7 +99,7 @@ const StatCard: React.FC<StatCardProps> = ({
 
 const Testimonial = () => {
     return (
-        <section className="px-testimonial-area pt-120 pb-100" style={{ backgroundColor: '#F5F5F5', overflow: 'hidden' }}>
+        <section className="px-testimonial-area pt-lg-120  pb-lg-100 pb-80" style={{ backgroundColor: '#F5F5F5', overflow: 'hidden' }}>
             <div className="container">
 
                 {/* Top Animated Header Row */}
@@ -125,12 +125,12 @@ const Testimonial = () => {
                             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
                         >
                             <div className="px-project-title-box">
-                                <h3 className="px-section-title mb-25 text-effect" style={{ fontSize: '80px' }}>
+                                <h3 className="px-section-title mb-25 text-effect" style={{ fontSize: 'clamp(48px, 5vw, 80px)' }}>
                                     <span className="word">Client </span>
                                     <span>Testimonials</span>
                                 </h3>
 
-                                <p className="ms-4 font-paragraph-cls">
+                                <p className="ms-lg-4 font-paragraph-cls">
                                     We've worked with clients globally across various industries and helped them achieve their business goals. Here are some of our recent success stories.
                                 </p>
                             </div>
@@ -139,11 +139,11 @@ const Testimonial = () => {
                 </div>
 
                 {/* Main Content Row */}
-                <div className="row align-items-center pt-50">
+                <div className="row align-items-center pt-lg-50">
 
                     {/* Left Column: Stat Cards & Review Images */}
-                    <div className="col-xl-4 order-2 order-xl-1 mt-5 mt-xl-0">
-                        <div className="d-flex flex-column align-items-center align-items-xl-end">
+                    <div className="col-xl-4  mt-5 mt-xl-0">
+                        <div className="d-flex flex-column align-items-start align-items-lg-end">
 
                             {/* Card 1: Trusted By */}
                             <StatCard
@@ -197,9 +197,9 @@ const Testimonial = () => {
                                     <img
                                         src="/assets/img/brand/review.png"
                                         alt="Google Rating"
-                                       
+
                                         className="img-fluid object-contain"
-                                        style={{width:'80%'}}
+                                        style={{ width: '80%' }}
                                     />
                                 </div>
                             </div>
@@ -208,8 +208,8 @@ const Testimonial = () => {
                     </div>
 
                     {/* Right Column: Testimonial Content (Occupies 8 columns) */}
-                    <div className="col-xl-8 order-1 order-xl-2">
-                        <div className="px-testimonial-slider ">
+                    <div className="col-xl-8 pb-5">
+                        <div className="px-testimonial-slider pb-10">
                             <div className="px-testimonial-active">
                                 <Swiper
                                     modules={[Autoplay, Pagination]}

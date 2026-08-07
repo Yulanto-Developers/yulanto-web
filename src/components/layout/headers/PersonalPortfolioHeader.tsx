@@ -134,7 +134,7 @@ const PersonalPortfolioHeader = () => {
                     <button
                       type="button"
                       onClick={() => {
-                        console.log("Button clicked");
+                        // console.log("Button clicked");
                         toggleMainSidebar();
                       }}
                       className="px-header-bar tp-offcanvas-open-btn"

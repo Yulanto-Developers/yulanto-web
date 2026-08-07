@@ -14,7 +14,7 @@ const StartupAgencyProject = () => {
     const displayProjectData = portfolioProjects.slice(0, 5);
 
     return (
-        <section className="px-project-area pt-50 pb-130">
+        <section className="px-project-area pt-50 pb-30 pb-lg-130">
             <div className="container container-1550">
 
                 {/* TITLE */}

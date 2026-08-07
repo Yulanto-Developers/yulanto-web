@@ -75,7 +75,7 @@
     &-slider{
         padding-right: 65px;
         @media #{$xs}{
-            padding-top: 70px;
+            padding-top: 30px;
         }
         @media #{$lg,$md,$xs} {
             padding-right: 0;
