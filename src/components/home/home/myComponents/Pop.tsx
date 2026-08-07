@@ -315,9 +315,9 @@ export default function QuoteModal() {
                             Tell us about your project or business requirements. Fill out the
                             form, and our team will contact you within 24 hours.
                         </p>
-                        <p className="text-figtree small-desc">
+                        {/* <p className="text-figtree small-desc">
                             🔒 Your information is secure and confidential.
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </div>

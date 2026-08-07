@@ -9,13 +9,13 @@ import "swiper/css";
 
 const brandLogosDark = [
     "/assets/img/brand/Logo-1.png",
-   "/assets/img/brand/Logo-2.png",
+    "/assets/img/brand/Logo-2.png",
     "/assets/img/brand/Logo-3.png",
-   "/assets/img/brand/Logo-4.png",
+    "/assets/img/brand/Logo-4.png",
     "/assets/img/brand/Logo-5.png",
     "/assets/img/brand/Logo-6.png",
     "/assets/img/brand/Logo-7.png",
-   
+
 ];
 // const brandLogosWhite = [
 //     "/assets/img/brand/image-1.jpg",
@@ -31,64 +31,73 @@ const brandLogosDark = [
 
 const CreativeAgencyBrand = () => {
     const isDarkTheme = useIsDarkRoute();
-    const brands =  brandLogosDark;
+    const brands = brandLogosDark;
 
     return (
-        <div className="px-brand-area px-brand-style-5 ">
-            <div className="container container-1550">
-                <div className="row gx-0">
-                    <div className="col-12">
-                        <Swiper
-                            modules={[Autoplay]}
-                            loop={true}
-                            speed={1000}
-                            autoplay={{
-                                delay: 2500000,
-                                disableOnInteraction: false,
-                            }}
-                            // Breakpoints match your original bootstrap layout grid flawlessly
-                            breakpoints={{
-                                0: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 20
-                                },
-                                576: {
-                                    slidesPerView: 3,
-                                    spaceBetween: 20
-                                },
-                                768: {
-                                    slidesPerView: 4,
-                                    spaceBetween: 30
-                                },
-                                992: {
-                                    slidesPerView: 5,
-                                    spaceBetween: 40
-                                },
-                                1200: {
-                                    slidesPerView: 4,
-                                    spaceBetween: 40
-                                }
-                            }}
-                            className="px-brand-active"
-                        >
-                            {brands.map((img, index) => (
-                                <SwiperSlide key={img}>
-                                    <div className="px-brand-item text-center">
-                                        <Image
-                                            className="img-fluid object-contain mx-auto"
-                                            width={200}
-                                            height={90}
-                                            src={img}
-                                            alt={`brand-${index + 1}`}
-                                        />
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
+        <>
+            <div className="px-brand-area px-brand-style-5 mt-lg-10 creative-agency-brand">
+                <div className="container container-1550">
+                    <div className="row gx-0">
+                        <div className="col-12">
+                            <Swiper
+                                modules={[Autoplay]}
+                                loop={true}
+                                speed={1000}
+                                autoplay={{
+                                    delay: 2500,
+                                    disableOnInteraction: false,
+                                }}
+                                // Breakpoints match your original bootstrap layout grid flawlessly
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20
+                                    },
+                                    576: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 20
+                                    },
+                                    768: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 30
+                                    },
+                                    992: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 40
+                                    },
+                                    1200: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 40
+                                    }
+                                }}
+                                className="px-brand-active"
+                            >
+                                {brands.map((img, index) => (
+                                    <SwiperSlide key={img}>
+                                        <div className="px-brand-item text-center">
+                                            <Image
+                                                className="img-fluid object-contain mx-auto"
+                                                width={200}
+                                                height={90}
+                                                src={img}
+                                                alt={`brand-${index + 1}`}
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <style jsx>{`
+                @media (min-width: 768px) {
+                    .creative-agency-brand {
+                        margin-top: 0 !important;
+                    }
+                }
+            `}</style>
+        </>
     );
 };
 

@@ -44,7 +44,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                 />
             </div>
             {/* Top Footer */}
-            <div className="px-footer-area pt-50">
+            <div className="px-footer-area pt-20 pt-lg-50">
                 <div className="container container-1550">
                     <div className="row align-items-start">
 
@@ -190,7 +190,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                 <span className="text-tenor text-white" style={{ fontSize: '18px' }}>© 2026 Yulanto Web Creations. All Rights Reserved.</span>
             </div>
             {/* Copyright */}
-            <div className={`px-copyright-area ${copyrightClassName}`}>
+            <div className={`px-copyright-area ${copyrightClassName}  media-margin-cls`}>
                 <div className="container-1550">
                     <div className="row">
                         <div className="col-xl-12">

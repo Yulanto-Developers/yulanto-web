@@ -7,7 +7,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
-import {OurPartner} from '@/components/home/home/myComponents'
+import { OurPartner } from '@/components/home/home/myComponents'
 
 // Counter Animation Component
 const AnimatedCounter = ({ value }: { value: number }) => {
@@ -139,7 +139,7 @@ const Testimonial = () => {
                 </div>
 
                 {/* Main Content Row */}
-                <div className="row align-items-center pt-50">
+                <div className="row align-items-center pt-lg-50">
 
                     {/* Left Column: Stat Cards & Review Images */}
                     <div className="col-xl-4 order-2 order-xl-1 mt-5 mt-xl-0">
@@ -197,9 +197,9 @@ const Testimonial = () => {
                                     <img
                                         src="/assets/img/brand/review.png"
                                         alt="Google Rating"
-                                       
+
                                         className="img-fluid object-contain"
-                                        style={{width:'80%'}}
+                                        style={{ width: '80%' }}
                                     />
                                 </div>
                             </div>
@@ -209,7 +209,7 @@ const Testimonial = () => {
 
                     {/* Right Column: Testimonial Content (Occupies 8 columns) */}
                     <div className="col-xl-8 order-1 order-xl-2 pb-5">
-                        <div className="px-testimonial-slider ">
+                        <div className="px-testimonial-slider pb-10">
                             <div className="px-testimonial-active">
                                 <Swiper
                                     modules={[Autoplay, Pagination]}

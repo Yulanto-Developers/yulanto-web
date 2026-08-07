@@ -618,12 +618,6 @@ const Hero = () => {
                                 </span>
                             </button>
                         </div>
-
-                        {showQuoteModal && (
-                            <div>
-                                hi
-                            </div>
-                        )}
                     </div>
                 </div>
             </div>

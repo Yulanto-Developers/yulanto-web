@@ -1,5 +1,7 @@
 import { services } from "@/data/site-data";
 import ShapeGrid from "./common/ShapeGrid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 const Service = () => {
 	return (
 		<div
@@ -99,17 +101,24 @@ const Service = () => {
 																<p >{item}</p>
 															) : (
 																<>
-																	<h5
-																		style={{
-																			color: "#000000",
-																			marginBottom: "10px",
-																			fontWeight: 600,
-																		}}
-																		className="text-tenor"
-																	>
-																		{item.desTitle}
-																	</h5>
+																	<div className="d-flex align-items-baseline gap-2">
 
+
+																		<FontAwesomeIcon
+																			icon={faAnglesRight}
+																			className="text-black"
+																		/>
+																		<h5
+																			style={{
+																				color: "#000000",
+																				marginBottom: "10px",
+																				fontWeight: 600,
+																			}}
+																			className="text-tenor"
+																		>
+																			{item.desTitle}
+																		</h5>
+																	</div>
 																	<p className="text-figtree">
 																		{item.descPara}
 																	</p>
