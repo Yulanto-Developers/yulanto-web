@@ -1847,9 +1847,9 @@ input[name="name"].has-value+.name-next-btn {
 
 
         width: 70%;
-        max-height: 90vh;
+        /* max-height: 90vh; */
         overflow-y: auto;
-        align-items: flex-start;
+        align-items: stretch;
     }
 
 
@@ -1955,6 +1955,22 @@ input[name="name"].has-value+.name-next-btn {
 
     .contact-details p {
         font-size: 13px;
+    }
+}
+
+/* Desktop */
+.mobile-get-started {
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .desktop-reach-us {
+        display: none;
+    }
+
+    .mobile-get-started {
+        display: block;
     }
 }
 

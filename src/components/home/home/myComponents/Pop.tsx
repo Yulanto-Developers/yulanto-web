@@ -28,7 +28,7 @@ export default function QuoteModal() {
     const [captcha, setCaptcha] = useState({ num1: 0, num2: 0 });
     const [userCaptcha, setUserCaptcha] = useState("");
     const [captchaStatus, setCaptchaStatus] = useState<"idle" | "correct" | "incorrect">("idle");
-
+    const [showButton, setShowButton] = useState(false);
     // Generate random Math Captcha numbers
     const generateCaptcha = () => {
         const n1 = Math.floor(Math.random() * 9) + 1;
@@ -86,6 +86,18 @@ export default function QuoteModal() {
             setCaptchaStatus("incorrect");
         }
     };
+
+
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         setShowButton(window.scrollY > 400);
+    //     };
+
+    //     handleScroll();
+    //     window.addEventListener("scroll", handleScroll);
+
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    // }, []);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -299,29 +311,43 @@ export default function QuoteModal() {
                         <div className="contact-info py-10">
                             {showRestForm && (
                                 <>
-                                    <p className="text-tenor">Reach Us</p>
-                                    <a href="mailto:info@yulanto.com" className="contact-card">
-                                        <div className="contact-icon">
-                                            <FontAwesomeIcon icon={faEnvelope} />
-                                        </div>
-                                        <p>info@yulanto.com</p>
-                                    </a>
+                                    <div className="desktop-reach-us">
+                                        <p className="text-tenor">Reach Us</p>
+                                        <a href="mailto:info@yulanto.com" className="contact-card">
+                                            <div className="contact-icon">
+                                                <FontAwesomeIcon icon={faEnvelope} />
+                                            </div>
+                                            <p>info@yulanto.com</p>
+                                        </a>
 
-                                    <a href="tel:+919962157250" className="contact-card">
-                                        <div className="contact-icon">
-                                            <FontAwesomeIcon icon={faPhone} />
-                                        </div>
-                                        <p>+91 99621 57250</p>
-                                    </a>
-                                    <a href="https://maps.app.goo.gl/sHp8T3KXGXav9GuT9"
-                                        target="_blank"
+                                        <a href="tel:+919962157250" className="contact-card">
+                                            <div className="contact-icon">
+                                                <FontAwesomeIcon icon={faPhone} />
+                                            </div>
+                                            <p>+91 99621 57250</p>
+                                        </a>
+                                        <a href="https://maps.app.goo.gl/sHp8T3KXGXav9GuT9"
+                                            target="_blank"
 
-                                        className="contact-card">
-                                        <div className="contact-icon">
-                                            <FontAwesomeIcon icon={faLocationDot} />
-                                        </div>
-                                        <p>First Floor, F3, #4/608, VOC St, near Turyaa Hotel, OMR, Kottivakkam, Chennai, Greater Chennai, Tamil Nadu 600096</p>
-                                    </a>
+                                            className="contact-card">
+                                            <div className="contact-icon">
+                                                <FontAwesomeIcon icon={faLocationDot} />
+                                            </div>
+                                            <p>First Floor, F3, #4/608, VOC St, near Turyaa Hotel, OMR, Kottivakkam, Chennai, Greater Chennai, Tamil Nadu 600096</p>
+                                        </a>
+                                    </div>
+                                    <div className="mobile-get-started">
+                                        <div className="badge text-tenor">Let's Get Started</div>
+
+                                        <h2 className="text-tenor text-white">
+                                            Your Digital Success Starts Here
+                                        </h2>
+
+                                        <p className="text-figtree  d-none">
+                                            Tell us about your project or business requirements. Fill out the
+                                            form, and our team will contact you within 24 hours.
+                                        </p>
+                                    </div>
                                 </>
                             )}
                         </div>
@@ -341,7 +367,7 @@ export default function QuoteModal() {
                         </p> */}
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
