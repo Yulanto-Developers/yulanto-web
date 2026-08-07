@@ -5,7 +5,7 @@ import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 const Service = () => {
 	return (
 		<div
-			className="px-service-area px-service-3-style pt-120 pb-50 z-index-1"
+			className="px-service-area px-service-3-style pt-lg--120 pt-80 pb-lg-50 pb-30 z-index-1"
 			style={{ backgroundColor: "#fff" }}
 		>
 			{/* <div className="footer-shape-bg">
@@ -88,7 +88,7 @@ const Service = () => {
 
 											<div
 												id={collapseId}
-												className={`accordion-collapse collapse ${isFirst ? "show" : ""
+												className={`accordion-collapse collapse pt-10 pt-lg-0 ${isFirst ? "show" : ""
 													}`}
 												data-bs-parent="#accordionExample1"
 											>
