@@ -72,9 +72,9 @@ function ClientCard(item: CardStackItem, { active }: { active: boolean }) {
             {item.tag}
           </span>
         ) : null}
-        <h3 style={{ margin: "0 0 4px", fontSize: "17px", fontWeight: 700, color: "#fff" }}>
+        <h4 style={{ margin: "0 0 4px", fontSize: "17px", fontWeight: 700, color: "#fff" }}>
           {item.title}
-        </h3>
+        </h4>
         {item.description ? (
           <p style={{ margin: 0, fontSize: "13px", fontWeight: 500, lineHeight: 1.45, color: "rgba(255,255,255,0.8)" }}>
             {item.description}
@@ -101,57 +101,26 @@ export default function Client() {
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto", width: "100%" }}>
         {/* Header */}
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "flex-end",
-            justifyContent: "space-between",
-            gap: "30px",
-            borderBottom: "1px solid #e2e8f0",
-            paddingBottom: "20px",
-            marginBottom: "32px",
-          }}
-        >
-          <div>
-            <span
-              style={{
-                display: "block",
-                marginBottom: "10px",
-                fontSize: "12px",
-                fontWeight: 700,
-                letterSpacing: "3px",
-                color: "#50a778",
-              }}
-            >
+        
+        <div className="row  align-items-center">
+          <div className="col-xl-3">
+            <span className="tp-section-subtitle text-black blink-ball">
               OUR NETWORK
+
             </span>
-            <h2
-              style={{
-                margin: 0,
-                fontSize: "38px",
-                fontWeight: 800,
-                letterSpacing: "-1px",
-                lineHeight: 1.1,
-                color: "#1c1d20",
-              }}
-            >
-              Meeting with our Clients
-            </h2>
           </div>
-          <p
-            style={{
-              margin: 0,
-              maxWidth: "500px",
-              fontSize: "15px",
-              lineHeight: 1.65,
-              color: "rgba(28,29,32,0.7)",
-            }}
-          >
-            We highly value the chance to engage with our clients, as it
-            ignites our enthusiasm for delivering outstanding projects. Each
-            meeting acts as a gateway to unlocking new levels of success.
-          </p>
+
+          <div className="col-xl-9">
+            <div className="px-project-title-box">
+            
+                <h4 className="px-about-title mb-20">
+              <span className="text-blue-about">Meeting with</span> our Clients
+            </h4>
+              <p className="text-figtree text-black mt-2 font-paragraph-cls">
+              We highly value the chance to engage with our clients, as it ignites our enthusiasm for delivering outstanding projects. Each meeting acts as a gateway to unlocking new levels of success.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Card stack */}

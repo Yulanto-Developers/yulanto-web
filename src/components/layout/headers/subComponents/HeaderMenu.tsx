@@ -22,12 +22,23 @@ export default function HeaderMenu() {
   `}
                 >
                     {/*  ${item.label === "Services" ? "services-menu" : ""} serivoc heigh code */}
-                    <a className="menu-link">
-                        {item.label}
-                        {item.type === "dropdown" && (
-                            <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
-                        )}
-                    </a>
+                    {
+                        item.sublinkTrue === true ? (
+                            <a className="menu-link">
+                                {item.label}
+                                {item.type === "dropdown" && (
+                                    <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
+                                )}
+                            </a>
+                        ) : (
+                            <a className="menu-link" href={item.href}>
+                                {item.label}
+                                {item.type === "dropdown" && (
+                                    <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
+                                )}
+                            </a>
+                        )
+                    }
 
                     {/* Split-pane side-opening dropdown */}
                     {item.type === "dropdown" && (

@@ -8,7 +8,14 @@ p {
 .px-35 {
     padding: 0px 35px !important;
 }
-
+h3{
+    font-size: 80px !important;
+    font-family: var(--font-tenor) !important;
+ 
+}
+.tp-section-subtitle.pre:before {
+       background-color: #53ae7d !important;
+}
 .key-text {
     white-space: nowrap;
 }

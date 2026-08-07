@@ -668,9 +668,9 @@
             color: rgba(30, 30, 30, 0.60);
         }
         &-box{
-            padding: 60px;
+            padding: 30px;
             border-radius: 12px;
-            background: #F7F7F7;
+            background: #fff;
             @media #{$xs} {
                 padding: 20px;
             }
