@@ -1,17 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQuoteModal } from "./Content/QuoteContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faEnvelope,
     faPhone,
     faLocationDot,
+    faArrowRight
 } from "@fortawesome/free-solid-svg-icons";
 import { socialLinks } from "@/data/footer-data";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function QuoteModal() {
     const { open, closeModal } = useQuoteModal();
@@ -24,7 +24,26 @@ export default function QuoteModal() {
         lookingFor: "",
         message: "",
     });
-    const [phone, setPhone] = useState("");
+
+    // Math Captcha States
+    const [captcha, setCaptcha] = useState({ num1: 0, num2: 0 });
+    const [userCaptcha, setUserCaptcha] = useState("");
+    const [captchaStatus, setCaptchaStatus] = useState<"idle" | "correct" | "incorrect">("idle");
+
+    // Generate random Math Captcha numbers
+    const generateCaptcha = () => {
+        const n1 = Math.floor(Math.random() * 9) + 1;
+        const n2 = Math.floor(Math.random() * 9) + 1;
+        setCaptcha({ num1: n1, num2: n2 });
+        setUserCaptcha("");
+        setCaptchaStatus("idle");
+    };
+
+    useEffect(() => {
+        if (showRestForm) {
+            generateCaptcha();
+        }
+    }, [showRestForm]);
 
     if (!open) return null;
 
@@ -46,20 +65,38 @@ export default function QuoteModal() {
     };
 
     const handlePhoneChange = (value: string) => {
-    setFormData((prev) => ({
-        ...prev,
-        phone: value,
-    }));
-};
+        setFormData((prev) => ({
+            ...prev,
+            phone: value,
+        }));
+    };
 
-    const handleNameBlur = () => {
-        if (formData.name.trim() !== "") {
-            setShowRestForm(true);
+    // Live validation for Captcha input
+    const handleCaptchaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const val = e.target.value;
+        setUserCaptcha(val);
+
+        if (val === "") {
+            setCaptchaStatus("idle");
+            return;
+        }
+
+        if (parseInt(val, 10) === captcha.num1 + captcha.num2) {
+            setCaptchaStatus("correct");
+        } else {
+            setCaptchaStatus("incorrect");
         }
     };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Prevent submission if Captcha is wrong
+        if (captchaStatus !== "correct") {
+            setCaptchaStatus("incorrect");
+            return;
+        }
+
         console.log("Quote Request", formData);
         closeModal();
     };
@@ -80,80 +117,65 @@ export default function QuoteModal() {
 
                     <form onSubmit={handleSubmit} className="quote-form">
                         {/* Name Input */}
-                      <div className="floating-input name-input-wrapper">
-    <input
-        id="name"
-        name="name"
-        type="text"
-        value={formData.name}
-        placeholder=" "
-        onChange={handleChange}
-        required
-    />
+                        <div className="floating-input name-input-wrapper">
+                            <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                value={formData.name}
+                                placeholder=" "
+                                onChange={handleChange}
+                                required
+                            />
 
-    <label htmlFor="name">Enter Your Name</label>
+                            <label htmlFor="name">Enter Your Name</label>
 
-    <button
-        type="button"
-        className="name-next-btn"
-        onClick={() => {
-            if (formData.name.trim() !== "") {
-                setShowRestForm(true);
-            }
-        }}
-    >
-        <FontAwesomeIcon icon={faArrowRight} />
-    </button>
+                            <button
+                                type="button"
+                                className="name-next-btn"
+                                onClick={() => {
+                                    if (formData.name.trim() !== "") {
+                                        setShowRestForm(true);
+                                    }
+                                }}
+                            >
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </button>
 
-    {!showRestForm  && (
-        <p className="name-helper">
-            Click the arrow button to continue.
-        </p>
-    )}
-</div>
+                            {!showRestForm && (
+                                <p className="name-helper">
+                                    Click the arrow button to continue.
+                                </p>
+                            )}
+                        </div>
 
-                       
                         {showRestForm && (
                             <div className="quote-rest-form">
                                 <h4 className="welcome-text">
                                     {getGreeting()}, <span>{formData.name}</span> 👋
                                 </h4>
 
-                              
-
                                 <div className="floating-input phone-input-wrapper">
-    <PhoneInput
-        country="in"
-    //     onlyCountries={[
-    //         "in",
-    //         "us",
-    //         "uk",
-    //         "ae",
-    //         "ca",
-    //         "au",
-    //         "nz",
-    //         "my",
-    //         "sg",
-    //         "uae",
-    //     ]
-    // }
-        value={formData.phone}
-        onChange={handlePhoneChange}
-        enableSearch
-        placeholder="Enter Phone Number"
-        inputStyle={{
-            width: "100%",
-            height: "54px",
-            borderRadius: "10px",
-            border: "1px solid #ddd",
-        }}
-        buttonStyle={{
-            borderTopLeftRadius: "10px",
-            borderBottomLeftRadius: "10px",
-        }}
-    />
-</div>
-  <div className="floating-input">
+                                    <PhoneInput
+                                        country="in"
+                                        value={formData.phone}
+                                        onChange={handlePhoneChange}
+                                        enableSearch
+                                        placeholder="Enter Phone Number"
+                                        inputStyle={{
+                                            width: "100%",
+                                            height: "54px",
+                                            borderRadius: "10px",
+                                            border: "1px solid #ddd",
+                                        }}
+                                        buttonStyle={{
+                                            borderTopLeftRadius: "10px",
+                                            borderBottomLeftRadius: "10px",
+                                        }}
+                                    />
+                                </div>
+
+                                <div className="floating-input">
                                     <input
                                         type="email"
                                         id="email"
@@ -165,14 +187,15 @@ export default function QuoteModal() {
                                     />
                                     <label htmlFor="email">Email Address</label>
                                 </div>
+
                                 <div className="floating-input">
                                     <select
-    id="lookingFor"
-    name="lookingFor"
-    value={formData.lookingFor}
-    onChange={handleChange}
-    className={formData.lookingFor ? "" : "placeholder-select"}
->
+                                        id="lookingFor"
+                                        name="lookingFor"
+                                        value={formData.lookingFor}
+                                        onChange={handleChange}
+                                        className={formData.lookingFor ? "" : "placeholder-select"}
+                                    >
                                         <option value=""></option>
                                         <option value="Landing Page">Landing Page</option>
                                         <option value="Website Re-Design">Website Re-Design</option>
@@ -200,6 +223,56 @@ export default function QuoteModal() {
                                     <label htmlFor="message">Message</label>
                                 </div>
 
+                                {/* Math Captcha Block - Question & Answer Split */}
+                                <div className="captcha-container" style={{ marginBottom: "10px" }}>
+                                    <label
+                                        htmlFor="mathCaptcha"
+                                        style={{
+                                            display: "block",
+                                            fontSize: "14px",
+                                            fontWeight: "600",
+                                            color: "#334155",
+                                            marginBottom: "6px"
+                                        }}
+                                    >
+                                        Security Check: <span style={{ color: "#2563eb" }}>{captcha.num1} + {captcha.num2} = ?</span>
+                                    </label>
+
+                                    <div className="floating-input" style={{ marginBottom: "0" }}>
+                                        <input
+                                            type="number"
+                                            id="mathCaptcha"
+                                            name="mathCaptcha"
+                                            value={userCaptcha}
+                                            placeholder=" "
+                                            onChange={handleCaptchaChange}
+                                            required
+                                            style={{
+                                                borderColor:
+                                                    captchaStatus === "correct"
+                                                        ? "#22c55e"
+                                                        : captchaStatus === "incorrect"
+                                                            ? "#ef4444"
+                                                            : undefined,
+                                            }}
+                                        />
+                                        <label htmlFor="mathCaptcha">Enter Answer</label>
+                                    </div>
+                                </div>
+
+                                {/* Status Feedback Messages */}
+                                {captchaStatus === "correct" && (
+                                    <p style={{ color: "#22c55e", fontSize: "10px", fontWeight: "400", marginTop: "4px", marginBottom: "5px" }}>
+                                        ✓ Verified
+                                    </p>
+                                )}
+
+                                {captchaStatus === "incorrect" && (
+                                    <p style={{ color: "#ef4444", fontSize: "10px", fontWeight: "400", marginTop: "4px", marginBottom: "5px" }}>
+                                        ✕ Incorrect answer, please try again.
+                                    </p>
+                                )}
+
                                 <button type="submit" className="submit-btn">
                                     Submit Request
                                 </button>
@@ -208,82 +281,45 @@ export default function QuoteModal() {
                     </form>
                 </div>
 
-                {/* Right Side: Blue Accent Section (Ready for future content) */}
-               
+                {/* Right Side: Blue Accent Section */}
                 <div className="quote-modal-right">
-    
- <div className="blue-section-content">
-        <div className="contact-info py-10">
-{
-                   showRestForm && (
-            <>
-            <p className="text-tenor">Reach Us</p>
-                <a href="mailto:info@yulanto.com" className="contact-card">
-                    <div className="contact-icon">
-                        <FontAwesomeIcon icon={faEnvelope} />
-                    </div>
-                    <p>info@yulanto.com</p>
-                </a>
+                    <div className="blue-section-content">
+                        <div className="contact-info py-10">
+                            {showRestForm && (
+                                <>
+                                    <p className="text-tenor">Reach Us</p>
+                                    <a href="mailto:info@yulanto.com" className="contact-card">
+                                        <div className="contact-icon">
+                                            <FontAwesomeIcon icon={faEnvelope} />
+                                        </div>
+                                        <p>info@yulanto.com</p>
+                                    </a>
 
-                <a href="tel:+919962157250" className="contact-card">
-                    <div className="contact-icon">
-                        <FontAwesomeIcon icon={faPhone} />
+                                    <a href="tel:+919962157250" className="contact-card">
+                                        <div className="contact-icon">
+                                            <FontAwesomeIcon icon={faPhone} />
+                                        </div>
+                                        <p>+91 99621 57250</p>
+                                    </a>
+                                </>
+                            )}
+                        </div>
                     </div>
-                    <p>+91 99621 57250</p>
-                </a>
 
-                {/* <div className="contact-card address-card">
-                    <div className="contact-icon">
-                        <FontAwesomeIcon icon={faLocationDot} />
-                    </div>
-                    <div className="contact-details">
-                        <span className="text-figtree">Office Address</span>
-                        <p>
-                            First Floor, F3, #4/608, VOC St,<br />
-                            Near Turyaa Hotel, OMR,<br />
-                            Kottivakkam, Chennai,<br />
-                            Tamil Nadu 600096
+                    <div className="blue-section-content">
+                        <div className="badge text-tenor">Let's Get Started</div>
+                        <h2 className="text-tenor text-white">
+                            Your Digital Success Starts Here
+                        </h2>
+                        <p className="text-figtree">
+                            Tell us about your project or business requirements. Fill out the
+                            form, and our team will contact you within 24 hours.
+                        </p>
+                        <p className="text-figtree small-desc">
+                            🔒 Your information is secure and confidential.
                         </p>
                     </div>
-                </div> */}
-                {/* <p className="text-tenor mb-0">Follow Us</p> */}
-                {/* <div className="social-links mt-5">
-                    {
-                        socialLinks.map((item:any, index:number) => (
-                            <a
-                                key={index}
-                                href={item.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="social-icon"
-                                aria-label={item.label}
-                            >
-                                {item.icon}
-                            </a>
-                        ))
-                    }
-                </div> */}
-            </>
-          )
-                }
-        </div>
-    </div>
-                  
-
-    <div className="blue-section-content">
-        <div className="badge text-tenor">Let's Get Started</div>
-        <h2 className="text-tenor text-white">
-            Your Digital Success Starts Here
-        </h2>
-        <p className="text-figtree">
-            Tell us about your project or business requirements. Fill out the
-            form, and our team will contact you within 24 hours.
-        </p>
-        <p className="text-figtree small-desc">
-            🔒 Your information is secure and confidential.
-        </p>
-    </div>
-</div>
+                </div>
             </div>
         </div>
     );
