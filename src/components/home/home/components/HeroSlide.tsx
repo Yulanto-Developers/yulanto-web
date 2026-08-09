@@ -7,14 +7,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const heroSlides = [
-    { title: "©Pixora - Motion", subtitle: "Graphics, Visual Studio", img: "/assets/img/hero/hero-2-4.jpg" },
-    { title: "©Pixora - Visual", subtitle: "Storytelling, Digital Agency", img: "/assets/img/hero/hero-2-2.jpg" },
-    { title: "©Pixora - Brand", subtitle: "Identity, Media Studio", img: "/assets/img/hero/hero-2-1.jpg" },
-    { title: "©Pixora - Digital", subtitle: "Branding, Creative Agency", img: "/assets/img/hero/hero-2-3.jpg" },
-    { title: "©Pixora - Motion", subtitle: "Graphics, Visual Studio", img: "/assets/img/hero/hero-2-4.jpg" },
-    { title: "©Pixora - Visual", subtitle: "Storytelling, Digital Agency", img: "/assets/img/hero/hero-2-2.jpg" },
-    { title: "©Pixora - Brand", subtitle: "Identity, Media Studio", img: "/assets/img/hero/hero-2-1.jpg" },
-    { title: "©Pixora - Digital", subtitle: "Branding, Creative Agency", img: "/assets/img/hero/hero-2-3.jpg" },
+    { title: "@Yulanto", subtitle: "Leading Web Design Company in Chennai for Business Growth.", img: "/assets/img/banner/hero-img-1.webp" },
+    { title: "@Yulanto", subtitle: "Awesome Website Creation in Chennai For Your Business", img: "/assets/img/banner/hero-img-2.webp" },
+    { title: "@Yulanto", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.", img: "/assets/img/banner/hero-img-3.webp" },
+    { title: "@Yulanto", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.", img: "/assets/img/banner/hero-img-4.webp" },
+    { title: "@Yulanto", subtitle: "Build a Powerful Business Website design with Experts in Chennai.", img: "/assets/img/banner/hero-img-5.webp" },
+    { title: "@Yulanto", subtitle: "Custom Website creations company for Growing Businesses in Chennai", img: "/assets/img/banner/hero-img-6.webp" },
+    // { title: "@Yulanto", subtitle: "Elevate Your Business with Chennai's Best Web Design Company", img: "/assets/img/banner/hero-img-7.webp" },
 ];
 
 const HeroSlide = () => {
