@@ -34,8 +34,8 @@ const TextMarquee = () => {
                 <div className="row">
                     <div className="col-xl-12">
                         <div className="px-hero-2-bottom text-center p-relative px-fade-anim" data-delay=".3">
-                            <h4 className="px-hero-2-text d-flex align-items-end justify-content-center">
-                                design <i className="d-none d-xl-block"><span>©Yulanto <br /> Delivering Creative Website<br /> Design Solutions Since 2015</span></i>Agency
+                            <h4 className="px-hero-2-text d-flex align-items-lg-end justify-content-center">
+                                design <i className="d-xl-block"><span>©Yulanto <br /> Delivering Creative Website<br /> Design Solutions Since 2015</span></i>Agency
                             </h4>
                         </div>
                     </div>
