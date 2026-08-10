@@ -551,7 +551,7 @@ const Hero = () => {
                                                             style={{
                                                                 position: "absolute",
                                                                 inset: 0,
-                                                                backgroundColor: "#053456",
+                                                                backgroundColor: "#53AE7D",
                                                                 opacity: 0.7,
                                                                 display: "flex",
                                                                 justifyContent: "center",
@@ -578,6 +578,7 @@ const Hero = () => {
                                                                         "var(--font-tenor)",
                                                                     textShadow:
                                                                         "1px 1px 4px rgba(0,0,0,.8)",
+                                                                        zIndex:9999
                                                                 }}
                                                             >
                                                                 {item.head}

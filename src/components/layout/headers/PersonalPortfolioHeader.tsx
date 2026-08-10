@@ -74,11 +74,10 @@ const PersonalPortfolioHeader = () => {
                 {/* mobile logo */}
                 <div className="px-header-logo d-block d-xl-none cursor-pointer">
                   <Link href="/" className=''>
-                    <Image
-                      width={95}
-                      height={33}
-                      src="/assets/img/logo/Yulanto-logo.png"
-                      alt="logo" className=''
+                    <img
+                      height={65}
+                      src="/assets/img/logo/L2.png"
+                      alt="logo"
                     />
                   </Link>
                 </div>
@@ -123,7 +122,7 @@ const PersonalPortfolioHeader = () => {
                     >
                       {/* Desktop Icon: Location Dot */}
                       <FontAwesomeIcon icon={faLocationDot} className="d-none d-xl-block chat-btn" />
-                      
+
                       {/* Mobile Icon: 3 Menu Bars */}
                       <FontAwesomeIcon icon={faBars} className="d-block d-xl-none" style={{ fontSize: "20px" }} />
                     </button>

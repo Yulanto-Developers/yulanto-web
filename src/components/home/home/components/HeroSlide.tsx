@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { useState, useRef } from "react";
 import Image from "next/image";
+import { useQuoteModal } from "../myComponents/Content/QuoteContext";
 import Link from "next/link";
 
 export const heroSlides = [
@@ -21,11 +22,12 @@ const HeroSlide = () => {
     const thumbsSwiperRef = useRef<SwiperType | null>(null);
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
     const [topSwiper, setTopSwiper] = useState<SwiperType | null>(null);
+    const { openModal } = useQuoteModal();
 
     return (
         <div className="px-hero-2-slider-wrap pb-100">
 
-            {/* Top Slides */}
+            {/* Top Slides & Stable Button */}
             <div className="row justify-content-center">
                 <div className="col-lg-8">
                     <Swiper
@@ -47,7 +49,7 @@ const HeroSlide = () => {
                         }}
                         controller={{ control: thumbsSwiper }}
                         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                        className="px-hero-2-top-active mb-40"
+                        className="px-hero-2-top-active"
                     >
                         {heroSlides.map((slide, index) => (
                             <SwiperSlide key={`${slide.title}-${index}`}>
@@ -56,12 +58,32 @@ const HeroSlide = () => {
                                         <span className="text-green-color">{slide.title}</span>
                                     </div>
                                     <div className="fix">
-                                        <span style={{ fontWeight: 300, fontSize: '18px' }}>{slide.subtitle}</span>
+                                        <span style={{ fontWeight: 300, fontSize: '18px', paddingTop: '8px' }}>{slide.subtitle}</span>
                                     </div>
                                 </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
+
+                    {/* Fixed / Stable Button (Outside Swiper) */}
+                    <div className="text-center mt-30 mb-40">
+                        <button
+                            onClick={openModal}
+                            className="button-style text-tenor"
+                        // style={{
+
+                        //     color: "#ffffff",
+                        //     padding: "12px 28px",
+                        //     fontWeight: "600",
+                        //     fontSize: "16px",
+                        //     display: "inline-block",
+                        //     textDecoration: "none",
+                        //     transition: "all 0.3s ease"
+                        // }}
+                        >
+                            Get a Free Quote
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -101,8 +123,9 @@ const HeroSlide = () => {
                                                     display: "flex",
                                                     alignItems: "center",
                                                     justifyContent: "center",
-                                                    background: "#053456a1",
+                                                    background: "#53AE7D",
                                                     padding: "10px",
+                                                    opacity: 0.7,
                                                     zIndex: 2
                                                 }}
                                             >

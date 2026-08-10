@@ -6,8 +6,13 @@
 
 .px-about {
     &-area {
-        @media #{$lg,$md,$xs} {
+        @media #{$lg} {
             padding-top: 80px;
+            padding-bottom: 0;
+        }
+
+        @media #{$md}, #{$xs} {
+            padding-top: 20px;
             padding-bottom: 0;
         }
     }

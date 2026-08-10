@@ -196,10 +196,10 @@ const PortfolioCard = ({
                                     <div key={index} style={{ marginBottom: "12px", borderBottom: "1px solid rgba(255,255,255,.2)", paddingBottom: "8px" }}>
                                         <div
                                             onClick={(e) => { e.preventDefault(); e.stopPropagation(); setActiveFaq(activeFaq === index ? -1 : index); }}
-                                            style={{ cursor: "pointer", color: "#53AE7D", fontWeight: 600, fontSize: '15px' }}
+                                            style={{ cursor: "pointer", color: "#fff", fontWeight: 600, fontSize: '15px' }}
                                             className="text-tenor"
                                         >
-                                            ❓ {item.ques}
+                                             {item.ques}
                                         </div>
                                         {activeFaq === index && (
                                             <div style={{ marginTop: "8px", color: "#fff", fontSize: "14px" }}>

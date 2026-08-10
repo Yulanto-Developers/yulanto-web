@@ -1916,6 +1916,19 @@ input[name="name"].has-value+.name-next-btn {
     color: #fff;
 }
 
+.contact-icons {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #0e0d0d;
+}
+
 .contact-details span {
     display: block;
     font-size: 10px;
@@ -1973,14 +1986,26 @@ input[name="name"].has-value+.name-next-btn {
     padding-top: 120px;
 }
 
+.pt-lg-1200 {
+    padding-top: 120px;
+}
+
 /* Mobile */
 @media (max-width: 767px) {
     .desktop-reach-us {
         display: none;
     }
 
+    .reach-mobile {
+        padding-top: 40px;
+    }
+
     .pt-lg-120 {
         padding-top: 80px;
+    }
+
+    .pt-lg-1200 {
+        padding-top: 20px;
     }
 
     .mobile-get-started {
@@ -2152,7 +2177,7 @@ input[name="name"].has-value+.name-next-btn {
 
 
 @media screen and (max-width:1100px) {
-  
+
 
     .project-highlights {
         padding: 14px;
@@ -2188,3 +2213,96 @@ input[name="name"].has-value+.name-next-btn {
     }
 
 }
+
+
+/* sidebar css started */
+/* Mobile Menu Container */
+.mobile-menu-wrapper {
+    padding: 15px 0;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Level 1 Item */
+.menu-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.menu-link,
+.menu-link-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 0;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-icon,
+.sub-dropdown-icon {
+    transition: transform 0.3s ease;
+    font-size: 14px;
+}
+
+.dropdown-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.sub-dropdown-icon.rotate {
+    transform: rotate(90deg);
+}
+
+/* Level 2 Sub Menu */
+.sub-menu.level-2 {
+    list-style: none;
+    padding-left: 15px;
+    margin: 0 0 10px 0;
+    border-left: 2px solid #2563eb;
+}
+
+.sub-link,
+.sub-menu-link-btn {
+    background: transparent;
+    border: none;
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.sub-link:hover,
+.sub-menu-link-btn:hover {
+    color: #60a5fa;
+}
+
+/* Level 3 Child Menu */
+.sub-menu.level-3 {
+    list-style: none;
+    padding-left: 15px;
+    margin: 5px 0 10px 0;
+}
+
+.child-link {
+    color: #94a3b8;
+    font-size: 13px;
+    padding: 6px 0;
+    display: block;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.child-link:hover {
+    color: #ffffff;
+}
+
+/* sidebar css ends */

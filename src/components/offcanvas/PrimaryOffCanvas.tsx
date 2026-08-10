@@ -15,7 +15,13 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileMenus from "../layout/headers/subComponents/MobileMenus";
 import Dock from "../layout/footers/Dock";
-import {  socialLinks } from "@/data/footer-data";
+import { socialLinks } from "@/data/footer-data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPhone,
+  faLocationDot
+} from "@fortawesome/free-solid-svg-icons";
 
 const galleryImages: ImageDT[] = [
   { id: 1, imgSrc: "/assets/img/offcanvas/offcanvas-1.jpg" },
@@ -31,11 +37,11 @@ const PrimaryOffCanvas = () => {
   // Detect dark version route
   const isDark = pathname?.startsWith("/dark") ?? false;
 
-   const dockItems = socialLinks.map((item) => ({
-          icon: item.icon,
-          label: item.label ?? "",
-          onClick: () => window.open(item.href, "_blank"),
-      }));
+  const dockItems = socialLinks.map((item) => ({
+    icon: item.icon,
+    label: item.label ?? "",
+    onClick: () => window.open(item.href, "_blank"),
+  }));
 
   return (
     <>
@@ -107,15 +113,24 @@ const PrimaryOffCanvas = () => {
               </div>
             </div> */}
             <div className="tp-offcanvas-contact">
-              <h3 className="tp-offcanvas-title sm">Information</h3>
+              <h3 className="tp-offcanvas-title sm">Reach Us</h3>
               <ul>
-                <li>
+                <li className="d-flex justify-content-start align-items-start contact-card">
+                  <div className="contact-icons">
+                    <FontAwesomeIcon className="" icon={faPhone} />
+                  </div>
                   <Link href="tel:+919962157250">+91 99621 57250</Link>
                 </li>
-                <li>
+                <li className="d-flex justify-content-start align-items-start contact-card">
+                  <div className="contact-icons">
+                    <FontAwesomeIcon className="" icon={faEnvelope} />
+                  </div>
                   <Link href="mailto:info@yulanto.com">info@yulanto.com</Link>
                 </li>
-                <li>
+                <li className="d-flex justify-content-start align-items-start contact-card">
+                  <div className="contact-icons">
+                    <FontAwesomeIcon className="" icon={faLocationDot} />
+                  </div>
                   <p className="d-flex flex-column justify-content-start">
                     <span> First Floor, F3, #4/608,</span>
                     <span> VOC St, near Turyaa Hotel, OMR,</span>
@@ -148,13 +163,13 @@ const PrimaryOffCanvas = () => {
                   </Link>
                 </li>
               </ul> */}
-              <Dock   items={dockItems}
-              page=
-              "sidemenu"
-                                    panelHeight={52}
-                                    baseItemSize={38}
-                                    magnification={54}
-                                    distance={120}/>
+              <Dock items={dockItems}
+                page=
+                "sidemenu"
+                panelHeight={52}
+                baseItemSize={38}
+                magnification={54}
+                distance={120} />
             </div>
           </div>
         </div>

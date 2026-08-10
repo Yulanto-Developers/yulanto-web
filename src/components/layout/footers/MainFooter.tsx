@@ -149,7 +149,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                 className="px-footer-widget px-footer-col-3 pb-40 mb-30 px-fade-anim"
                                 data-delay=".7"
                             >
-                                <h4 className="px-footer-widget-title-sm pre mb-20">
+                                <h4 className="px-footer-widget-title-sm reach-mobile pre mb-20">
                                     Reach Us
                                 </h4>
                                 <div className="px-footer-widget-info mb-3">

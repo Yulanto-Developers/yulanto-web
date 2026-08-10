@@ -162,13 +162,17 @@
 		font-size: 15px;
 		font-weight: 500;
 		padding: 7px 12px;
-		border-radius: 50px;
+		border-radius: 12px;
 		display: inline-block;
-		// background-color: #000;
+		//background-color: #000;
 		background: linear-gradient(135deg, #275674 0%, #53AE7D 100%);
 		letter-spacing: -0.6px;
-		// text-transform: uppercase;
+		//text-transform: uppercase;
 		color: var(--tp-common-px-white);
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		-ms-border-radius: 12px;
+		-o-border-radius: 12px;
 
 		@media #{$md} {
 			font-size: 14px;

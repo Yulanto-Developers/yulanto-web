@@ -60,7 +60,7 @@ const StatCard: React.FC<StatCardProps> = ({
 }) => {
     return (
         <motion.div
-            className={`card mb-3 border-0 p-3 w-100 ${className ?? ""}`}
+            className={`card mb-3 border-0 p-3 w-100 ${className ?? ""} ms-lg-auto`}
             whileHover={{
                 y: -6,
                 scale: 1.02,
@@ -73,7 +73,7 @@ const StatCard: React.FC<StatCardProps> = ({
                 borderRadius: '0px 30px 0px 30px',
                 backgroundColor: '#ffffff',
                 maxWidth: '320px',
-                marginLeft: 'auto',
+                marginLeft: 0,
                 boxShadow: "0 4px 12px rgba(0,0,0,0.03)",
                 cursor: "pointer"
             }}
