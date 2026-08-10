@@ -307,7 +307,7 @@ export default function QuoteModal() {
 
                 {/* Right Side: Blue Accent Section */}
                 <div className="quote-modal-right">
-                    <div className="blue-section-content">
+                    <div className="blue-section-content ">
                         <div className="contact-info py-10">
                             {showRestForm && (
                                 <>
@@ -353,7 +353,7 @@ export default function QuoteModal() {
                         </div>
                     </div>
 
-                    <div className="blue-section-content">
+                    <div className="blue-section-content d-none d-xl-block">
                         <div className="badge text-tenor">Let's Get Started</div>
                         <h2 className="text-tenor text-white">
                             Your Digital Success Starts Here
