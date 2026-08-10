@@ -43,7 +43,7 @@ const PersonalPortfolioAbout = () => {
             style={{ backgroundColor: aboutConfig.sectionBg }}
         >
            <div className={isMobile ? "" : "container"}>
-                <div className="row py-5 align-items-center">
+                <div className="row px-2 px-lg-0 py-5 align-items-center">
                     <div className="col-xl-3">
                         <span className="tp-section-subtitle text-black blink-ball">
                             Services We Offer

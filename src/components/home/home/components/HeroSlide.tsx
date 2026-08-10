@@ -1,5 +1,5 @@
 "use client";
-import { Navigation, Controller, Autoplay } from "swiper/modules"; // Added Autoplay import
+import { Navigation, Controller, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { useState, useRef } from "react";
@@ -7,13 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const heroSlides = [
-    { title: "@Yulanto", subtitle: "Leading Web Design Company in Chennai for Business Growth.", img: "/assets/img/banner/hero-img-1.webp" },
-    { title: "@Yulanto", subtitle: "Awesome Website Creation in Chennai For Your Business", img: "/assets/img/banner/hero-img-2.webp" },
-    { title: "@Yulanto", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.", img: "/assets/img/banner/hero-img-3.webp" },
-    { title: "@Yulanto", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.", img: "/assets/img/banner/hero-img-4.webp" },
-    { title: "@Yulanto", subtitle: "Build a Powerful Business Website design with Experts in Chennai.", img: "/assets/img/banner/hero-img-5.webp" },
-    { title: "@Yulanto", subtitle: "Custom Website creations company for Growing Businesses in Chennai", img: "/assets/img/banner/hero-img-6.webp" },
-    // { title: "@Yulanto", subtitle: "Elevate Your Business with Chennai's Best Web Design Company", img: "/assets/img/banner/hero-img-7.webp" },
+    { title: "We start by listening closely to your goals, ensuring you feel understood from day one.", subtitle: "Leading Web Design Company in Chennai for Business Growth.", img: "/assets/img/banner/hero-img-1.webp", head: "Make an Enquiry" },
+    { title: "Every detail is noted and aligned with your vision, so nothing important is ever missed.", subtitle: "Awesome Website Creation in Chennai For Your Business", img: "/assets/img/banner/hero-img-2.webp", head: "Increase Sales" },
+    { title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.", img: "/assets/img/banner/hero-img-3.webp", head: "Gather Requirements" },
+    { title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.", img: "/assets/img/banner/hero-img-4.webp", head: "Write the code" },
+    { title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.", img: "/assets/img/banner/hero-img-5.webp", head: "Design the website" },
+    { title: "Our commitment is to a long-term partnership that supports your business growth.", subtitle: "Custom Website creations company for Growing Businesses in Chennai", img: "/assets/img/banner/hero-img-6.webp", head: "Continuous Success" },
 ];
 
 const HeroSlide = () => {
@@ -30,13 +29,13 @@ const HeroSlide = () => {
             <div className="row justify-content-center">
                 <div className="col-lg-8">
                     <Swiper
-                        modules={[Navigation, Controller, Autoplay]} // Added Autoplay module here
+                        modules={[Navigation, Controller, Autoplay]}
                         slidesPerView={1}
                         centeredSlides={true}
-                        loop={false} 
+                        loop={false}
                         autoplay={{
-                            delay: 5000, // 5 seconds interval
-                            disableOnInteraction: false, // Keeps autoplay running even after manual swipes
+                            delay: 500000,
+                            disableOnInteraction: false,
                         }}
                         navigation={{
                             nextEl: ".swiper-button-next",
@@ -54,10 +53,10 @@ const HeroSlide = () => {
                             <SwiperSlide key={`${slide.title}-${index}`}>
                                 <div className="px-hero-2-contents text-center z-index-1">
                                     <div className="fix">
-                                        <span>{slide.title}</span>
+                                        <span className="text-green-color">{slide.title}</span>
                                     </div>
                                     <div className="fix">
-                                        <span>{slide.subtitle}</span>
+                                        <span style={{ fontWeight: 300, fontSize: '18px' }}>{slide.subtitle}</span>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -87,8 +86,42 @@ const HeroSlide = () => {
                         {heroSlides.map((slide, index) => (
                             <SwiperSlide key={`${slide.title}-${index}`}>
                                 <div className={`px-hero-2-thumbs ${activeIndex === index ? "active" : ""}`}>
-                                    <Link href="#">
+                                    <Link href="#" style={{ position: "relative", display: "block", overflow: "hidden", borderRadius: "8px" }}>
                                         <Image width={130} height={168} src={slide.img} alt={slide.title} />
+
+                                        {/* Centered Overlay Head - Active Slide Only */}
+                                        {activeIndex === index && slide.head && (
+                                            <div
+                                                style={{
+                                                    position: "absolute",
+                                                    top: 0,
+                                                    left: 0,
+                                                    width: "100%",
+                                                    height: "100%",
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                    background: "#053456a1",
+                                                    padding: "10px",
+                                                    zIndex: 2
+                                                }}
+                                            >
+                                                <span
+                                                    style={{
+                                                        color: "#ffffff",
+                                                        fontSize: "13px",
+                                                        fontWeight: "700",
+                                                        textAlign: "center",
+                                                        lineHeight: "1.3",
+                                                        textTransform: "uppercase",
+                                                        letterSpacing: "0.5px",
+                                                        textShadow: "0 2px 4px rgba(0,0,0,0.6)"
+                                                    }}
+                                                >
+                                                    {slide.head}
+                                                </span>
+                                            </div>
+                                        )}
                                     </Link>
                                 </div>
                             </SwiperSlide>

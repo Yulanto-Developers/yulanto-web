@@ -1502,7 +1502,7 @@
 
     transition: .45s;
 
-    @media #{xs}{
+    @media #{$xs,$md}{
          padding: 20px 10px;
     }
 }

@@ -5,6 +5,7 @@ import { useQuoteModal } from "../Content/QuoteContext";
 
 export default function FloatingQuoteButton() {
     const [showButton, setShowButton] = useState(false);
+    const [footerReached, setFooterReached] = useState(false);
     const { openModal } = useQuoteModal();
 
     useEffect(() => {
@@ -17,12 +18,34 @@ export default function FloatingQuoteButton() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+
+
+    useEffect(() => {
+        const footer = document.querySelector("footer");
+
+        if (!footer) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setFooterReached(entry.isIntersecting);
+            },
+            {
+                threshold: 0.1,
+            }
+        );
+
+        observer.observe(footer);
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <button
-            className={`floating-quote-btn ${showButton ? "show" : ""}`}
+            type="button"
+            className={`floating-quote-btn ${showButton ? "show" : ""} ${footerReached ? "footer-reached" : ""}`}
             onClick={openModal}
         >
-            Get Quotes
+            Get a Free Quote
         </button>
     );
 }

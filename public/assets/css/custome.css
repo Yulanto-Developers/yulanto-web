@@ -1963,10 +1963,24 @@ input[name="name"].has-value+.name-next-btn {
     display: none;
 }
 
+.desktop-reach-us {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pt-lg-120 {
+    padding-top: 120px;
+}
+
 /* Mobile */
 @media (max-width: 767px) {
     .desktop-reach-us {
         display: none;
+    }
+
+    .pt-lg-120 {
+        padding-top: 80px;
     }
 
     .mobile-get-started {
@@ -2083,9 +2097,12 @@ input[name="name"].has-value+.name-next-btn {
 /* floating button starts */
 .floating-quote-btn {
     position: fixed;
-    right: -55px;
+    /* right: -55px;
     top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
+    transform: translateY(-50%) rotate(-90deg); */
+    top: auto;
+    bottom: 0px;
+    left: 50%;
 
     background: linear-gradient(135deg, #053456 0%, #53AE7D 100%);
     color: #fff;
@@ -2107,7 +2124,24 @@ input[name="name"].has-value+.name-next-btn {
 .floating-quote-btn.show {
     opacity: 1;
     visibility: visible;
-    right: -45px;
+    /* right: -45px; */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+}
+
+/* When footer is reached */
+.floating-quote-btn.footer-reached {
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    right: -70px;
+    transform: translateY(-50%) rotate(-90deg);
+    transition: transform .6s ease;
+    -webkit-transition: transform .6s ease;
+    -moz-transition: transform .6s ease;
+    -ms-transition: transform .6s ease;
+    -o-transition: transform .6s ease;
 }
 
 .floating-quote-btn:hover {
@@ -2133,13 +2167,38 @@ input[name="name"].has-value+.name-next-btn {
         right: auto;
         transform: translateX(-50%);
     }
+
+    .project-highlights {
+        padding: 14px;
+    }
+
+    .project-hover-content p {
+        font-size: 15px !important;
+    }
+
+    /* .px-portfolio-thumb:after {
+        border-radius: 12px 12px 0px 0px;
+        -webkit-border-radius: 12px 12px 0px 0px;
+        -moz-border-radius: 12px 12px 0px 0px;
+        -ms-border-radius: 12px 12px 0px 0px;
+        -o-border-radius: 12px 12px 0px 0px;
+    } */
 }
 
 
+.responsive-image {
+    aspect-ratio: 6 / 9;
+}
 
+@media (min-width: 900px) {
+    .responsive-image {
+        aspect-ratio: 13 / 10;
+    }
+}
 
 @media(min-width:990px) {
     .pt-lg-50 {
         padding-top: 50px !important;
     }
+
 }

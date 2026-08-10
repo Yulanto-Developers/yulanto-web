@@ -30,7 +30,7 @@ const TextMarquee = () => {
             </div>
             
         </div> */}
-         <div className="container-fluid mt-50 pt-20">
+         <div className="container-fluid mt-lg-50 pt-20">
                 <div className="row">
                     <div className="col-xl-12">
                         <div className="px-hero-2-bottom text-center p-relative px-fade-anim" data-delay=".3">

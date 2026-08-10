@@ -100,6 +100,17 @@
             height: 100%;
             border-radius: 20px;
             background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, rgba(20, 20, 20, 0.4) 100%);
+
+            @media #{$xs} {
+                /* Use shorthand and modern syntax for border-radius; remove vendor prefixes */
+                border-radius: 12px 12px 0 0;
+            }
+
+        }
+
+        @media #{$xs} {
+            /* Use shorthand and modern syntax for border-radius; remove vendor prefixes */
+            border-radius: 12px 12px 0 0;
         }
     }
 

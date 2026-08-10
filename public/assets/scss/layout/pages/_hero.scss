@@ -276,7 +276,7 @@
       @media #{$xs,$md} {
         font-size: 85px;
         justify-content: center;
-        line-height: 1.8;
+        line-height: 2.0;
         flex-direction: column;
       }
 
@@ -298,12 +298,14 @@
           -ms-transform: translateY(-0px);
           -o-transform: translateY(-0px);
         }
+
         @media #{$xxl,x3l,x4l} {
           position: relative;
           top: 50px;
         }
+
         @media #{$xs,$sm,$md} {
-            background-color: transparent;
+          background-color: transparent;
           position: relative;
           top: 50px;
         }
@@ -326,10 +328,13 @@
         @media #{$xl} {
           font-size: 20px;
         }
+
         @media #{$sm,$xs,$md} {
-         bottom: -20px;
-         right: 25%;
+          bottom: -20px;
+          right: 25%;
+          font-size: 17pz;
         }
+
         @media #{$xxl,x3l,x4l} {
           font-size: 20px;
         }
@@ -347,7 +352,7 @@
         color: var(--tp-common-px-black);
 
         @media #{$xs} {
-          font-size: 25px;
+          font-size: 20px;
         }
       }
     }
@@ -875,24 +880,17 @@
   flex: none;
   height: 80px;
   left: 0;
-  -webkit-mask: -webkit-gradient(
-      linear,
+  -webkit-mask: -webkit-gradient(linear,
       left top,
       left bottom,
       from(rgba(0, 0, 0, 0)),
-      to(black)
-    )
-    add;
-  -webkit-mask: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 100%)
-    add;
-  mask: -webkit-gradient(
-      linear,
+      to(black)) add;
+  -webkit-mask: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 100%) add;
+  mask: -webkit-gradient(linear,
       left top,
       left bottom,
       from(rgba(0, 0, 0, 0)),
-      to(black)
-    )
-    add;
+      to(black)) add;
   mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 100%) add;
   overflow: visible;
   position: fixed;
@@ -933,4 +931,8 @@
   position: absolute;
   top: 37.5%;
   left: 0;
+}
+
+.text-green-color {
+  color: #53ae7d !important;
 }

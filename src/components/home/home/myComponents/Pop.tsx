@@ -333,7 +333,7 @@ export default function QuoteModal() {
                                             <div className="contact-icon">
                                                 <FontAwesomeIcon icon={faLocationDot} />
                                             </div>
-                                            <p>First Floor, F3, #4/608, VOC St, near Turyaa Hotel, OMR, Kottivakkam, Chennai, Greater Chennai, Tamil Nadu 600096</p>
+                                            <p>F3, #4/608, First Floor,<br /> VOC St, near Turyaa Hotel, Kottivakkam,<br /> OMR, Chennai, Tamil Nadu - 600041</p>
                                         </a>
                                     </div>
                                     <div className="mobile-get-started">
