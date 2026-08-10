@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-// import { useState, useEffect } from 'react';
 import PrimaryOffCanvas from "@/components/offcanvas/PrimaryOffCanvas";
 import HeaderMenu from "./subComponents/HeaderMenu";
 import useGlobalContext from "@/hooks/useContext";
@@ -9,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope, faBars, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const PersonalPortfolioHeader = () => {
   const { toggleMainSidebar } = useGlobalContext();
@@ -22,21 +21,6 @@ const PersonalPortfolioHeader = () => {
     ? "dropdown-black-bg"
     : "dropdown-white-bg";
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setSticky(true);
-      } else {
-        setSticky(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   React.useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -101,10 +85,9 @@ const PersonalPortfolioHeader = () => {
               </div>
               <div className="col-2">
                 {/* desktop logo */}
-                <div className="px-header-logo d-none d-xl-block  relative-cls-header">
+                <div className="px-header-logo d-none d-xl-block relative-cls-header">
                   <Link href="/">
                     <img
-                      // width={170}
                       height={75}
                       src="/assets/img/logo/L2.png"
                       alt="logo"
@@ -114,7 +97,7 @@ const PersonalPortfolioHeader = () => {
                 </div>
               </div>
               <div className="col-4">
-                <div className="px-header-6-action d-flex  align-items-center">
+                <div className="px-header-6-action d-flex align-items-center justify-content-end">
                   <div className="px-header-6-info d-none d-xl-block">
                     <Link className="px-line-lr d-flex align-items-center gap-1" href="mailto:info@yulanto.com">
                       <FontAwesomeIcon icon={faEnvelope} className="icon-color" />
@@ -134,12 +117,15 @@ const PersonalPortfolioHeader = () => {
                     <button
                       type="button"
                       onClick={() => {
-                        // console.log("Button clicked");
                         toggleMainSidebar();
                       }}
-                      className="px-header-bar tp-offcanvas-open-btn"
+                      className="px-header-bar tp-offcanvas-open-btn d-flex align-items-center justify-content-center"
                     >
-                      <i className="fa-solid fa-location-dot chat-btn"></i>
+                      {/* Desktop Icon: Location Dot */}
+                      <FontAwesomeIcon icon={faLocationDot} className="d-none d-xl-block chat-btn" />
+                      
+                      {/* Mobile Icon: 3 Menu Bars */}
+                      <FontAwesomeIcon icon={faBars} className="d-block d-xl-none" style={{ fontSize: "20px" }} />
                     </button>
                   </div>
                 </div>

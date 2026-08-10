@@ -2099,26 +2099,27 @@ input[name="name"].has-value+.name-next-btn {
     position: fixed;
     /* right: -55px;
     top: 50%;
+   
     transform: translateY(-50%) rotate(-90deg); */
     top: auto;
     bottom: 0px;
     left: 50%;
-
     background: linear-gradient(135deg, #053456 0%, #53AE7D 100%);
     color: #fff;
     border: none;
     padding: 14px 30px;
     border-radius: 8px 8px 0 0;
-
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-
     z-index: 9999;
-
     opacity: 0;
     visibility: hidden;
     transition: all .3s ease;
+    -webkit-transform: translateY(-50%) rotate(-90deg);
+    -moz-transform: translateY(-50%) rotate(-90deg);
+    -ms-transform: translateY(-50%) rotate(-90deg);
+    -o-transform: translateY(-50%) rotate(-90deg);
 }
 
 .floating-quote-btn.show {
@@ -2148,25 +2149,10 @@ input[name="name"].has-value+.name-next-btn {
     background: linear-gradient(135deg, #53AE7D 0%, #053456 100%);
 }
 
-@media screen and (max-width:1100px) {
-    .floating-quote-btn {
-        /*right: 20px;*/
-        top: auto;
-        bottom: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 8px 8px 0px 0px;
-        -webkit-border-radius: 8px 8px 0px 0px;
-        -moz-border-radius: 8px 8px 0px 0px;
-        -ms-border-radius: 8px 8px 0px 0px;
-        -o-border-radius: 8px 8px 0px 0px;
-    }
 
-    .floating-quote-btn.show {
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-    }
+
+@media screen and (max-width:1100px) {
+  
 
     .project-highlights {
         padding: 14px;
