@@ -48,6 +48,7 @@ const MobileMenus = () => {
                         {/* MENU TITLE */}
                         <a
                             href={menu.href}
+                            style={{ color: isActive ? "#808080" : "inherit" }}
                             onClick={(e) => {
                                 if (hasDropdown) {
                                     e.preventDefault();
@@ -58,7 +59,7 @@ const MobileMenus = () => {
                             {menu.label}
                         </a>
 
-                        {/* + / × BUTTON */}
+                        {/* + / - BUTTON */}
                         {hasDropdown && (
                             <button
                                 type="button"
@@ -68,7 +69,7 @@ const MobileMenus = () => {
                                 aria-expanded={isActive}
                             >
                                 <i
-                                    className={`fa-solid ${isActive ? "fa-xmark" : "fa-plus"}`}
+                                    className={`fa-solid ${isActive ? "fa-minus" : "fa-plus"}`}
                                     aria-hidden="true"
                                 />
                             </button>
@@ -127,6 +128,7 @@ const MobileMenus = () => {
                                             {/* SUB LINK LABEL */}
                                             <a
                                                 href={sub.href}
+                                                style={{ color: isSubActive ? "#808080" : "inherit" }}
                                                 onClick={(e) => {
                                                     if (hasSubLinks) {
                                                         e.preventDefault();
@@ -137,7 +139,7 @@ const MobileMenus = () => {
                                                 {sub.label}
                                             </a>
 
-                                            {/* SUB LINK + / × BUTTON */}
+                                            {/* SUB LINK + / - BUTTON */}
                                             {hasSubLinks && (
                                                 <button
                                                     type="button"
@@ -149,7 +151,7 @@ const MobileMenus = () => {
                                                     aria-expanded={isSubActive}
                                                 >
                                                     <i
-                                                        className={`fa-solid ${isSubActive ? "fa-xmark" : "fa-plus"
+                                                        className={`fa-solid ${isSubActive ? "fa-minus" : "fa-plus"
                                                             }`}
                                                         aria-hidden="true"
                                                     />

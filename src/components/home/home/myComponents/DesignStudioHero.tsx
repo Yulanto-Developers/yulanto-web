@@ -385,6 +385,7 @@ import { text_slider_params } from "@/constant";
 import { SLIDER_TEXTS } from "@/data/site-data";
 import { StarIcon } from "@/svg/StarIcons";
 import { useQuoteModal } from "./Content/QuoteContext";
+import BgPattern from '@/assets/img/banner/bgpattern4.png'
 
 
 const heroContent = [
@@ -486,7 +487,7 @@ const Hero = () => {
     }
 
     return (
-        <div className="px-hero-2-area pt-120 bg-white">
+        <div className="px-hero-2-area pt-120 bg-white" style={{ backgroundImage: `url(${BgPattern.src})`, backgroundPosition: 'fixed', backgroundRepeat: 'no-repeat' }}>
             <div className="px-hero-2-main d-none d-xl-block p-relative">
                 <div className="container">
                     <div className="row">
@@ -578,7 +579,7 @@ const Hero = () => {
                                                                         "var(--font-tenor)",
                                                                     textShadow:
                                                                         "1px 1px 4px rgba(0,0,0,.8)",
-                                                                        zIndex:9999
+                                                                    zIndex: 9999
                                                                 }}
                                                             >
                                                                 {item.head}

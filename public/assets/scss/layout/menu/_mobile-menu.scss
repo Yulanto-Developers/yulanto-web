@@ -12,7 +12,7 @@
         & li {
             position: relative;
             & > a{
-                padding: 10px 0;
+                padding: 10px 5px;
                 display: block;
                 font-size: 20px;
                 font-weight: 500;
@@ -20,12 +20,18 @@
             &.active{
                 & > a{
                     color: var(--tp-common-black);
+                    background-color: #f1f1f1;
                     
-                }
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+}
                 & > .tp-menu-close{
                     & i{
                         top: 10px;
-                        @include tp-transform(rotate(135deg));
+                        @include tp-transform(rotate(180deg));
                     }
                 }
             }
