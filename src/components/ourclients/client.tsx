@@ -19,7 +19,7 @@ const clientData: CardStackItem[] = [
   { id: 8, title: "Mr. Kosuke", tag: "EBARA MACHINERY", description: "EBARA MACHINERY's MD Mr. Kosuke", imageSrc: "/assets/img/clients/ebara.webp" },
   { id: 9, title: "Mr. Mu. Kazhanjiyam", tag: "Tamil Cinema", description: "Mr. Mu. Kazhanjiyam, Tamil Film Director and Producer", imageSrc: "/assets/img/clients/kalanchiyam.webp" },
   { id: 10, title: "Venkatesan & Joseph", tag: "Aerotech Innovation Pvt Ltd", description: "Venkatesan (CTO) and Joseph (Tech Lead) of Aerotech Innovation Pvt Ltd", imageSrc: "/assets/img/clients/aerotech-alt.jpg" },
-  { id: 11, title: "Mr. Vishupriyan", tag: "Bigbox International", description: "Bigbox International, Owner Mr. Vishupriyan", imageSrc: "/assets/img/clients/big-box-alt.jpg" },
+  { id: 11  , title: "Mr. Vishupriyan", tag: "Bigbox International", description: "Bigbox International, Owner Mr. Vishupriyan", imageSrc: "/assets/img/clients/big-box-alt.jpg" },
   
   
   { id: 12, title: "Shagaya Raj", tag: "HCL Technologies", description: "HCL Technologies, Shagaya Raj", imageSrc: "/assets/img/clients/hcl-alt.jpg" },
@@ -54,7 +54,7 @@ function ClientCard(item: CardStackItem, { active }: { active: boolean }) {
           right: 0,
           bottom: 0,
           borderTop: "1px solid rgba(255,255,255,0.1)",
-          background: "rgba(0,0,0,0.9)",
+         background: "linear-gradient(60deg, #0a283b 0%, #53ae7d 160%)",
           padding: "16px 20px",
           textAlign: "center",
           transition: "opacity 0.3s ease, transform 0.3s ease",
@@ -100,7 +100,7 @@ export default function Client() {
         // Extra top padding clears the fixed navbar/topbar.
         // If your logos/cards still sit under the nav, increase this value
         // to match your navbar's actual rendered height.
-        padding: "140px 24px 80px",
+        padding: "40px 24px 40px",
         boxSizing: "border-box",
       }}
     >
@@ -119,10 +119,10 @@ export default function Client() {
             <div className="px-project-title-box">
             
                 <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">Meeting with</span> our Clients
+              <span className="text-blue-about">Meeting with</span> Our Clients
             </h4>
               <p className="text-figtree text-black mt-2 font-paragraph-cls">
-              We highly value the chance to engage with our clients, as it ignites our enthusiasm for delivering outstanding projects. Each meeting acts as a gateway to unlocking new levels of success.
+             We highly value the opportunity to engage with our clients, as it inspires us to deliver outstanding projects. Every meeting opens the door to new ideas, stronger collaboration, and greater levels of success.
               </p>
             </div>
           </div>

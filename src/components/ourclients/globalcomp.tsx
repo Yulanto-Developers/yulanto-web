@@ -82,10 +82,10 @@ function FlagCard({ item }: FlagCardProps) {
   };
 
   return (
-    <Link
-      href={item.url}
-      style={{ textDecoration: 'none', display: 'block' }}
-    >
+ <Link
+  href={item.url}
+  style={{ textDecoration: 'none', display: 'block' }}
+>
       <div
         ref={cardRef}
         onMouseMove={handleMouseMove}
@@ -189,11 +189,11 @@ export default function GlobalTrustDock() {
           <div className="px-project-title-box">
             
              <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">Trusted by {' '}</span> Clients Across the Globe
+              <span className="text-blue-about">Trusted by Clients  {' '}</span> Across the World
             </h4>
 
             <p className="text-figtree text-black mt-2 font-paragraph-cls">
-              We proudly partner with companies and enterprises worldwide, delivering high-impact web design, custom software development, mobile solutions, and digital strategy across key international markets.
+             We proudly partner with companies and enterprises worldwide, delivering high-impact web design, custom web development, digital solutions, and strategic digital services across key international markets.
             </p>
           </div>
         </div>
