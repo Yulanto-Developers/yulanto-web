@@ -176,10 +176,10 @@ export default function LogoCloudSwap({
   logos = DEFAULT_LOGOS,
   title = (
     <>
-      <span className="text-blue-about">Trusted by the</span> best companies
+      <span className="text-blue-about">Trusted by the</span> Leading Brands
     </>
   ),
-  subtitle = "The world's most ambitious teams build with our platform.",
+  subtitle = "We are proud to work with businesses and organizations that trust us to bring their digital vision to life. From growing startups to established brands, our clients rely on our expertise, creativity, and commitment to deliver impactful digital solutions that support their business goals.",
   interval = 5000,
   stagger = 0.11,
 }: LogoCloudSwapProps) {
@@ -207,7 +207,7 @@ export default function LogoCloudSwap({
         boxSizing: "border-box",
       }}
     >
-      <div style={{ margin: "0 auto", maxWidth: "640px", textAlign: "center" }}>
+      <div style={{ margin: "0 auto",  textAlign: "center" }}>
         <h4 className="px-about-title mb-20">
           {title}
         </h4>

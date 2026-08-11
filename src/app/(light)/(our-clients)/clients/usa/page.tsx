@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useEffect, useMemo, useRef, useState, CSSProperties } from "react";
+import React, {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  CSSProperties
+} from "react";
 import {
   Atom,
   Box,
@@ -24,19 +30,19 @@ import {
   Trees,
   Users,
   XCircle,
+  ArrowUp,
 } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-/**
- * DigitizeXPage
- * Single-file React (TypeScript) port of the DigitizeX landing page.
- * Pure inline CSS & Enhanced Stylesheet — no Tailwind, no Bootstrap, no external CSS framework.
- */
+import Image1 from '@/assets/img/usa/usafalg.png';
+
 
 // ---- TYPES ------------------------------------------------------------
 interface ClientItem {
   name: string;
-  brand: string;
-  domain: string;
+
+
   category: string;
   color: string;
   icon?: React.ElementType;
@@ -52,7 +58,7 @@ interface TestimonialItem {
   text: string;
   name: string;
   role: string;
-  img: string;
+  img?: string;
 }
 
 interface ServiceItem {
@@ -61,10 +67,7 @@ interface ServiceItem {
   label: string;
 }
 
-interface NavItem {
-  id: string;
-  label: string;
-}
+
 
 interface StatItem {
   icon: React.ElementType;
@@ -76,18 +79,18 @@ interface StatItem {
 
 // ---- DATA ---------------------------------------------------------------
 const CLIENTS: ClientItem[] = [
-  { name: "Spark10 AI", brand: "SPARK10", domain: "spark10.ai", category: "AI & Technology", color: "#e0355a" },
-  { name: "IncTune", brand: "INCTUNE", domain: "inctune.com", category: "SaaS / Software", color: "#2f5bff", icon: Radio },
-  { name: "iHotTech", brand: "iHOTTECH", domain: "ihottech.com", category: "IT Services", color: "#111827" },
-  { name: "Infinity Robotics AI", brand: "INFINITY ROBOTICS", domain: "infinityrobotics.ai", category: "AI & Robotics", color: "#1c1c8f", icon: Cpu },
-  { name: "Solstice6", brand: "SOLSTICE6", domain: "solstice6.com", category: "Consulting", color: "#111827" },
-  { name: "Star Ride", brand: "STAR RIDE", domain: "staride.com", category: "Transport", color: "#1a9b5c", icon: Star },
-  { name: "Xpress Auto Registration", brand: "XPRESS", domain: "xpressautoregistration.com", category: "Automotive", color: "#e0355a", icon: XCircle },
-  { name: "Bridge Green Upcycle", brand: "BRIDGE GREEN", domain: "bridgegreenupcycle.com", category: "Eco Solutions", color: "#2f9b4f", icon: Recycle },
-  { name: "Yoma Enterprise", brand: "YOMA", domain: "yomaenterprise.com", category: "Business Solutions", color: "#2f5bff" },
-  { name: "Segreto DC", brand: "SEGRETO", domain: "segretodc.com", category: "Consulting", color: "#111827" },
-  { name: "Natna Staffing Solutions", brand: "NATNA", domain: "natnastaffingsolutions.com", category: "Staffing", color: "#111827" },
-  { name: "US Tree Cleaning", brand: "U.S. TREE CLEANING", domain: "ustreetcleaning.com", category: "Cleaning Services", color: "#1a9b5c", icon: Trees },
+  { name: "Spark10 AI", category: "AI & Technology", color: "#1a9b5c", icon: ShieldCheck },
+  { name: "IncTune", category: "SaaS / Software", color: "#2f5bff", icon: Radio },
+  { name: "iHotTech", category: "IT Services", color: "#111827" },
+  { name: "Infinity Robotics AI", category: "AI & Robotics", color: "#1c1c8f", icon: Cpu },
+  { name: "Solstice6", category: "Consulting", color: "#111827" },
+  { name: "Star Ride", category: "Transport", color: "#1a9b5c", icon: Star },
+  { name: "Xpress Auto Registration", category: "Automotive", color: "#e0355a", icon: XCircle },
+  { name: "Bridge Green Upcycle", category: "Eco Solutions", color: "#2f9b4f", icon: Recycle },
+  { name: "Yoma Enterprise", category: "Business Solutions", color: "#2f5bff" },
+  { name: "Segreto DC", category: "Consulting", color: "#111827" },
+  { name: "Natna Staffing Solutions", category: "Staffing", color: "#111827" },
+  { name: "US Tree Cleaning", category: "Cleaning Services", color: "#1a9b5c", icon: Trees },
 ];
 
 const TECHS: TechItem[] = [
@@ -105,9 +108,9 @@ const TECHS: TechItem[] = [
 ];
 
 const TESTIMONIALS: TestimonialItem[] = [
-  { text: "DigitizeX team delivered an exceptional AI platform that exceeded our expectations. Highly professional!", name: "John Davis", role: "CTO, Spark10 AI", img: "https://i.pravatar.cc/80?img=13" },
-  { text: "Their expertise in SaaS development is outstanding. Our platform runs perfectly!", name: "Michael Smith", role: "Founder, IncTune", img: "https://i.pravatar.cc/80?img=8" },
-  { text: "Amazing team! They understand business needs and deliver on time.", name: "David Wilson", role: "CEO, Infinity Robotics AI", img: "https://i.pravatar.cc/80?img=51" },
+  { text: "Yulanto team delivered an exceptional AI platform that exceeded our expectations. Highly professional!", name: "John Davis", role: "CTO, Spark10 AI" },
+  { text: "Their expertise in SaaS development is outstanding. Our platform runs perfectly!", name: "Michael Smith", role: "Founder, IncTune" },
+  { text: "Amazing team! They understand business needs and deliver on time.", name: "David Wilson", role: "CEO, Infinity Robotics AI" },
 ];
 
 const SERVICES: ServiceItem[] = [
@@ -117,15 +120,7 @@ const SERVICES: ServiceItem[] = [
   { icon: TrendingUp, color: "#e0a72f", label: "SEO & Digital Marketing" },
 ];
 
-const NAV_ITEMS: NavItem[] = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About Us" },
-  { id: "services", label: "Services" },
-  { id: "work", label: "Our Work" },
-  { id: "technologies", label: "Technologies" },
-  { id: "testimonials", label: "Testimonials" },
-  { id: "contact", label: "Contact Us" },
-];
+
 
 const HERO_STATS: StatItem[] = [
   { icon: Box, color: "#2f5bff", bg: "#e8edff", value: "120+", label: "Projects Delivered" },
@@ -143,16 +138,16 @@ const colors = {
 } as const;
 
 const styles: Record<string, CSSProperties> = {
-  root: { background: "#fff", color: colors.ink, minHeight: "100vh", fontFamily: "system-ui, -apple-system, sans-serif" },
+  root: { background: "#fff", color: colors.ink, minHeight: "100vh", fontFamily: "system-ui, -apple-system, sans-serif", overflowX: "hidden" },
   btnBrand: { background: colors.brand, border: "none", color: "#fff", borderRadius: 999, padding: "10px 22px", fontWeight: 600, fontSize: ".9rem", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6, cursor: "pointer", transition: "opacity 0.2s" },
   btnOutline: { background: "transparent", border: `1px solid ${colors.brand}`, color: colors.brand, borderRadius: 999, padding: "10px 22px", fontWeight: 600, fontSize: ".9rem", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6, cursor: "pointer" },
-  section: { scrollMarginTop: 90, padding: "64px 0" },
-  container: { maxWidth: 1200, margin: "0 auto", padding: "0 24px" },
+  section: { padding: "60px 0", overflow: "hidden" },
+  container: { maxWidth: 1200, margin: "0 auto", padding: "0 24px", overflow: "hidden" },
   heroBadge: { background: "#eef2ff", color: "#334155", borderRadius: 999, padding: "7px 16px", fontSize: ".82rem", fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 6 },
   clientDomain: { color: colors.brand, fontSize: ".85rem", fontWeight: 500 },
   clientCategory: { color: colors.muted, fontSize: ".82rem", margin: "6px 0 12px" },
-  badgeCompleted: { background: "#e9fbf1", color: "#1a9b5c", fontWeight: 600, fontSize: ".72rem", padding: "5px 14px", borderRadius: 999, display: "inline-block" },
-  visitLink: { color: colors.brand, fontSize: ".85rem", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 4, marginTop: 14, textDecoration: "none" },
+  badgeCompleted: { background: "#e9fbf1", color: "#1a9b5c", fontWeight: 600, fontSize: ".72rem", padding: "5px 14px", borderRadius: 10, display: "inline-block" },
+  visitLink: { color: colors.brand, fontSize: ".85rem", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 4, textDecoration: "none" },
 };
 
 // ---- CTA ICONS (embedded SVGs, no external deps) ---------------------------
@@ -247,32 +242,111 @@ const IntegrationCard: React.FC<{ children: React.ReactNode; isCenter?: boolean 
   </div>
 );
 
-// ---- COMPONENT ------------------------------------------------------------
-const DigitizeXPage: React.FC = () => {
+// ---- SCROLL TO TOP BUTTON COMPONENT ------------------------------------
+const ScrollToTop: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <button
+      onClick={scrollToTop}
+      style={{
+        position: "fixed",
+        bottom: "30px",
+        right: "30px",
+        width: "50px",
+        height: "50px",
+        borderRadius: "50%",
+        backgroundColor: colors.brand,
+        color: "#fff",
+        border: "none",
+        cursor: "pointer",
+        display: isVisible ? "flex" : "none",
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow: "0 4px 20px rgba(5, 52, 86, 0.3)",
+        transition: "all 0.3s ease",
+        zIndex: 999,
+        fontSize: "20px",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "scale(1.1)";
+        e.currentTarget.style.boxShadow = "0 6px 30px rgba(5, 52, 86, 0.4)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "scale(1)";
+        e.currentTarget.style.boxShadow = "0 4px 20px rgba(5, 52, 86, 0.3)";
+      }}
+      aria-label="Scroll to top"
+    >
+      <ArrowUp size={24} />
+    </button>
+  );
+};
+
+// ---- PAGE COMPONENT ------------------------------------------------------------
+export default function USAClientsPage() {
   const [activeSection, setActiveSection] = useState<string>("home");
   const [testimonialIdx, setTestimonialIdx] = useState<number>(0);
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
-
-  const sectionIds = useMemo<string[]>(() => NAV_ITEMS.map((n) => n.id), []);
+  const [aosInitialized, setAosInitialized] = useState(false);
 
   useEffect(() => {
-    sectionIds.forEach((id) => {
-      sectionRefs.current[id] = document.getElementById(id);
+    // Initialize AOS with proper settings
+    AOS.init({
+      duration: 800,
+      once: false, // Changed to false to allow animations on scroll up
+      easing: 'ease-out-cubic',
+      offset: 100,
+      delay: 50,
+      disable: false,
+      startEvent: 'DOMContentLoaded',
+      initClassName: 'aos-init',
+      animatedClassName: 'aos-animate',
+      useClassNames: false,
+      disableMutationObserver: false,
+      debounceDelay: 50,
+      throttleDelay: 99,
     });
 
-    function onScroll() {
-      let current = sectionIds[0];
-      sectionIds.forEach((id) => {
-        const el = sectionRefs.current[id];
-        if (el && el.getBoundingClientRect().top <= 100) current = id;
-      });
-      setActiveSection(current);
-    }
+    // Force refresh after a small delay to ensure all elements are registered
+    setTimeout(() => {
+      AOS.refresh();
+      setAosInitialized(true);
+    }, 100);
 
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [sectionIds]);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, []);
+
+  // Refresh AOS on any route changes or content changes
+  useEffect(() => {
+    if (aosInitialized) {
+      AOS.refresh();
+    }
+  }, [aosInitialized]);
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -281,20 +355,39 @@ const DigitizeXPage: React.FC = () => {
     return () => clearInterval(t);
   }, []);
 
-  const handleNavClick = (id: string) => (e: React.MouseEvent<HTMLElement>): void => {
-    e.preventDefault();
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+  // Handle scroll events to refresh AOS
+  useEffect(() => {
+    const handleScroll = () => {
+      if (aosInitialized) {
+        AOS.refresh();
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [aosInitialized]);
+
+
 
   return (
     <div style={styles.root}>
       {/* CSS Rules for Grid, Cards, and Alternating Backgrounds */}
       <style>{`
-        * { box-sizing: border-box; }
+        * { 
+          box-sizing: border-box; 
+          margin: 0;
+          padding: 0;
+        }
         a { text-decoration: none; }
+        html {
+          scroll-behavior: smooth;
+          overflow-x: hidden;
+        }
+        body {
+          overflow-x: hidden;
+          max-width: 100vw;
+        }
         
-        .dx-nav { display: none; }
         .dx-grid-2 { display: grid; grid-template-columns: 1fr; gap: 40px; }
         .dx-grid-3 { display: grid; grid-template-columns: 1fr; gap: 24px; }
         .dx-grid-4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -363,6 +456,22 @@ const DigitizeXPage: React.FC = () => {
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
         }
 
+        /* AOS Animation Overrides */
+        [data-aos] {
+          pointer-events: none;
+          opacity: 0;
+          transition-property: opacity, transform;
+        }
+        [data-aos].aos-animate {
+          pointer-events: auto;
+          opacity: 1 !important;
+        }
+
+        /* Reset animations when scrolling up */
+        [data-aos].aos-init:not(.aos-animate) {
+          opacity: 0 !important;
+        }
+
         @media (min-width: 640px) {
           .dx-grid-3 { grid-template-columns: repeat(2, 1fr); }
           .dx-grid-4 { grid-template-columns: repeat(4, 1fr); }
@@ -371,7 +480,7 @@ const DigitizeXPage: React.FC = () => {
           .dx-grid-tech { grid-template-columns: repeat(4, 1fr); }
         }
         @media (min-width: 992px) {
-          .dx-nav { display: flex; align-items: center; gap: 2px; }
+       
           .dx-grid-2 { grid-template-columns: 1fr 1fr; align-items: center; }
           .dx-grid-3 { grid-template-columns: repeat(3, 1fr); }
           .dx-grid-rw { grid-template-columns: 7fr 5fr; gap: 50px; align-items: start; }
@@ -379,105 +488,224 @@ const DigitizeXPage: React.FC = () => {
         }
       `}</style>
 
-      {/* HERO / FIRST SECTION (#f1f1f1) */}
-      <section id="home" className="section-bg-alt" style={{ ...styles.section, marginTop: "90px" }}>
-        <div style={styles.container} className="dx-grid-2">
-          <div>
-            <span style={styles.heroBadge}>
-              <Flag size={14} style={{ color: colors.brand }} /> Trusted by Businesses Across the USA
-              <BadgeCheck size={14} style={{ color: colors.brand }} />
-            </span>
+      {/* HERO / FIRST SECTION */}
+      <section
+        className="section-bg-alt"
+        id="home"
+        style={{
+          ...styles.section,
+          marginTop: "85px",
+          position: "relative",
+          overflow: "hidden",
+          minHeight: "520px",
+          backgroundImage: `
+            linear-gradient(
+              90deg,
+              rgba(255,255,255,0.96) 0%,
+              rgba(255,255,255,0.88) 35%,
+              rgba(255,255,255,0.35) 65%,
+              rgba(255,255,255,0.05) 100%
+            ),
+            url(${Image1.src})
+          `,
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <div
+          style={{
+            ...styles.container,
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          <div style={{ maxWidth: "720px" }}>
+            <div data-aos="fade-up" data-aos-delay="0">
+              <span style={styles.heroBadge}>
+                <Flag size={14} style={{ color: colors.brand }} />
+                Your Trusted Digital Partner for Web Design, Development & Digital Marketing
+                <BadgeCheck size={14} style={{ color: colors.brand }} />
+              </span>
+            </div>
 
-            <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">Our Successful</span> USA Client Projects
-            </h4>
-            <p className="font-paragraph-cls">
-              We build digital solutions that help businesses grow, scale, and succeed in the digital world. Here
-              are some of our completed projects for amazing clients across the USA.
-            </p>
+            <div data-aos="fade-up" data-aos-delay="100">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">
+                  Digital Solutions for{" "}
+                </span>
+                Businesses Across the USA
+              </h4>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200">
+              <p className="text-figtree text-black">
+                At Yulanto Web Creations, we help businesses across the USA build a
+                strong, professional, and results-driven digital presence. From website
+                design and custom web development to eCommerce, SEO, digital marketing,
+                graphic design, hosting, and ongoing website maintenance, we provide
+                complete digital solutions under one roof.
+
+                Whether you are a startup, small business, professional service
+                provider, growing company, or established enterprise, our team creates
+                customized solutions designed around your business goals, target
+                audience, and growth plans.
+              </p>
+            </div>
           </div>
-
-          <HeroGlobe />
         </div>
       </section>
 
-      {/* ABOUT SECTION*/}
-      <section id="about" className="section-bg-white" style={styles.section}>
+      {/* ABOUT SECTION */}
+      <section className="section-bg-white" id="about" style={styles.section}>
         <div style={styles.container}>
-          <div style={{ maxWidth: 800 }}>
-            <span className="px-section-subtitle pt-40 blink-ball mb-20 text-tenor">ABOUT US</span>
-            <h3 className="px-section-title text-black text-tenor font-title-cls text-effect">
-              <span className="word">Who </span>
-              <span>We Are</span>
-            </h3>
-            <p className="text-figtree text-black">
-              DigitizeX is a digital solutions agency helping businesses across the USA grow, scale, and succeed
-              online. We combine creativity, technical expertise, and industry best practices to design and build
-              websites, web apps, mobile apps, and enterprise software tailored to each client&apos;s goals.
-            </p>
+          <div style={{ maxWidth: 1200 }}>
+            <div data-aos="fade-right" data-aos-delay="0">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">
+                  Our Web Design Services{" "}
+                </span>
+                for USA Businesses
+              </h4>
+            </div>
+           
+            <div data-aos="fade-up" data-aos-delay="100">
+              <p className="text-figtree text-black">
+                We design modern, responsive, user-friendly, and SEO-friendly websites that represent your brand professionally and help turn visitors into customers. From corporate websites and business websites to custom web applications, we develop solutions tailored to your requirements.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICES SECTION (#f1f1f1) */}
-      <section id="services" className="section-bg-alt" style={styles.section}>
+      {/* WHY CHOOSE US SECTION */}
+      <section className="section-bg-alt" id="why-choose" style={{ ...styles.section, padding: "60px 0" }}>
         <div style={styles.container}>
-          <div style={{ textAlign: "center", marginBottom: 32 }}>
-            <span className="px-section-subtitle pt-40 blink-ball mb-20 text-tenor">WHAT WE DO</span>
-            <h3 className="px-section-title text-tenor font-title-cls text-effect mb-20">
-              <span className="word">Our Services</span>
-            </h3>
+          {/* Heading Section at the Top */}
+          <div style={{ textAlign: "center", marginBottom: "48px" }}>
+            <div data-aos="fade-up" data-aos-delay="0">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">
+                  Why Choose Yulanto for Your {" "}
+                </span>
+                Business in the USA
+              </h4>
+            </div>
           </div>
-          <div className="dx-grid-4">
-            {SERVICES.map((s) => {
-              const Icon = s.icon;
-              return (
-                <div key={s.label} className="dx-service-tile">
-                  <Icon size={28} style={{ color: s.color, marginBottom: 12, display: "block", marginLeft: "auto", marginRight: "auto" }} />
-                  {s.label}
+
+          {/* Content List Below Heading */}
+          <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+            {[
+              {
+                num: "01",
+                title: "11+ Years of Experience",
+                desc: "With more than a decade of experience in website design and digital solutions, we bring practical expertise to every project."
+              },
+              {
+                num: "02",
+                title: "Complete Digital Solutions",
+                desc: "From your first website to SEO, digital marketing, eCommerce, hosting, and maintenance, you can manage your digital requirements with one experienced team."
+              },
+              {
+                num: "03",
+                title: "Customized Solutions",
+                desc: "We don't believe in one-size-fits-all solutions. Every website and digital strategy is developed according to your business, industry, audience, and objectives."
+              },
+              {
+                num: "04",
+                title: "SEO-Friendly & Performance-Focused",
+                desc: "We build websites with search engine visibility, mobile responsiveness, usability, security, and performance in mind."
+              },
+              {
+                num: "05",
+                title: "Affordable & Scalable",
+                desc: "Our solutions are designed to provide value for startups, small businesses, and growing companies while allowing your digital presence to scale as your business grows."
+              },
+              {
+                num: "06",
+                title: "Business-Focused Approach",
+                desc: "We don't simply create websites. We focus on building digital experiences that strengthen your brand, generate enquiries, improve customer engagement, and support business growth."
+              },
+              {
+                num: "07",
+                title: "Dedicated Support",
+                desc: "Our support continues after your website goes live. From updates and maintenance to technical assistance and digital marketing, we are available to support your ongoing requirements."
+              }
+            ].map((item, index) => (
+              <div
+                key={item.num}
+                data-aos="fade-up"
+                data-aos-delay={index * 50}
+                style={{
+                  display: "flex",
+                  gap: "24px",
+                  alignItems: "flex-start",
+                  padding: "24px 0",
+                  borderBottom: "1px solid #e0e0e0",
+                  borderTop: index === 0 ? "1px solid #e0e0e0" : "none"
+                }}
+              >
+                <span style={{ fontSize: "1.2rem", fontWeight: "700", color: "#053456", minWidth: "32px" }}>
+                  {item.num}
+                </span>
+                <div>
+                  <h4 style={{ fontSize: "1.2rem", fontWeight: "700", margin: "0 0 6px 0", color: "#053456" }}>
+                    {item.title}
+                  </h4>
+                  <p style={{ fontSize: "0.95rem", color: "#555", lineHeight: "1.6", margin: 0 }}>
+                    {item.desc}
+                  </p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* FEATURED CLIENTS SECTION (#fff) */}
-      <section id="work" className="section-bg-white" style={styles.section}>
+      {/* CLIENTS SECTION */}
+      <section className="section-bg-white" id="clients" style={styles.section}>
         <div style={styles.container}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <span className="px-section-subtitle pt-40 blink-ball mb-20 text-tenor">OUR CLIENTS</span>
-            <h3 className="px-section-title text-tenor font-title-cls text-effect mb-20">
-              <span className="word">Featured </span>
-              <span>USA Clients</span>
-            </h3>
-            <p className="text-figtree text-black">
-              We are proud to have worked with amazing businesses across the USA. Here are some of our successfully
-              completed projects.
-            </p>
+            <div data-aos="fade-up" data-aos-delay="0">
+              <span className="px-section-subtitle pt-40 blink-ball mb-20 text-tenor">OUR CLIENTS</span>
+            </div>
+           
+            <div data-aos="fade-up" data-aos-delay="100">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">
+                  Featured {" "}
+                </span>
+                USA Clients
+              </h4>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200">
+              <p className="text-figtree text-black">
+                We are proud to work with businesses across the USA, delivering professional web design, website development, and digital solutions tailored to their unique needs. Here are some of the successful projects we have completed for our clients.
+              </p>
+            </div>
           </div>
 
-          <div className="dx-grid-3">
-            {CLIENTS.map((c) => {
-              const Icon = c.icon;
+          <div className="dx-grid-4">
+            {CLIENTS.map((c, index) => {
               return (
-                <div key={c.domain} className="dx-client-card">
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                    <div style={{ fontWeight: 700, fontSize: "1.1rem", color: c.color, display: "flex", alignItems: "center", gap: 6 }}>
-                      {Icon && <Icon size={18} />}
-                      {c.brand}
-                    </div>
-                    <span style={{ fontSize: "1.2rem" }}>🇺🇸</span>
-                  </div>
-                  <div style={{ fontWeight: 700, fontSize: "1.1rem", marginTop: 10, color: colors.ink }}>{c.name}</div>
-                  <div style={styles.clientDomain}>{c.domain}</div>
-                  <div style={styles.clientCategory}>{c.category}</div>
-                  <span style={styles.badgeCompleted}>Completed</span>
-                  <div>
+                <div 
+                  className="dx-client-card" 
+                  key={c.name || index} 
+                  style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 50}
+                >
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+                    <span style={styles.badgeCompleted}>Completed</span>
                     <a href="#" style={styles.visitLink}>
                       Visit Website <span aria-hidden>→</span>
                     </a>
                   </div>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: "1.1rem", color: colors.ink }}>{c.name}</div>
+                    <div style={styles.clientCategory}>{c.category}</div>
+                  </div>
                 </div>
               );
             })}
@@ -485,35 +713,41 @@ const DigitizeXPage: React.FC = () => {
         </div>
       </section>
 
-      {/* RECENT WORK + TECHNOLOGIES SECTION (#f1f1f1) */}
-      <section id="technologies" className="section-bg-alt" style={styles.section}>
+      {/* RECENT WORK + TECHNOLOGIES SECTION */}
+      <section className="section-bg-alt" id="technologies" style={styles.section}>
         <div style={styles.container} className="dx-grid-rw">
           <div>
-            
-             <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">Our Recent </span> Work
-            </h4>
-            <p className="text-figtree text-black">
-              We are proud to have worked with amazing businesses across the USA. We specialize in delivering
-              innovative digital solutions that empower businesses to achieve sustainable growth and long-term
-              success. Our team combines creativity, technical expertise, and industry best practices to develop
-              high-quality websites, web applications, mobile apps, AI-powered platforms, and enterprise software
-              tailored to each client&apos;s unique business goals. From the initial concept and strategic planning
-              to design, development, testing, deployment, and ongoing support, we ensure every project is built
-              with precision, performance, and scalability.
-            </p>
+            <div data-aos="fade-right" data-aos-delay="0">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">Serving Businesses </span> Across the USA
+              </h4>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="100">
+              <p className="text-figtree text-black">
+                We proudly provide web design, website development, eCommerce, SEO, digital marketing, graphic design, hosting, and website maintenance services to businesses across the USA. Our remote digital services allow us to work with businesses in different industries and locations while providing professional communication, customized solutions, and ongoing support.
+                Whether you are launching a new business, redesigning an existing website, expanding your online store, improving search rankings, or looking for a complete digital marketing partner, Yulanto Web Creations can help you build and grow your online presence.
+              </p>
+            </div>
           </div>
 
           <div>
-            
-             <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">TECHNOLOGIES WE </span> USE
-            </h4>
+            <div data-aos="fade-left" data-aos-delay="0">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">TECHNOLOGIES WE </span> USE
+              </h4>
+            </div>
+
             <div className="dx-grid-tech">
-              {TECHS.map((t) => {
+              {TECHS.map((t, index) => {
                 const Icon = t.icon;
                 return (
-                  <div key={t.name} className="dx-tech-tile">
+                  <div 
+                    key={t.name} 
+                    className="dx-tech-tile"
+                    data-aos="zoom-in"
+                    data-aos-delay={index * 50}
+                  >
                     <Icon size={24} style={{ color: t.color, marginBottom: 8, display: "block", marginLeft: "auto", marginRight: "auto" }} />
                     {t.name}
                   </div>
@@ -524,27 +758,26 @@ const DigitizeXPage: React.FC = () => {
         </div>
       </section>
 
-      {/* TESTIMONIALS + ACHIEVEMENTS SECTION (#fff) */}
-      <section id="testimonials" className="section-bg-white" style={styles.section}>
+      {/* TESTIMONIALS + ACHIEVEMENTS SECTION */}
+      <section className="section-bg-white" id="testimonials" style={styles.section}>
         <div style={styles.container} className="dx-grid-2">
           <div>
-            <span className="px-section-subtitle pt-40 blink-ball mb-20 text-tenor">CLIENT TESTIMONIALS</span>
-           
-             <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">What Our</span> Clients Say
-            </h4>
+            <div data-aos="fade-right" data-aos-delay="0">
+              <span className="px-section-subtitle pt-40 blink-ball mb-20 text-tenor">CLIENT TESTIMONIALS</span>
+            </div>
 
-            <div className="dx-testimonial-card">
+            <div data-aos="fade-right" data-aos-delay="100">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">What Our</span> Clients Say
+              </h4>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200" className="dx-testimonial-card">
               <div style={{ color: "#f5a524", fontSize: "1rem", letterSpacing: 2, marginBottom: 4 }}>★★★★★</div>
               <p className="text-figtree text-black" style={{ margin: "16px 0" }}>
                 &quot;{TESTIMONIALS[testimonialIdx].text}&quot;
               </p>
               <div style={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={TESTIMONIALS[testimonialIdx].img}
-                  alt={TESTIMONIALS[testimonialIdx].name}
-                  style={{ width: 48, height: 48, borderRadius: "50%", objectFit: "cover", marginRight: 16 }}
-                />
                 <div>
                   <div style={{ fontWeight: 700, fontSize: "0.98rem", color: colors.ink }}>{TESTIMONIALS[testimonialIdx].name}</div>
                   <div style={{ fontSize: ".82rem", color: colors.muted }}>{TESTIMONIALS[testimonialIdx].role}</div>
@@ -574,85 +807,55 @@ const DigitizeXPage: React.FC = () => {
           </div>
 
           <div>
-            <span className="px-section-subtitle pt-40 blink-ball mb-20 text-tenor">OUR ACHIEVEMENTS</span>
-            
-             <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">Numbers That </span> Define Us
-            </h4>
-            <p className="text-figtree text-black">
-              We are proud to have worked with amazing businesses across the USA. We specialize in delivering
-              innovative digital solutions that empower businesses to achieve sustainable growth and long-term
-              success, from initial concept and strategic planning to design, development, testing, deployment,
-              and ongoing support.
-            </p>
+            <div data-aos="fade-left" data-aos-delay="0">
+              <span className="px-section-subtitle pt-40 blink-ball mb-20 text-tenor">OUR ACHIEVEMENTS</span>
+            </div>
+
+            <div data-aos="fade-left" data-aos-delay="100">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">Delivering Successful </span> Digital Solutions
+              </h4>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200">
+              <p className="text-figtree text-black">
+                Our achievements reflect years of creativity, innovation, and commitment to delivering successful digital solutions. We have helped businesses across the USA and beyond build powerful online experiences through professional web design, development, eCommerce, digital marketing, and ongoing technical support—from initial strategy and concept to design, development, deployment, and long-term growth.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA SECTION (icon cluster + text) — replaces old banner CTA */}
-      <section id="contact" className="section-bg-alt" style={{ padding: "64px 0" }}>
-        <div style={styles.container} className="dx-grid-cta">
-          {/* Left Column - Icon Cluster */}
-          <div
-            style={{
-              position: "relative",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                inset: "-20px",
-                background: "radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(241, 241, 241, 0) 70%)",
-                pointerEvents: "none",
-                zIndex: 0,
-              }}
-            />
-
-            <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", gap: 10 }}>
-              <div style={{ display: "flex", justifyContent: "center", gap: 10 }}>
-                <IntegrationCard><GeminiIcon /></IntegrationCard>
-                <IntegrationCard><ReplitIcon /></IntegrationCard>
-              </div>
-              <div style={{ display: "flex", justifyContent: "center", gap: 10 }}>
-                <IntegrationCard><MagicUIIcon /></IntegrationCard>
-                <IntegrationCard isCenter><CenterLogoIcon /></IntegrationCard>
-                <IntegrationCard><VSCodiumIcon /></IntegrationCard>
-              </div>
-              <div style={{ display: "flex", justifyContent: "center", gap: 10 }}>
-                <IntegrationCard><MediaWikiIcon /></IntegrationCard>
-                <IntegrationCard><GooglePaLMIcon /></IntegrationCard>
-              </div>
+      {/* CTA SECTION */}
+      <section className="section-bg-alt" id="contact" style={{ padding: "64px 0", overflow: "hidden" }}>
+        <div style={{ ...styles.container, maxWidth: 1200, margin: "0 auto", textAlign: "center" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 20 }}>
+            <div data-aos="fade-up" data-aos-delay="0">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">Let's Build Your </span>Digital Presence
+              </h4>
             </div>
-          </div>
 
-          {/* Right Column - Text Content */}
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 20 }}>
-            <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">Have a Project </span>in Mind?
-            </h4>
+            <div data-aos="fade-up" data-aos-delay="100">
+              <p className="text-figtree text-black">
+                Your website is more than an online brochure—it is an important part of your business growth. Let our team create a professional digital presence that helps your business stand out, connect with your customers, and achieve your online goals.
+              </p>
+            </div>
 
-            <p className="text-figtree text-black">Let&apos;s Build Something Amazing Together!</p>
-
-            <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginTop: 8 }}>
-              <a href="#contact" onClick={handleNavClick("contact")} style={styles.btnBrand}>
-                Get Free Consultation
-              </a>
-              <a href="#work" onClick={handleNavClick("work")} style={styles.btnOutline}>
-                View Our Work
+            <div data-aos="fade-up" data-aos-delay="200" style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap", marginTop: 8 }}>
+              <a href="#contact" className="btn-primary">
+                Get in touch with Yulanto Web Creations today and let's create your next digital success story.
               </a>
             </div>
           </div>
         </div>
       </section>
+
+      {/* SCROLL TO TOP BUTTON */}
+      <ScrollToTop />
     </div>
   );
-};
-
-export default DigitizeXPage;
+}
 
 // ---- HERO GLOBE SUBCOMPONENTS ---------------------------------------------
 const HeroGlobe: React.FC = () => {
