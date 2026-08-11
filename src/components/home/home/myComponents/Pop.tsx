@@ -6,10 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faEnvelope,
     faPhone,
-    faLocationDot,
-    faArrowRight
+    faLocationDot
 } from "@fortawesome/free-solid-svg-icons";
-import { socialLinks } from "@/data/footer-data";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
@@ -91,7 +89,6 @@ export default function QuoteModal() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Prevent submission if Captcha is wrong
         if (captchaStatus !== "correct") {
             setCaptchaStatus("incorrect");
             return;
@@ -126,6 +123,12 @@ export default function QuoteModal() {
                                 placeholder=" "
                                 onChange={handleChange}
                                 required
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter" && formData.name.trim() !== "") {
+                                        e.preventDefault();
+                                        setShowRestForm(true);
+                                    }
+                                }}
                             />
 
                             <label htmlFor="name">Enter Your Name</label>
@@ -138,15 +141,15 @@ export default function QuoteModal() {
                                         setShowRestForm(true);
                                     }
                                 }}
+                                style={{
+                                    fontSize: "13px",
+                                    fontWeight: "600",
+                                    padding: "4px 12px",
+                                    borderRadius: "6px"
+                                }}
                             >
-                                <FontAwesomeIcon icon={faArrowRight} />
+                                Enter
                             </button>
-
-                            {!showRestForm && (
-                                <p className="name-helper">
-                                    Click the arrow button to continue.
-                                </p>
-                            )}
                         </div>
 
                         {showRestForm && (
@@ -223,7 +226,7 @@ export default function QuoteModal() {
                                     <label htmlFor="message">Message</label>
                                 </div>
 
-                                {/* Math Captcha Block - Question & Answer Split */}
+                                {/* Math Captcha Block */}
                                 <div className="captcha-container" style={{ marginBottom: "10px" }}>
                                     <label
                                         htmlFor="mathCaptcha"
@@ -260,22 +263,18 @@ export default function QuoteModal() {
                                     </div>
                                 </div>
 
-                                {/* Status Feedback Messages */}
                                 {captchaStatus === "correct" && (
-                                    <p style={{ color: "#22c55e", fontSize: "10px", fontWeight: "400", marginTop: "4px", marginBottom: "5px" }}>
-                                        ✓ Verified
-                                    </p>
+                                    <p className="verify">✓ Verified</p>
                                 )}
 
                                 {captchaStatus === "incorrect" && (
-                                    <p style={{ color: "#ef4444", fontSize: "10px", fontWeight: "400", marginTop: "4px", marginBottom: "5px" }}>
-                                        ✕ Incorrect answer, please try again.
-                                    </p>
+                                    <p className="incorrect">✕ Incorrect answer, please try again.</p>
                                 )}
 
                                 <button type="submit" className="submit-btn">
                                     Submit Request
                                 </button>
+                                🔒 Your information is secure and confidential.
                             </div>
                         )}
                     </form>
@@ -284,40 +283,71 @@ export default function QuoteModal() {
                 {/* Right Side: Blue Accent Section */}
                 <div className="quote-modal-right">
                     <div className="blue-section-content">
-                        <div className="contact-info py-10">
-                            {showRestForm && (
+                        <div className="contact-info py-4">
+                            {showRestForm ? (
                                 <>
-                                    <p className="text-tenor">Reach Us</p>
-                                    <a href="mailto:info@yulanto.com" className="contact-card">
-                                        <div className="contact-icon">
-                                            <FontAwesomeIcon icon={faEnvelope} />
-                                        </div>
-                                        <p>info@yulanto.com</p>
-                                    </a>
+                                    <div className="desktop-reach-us">
+                                        <p className="text-tenor">Reach Us</p>
+                                        <a href="mailto:info@yulanto.com" className="contact-card">
+                                            <div className="contact-icon">
+                                                <FontAwesomeIcon icon={faEnvelope} />
+                                            </div>
+                                            <p>info@yulanto.com</p>
+                                        </a>
 
-                                    <a href="tel:+919962157250" className="contact-card">
-                                        <div className="contact-icon">
-                                            <FontAwesomeIcon icon={faPhone} />
-                                        </div>
-                                        <p>+91 99621 57250</p>
-                                    </a>
+                                        <a href="tel:+919962157250" className="contact-card">
+                                            <div className="contact-icon">
+                                                <FontAwesomeIcon icon={faPhone} />
+                                            </div>
+                                            <p>+91 99621 57250</p>
+                                        </a>
+                                        <a
+                                            href="https://maps.app.goo.gl/sHp8T3KXGXav9GuT9"
+                                            target="_blank"
+                                            className="contact-card"
+                                        >
+                                            <div className="contact-icon">
+                                                <FontAwesomeIcon icon={faLocationDot} />
+                                            </div>
+                                            <p>F3, #4/608, First Floor,<br /> VOC St, near Turyaa Hotel, Kottivakkam,<br /> OMR, Chennai, Tamil Nadu - 600041</p>
+                                        </a>
+                                    </div>
+
+                                    {/* Mobile/Tablet View when rest of the form is active */}
+                                    <div className="mobile-get-started d-block d-lg-none">
+                                        <div className="badge text-tenor">Let's Get Started</div>
+                                        <h2 className="text-tenor text-white mt-1">
+                                            Your Digital Success Starts Here
+                                        </h2>
+                                        <p className="text-figtree text-white mt-2 opacity-75 d-md-block hidden">
+                                            Tell us about your project or business requirements. Fill out the form, and our team will contact you within 24 hours.
+                                        </p>
+                                    </div>
                                 </>
+                            ) : (
+                                /* Mobile/Tablet View when initial name step is shown */
+                                <div className="initial-get-started d-block d-lg-none">
+                                    <div className="badge text-tenor">Let's Get Started</div>
+                                    <h2 className="text-tenor text-white">
+                                        Your Digital Success Starts Here
+                                    </h2>
+                                    {/* <p className="text-figtree text-white mt-2 opacity-75">
+                                        Tell us about your project or business requirements. Fill out the form, and our team will contact you within 24 hours.
+                                    </p> */}
+                                </div>
                             )}
                         </div>
                     </div>
 
-                    <div className="blue-section-content">
+                    {/* Desktop View Content */}
+                    <div className="blue-section-content desktop-only-content d-none d-lg-block">
                         <div className="badge text-tenor">Let's Get Started</div>
-                        <h2 className="text-tenor text-white">
+                        <h2 className="text-tenor text-white mt-1">
                             Your Digital Success Starts Here
                         </h2>
-                        <p className="text-figtree">
-                            Tell us about your project or business requirements. Fill out the
-                            form, and our team will contact you within 24 hours.
+                        <p className="text-figtree text-white mt-2 opacity-75">
+                            Tell us about your project or business requirements. Fill out the form, and our team will contact you within 24 hours.
                         </p>
-                        {/* <p className="text-figtree small-desc">
-                            🔒 Your information is secure and confidential.
-                        </p> */}
                     </div>
                 </div>
             </div>

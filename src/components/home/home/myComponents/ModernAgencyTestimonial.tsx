@@ -60,7 +60,7 @@ const StatCard: React.FC<StatCardProps> = ({
 }) => {
     return (
         <motion.div
-            className={`card mb-3 border-0 p-3 w-100 ${className ?? ""}`}
+            className={`card mb-3 border-0 p-3 w-100 ${className ?? ""} ms-lg-auto`}
             whileHover={{
                 y: -6,
                 scale: 1.02,
@@ -73,7 +73,7 @@ const StatCard: React.FC<StatCardProps> = ({
                 borderRadius: '0px 30px 0px 30px',
                 backgroundColor: '#ffffff',
                 maxWidth: '320px',
-                marginLeft: 'auto',
+                marginLeft: 0,
                 boxShadow: "0 4px 12px rgba(0,0,0,0.03)",
                 cursor: "pointer"
             }}
@@ -99,7 +99,7 @@ const StatCard: React.FC<StatCardProps> = ({
 
 const Testimonial = () => {
     return (
-        <section className="px-testimonial-area pt-lg-120  pb-lg-100 pb-80" style={{ backgroundColor: '#F5F5F5', overflow: 'hidden' }}>
+        <section className="px-testimonial-area pt-lg-120   pb-lg-100 pb-80" style={{ backgroundColor: '#F5F5F5', overflow: 'hidden' }}>
             <div className="container">
 
                 {/* Top Animated Header Row */}
@@ -143,7 +143,7 @@ const Testimonial = () => {
 
                     {/* Left Column: Stat Cards & Review Images */}
                     <div className="col-xl-4  mt-5 mt-xl-0">
-                        <div className="d-flex flex-column align-items-start align-items-lg-end">
+                        <div className="d-flex flex-column align-items-center align-items-lg-end">
 
                             {/* Card 1: Trusted By */}
                             <StatCard

@@ -481,7 +481,7 @@ const Hero = () => {
     }, [isHovered]);
 
     function getQuotes() {
-       alert('Quotes Request')
+        alert('Quotes Request')
 
     }
 
@@ -528,13 +528,19 @@ const Hero = () => {
                                                             width={0}
                                                             height={0}
                                                             unoptimized
+                                                            // style={{
+                                                            //     transition:
+                                                            //         "0.3s",
+                                                            //     filter: isActive
+                                                            //         ? "grayscale(100%) brightness(50%)"
+                                                            //         : "none",
+                                                            //     width: 'auto', height: 'auto'
+                                                            // }}
+
                                                             style={{
-                                                                transition:
-                                                                    "0.3s",
-                                                                filter: isActive
-                                                                    ? "grayscale(100%) brightness(50%)"
-                                                                    : "none",
-                                                                width: 'auto', height: 'auto'
+                                                                transition: "0.3s",
+                                                                width: "auto",
+                                                                height: "auto"
                                                             }}
 
                                                         />
@@ -543,16 +549,14 @@ const Hero = () => {
                                                     {isActive && (
                                                         <div
                                                             style={{
-                                                                position:
-                                                                    "absolute",
+                                                                position: "absolute",
                                                                 inset: 0,
+                                                                backgroundColor: "#053456",
+                                                                opacity: 0.7,
                                                                 display: "flex",
-                                                                justifyContent:
-                                                                    "center",
-                                                                alignItems:
-                                                                    "center",
-                                                                pointerEvents:
-                                                                    "none",
+                                                                justifyContent: "center",
+                                                                alignItems: "center",
+                                                                pointerEvents: "none",
                                                                 padding: "4px",
                                                             }}
                                                         >
@@ -574,6 +578,7 @@ const Hero = () => {
                                                                         "var(--font-tenor)",
                                                                     textShadow:
                                                                         "1px 1px 4px rgba(0,0,0,.8)",
+                                                                        zIndex:9999
                                                                 }}
                                                             >
                                                                 {item.head}

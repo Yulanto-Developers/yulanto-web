@@ -61,7 +61,7 @@ const StartupAgencyProject = () => {
                         slidesPerView={2}
                         loop={true}
                         autoplay={{
-                            delay: 300000,
+                            delay: 3000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: true,
                         }}

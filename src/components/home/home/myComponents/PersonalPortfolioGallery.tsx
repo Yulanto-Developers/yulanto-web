@@ -57,7 +57,7 @@ const PersonalPortfolioGallery = () => {
 
     return (
         <>
-            <div className="px-project-area pt-0">
+            <div className="px-project-area pt-lg-1200">
                 <div className="container container-1550">
                     <div className="px-project-title-wrap">
                         <div className="row">
@@ -85,7 +85,7 @@ const PersonalPortfolioGallery = () => {
                 </div>
             </div>
 
-            <div className="px-gallery-area pt-lg-40 pt-20 pb-140">
+            <div className="px-gallery-area pt-xl-40 pt-20 pb-140">
                 <div className="px-gallery-slider-one mb-20">
 
                     <div className="px-gallery-active tp-slider-transtion">

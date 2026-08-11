@@ -1,7 +1,6 @@
 import { PortfolioProjectDT } from "@/types/portfolio-dt";
 import SmartLink from "@/components/common/SmartLink";
 import Image from "next/image";
-import { moveItem } from "framer-motion";
 
 const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
     id,
@@ -10,7 +9,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
     image,
     description,
     categories,
-    highlights
+    highlights,
 }) => {
     return (
         <div className="portfolio-project-card">
@@ -30,41 +29,70 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                     <SmartLink href={`/`}>
                         <div className="ripple-image project-hover-card">
 
-                            <Image
-                                src={image}
-                                alt={title}
-                                width={905}
-                                height={680}
-                                style={{
-                                    width: "100%",
-                                    objectFit: "cover"
-                                }}
-                            />
+                            <style jsx>{`
+                                .responsive-image {
+                                    aspect-ratio: 8.6 / 9;
+                                }
 
+                                @media (min-width: 768px) {
+                                    .responsive-image {
+                                        aspect-ratio: 16 / 10;
+                                    }
+                                }
+                            `}</style>
+
+                            {/* IMAGE CONTAINER */}
+                            <div
+                                className="responsive-image"
+                                style={{
+                                    position: "relative",
+                                    width: "100%",
+                                    overflow: "hidden",
+                                }}
+                            >
+                                <Image
+                                    src={image}
+                                    alt={title}
+                                    fill
+                                    sizes="(max-width: 767px) 100vw, 905px"
+                                    style={{
+                                        objectFit: "cover",
+                                    }}
+                                />
+                            </div>
+
+                            {/* HOVER OVERLAY */}
                             <div className="project-hover-overlay">
                                 <div className="project-hover-content">
 
                                     {description && (
-                                        <p className="text-figtree ">{description}</p>
+                                        <p className="text-figtree">
+                                            {description}
+                                        </p>
                                     )}
-                                    {highlights && (
+
+                                    {highlights && highlights.length > 0 && (
                                         <div className="project-highlights">
-                                            <h6 className="key-cls">Key Highlights</h6>
+                                            <h6 className="key-cls">
+                                                Key Highlights
+                                            </h6>
 
                                             <ul className="list-style-cls">
                                                 {highlights.map((item, index) => (
-                                                    <li key={index} className="text-figtree">
+                                                    <li
+                                                        key={index}
+                                                        className="text-figtree"
+                                                    >
                                                         <span className="highlight-icon">
                                                             <i className="fa-solid fa-check"></i>
                                                         </span>
+
                                                         {item}
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
                                     )}
-
-
 
                                 </div>
                             </div>
@@ -77,18 +105,18 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                     <div className="project-categories">
                         {Array.isArray(categories)
                             ? categories.map((category, index) => (
-                                <span
-                                    key={index}
-                                    className="project-category text-figtree"
-                                >
-                                    {category}
-                                </span>
-                            ))
+                                  <span
+                                      key={index}
+                                      className="project-category text-figtree"
+                                  >
+                                      {category}
+                                  </span>
+                              ))
                             : (
-                                <span className="project-category text-figtree">
-                                    {categories}
-                                </span>
-                            )}
+                                  <span className="project-category text-figtree">
+                                      {categories}
+                                  </span>
+                              )}
                     </div>
                 )}
 

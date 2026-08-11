@@ -104,7 +104,7 @@ const StartupAgencyAbout = () => {
     });
 
     return (
-        <section ref={ref} className="px-about-area about-skew-anim pt-50 pb-50 overflow-hidden">
+        <section ref={ref} className="px-about-area about-skew-anim pt-lg-120   pb-50 overflow-hidden">
             <div className="container container-1550">
 
 
