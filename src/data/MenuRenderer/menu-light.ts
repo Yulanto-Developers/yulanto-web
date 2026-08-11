@@ -114,7 +114,7 @@ export const lightMenu: MenuItem[] = [
     id: 6,
     type: "none",
     mobileV: true,
-    label: "Contact",
+    label: "Contact Us",
     sublinkTrue: false,
     isLastMenu: true,
     href: "/contact",

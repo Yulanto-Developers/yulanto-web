@@ -487,7 +487,7 @@ const Hero = () => {
     }
 
     return (
-        <div className="px-hero-2-area pt-120 bg-white" style={{ backgroundImage: `url(${BgPattern.src})`, backgroundPosition: 'fixed', backgroundRepeat: 'no-repeat' }}>
+        <div className="px-hero-2-area pt-120 bg-white" style={{ backgroundImage: `url(${BgPattern.src})`, backgroundPosition: 'fixed', backgroundRepeat: 'repeat', objectFit: 'cover' }}>
             <div className="px-hero-2-main d-none d-xl-block p-relative">
                 <div className="container">
                     <div className="row">
