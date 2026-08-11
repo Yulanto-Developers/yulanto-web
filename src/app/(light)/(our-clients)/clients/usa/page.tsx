@@ -33,7 +33,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 import AOS from "aos";
-import "aos/dist/aos.css";
+import "aos/dist/aos.css"; India Private
 
 import Image1 from '@/assets/img/usa/usafalg.png';
 
