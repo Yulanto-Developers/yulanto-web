@@ -70,16 +70,6 @@ const HeroSlide = () => {
                         <button
                             onClick={openModal}
                             className="button-style text-tenor"
-                        // style={{
-
-                        //     color: "#ffffff",
-                        //     padding: "12px 28px",
-                        //     fontWeight: "600",
-                        //     fontSize: "16px",
-                        //     display: "inline-block",
-                        //     textDecoration: "none",
-                        //     transition: "all 0.3s ease"
-                        // }}
                         >
                             Get a Free Quote
                         </button>
@@ -98,7 +88,7 @@ const HeroSlide = () => {
                         }}
                         slidesPerView={3}
                         spaceBetween={10}
-                        centeredSlides={true}
+                        centeredSlides={false} /* FIXED: Set to false to remove initial left empty space */
                         loop={false}
                         slideToClickedSlide={true}
                         controller={{ control: topSwiper }}
