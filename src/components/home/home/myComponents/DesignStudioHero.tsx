@@ -385,7 +385,7 @@ import { text_slider_params } from "@/constant";
 import { SLIDER_TEXTS } from "@/data/site-data";
 import { StarIcon } from "@/svg/StarIcons";
 import { useQuoteModal } from "./Content/QuoteContext";
-import BgPattern from '@/assets/img/banner/bgpattern4.png'
+import BgPattern from '@/assets/img/banner/bgPattern.png'
 
 
 const heroContent = [
