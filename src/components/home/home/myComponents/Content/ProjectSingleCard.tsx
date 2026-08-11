@@ -31,7 +31,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
 
                             <style jsx>{`
                                 .responsive-image {
-                                    aspect-ratio: 9 / 9;
+                                    aspect-ratio: 8.6 / 9;
                                 }
 
                                 @media (min-width: 768px) {
