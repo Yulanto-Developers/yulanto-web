@@ -1475,14 +1475,15 @@ p {
     height: 40px;
     border: none;
     border-radius: 50%;
-    background: #0d6efd;
+    background: linear-gradient(115deg, #53ae7d 0%, #275674 100%);
+    ;
     color: #fff;
     cursor: pointer;
     transition: .3s;
 }
 
 .name-next-btn:hover {
-    background: #0b5ed7;
+    background: linear-gradient(115deg, #275674 0%, #53ae7d 100%);
     /* transform: translateY(-50%) scale(1.08); */
 }
 
@@ -1771,7 +1772,7 @@ input[name="name"].has-value+.name-next-btn {
 .submit-btn {
     width: 100%;
     height: 48px;
-    background: #2563eb;
+    background: linear-gradient(115deg, #53ae7d 0%, #275674 100%);
     color: #ffffff;
     border: none;
     border-radius: 12px;
@@ -1783,7 +1784,7 @@ input[name="name"].has-value+.name-next-btn {
 }
 
 .submit-btn:hover {
-    background: #1d4ed8;
+    background: linear-gradient(115deg, #275674 0%, #53ae7d 100%);
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
 }
@@ -1972,15 +1973,7 @@ input[name="name"].has-value+.name-next-btn {
 }
 
 /* Desktop */
-.mobile-get-started {
-    display: none;
-}
 
-.desktop-reach-us {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
 .pt-lg-120 {
     padding-top: 120px;
@@ -1992,9 +1985,7 @@ input[name="name"].has-value+.name-next-btn {
 
 /* Mobile */
 @media (max-width: 767px) {
-    .desktop-reach-us {
-        display: none;
-    }
+
 
     .reach-mobile {
         padding-top: 40px;
@@ -2008,9 +1999,7 @@ input[name="name"].has-value+.name-next-btn {
         padding-top: 20px;
     }
 
-    .mobile-get-started {
-        display: block;
-    }
+
 }
 
 /* pop up css ends */
@@ -2306,3 +2295,46 @@ input[name="name"].has-value+.name-next-btn {
 }
 
 /* sidebar css ends */
+
+
+/* Responsive visibility rules */
+.mobile-get-started,
+.initial-get-started {
+    display: none;
+}
+
+.desktop-reach-us {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.desktop-only-content {
+    display: block;
+}
+
+/* Tablet & Mobile Styles (Screens up to 1199px) */
+@media (max-width: 1199px) {
+    .desktop-only-content {
+        display: none !important;
+    }
+
+    .initial-get-started {
+        display: block;
+    }
+
+    .desktop-reach-us {
+        display: flex;
+    }
+}
+
+/* Mobile specific overrides */
+@media (max-width: 767px) {
+    .mobile-get-started {
+        display: block;
+    }
+
+    .desktop-reach-us {
+        display: none;
+    }
+}
