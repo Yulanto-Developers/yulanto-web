@@ -143,7 +143,7 @@ const Testimonial = () => {
 
                     {/* Left Column: Stat Cards & Review Images */}
                     <div className="col-xl-4  mt-5 mt-xl-0">
-                        <div className="d-flex flex-column align-items-start align-items-lg-end">
+                        <div className="d-flex flex-column align-items-center align-items-lg-end">
 
                             {/* Card 1: Trusted By */}
                             <StatCard

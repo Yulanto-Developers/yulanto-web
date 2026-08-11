@@ -123,7 +123,7 @@ const HeroSlide = () => {
                                                     display: "flex",
                                                     alignItems: "center",
                                                     justifyContent: "center",
-                                                    background: "#53AE7D",
+                                                    background: "#053456",
                                                     padding: "10px",
                                                     opacity: 0.7,
                                                     zIndex: 2

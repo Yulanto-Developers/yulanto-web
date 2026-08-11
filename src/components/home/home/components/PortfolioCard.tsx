@@ -229,7 +229,7 @@ const PortfolioCard = ({
 
                                 <div style={{ background: "rgba(255,255,255,.08)", borderLeft: "4px solid #53AE7D", padding: "10px", }}>
                                     <h5 className="text-tenor text-white mb-1" style={{ fontSize: '15px' }}>{portFolio[2].section}</h5>
-                                    <p className="text-figtree text-white m-0" style={{ fontSize: '13px', lineHeight: "1.4" }}>{portFolio[2].description}</p>
+                                    <p className="text-figtree text-white m-0" style={{ fontSize: '10px', lineHeight: "1.4" }}>{portFolio[2].description}</p>
                                 </div>
 
                                 <div style={{ background: "#53AE7D", color: "#fff", padding: "8px", textAlign: "center", fontWeight: 600, fontSize: "13px" }} className="text-tenor">

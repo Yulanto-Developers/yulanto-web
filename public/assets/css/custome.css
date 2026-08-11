@@ -1299,15 +1299,15 @@ p {
 /* header button css endss */
 
 .project-hover-content p {
-    font-size: 18px !important;
+    font-size: 15px !important;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 18px;
 }
 
 /* Container */
 .project-highlights {
-    margin-top: 10px;
-    padding: 18px;
+    margin-top: 5px;
+    padding: 13px;
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1346,7 +1346,7 @@ p {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    font-size: 15px;
+    font-size: 13px;
     color: rgba(255, 255, 255, 0.92);
     margin-bottom: 12px;
     line-height: 1.6;
@@ -2184,7 +2184,7 @@ input[name="name"].has-value+.name-next-btn {
     }
 
     .project-hover-content p {
-        font-size: 15px !important;
+        font-size: 14px !important;
     }
 
     /* .px-portfolio-thumb:after {

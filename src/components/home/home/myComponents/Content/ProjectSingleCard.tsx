@@ -29,7 +29,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                     <SmartLink href={`/`}>
                         <div className="ripple-image project-hover-card">
 
-                            {/* <style jsx>{`
+                            <style jsx>{`
                                 .responsive-image {
                                     aspect-ratio: 9 / 9;
                                 }
@@ -39,7 +39,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                                         aspect-ratio: 16 / 10;
                                     }
                                 }
-                            `}</style> */}
+                            `}</style>
 
                             {/* IMAGE CONTAINER */}
                             <div

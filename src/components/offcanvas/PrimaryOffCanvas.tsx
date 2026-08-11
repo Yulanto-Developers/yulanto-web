@@ -121,13 +121,13 @@ const PrimaryOffCanvas = () => {
                   </div>
                   <Link href="tel:+919962157250">+91 99621 57250</Link>
                 </li>
-                <li className="d-flex justify-content-start align-items-start contact-card">
+                <li className="d-flex justify-content-start align-items-center contact-card">
                   <div className="contact-icons">
                     <FontAwesomeIcon className="" icon={faEnvelope} />
                   </div>
                   <Link href="mailto:info@yulanto.com">info@yulanto.com</Link>
                 </li>
-                <li className="d-flex justify-content-start align-items-start contact-card">
+                <li className="d-flex justify-content-start align-items-center contact-card">
                   <div className="contact-icons">
                     <FontAwesomeIcon className="" icon={faLocationDot} />
                   </div>
