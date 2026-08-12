@@ -23,12 +23,19 @@ const data = [
     currentPage: "Contact Us",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
   },
+   {
+    path: "/work/recent-project",
+    title: "Recent Project",
+    currentPage: "Recent Project",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
+  },
 ];
 
 export default function BreadcurmbData() {
   const pathname = usePathname();
 
   const page = data.find((item) => item.path === pathname);
+  console.log('ez')
 
   if (!page) return null;
 

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      work
+      my work pge
     </>
   );
 };

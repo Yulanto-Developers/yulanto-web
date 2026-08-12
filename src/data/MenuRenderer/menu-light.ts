@@ -86,7 +86,7 @@ export const lightMenu: MenuItem[] = [
     label: "Our Work",
     href: "#",
     links: [
-      { label: "Recent Projects", href: "/recent-project" },
+      { label: "Recent Projects", href: "work/recent-project" },
       { label: "Portfolio", href: "/" },
       { label: "Case Studies", href: "/" },
       { label: "Industries We Serve", href: "/" },
