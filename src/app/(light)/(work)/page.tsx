@@ -5,10 +5,12 @@ export const metadata: Metadata = {
   title: "Yulanto - Home",
 };
 
-const page= ()=>{
-    return(
-        <>
-        
-        </>
-    )
-}
+const page = () => {
+  return (
+    <>
+      work
+    </>
+  );
+};
+
+export default page;
