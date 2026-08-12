@@ -4,6 +4,7 @@ export const lightMenu: MenuItem[] = [
   {
     id: 1,
     type: "dropdown",
+    mobileV: false,
     sublinkTrue: true,
     label: "About Us",
     href: "#",
@@ -18,6 +19,7 @@ export const lightMenu: MenuItem[] = [
   {
     id: 2,
     type: "dropdown",
+    mobileV: false,
     sublinkTrue: true,
     label: "Services",
     href: "#",
@@ -79,11 +81,12 @@ export const lightMenu: MenuItem[] = [
   {
     id: 3,
     type: "dropdown",
+    mobileV: false,
     sublinkTrue: true,
     label: "Our Work",
     href: "#",
     links: [
-      { label: "Recent Projects", href: "/recent-project" },
+      { label: "Recent Projects", href: "work/recent-project" },
       { label: "Portfolio", href: "/" },
       { label: "Case Studies", href: "/" },
       { label: "Industries We Serve", href: "/" },
@@ -93,6 +96,7 @@ export const lightMenu: MenuItem[] = [
   {
     id: 4,
     type: "none",
+    mobileV: false,
     sublinkTrue: false,
     label: "Our Clients",
     href: "/clients",
@@ -100,9 +104,19 @@ export const lightMenu: MenuItem[] = [
   {
     id: 5,
     type: "none",
+    mobileV: false,
     label: "Careers",
     sublinkTrue: false,
     isLastMenu: true,
     href: "/careers",
+  },
+  {
+    id: 6,
+    type: "none",
+    mobileV: true,
+    label: "Contact Us",
+    sublinkTrue: false,
+    isLastMenu: true,
+    href: "/contact",
   },
 ];

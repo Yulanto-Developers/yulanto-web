@@ -358,7 +358,7 @@
     }
 
     &-thumbs {
-      filter: saturate(0);
+      // filter: saturate(0);
       transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
 

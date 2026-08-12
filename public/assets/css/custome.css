@@ -1823,9 +1823,16 @@ input[name="name"].has-value+.name-next-btn {
         transform: translateY(0);
     }
 }
-
+.pt-sm-120{
+    padding-top: 20px;
+}
 /* Mobile Responsive */
 @media (max-width: 768px) {
+
+    .pt-sm-120{
+        padding-top: 80px;
+    }
+
     .quote-modal-container {
         flex-direction: column;
         max-height: 85vh;

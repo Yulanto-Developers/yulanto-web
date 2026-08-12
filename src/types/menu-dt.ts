@@ -21,4 +21,5 @@ export interface MenuItem {
   // `links` exists only for "dropdown" type, optional otherwise
   links?: MenuLink[];
   sublinkTrue: boolean;
+  mobileV?: boolean;
 }

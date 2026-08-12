@@ -36,7 +36,7 @@ const HeroSlide = () => {
                         centeredSlides={true}
                         loop={false}
                         autoplay={{
-                            delay: 6000,
+                            delay: 600000,
                             disableOnInteraction: false,
                         }}
                         navigation={{
@@ -88,57 +88,61 @@ const HeroSlide = () => {
                         }}
                         slidesPerView={3}
                         spaceBetween={10}
-                        centeredSlides={false} /* FIXED: Set to false to remove initial left empty space */
+                        centeredSlides={false}
                         loop={false}
                         slideToClickedSlide={true}
                         controller={{ control: topSwiper }}
                         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                         className="px-hero-2-bottom-active gallery-thumbs"
                     >
-                        {heroSlides.map((slide, index) => (
-                            <SwiperSlide key={`${slide.title}-${index}`}>
-                                <div className={`px-hero-2-thumbs ${activeIndex === index ? "active" : ""}`}>
-                                    <Link href="#" style={{ position: "relative", display: "block", overflow: "hidden", borderRadius: "8px" }}>
-                                        <Image width={130} height={168} src={slide.img} alt={slide.title} />
+                        {heroSlides.map((slide, index) => {
+                            const isActive = activeIndex === index;
 
-                                        {/* Centered Overlay Head - Active Slide Only */}
-                                        {activeIndex === index && slide.head && (
-                                            <div
-                                                style={{
-                                                    position: "absolute",
-                                                    top: 0,
-                                                    left: 0,
-                                                    width: "100%",
-                                                    height: "100%",
-                                                    display: "flex",
-                                                    alignItems: "center",
-                                                    justifyContent: "center",
-                                                    background: "#053456",
-                                                    padding: "10px",
-                                                    opacity: 0.7,
-                                                    zIndex: 2
-                                                }}
-                                            >
-                                                <span
+                            return (
+                                <SwiperSlide key={`${slide.title}-${index}`}>
+                                    <div className={`px-hero-2-thumbs ${isActive ? "active" : ""}`}>
+                                        <Link href="#" style={{ position: "relative", display: "block", overflow: "hidden", borderRadius: "8px" }}>
+                                            <Image width={130} height={168} src={slide.img} alt={slide.title} />
+
+                                            {/* Centered Overlay Head - Rendered ONLY on the Active Slide */}
+                                            {isActive && slide.head && (
+                                                <div
                                                     style={{
-                                                        color: "#ffffff",
-                                                        fontSize: "13px",
-                                                        fontWeight: "700",
-                                                        textAlign: "center",
-                                                        lineHeight: "1.3",
-                                                        textTransform: "uppercase",
-                                                        letterSpacing: "0.5px",
-                                                        textShadow: "0 2px 4px rgba(0,0,0,0.6)"
+                                                        position: "absolute",
+                                                        top: 0,
+                                                        left: 0,
+                                                        width: "100%",
+                                                        height: "100%",
+                                                        display: "flex",
+                                                        alignItems: "center",
+                                                        justifyContent: "center",
+                                                        background: "#053456",
+                                                        padding: "10px",
+                                                        opacity: 0.7,
+                                                        zIndex: 2
                                                     }}
                                                 >
-                                                    {slide.head}
-                                                </span>
-                                            </div>
-                                        )}
-                                    </Link>
-                                </div>
-                            </SwiperSlide>
-                        ))}
+                                                    <span
+                                                        style={{
+                                                            color: "#ffffff",
+                                                            fontSize: "13px",
+                                                            fontWeight: "700",
+                                                            textAlign: "center",
+                                                            lineHeight: "1.3",
+                                                            textTransform: "uppercase",
+                                                            letterSpacing: "0.5px",
+                                                            textShadow: "0 2px 4px rgba(0,0,0,0.6)"
+                                                        }}
+                                                    >
+                                                        {slide.head}
+                                                    </span>
+                                                </div>
+                                            )}
+                                        </Link>
+                                    </div>
+                                </SwiperSlide>
+                            );
+                        })}
                     </Swiper>
                 </div>
             </div>

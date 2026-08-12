@@ -6,11 +6,16 @@ import {
   Atom, FileCode2, Hexagon, Database, Code2, Globe2, Cloud,
   ShoppingCart,
 } from "lucide-react";
+<<<<<<< HEAD
 import ClientsShowcasePage from "@/components/ourclients/ClientsShowcasePage";
 import { USAFlagIcon } from "@/components/ourclients/USAFlagIcon";
 import Image1 from "@/assets/img/usa/usafalg.png";
 import Image2 from "@/assets/img/usa/about.png";
 import GlobalComp from "@/components/ourclients/globalcomp";
+=======
+import AOS from "aos";
+import "aos/dist/aos.css";
+>>>>>>> 4abda635acc7005cc5a6203d1cded8a89aa982b5
 
 export default function USAClientsPage() {
   return (
@@ -162,4 +167,99 @@ export default function USAClientsPage() {
    </>
 
   );
+<<<<<<< HEAD
 }
+=======
+}
+
+// ---- HERO GLOBE SUBCOMPONENTS ---------------------------------------------
+const HeroGlobe: React.FC = () => {
+  return (
+    <div style={{ position: "relative", height: 380, width: "100%", maxWidth: 420, margin: "0 auto" }}>
+      <div
+        style={{
+          position: "absolute",
+          border: "1.5px dashed rgba(47,91,255,.25)",
+          borderRadius: "50%",
+          width: 380,
+          height: 380,
+          top: 20,
+          left: "calc(50% - 190px)",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          border: "1.5px dashed rgba(47,91,255,.25)",
+          borderRadius: "50%",
+          width: 440,
+          height: 250,
+          top: 85,
+          left: "calc(50% - 220px)",
+          transform: "rotate(-8deg)",
+        }}
+      />
+      <div
+        style={{
+          width: 320,
+          height: 320,
+          borderRadius: "50%",
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          background: "radial-gradient(circle at 30% 30%, #6f8cff, #2f5bff 60%, #1c3fd6 100%)",
+          boxShadow: "0 30px 60px rgba(47,91,255,.25)",
+        }}
+      />
+
+      {HERO_STATS.map((s, i) => {
+        const Icon = s.icon;
+        const pos: CSSProperties =
+          i === 0
+            ? { top: 10, right: 0 }
+            : i === 1
+              ? { top: 150, left: -10 }
+              : { bottom: 10, right: "5%" };
+        return (
+          <div
+            key={s.label}
+            style={{
+              position: "absolute",
+              background: "#fff",
+              borderRadius: 14,
+              padding: "13px 16px",
+              minWidth: 170,
+              boxShadow: "0 15px 35px rgba(15,22,38,.1)",
+              zIndex: 2,
+              ...pos,
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <div
+                style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: 10,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: s.bg,
+                  color: s.color,
+                  flexShrink: 0,
+                }}
+              >
+                <Icon size={18} />
+              </div>
+              <div>
+                <div style={{ fontSize: ".72rem", color: colors.muted, fontWeight: 500 }}>{s.label}</div>
+                <div style={{ fontWeight: 700, fontSize: "1.05rem", color: colors.ink }}>{s.value}</div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+>>>>>>> 4abda635acc7005cc5a6203d1cded8a89aa982b5

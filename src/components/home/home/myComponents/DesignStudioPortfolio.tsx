@@ -7,7 +7,7 @@ const Portfolio = () => {
 
     return (
         <>
-            <div className="px-portfolio-area pt-30">
+            <div className="px-portfolio-area pt-sm-120" >
                 <div className="container-fluid">
 
                     <div className="px-portfolio-wrap">
