@@ -6,16 +6,16 @@ import {
   Atom, FileCode2, Hexagon, Database, Code2, Globe2, Cloud,
   ShoppingCart,
 } from "lucide-react";
-<<<<<<< HEAD
+
 import ClientsShowcasePage from "@/components/ourclients/ClientsShowcasePage";
 import { USAFlagIcon } from "@/components/ourclients/USAFlagIcon";
 import Image1 from "@/assets/img/usa/usafalg.png";
 import Image2 from "@/assets/img/usa/about.png";
 import GlobalComp from "@/components/ourclients/globalcomp";
-=======
+
 import AOS from "aos";
 import "aos/dist/aos.css";
->>>>>>> 4abda635acc7005cc5a6203d1cded8a89aa982b5
+
 
 export default function USAClientsPage() {
   return (
