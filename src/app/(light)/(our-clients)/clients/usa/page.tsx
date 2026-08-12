@@ -167,12 +167,19 @@ export default function USAClientsPage() {
    </>
 
   );
-<<<<<<< HEAD
-}
-=======
-}
 
+}
+const HERO_STATS=[
+  { label: "Years of Experience", value: "11+", icon: ShieldCheck, bg: "#e0f2ff", color: "#2f5bff" },
+  { label: "Projects Completed", value: "250+", icon: Star, bg: "#e0f2ff", color: "#2f5bff" },
+  { label: "Satisfied Clients", value: "100+", icon: Recycle, bg: "#e0f2ff", color: "#2f5bff" },  
+]
 // ---- HERO GLOBE SUBCOMPONENTS ---------------------------------------------
+const colors = {
+  muted: "#6b7280",
+  ink: "#111827",
+};
+
 const HeroGlobe: React.FC = () => {
   return (
     <div style={{ position: "relative", height: 380, width: "100%", maxWidth: 420, margin: "0 auto" }}>
@@ -215,7 +222,7 @@ const HeroGlobe: React.FC = () => {
 
       {HERO_STATS.map((s, i) => {
         const Icon = s.icon;
-        const pos: CSSProperties =
+        const pos:any =
           i === 0
             ? { top: 10, right: 0 }
             : i === 1
@@ -262,4 +269,4 @@ const HeroGlobe: React.FC = () => {
     </div>
   );
 };
->>>>>>> 4abda635acc7005cc5a6203d1cded8a89aa982b5
+
