@@ -7,25 +7,123 @@ import { CardStack, CardStackItem } from "./cardstack";
 // Fallback used only if a local client photo fails to load
 const FALLBACK_IMG =
   "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=450&fit=crop";
-
 const clientData: CardStackItem[] = [
-  { id: 1, title: "Mr. Kassim", tag: "AEC Tech", description: "Nice meeting with Mr. Kassim from AEC Tech in Singapore", imageSrc: "/assets/img/clients/AecTech.webp" },
-  { id: 2, title: "Mr. Anand Reddy", tag: "AEC Pvt. Ltd.", description: "AEC Pvt. Ltd., Owner Mr. Anand Reddy", imageSrc: "/assets/img/clients/image-2.jpg" },
-  { id: 3, title: "Mr. Aaron Ben", tag: "EBITIMI Health Solution", description: "Nice meeting with Mr. Aaron Ben from EBITIMI Health Solution in Africa", imageSrc: "/assets/img/clients/image-1.jpg" },
-  { id: 4, title: "Jeba Babu", tag: "Binzn Babz", description: "Binzn Babz, Owner Jeba Babu", imageSrc: "/assets/img/clients/binz-alt.jpg" },
-  { id: 5, title: "Mr. Sam", tag: "B&F Roofing LLC", description: "Nice meeting with Mr. Sam from B&F Roofing LLC in USA", imageSrc: "/assets/img/clients/image-3.jpg" },
-  { id: 6, title: "Mr. Danny", tag: "My Global Studies", description: "My Global Studies, Owner Mr. Danny", imageSrc: "/assets/img/clients/danny-globalstudies.jpg" },
-  { id: 7, title: "Mr. Babu", tag: "Digi Sound Studio", description: "Digi Sound Studio, Owner Mr. Babu", imageSrc: "/assets/img/clients/digi-alt.jpg" },
-  { id: 8, title: "Mr. Kosuke", tag: "EBARA MACHINERY", description: "EBARA MACHINERY's MD Mr. Kosuke", imageSrc: "/assets/img/clients/ebara.webp" },
-  { id: 9, title: "Mr. Mu. Kazhanjiyam", tag: "Tamil Cinema", description: "Mr. Mu. Kazhanjiyam, Tamil Film Director and Producer", imageSrc: "/assets/img/clients/kalanchiyam.webp" },
-  { id: 10, title: "Venkatesan & Joseph", tag: "Aerotech Innovation Pvt Ltd", description: "Venkatesan (CTO) and Joseph (Tech Lead) of Aerotech Innovation Pvt Ltd", imageSrc: "/assets/img/clients/aerotech-alt.jpg" },
-  { id: 11  , title: "Mr. Vishupriyan", tag: "Bigbox International", description: "Bigbox International, Owner Mr. Vishupriyan", imageSrc: "/assets/img/clients/big-box-alt.jpg" },
-  
-  
-  { id: 12, title: "Shagaya Raj", tag: "HCL Technologies", description: "HCL Technologies, Shagaya Raj", imageSrc: "/assets/img/clients/hcl-alt.jpg" },
-  { id: 13, title: "Mr. Paul Sunder Singh", tag: "Karunalaya Child Welfare Trust", description: "Mr. Paul Sunder Singh, Director of Karunalaya Child Welfare Trust", imageSrc: "/assets/img/clients/karunalaya-alt.jpg" },
-  { id: 14, title: "Mr. Kumaran", tag: "Switzerland Client", description: "Nice meeting with Mr. Kumaran from Switzerland", imageSrc: "/assets/img/clients/kumaran-alt.jpg" },
-  { id: 15, title: "Satheesh", tag: "My Pink Bay", description: "My Pink Bay, Owner Satheesh", imageSrc: "/assets/img/clients/my-pink-alt.jpg" },
+  {
+    id: 1,
+    title: "Mr. Kassim",
+    tag: "AEC Tech",
+    description: "Great meeting with Mr. Kassim from AEC Tech, Singapore.",
+    imageSrc: "/assets/img/clients/AecTech.webp",
+  },
+  {
+    id: 2,
+    title: "Mr. Anand Reddy",
+    tag: "AEC Pvt. Ltd.",
+    description: "Pleasure meeting Mr. Anand Reddy, Owner of AEC Pvt. Ltd.",
+    imageSrc: "/assets/img/clients/image-2.jpg",
+  },
+  {
+    id: 3,
+    title: "Mr. Aaron Ben",
+    tag: "EBITIMI Health Solution",
+    description:
+      "Wonderful meeting with Mr. Aaron Ben from EBITIMI Health Solution, Africa.",
+    imageSrc: "/assets/img/clients/image-1.jpg",
+  },
+  {
+    id: 4,
+    title: "Jeba Babu",
+    tag: "Binzn Babz",
+    description: "Great connecting with Jeba Babu, Owner of Binzn Babz.",
+    imageSrc: "/assets/img/clients/binz-alt.jpg",
+  },
+  {
+    id: 5,
+    title: "Mr. Sam",
+    tag: "B&F Roofing LLC",
+    description:
+      "Honoured to meet Mr. Sam, Founder of B&F Roofing LLC, USA.",
+    imageSrc: "/assets/img/clients/image-3.jpg",
+  },
+  {
+    id: 6,
+    title: "Mr. Danny",
+    tag: "My Global Studies",
+    description: "Great meeting with Mr. Danny, Owner of My Global Studies.",
+    imageSrc: "/assets/img/clients/danny-globalstudies.jpg",
+  },
+  {
+    id: 7,
+    title: "Mr. Babu",
+    tag: "Digi Sound Studio",
+    description:
+      "Pleasure meeting Mr. Babu, Owner of Digi Sound Studio.",
+    imageSrc: "/assets/img/clients/digi-alt.jpg",
+  },
+  {
+    id: 8,
+    title: "Mr. Kosuke",
+    tag: "EBARA MACHINERY",
+    description:
+      "Wonderful meeting with Mr. Kosuke, Managing Director of EBARA MACHINERY.",
+    imageSrc: "/assets/img/clients/ebara.webp",
+  },
+  {
+    id: 9,
+    title: "Mr. Mu. Kazhanjiyam",
+    tag: "Tamil Cinema",
+    description:
+      "Great connecting with Mr. Mu. Kazhanjiyam, Film Director and Producer.",
+    imageSrc: "/assets/img/clients/kalanchiyam.webp",
+  },
+  {
+    id: 10,
+    title: "Venkatesan & Joseph",
+    tag: "Aerotech Innovation Pvt Ltd",
+    description:
+      "Honoured to meet Venkatesan, CTO, and Joseph, Tech Lead, of Aerotech Innovation Pvt Ltd.",
+    imageSrc: "/assets/img/clients/aerotech-alt.jpg",
+  },
+  {
+    id: 11,
+    title: "Mr. Vishupriyan",
+    tag: "Bigbox International",
+    description:
+      "Great meeting with Mr. Vishupriyan, Owner of Bigbox International.",
+    imageSrc: "/assets/img/clients/big-box-alt.jpg",
+  },
+  {
+    id: 12,
+    title: "Shagaya Raj",
+    tag: "HCL Technologies",
+    description:
+      "Pleasure meeting Shagaya Raj from HCL Technologies.",
+    imageSrc: "/assets/img/clients/hcl-alt.jpg",
+  },
+  {
+    id: 13,
+    title: "Mr. Paul Sunder Singh",
+    tag: "Karunalaya Child Welfare Trust",
+    description:
+      "Wonderful meeting with Mr. Paul Sunder Singh, Director of Karunalaya Child Welfare Trust.",
+    imageSrc: "/assets/img/clients/karunalaya-alt.jpg",
+  },
+  {
+    id: 14,
+    title: "Mr. Kumaran",
+    tag: "Switzerland Client",
+    description:
+      "Great connecting with Mr. Kumaran from Switzerland.",
+    imageSrc: "/assets/img/clients/kumaran-alt.jpg",
+  },
+  {
+    id: 15,
+    title: "Satheesh",
+    tag: "My Pink Bay",
+    description:
+      "Honoured to meet Satheesh, Owner of My Pink Bay.",
+    imageSrc: "/assets/img/clients/my-pink-alt.jpg",
+  },
 ];
 
 /**
@@ -119,7 +217,7 @@ export default function Client() {
             <div className="px-project-title-box">
             
                 <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">Meeting with</span> Our Clients
+              <span className="text-blue-about">Meetings with</span> Our Clients
             </h4>
               <p className="text-figtree text-black mt-2 font-paragraph-cls">
              We highly value the opportunity to engage with our clients, as it inspires us to deliver outstanding projects. Every meeting opens the door to new ideas, stronger collaboration, and greater levels of success.

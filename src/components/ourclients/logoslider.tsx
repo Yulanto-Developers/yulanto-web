@@ -4,7 +4,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 
 export type LogoEntry = {
-  logo: string; // image path
+  logo: string;
   name?: string;
   id?: string | number;
   link?: string;
@@ -12,8 +12,6 @@ export type LogoEntry = {
 
 export type LogoCloudSwapProps = {
   logos?: LogoEntry[];
-  title?: React.ReactNode;
-  subtitle?: string;
   interval?: number;
   stagger?: number;
 };
@@ -29,7 +27,10 @@ const DEFAULT_LOGOS: LogoEntry[] = [
   { id: 5, logo: "/assets/img/partners/BBI.png" },
   { id: 6, logo: "/assets/img/partners/bioxgreen.png" },
   { id: 7, logo: "/assets/img/partners/BISHMILLAH.png" },
-  { id: 8, logo: "/assets/img/partners/CHENNAI-CLEANERS.png" },
+  {
+    id: 8,
+    logo: "/assets/img/partners/CHENNAI-CLEANERS.png",
+  },
   { id: 9, logo: "/assets/img/partners/CHOLAS.png" },
   { id: 10, logo: "/assets/img/partners/CLOUD-WALK.png" },
   { id: 11, logo: "/assets/img/partners/devior.png" },
@@ -96,13 +97,13 @@ function LogoItem({
               filter: {
                 duration: WIPE_DURATION * 0.9,
                 times: WIPE_TIMES,
-                ease: "easeInOut" as const,
+                ease: "easeInOut",
                 delay: index * stagger,
               },
               opacity: {
                 duration: WIPE_DURATION * 0.85,
                 times: WIPE_TIMES,
-                ease: "easeInOut" as const,
+                ease: "easeInOut",
                 delay: index * stagger,
               },
             }
@@ -112,13 +113,19 @@ function LogoItem({
             }
       }
       onAnimationComplete={() => {
-        if (isWaving && index === totalCount - 1) onDone();
+        if (isWaving && index === totalCount - 1) {
+          onDone();
+        }
       }}
       whileHover={{
         scale: 1.07,
         opacity: 1,
         filter: "blur(0px)",
-        transition: { type: "spring", stiffness: 340, damping: 24 },
+        transition: {
+          type: "spring",
+          stiffness: 340,
+          damping: 24,
+        },
       }}
       style={{
         display: "flex",
@@ -141,10 +148,16 @@ function LogoItem({
       >
         <img
           src={logo.logo}
-          alt={logo.name ?? ""}
-          style={{ height: "100%", width: "100%", objectFit: "contain" }}
+          alt={logo.name ?? "Partner logo"}
+          draggable={false}
+          style={{
+            height: "100%",
+            width: "100%",
+            objectFit: "contain",
+          }}
         />
       </span>
+
       {logo.name && (
         <span
           style={{
@@ -164,22 +177,23 @@ function LogoItem({
 
   if (logo.link) {
     return (
-      <a href={logo.link} style={{ textDecoration: "none" }}>
+      <a
+        href={logo.link}
+        style={{
+          textDecoration: "none",
+          display: "block",
+        }}
+      >
         {content}
       </a>
     );
   }
+
   return content;
 }
 
 export default function LogoCloudSwap({
   logos = DEFAULT_LOGOS,
-  title = (
-    <>
-      <span className="text-blue-about">Trusted by the</span> Leading Brands
-    </>
-  ),
-  subtitle = "We are proud to work with businesses and organizations that trust us to bring their digital vision to life. From growing startups to established brands, our clients rely on our expertise, creativity, and commitment to deliver impactful digital solutions that support their business goals.",
   interval = 5000,
   stagger = 0.11,
 }: LogoCloudSwapProps) {
@@ -187,15 +201,27 @@ export default function LogoCloudSwap({
   const [isMobile, setIsMobile] = React.useState(false);
 
   React.useEffect(() => {
-    const id = setInterval(() => setWaving(true), interval);
-    return () => clearInterval(id);
+    const id = window.setInterval(() => {
+      setWaving(true);
+    }, interval);
+
+    return () => {
+      window.clearInterval(id);
+    };
   }, [interval]);
 
   React.useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 640);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
   }, []);
 
   return (
@@ -205,20 +231,55 @@ export default function LogoCloudSwap({
         background: "#ffffff",
         padding: "48px 16px 64px",
         boxSizing: "border-box",
+        overflow: "hidden",
       }}
     >
-      <div style={{ margin: "0 auto",  textAlign: "center" }}>
-        <h4 className="px-about-title mb-20">
-          {title}
-        </h4>
-        {subtitle && (
-          <p className="text-figtree text-black font-paragraph-cls">
-            {subtitle}
-          </p>
-        )}
+      {/* =========================
+          SECTION HEADER
+      ========================== */}
+      <div className="container">
+        <div className="row align-items-center">
+          {/* Left Label */}
+          <div className="col-xl-3">
+            <span className="tp-section-subtitle text-black blink-ball">
+              OUR CLIENTS
+            </span>
+          </div>
+
+          {/* Right Content */}
+          <div className="col-xl-9">
+            <div className="px-project-title-box">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">
+                  Trusted by the
+                </span>{" "}
+                Leading Brands
+              </h4>
+
+              <p className="text-figtree text-black mt-2 font-paragraph-cls">
+                We are proud to work with businesses and organizations
+                that trust us to bring their digital vision to life.
+                From growing startups to established brands, our
+                clients rely on our expertise, creativity, and
+                commitment to deliver impactful digital solutions
+                that support their business goals.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div style={{ margin: "40px auto 0", maxWidth: "1400px" }}>
+      {/* =========================
+          LOGO SECTION
+      ========================== */}
+      <div
+        style={{
+          margin: "40px auto 0",
+          maxWidth: "1400px",
+          width: "100%",
+        }}
+      >
+        {/* Desktop */}
         {!isMobile ? (
           <div
             style={{
@@ -229,11 +290,11 @@ export default function LogoCloudSwap({
               gap: "30px",
             }}
           >
-            {logos.map((logo, i) => (
+            {logos.map((logo, index) => (
               <LogoItem
-                key={logo.id ?? i}
+                key={logo.id ?? index}
                 logo={logo}
-                index={i}
+                index={index}
                 isWaving={waving}
                 stagger={stagger}
                 totalCount={logos.length}
@@ -242,19 +303,23 @@ export default function LogoCloudSwap({
             ))}
           </div>
         ) : (
+          /* Mobile */
           <div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
               justifyItems: "center",
+              alignItems: "center",
+              columnGap: "12px",
               rowGap: "24px",
+              width: "100%",
             }}
           >
-            {logos.map((logo, i) => (
+            {logos.map((logo, index) => (
               <LogoItem
-                key={logo.id ?? i}
+                key={logo.id ?? index}
                 logo={logo}
-                index={i}
+                index={index}
                 isWaving={waving}
                 stagger={stagger}
                 totalCount={logos.length}

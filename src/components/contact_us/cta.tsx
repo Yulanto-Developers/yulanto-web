@@ -18,7 +18,7 @@ const BlogDetailsArea = () => {
 
                 <div className="postbox-details-quote-box mb-45">
                   <h4 className="px-about-title mb-20">
-                    <span className="text-blue-about">Converting concepts into </span> Captivating digital experiences
+                    <span className="text-blue-about">Converting Concepts into</span> Captivating Digital Experiences
                   </h4>
                   <blockquote>
                     <div className="postbox-details-quote-wrap d-flex align-items-start">
@@ -28,19 +28,16 @@ const BlogDetailsArea = () => {
 
                       <div className="postbox-details-quote">
                         <p>
-                          “We are available to provide assistance and address any inquiries you may
-                          have. We eagerly anticipate receiving your questions. If you require any assistance,
-                          please do not hesitate to contact us or arrange a meeting at our office, where we
-                          can discuss matters over a cup of coffee.”
+                          “Let’s turn your ideas into impactful digital experiences. Whether you have a question, need guidance, or are ready to start a project, our team is here to help. Get in touch with us or visit our office for a conversation over a cup of coffee.”
                         </p>
 
                         {/* Added Button */}
-                        <div className="mt-20 px-btn-grey ">
+                        {/* <div className="mt-20 px-btn-grey ">
                           <Link href="#" className="">
                             Request a Quote
                           </Link>
-                        </div>
-                      </div>
+                        </div> */}
+                      </div>  
                     </div>
                   </blockquote>
                 </div>
