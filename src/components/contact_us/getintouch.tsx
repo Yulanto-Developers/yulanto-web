@@ -16,7 +16,6 @@ import {
   Send,
   MessageCircle,
   Headphones,
-  Building2,
 } from "lucide-react";
 
 // ==========================================
@@ -185,8 +184,8 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon, title, value, index }) 
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "16px 20px",
-        borderRadius: "20px",
+        padding: "14px 18px",
+        borderRadius: "16px",
         backdropFilter: "blur(16px)",
         WebkitBackdropFilter: "blur(16px)",
         border: `1px solid ${isHovered ? COLORS.green : COLORS.borderGreen}`,
@@ -211,7 +210,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon, title, value, index }) 
         }}
       />
 
-      <div style={{ display: "flex", alignItems: "center", gap: "16px", zIndex: 1 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "14px", zIndex: 1 }}>
         <motion.div
           animate={{
             rotate: isHovered ? 12 : 0,
@@ -219,8 +218,8 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon, title, value, index }) 
           }}
           transition={{ type: "spring", stiffness: 300, damping: 15 }}
           style={{
-            width: "48px",
-            height: "48px",
+            width: "44px",
+            height: "44px",
             borderRadius: "50%",
             background: `linear-gradient(135deg, ${COLORS.greenAlt}, ${COLORS.darkGreen})`,
             display: "flex",
@@ -270,8 +269,8 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon, title, value, index }) 
         }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
         style={{
-          width: "36px",
-          height: "36px",
+          width: "32px",
+          height: "32px",
           borderRadius: "50%",
           display: "flex",
           alignItems: "center",
@@ -280,7 +279,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon, title, value, index }) 
           zIndex: 1,
         }}
       >
-        <ArrowRight size={18} />
+        <ArrowRight size={16} />
       </motion.div>
     </motion.div>
   );
@@ -301,14 +300,14 @@ const AnimatedDivider: React.FC = () => {
     <div
       style={{
         position: "relative",
-        width: "60px",
+        width: "50px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
         height: "100%",
-        minHeight: "450px",
-        margin: "0 10px",
+        minHeight: "420px",
+        margin: "0 8px",
       }}
     >
       <svg
@@ -318,7 +317,7 @@ const AnimatedDivider: React.FC = () => {
           bottom: 0,
           left: "50%",
           transform: "translateX(-50%)",
-          width: "60px",
+          width: "50px",
           height: "100%",
           overflow: "visible",
           pointerEvents: "none",
@@ -366,8 +365,8 @@ const AnimatedDivider: React.FC = () => {
           style={{
             position: "relative",
             zIndex: 2,
-            width: "42px",
-            height: "42px",
+            width: "38px",
+            height: "38px",
             borderRadius: "50%",
             backgroundColor: COLORS.white,
             border: `2px solid ${COLORS.green}`,
@@ -483,7 +482,7 @@ const LocationPin: React.FC = () => {
 };
 
 // ==========================================
-// NEARBY LANDMARK PIN COMPONENT (NAME ONLY)
+// NEARBY LANDMARK PIN COMPONENT
 // ==========================================
 interface LandmarkPinProps {
   name: string;
@@ -538,93 +537,6 @@ const LandmarkPin: React.FC<LandmarkPinProps> = ({ name, type, top, left }) => {
 };
 
 // ==========================================
-// FLOATING LOCATION CARD ON MAP
-// ==========================================
-// interface LocationCardProps {
-//   title?: string;
-//   address?: string;
-// }
-
-// const LocationCard: React.FC<LocationCardProps> = ({ title, address }) => {
-//   const [isHovered, setIsHovered] = React.useState(false);
-
-//   return (
-//     <motion.div
-//       initial={{ opacity: 0, y: 30 }}
-//       animate={{ opacity: 1, y: 0 }}
-//       transition={{ duration: 0.6, delay: 0.5 }}
-//       onMouseEnter={() => setIsHovered(true)}
-//       onMouseLeave={() => setIsHovered(false)}
-//       style={{
-//         position: "absolute",
-//         bottom: "20px",
-//         right: "20px",
-//         zIndex: 12,
-//         backgroundColor: "rgba(255, 255, 255, 0.92)",
-//         backdropFilter: "blur(16px)",
-//         WebkitBackdropFilter: "blur(16px)",
-//         borderRadius: "20px",
-//         padding: "14px 18px",
-//         display: "flex",
-//         alignItems: "center",
-//         gap: "12px",
-//         boxShadow: isHovered
-//           ? "0 20px 40px rgba(5, 52, 86, 0.18)"
-//           : "0 10px 25px rgba(5, 52, 86, 0.1)",
-//         border: `1px solid ${isHovered ? COLORS.green : "rgba(255, 255, 255, 0.8)"}`,
-//         transform: isHovered ? "translateY(-4px) scale(1.02)" : "translateY(0) scale(1)",
-//         transition: "transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease",
-//         maxWidth: "280px",
-//       }}
-//     >
-//       <motion.div
-//         animate={{ rotate: isHovered ? 10 : 0 }}
-//         style={{
-//           width: "40px",
-//           height: "40px",
-//           borderRadius: "50%",
-//           background: `linear-gradient(135deg, ${COLORS.greenAlt}, ${COLORS.darkGreen})`,
-//           display: "flex",
-//           alignItems: "center",
-//           justifyContent: "center",
-//           color: COLORS.white,
-//           flexShrink: 0,
-//           boxShadow: `0 4px 12px rgba(105, 180, 129, 0.4)`,
-//         }}
-//       >
-//         <Building2 size={20} />
-//       </motion.div>
-
-//       <div>
-//         <h5 style={{ margin: 0, fontSize: "13px", fontWeight: 800, color: COLORS.navy }}>
-//           {title || "Yulanto Web Creations"}
-//         </h5>
-//         <p
-//           style={{
-//             margin: "2px 0 0 0",
-//             fontSize: "11px",
-//             color: "rgba(5, 52, 86, 0.75)",
-//             lineHeight: 1.3,
-//           }}
-//         >
-//           {address || "Perungudi, OMR Road, Chennai, Tamil Nadu"}
-//         </p>
-//         <div
-//           style={{
-//             height: "2px",
-//             width: isHovered ? "100%" : "30px",
-//             backgroundColor: COLORS.green,
-//             marginTop: "6px",
-//             borderRadius: "2px",
-//             transition: "width 0.3s ease",
-//           }}
-//         />
-//       </div>
-//     </motion.div>
-//   );
-// };
-
-// ==========================================
 // INTERACTIVE MAP WITH NEARBY LOCATIONS
 // ==========================================
 interface InteractiveMapProps {
@@ -632,10 +544,7 @@ interface InteractiveMapProps {
   locationAddress?: string;
 }
 
-const InteractiveMap: React.FC<InteractiveMapProps> = ({
-  locationTitle,
-  locationAddress,
-}) => {
+const InteractiveMap: React.FC<InteractiveMapProps> = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const x = useMotionValue(0);
@@ -677,11 +586,11 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
         position: "relative",
         width: "100%",
         height: "100%",
-        minHeight: "520px",
-        borderRadius: "32px",
+        minHeight: "450px",
+        borderRadius: "24px",
         overflow: "hidden",
         perspective: "1200px",
-        boxShadow: "0 24px 60px rgba(5, 52, 86, 0.12)",
+        boxShadow: "0 20px 48px rgba(5, 52, 86, 0.12)",
         border: "4px solid #FFFFFF",
         backgroundColor: "#E8F4EF",
       }}
@@ -696,18 +605,15 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
           transformStyle: "preserve-3d",
         }}
       >
-        {/* VECTOR MAP SVG BACKGROUND */}
         <svg
           style={{ width: "100%", height: "100%", objectFit: "cover", pointerEvents: "none" }}
           viewBox="0 0 800 600"
           preserveAspectRatio="xMidYMid slice"
         >
-          {/* GREENERY & PARKS */}
           <path d="M 50,50 Q 150,20 220,100 T 120,250 Z" fill="#D4EFE3" opacity="0.8" />
           <path d="M 450,80 Q 580,40 650,140 T 520,300 Z" fill="#C9EAD8" opacity="0.7" />
           <path d="M 280,380 Q 400,320 480,480 T 300,580 Z" fill="#D4EFE3" opacity="0.8" />
 
-          {/* OMR WATER CANAL / BAY ROUTE */}
           <path
             d="M 720,0 C 680,150 780,300 680,450 C 620,540 650,600 650,600"
             fill="none"
@@ -723,7 +629,6 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
             strokeLinecap="round"
           />
 
-          {/* ROAD NETWORKS (OMR / Perungudi Roads) */}
           <g stroke="#FFFFFF" strokeWidth="12" fill="none" strokeLinecap="round" opacity="0.9">
             <path d="M 0,180 L 800,240" />
             <path d="M 0,380 L 800,320" />
@@ -732,7 +637,6 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
             <path d="M 100,500 L 700,100" />
           </g>
 
-          {/* MAIN IT CORRIDOR EXPRESSWAY */}
           <g stroke="#FFFFFF" strokeWidth="20" fill="none" strokeLinecap="round">
             <path d="M 0,280 Q 400,200 800,360" />
             <path d="M 380,0 Q 420,300 360,600" />
@@ -746,7 +650,6 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
             <path d="M 380,0 Q 420,300 360,600" />
           </g>
 
-          {/* TECH PARK BUILDINGS */}
           <rect x="140" y="120" width="36" height="28" rx="4" fill="#B3DFC8" opacity="0.8" />
           <rect x="220" y="210" width="45" height="32" rx="4" fill="#A1D8BB" opacity="0.8" />
           <rect x="440" y="220" width="40" height="40" rx="6" fill="#B3DFC8" opacity="0.8" />
@@ -754,7 +657,6 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
           <rect x="480" y="380" width="38" height="28" rx="4" fill="#B3DFC8" opacity="0.8" />
         </svg>
 
-        {/* ROAD LABELS */}
         <div
           style={{
             position: "absolute",
@@ -770,7 +672,6 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
           OMR Road (Rajiv Gandhi Salai)
         </div>
 
-        {/* NEARBY CHENNAI LANDMARKS (TEXT ONLY) */}
         {NEARBY_LANDMARKS.map((lm, idx) => (
           <LandmarkPin
             key={idx}
@@ -781,11 +682,7 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
           />
         ))}
 
-        {/* CENTER COMPANY PIN */}
         <LocationPin />
-
-        {/* FLOATING LOCATION DETAILS */}
-        {/* <LocationCard title={locationTitle} address={locationAddress} /> */}
       </motion.div>
     </motion.div>
   );
@@ -820,74 +717,71 @@ export const ContactLocationSection: React.FC<ContactLocationProps> = ({
         position: "relative",
         width: "100%",
         backgroundColor: COLORS.lightBg,
-        background: `radial-gradient(${COLORS.lightBg}`,
-        padding: isMobile ? "40px 16px" : isTablet ? "40px 20px" : "40px 40px",
+        padding: isMobile ? "32px 16px" : "48px 32px",
         overflow: "hidden",
-       
         ...style,
       }}
     >
-        
-                                  <h4 className="px-about-title mb-20 text-center">
-                    <span className="text-blue-about">Get In Touch {" "}</span> With Us
-                  </h4>
-      
-      {Array.from({ length: 12 }).map((_, i) => (
-        <FloatingParticle key={i} index={i} />
-      ))}
+      <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+        <h4 className="px-about-title mb-20 text-center" style={{ marginBottom: "32px" }}>
+          <span className="text-blue-about">Get In Touch </span> With Us
+        </h4>
 
-      <div
-        style={{
-          maxWidth: "1280px",
-          margin: "0 auto",
-          display: "flex",
-          flexDirection: isMobile ? "column" : "row",
-          alignItems: "stretch",
-          justifyContent: "space-between",
-          gap: isMobile ? "32px" : isTablet ? "24px" : "36px",
-        }}
-      >
-        {/* LEFT CONTACT DETAILS */}
+        {Array.from({ length: 12 }).map((_, i) => (
+          <FloatingParticle key={i} index={i} />
+        ))}
+
         <div
           style={{
-            flex: isMobile ? "1 1 100%" : "0 0 44%",
             display: "flex",
-            flexDirection: "column",
-            gap: "24px",
-            zIndex: 2,
+            flexDirection: isMobile ? "column" : "row",
+            alignItems: "stretch",
+            justifyContent: "space-between",
+            gap: isMobile ? "24px" : isTablet ? "20px" : "32px",
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
-            {contactItems.map((item, index) => (
-              <ContactCard
-                key={index}
-                index={index}
-                icon={item.icon}
-                title={item.title}
-                value={item.value}
-              />
-            ))}
+          {/* LEFT CONTACT DETAILS */}
+          <div
+            style={{
+              flex: isMobile ? "1 1 100%" : "0 0 44%",
+              display: "flex",
+              flexDirection: "column",
+              gap: "16px",
+              zIndex: 2,
+            }}
+          >
+            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              {contactItems.map((item, index) => (
+                <ContactCard
+                  key={index}
+                  index={index}
+                  icon={item.icon}
+                  title={item.title}
+                  value={item.value}
+                />
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* CENTER ANIMATED DIVIDER */}
-        {!isMobile && !isTablet && <AnimatedDivider />}
+          {/* CENTER ANIMATED DIVIDER */}
+          {!isMobile && !isTablet && <AnimatedDivider />}
 
-        {/* RIGHT INTERACTIVE MAP WITH NEARBY LANDMARKS */}
-        <div
-          style={{
-            flex: isMobile ? "1 1 100%" : "1 1 50%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 2,
-            minHeight: isMobile ? "400px" : "auto",
-          }}
-        >
-          <InteractiveMap
-            locationTitle={locationTitle}
-            locationAddress={locationAddress}
-          />
+          {/* RIGHT INTERACTIVE MAP WITH NEARBY LANDMARKS */}
+          <div
+            style={{
+              flex: isMobile ? "1 1 100%" : "1 1 50%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 2,
+              minHeight: isMobile ? "360px" : "auto",
+            }}
+          >
+            <InteractiveMap
+              locationTitle={locationTitle}
+              locationAddress={locationAddress}
+            />
+          </div>
         </div>
       </div>
     </section>
