@@ -74,7 +74,7 @@ const placeNow = (
     x: slot.x,
     y: slot.y,
     z: slot.z,
-    xPercent: -47,
+    xPercent: window.innerWidth <= 480 ? -25 : window.innerWidth <= 768 ? -35 : -47,
     yPercent: -70,
     skewY: skew,
     transformOrigin: "center center",
@@ -132,21 +132,21 @@ const CardSwap = ({
   const config =
     easing === "elastic"
       ? {
-          ease: "elastic.out(0.6,0.9)",
-          durDrop: 2,
-          durMove: 2,
-          durReturn: 2,
-          promoteOverlap: 0.9,
-          returnDelay: 0.05,
-        }
+        ease: "elastic.out(0.6,0.9)",
+        durDrop: 2,
+        durMove: 2,
+        durReturn: 2,
+        promoteOverlap: 0.9,
+        returnDelay: 0.05,
+      }
       : {
-          ease: "power1.inOut",
-          durDrop: 0.8,
-          durMove: 0.8,
-          durReturn: 0.8,
-          promoteOverlap: 0.45,
-          returnDelay: 0.2,
-        };
+        ease: "power1.inOut",
+        durDrop: 0.8,
+        durMove: 0.8,
+        durReturn: 0.8,
+        promoteOverlap: 0.45,
+        returnDelay: 0.2,
+      };
 
   /*
    * Click a card and make it active/front.
