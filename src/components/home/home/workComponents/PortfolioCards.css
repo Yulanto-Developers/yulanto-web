@@ -1,15 +1,15 @@
 /* =========================================
    CARDS GRID
 ========================================= */
-.portfolio-category-nav{
+.portfolio-category-nav {
   display: flex;
   justify-content: center;
   padding: 20px 0px;
-  gap:20px;
+  gap: 20px;
 }
 
-.btn-container-cls{
-  border:1px solid #f1f1f1;
+.btn-container-cls {
+  border: 1px solid #f1f1f1;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -65,12 +65,10 @@
   align-items: flex-end;
   justify-content: space-between;
   padding: 20px;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.4) 35%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.4) 35%,
+      rgba(0, 0, 0, 0) 100%);
 }
 
 .portfolio-modal-card-overlay h3 {
@@ -156,12 +154,10 @@
   align-items: flex-end;
   justify-content: space-between;
   padding: 24px;
-  background: linear-gradient(
-    to top,
-    rgba(13, 13, 13, 1) 0%,
-    rgba(0, 0, 0, 0.4) 40%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(13, 13, 13, 1) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0) 100%);
 }
 
 .portfolio-modal-image-overlay h2 {
@@ -209,8 +205,13 @@
 /* ANIMATIONS */
 
 @keyframes portfolioBackdropIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes portfolioModalIn {
@@ -218,6 +219,7 @@
     opacity: 0;
     transform: scale(0.96) translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -257,6 +259,7 @@
     opacity: 0;
     transform: translateY(15px) scale(0.98);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -275,4 +278,59 @@
 
   /* Trigger the smooth fade-in animation on mount */
   animation: portfolioFadeIn 0.4s ease-out forwards;
+}
+
+
+/* Card Date Badge (Top-Right) */
+.portfolio-card-date-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 3;
+}
+
+/* Card Information Container */
+.portfolio-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+/* Category Subtitle */
+.portfolio-card-category {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #53ae7d;
+  /* Accent green color matching theme */
+  letter-spacing: 0.5px;
+}
+
+/* Title */
+.portfolio-card-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Description Text */
+.portfolio-card-description {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85rem;
+  margin: 2px 0 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

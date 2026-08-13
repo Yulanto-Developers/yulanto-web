@@ -11,4 +11,5 @@ export interface PortfolioItem {
   image: string;
   category: PortfolioCategory;
   description?: string;
+  date?: string;
 }

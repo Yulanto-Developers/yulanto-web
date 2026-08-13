@@ -50,9 +50,27 @@ export default function PortfolioCards({
             <img src={item.image} alt={item.title} loading="lazy" />
           </div>
 
-          {/* Overlay with Title and Plus Icon */}
+          {/* Date Badge */}
+          {item.date && (
+            <div className="portfolio-card-date-badge">{item.date}</div>
+          )}
+
+          {/* Overlay with Title, Category, Description and Plus Icon */}
           <div className="portfolio-modal-card-overlay">
-            <h3>{item.title}</h3>
+            <div className="portfolio-card-info">
+              {item.category && (
+                <span className="portfolio-card-category">
+                  &bull; {item.category.replace("-", " ")}
+                </span>
+              )}
+
+              <h3 className="portfolio-card-title">{item.title}</h3>
+
+              {item.description && (
+                <p className="portfolio-card-description">{item.description}</p>
+              )}
+            </div>
+
             <button
               className="portfolio-card-plus-btn"
               aria-label={`Open ${item.title}`}
