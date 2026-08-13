@@ -1,6 +1,6 @@
 "use client";
 
-import JobListingComponent, { Job, Resend, Supabase, Turso } from "./JobListingComponent";
+import JobListingComponent, { type Job, Resend, Supabase, Turso } from "./JobListingComponent";
 
 const sampleJobs: Job[] = [
   {
