@@ -24,6 +24,12 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
   },
    {
+    path: "/careers", // Your Our Clients page route
+    title: "Career",
+    currentPage: "Career",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
+  },
+   {
     path: "/work/recent-project",
     title: "Recent Project",
     currentPage: "Recent Project",

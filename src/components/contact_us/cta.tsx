@@ -10,13 +10,13 @@ const BlogDetailsArea = () => {
   return (
     <>
       {/* -- postbox area start -- */}
-      <section id="postbox" className="postbox-area tp-blog-details-ptb pt-60 pb-60">
+      <section id="postbox" className="postbox-area pt-60 pb-60">
         <div className="container container-1230">
           <div className="row justify-content-center">
             <div className="col-xxl-12 col-xl-12 col-lg-12">
               <div className="postbox-wrapper">
 
-                <div className="postbox-details-quote-box mb-45">
+                <div className="postbox-details-quote-box">
                   <h4 className="px-about-title mb-20">
                     <span className="text-blue-about">Converting Concepts into</span> Captivating Digital Experiences
                   </h4>
