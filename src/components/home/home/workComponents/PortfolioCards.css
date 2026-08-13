@@ -1,15 +1,17 @@
 /* =========================================
    CARDS GRID
 ========================================= */
-.portfolio-category-nav{
+
+.portfolio-category-nav {
   display: flex;
   justify-content: center;
   padding: 20px 0px;
-  gap:20px;
+  gap: 20px;
 }
 
-.btn-container-cls{
-  border:1px solid #f1f1f1;
+.btn-container-cls {
+  border: 1px solid #f1f1f1;
+
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -65,12 +67,12 @@
   align-items: flex-end;
   justify-content: space-between;
   padding: 20px;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.4) 35%,
-    rgba(0, 0, 0, 0) 100%
-  );
+
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.4) 35%,
+      rgba(0, 0, 0, 0) 100%);
+
 }
 
 .portfolio-modal-card-overlay h3 {
@@ -156,12 +158,12 @@
   align-items: flex-end;
   justify-content: space-between;
   padding: 24px;
-  background: linear-gradient(
-    to top,
-    rgba(13, 13, 13, 1) 0%,
-    rgba(0, 0, 0, 0.4) 40%,
-    rgba(0, 0, 0, 0) 100%
-  );
+
+  background: linear-gradient(to top,
+      rgba(13, 13, 13, 1) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0) 100%);
+
 }
 
 .portfolio-modal-image-overlay h2 {
@@ -209,8 +211,15 @@
 /* ANIMATIONS */
 
 @keyframes portfolioBackdropIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
 }
 
 @keyframes portfolioModalIn {
@@ -218,6 +227,7 @@
     opacity: 0;
     transform: scale(0.96) translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -257,6 +267,7 @@
     opacity: 0;
     transform: translateY(15px) scale(0.98);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -275,4 +286,5 @@
 
   /* Trigger the smooth fade-in animation on mount */
   animation: portfolioFadeIn 0.4s ease-out forwards;
+
 }

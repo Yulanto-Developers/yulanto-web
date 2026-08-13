@@ -23,8 +23,8 @@ const data = [
     currentPage: "Contact Us",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
   },
-   {
-    path: "/work/recent-project",
+  {
+    path: "/recent-project",
     title: "Recent Project",
     currentPage: "Recent Project",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
