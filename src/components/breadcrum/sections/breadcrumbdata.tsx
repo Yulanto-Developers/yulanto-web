@@ -17,16 +17,28 @@ const data = [
     currentPage: "Our Clients",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
   },
-   {
+  {
     path: "/tocontact", // Your Our Clients page route
     title: "Contact Us",
     currentPage: "Contact Us",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
   },
-   {
-    path: "/work/recent-project",
+  {
+    path: "/recent-project",
     title: "Recent Project",
     currentPage: "Recent Project",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
+  },
+  {
+    path: "/portfolio",
+    title: "Portfolio",
+    currentPage: "Portfolio",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
+  },
+  {
+    path: "/industry-we-serve",
+    title: "Industry We Serve",
+    currentPage: "Industry We Serve",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
   },
 ];

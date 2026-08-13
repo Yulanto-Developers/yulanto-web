@@ -78,7 +78,7 @@ export default function RecentProject() {
                 <div className="row mb-5">
                     <div className="col-lg-12 col-md-10">
                         <h2 className="display-5 text-tenor fw-bold mb-3 text-dark">
-                            Featured Work & Recent Projects
+                            Where Creativity Meets Functionality
                         </h2>
                         <p className="text-muted text-figtree leading-relaxed fs-5">
                             Discover our most recent accomplishments, a demonstration of our steadfast
@@ -135,7 +135,7 @@ export default function RecentProject() {
                                     height={450}
                                     cardDistance={50}
                                     verticalDistance={60}
-                                    delay={5000}
+                                    delay={50000}
                                     onSwap={(index: number) => setActiveIndex(index)}
                                 >
                                     {cardObj.map((item, index) => (
