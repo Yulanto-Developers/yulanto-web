@@ -18,7 +18,6 @@ import {
   Building,
 } from "lucide-react";
 
-// Interface for individual floating industry icons
 interface IconProps {
   id: number;
   name: string;
@@ -26,7 +25,6 @@ interface IconProps {
   position: React.CSSProperties;
 }
 
-// Icon repulsion & floating physics component with inline CSS
 const FloatingIcon = ({
   mouseX,
   mouseY,
@@ -43,16 +41,31 @@ const FloatingIcon = ({
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const springX = useSpring(x, { stiffness: 250, damping: 22 });
-  const springY = useSpring(y, { stiffness: 250, damping: 22 });
+
+  const springX = useSpring(x, {
+    stiffness: 250,
+    damping: 22,
+  });
+
+  const springY = useSpring(y, {
+    stiffness: 250,
+    damping: 22,
+  });
 
   React.useEffect(() => {
     const handleMouseMove = () => {
       if (ref.current) {
         const rect = ref.current.getBoundingClientRect();
+
         const distance = Math.sqrt(
-          Math.pow(mouseX.current - (rect.left + rect.width / 2), 2) +
-            Math.pow(mouseY.current - (rect.top + rect.height / 2), 2)
+          Math.pow(
+            mouseX.current - (rect.left + rect.width / 2),
+            2
+          ) +
+            Math.pow(
+              mouseY.current - (rect.top + rect.height / 2),
+              2
+            )
         );
 
         if (distance < 160) {
@@ -60,7 +73,9 @@ const FloatingIcon = ({
             mouseY.current - (rect.top + rect.height / 2),
             mouseX.current - (rect.left + rect.width / 2)
           );
+
           const force = (1 - distance / 160) * 55;
+
           x.set(-Math.cos(angle) * force);
           y.set(-Math.sin(angle) * force);
         } else {
@@ -71,7 +86,10 @@ const FloatingIcon = ({
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
   }, [x, y, mouseX, mouseY]);
 
   const IconComponent = iconData.icon;
@@ -87,8 +105,14 @@ const FloatingIcon = ({
         y: springY,
         ...iconData.position,
       }}
-      initial={{ opacity: 0, scale: 0.6 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{
+        opacity: 0,
+        scale: 0.6,
+      }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+      }}
       transition={{
         delay: index * 0.05,
         duration: 0.5,
@@ -130,6 +154,7 @@ const FloatingIcon = ({
             transition: "color 0.3s ease",
           }}
         />
+
         <span
           style={{
             fontSize: "13px",
@@ -146,39 +171,103 @@ const FloatingIcon = ({
   );
 };
 
-// Layout coordinates translated into standard React inline positioning
 const defaultIndustries: IconProps[] = [
-  { id: 1, name: "Real Estate", icon: Building2, position: { top: "10%", left: "5%" } },
-  { id: 2, name: "Construction", icon: HardHat, position: { top: "8%", right: "8%" } },
-  { id: 3, name: "Interior Design", icon: Sofa, position: { top: "22%", left: "18%" } },
-  { id: 4, name: "Architecture", icon: Ruler, position: { top: "20%", right: "18%" } },
-  { id: 5, name: "Industrial", icon: Factory, position: { top: "42%", left: "4%" } },
-  { id: 6, name: "Healthcare", icon: HeartPulse, position: { top: "40%", right: "5%" } },
-  { id: 7, name: "Education", icon: GraduationCap, position: { bottom: "35%", left: "12%" } },
-  { id: 8, name: "E-commerce", icon: ShoppingCart, position: { bottom: "36%", right: "12%" } },
-  { id: 9, name: "Hospitality", icon: Hotel, position: { bottom: "18%", left: "5%" } },
-  { id: 10, name: "Professional Services", icon: BriefcaseBusiness, position: { bottom: "18%", right: "6%" } },
-  { id: 11, name: "Startups", icon: Rocket, position: { bottom: "8%", left: "22%" } },
-  { id: 12, name: "SMEs", icon: Store, position: { bottom: "8%", right: "22%" } },
-  { id: 13, name: "Corporate Businesses", icon: Building, position: { top: "6%", left: "42%" } },
+  {
+    id: 1,
+    name: "Real Estate",
+    icon: Building2,
+    position: { top: "10%", left: "5%" },
+  },
+  {
+    id: 2,
+    name: "Construction",
+    icon: HardHat,
+    position: { top: "8%", right: "8%" },
+  },
+  {
+    id: 3,
+    name: "Interior Design",
+    icon: Sofa,
+    position: { top: "22%", left: "18%" },
+  },
+  {
+    id: 4,
+    name: "Architecture",
+    icon: Ruler,
+    position: { top: "20%", right: "18%" },
+  },
+  {
+    id: 5,
+    name: "Industrial",
+    icon: Factory,
+    position: { top: "42%", left: "4%" },
+  },
+  {
+    id: 6,
+    name: "Healthcare",
+    icon: HeartPulse,
+    position: { top: "40%", right: "5%" },
+  },
+  {
+    id: 7,
+    name: "Education",
+    icon: GraduationCap,
+    position: { bottom: "35%", left: "12%" },
+  },
+  {
+    id: 8,
+    name: "E-commerce",
+    icon: ShoppingCart,
+    position: { bottom: "36%", right: "12%" },
+  },
+  {
+    id: 9,
+    name: "Hospitality",
+    icon: Hotel,
+    position: { bottom: "18%", left: "5%" },
+  },
+  {
+    id: 10,
+    name: "Professional Services",
+    icon: BriefcaseBusiness,
+    position: { bottom: "18%", right: "6%" },
+  },
+  {
+    id: 11,
+    name: "Startups",
+    icon: Rocket,
+    position: { bottom: "8%", left: "22%" },
+  },
+  {
+    id: 12,
+    name: "SMEs",
+    icon: Store,
+    position: { bottom: "8%", right: "22%" },
+  },
+  {
+    id: 13,
+    name: "Corporate Businesses",
+    icon: Building,
+    position: { top: "6%", left: "42%" },
+  },
 ];
 
-export interface IndustryHeroProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IndustryHeroProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
   subtitle?: string;
-  ctaText?: string;
-  ctaHref?: string;
   industries?: IconProps[];
 }
 
-export const IndustryHero = React.forwardRef<HTMLDivElement, IndustryHeroProps>(
+export const IndustryHero = React.forwardRef<
+  HTMLDivElement,
+  IndustryHeroProps
+>(
   (
     {
       style,
       title = "Digital Solutions Built for Scale",
       subtitle = "Our digital solutions are suitable for various dynamic sectors. Transform your operations with tailor-made web applications and platforms.",
-      ctaText = "Explore Solutions",
-      ctaHref = "#contact",
       industries = defaultIndustries,
       ...props
     },
@@ -186,9 +275,10 @@ export const IndustryHero = React.forwardRef<HTMLDivElement, IndustryHeroProps>(
   ) => {
     const mouseX = React.useRef(0);
     const mouseY = React.useRef(0);
-    const [isBtnHovered, setIsBtnHovered] = React.useState(false);
 
-    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    const handleMouseMove = (
+      event: React.MouseEvent<HTMLDivElement>
+    ) => {
       mouseX.current = event.clientX;
       mouseY.current = event.clientY;
     };
@@ -255,7 +345,7 @@ export const IndustryHero = React.forwardRef<HTMLDivElement, IndustryHeroProps>(
           ))}
         </div>
 
-        {/* Foreground Content Container */}
+        {/* Foreground Content */}
         <div
           style={{
             position: "relative",
@@ -269,46 +359,15 @@ export const IndustryHero = React.forwardRef<HTMLDivElement, IndustryHeroProps>(
             gap: "20px",
           }}
         >
-        
-
-          {/* Title Header */}
-          <h1
-           className="px-about-title mb-20"
-          >
+          {/* Title */}
+          <h1 className="px-about-title mb-20">
             {title}
           </h1>
 
-          {/* Subtitle Paragraph */}
-          <p
-           className="text-figtree text-black"
-          >
+          {/* Subtitle */}
+          <p className="text-figtree text-black">
             {subtitle}
           </p>
-
-          {/* CTA Action Button */}
-          <div style={{ paddingTop: "8px" }}>
-            <a
-              href={ctaHref}
-              onMouseEnter={() => setIsBtnHovered(true)}
-              onMouseLeave={() => setIsBtnHovered(false)}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: isBtnHovered ? "#589c6f" : "#69b481",
-                color: "#053456",
-                fontWeight: 700,
-                padding: "12px 28px",
-                borderRadius: "12px",
-                fontSize: "15px",
-                boxShadow: "0 10px 25px -5px rgba(105, 180, 129, 0.25)",
-                transition: "all 0.3s ease",
-                textDecoration: "none",
-              }}
-            >
-              {ctaText}
-            </a>
-          </div>
         </div>
       </section>
     );

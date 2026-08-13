@@ -12,4 +12,5 @@ export interface PortfolioItem {
   category: PortfolioCategory;
   description?: string;
   date?: string;
+
 }

@@ -292,6 +292,7 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
 
         .section-bg-alt { background-color: #f1f1f1; }
         .section-bg-white { background-color: #fff; }
+        
 
         .dx-client-card {
           background: #fff;
@@ -497,7 +498,7 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
                     style={{
                       fontSize: "1.25rem",
                       fontWeight: "700",
-                      color: "#00B4D8",
+                      color: "#53ae7d",
                       minWidth: "40px",
                     }}
                   >
@@ -541,7 +542,7 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
         <div style={styles.container}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <div data-aos="fade-up" data-aos-delay="0">
-              <span className="px-section-subtitle pt-40 blink-ball mb-20 text-tenor">
+              <span className="px-section-subtitle  blink-ball mb-20 text-tenor">
                 {clientsSubtitle}
               </span>
             </div>

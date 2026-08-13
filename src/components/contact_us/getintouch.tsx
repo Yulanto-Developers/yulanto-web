@@ -1,246 +1,897 @@
 "use client";
 
-import React from "react";
+import * as React from "react";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ArrowRight,
+  Send,
+  MessageCircle,
+  Headphones,
+  Building2,
+} from "lucide-react";
 
-const GetInTouch = () => {
-  const iconContainerStyle = (bgColor: string) => ({
-    width: "48px",
-    height: "48px",
-    borderRadius: "12px",
-    backgroundColor: bgColor,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexShrink: 0,
+// ==========================================
+// COLOR PALETTE & CONSTANTS
+// ==========================================
+const COLORS = {
+  navy: "#053456",
+  green: "#53ae7d",
+  greenAlt: "#69B481",
+  darkGreen: "#168B68",
+  white: "#FFFFFF",
+  lightBg: "#f5f5f5",
+  softGreen: "#DDF4E8",
+  glassWhite: "rgba(255, 255, 255, 0.85)",
+  borderGreen: "rgba(105, 180, 129, 0.25)",
+};
+
+// ==========================================
+// NEARBY LANDMARKS DATA
+// ==========================================
+const NEARBY_LANDMARKS = [
+  {
+    name: "Tidel Park",
+    type: "IT Park",
+    top: "22%",
+    left: "28%",
+  },
+  {
+    name: "RMZ Millenia Tech Park",
+    type: "Business Park",
+    top: "20%",
+    left: "72%",
+  },
+  {
+    name: "Ascendas IT Park",
+    type: "Tech Hub",
+    top: "70%",
+    left: "22%",
+  },
+  {
+    name: "SRP Tools Junction",
+    type: "Transit / Landmark",
+    top: "78%",
+    left: "76%",
+  },
+];
+
+// ==========================================
+// PROPS INTERFACE
+// ==========================================
+export interface ContactLocationProps {
+  phone?: string;
+  email?: string;
+  address?: string;
+  workingHours?: string;
+  locationTitle?: string;
+  locationAddress?: string;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+// ==========================================
+// HOOK FOR RESPONSIVE MEDIA QUERIES
+// ==========================================
+function useWindowSize() {
+  const [size, setSize] = React.useState({
+    width: typeof window !== "undefined" ? window.innerWidth : 1200,
+    isMobile: false,
+    isTablet: false,
   });
 
-  const contactTitleStyle = (textColor: string) => ({
-    fontSize: "13px",
-    fontWeight: "600",
-    color: textColor,
-    margin: 0,
+  React.useEffect(() => {
+    function handleResize() {
+      const width = window.innerWidth;
+      setSize({
+        width,
+        isMobile: width < 768,
+        isTablet: width >= 768 && width < 1024,
+      });
+    }
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return size;
+}
+
+// ==========================================
+// FLOATING BACKGROUND PARTICLES
+// ==========================================
+const FloatingParticle: React.FC<{ index: number }> = ({ index }) => {
+  const randomX = React.useMemo(() => (Math.random() - 0.5) * 60, []);
+  const randomY = React.useMemo(() => (Math.random() - 0.5) * 60, []);
+  const randomScale = React.useMemo(() => 0.5 + Math.random() * 0.8, []);
+  const randomDuration = React.useMemo(() => 6 + Math.random() * 8, []);
+  const randomDelay = React.useMemo(() => Math.random() * 4, []);
+
+  const topPos = React.useMemo(() => `${(index * 13) % 90 + 5}%`, [index]);
+  const leftPos = React.useMemo(() => `${(index * 23) % 90 + 5}%`, [index]);
+
+  return (
+    <motion.div
+      style={{
+        position: "absolute",
+        top: topPos,
+        left: leftPos,
+        width: "8px",
+        height: "8px",
+        borderRadius: "50%",
+        backgroundColor: COLORS.green,
+        opacity: 0.25,
+        filter: "blur(2px)",
+        pointerEvents: "none",
+        zIndex: 0,
+      }}
+      animate={{
+        x: [0, randomX, 0],
+        y: [0, randomY, 0],
+        scale: [1, randomScale, 1],
+        opacity: [0.15, 0.4, 0.15],
+      }}
+      transition={{
+        duration: randomDuration,
+        delay: randomDelay,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+    />
+  );
+};
+
+// ==========================================
+// CONTACT CARD COMPONENT
+// ==========================================
+interface ContactCardProps {
+  icon: React.ReactNode;
+  title: string;
+  value: string;
+  index: number;
+}
+
+const ContactCard: React.FC<ContactCardProps> = ({ icon, title, value, index }) => {
+  const [isHovered, setIsHovered] = React.useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -40, scale: 0.95 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.12,
+        ease: [0.25, 0.1, 0.25, 1],
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      animate={{
+        x: isHovered ? 8 : 0,
+        scale: isHovered ? 1.02 : 1,
+        backgroundColor: isHovered ? "rgba(221, 244, 232, 0.85)" : COLORS.glassWhite,
+      }}
+      style={{
+        position: "relative",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        padding: "16px 20px",
+        borderRadius: "20px",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        border: `1px solid ${isHovered ? COLORS.green : COLORS.borderGreen}`,
+        boxShadow: isHovered
+          ? `0 12px 30px rgba(105, 180, 129, 0.22), 0 4px 10px rgba(5, 52, 86, 0.05)`
+          : `0 8px 20px rgba(5, 52, 86, 0.04), 0 2px 6px rgba(105, 180, 129, 0.06)`,
+        cursor: "pointer",
+        overflow: "hidden",
+        transition: "border 0.3s ease, box-shadow 0.3s ease",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: "15%",
+          right: "15%",
+          height: "2px",
+          background: `linear-gradient(90deg, transparent, ${COLORS.green}, transparent)`,
+          opacity: isHovered ? 0.9 : 0.3,
+          transition: "opacity 0.3s ease",
+        }}
+      />
+
+      <div style={{ display: "flex", alignItems: "center", gap: "16px", zIndex: 1 }}>
+        <motion.div
+          animate={{
+            rotate: isHovered ? 12 : 0,
+            scale: isHovered ? 1.1 : 1,
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 15 }}
+          style={{
+            width: "48px",
+            height: "48px",
+            borderRadius: "50%",
+            background: `linear-gradient(135deg, ${COLORS.greenAlt}, ${COLORS.darkGreen})`,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: COLORS.white,
+            boxShadow: isHovered
+              ? `0 0 18px rgba(105, 180, 129, 0.6)`
+              : `0 4px 12px rgba(22, 139, 104, 0.25)`,
+            flexShrink: 0,
+          }}
+        >
+          {icon}
+        </motion.div>
+
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <span
+            style={{
+              fontSize: "14px",
+              fontWeight: 700,
+              color: COLORS.navy,
+              letterSpacing: "0.2px",
+            }}
+          >
+            {title}
+          </span>
+          <span
+            style={{
+              fontSize: "13px",
+              fontWeight: 500,
+              color: "rgba(5, 52, 86, 0.75)",
+              marginTop: "2px",
+              whiteSpace: "pre-line",
+              lineHeight: "1.4",
+            }}
+          >
+            {value}
+          </span>
+        </div>
+      </div>
+
+      <motion.div
+        animate={{
+          x: isHovered ? 5 : 0,
+          backgroundColor: isHovered ? COLORS.navy : "rgba(105, 180, 129, 0.12)",
+          color: isHovered ? COLORS.white : COLORS.navy,
+        }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        style={{
+          width: "36px",
+          height: "36px",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexShrink: 0,
+          zIndex: 1,
+        }}
+      >
+        <ArrowRight size={18} />
+      </motion.div>
+    </motion.div>
+  );
+};
+
+// ==========================================
+// CENTER ANIMATED DIVIDER
+// ==========================================
+const AnimatedDivider: React.FC = () => {
+  const icons = [
+    { component: <Send size={16} />, label: "Send" },
+    { component: <MessageCircle size={16} />, label: "Message" },
+    { component: <Mail size={16} />, label: "Mail" },
+    { component: <Headphones size={16} />, label: "Support" },
+  ];
+
+  return (
+    <div
+      style={{
+        position: "relative",
+        width: "60px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "space-between",
+        height: "100%",
+        minHeight: "450px",
+        margin: "0 10px",
+      }}
+    >
+      <svg
+        style={{
+          position: "absolute",
+          top: 0,
+          bottom: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "60px",
+          height: "100%",
+          overflow: "visible",
+          pointerEvents: "none",
+        }}
+        preserveAspectRatio="none"
+        viewBox="0 0 60 500"
+      >
+        <path
+          d="M30 0 Q 50 125, 30 250 T 30 500"
+          fill="none"
+          stroke={COLORS.softGreen}
+          strokeWidth="3"
+        />
+        <motion.path
+          d="M30 0 Q 50 125, 30 250 T 30 500"
+          fill="none"
+          stroke={COLORS.green}
+          strokeWidth="3"
+          strokeDasharray="8 8"
+          animate={{
+            strokeDashoffset: [-32, 0],
+          }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      </svg>
+
+      {icons.map((item, idx) => (
+        <motion.div
+          key={idx}
+          animate={{
+            y: [0, -8, 0],
+            rotate: [-4, 4, -4],
+          }}
+          transition={{
+            duration: 3 + idx,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: idx * 0.4,
+          }}
+          whileHover={{ scale: 1.25, rotate: 12 }}
+          style={{
+            position: "relative",
+            zIndex: 2,
+            width: "42px",
+            height: "42px",
+            borderRadius: "50%",
+            backgroundColor: COLORS.white,
+            border: `2px solid ${COLORS.green}`,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: COLORS.navy,
+            boxShadow: `0 6px 16px rgba(105, 180, 129, 0.35)`,
+            cursor: "pointer",
+          }}
+        >
+          {item.component}
+        </motion.div>
+      ))}
+    </div>
+  );
+};
+
+// ==========================================
+// MAIN MAP 3D LOCATION PIN & RIPPLES
+// ==========================================
+const LocationPin: React.FC = () => {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -100%)",
+        zIndex: 10,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <div style={{ position: "absolute", bottom: "4px", width: "0", height: "0" }}>
+        {[0, 0.8, 1.6].map((delay, i) => (
+          <motion.div
+            key={i}
+            animate={{
+              scale: [1, 2.8],
+              opacity: [0.7, 0],
+            }}
+            transition={{
+              duration: 2.8,
+              repeat: Infinity,
+              delay,
+              ease: "easeOut",
+            }}
+            style={{
+              position: "absolute",
+              top: "-25px",
+              left: "-25px",
+              width: "50px",
+              height: "50px",
+              borderRadius: "50%",
+              border: `2px solid ${COLORS.greenAlt}`,
+              boxShadow: `0 0 12px ${COLORS.green}`,
+            }}
+          />
+        ))}
+      </div>
+
+      <motion.div
+        animate={{
+          y: [0, -12, 0],
+          rotate: [-3, 3, -3],
+          scale: [1, 1.04, 1],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        style={{
+          position: "relative",
+          filter: "drop-shadow(0 14px 12px rgba(5, 52, 86, 0.35))",
+        }}
+      >
+        <a
+          href="https://www.google.com/maps/place/Yulanto+Web+Creations+Pvt+Ltd/@12.9724698,80.2510529,1504m/data=!3m1!1e3!4m6!3m5!1s0x3a525df3d6bf9167:0xc1aae342aa473d1!8m2!3d12.9725177!4d80.2518352!16s%2Fg%2F11b7rnd8vq?entry=ttu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            style={{
+              width: "58px",
+              height: "72px",
+              background: `linear-gradient(135deg, #53ae7d 0%, ${COLORS.darkGreen} 100%)`,
+              borderRadius: "50% 50% 50% 0",
+              transform: "rotate(-45deg)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              border: "3px solid #FFFFFF",
+              boxShadow: `inset 0 2px 6px rgba(255, 255, 255, 0.6), 0 0 20px rgba(105, 180, 129, 0.5)`,
+            }}
+          >
+            <div
+              style={{
+                width: "22px",
+                height: "22px",
+                borderRadius: "50%",
+                backgroundColor: COLORS.white,
+                boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
+              }}
+            />
+          </div>
+        </a>
+      </motion.div>
+    </div>
+  );
+};
+
+// ==========================================
+// NEARBY LANDMARK PIN COMPONENT (NAME ONLY)
+// ==========================================
+interface LandmarkPinProps {
+  name: string;
+  type: string;
+  top: string;
+  left: string;
+}
+
+const LandmarkPin: React.FC<LandmarkPinProps> = ({ name, type, top, left }) => {
+  const [isHovered, setIsHovered] = React.useState(false);
+
+  return (
+    <motion.div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        position: "absolute",
+        top,
+        left,
+        transform: "translate(-50%, -50%)",
+        zIndex: isHovered ? 15 : 8,
+        cursor: "pointer",
+      }}
+    >
+      <motion.div
+        animate={{
+          opacity: isHovered ? 1 : 0.88,
+          scale: isHovered ? 1.05 : 1,
+        }}
+        style={{
+          backgroundColor: "rgba(255, 255, 255, 0.95)",
+          backdropFilter: "blur(8px)",
+          padding: "6px 12px",
+          borderRadius: "10px",
+          border: `1px solid ${isHovered ? COLORS.green : COLORS.borderGreen}`,
+          boxShadow: isHovered
+            ? "0 8px 20px rgba(5, 52, 86, 0.18)"
+            : "0 4px 12px rgba(5, 52, 86, 0.1)",
+          whiteSpace: "nowrap",
+          transition: "border 0.2s ease, box-shadow 0.2s ease",
+        }}
+      >
+        <div style={{ fontSize: "12px", fontWeight: 800, color: COLORS.navy }}>
+          {name}
+        </div>
+        <div style={{ fontSize: "10px", color: COLORS.darkGreen, fontWeight: 600 }}>
+          {type}
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+// ==========================================
+// FLOATING LOCATION CARD ON MAP
+// ==========================================
+// interface LocationCardProps {
+//   title?: string;
+//   address?: string;
+// }
+
+// const LocationCard: React.FC<LocationCardProps> = ({ title, address }) => {
+//   const [isHovered, setIsHovered] = React.useState(false);
+
+//   return (
+//     <motion.div
+//       initial={{ opacity: 0, y: 30 }}
+//       animate={{ opacity: 1, y: 0 }}
+//       transition={{ duration: 0.6, delay: 0.5 }}
+//       onMouseEnter={() => setIsHovered(true)}
+//       onMouseLeave={() => setIsHovered(false)}
+//       style={{
+//         position: "absolute",
+//         bottom: "20px",
+//         right: "20px",
+//         zIndex: 12,
+//         backgroundColor: "rgba(255, 255, 255, 0.92)",
+//         backdropFilter: "blur(16px)",
+//         WebkitBackdropFilter: "blur(16px)",
+//         borderRadius: "20px",
+//         padding: "14px 18px",
+//         display: "flex",
+//         alignItems: "center",
+//         gap: "12px",
+//         boxShadow: isHovered
+//           ? "0 20px 40px rgba(5, 52, 86, 0.18)"
+//           : "0 10px 25px rgba(5, 52, 86, 0.1)",
+//         border: `1px solid ${isHovered ? COLORS.green : "rgba(255, 255, 255, 0.8)"}`,
+//         transform: isHovered ? "translateY(-4px) scale(1.02)" : "translateY(0) scale(1)",
+//         transition: "transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease",
+//         maxWidth: "280px",
+//       }}
+//     >
+//       <motion.div
+//         animate={{ rotate: isHovered ? 10 : 0 }}
+//         style={{
+//           width: "40px",
+//           height: "40px",
+//           borderRadius: "50%",
+//           background: `linear-gradient(135deg, ${COLORS.greenAlt}, ${COLORS.darkGreen})`,
+//           display: "flex",
+//           alignItems: "center",
+//           justifyContent: "center",
+//           color: COLORS.white,
+//           flexShrink: 0,
+//           boxShadow: `0 4px 12px rgba(105, 180, 129, 0.4)`,
+//         }}
+//       >
+//         <Building2 size={20} />
+//       </motion.div>
+
+//       <div>
+//         <h5 style={{ margin: 0, fontSize: "13px", fontWeight: 800, color: COLORS.navy }}>
+//           {title || "Yulanto Web Creations"}
+//         </h5>
+//         <p
+//           style={{
+//             margin: "2px 0 0 0",
+//             fontSize: "11px",
+//             color: "rgba(5, 52, 86, 0.75)",
+//             lineHeight: 1.3,
+//           }}
+//         >
+//           {address || "Perungudi, OMR Road, Chennai, Tamil Nadu"}
+//         </p>
+//         <div
+//           style={{
+//             height: "2px",
+//             width: isHovered ? "100%" : "30px",
+//             backgroundColor: COLORS.green,
+//             marginTop: "6px",
+//             borderRadius: "2px",
+//             transition: "width 0.3s ease",
+//           }}
+//         />
+//       </div>
+//     </motion.div>
+//   );
+// };
+
+// ==========================================
+// INTERACTIVE MAP WITH NEARBY LOCATIONS
+// ==========================================
+interface InteractiveMapProps {
+  locationTitle?: string;
+  locationAddress?: string;
+}
+
+const InteractiveMap: React.FC<InteractiveMapProps> = ({
+  locationTitle,
+  locationAddress,
+}) => {
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const rotateX = useSpring(useTransform(y, [-200, 200], [6, -6]), {
+    stiffness: 100,
+    damping: 20,
+  });
+  const rotateY = useSpring(useTransform(x, [-200, 200], [-6, 6]), {
+    stiffness: 100,
+    damping: 20,
   });
 
-  const sectionStyles: React.CSSProperties = {
-    fontFamily: '"Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    backgroundColor: "#ffffff",
-    padding: "60px 20px",
-    color: "#333333",
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    x.set(e.clientX - centerX);
+    y.set(e.clientY - centerY);
   };
 
-  const containerStyles: React.CSSProperties = {
-    maxWidth: "1230px",
-    margin: "0 auto",
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "40px",
-    alignItems: "center",
-  };
-
-  const leftStyles: React.CSSProperties = {
-    flex: "1",
-    minWidth: "300px",
-    display: "flex",
-    flexDirection: "column",
-    gap: "20px",
-  };
-
-  const rightStyles: React.CSSProperties = {
-    flex: "1",
-    minWidth: "300px",
-    position: "relative",
-    height: "480px",
-    borderRadius: "20px",
-    overflow: "hidden",
-    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
-  };
-
-  const headingStyles: React.CSSProperties = {
-    fontSize: "36px",
-    fontWeight: "700",
-    lineHeight: "1.3",
-    color: "#053456",
-    margin: 0,
-  };
-
-  const cardStyles: React.CSSProperties = {
-    backgroundColor: "#ffffff",
-    borderRadius: "16px",
-    padding: "15px 20px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    textDecoration: "none",
-    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.06)",
-    transition: "transform 0.2s ease, box-shadow 0.2s ease",
-    cursor: "pointer",
-    border: "1px solid #f0f0f0",
-  };
-
-  const mapOverlayStyles: React.CSSProperties = {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    background:
-      "radial-gradient(circle at center, transparent 30%, rgba(83, 174, 125, 0.7) 100%)",
-    pointerEvents: "none",
-    zIndex: 1,
-  };
-
-  const mapBadgeStyles: React.CSSProperties = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "70px",
-    height: "70px",
-    backgroundColor: "#79E0FF",
-    borderRadius: "50%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
-    zIndex: 2,
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
   };
 
   return (
-    <section style={sectionStyles}>
-      <div style={containerStyles}>
-        {/* Left Side: Text and Contact Cards */}
-        <div style={leftStyles}>
-          <h4 className="px-about-title mb-20" >
-            <span className="text-blue-about">
-             Get In Touch
-            </span>
-           With Us
-          </h4>
+    <motion.div
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+        minHeight: "520px",
+        borderRadius: "32px",
+        overflow: "hidden",
+        perspective: "1200px",
+        boxShadow: "0 24px 60px rgba(5, 52, 86, 0.12)",
+        border: "4px solid #FFFFFF",
+        backgroundColor: "#E8F4EF",
+      }}
+    >
+      <motion.div
+        style={{
+          width: "100%",
+          height: "100%",
+          position: "relative",
+          rotateX,
+          rotateY,
+          transformStyle: "preserve-3d",
+        }}
+      >
+        {/* VECTOR MAP SVG BACKGROUND */}
+        <svg
+          style={{ width: "100%", height: "100%", objectFit: "cover", pointerEvents: "none" }}
+          viewBox="0 0 800 600"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          {/* GREENERY & PARKS */}
+          <path d="M 50,50 Q 150,20 220,100 T 120,250 Z" fill="#D4EFE3" opacity="0.8" />
+          <path d="M 450,80 Q 580,40 650,140 T 520,300 Z" fill="#C9EAD8" opacity="0.7" />
+          <path d="M 280,380 Q 400,320 480,480 T 300,580 Z" fill="#D4EFE3" opacity="0.8" />
 
-          {/* WhatsApp Card */}
-          <a
-            href="https://wa.me/919962157250"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={cardStyles}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
-              <div style={iconContainerStyle("#53ae7d")}>
-                <svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-                </svg>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <p style={contactTitleStyle("#53ae7d")}>WhatsApp</p>
-                <p
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: "700",
-                    margin: 0,
-                    color: "#053456",
-                  }}
-                >
-                  +91 99621 57250
-                </p>
-              </div>
-            </div>
-            <div
-              style={{
-                fontSize: "18px",
-                fontWeight: "700",
-                color: "#53ae7d",
-                marginLeft: "10px",
-              }}
-            >
-              ❯
-            </div>
-          </a>
+          {/* OMR WATER CANAL / BAY ROUTE */}
+          <path
+            d="M 720,0 C 680,150 780,300 680,450 C 620,540 650,600 650,600"
+            fill="none"
+            stroke="#A3D9F8"
+            strokeWidth="48"
+            strokeLinecap="round"
+          />
+          <path
+            d="M 720,0 C 680,150 780,300 680,450 C 620,540 650,600 650,600"
+            fill="none"
+            stroke="#C0E6FC"
+            strokeWidth="32"
+            strokeLinecap="round"
+          />
 
-          {/* Email Card */}
-          <a href="mailto:info@yulanto.com" style={cardStyles}>
-            <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
-              <div style={iconContainerStyle("#053456")}>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <p style={contactTitleStyle("#053456")}>Email</p>
-                <p
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: "700",
-                    margin: 0,
-                    color: "#053456",
-                  }}
-                >
-                  info@yulanto.com
-                </p>
-              </div>
-            </div>
-            <div
-              style={{
-                fontSize: "18px",
-                fontWeight: "700",
-                color: "#053456",
-                marginLeft: "10px",
-              }}
-            >
-              ❯
-            </div>
-          </a>
+          {/* ROAD NETWORKS (OMR / Perungudi Roads) */}
+          <g stroke="#FFFFFF" strokeWidth="12" fill="none" strokeLinecap="round" opacity="0.9">
+            <path d="M 0,180 L 800,240" />
+            <path d="M 0,380 L 800,320" />
+            <path d="M 180,0 L 260,600" />
+            <path d="M 520,0 L 440,600" />
+            <path d="M 100,500 L 700,100" />
+          </g>
+
+          {/* MAIN IT CORRIDOR EXPRESSWAY */}
+          <g stroke="#FFFFFF" strokeWidth="20" fill="none" strokeLinecap="round">
+            <path d="M 0,280 Q 400,200 800,360" />
+            <path d="M 380,0 Q 420,300 360,600" />
+          </g>
+          <g stroke="#FAFDFB" strokeWidth="14" fill="none" strokeLinecap="round">
+            <path d="M 0,280 Q 400,200 800,360" />
+            <path d="M 380,0 Q 420,300 360,600" />
+          </g>
+          <g stroke="#69B481" strokeWidth="2" strokeDasharray="6 6" fill="none" opacity="0.4">
+            <path d="M 0,280 Q 400,200 800,360" />
+            <path d="M 380,0 Q 420,300 360,600" />
+          </g>
+
+          {/* TECH PARK BUILDINGS */}
+          <rect x="140" y="120" width="36" height="28" rx="4" fill="#B3DFC8" opacity="0.8" />
+          <rect x="220" y="210" width="45" height="32" rx="4" fill="#A1D8BB" opacity="0.8" />
+          <rect x="440" y="220" width="40" height="40" rx="6" fill="#B3DFC8" opacity="0.8" />
+          <rect x="290" y="320" width="50" height="30" rx="4" fill="#A1D8BB" opacity="0.8" />
+          <rect x="480" y="380" width="38" height="28" rx="4" fill="#B3DFC8" opacity="0.8" />
+        </svg>
+
+        {/* ROAD LABELS */}
+        <div
+          style={{
+            position: "absolute",
+            top: "35%",
+            left: "42%",
+            color: "rgba(5, 52, 86, 0.65)",
+            fontSize: "11px",
+            fontWeight: 700,
+            transform: "rotate(-8deg)",
+            letterSpacing: "0.5px",
+          }}
+        >
+          OMR Road (Rajiv Gandhi Salai)
         </div>
 
-        {/* Right Side: Google Map with Overlay */}
-        <div style={rightStyles}>
-          <iframe
-            title="Yulanto Web Creations Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.989504987164!2d80.24926027412033!3d12.972522914860022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525df3d6bf9167%3A0xc1aae342aa473d1!2sYulanto%20Web%20Creations%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1786539836200!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            style={{ border: 0, display: "block" }}
-            allowFullScreen={false}
-            loading="lazy"
-            referrerPolicy="strict-origin-when-cross-origin"
-          ></iframe>
+        {/* NEARBY CHENNAI LANDMARKS (TEXT ONLY) */}
+        {NEARBY_LANDMARKS.map((lm, idx) => (
+          <LandmarkPin
+            key={idx}
+            name={lm.name}
+            type={lm.type}
+            top={lm.top}
+            left={lm.left}
+          />
+        ))}
 
-          {/* Radial Overlay */}
-          <div style={mapOverlayStyles}></div>
+        {/* CENTER COMPANY PIN */}
+        <LocationPin />
 
-          {/* Location Center Badge */}
-          <div style={mapBadgeStyles}>
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 100 100"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="50" cy="50" r="40" stroke="white" strokeWidth="4" />
-              <path
-                d="M35 35L65 50L35 65"
-                stroke="white"
-                strokeWidth="6"
-                strokeLinecap="round"
+        {/* FLOATING LOCATION DETAILS */}
+        {/* <LocationCard title={locationTitle} address={locationAddress} /> */}
+      </motion.div>
+    </motion.div>
+  );
+};
+
+// ==========================================
+// MAIN EXPORTED COMPONENT
+// ==========================================
+export const ContactLocationSection: React.FC<ContactLocationProps> = ({
+  phone = "+91 99621 57250",
+  email = "info@yulanto.com",
+  address = "F3, #4/608, First Floor, V.O.C Street, Kottivakkam, OMR, Chennai - 600 041, India., Chennai, Tamil Nadu, 600041",
+  workingHours = "Mon - Fri : 10:00 AM - 7:00 PM",
+  locationTitle = "Yulanto Web Creations",
+  locationAddress = "F3, #4/608, First Floor, V.O.C Street, Kottivakkam, OMR, Chennai - 600 041, India., Chennai, Tamil Nadu, 600041",
+  className,
+  style,
+}) => {
+  const { isMobile, isTablet } = useWindowSize();
+
+  const contactItems = [
+    { icon: <Phone size={20} />, title: "Phone", value: phone },
+    { icon: <Mail size={20} />, title: "Email", value: email },
+    { icon: <MapPin size={20} />, title: "Address", value: address },
+    { icon: <Clock size={20} />, title: "Working Hours", value: workingHours },
+  ];
+
+  return (
+    <section
+      className={className}
+      style={{
+        position: "relative",
+        width: "100%",
+        backgroundColor: COLORS.lightBg,
+        background: `radial-gradient(${COLORS.lightBg}`,
+        padding: isMobile ? "40px 16px" : isTablet ? "40px 20px" : "40px 40px",
+        overflow: "hidden",
+       
+        ...style,
+      }}
+    >
+        
+                                  <h4 className="px-about-title mb-20 text-center">
+                    <span className="text-blue-about">Get In Touch {" "}</span> With Us
+                  </h4>
+      
+      {Array.from({ length: 12 }).map((_, i) => (
+        <FloatingParticle key={i} index={i} />
+      ))}
+
+      <div
+        style={{
+          maxWidth: "1280px",
+          margin: "0 auto",
+          display: "flex",
+          flexDirection: isMobile ? "column" : "row",
+          alignItems: "stretch",
+          justifyContent: "space-between",
+          gap: isMobile ? "32px" : isTablet ? "24px" : "36px",
+        }}
+      >
+        {/* LEFT CONTACT DETAILS */}
+        <div
+          style={{
+            flex: isMobile ? "1 1 100%" : "0 0 44%",
+            display: "flex",
+            flexDirection: "column",
+            gap: "24px",
+            zIndex: 2,
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+            {contactItems.map((item, index) => (
+              <ContactCard
+                key={index}
+                index={index}
+                icon={item.icon}
+                title={item.title}
+                value={item.value}
               />
-            </svg>
+            ))}
           </div>
+        </div>
+
+        {/* CENTER ANIMATED DIVIDER */}
+        {!isMobile && !isTablet && <AnimatedDivider />}
+
+        {/* RIGHT INTERACTIVE MAP WITH NEARBY LANDMARKS */}
+        <div
+          style={{
+            flex: isMobile ? "1 1 100%" : "1 1 50%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 2,
+            minHeight: isMobile ? "400px" : "auto",
+          }}
+        >
+          <InteractiveMap
+            locationTitle={locationTitle}
+            locationAddress={locationAddress}
+          />
         </div>
       </div>
     </section>
   );
 };
 
-export default GetInTouch;
+export default ContactLocationSection;

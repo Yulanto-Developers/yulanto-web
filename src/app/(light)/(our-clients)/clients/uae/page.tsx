@@ -46,48 +46,7 @@ From a modern corporate website to a powerful e-commerce platform or a complete 
         countryLabel="UAE"
         countryFlag={<UAEFlagIcon />}
         clients={[
-          {
-            name: "Altis Calserv",
-            category: "Business Services",
-            color: "#1a9b5c",
-            website: "https://altiscalserv.com/",
-          },
-          {
-            name: "Preserve Metals",
-            category: "Metal Recycling",
-            color: "#2f5bff",
-            website: "https://preservemetals.com/",
-          },
-          {
-            name: "Parkad",
-            category: "Parking Services",
-            color: "#111827",
-            website: "https://www.parkad.com.sg/",
-          },
-          {
-            name: "HUB Electrical",
-            category: "Electrical Services",
-            color: "#e0355a",
-            website: "https://www.hub-electrical.com/",
-          },
-          {
-            name: "Sparky Anim",
-            category: "Animation & Creative",
-            color: "#2f9b4f",
-            website: "https://sparkyanim.com/",
-          },
-          {
-            name: "Asianic",
-            category: "Technology & Services",
-            color: "#1c1c8f",
-            website: "http://asianic.sg/",
-          },
-          {
-            name: "SG Event Rental",
-            category: "Event Rental",
-            color: "#1a9b5c",
-            website: "https://www.sgeventrental.com.sg/",
-          },
+                 
           {
             name: "DDC Maritime",
             category: "Maritime Services",

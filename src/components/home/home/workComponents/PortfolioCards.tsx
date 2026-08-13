@@ -50,6 +50,7 @@ export default function PortfolioCards({
             <img src={item.image} alt={item.title} loading="lazy" />
           </div>
 
+
           {/* Date Badge */}
           {item.date && (
             <div className="portfolio-card-date-badge">{item.date}</div>
@@ -70,6 +71,7 @@ export default function PortfolioCards({
                 <p className="portfolio-card-description">{item.description}</p>
               )}
             </div>
+
 
             <button
               className="portfolio-card-plus-btn"
