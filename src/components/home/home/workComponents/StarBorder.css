@@ -75,8 +75,8 @@
     position: relative;
     /*border: 1px solid rgba(255, 255, 255, 0.25);
     */
-    background: #275674 ;
-    /* background: linear-gradient(135deg, #275674 0%, #53ae7d 100%); */
+    /* background: #275674 ; */
+    background: linear-gradient(135deg, #275674 0%, #53ae7d 100%);
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
