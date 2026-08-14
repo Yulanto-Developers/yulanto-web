@@ -11,8 +11,9 @@ export default function Page() {
     <main>
       <Breadcrumbdata />
       <Banner />
+       <Job />
       <Culture />
-      <Job />
+     
       
       
       

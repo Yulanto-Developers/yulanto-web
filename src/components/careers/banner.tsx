@@ -23,7 +23,7 @@ import {
 
 const fallbackUrls = [
     "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-    "https://upload.wikimedia.org/wikipedia/commons/9/96/Among_Us_icon.png",
+    "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
 ];
 
 const iconConfigs = [
@@ -77,18 +77,10 @@ export default function CareerBreadcrumbSection() {
                 }}
             >
                 {/* Title Tag */}
-                <h2
-                    style={{
-                        fontSize: "14px",
-                        fontWeight: "700",
-                        textTransform: "uppercase",
-                        letterSpacing: "1px",
-                        color: "#053456",
-                        marginBottom: "12px",
-                    }}
-                >
-                    Yulanto Careers
-                </h2>
+              
+                 <span className="tp-section-subtitle text-black blink-ball mb-20">
+          Yulanto Careers
+        </span>
 
                 {/* Main Heading */}
                 <h4

@@ -138,12 +138,23 @@ export default function JobListingComponent({
       style={{
         position: "relative",
         backgroundColor: "#ffffff",
-        minHeight: "100vh",
-        padding: "24px",
-        fontFamily: "sans-serif",
+        padding: "60px 24px",
+
+        minHeight: "420px",
+        overflow: "hidden",
       }}
       className={className}
     >
+      <div className="text-center">
+        <span className="tp-section-subtitle text-black blink-ball">
+          We're Hiring
+        </span>
+
+        <h4 className="px-about-title mb-20 text-center">
+          <span className="text-blue-about">Join Our&nbsp;</span>
+          Team
+        </h4>
+      </div>
       {/* Overlay Backdrop */}
       <AnimatePresence>
         {activeItem ? (
@@ -152,154 +163,151 @@ export default function JobListingComponent({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             style={{
-              position: "fixed",
+              position: "absolute",
               inset: 0,
               zIndex: 10,
               backgroundColor: "rgba(5, 52, 86, 0.4)",
               backdropFilter: "blur(12px)",
-              pointerEvents: "none",
             }}
           />
         ) : null}
       </AnimatePresence>
 
       {/* Expanded Modal */}
-      <AnimatePresence>
-        {activeItem ? (
+      {/* Expanded Modal */}
+<AnimatePresence>
+  {activeItem ? (
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        zIndex: 20,
+        display: "grid",
+        placeItems: "center",
+        padding: "16px",
+      }}
+    >
+      <motion.div
+        style={{
+          backgroundColor: "#ffffff",
+          display: "flex",
+          height: "fit-content",
+          width: "90%",
+          maxWidth: "600px",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          gap: "16px",
+          overflow: "hidden",
+          border: "2px solid #53ae7d",
+          padding: "24px",
+          boxShadow: "0 10px 25px -5px rgba(5, 52, 86, 0.2)",
+          borderRadius: "12px",
+        }}
+        ref={ref}
+        layoutId={`workItem-${activeItem.company}`}
+      >
+        {/* Job Header */}
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            alignItems: "center",
+            gap: "16px",
+          }}
+        >
+          <motion.div
+            layoutId={`workItemLogo-${activeItem.company}`}
+            style={{
+              fontSize: "36px",
+              color: "#053456",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexShrink: 0,
+            }}
+          >
+            {activeItem.logo}
+          </motion.div>
+
           <div
             style={{
-              position: "fixed",
-              inset: 0,
-              zIndex: 20,
-              display: "grid",
-              placeItems: "center",
-              padding: "16px",
+              display: "flex",
+              flexGrow: 1,
+              flexDirection: "column",
+              gap: "4px",
             }}
           >
             <motion.div
               style={{
-                backgroundColor: "#ffffff",
-                display: "flex",
-                height: "fit-content",
-                width: "90%",
-                maxWidth: "600px",
-                cursor: "pointer",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                gap: "16px",
-                overflow: "hidden",
-                border: "2px solid #53ae7d",
-                padding: "24px",
-                boxShadow: "0 10px 25px -5px rgba(5, 52, 86, 0.2)",
-                borderRadius: "12px",
+                color: "#053456",
+                fontSize: "18px",
+                fontWeight: 700,
               }}
-              ref={ref}
-              layoutId={`workItem-${activeItem.company}`}
+              layoutId={`workItemCompany-${activeItem.company}`}
             >
-              <div
-                style={{
-                  display: "flex",
-                  width: "100%",
-                  alignItems: "center",
-                  gap: "16px",
-                }}
-              >
-                <motion.div
-                  layoutId={`workItemLogo-${activeItem.company}`}
-                  style={{
-                    fontSize: "36px",
-                    color: "#053456",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  {activeItem.logo}
-                </motion.div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexGrow: 1,
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      width: "100%",
-                      flexDirection: "column",
-                      gap: "2px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        width: "100%",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                      }}
-                    >
-                      <motion.div
-                        style={{
-                          color: "#053456",
-                          fontSize: "16px",
-                          fontWeight: 700,
-                        }}
-                        layoutId={`workItemCompany-${activeItem.company}`}
-                      >
-                        {activeItem.company}
-                      </motion.div>
-                    </div>
-                    <motion.p
-                      layoutId={`workItemTitle-${activeItem.company}`}
-                      style={{
-                        color: "#53ae7d",
-                        fontSize: "14px",
-                        fontWeight: 600,
-                        margin: 0,
-                      }}
-                    >
-                      {activeItem.title} / {activeItem.salary}
-                    </motion.p>
-                    <motion.div
-                      style={{
-                        color: "#053456",
-                        display: "flex",
-                        flexDirection: "row",
-                        gap: "8px",
-                        fontSize: "12px",
-                        opacity: 0.8,
-                      }}
-                      layoutId={`workItemExtras-${activeItem.company}`}
-                    >
-                      {activeItem.remote === "Yes" && ` ${activeItem.location} `}
-                      {activeItem.remote === "No" && ` ${activeItem.location} `}
-                      {activeItem.remote === "Hybrid" &&
-                        ` ${activeItem.remote} / ${activeItem.location} `}
-                      | {activeItem.job_time}
-                    </motion.div>
-                  </div>
-                </div>
-              </div>
-              <motion.p
-                layout
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0, transition: { duration: 0.05 } }}
-                style={{
-                  color: "#053456",
-                  fontSize: "14px",
-                  lineHeight: 1.5,
-                  margin: 0,
-                }}
-              >
-                {activeItem.job_description}
-              </motion.p>
+              {activeItem.company}
+            </motion.div>
+
+            <motion.p
+              layoutId={`workItemTitle-${activeItem.company}`}
+              style={{
+                color: "#53ae7d",
+                fontSize: "14px",
+                fontWeight: 600,
+                margin: 0,
+              }}
+            >
+              {activeItem.title}
+            </motion.p>
+
+            <motion.div
+              style={{
+                color: "#053456",
+                fontSize: "13px",
+                opacity: 0.8,
+              }}
+              layoutId={`workItemExtras-${activeItem.company}`}
+            >
+              {activeItem.salary} &nbsp; | &nbsp;
+              {activeItem.location} &nbsp; | &nbsp;
+              {activeItem.job_time}
             </motion.div>
           </div>
-        ) : null}
-      </AnimatePresence>
+        </div>
+
+        {/* Job Description */}
+        <motion.p
+          layout
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{
+            opacity: 0,
+            transition: { duration: 0.05 },
+          }}
+          style={{
+            color: "#053456",
+            fontSize: "14px",
+            lineHeight: 1.6,
+            margin: 0,
+          }}
+        >
+          {activeItem.job_description}
+        </motion.p>
+
+        {/* Send Resume Button */}
+        <a
+          className="px-btn-grey d-flex align-items-center gap-2"
+          href={`mailto:hr@yulanto.com?subject=Application for ${encodeURIComponent(
+            activeItem.company
+          )}`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          Send Resume
+        </a>
+      </motion.div>
+    </div>
+  ) : null}
+</AnimatePresence>
 
       {/* Grid: 3 cards per row */}
       <div
