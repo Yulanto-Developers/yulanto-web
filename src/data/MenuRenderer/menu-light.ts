@@ -89,7 +89,7 @@ export const lightMenu: MenuItem[] = [
       { label: "Recent Projects", href: "/recent-project" },
       { label: "Portfolio", href: "/portfolio" },
       { label: "Case Studies", href: "/" },
-      { label: "Industries We Serve", href: "/" },
+      { label: "Industries We Serve", href: "/industry-we-serve" },
       // { label: "Industry Wise", href: "/" },
     ],
   },

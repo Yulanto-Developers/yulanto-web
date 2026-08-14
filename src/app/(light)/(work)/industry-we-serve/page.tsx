@@ -6,6 +6,7 @@ import { portfolioItems } from "@/components/home/home/workComponents/portfolio-
 import type { PortfolioCategory } from "@/components/home/home/workComponents/portfolio";
 import BreadcurmbData from "@/components/breadcrum/sections/breadcrumbdata";
 import StarBorder from "@/components/home/home/workComponents/StarBorder";
+import IndustryFilter from "@/components/home/home/workComponents/IndustryFilter";
 
 interface NavItem {
     label: string;
@@ -50,51 +51,19 @@ export default function PortfolioPage() {
                 <div className="row mb-5">
                     <div className="col-lg-12 col-md-10">
                         <h2 className="display-5 text-tenor fw-bold mb-3 text-dark">
-                            Our Portfolio
+                            Showcasing Innovation &amp; Design Excellence
                         </h2>
                         <p className="text-muted text-figtree leading-relaxed fs-5">
-                            Step into our portfolio showcase, where the fusion of creativity and
-                            functionality is brought to life. Explore our awe-inspiring website designs,
-                            eye-catching logos, engaging brochures, compelling advertisements, and
-                            unforgettable business cards. Every project exemplifies our unwavering
-                            commitment to delivering excellence, driving innovation, and guaranteeing client
-                            satisfaction.
-                        </p>
+                            Explore the vast range of our skills demonstrated in our extensive collection,
+                            where every project serves as evidence of our commitment to outstanding design.
+                            From captivating websites that redefine the online experience to meticulously
+                            crafted logos that deeply connect with your target audience, our portfolio
+                            embodies the core of creativity and innovation. </p>
                     </div>
                 </div>
 
                 <section className="container py-5">
-                    {/* Outer Pill Container around all buttons */}
-                    <div className="portfolio-category-nav-wrapper">
-                        <div className="portfolio-category-nav">
-                            {navItems.map((item) => {
-                                const isActive = activeCategory === item.category;
-
-                                return (
-                                    <div key={item.category} className="btn-container-cls">
-                                        <StarBorder
-                                            as="button"
-                                            color={isActive ? "#53ae7d" : "#ffffff"}
-                                            speed={isActive ? "3s" : "6s"}
-                                            thickness={1}
-                                            className={isActive ? "active-category" : ""}
-                                            onClick={() => setActiveCategory(item.category)}
-                                        >
-                                            {item.label}
-                                        </StarBorder>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-
-                    {/* Portfolio Cards */}
-                    <div className="mt-5">
-                        <PortfolioCards
-                            items={filteredItems}
-                            activeCategory={activeCategory}
-                        />
-                    </div>
+                    <IndustryFilter />
                 </section>
             </div>
         </>
