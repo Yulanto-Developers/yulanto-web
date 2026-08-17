@@ -21,6 +21,7 @@ import {
 } from "@/components/home/home/workComponents/PortfolioModalContext";
 
 import "@/assets/css/style.css";
+import { MajorClientPopups } from "@/components/home/home/workComponents/MajorClientPopups";
 
 export default function DesignStudioLayout({
     children,
@@ -50,6 +51,7 @@ export default function DesignStudioLayout({
 
                     {/* Quote modal */}
                     <QuoteModal />
+                    <MajorClientPopups />
 
                     {/* Floating quote button */}
                     <FloatingQuoteButton />
