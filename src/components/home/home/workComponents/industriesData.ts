@@ -112,12 +112,113 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       { id: 'grayeyeit', name: 'GrayeyeIT', logo: 'assets/img/all-works/grayit-logo.png', location: 'Chennai, India', url: 'https://grayeyeit.com/', borderClass: 'brl' },
     ],
   },
+  software: {
+    projects: [
+      { id: 'cloudtek', name: 'CloudTek Systems', logo: 'assets/img/all-works/software/cloudtek.png', location: 'Bengaluru, India', url: 'https://example.com/cloudtek', borderClass: 'brb' },
+      { id: 'fitxai', name: 'FitX AI', logo: 'assets/img/all-works/software/fitxai.png', location: 'Chennai, India', url: 'https://example.com/fitxai', borderClass: 'brlb' },
+      { id: 'devopsx', name: 'DevOpsX Lab', logo: 'assets/img/all-works/software/devopsx.png', location: 'Hyderabad, India', url: 'https://example.com/devopsx', borderClass: 'brlb' },
+    ],
+  },
   realestate: {
     projects: [
       { id: 'harithams', name: 'Harithams', logo: 'assets/img/all-works/2026/harithams.png', location: 'Chennai, India', url: 'https://www.harithams.com/', borderClass: 'brb' },
       { id: 'vakaman', name: 'Vakaman Developers', logo: 'assets/img/all-works/new/vakaman.png', location: 'Coimbatore, India', url: 'https://vakaman.com/', borderClass: 'brlb' },
       { id: 'irishomez', name: 'Iris Homez', logo: 'assets/img/all-works/new/irishomez.png', location: 'Chennai, India', url: 'https://www.irishomez.com/', borderClass: 'brlb' },
       { id: 'srivamanas', name: "Srivamana's Living", logo: 'assets/img/all-works/svl-logo.png', location: 'Chennai, India', url: '#', borderClass: 'brb' },
+      { id: 'sriramnivas', name: 'Sri Ram Nivas', logo: 'assets/img/all-works/new/sriramnivas.png', location: 'Chennai, India', url: 'https://example.com/sriramnivas', borderClass: 'brlb' },
     ],
+  },
+  interior: {
+    projects: [
+      { id: 'studio-architects', name: 'Studio Design Craft', logo: 'assets/img/all-works/interior/studiocraft.png', location: 'Chennai, India', url: 'https://example.com/studiocraft', borderClass: 'brb' },
+      { id: 'urban-interiors', name: 'Urban Spaces', logo: 'assets/img/all-works/interior/urbanspaces.png', location: 'Bengaluru, India', url: 'https://example.com/urbanspaces', borderClass: 'brlb' },
+    ],
+  },
+  engineering: {
+    projects: [
+      { id: 'apex-eng', name: 'Apex Engineering Solutions', logo: 'assets/img/all-works/engineering/apex.png', location: 'Chennai, India', url: 'https://example.com/apex', borderClass: 'brb' },
+      { id: 'titan-mech', name: 'Titan Mechanicals', logo: 'assets/img/all-works/engineering/titan.png', location: 'Coimbatore, India', url: 'https://example.com/titan', borderClass: 'brlb' },
+    ],
+  },
+  health: {
+    projects: [
+      { id: 'carepulse', name: 'CarePulse Health', logo: 'assets/img/all-works/health/carepulse.png', location: 'Chennai, India', url: 'https://example.com/carepulse', borderClass: 'brb' },
+      { id: 'medplus-diagnostics', name: 'Aura Diagnostics', logo: 'assets/img/all-works/health/aura.png', location: 'Hyderabad, India', url: 'https://example.com/aura', borderClass: 'brlb' },
+    ],
+  },
+  media: {
+    projects: [
+      { id: 'primevision', name: 'PrimeVision Media', logo: 'assets/img/all-works/media/primevision.png', location: 'Mumbai, India', url: 'https://example.com/primevision', borderClass: 'brb' },
+    ],
+  },
+  ecommerce: {
+    projects: [
+      { id: 'stylecart', name: 'StyleCart India', logo: 'assets/img/all-works/ecommerce/stylecart.png', location: 'Chennai, India', url: 'https://example.com/stylecart', borderClass: 'brb' },
+      { id: 'organicmart', name: 'BioFresh Organics', logo: 'assets/img/all-works/ecommerce/biofresh.png', location: 'Bengaluru, India', url: 'https://example.com/biofresh', borderClass: 'brlb' },
+    ],
+  },
+  import: {
+    projects: [
+      { id: 'globaltrade', name: 'Global Maritime Trade', logo: 'assets/img/all-works/import/globalmaritime.png', location: 'Chennai, India', url: 'https://example.com/globalmaritime', borderClass: 'brb' },
+    ],
+  },
+  logistics: {
+    projects: [
+      { id: 'freightdigital', name: 'Freight Digital', logo: 'assets/img/all-works/logistics/freightdigital.png', location: 'Chennai, India', url: 'https://example.com/freightdigital', borderClass: 'brb' },
+      { id: 'speedcargo', name: 'Speed Cargo Express', logo: 'assets/img/all-works/logistics/speedcargo.png', location: 'Mumbai, India', url: 'https://example.com/speedcargo', borderClass: 'brlb' },
+    ],
+  },
+  education: {
+    projects: [
+      { id: 'edulearn', name: 'EduLearn Academy', logo: 'assets/img/all-works/education/edulearn.png', location: 'Chennai, India', url: 'https://example.com/edulearn', borderClass: 'brb' },
+    ],
+  },
+  tour: {
+    projects: [
+      { id: 'skytravels', name: 'Sky High Travels', logo: 'assets/img/all-works/tour/skytravels.png', location: 'Kochi, India', url: 'https://example.com/skytravels', borderClass: 'brb' },
+    ],
+  },
+  cleaning: {
+    projects: [
+      { id: 'neatpro', name: 'NeatPro Services', logo: 'assets/img/all-works/cleaning/neatpro.png', location: 'Chennai, India', url: 'https://example.com/neatpro', borderClass: 'brb' },
+    ],
+  },
+  consultancy: {
+    projects: [
+      { id: 'vanguard-consulting', name: 'Vanguard Partners', logo: 'assets/img/all-works/consultancy/vanguard.png', location: 'Bengaluru, India', url: 'https://example.com/vanguard', borderClass: 'brb' },
+    ],
+  },
+  publisher: {
+    projects: [
+      { id: 'apexbooks', name: 'Apex Publishing House', logo: 'assets/img/all-works/publisher/apexbooks.png', location: 'New Delhi, India', url: 'https://example.com/apexbooks', borderClass: 'brb' },
+    ],
+  },
+  hospitality: {
+    projects: [
+      { id: 'solarpower', name: 'SunRay Solar Tech', logo: 'assets/img/all-works/hospitality/sunray.png', location: 'Coimbatore, India', url: 'https://example.com/sunray', borderClass: 'brb' },
+    ],
+  },
+  manufacturer: {
+    projects: [
+      { id: 'indusfab', name: 'Indus Fabrication', logo: 'assets/img/all-works/manufacturer/indusfab.png', location: 'Chennai, India', url: 'https://example.com/indusfab', borderClass: 'brb' },
+    ],
+  },
+  resorts: {
+    projects: [
+      { id: 'palmgrove', name: 'Palm Grove Resort', logo: 'assets/img/all-works/resorts/palmgrove.png', location: 'Puducherry, India', url: 'https://example.com/palmgrove', borderClass: 'brb' },
+    ],
+  },
+  events: {
+    projects: [
+      { id: 'grandevents', name: 'Grand Arena Events', logo: 'assets/img/all-works/events/grandarena.png', location: 'Chennai, India', url: 'https://example.com/grandarena', borderClass: 'brb' },
+    ],
+  },
+  finance: {
+    projects: [
+      { id: 'capitalgrowth', name: 'Capital Growth Advisory', logo: 'assets/img/all-works/finance/capitalgrowth.png', location: 'Mumbai, India', url: 'https://example.com/capitalgrowth', borderClass: 'brb' },
+    ],
+  },
+  others: {
+    projects: [],
   },
 };

@@ -97,3 +97,102 @@
   box-shadow: 0 6px 18px rgba(83, 174, 125, 0.4);
   color: #ffffff;
 }
+
+
+
+
+/* major-client.module.css */
+.majorClientSection {
+  background-color: #0f171e;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.clientRow {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.imageCard {
+  background: rgba(39, 86, 116, 0.1);
+  border: 1px solid rgba(83, 174, 125, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageCard:hover {
+  transform: translateY(-4px);
+  border-color: #53ae7d;
+  box-shadow: 0 8px 24px rgba(83, 174, 125, 0.15);
+}
+
+.clientContent {
+  padding: 1rem;
+}
+
+.tagTube {
+  background-color: rgba(39, 86, 116, 0.3);
+  border: 1px solid rgba(83, 174, 125, 0.4);
+  color: #53ae7d;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.techBadge {
+  background-color: #172430;
+  border: 1px solid #275674;
+  color: #d1e3ee;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.slideTitleSub {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.infoListUl {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.infoListUl li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+.infoListUl li::before {
+  content: "•";
+  color: #53ae7d;
+  font-size: 1.4rem;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+.casestudyBtn {
+  background: linear-gradient(135deg, #275674 0%, #53ae7d 100%);
+  border: none;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(39, 86, 116, 0.3);
+}
+
+.casestudyBtn:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(83, 174, 125, 0.4);
+  color: #ffffff;
+}
