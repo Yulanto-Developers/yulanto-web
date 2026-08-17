@@ -9,6 +9,7 @@ export interface CultureItem {
   title: string;
   description: string;
   imgSrc: string;
+  sideImgSrc?: string;
   colorTheme?: "orange" | "blue" | "purple";
   colors?: {
     bg: string;
@@ -74,12 +75,18 @@ const CultureCard = ({
   title,
   description,
   imgSrc,
+  sideImgSrc,
   colorTheme = "blue",
   rotate,
   position,
   colors: customColors,
-}: CultureItem & { rotate: number; position: CardPosition }) => {
+}: CultureItem & {
+  rotate: number;
+  position: CardPosition;
+}) => {
   const theme = customColors || THEME_COLORS[colorTheme];
+
+  const isLeft = !!position.left;
 
   return (
     <div
@@ -102,6 +109,37 @@ const CultureCard = ({
         e.currentTarget.style.zIndex = "10";
       }}
     >
+      {/* SIDE DECORATIVE IMAGE */}
+
+      {sideImgSrc && (
+        <img
+          src={sideImgSrc}
+          alt=""
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            top: "50%",
+            width: "110px",
+            height: "110px",
+            objectFit: "contain",
+            transform: "translateY(-50%)",
+            zIndex: 1,
+            pointerEvents: "none",
+
+            // LEFT cards → image on far left
+            // RIGHT cards → image on far right
+            ...(isLeft
+              ? {
+                left: "-170px",
+              }
+              : {
+                right: "-170px",
+              }),
+          }}
+        />
+      )}
+
+      {/* CARD */}
       <div
         style={{
           backgroundColor: "#ffffff",
@@ -112,6 +150,7 @@ const CultureCard = ({
         }}
       >
         <Pin color={theme.text} />
+
         <div
           style={{
             backgroundColor: theme.bg,
@@ -124,7 +163,7 @@ const CultureCard = ({
             overflow: "hidden",
           }}
         >
-          {/* IMAGE ICON */}
+          {/* CARD IMAGE */}
           <div style={{ marginBottom: "12px" }}>
             <img
               src={imgSrc}
@@ -143,12 +182,12 @@ const CultureCard = ({
               fontWeight: "600",
               color: "#1f2937",
               lineHeight: "1.3",
-              marginBottom: "8px",
               margin: "0 0 8px 0",
             }}
           >
             {title}
           </h3>
+
           <p
             style={{
               color: "#6b7280",
@@ -188,56 +227,71 @@ export default function WorkCultureSection() {
       title: "Values and Beliefs",
       description:
         "The core principles and beliefs that guide decision-making and behavior within the organization.",
-      imgSrc: "assets/img/cms-ecom-icons/Values-and-Beliefs.png",
+      imgSrc: "/assets/img/careers/1.png",
+      sideImgSrc: "/assets/img/cms-ecom-icons/side-values.png",
       colorTheme: "orange",
     },
+
     {
       title: "Communication",
       description:
         "The openness, transparency, and effectiveness of communication channels between employees and management.",
-      imgSrc: "assets/img/cms-ecom-icons/Communication.png",
+      imgSrc: "/assets/img/careers/2.png",
+      sideImgSrc: "/assets/img/cms-ecom-icons/side-communication.png",
       colorTheme: "blue",
     },
+
     {
       title: "Collaboration",
       description:
         "The degree to which employees work together, share ideas, and support each other to achieve common goals.",
-      imgSrc: "assets/img/cms-ecom-icons/Collaboration.png",
+      imgSrc: "/assets/img/careers/3.png",
+      sideImgSrc: "/assets/img/cms-ecom-icons/side-collaboration.png",
       colorTheme: "purple",
     },
+
     {
       title: "Leadership Style",
       description:
         "The approach and behavior of leaders in the organization, which sets the tone for the rest of the workforce.",
-      imgSrc: "assets/img/cms-ecom-icons/Leadership-Style.png",
+      imgSrc: "/assets/img/careers/4.png",
+      sideImgSrc: "/assets/img/cms-ecom-icons/side-leadership.png",
       colorTheme: "orange",
     },
+
     {
       title: "Employee Engagement",
       description:
         "The level of involvement, enthusiasm, and commitment employees have towards their work and the organization.",
-      imgSrc: "assets/img/cms-ecom-icons/Employee-Engagement.png",
+      imgSrc: "/assets/img/careers/5.png",
+      sideImgSrc: "/assets/img/cms-ecom-icons/side-engagement.png",
       colorTheme: "blue",
     },
+
     {
       title: "Work-Life Balance",
       description:
         "The emphasis placed on maintaining a healthy balance between work responsibilities and personal life.",
-      imgSrc: "assets/img/cms-ecom-icons/Work-Life-Balance.png",
+      imgSrc: "/assets/img/careers/6.png",
+      sideImgSrc: "/assets/img/cms-ecom-icons/side-worklife.png",
       colorTheme: "purple",
     },
+
     {
       title: "Recognition & Reward",
       description:
         "The acknowledgment and appreciation of employee contributions through rewards, incentives, and advancement.",
-      imgSrc: "assets/img/cms-ecom-icons/Recognition-&-Reward.png",
+      imgSrc: "/assets/img/careers/7.png",
+      sideImgSrc: "/assets/img/cms-ecom-icons/side-reward.png",
       colorTheme: "orange",
     },
+
     {
       title: "Adaptability",
       description:
         "The organization's ability to embrace change, learn from failures, and adapt to new opportunities.",
-      imgSrc: "assets/img/cms-ecom-icons/Adaptability.png",
+      imgSrc: "/assets/img/careers/8.png",
+      sideImgSrc: "/assets/img/cms-ecom-icons/side-adaptability.png",
       colorTheme: "blue",
     },
   ];
@@ -260,7 +314,7 @@ export default function WorkCultureSection() {
           inset: 0,
           pointerEvents: "none",
           opacity: 0.06,
-          backgroundImage: "linear-gradient(#000 1px, transparent 1px)",
+          // backgroundImage: "linear-gradient(#000 1px, transparent 1px)",
           backgroundSize: "100% 32px",
           marginTop: "4px",
         }}
@@ -344,6 +398,7 @@ export default function WorkCultureSection() {
                 title={item.title}
                 description={item.description}
                 imgSrc={item.imgSrc}
+                sideImgSrc={item.sideImgSrc}
                 colorTheme={item.colorTheme}
                 rotate={pos.rotate}
                 position={pos}
