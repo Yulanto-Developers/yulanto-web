@@ -1,0 +1,132 @@
+/* Container & Background */
+.majorClientSection {
+  background-color: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+.mainTitle {
+  color: #275674;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+}
+
+.clientRow {
+  border-bottom: 1px solid rgba(39, 86, 116, 0.12);
+}
+
+.clientRow:last-child {
+  border-bottom: none;
+}
+
+/* Light Card with Glassmorphic Accent */
+.imageCard {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(39, 86, 116, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(39, 86, 116, 0.08);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(83, 174, 125, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.imageCard:hover {
+  transform: translateY(-5px);
+  border-color: #53ae7d;
+  box-shadow: 0 14px 30px rgba(83, 174, 125, 0.2);
+}
+
+/* Content & Badges */
+.clientContent {
+  padding: 1rem;
+}
+
+.tagTube {
+  background-color: rgba(39, 86, 116, 0.08);
+  border: 1px solid rgba(39, 86, 116, 0.25);
+  color: #275674;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.techBadge {
+  background-color: rgba(83, 174, 125, 0.12);
+  border: 1px solid rgba(83, 174, 125, 0.3);
+  color: #1e4d35;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Headings & Lists */
+.slideTitleSub {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #275674;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.infoListUl {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.infoListUl li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.infoListUl li::before {
+  content: "•";
+  color: #53ae7d;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+/* Gradient Button */
+.casestudyBtn {
+  background: linear-gradient(135deg, #275674 0%, #53ae7d 100%);
+  border: none;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(39, 86, 116, 0.25);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.casestudyBtn:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(83, 174, 125, 0.35);
+  color: #ffffff;
+}

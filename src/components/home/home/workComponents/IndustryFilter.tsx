@@ -70,27 +70,7 @@ export default function Industry() {
                             </h3>
                         </div>
 
-                        {/* 2. IMAGE & 3. DESCRIPTION */}
-                        <div>
-                            {activeCategoryObj?.industryImg && (
-                                <div className="banner-frame">
-                                    <img
-                                        src={activeCategoryObj.industryImg}
-                                        alt={`${activeCategoryObj.label} Showcase`}
-                                        className="banner-img"
-                                    />
-                                    <div className="banner-overlay" />
-                                </div>
-                            )}
 
-                            {activeCategoryObj?.industryDesc && (
-                                <div className="industry-description mt-20">
-                                    <p className="industry-desc-text">
-                                        {activeCategoryObj.industryDesc}
-                                    </p>
-                                </div>
-                            )}
-                        </div>
 
                         {/* 4. PROJECTS GRID */}
                         <div className="projects-grid mt-20">
@@ -146,6 +126,29 @@ export default function Industry() {
                                     </div>
                                     <h4>Projects Coming Soon</h4>
                                     <p>We are actively updating our portfolio with live projects in this sector.</p>
+                                </div>
+                            )}
+                        </div>
+
+
+                        {/* 2. IMAGE & 3. DESCRIPTION */}
+                        <div>
+                            {activeCategoryObj?.industryImg && (
+                                <div className="banner-frame">
+                                    <img
+                                        src={activeCategoryObj.industryImg}
+                                        alt={`${activeCategoryObj.label} Showcase`}
+                                        className="banner-img"
+                                    />
+                                    <div className="banner-overlay" />
+                                </div>
+                            )}
+
+                            {activeCategoryObj?.industryDesc && (
+                                <div className="industry-description mt-20">
+                                    <p className="industry-desc-text">
+                                        Explore the vast range of our skills demonstrated in our extensive collection, where every project serves as evidence of our commitment to outstanding design. From captivating websites that redefine the online experience to meticulously crafted logos that deeply connect with your target audience, our portfolio embodies the core of creativity and innovation.s
+                                    </p>
                                 </div>
                             )}
                         </div>
