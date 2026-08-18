@@ -4,103 +4,197 @@ export const portfolioProjects: PortfolioProjectDT[] = [
     //startup agency portfolio project data start
     {
         id: 1,
-        title: "Naturographer",
+        title: "Naturographers",
         year: 2026,
-        image: "/assets/img/sample/s4.webp",
+        image: "/assets/img/sample/Naturographers.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
-        categories: ["Php", "Mysql", "Bootstrap", "Javascript"],
+        categories: ["Wildlife Photography Website", "Safari Tour Website", "Travel Website Development", "Nature Photography", "Responsive Web Design"],
         client: "Envato",
         role: "Branding",
         duration: "8 March 2026",
         designer: "ThemePure",
-        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
+        highlights: [
+            "Modern website showcasing wildlife tours, safari expeditions, and photography workshops.",
+            "Interactive tour packages with online enquiry and booking features.",
+            "Stunning wildlife galleries with responsive, mobile-friendly user experience.",
+            "SEO-optimized website designed to increase visibility, engagement, and lead generation."
+        ],
+        description: 'Designed and developed a modern wildlife photography and travel website for Naturographers, showcasing wildlife tours, photography workshops, safari expeditions, and nature travel experiences. The website is optimized for search visibility, user engagement, and tour booking enquiries.'
     },
     {
         id: 2,
-        title: "Core",
+        title: "CORE Energy Systems Limited",
         year: 2026,
-        image: "/assets/img/sample/s4.webp",
+        image: "/assets/img/sample/core.jpg",
         // image: "/assets/img/project/project-2.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
-        categories: ["Website", "Services"],
+        categories: ["Web Design", "Corporate Website", "Engineering Website", "Responsive Design","UI/UX Design"],
         client: "Creative Market",
         role: "UI/UX Design",
         duration: "18 February 2026",
         designer: "ThemePure",
-        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
+        highlights: [
+            "Industry-focused design with clear service navigation.",
+            "Interactive case studies showcasing landmark engineering projects.",
+            "Dedicated Suppliers Connect portal for seamless collaboration.",
+            "ESG-focused content with modern, responsive user experience."
+        ],
+        description: 'Designed and developed a high-performance corporate website for CORE Energy Systems Limited, showcasing its expertise across nuclear, defence, EPC, O&M, and sustainable engineering sectors. The website combines structured navigation, engaging visuals, and technical content to deliver a professional digital experience that builds credibility and drives business enquiries.'
     },
     {
         id: 3,
-        title: "360 Abroad",
-        year: 2026,
-        image: "/assets/img/sample/s4.webp",
+        title: "Harithams Group of Companies",
+        year: 2025,
+        image: "/assets/img/sample/Harithams.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
-        categories: ["Website", "Services"],
+        categories: ["Real Estate Website Design", 'Corporate Website Development', 'Construction Company Website', 'Responsive Web Design', "UI/UX Design"],
+        highlights: [
+            "Unified website for Harithams Infra and Harithams Constructions.",
+            "Interactive portfolio of residential and infrastructure projects.",
+            "Trust-focused design with RERA and industry affiliations.",
+            "Responsive, SEO-friendly website with enquiry-driven features.",
+        ],
         client: "Behance",
         role: "Web Development",
         duration: "22 January 2026",
         designer: "ThemePure",
-        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
+        description: 'Designed and developed a professional corporate real estate website for Harithams Group of Companies, showcasing their expertise in real estate development, construction, and infrastructure across Chennai. The website is optimized for user experience, search visibility, and lead generation.'
     },
     {
         id: 4,
-        title: "Times One Hundred",
+        title: "Preserve Metals",
         year: 2026,
-        image: "/assets/img/sample/s4.webp",
+        image: "/assets/img/sample/Preserve-Metals.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
-        categories: ["Website", "Services"],
+        categories: ["Industrial Website Design", 'Metal Recycling Website', 'B2B Website Development', 'Scrap Metal Recycling', "Responsive Web Design"],
         client: "Dribbble",
         role: "Brand Identity",
         duration: "3 January 2026",
         designer: "ThemePure",
-        description: 'We are a comprehensive company that provides a wide range of website creation in Chennai. Yulanto web creations is a reputable web design company based in Chennai, Known for its professionalism, uniqueness and exceptional creativity since 2015.'
+        highlights: [
+            "Professional website for industrial scrap recycling and metal refining.",
+            "Dedicated RFQ system for qualified business enquiries.",
+            "Technical service pages with certifications and compliance details.",
+            "Responsive, SEO-friendly website with conversion-focused design."
+        ],
+        description: 'Designed and developed a professional industrial corporate website for Preserve Metals, showcasing expertise in scrap metal recycling, metal refining, and industrial processing. The website is optimized for user experience, search visibility, and B2B lead generation.'
+    },
+    {
+        id: 5,
+        title: "Raunaq Steels Pvt. Ltd.",
+        year: 2025,
+        image: "/assets/img/sample/Raunaq-Steels.jpg",
+        secImage: ['/assets/img/sample/s3.webp'],
+        categories: ["Steel Trading Website", 'Industrial Website Design', 'B2B Website Development', 'Steel Products Website', "Responsive Web Design"],
+        client: "Dribbble",
+        role: "Brand Identity",
+        duration: "3 January 2026",
+        designer: "ThemePure",
+        highlights: [
+            "Modern website showcasing steel products, industrial solutions, and processing services.",
+            "Structured product catalog with detailed specifications and technical information.",
+            "Responsive, SEO-optimized design focused on B2B enquiries and customer engagement.",
+            "Trust-focused interface highlighting quality standards, infrastructure, and company expertise."
+        ],
+        description: 'Designed and developed a modern steel trading and industrial website for Raunaq Steels Trading Pvt. Ltd., showcasing its extensive range of steel products, processing capabilities, and industry expertise. The website is optimized for search visibility, customer engagement, and B2B business enquiries.'
     },
     //startup agency portfolio project data end
     //design studio portfolio data start
     {
-        id: 5,
+        id: 6,
         title: "Our Success Mantra",
         image: "/assets/img/award/award/mantra.jpg",
         secImage: [],
-        categories: ["Web Design", "Web Development"],
+        // categories: ["Web Design", "Web Development"],
         year: 2026,
         client: "Dribbble",
         role: "Brand Identity",
+        description: "At Yulanto Web Creations, we are a trusted Web Design and Development Company in Chennai, committed to delivering innovative, user-focused, and business-driven digital solutions.",
         duration: "3 January 2026",
         designer: "ThemePure",
         portFolio: [
             {
                 icon: 'faPalette', // Fits "Unique designs"
-                text: "Tailored Unique designs are offered based on your business needs and requirements following extensive market analysis of your industry and competitors."
+                key: 'Custom Modern Website',
+                text: "We create unique, business-focused website design in Chennai after conducting in-depth research on your industry, competitors, and target audience. Our website Designers in Chennai are developed using the latest technologies, ensuring speed, security, and scalability."
             },
-            {
-                icon: 'faCode', // Fits "cutting-edge technologies / HTML5 & CSS3"
-                text: "Our websites design in Chennai are crafted utilizing cutting-edge technologies such as HTML5 and CSS3.0."
-            },
+
             {
                 icon: 'faShieldHalved', // Fits "safety advantages / SSL certificate"
-                text: "Our website design services in Chennai offer a range of safety advantages for your websites, such as an SSL certificate, bug-free operation, and regular updates."
+                key: "Secure & Reliable Websites",
+                text: "Every website includes SSL integration, clean coding standards, regular updates, and performance optimization for a safe browsing experience."
             },
             {
                 icon: 'faChartLine', // Fits "SEO expertise / dynamic SEO-optimized website"
-                text: "Our SEO expertise in Chennai lies in delivering a dynamic SEO-optimized website in Chennai that will set you apart from your rivals."
+                key: "SEO-Ready Development",
+                text: "As an experienced Web Design and Development Company in Chennai, we build SEO-friendly websites with optimized structure, fast loading speeds, and mobile responsiveness to improve your search engine rankings."
             },
             {
                 icon: 'faWrench', // Fits "Web maintenance and support services"
-                text: "At Yulanto, we also offer Web maintenance and support services in Chennai following the delivery of your website."
+                key: "Ongoing Website Maintenance",
+                text: "We provide continuous website maintenance, updates, backups, security monitoring, and technical support to keep your website running smoothly."
             },
             {
                 icon: 'faLaptopMobile', // Fits "responsive websites / various platforms and devices"
-                text: "The responsive websites in Chennai created can function seamlessly on various platforms and devices, enabling a broader reach to the audience."
+                key: "Results-Driven Approach",
+                text: "Our dedicated web designers and developers in Chennai create visually appealing, high-converting websites that strengthen your online presence, generate quality leads, and support long-term business growth."
             },
         ]
     },
     {
-        id: 6,
-        title: "FAQ?",
+        id: 7,
+        title: "Invest in Your Website",
         image: "/assets/img/award/award/faq.jpg",
+        secImage: ["/assets/img/sample/s2.jpg"],
+        year: 2026,
+        client: "Dribbble",
+        role: "Brand Identity",
+        // description:
+        //     "Your website is more than just an online presence—it's your most valuable digital asset and often the first impression customers have of your business. While a low-cost website may seem like a smart way to save money, it can end up costing more in lost opportunities, poor performance, and frequent redesigns.",
+        duration: "3 January 2026",
+        designer: "ThemePure",
+
+        portFolio: [
+            {
+                section: "Cheap Web Design",
+                points: [
+                    "Generic templates with little or no customization.",
+                    "Slow loading speed and poor performance.",
+                    "Limited SEO optimization, making it difficult to rank on Google.",
+                    "Weak security and limited technical support.",
+                    "Difficult to scale as your business grows.",
+                    "Lower conversion rates and reduced customer trust."
+                ]
+            },
+            {
+                section: "Quality Web Design",
+                points: [
+                    "Custom, professional design tailored to your brand.",
+                    "Fast, secure, and high-performance website.",
+                    "SEO-friendly structure to improve search engine visibility.",
+                    "Better user experience that increases engagement and conversions.",
+                    "Scalable solutions that grow with your business.",
+                    "Ongoing maintenance, support, and future enhancements."
+                ]
+            },
+            {
+                section: "Invest Once, Benefit for Years",
+                description:
+                    "A professionally designed website is an investment, not an expense. A quality website helps you build credibility, attract more visitors, generate qualified leads, and increase sales. Choosing a trusted Web Design and Development Company in Chennai ensures your website becomes a powerful business tool that delivers long-term value and a strong return on investment."
+            },
+            {
+                section: "Remember",
+                description:
+                    "A cheap website saves money today. A quality website earns money for years."
+            }
+        ]
+    },
+    {
+        id: 8,
+        title: "FAQ?",
+        image: "/assets/img/award/award/why-choose-us.jpg",
         secImage: ['/assets/img/sample/s2.jpg'],
-        categories: ["Web Design", "Web Development"],
+        // categories: ["Web Design", "Web Development"],
         year: 2026,
         client: "Dribbble",
         role: "Brand Identity",
@@ -108,26 +202,41 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         designer: "ThemePure",
         portFolio: [
             {
-                ques: "1. What makes having a top-notch online presence so essential for your business?",
-                ans1: "* The company's strong online visibility positions it to become a recognized brand and appeal to a wider audience. A well-designed website supports this growth. This enhances customer perception, credibility, and trust in your brand.",
-                ans2: '* Yulanto, a prominent web design and website development company based in Chennai, has played a crucial role in enhancing the online presence of numerous brands in diverse industries.'
+                ques: "1. Why should I invest in a professional website?",
+                ans1: "A professional website designers in Chennai builds brand credibility, increases online visibility, attracts more customers, and helps your business grow. At Yulanto, we create high-quality websites design that deliver real business results."
             },
             {
-                ques: "2. What other services are included with your website design offerings?",
-                ans1: "* We offer an extensive array of web services and solutions in  Chennai to our clients worldwide. In addition to website design and development in chennai, we offer website maintenance in Chennai, domain registration, web hosting, web app development in Chennai, e-commerce website development in Chennai, digital marketing in Chennai, SEO in Chennai, branding, graphic design in Chennai, and more. We've got you covered."
+                ques: "2. What services do you provide?",
+                ans1: "We offer website design and development, eCommerce websites, web applications, website maintenance, domain registration, web hosting, SEO, digital marketing, branding, and graphic design in Chennai."
             },
             {
-                ques: "3. What is the expected timeline for the completion of my web project?",
-                ans1: "* Our team ensures timely completion of web design in Chennai, Web development in Chennai, and ecommerce projects in Chennai based on the agreed-upon timelines. Any extra features needed may result in a slight delay, but we will discuss and agree upon additional timelines. Rest assured, we prioritize the quality of our project deliveries."
-            }
+                ques: "3. How long does it take to complete a website?",
+                ans1: "Most website design projects are completed within the agreed timeline. The duration depends on the project's size, features, and client feedback. Any additional requirements may extend the schedule."
+            },
+            {
+                ques: "4. How can I track my project?",
+                ans1: "Our dedicated web designers and developers in Chennai team provides regular updates, demo links, and review sessions throughout the development process, ensuring transparency until the website goes live."
+            },
+            {
+                ques: "5. How much does a website cost?",
+                ans1: "Website design and web development pricing in Chennai depends on your business requirements, features, design complexity, and functionality. Contact us for a customized website design and web development quote that fits your budget."
+            },
+            {
+                ques: "6. Why is responsive web design important?",
+                ans1: "A responsive website automatically adapts to desktops, tablets, and mobile devices, providing a seamless user experience while improving SEO and conversion rates."
+            },
+            {
+                ques: "7. How can my website rank on Google?",
+                ans1: "A website ranks better with SEO-friendly design, quality content, relevant keywords, fast loading speed, mobile responsiveness, and ongoing SEO optimization. We build websites optimized for search engines and long-term growth."
+            },
         ]
     },
     {
-        id: 7,
+        id: 9,
         title: "Why Choose Us",
         image: "/assets/img/award/award/why-choose-us.jpg",
         secImage: ['/assets/img/sample/s2.jpg'],
-        categories: ["Web Design", "Web Development"],
+        // categories: ["Web Design", "Web Development"],
         year: 2026,
         client: "Dribbble",
         role: "Brand Identity",

@@ -1,41 +1,62 @@
 import { services } from "@/data/site-data";
-
+import ShapeGrid from "./common/ShapeGrid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 const Service = () => {
 	return (
 		<div
-			className="px-service-area px-service-3-style pt-120 pb-50 z-index-1"
-			style={{ backgroundColor: "#000000" }}
+			className="px-service-area px-service-3-style pt-lg-120 pt-80 pb-50 z-index-1"
+			style={{ backgroundColor: "#fff" }}
 		>
+			{/* <div className="footer-shape-bg">
+				<ShapeGrid
+					shape="square"
+					direction="diagonal"
+					speed={0.25}
+					squareSize={28}
+					borderColor="rgba(255,255,255,0.15)"
+					hoverFillColor="rgba(255,255,255,0.15)"
+					hoverTrailAmount={0}
+				/>
+			</div> */}
 			<div className="container container-1750">
 				{/* Title */}
-				<div className="row">
-					<div className="col-xl-12">
-						<div
-							className="px-service-text text-center mb-50 px-fade-anim"
-							data-delay=".3"
-						>
-							<h2 className="px-about-3-bigtext text-white">
-								Our Development Process
-							</h2>
+				<div className="row mb-50">
+					<div className="col-xl-3">
+						<span className="px-section-subtitle text-black our-development pt-40 blink-ball">
+
+							Our Website Development Process
+						</span>
+					</div>
+
+					<div className="col-xl-9">
+						<div className="px-project-title-box">
+							<h3 className="px-section-title text-black text-tenor font-title-cls text-effect">
+								<span className="word">How  </span>
+								<span>We Work </span>
+							</h3>
+							{/* <p className="text-figtree">
+								From startups to established brands, we've delivered successful website solutions that help businesses grow. Explore our recent web design and development projects.
+							</p> */}
 						</div>
 					</div>
 				</div>
 
 				<div className="row align-items-start">
 					{/* Video */}
-					<div className="col-xl-3 d-none d-xl-block">
+					{/* <div className="col-xl-3 d-none d-xl-block">
 						<div className="px-service-3-video">
 							<video width={350} loop muted autoPlay playsInline>
 								<source
-									src="https://html.aqlova.com/videos/pixora/service-video.mp4"
+									src="/assets/img/video/v-1.mp4"
 									type="video/mp4"
 								/>
 							</video>
 						</div>
-					</div>
+					</div> */}
 
 					{/* Accordion */}
-					<div className="col-xl-9">
+					<div className="col-xl-12">
 						<div className="px-service-accordion-wrap">
 							<div className="accordion" id="accordionExample1">
 								{services.map((service, index) => {
@@ -47,9 +68,8 @@ const Service = () => {
 										<div key={service.id} className="accordion-items">
 											<h2 className="accordion-header" id={headingId}>
 												<button
-													className={`accordion-buttons ${
-														!isFirst ? "collapsed" : ""
-													}`}
+													className={`accordion-buttons ${!isFirst ? "collapsed" : ""
+														}`}
 													type="button"
 													data-bs-toggle="collapse"
 													data-bs-target={`#${collapseId}`}
@@ -68,9 +88,8 @@ const Service = () => {
 
 											<div
 												id={collapseId}
-												className={`accordion-collapse collapse ${
-													isFirst ? "show" : ""
-												}`}
+												className={`accordion-collapse collapse pt-10 pt-lg-0 ${isFirst ? "show" : ""
+													}`}
 												data-bs-parent="#accordionExample1"
 											>
 												<div className="accordion-body">
@@ -79,20 +98,28 @@ const Service = () => {
 														<div key={i} className="mb-4">
 
 															{typeof item === "string" ? (
-																<p>{item}</p>
+																<p >{item}</p>
 															) : (
 																<>
-																	<h5
-																		style={{
-																			color: "#fff",
-																			marginBottom: "10px",
-																			fontWeight: 600,
-																		}}
-																	>
-																		{item.desTitle}
-																	</h5>
+																	<div className="d-flex align-items-baseline gap-2">
 
-																	<p>
+
+																		<FontAwesomeIcon
+																			icon={faAnglesRight}
+																			className="text-black"
+																		/>
+																		<h5
+																			style={{
+																				color: "#000000",
+																				marginBottom: "10px",
+																				fontWeight: 600,
+																			}}
+																			className="text-tenor"
+																		>
+																			{item.desTitle}
+																		</h5>
+																	</div>
+																	<p className="text-figtree">
 																		{item.descPara}
 																	</p>
 																</>

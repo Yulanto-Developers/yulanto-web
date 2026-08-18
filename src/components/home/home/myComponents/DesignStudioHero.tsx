@@ -384,72 +384,94 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { text_slider_params } from "@/constant";
 import { SLIDER_TEXTS } from "@/data/site-data";
 import { StarIcon } from "@/svg/StarIcons";
+import { useQuoteModal } from "./Content/QuoteContext";
+import BgPattern from '@/assets/img/banner/bgPattern.png'
+
 
 const heroContent = [
     {
-        col: "col-lg-2 he-10", img: "/assets/img/banner/Image-1.jpg",
+        // 0
+        col: "col-lg-2 he-10", img: "/assets/img/banner/hero-img-1.webp",
         title: "We start by listening closely to your goals, ensuring you feel understood from day one.",
         subtitle: "Leading Web Design Company in Chennai for Business Growth.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Make an inquiry"
+        head: "Make an Enquiry"
     },
     {
+        //1
         col: "col-lg-4", img: "/assets/img/banner/bd.jpg",
         title: "We start by listening closely to your goals, ensuring you feel understood from the very beginning.", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pl-80", alignCls: "justify-content-start",
         head: "Boost"
     },
     {
-        col: "col-lg-4", img: "/assets/img/banner/bd.jpg",
+        // 2
+        col: "col-lg-4", img: "/assets/img/banner/banner-1.jpg",
         title: " ", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Design"
     },
     {
-        col: "col-lg-2 he-10", img: "/assets/img/banner/Image-2.jpg",
+        //3
+        col: "col-lg-2 he-10", img: "/assets/img/banner/hero-img-6.webp",
         title: "Every detail is noted and aligned with your vision, so nothing important is ever missed.", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.",
         spacingCls: "pl-10", alignCls: "justify-content-end",
+        head: "Increase Sales"
+    },
+    {
+        //4
+        col: "col-lg-3", img: "/assets/img/banner/hero-img-2.webp",
+        title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.",
+        spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Gather Requirements"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/Image-3.jpg",
-        title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.",
-        spacingCls: "pr-10", alignCls: "justify-content-end",
-        head: "Write the code"
+        //5
+        col: "col-lg-3", img: "/assets/img/banner/hero-img-3.webp",
+        title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.",
+        spacingCls: "pl-10", alignCls: "justify-content-start",
+        head: " Write the code"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/Image-4.jpg",
-        title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.",
+        //6
+        col: "col-lg-3", img: "/assets/img/banner/hero-img-4.webp",
+        title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Custom Website creations company for Growing Businesses in Chennai",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Design the website"
     },
     {
-        col: "col-lg-3", img: "/assets/img/banner/Image-5.jpg",
-        title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Custom Website creations company for Growing Businesses in Chennai",
-        spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Increase Sales"
-    },
-    {
-        col: "col-lg-3", img: "/assets/img/banner/Image-6.jpg",
+        //7
+        col: "col-lg-3", img: "/assets/img/banner/hero-img-5.webp",
         title: "Our commitment is to a long-term partnership that supports your business growth.", subtitle: "Elevate Your Business with Chennai's Best Web Design Company",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Continuous Success"
     },
 ];
 
-const ACTIVE_ITEMS = [0, 3, 4, 5, 6, 7];
+const ACTIVE_ITEMS = [0,
+    4,
+    5,
+    6,
+    7,
+    3,];
 
 const Hero = () => {
     const [current, setCurrent] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
+    const [showQuoteModal, setShowQuoteModal] = useState(false);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
     const activeIndex = ACTIVE_ITEMS[current];
+
+    // function getQuotes() {
+    //     setShowModal(true);
+    // }
+    const { openModal } = useQuoteModal();
 
     useEffect(() => {
         if (!isHovered) {
             intervalRef.current = setInterval(() => {
                 setCurrent((prev) => (prev + 1) % ACTIVE_ITEMS.length);
-            }, 3000);
+            }, 6000);
         }
 
         return () => {
@@ -459,10 +481,15 @@ const Hero = () => {
         };
     }, [isHovered]);
 
+    function getQuotes() {
+        alert('Quotes Request')
+
+    }
+
     return (
-        <div className="px-hero-2-area pt-120 pb-20">
+        <div className="px-hero-2-area pt-120 bg-white" style={{ backgroundImage: `url(${BgPattern.src})`, backgroundPosition: 'fixed', backgroundRepeat: 'repeat', objectFit: 'cover' }}>
             <div className="px-hero-2-main d-none d-xl-block p-relative">
-                <div className="container container-1630">
+                <div className="container">
                     <div className="row">
                         {heroContent.map((item, index) => {
                             const shouldHideImage = index === 1 || index === 2;
@@ -499,31 +526,38 @@ const Hero = () => {
                                                         <Image
                                                             src={item.img}
                                                             alt={item.title}
-                                                            width={130}
-                                                            height={168}
+                                                            width={0}
+                                                            height={0}
+                                                            unoptimized
+                                                            // style={{
+                                                            //     transition:
+                                                            //         "0.3s",
+                                                            //     filter: isActive
+                                                            //         ? "grayscale(100%) brightness(50%)"
+                                                            //         : "none",
+                                                            //     width: 'auto', height: 'auto'
+                                                            // }}
+
                                                             style={{
-                                                                transition:
-                                                                    "0.3s",
-                                                                filter: isActive
-                                                                    ? "grayscale(100%) brightness(50%)"
-                                                                    : "none",
+                                                                transition: "0.3s",
+                                                                width: "auto",
+                                                                height: "auto"
                                                             }}
+
                                                         />
                                                     </Link>
 
                                                     {isActive && (
                                                         <div
                                                             style={{
-                                                                position:
-                                                                    "absolute",
+                                                                position: "absolute",
                                                                 inset: 0,
+                                                                backgroundColor: "#053456",
+                                                                opacity: 0.7,
                                                                 display: "flex",
-                                                                justifyContent:
-                                                                    "center",
-                                                                alignItems:
-                                                                    "center",
-                                                                pointerEvents:
-                                                                    "none",
+                                                                justifyContent: "center",
+                                                                alignItems: "center",
+                                                                pointerEvents: "none",
                                                                 padding: "4px",
                                                             }}
                                                         >
@@ -545,6 +579,7 @@ const Hero = () => {
                                                                         "var(--font-tenor)",
                                                                     textShadow:
                                                                         "1px 1px 4px rgba(0,0,0,.8)",
+                                                                    zIndex: 9999
                                                                 }}
                                                             >
                                                                 {item.head}
@@ -580,13 +615,20 @@ const Hero = () => {
                         })}
 
                         <div className="text-center btn-partent">
-                            <Link href="/" className="button-style">
-                                Get a Free Quote
-                            </Link>
+                            <button
+                                onClick={openModal}
+                                className="button-style relative-cls-header"
+                            >
+                                <span className="text-tenor">
+                                    Get a Free Quote
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+
+
 
             <div className="px-hero-2-slider d-xl-none">
                 <div className="container">
@@ -617,6 +659,9 @@ const Hero = () => {
                     </Swiper>
                 </div>
             </div>
+
+
+
         </div>
     );
 };

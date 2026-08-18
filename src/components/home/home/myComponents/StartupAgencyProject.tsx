@@ -11,10 +11,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const StartupAgencyProject = () => {
-    const displayProjectData = portfolioProjects.slice(0, 4);
+    const displayProjectData = portfolioProjects.slice(0, 5);
 
     return (
-        <section className="px-project-area pt-50 pb-130">
+        <section className="px-project-area pt-50 pb-30 pb-lg-130">
             <div className="container container-1550">
 
                 {/* TITLE */}
@@ -23,22 +23,19 @@ const StartupAgencyProject = () => {
 
                         <div className="col-xl-3">
                             <span className="px-section-subtitle pt-40 blink-ball text-tenor">
-                                Case Study
+                                Client Success Stories
                             </span>
                         </div>
 
                         <div className="col-xl-9">
                             <div className="px-project-title-box">
                                 <h3 className="px-section-title mb-25 text-effect">
-                                    <span>Recent </span>
-                                    <span>Case</span>
+                                    <span className="word">Recent </span>
+                                    <span>Case Studies </span>
                                 </h3>
 
                                 <p className="text-figtree font-paragraph-cls text-black">
-                                    We've helped businesses across industries achieve
-                                    their goals.
-                                    <br />
-                                    Here are some of our recent projects.
+                                    We partner with businesses across industries to deliver impactful digital solutions and measurable results. Discover our recent success stories.
                                 </p>
                             </div>
                         </div>
@@ -64,7 +61,7 @@ const StartupAgencyProject = () => {
                         slidesPerView={2}
                         loop={true}
                         autoplay={{
-                            delay: 30000,
+                            delay: 3000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: true,
                         }}

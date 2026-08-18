@@ -6,8 +6,13 @@
 
 .px-about {
     &-area {
-        @media #{$lg,$md,$xs} {
+        @media #{$lg} {
             padding-top: 80px;
+            padding-bottom: 0;
+        }
+
+        @media #{$md}, #{$xs} {
+            padding-top: 20px;
             padding-bottom: 0;
         }
     }
@@ -15,7 +20,7 @@
     &-title {
         font-weight: 600;
         font-size: 38px;
-        line-height: 1.1;
+        line-height: 1.5;
         color: #000000;
         letter-spacing: -0.05em;
         font-family: var(--font-tenor);
@@ -23,27 +28,27 @@
         @media #{$xl} {
             font-size: 38px;
 
-            & br {
-                display: none;
-            }
+            // & br {
+            //     display: none;
+            // }
         }
 
         @media #{$md} {
-            font-size: 45px;
+            font-size: 28px;
             margin-bottom: 20px;
 
-            & br {
-                display: none;
-            }
+            // & br {
+            //     display: none;
+            // }
         }
 
         @media #{$xs} {
-            font-size: 35px;
+            font-size: 28px;
             margin-bottom: 20px;
 
-            & br {
-                display: none;
-            }
+            // & br {
+            //     display: none;
+            // }
         }
 
         // & span {
@@ -102,7 +107,7 @@
 
             & em {
                 font-weight: 600;
-                font-size: 17px;
+                font-size: 32px;
                 line-height: 1;
                 color: #69B481;
                 font-style: normal;
@@ -111,8 +116,8 @@
 
         &-body {
             border-radius: 16px;
-            padding: 25px 30px;
-            min-height: 210px;
+            padding: 25px 20px;
+            min-height: 180px;
             background: var(--tp-common-px-white);
 
             & h4 {
@@ -129,7 +134,7 @@
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 1.5;
-                color: #6d6868;
+                color: #000000;
                 margin-bottom: 0;
                 letter-spacing: -0.04em;
                 font-family: var(--font-figtree) !important;
@@ -414,7 +419,7 @@
             }
 
             @media #{$xs} {
-                padding-bottom: 80px;
+                padding-bottom: 30px;
             }
         }
     }
@@ -445,44 +450,44 @@
         }
 
         &-bigtext {
-            font-size: 410px;
+            font-size: 38px;
             font-weight: 600;
             line-height: 1;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--tp-common-px-black);
-            font-family: var(--tp-ff-thunder);
+            font-family: var(--font-tenor);
 
             @media #{$x4l} {
-                font-size: 350px;
+                font-size: 38px;
             }
 
             @media #{$x3l} {
-                font-size: 350px;
+                font-size: 38px;
             }
 
             @media #{$xxl} {
-                font-size: 200px;
+                font-size: 38px;
             }
 
             @media #{$xl} {
-                font-size: 132px;
+                font-size: 38px;
             }
 
             @media #{$lg} {
-                font-size: 212px;
+                font-size: 38px;
             }
 
             @media #{$md} {
-                font-size: 155px;
+                font-size: 38px;
             }
 
             @media #{$xs} {
-                font-size: 80px;
+                font-size: 30px;
             }
 
             @media #{$sm} {
-                font-size: 115px;
+                font-size: 38px;
             }
         }
 
@@ -1132,6 +1137,10 @@
 
     /* Attach the blink animation */
     animation: ball-blink 1.2s ease-in-out infinite;
+}
+
+.our-development.blink-ball::before {
+    background-color: #053456 !important;
 }
 
 /* The Blink Animation (Smooth Pulse) */

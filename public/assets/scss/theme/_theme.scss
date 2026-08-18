@@ -96,7 +96,7 @@
 	}
 
 	.container-1830 {
-		max-width: 1830px,
+		max-width: 1830px;
 	}
 
 	.container-1800 {
@@ -120,47 +120,59 @@
 	}
 
 	.container-1580 {
-		max-width: 1580px,
+		max-width: 1580px;
 	}
 
 	.container-1550 {
-		max-width: 1550px,
+		max-width: 1550px;
 	}
 
 	.container-1460 {
-		max-width: 1460px,
+		max-width: 1460px;
 	}
 
 	.container-1430 {
-		max-width: 1430px,
+		max-width: 1430px;
 	}
 
 	.container-1350 {
-		max-width: 1350px,
+		max-width: 1350px;
 	}
 
 	.container-1330 {
-		max-width: 1330px,
+		max-width: 1330px;
 	}
 
 	.container-1320 {
-		max-width: 1320px,
+		max-width: 1320px;
 	}
 
 	.container-1300 {
-		max-width: 1300px,
+		max-width: 1300px;
 	}
 
 	.container-1230 {
-		max-width: 1230px,
+		max-width: 1230px;
 	}
 
 	.container-1200 {
-		max-width: 1200px,
+		max-width: 1200px;
 	}
 
 	.container-1030 {
-		max-width: 1030px,
+		max-width: 1030px;
+	}
+}
+
+@media (max-width:1200px) and (min-width:900px) {
+
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+		max-width: 90% !important;
 	}
 }
 

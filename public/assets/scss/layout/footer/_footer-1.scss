@@ -11,39 +11,39 @@
         }
 
         @media #{$xs} {
-            padding-top: 80px;
+            padding-top: 40px;
 
         }
     }
 
     &-col {
-        &-2 {
-            padding-left: 150px;
-            padding-right: 50px;
+        // &-2 {
+        //     padding-left: 150px;
+        //     padding-right: 50px;
 
-            @media #{$xxl} {
-                padding-left: 130px;
-            }
+        //     @media #{$xxl} {
+        //         padding-left: 130px;
+        //     }
 
-            @media #{$xl} {
-                padding-left: 55px;
-            }
+        //     @media #{$xl} {
+        //         // padding-left: 55px;
+        //     }
 
-            @media #{$lg} {
-                padding-left: 40px;
-                padding-right: 0;
-            }
+        //     @media #{$lg} {
+        //         padding-left: 40px;
+        //         padding-right: 0;
+        //     }
 
-            @media #{$md} {
-                padding-left: 0;
-                padding-right: 0;
-            }
+        //     @media #{$md} {
+        //         padding-left: 0;
+        //         padding-right: 0;
+        //     }
 
-            @media #{$xs} {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
+        //     @media #{$xs} {
+        //         padding-left: 0;
+        //         padding-right: 0;
+        //     }
+        // }
 
         &-3 {
             padding-left: 20px;
@@ -60,23 +60,24 @@
 
     &-widget {
         &-title {
-            font-weight: 700;
-            font-size: 80px;
-            line-height: 1;
-            margin-bottom: 30px;
+            font-weight: 100;
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 10px;
             letter-spacing: -0.06em;
             color: var(--tp-common-px-white);
+            font-family: var(--font-tenor);
 
             @media #{$xxl} {
-                font-size: 75px;
+                font-size: 25px;
             }
 
             @media #{$xl} {
-                font-size: 50px;
+                font-size: 20px;
             }
 
             @media #{$md} {
-                font-size: 65px;
+                font-size: 24px;
 
                 & br {
                     display: none;
@@ -84,15 +85,16 @@
             }
 
             @media #{$lg,$xs} {
-                font-size: 50px;
+                font-size: 24px;
             }
 
             &-sm {
                 font-weight: 600;
-                font-size: 18px;
+                font-size: 24px;
                 line-height: 1;
                 letter-spacing: -0.02em;
                 color: var(--tp-common-px-white);
+                font-family: var(--font-tenor);
 
                 &.pre {
                     &::before {
@@ -140,24 +142,62 @@
             & ul {
                 & li {
                     list-style-type: none;
-                    display: inline-block;
+                    display: flex;
+                    flex-direction: column;
+                    // display: inline-block;
+                    margin-left: 10px;
+
+
 
                     & a {
                         font-weight: 500;
-                        font-size: 14px;
+                        font-size: 20px;
                         line-height: 1;
                         border-radius: 20px;
-                        padding: 13px 20px;
+                        padding: 10px 20px 10px 5px;
                         display: inline-block;
+                        width: fit-content;
                         margin-bottom: 8px;
+
                         letter-spacing: -0.02em;
-                        text-transform: uppercase;
+                        text-transform: capitalize;
                         color: var(--tp-common-px-white);
-                        background-color: rgba($color: #fff, $alpha: 0.1);
+                        font-family: var(--font-figtree);
+                        position: relative;
+                        // display: inline-block;
+                        transition: color 0.3s ease;
+                        -webkit-transition: color 0.3s ease;
+                        -moz-transition: color 0.3s ease;
+                        -ms-transition: color 0.3s ease;
+                        -o-transition: color 0.3s ease;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 5px;
+                            bottom: 4px;
+                            width: calc(100% - 17%);
+                            height: 1px;
+                            background-color: var(--tp-common-px-white);
+                            transform: scaleX(0);
+                            transform-origin: left;
+                            transition: transform 0.35s ease;
+                        }
 
                         &:hover {
                             color: var(--tp-common-px-white);
-                            background-color: #53AE7D;
+
+                            & span {
+                                transform: translateX(5px);
+                                -webkit-transform: translateX(5px);
+                                -moz-transform: translateX(5px);
+                                -ms-transform: translateX(5px);
+                                -o-transform: translateX(5px);
+                            }
+
+                            &::after {
+                                transform: scaleX(1);
+                            }
                         }
                     }
                 }
@@ -168,12 +208,14 @@
             margin-bottom: 15px;
 
             & a {
-                display: block;
+                // display: block;
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 1.5;
                 letter-spacing: -0.02em;
                 color: var(--tp-common-px-white);
+                margin-left: 15px;
+                // font-family: var(--font-figtree);
 
                 &:hover {
                     // color: #53AE7D;
@@ -190,31 +232,32 @@
 
 .px-copyright {
     &-big-text {
-        font-size: 120px;
+        font-size: 110px;
         font-weight: 700;
         line-height: 1;
         letter-spacing: -0.06em;
         transform: translateX(-10px);
-        color: #53AE7D;
+        color: #ffffff;
+        font-family: var(--font-tenor);
 
         @media #{$xxl} {
             font-size: 120px;
         }
 
         @media #{$xl} {
-            font-size: 120px;
+            font-size: 110px;
             letter-spacing: -10px;
             margin-bottom: 0;
         }
 
         @media #{$lg} {
-            font-size: 120px;
+            font-size: 100px;
             letter-spacing: -7px;
             margin-bottom: 0;
         }
 
         @media #{$md} {
-            font-size: 116px;
+            font-size: 60px;
             letter-spacing: -7px;
             margin-bottom: 0;
         }
@@ -226,7 +269,7 @@
         }
 
         @media #{$sm} {
-            font-size: 80px;
+            font-size: 50px;
         }
     }
 
@@ -333,7 +376,7 @@
             font-weight: 500;
             font-size: 24px;
             line-height: 1.25;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             letter-spacing: -0.02em;
             color: var(--tp-common-px-black);
 
@@ -342,6 +385,7 @@
                 font-size: 16px;
                 line-height: 1;
                 margin-bottom: 20px;
+                font-family: var(--font-tenor);
                 letter-spacing: -0.02em;
                 color: rgba(10, 10, 10, 0.50);
             }
@@ -792,7 +836,7 @@
                 list-style-type: none;
 
                 & a {
-                    font-size: 15px;
+                    font-size: 20px;
                     font-weight: 600;
                     line-height: 1;
                     margin-right: 36px;
@@ -802,12 +846,12 @@
                     color: var(--tp-common-px-white);
 
                     @media #{$xl} {
-                        font-size: 14px;
+                        font-size: 20px;
                         margin-right: 25px;
                     }
 
                     @media #{$xs} {
-                        font-size: 13px;
+                        font-size: 18px;
                         margin-right: 12px;
                         margin-bottom: 15px;
                     }
@@ -919,36 +963,83 @@
 
 
 .footer-social-circle {
-  display: flex;
-  gap: 14px;
-
-  &__item {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #2d2d2d;
-
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 14px;
 
+    &__item {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #2d2d2d;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #fff;
+        text-decoration: none;
+
+        transition: background 0.35s ease, transform 0.35s ease;
+
+        svg {
+            font-size: 22px;
+        }
+
+        &:hover {
+            background: #53AE7D;
+            color: #fff;
+            transform: scale(1.08);
+        }
+    }
+}
+
+.text-blue-pr {
+    color: #053456;
+    font-family: var(--font-figtree);
+}
+
+.map-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .18);
     color: #fff;
     text-decoration: none;
+    overflow: hidden;
+    transition: .4s;
+    text-align: center;
+    backdrop-filter: blur(10px);
 
-    transition: background 0.35s ease, transform 0.35s ease;
+    i,
+    span {
+        position: relative;
+        z-index: 2;
+    }
 
-    svg {
-      font-size: 22px;
+    &::before {
+        content: "";
+        position: absolute;
+        left: -120%;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        background: linear-gradient(120deg,
+                transparent,
+                rgba(255, 255, 255, .35),
+                transparent);
+        transform: skewX(-25deg);
+        transition: .7s;
+    }
+
+    &:hover::before {
+        left: 150%;
     }
 
     &:hover {
-      background: #53AE7D;
-      color: #fff;
-      transform: scale(1.08);
+        box-shadow: 0 15px 40px rgba(255, 255, 255, .15);
     }
-  }
-}
-
-.text-blue-pr{
-    color:#053456;
 }

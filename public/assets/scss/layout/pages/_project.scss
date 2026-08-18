@@ -6,7 +6,7 @@
 
 .px-project {
     &-area {
-        @media #{$lg,$md,$xs} {
+        @media #{$lg,$md} {
             padding-bottom: 80px;
         }
     }
@@ -100,6 +100,17 @@
             height: 100%;
             border-radius: 20px;
             background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, rgba(20, 20, 20, 0.4) 100%);
+
+            @media #{$xs} {
+                /* Use shorthand and modern syntax for border-radius; remove vendor prefixes */
+                border-radius: 12px 12px 0 0;
+            }
+
+        }
+
+        @media #{$xs} {
+            /* Use shorthand and modern syntax for border-radius; remove vendor prefixes */
+            border-radius: 12px 12px 0 0;
         }
     }
 
@@ -163,28 +174,28 @@
     }
 
     &-title {
-        font-size: 180px;
+        font-size: 100px;
         font-weight: 600;
         line-height: 1;
         margin-bottom: 0;
         display: inline-block;
-        font-family: var(--tp-ff-thunder);
+        font-family: var(--font-tenor);
         color: var(--tp-common-px-white);
 
         @media #{$xl} {
-            font-size: 125px;
+            font-size: 80px;
         }
 
         @media #{$lg} {
-            font-size: 110px;
+            font-size: 80px;
         }
 
         @media #{$md} {
-            font-size: 90px;
+            font-size: 60px;
         }
 
         @media #{$xs} {
-            font-size: 60px;
+            font-size: 40px;
         }
     }
 
@@ -486,7 +497,7 @@
         }
 
         @media #{$xs} {
-            padding-top: 80px;
+            // padding-top: 80px;
             padding-bottom: 0px;
         }
     }
@@ -506,7 +517,7 @@
         & img {
             height: 100%;
             width: 100%;
-            object-fit: cover;
+            object-fit: fill;
         }
     }
 }
@@ -1792,11 +1803,15 @@
     transform: translateY(-20px);
     transition: all .35s ease;
     position: absolute;
-    top: 100px;
+    top: 40px;
     left: 0;
     width: 100%;
     z-index: 10;
-    text-align: center;
+    //text-align: center;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -ms-transition: all .35s ease;
+    -o-transition: all .35s ease;
 }
 
 /* Bottom title */
@@ -1804,7 +1819,7 @@
     opacity: 1;
     visibility: visible;
     transition: all .35s ease;
-  
+
 }
 
 /* On card hover */

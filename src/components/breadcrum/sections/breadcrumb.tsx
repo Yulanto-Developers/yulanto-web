@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { StaticImageData } from "next/image";
 
+
 interface BreadcrumbBannerProps {
   title: string;
   currentPage: string;

@@ -7,6 +7,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
+import { OurPartner } from '@/components/home/home/myComponents'
 
 // Counter Animation Component
 const AnimatedCounter = ({ value }: { value: number }) => {
@@ -44,6 +45,7 @@ interface StatCardProps {
     countLabel: string;
     borderColor: string;
     hoverBgColor: string;
+    className?: string;
 }
 
 const StatCard: React.FC<StatCardProps> = ({
@@ -53,11 +55,12 @@ const StatCard: React.FC<StatCardProps> = ({
     targetNumber,
     countLabel,
     borderColor,
-    hoverBgColor
+    hoverBgColor,
+    className
 }) => {
     return (
         <motion.div
-            className="card mb-3 border-0 p-3 w-100"
+            className={`card mb-3 border-0 p-3 w-100 ${className ?? ""} ms-lg-auto`}
             whileHover={{
                 y: -6,
                 scale: 1.02,
@@ -70,19 +73,19 @@ const StatCard: React.FC<StatCardProps> = ({
                 borderRadius: '0px 30px 0px 30px',
                 backgroundColor: '#ffffff',
                 maxWidth: '320px',
-                marginLeft: 'auto',
+                marginLeft: 0,
                 boxShadow: "0 4px 12px rgba(0,0,0,0.03)",
                 cursor: "pointer"
             }}
         >
             <div className="d-flex align-items-center justify-content-between px-2">
                 <div className="text-start">
-                    <h5 className="fw-bold mb-1" style={{ color: '#2b2d42', fontSize: '1.25rem' }}>
+                    <h5 className="fw-bold mb-1 text-tenor" style={{ color: '#2b2d42', fontSize: '1.25rem' }}>
                         {titleBeforeNumber}
                         <AnimatedCounter value={targetNumber} />
                         {titleAfterNumber}
                     </h5>
-                    <span className="text-muted fw-semibold" style={{ fontSize: '0.95rem' }}>
+                    <span className="text-muted text-figtree fw-semibold" style={{ fontSize: '0.95rem' }}>
                         {countLabel}
                     </span>
                 </div>
@@ -96,20 +99,20 @@ const StatCard: React.FC<StatCardProps> = ({
 
 const Testimonial = () => {
     return (
-        <section className="px-testimonial-area pt-120 pb-5" style={{ backgroundColor: '#F5F5F5', overflow: 'hidden' }}>
+        <section className="px-testimonial-area pt-lg-120   pb-lg-100 pb-80" style={{ backgroundColor: '#F5F5F5', overflow: 'hidden' }}>
             <div className="container">
 
                 {/* Top Animated Header Row */}
                 <div className="row align-items-baseline mb-5">
                     <div className="col-xl-3 col-md-4">
                         <motion.div
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, x: -10 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: false, amount: 0.3 }}
+                            viewport={{ once: false, amount: 0.1 }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
                         >
-                            <span className="px-section-subtitle pt-40 blink-ball fw-bold text-uppercase text-muted" style={{ fontSize: '0.9rem', letterSpacing: '1px' }}>
-                                Testimonial
+                            <span className="px-section-subtitle pt-40 blink-ball text-tenor   text-muted" style={{ fontSize: '0.9rem', letterSpacing: '1px' }}>
+                                Trusted by Our Clients
                             </span>
                         </motion.div>
                     </div>
@@ -122,16 +125,13 @@ const Testimonial = () => {
                             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
                         >
                             <div className="px-project-title-box">
-                                <h3 className="px-section-title mb-25 text-effect" style={{ fontSize: '90px' }}>
-                                    <span>Our Client </span>
-                                    <span>Words</span>
+                                <h3 className="px-section-title mb-25 text-effect" style={{ fontSize: 'clamp(48px, 5vw, 80px)' }}>
+                                    <span className="word">Client </span>
+                                    <span>Testimonials</span>
                                 </h3>
 
-                                <p className="ms-4">
-                                    We've helped businesses across industries achieve
-                                    their goals.
-                                    <br />
-                                    Here are some of our recent projects.
+                                <p className="ms-lg-4 font-paragraph-cls">
+                                    We've worked with clients globally across various industries and helped them achieve their business goals. Here are some of our recent success stories.
                                 </p>
                             </div>
                         </motion.div>
@@ -139,15 +139,16 @@ const Testimonial = () => {
                 </div>
 
                 {/* Main Content Row */}
-                <div className="row align-items-center pt-50">
+                <div className="row align-items-center pt-lg-50">
 
                     {/* Left Column: Stat Cards & Review Images */}
-                    <div className="col-xl-4 order-2 order-xl-1 mt-5 mt-xl-0">
-                        <div className="d-flex flex-column align-items-center align-items-xl-end">
+                    <div className="col-xl-4  mt-5 mt-xl-0">
+                        <div className="d-flex flex-column align-items-center align-items-lg-end">
 
                             {/* Card 1: Trusted By */}
                             <StatCard
-                                borderColor="#198754"
+                                className="text-tenor"
+                                borderColor="#53AE7D"
                                 hoverBgColor="#e8f5e9"
                                 titleBeforeNumber="Trusted by "
                                 targetNumber={450}
@@ -162,7 +163,8 @@ const Testimonial = () => {
 
                             {/* Card 2: Active Clients */}
                             <StatCard
-                                borderColor="#0dcaf0"
+                                className="text-tenor"
+                                borderColor="#053456"
                                 hoverBgColor="#e0f7fa"
                                 targetNumber={350}
                                 titleAfterNumber=" +"
@@ -176,7 +178,8 @@ const Testimonial = () => {
 
                             {/* Card 3: Global Clients */}
                             <StatCard
-                                borderColor="#198754"
+                                className="text-tenor"
+                                borderColor="#53AE7D"
                                 hoverBgColor="#e8f5e9"
                                 targetNumber={50}
                                 titleAfterNumber=" +"
@@ -190,22 +193,13 @@ const Testimonial = () => {
 
                             {/* Ratings Section with 2 Small Images */}
                             <div className="d-flex gap-5 " style={{ maxWidth: '100%' }}>
-                                <div className="text-center">
-                                    <Image
-                                        src="/assets/img/award/testi/google-review-1.png"
+                                <div className="text-end">
+                                    <img
+                                        src="/assets/img/brand/review.png"
                                         alt="Google Rating"
-                                        width={100}
-                                        height={80}
+
                                         className="img-fluid object-contain"
-                                    />
-                                </div>
-                                <div className="text-center">
-                                    <Image
-                                        src="/assets/img/award/testi/facebook-review.png"
-                                        alt="Facebook Rating"
-                                        width={100}
-                                        height={80}
-                                        className="img-fluid object-contain"
+                                        style={{ width: '80%' }}
                                     />
                                 </div>
                             </div>
@@ -214,8 +208,8 @@ const Testimonial = () => {
                     </div>
 
                     {/* Right Column: Testimonial Content (Occupies 8 columns) */}
-                    <div className="col-xl-8 order-1 order-xl-2">
-                        <div className="px-testimonial-slider ">
+                    <div className="col-xl-8 pb-5">
+                        <div className="px-testimonial-slider pb-10">
                             <div className="px-testimonial-active">
                                 <Swiper
                                     modules={[Autoplay, Pagination]}
@@ -229,6 +223,7 @@ const Testimonial = () => {
                                 </Swiper>
                             </div>
                         </div>
+                        <OurPartner />
                     </div>
 
                 </div>

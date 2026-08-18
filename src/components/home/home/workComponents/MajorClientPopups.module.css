@@ -1,0 +1,52 @@
+/* Custom overlay / styling tweaks on top of Bootstrap */
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  z-index: 1055;
+  cursor: pointer;
+}
+
+.resultSec {
+  color: #fff;
+  padding: 2rem;
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
+.resultBox {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.resultBox img {
+  margin: 10px 0;
+}
+
+.caseStudySec {
+  padding: 2rem;
+}
+
+.caseObjList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.caseObjList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 0.75rem;
+}
+
+.caseSiteLink {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}

@@ -2,7 +2,7 @@ export interface MenuLink {
   label: string;
   href: string;
   subLinks?: MenuLink[];
-  sublabel?:string
+  sublabel?: string
 }
 
 export interface MenuColumn {
@@ -20,5 +20,6 @@ export interface MenuItem {
   columns?: MenuColumn[];
   // `links` exists only for "dropdown" type, optional otherwise
   links?: MenuLink[];
-  sublinkTrue:boolean;
+  sublinkTrue: boolean;
+  mobileV?: boolean;
 }

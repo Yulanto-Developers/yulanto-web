@@ -12,25 +12,23 @@ type GalleryItemType = {
 
 // Data with type
 const galleryOne: GalleryItemType[] = [
-    { type: "image", src: "/assets/img/sample/b1.jpg" },
-    { type: "image", src: "/assets/img/sample/b2.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
-    { type: "image", src: "/assets/img/sample/b1.jpg" },
-    { type: "image", src: "/assets/img/sample/b2.jpg" },
-    { type: "image", src: "/assets/img/sample/b1.jpg" },
-    { type: "image", src: "/assets/img/sample/b2.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (1).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (2).jpg" },
+    { type: "video", src: "/assets/img/videos/Video-1.mp4" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (3).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (7).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (9).jpg" },
+    // { type: "video", src: "/assets/img/videos/video-2.mp4" },
 ];
 
 const galleryTwo: GalleryItemType[] = [
-    { type: "image", src: "/assets/img/sample/b1.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
-    { type: "image", src: "/assets/img/sample/b2.jpg" },
-    { type: "image", src: "/assets/img/sample/b1.jpg" },
-    { type: "image", src: "/assets/img/sample/b2.jpg" },
-    { type: "image", src: "/assets/img/sample/b1.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
-    { type: "image", src: "/assets/img/sample/b2.jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (6).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (4).jpg" },
+    // { type: "video", src: "/assets/img/videos/video-1.mp4" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (8).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (5).jpg" },
+    { type: "image", src: "/assets/img/sample/gallery/img- (10).jpg" },
+    { type: "video", src: "/assets/img/videos/Video-2.mp4" },
 ];
 
 // Props type
@@ -48,7 +46,7 @@ const GalleryItem = ({ item }: GalleryItemProps) => {
                         <source src={item.src} type="video/mp4" />
                     </video>
                 ) : (
-                    <Image className="img-fluid" src={item.src} alt="gallery" width={520} height={400} />
+                    <img className="img-fluid" src={item.src} alt="gallery" style={{ width: '100%', height: '100%' }} />
                 )}
             </div>
         </div>
@@ -59,27 +57,25 @@ const PersonalPortfolioGallery = () => {
 
     return (
         <>
-            <div className="px-project-area pt-0">
+            <div className="px-project-area pt-lg-1200">
                 <div className="container container-1550">
                     <div className="px-project-title-wrap">
                         <div className="row">
                             <div className="col-xl-3">
                                 <span className="px-section-subtitle pt-40 blink-ball">
 
-                                    Our Works
+                                    Project Showcase
                                 </span>
                             </div>
 
                             <div className="col-xl-9">
                                 <div className="px-project-title-box">
-                                    <h3 className="px-section-title text-effect">
-                                        <span>Our </span>
-                                        <span>Portfolio</span>
+                                    <h3 className="px-section-title text-tenor font-title-cls text-effect">
+                                        <span className="word">Featured  </span>
+                                        <span>Projects</span>
                                     </h3>
-                                    <p>
-                                        We&apos;ve helped businesses across industries achieve their goals.
-                                        <br />
-                                        Here are some of our recent projects.
+                                    <p className="text-figtree">
+                                        From startups to established brands, we've delivered successful website solutions that help businesses grow. Explore our recent web design and development projects.
                                     </p>
                                 </div>
                             </div>
@@ -89,7 +85,7 @@ const PersonalPortfolioGallery = () => {
                 </div>
             </div>
 
-            <div className="px-gallery-area pt-40 pb-140">
+            <div className="px-gallery-area pt-xl-40 pt-20 pb-140">
                 <div className="px-gallery-slider-one mb-20">
 
                     <div className="px-gallery-active tp-slider-transtion">

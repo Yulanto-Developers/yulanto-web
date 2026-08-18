@@ -60,11 +60,11 @@ const Project = () => {
                                         )}
                                     </div>
 
-                                    <div className="px-project-3-category">
+                                    {/* <div className="px-project-3-category">
                                         {project.categories.map((cat) => (
                                             <span key={`${project.id}-${cat}`}>{cat}</span>
                                         ))}
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

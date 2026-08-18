@@ -14,9 +14,9 @@ const DigitalStudioProjectItem: React.FC<PortfolioProjectDT> = ({ id, title, cat
                 <h4 className="bf-portfolio-3-title">
                   <SmartLink href={`/portfolio-details-1/${id}`}>{title}</SmartLink>
                 </h4>
-                <span className="mb-50">
+                {/* <span className="mb-50">
                   {categories.join(", ")}
-                </span>
+                </span> */}
                 <SmartLink
                   href={`/portfolio-details-1/${id}`}
                   className="tp-btn tp-btn-border tp-btn-xl d-inline-flex align-items-center"
@@ -48,9 +48,9 @@ const DigitalStudioProjectItem: React.FC<PortfolioProjectDT> = ({ id, title, cat
                 <h4 className="bf-portfolio-3-title">
                   <SmartLink href={`/portfolio-details-1/${id}`}>{title}</SmartLink>
                 </h4>
-                <span className="mb-50">
+                {/* <span className="mb-50">
                   {categories.join(", ")}
-                </span>
+                </span> */}
                 <SmartLink
                   href={`/portfolio-details-1/${id}`}
                   className="tp-btn tp-btn-border tp-btn-xl d-inline-flex align-items-center"

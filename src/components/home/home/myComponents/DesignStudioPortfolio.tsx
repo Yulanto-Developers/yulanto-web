@@ -3,11 +3,11 @@ import PortfolioCard from "../components/PortfolioCard";
 
 const Portfolio = () => {
     // display portfolio items
-    const displayPortfolioData = portfolioProjects.slice(4, 9);
+    const displayPortfolioData = portfolioProjects.slice(5, 8);
 
     return (
         <>
-            <div className="px-portfolio-area pt-30">
+            <div className="px-portfolio-area pt-sm-120" >
                 <div className="container-fluid">
 
                     <div className="px-portfolio-wrap">

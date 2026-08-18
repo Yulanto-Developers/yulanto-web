@@ -25,28 +25,29 @@ const aboutStats = [
         value: "11+",
         index: <FontAwesomeIcon icon={faBriefcase} />,
         title: "Years of Experience",
-        desc: "We have had quite a run in our 11+ years of working.",
+        desc: "Celebrating 11+ Years of Excellence in Creativity, Innovation & Digital Solutions.",
     },
     {
         id: 2,
         value: "10+",
         index: <FontAwesomeIcon icon={faUsers} />,
         title: "Experienced Web Experts",
-        desc: "We've delivered 50+ projects that help companies generate real results.",
+        desc: "Driven by Experience. Powered by Innovation. Delivered by Experienced Web Design Experts.",
     },
     {
         id: 3,
-        value: "300+",
+        value: "450+",
         index: <FontAwesomeIcon icon={faSmile} />,
-        title: "Satisfaction Client",
-        isBrandSlider: true,
+        title: "Satisfied Clients",
+        desc: "Successfully delivered 450 websites, including 50+ international websites, driving real business results.",
+        isBrandSlider: false,
     },
     {
         id: 4,
         value: "1",
         index: <FontAwesomeIcon icon={faTrophy} />,
-        title: "Award Winning",
-        desc: "Recognized for delivering outstanding digital solutions worldwide.",
+        title: " Design Award",
+        desc: "Recognized with design awards for delivering outstanding web design solutions worldwide.",
         isBrandSlider: false,
     },
 ];
@@ -103,7 +104,7 @@ const StartupAgencyAbout = () => {
     });
 
     return (
-        <section ref={ref} className="px-about-area about-skew-anim pt-50 pb-50 overflow-hidden">
+        <section ref={ref} className="px-about-area about-skew-anim pt-lg-120   pb-50 overflow-hidden">
             <div className="container container-1550">
 
 
@@ -124,8 +125,8 @@ const StartupAgencyAbout = () => {
 
 
                             <h4 className="px-about-title mb-55">
-                                <span className='text-blue-about'>We are a professional design agency  </span> specializing in <br />
-                                website design, web development, E-commerce, Graphic Design,<br />  SEO, and digital marketing.
+                                <span className='text-blue-about'>We are a professional design agency</span> specializing in
+                                <Link href={'/website'} > website design</Link> ,<Link href={'/development'}>web development</Link> , <Link href={'/e-comerce'}>E-commerce</Link>, <Link href={'/graphic-desgin'}>Graphic Design</Link>, <Link href={'/seo'}>SEO</Link>, and <Link href={'/digital'}>digital marketing</Link>.
                             </h4>
 
                             <div className="row">
@@ -189,37 +190,12 @@ const StartupAgencyAbout = () => {
 
                                                 <div className="px-about-info-body d-flex flex-column justify-content-between">
                                                     <h4>
-                                                        {item.title.split(" ").map((word, idx) => (
-                                                            <span key={idx}>
-                                                                {word} {idx === 1 && <br />}
-                                                            </span>
-                                                        ))}
+                                                        {item.title}
                                                     </h4>
 
-                                                    {!item.isBrandSlider ? (
-                                                        <p>{item.desc}</p>
-                                                    ) : (
-                                                        <div className="px-about-brand-slider fix pb-25">
-                                                            <div className="px-about-brand-active">
-                                                                <div className="slide-transtion">
-                                                                    <Swiper
-                                                                        modules={[FreeMode, Autoplay]}
-                                                                        {...brand_slider_params}
-                                                                    >
-                                                                        {brandImages.map((brand) => (
-                                                                            <SwiperSlide key={brand.id}>
-                                                                                <div className="px-about-brand">
-                                                                                    <span>
-                                                                                        <Image width={brand.width} height={brand.height} src={brand.img} alt="brand logo" />
-                                                                                    </span>
-                                                                                </div>
-                                                                            </SwiperSlide>
-                                                                        ))}
-                                                                    </Swiper>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    )}
+
+                                                    <p>{item.desc}</p>
+
                                                 </div>
                                             </motion.div>
                                         </div>

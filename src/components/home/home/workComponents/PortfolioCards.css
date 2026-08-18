@@ -1,0 +1,290 @@
+/* =========================================
+   CARDS GRID
+========================================= */
+
+.portfolio-category-nav {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+  gap: 20px;
+}
+
+.btn-container-cls {
+  border: 1px solid #f1f1f1;
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.portfolio-modal-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.portfolio-modal-card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 16px;
+  background: transparent;
+  height: 280px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-modal-card:hover {
+  transform: translateY(-2px);
+}
+
+.portfolio-modal-card-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-modal-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-modal-card:hover .portfolio-modal-card-image img {
+  transform: scale(1.05);
+}
+
+.portfolio-modal-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.4) 35%,
+      rgba(0, 0, 0, 0) 100%);
+
+}
+
+.portfolio-modal-card-overlay h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.portfolio-card-plus-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  line-weight: 300;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.portfolio-modal-card:hover .portfolio-card-plus-btn {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================
+   FULL SCREEN MODAL
+========================================= */
+
+.portfolio-fullscreen-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: portfolioBackdropIn 0.25s ease-out;
+}
+
+.portfolio-fullscreen-modal {
+  position: relative;
+  width: min(720px, 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #0d0d0d;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+  animation: portfolioModalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* MODAL IMAGE SECTION */
+
+.portfolio-modal-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+
+.portfolio-modal-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.portfolio-modal-image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 24px;
+
+  background: linear-gradient(to top,
+      rgba(13, 13, 13, 1) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0) 100%);
+
+}
+
+.portfolio-modal-image-overlay h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.portfolio-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.portfolio-modal-close:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* MODAL CONTENT SECTION */
+
+.portfolio-modal-content {
+  padding: 0 24px 28px 24px;
+  background: #0d0d0d;
+}
+
+.portfolio-modal-content p {
+  margin: 0;
+  color: #cccccc;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ANIMATIONS */
+
+@keyframes portfolioBackdropIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+@keyframes portfolioModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 991px) {
+  .portfolio-modal-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-modal-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-modal-image-wrapper {
+    height: 280px;
+  }
+
+  .portfolio-modal-image-overlay h2 {
+    font-size: 22px;
+  }
+}
+
+/* =========================================
+   FADE-IN ANIMATION FOR CARDS
+========================================= */
+
+@keyframes portfolioFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.portfolio-modal-card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 16px;
+  background: transparent;
+  height: 280px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Trigger the smooth fade-in animation on mount */
+  animation: portfolioFadeIn 0.4s ease-out forwards;
+
+}

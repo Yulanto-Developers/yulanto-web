@@ -4,22 +4,26 @@
 /*  7.9 brand css
 /*----------------------------------------*/
 
-.px-brand{
-    &-area{
-        @media #{$lg,$md,$xs}{
+.px-brand {
+    &-area {
+        @media #{$lg,$md} {
             padding-top: 80px;
             padding-bottom: 80px;
         }
+
         @media #{$xs} {
-            padding-top: 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
     }
-    &-subtitle-box{
-        @media #{$lg,$md,$xs}{
+
+    &-subtitle-box {
+        @media #{$lg,$md,$xs} {
             margin-bottom: 0;
         }
     }
-    &-item{
+
+    &-item {
         min-height: 180px;
         width: 100%;
         padding: 20px;
@@ -28,41 +32,53 @@
         border-radius: 14px;
         place-content: center;
         background: var(--tp-common-px-white);
-        @media #{$lg,$md,$xs}{
+
+        @media #{$lg,$md,$xs} {
             margin-bottom: 5px;
         }
     }
-    &-style{
-        &-3{
-            @media #{$md,$xs}{
+
+    &-style {
+        &-3 {
+            @media #{$md,$xs} {
                 padding-top: 40px;
             }
-            & .px-brand-item{
+
+            & .px-brand-item {
                 min-width: 240px;
                 background-color: transparent;
                 border: 1px solid rgba(0, 0, 0, 0.06);
             }
+
             & .px-section-subtitle {
                 font-weight: 500;
                 font-size: 17px;
                 text-transform: uppercase;
             }
         }
-        &-4{
+
+        &-4 {
             & .px-brand-item {
                 min-width: 240px;
                 background: transparent;
                 border: 1px solid rgba($color: #fff, $alpha: 0.09);
             }
         }
-        &-5{
+
+        &-5 {
             & .px-brand-item {
-                min-height: 140px;
-                padding: 20px;
-                border-radius: 0;
-                margin: 0 0 0 0;
+                min-height: 120px;
+                padding: 10px;
+                margin: 0 0 20px 0;
                 background: transparent;
-                border: 1px solid #ECECEC;
+                border-radius: 20px;
+                box-shadow: inset 1px -17px 15px #0000001a;
+                transition: box-shadow 0.3s ease, transform 0.3s ease;
+            }
+
+            & .px-brand-item:hover {
+                box-shadow: inset 1px 17px 15px #0000001a;
+                transform: translateY(-2px);
             }
         }
     }
