@@ -4,71 +4,90 @@ export const servicesData: ServiceItemDT[] = [
     {
         id: 1,
         keyValue: "01",
-        title: "Brand Identity Design",
+        title: "Quality Design",
         image: "/assets/img/service/service-1.jpg",
-        description: `Strategic, data-driven social media campaigns
-designed to build brand awareness & connect
-with your target audience.`,
+        description: `Our motto is centered around quality, and each project we undertake showcases our dedication to prioritizing excellence.`,
         subDesc: "",
-        categories: [
-            "Content strategy",
-            "Analytics & reporting",
-            "Community management",
-            "4+",
-        ],
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
     },
     {
         id: 2,
         keyValue: "02",
-        title: "Web design & development",
+        title: "Innovative Attitude",
         image: "/assets/img/service/service-2.jpg",
-        description: `Strategic, data-driven social media campaigns
-designed to build brand awareness & connect
-with your target audience.`,
+        description: `We constantly seek fresh ideas and embrace innovation throughout every phase of development, valuing their uniqueness.`,
         subDesc: "",
-        categories: [
-            "Content strategy",
-            "Analytics & reporting",
-            "Community management",
-            "4+",
-        ],
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
     },
     {
         id: 3,
         keyValue: "03",
-        title: "SEO Optimization",
+        title: "Excellent Customizations",
         image: "/assets/img/service/service-3.jpg",
-        description: `Strategic, data-driven social media campaigns
-designed to build brand awareness & connect
-with your target audience.`,
+        description: `We are able to gain a thorough understanding of the requirements and provide uniquely customized solutions that set us apart from the competition.`,
         subDesc: "",
-        categories: [
-            "Content strategy",
-            "Analytics & reporting",
-            "Community management",
-            "4+",
-        ],
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
     },
-    {
+   {
         id: 4,
         keyValue: "04",
-        title: "Creative Web Solutions",
+        title: "Professional Team",
         image: "/assets/img/service/service-4.jpg",
-        description: `Strategic, data-driven social media campaigns
-designed to build brand awareness & connect
-with your target audience.`,
+        description: `Our team consists of highly skilled and experienced professionals in the field of web design, ensuring the creation of exceptional websites.`,
         subDesc: "",
-        categories: [
-            "Content strategy",
-            "Analytics & reporting",
-            "Community management",
-            "4+",
-        ],
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
+    },{
+        id: 5,
+        keyValue: "05",
+        title: "On Time Delivery",
+        image: "/assets/img/service/service-4.jpg",
+        description: `At our core, we prioritize meeting delivery timelines and acknowledge the importance of finishing projects on schedule. This is why we aim to promise less and deliver more.`,
+        subDesc: "",
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
+    },
+    {
+        id: 6,
+        keyValue: "06",
+        title: "Customer Support",
+        image: "/assets/img/service/service-4.jpg",
+        description: `With Yulanto, post-implementation support is something you never need to worry about, given our reliable and expert technical support team that is prepared to assist you.`,
+        subDesc: "",
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
     },
 
     //design studio service data start
     {
-        id: 5,
+        id: 7,
         title: "Web Design",
         image: "/assets/img/service/service-2-1.jpg",
         description: `We create impactful brand
@@ -79,7 +98,7 @@ your audience.`,
         active: false,
     },
     {
-        id: 6,
+        id: 8,
         title: "Development",
         image: "/assets/img/project/project-1.jpg",
         description: `We create impactful brand
@@ -90,7 +109,7 @@ your audience.`,
         active: true,
     },
     {
-        id: 7,
+        id: 9,
         title: "Design support",
         image: "/assets/img/project/project-2.jpg",
         description: `We create impactful brand
@@ -101,7 +120,7 @@ your audience.`,
         active: false,
     },
     {
-        id: 8,
+        id: 10,
         title: "Websites",
         image: "/assets/img/project/project-3.jpg",
         description: `We create impactful brand
@@ -114,7 +133,7 @@ your audience.`,
     //design studio service data end
     //digital studio service data start
     {
-        id: 9,
+        id: 11,
         title: "Web Design",
         image: "/assets/img/project/d1.png",
         description: "Create a powerful online presence with our professional web design services in Chennai. We design responsive, SEO-friendly, and user-focused websites that help businesses attract more customers and grow online.",
@@ -128,7 +147,7 @@ your audience.`,
         ],
     },
     {
-        id: 10,
+        id: 12,
         title: "Marketing",
         image: "/assets/img/project/d1.png",
         description: "Driving growth through strategic digital marketing and branding.",
@@ -142,7 +161,7 @@ your audience.`,
         ],
     },
     {
-        id: 11,
+        id: 13,
         title: "Graphics",
         image: "/assets/img/project/d1.png",
         description: "Creating visually compelling designs that elevate brand identity.",
@@ -156,7 +175,7 @@ your audience.`,
         ],
     },
     {
-        id: 12,
+        id: 14,
         title: "Technology",
         image: "/assets/img/project/d1.png",
         description: "Leveraging modern technologies to deliver innovative solutions.",
