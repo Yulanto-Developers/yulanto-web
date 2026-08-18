@@ -746,15 +746,13 @@
 .core-value-card-description {
   margin: 0;
   color: #fff;
-  font-size: 15px;
+  font-size: 15px !important;
   line-height: 1.6;
   max-width: 95%;
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(15px);
   max-height: 0;
-
   transition:
     opacity 0.4s ease,
     transform 0.4s ease,
@@ -833,7 +831,7 @@
     visibility: visible;
     transform: none;
     max-width: 100%;
-    font-size: 14px;
+    font-size: 14px !important;
     max-height: none;
   }
 }
@@ -871,7 +869,7 @@
     visibility: visible;
     transform: none;
     max-width: 100%;
-    font-size: 14px;
+    font-size: 14px !important;
     max-height: none;
   }
 }

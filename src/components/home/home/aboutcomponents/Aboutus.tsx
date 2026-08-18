@@ -6,14 +6,14 @@ const AboutUs = () => {
   const image2 = "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop";
 
   return (
-    <section id="about" className="section-bg-white">
+    <section id="about" className="section-bg-white py-4">
       <div className="container">
         <div className="row align-items-center">
           {/* Left Column: Content */}
           <div className="col-lg-7 mb-4 mb-lg-0">
-            <span className="px-section-subtitle pt-40 blink-ball mb-20 text-tenor d-block">
+            {/* <span className="px-section-subtitle pt-40 blink-ball mb-20 text-tenor d-block">
               ABOUT US
-            </span>
+            </span> */}
             <h4 className="px-about-title font-title-cls text-effect">
               <span className="text-blue-about"> Who </span> {" "}
               <span> We Are</span>
