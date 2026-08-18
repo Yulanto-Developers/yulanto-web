@@ -53,6 +53,12 @@ const data = [
     currentPage: "Case Studies",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
   },
+   {
+    path: "/seo",
+    title: "Search Engine Optimization",
+    currentPage: "SEO",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
+  },
 ];
 
 export default function BreadcurmbData() {

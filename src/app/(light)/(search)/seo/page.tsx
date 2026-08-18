@@ -9,9 +9,7 @@ export default function Page() {
       <Breadcrumbdata />
       
       
-      <Header />
-      <Cta />
-      <GetINTouch />
+      
     </main>
   );
 }

@@ -70,7 +70,7 @@ export const lightMenu: MenuItem[] = [
       {
         label: "Digital Marketing", href: "/",
         subLinks: [
-          { label: "Search Engine Optimization (SEO)", href: "/" },
+          { label: "Search Engine Optimization (SEO)", href: "/seo" },
           { label: "Google Ads Management (PPC)", href: "/" },
           { label: "Social Media Marketing", href: "/" },
           { label: "OFF Page SEO", href: "/" },

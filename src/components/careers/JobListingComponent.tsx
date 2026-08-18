@@ -166,7 +166,7 @@ export default function JobListingComponent({
               position: "absolute",
               inset: 0,
               zIndex: 10,
-              backgroundColor: "rgba(5, 52, 86, 0.4)",
+              // backgroundColor: "rgba(5, 52, 86, 0.4)",
               backdropFilter: "blur(12px)",
             }}
           />

@@ -8,8 +8,8 @@ import {
 } from "lucide-react";
 import ClientsShowcasePage from "@/components/ourclients/ClientsShowcasePage";
 import { UAEFlagIcon } from "@/components/ourclients/UAEFlagIcon";
-import Image1 from "@/assets/img/usa/uae.png";
-import Image2 from "@/assets/img/usa/about.png";
+import Image1 from "@/assets/img/usa/banner-uae.jpg";
+import Image2 from "@/assets/img/usa/image-uae.jpg";
 import GlobalComp from "@/components/ourclients/globalcomp";
 import { IndustryCloud } from "@/components/ourclients/IndustryCloud";
 

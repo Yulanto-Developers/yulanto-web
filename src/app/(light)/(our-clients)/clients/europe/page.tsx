@@ -8,8 +8,8 @@ import {
 } from "lucide-react";
 import ClientsShowcasePage from "@/components/ourclients/ClientsShowcasePage";
 import { EuropeFlagIcon } from "@/components/ourclients/EuropeFlagIcon";
-import Image1 from "@/assets/img/usa/europe.png";
-import Image2 from "@/assets/img/usa/about.png";
+import Image1 from "@/assets/img/usa/banner-europe.jpg";
+import Image2 from "@/assets/img/usa/image-europe.jpg";
 import GlobalComp from "@/components/ourclients/globalcomp";
 
 export default function USAClientsPage() {
