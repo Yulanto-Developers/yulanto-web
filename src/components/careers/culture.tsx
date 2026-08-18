@@ -119,9 +119,10 @@ const CultureCard = ({
           style={{
             position: "absolute",
             top: "50%",
-            width: "110px",
-            height: "110px",
+            width: "200px",
+            height: "200px",
             objectFit: "contain",
+            borderRadius:"50px",
             transform: "translateY(-50%)",
             zIndex: 1,
             pointerEvents: "none",
@@ -130,10 +131,10 @@ const CultureCard = ({
             // RIGHT cards → image on far right
             ...(isLeft
               ? {
-                left: "-170px",
+                left: "-250px",
               }
               : {
-                right: "-170px",
+                right: "-250px",
               }),
           }}
         />
@@ -228,7 +229,7 @@ export default function WorkCultureSection() {
       description:
         "The core principles and beliefs that guide decision-making and behavior within the organization.",
       imgSrc: "/assets/img/careers/1.png",
-      sideImgSrc: "/assets/img/cms-ecom-icons/side-values.png",
+      sideImgSrc: "/assets/img/careers/Values.png",
       colorTheme: "orange",
     },
 
@@ -237,7 +238,7 @@ export default function WorkCultureSection() {
       description:
         "The openness, transparency, and effectiveness of communication channels between employees and management.",
       imgSrc: "/assets/img/careers/2.png",
-      sideImgSrc: "/assets/img/cms-ecom-icons/side-communication.png",
+      sideImgSrc: "/assets/img/careers/communication.png",
       colorTheme: "blue",
     },
 
@@ -246,7 +247,7 @@ export default function WorkCultureSection() {
       description:
         "The degree to which employees work together, share ideas, and support each other to achieve common goals.",
       imgSrc: "/assets/img/careers/3.png",
-      sideImgSrc: "/assets/img/cms-ecom-icons/side-collaboration.png",
+      sideImgSrc: "/assets/img/careers/Collaboration.png",
       colorTheme: "purple",
     },
 
@@ -255,7 +256,7 @@ export default function WorkCultureSection() {
       description:
         "The approach and behavior of leaders in the organization, which sets the tone for the rest of the workforce.",
       imgSrc: "/assets/img/careers/4.png",
-      sideImgSrc: "/assets/img/cms-ecom-icons/side-leadership.png",
+      sideImgSrc: "/assets/img/careers/leadership.png",
       colorTheme: "orange",
     },
 
@@ -264,7 +265,7 @@ export default function WorkCultureSection() {
       description:
         "The level of involvement, enthusiasm, and commitment employees have towards their work and the organization.",
       imgSrc: "/assets/img/careers/5.png",
-      sideImgSrc: "/assets/img/cms-ecom-icons/side-engagement.png",
+      sideImgSrc: "/assets/img/careers/Employee Engagement.png",
       colorTheme: "blue",
     },
 
@@ -273,7 +274,7 @@ export default function WorkCultureSection() {
       description:
         "The emphasis placed on maintaining a healthy balance between work responsibilities and personal life.",
       imgSrc: "/assets/img/careers/6.png",
-      sideImgSrc: "/assets/img/cms-ecom-icons/side-worklife.png",
+      sideImgSrc: "/assets/img/careers/Work-Life Balance.png",
       colorTheme: "purple",
     },
 
@@ -282,7 +283,7 @@ export default function WorkCultureSection() {
       description:
         "The acknowledgment and appreciation of employee contributions through rewards, incentives, and advancement.",
       imgSrc: "/assets/img/careers/7.png",
-      sideImgSrc: "/assets/img/cms-ecom-icons/side-reward.png",
+      sideImgSrc: "/assets/img/careers/Recognition & Reward.png",
       colorTheme: "orange",
     },
 
@@ -291,7 +292,7 @@ export default function WorkCultureSection() {
       description:
         "The organization's ability to embrace change, learn from failures, and adapt to new opportunities.",
       imgSrc: "/assets/img/careers/8.png",
-      sideImgSrc: "/assets/img/cms-ecom-icons/side-adaptability.png",
+      sideImgSrc: "/assets/img/careers/Adaptability.png",
       colorTheme: "blue",
     },
   ];

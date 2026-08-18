@@ -1,0 +1,58 @@
+/* Container layout and padding */
+.animated-marquee-hero {
+  position: relative;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 220px;
+  background-color: #ffffff;
+}
+
+/* Typography styles */
+
+.text-blue-about {
+  color: #053456;
+}
+
+/* Marquee track width fix */
+.marquee-track {
+  width: max-content; /* Guarantees the track does not wrap or compress items */
+  will-change: transform;
+}
+
+/* Marquee container mask and dimensions */
+.marquee-wrapper {
+  height: 180px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .marquee-wrapper {
+    height: 220px;
+  }
+}
+
+/* Marquee Card Dimensions */
+.marquee-card {
+  width: 130px;
+  height: 160px;
+}
+
+@media (min-width: 768px) {
+  .marquee-card {
+    width: 160px;
+    height: 200px;
+  }
+}
