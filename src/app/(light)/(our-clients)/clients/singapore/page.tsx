@@ -9,8 +9,8 @@ import {
 import ClientsShowcasePage from "@/components/ourclients/ClientsShowcasePage";
 import { SingaporeFlagIcon } from "@/components/ourclients/SingaporeFlagIcon";
 import { MalaysiaFlagIcon } from "@/components/ourclients/MalaysiaFlagIcon";
-import Image1 from "@/assets/img/usa/sinaga.png";
-import Image2 from "@/assets/img/usa/about.png";
+import Image1 from "@/assets/img/usa/banner-singapore.jpg";
+import Image2 from "@/assets/img/usa/image-singapore.jpg";
 import GlobalComp from "@/components/ourclients/globalcomp";
 
 export default function SingaporeMalaysiaClientsPage() {

@@ -55,21 +55,21 @@ export default function CareerBreadcrumbSection() {
         <section
             style={{
                 position: "relative",
-                maxWidth: "1200px",
-                margin: "40px auto",
+                
+                margin: "40px 0 0",
                 paddingLeft: "40px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                height: "480px",
-                border: "1px solid #e5e7eb",
-                backgroundColor: "#ffffff",
+                height: "550px",
+               
+                backgroundColor: "#f5f5f5",
                 overflow: "hidden",
-                borderRadius: "24px",
+                
             }}
         >
             {/* Left side: Heading and Text Content */}
-            <div
+            <div className="container"
                 style={{
                     width: "50%",
                     zIndex: 10,

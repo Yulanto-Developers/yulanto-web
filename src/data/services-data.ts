@@ -4,71 +4,90 @@ export const servicesData: ServiceItemDT[] = [
     {
         id: 1,
         keyValue: "01",
-        title: "Brand Identity Design",
+        title: "Quality Design",
         image: "/assets/img/service/service-1.jpg",
-        description: `Strategic, data-driven social media campaigns
-designed to build brand awareness & connect
-with your target audience.`,
+        description: `Our motto is centered around quality, and each project we undertake showcases our dedication to prioritizing excellence.`,
         subDesc: "",
-        categories: [
-            "Content strategy",
-            "Analytics & reporting",
-            "Community management",
-            "4+",
-        ],
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
     },
     {
         id: 2,
         keyValue: "02",
-        title: "Web design & development",
+        title: "Innovative Attitude",
         image: "/assets/img/service/service-2.jpg",
-        description: `Strategic, data-driven social media campaigns
-designed to build brand awareness & connect
-with your target audience.`,
+        description: `We constantly seek fresh ideas and embrace innovation throughout every phase of development, valuing their uniqueness.`,
         subDesc: "",
-        categories: [
-            "Content strategy",
-            "Analytics & reporting",
-            "Community management",
-            "4+",
-        ],
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
     },
     {
         id: 3,
         keyValue: "03",
-        title: "SEO Optimization",
+        title: "Excellent Customizations",
         image: "/assets/img/service/service-3.jpg",
-        description: `Strategic, data-driven social media campaigns
-designed to build brand awareness & connect
-with your target audience.`,
+        description: `We are able to gain a thorough understanding of the requirements and provide uniquely customized solutions that set us apart from the competition.`,
         subDesc: "",
-        categories: [
-            "Content strategy",
-            "Analytics & reporting",
-            "Community management",
-            "4+",
-        ],
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
     },
-    {
+   {
         id: 4,
         keyValue: "04",
-        title: "Creative Web Solutions",
+        title: "Professional Team",
         image: "/assets/img/service/service-4.jpg",
-        description: `Strategic, data-driven social media campaigns
-designed to build brand awareness & connect
-with your target audience.`,
+        description: `Our team consists of highly skilled and experienced professionals in the field of web design, ensuring the creation of exceptional websites.`,
         subDesc: "",
-        categories: [
-            "Content strategy",
-            "Analytics & reporting",
-            "Community management",
-            "4+",
-        ],
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
+    },{
+        id: 5,
+        keyValue: "05",
+        title: "On Time Delivery",
+        image: "/assets/img/service/service-4.jpg",
+        description: `At our core, we prioritize meeting delivery timelines and acknowledge the importance of finishing projects on schedule. This is why we aim to promise less and deliver more.`,
+        subDesc: "",
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
+    },
+    {
+        id: 6,
+        keyValue: "06",
+        title: "Customer Support",
+        image: "/assets/img/service/service-4.jpg",
+        description: `With Yulanto, post-implementation support is something you never need to worry about, given our reliable and expert technical support team that is prepared to assist you.`,
+        subDesc: "",
+        // categories: [
+        //     "Content strategy",
+        //     "Analytics & reporting",
+        //     "Community management",
+        //     "4+",
+        // ],
     },
 
     //design studio service data start
     {
-        id: 5,
+        id: 7,
         title: "Web Design",
         image: "/assets/img/service/service-2-1.jpg",
         description: `We create impactful brand
@@ -79,7 +98,7 @@ your audience.`,
         active: false,
     },
     {
-        id: 6,
+        id: 8,
         title: "Development",
         image: "/assets/img/project/project-1.jpg",
         description: `We create impactful brand
@@ -90,7 +109,7 @@ your audience.`,
         active: true,
     },
     {
-        id: 7,
+        id: 9,
         title: "Design support",
         image: "/assets/img/project/project-2.jpg",
         description: `We create impactful brand
@@ -101,7 +120,7 @@ your audience.`,
         active: false,
     },
     {
-        id: 8,
+        id: 10,
         title: "Websites",
         image: "/assets/img/project/project-3.jpg",
         description: `We create impactful brand
@@ -114,7 +133,7 @@ your audience.`,
     //design studio service data end
     //digital studio service data start
     {
-        id: 9,
+        id: 11,
         title: "Web Design",
         image: "/assets/img/project/Web-Design.jpg",
         description: "Create a powerful online presence with our professional web design services in Chennai. We design responsive, SEO-friendly, and user-focused websites that help businesses attract more customers and grow online.",
@@ -133,10 +152,10 @@ your audience.`,
     },
     {
         id: 10,
-        title: "Web Development",
-        image: "/assets/img/project/Web-Developement.jpg",
-        description: "As experienced web developers in Chennai, we build fast, secure, and scalable websites with custom web development solutions and responsive web applications tailored to achieve your business goals.",
-        subDesc: "At Yulanto Web Creations, we provide reliable and result-driven web development services in Chennai to help businesses establish a strong online presence. As an experienced Web Development Company in Chennai, we develop responsive, secure, and high-performance websites tailored to your business requirements.",
+        title: "Marketing",
+        image: "/assets/img/project/d1.png",
+        description: "Driving growth through strategic digital marketing and branding.",
+        subDesc: "Our team of skilled graphic designers in Chennai specializes in producing visual content to effectively convey messages. We offer services such as logo design in Chennai, brochure creationin Chennai, poster design, company profile, and more.",
         categories: [
             "Web Developers",
             "Custom Website Development",
@@ -149,10 +168,10 @@ your audience.`,
     },
     {
         id: 11,
-        title: "Ecommerce",
-        image: "/assets/img/project/E-commerce.jpg",
-        description: "As a trusted eCommerce Website Development Company in Chennai, we build secure, scalable, and mobile-friendly online stores using WooCommerce, Shopify, and custom eCommerce solutions.",
-        subDesc: "We specialize in building powerful, user-friendly eCommerce websites in Chennai that help businesses grow their online sales. As a trusted eCommerce Website Development Company in Chennai, we create secure, scalable, and feature-rich online stores that deliver seamless shopping experiences, boost conversions, and improve customer satisfaction.",
+        title: "Graphics",
+        image: "/assets/img/project/d1.png",
+        description: "Creating visually compelling designs that elevate brand identity.",
+        subDesc: "Our team of skilled graphic designers in Chennai specializes in producing visual content to effectively convey messages. We offer services such as logo design in Chennai, brochure creationin Chennai, poster design, company profile, and more.",
         categories: [
             "eCommerce Website",
             "Commerce Website Development",
@@ -167,29 +186,10 @@ your audience.`,
     },
     {
         id: 12,
-        title: "Graphic Design",
-        image: "/assets/img/project/Graphic-Design.jpg",
-        description: "Create a powerful brand identity with our professional graphic design services in Chennai. We design eye-catching logos, brochures, business cards, social media creatives, flyers, banners, and marketing materials that reflect your brand.",
-        subDesc: "we offer creative and impactful graphic design services in Chennai that help businesses establish a strong and memorable brand identity. As a trusted Graphic Design Company in Chennai, we create visually appealing designs that communicate your brand message effectively and leave a lasting impression on your audience.",
-        categories: [
-            "logo design",
-            "brochure design",
-            "business card design",
-            "flyer design",
-            "banner design",
-            "social media post design",
-            "corporate branding",
-            "packaging design",
-            "marketing collateral",
-            "promotional materials",
-        ],
-    },
-    {
-        id: 13,
-        title: "Digital Marketing",
-        image: "/assets/img/project/Digital-Marketing.jpg",
-        description: "Grow your business online with our professional Digital Marketing Services in Chennai. We provide SEO, Google Ads, Social Media Marketing (SMM), Meta Ads to increase your website traffic, generate quality leads, and improve online visibility.",
-        subDesc: "we provide result-oriented Digital Marketing Services in Chennai to help businesses increase their online visibility, attract qualified leads, and achieve sustainable growth. As a trusted Digital Marketing Company in Chennai, we create customized marketing strategies tailored to your business goals and target audience.",
+        title: "Technology",
+        image: "/assets/img/project/d1.png",
+        description: "Leveraging modern technologies to deliver innovative solutions.",
+        subDesc: "Our team of skilled graphic designers in Chennai specializes in producing visual content to effectively convey messages. We offer services such as logo design in Chennai, brochure creationin Chennai, poster design, company profile, and more.",
         categories: [
             "Digital Marketing",
             "Search Engine Optimization (SEO)",

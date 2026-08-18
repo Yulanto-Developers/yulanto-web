@@ -9,8 +9,8 @@ import {
 
 import ClientsShowcasePage from "@/components/ourclients/ClientsShowcasePage";
 import { USAFlagIcon } from "@/components/ourclients/USAFlagIcon";
-import Image1 from "@/assets/img/usa/usafalg.png";
-import Image2 from "@/assets/img/usa/about.png";
+import Image1 from "@/assets/img/usa/banner-usa.jpg";
+import Image2 from "@/assets/img/usa/image-usa.jpg";
 import GlobalComp from "@/components/ourclients/globalcomp";
 
 import AOS from "aos";

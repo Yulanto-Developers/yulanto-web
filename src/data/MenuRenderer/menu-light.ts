@@ -10,10 +10,15 @@ export const lightMenu: MenuItem[] = [
     href: "#",
     links: [
       { label: "Our Story", href: "/our-story" },
-      { label: "Vision & Mission", href: "/" },
+      { label: "Vision & Mission", href: "/our-mission-vision" },
       { label: "Our Philosophy", href: "/" },
       { label: "Why Choose Us", href: "/" },
       { label: "Meet Our Team", href: "/" },
+      // { label: "Our Story", href: "/our-story" },
+      // { label: "Vision & Mission", href: "/our-mission-vision" },
+      // { label: "Our Philosophy", href: "/our-philosophy" },
+      // { label: "Why Choose Us", href: "/why-choose-us" },
+      // { label: "Meet Our Team", href: "/our-team" },
     ],
   },
   {
@@ -70,7 +75,7 @@ export const lightMenu: MenuItem[] = [
       {
         label: "Digital Marketing", href: "/",
         subLinks: [
-          { label: "Search Engine Optimization (SEO)", href: "/" },
+          { label: "Search Engine Optimization (SEO)", href: "/seo" },
           { label: "Google Ads Management (PPC)", href: "/" },
           { label: "Social Media Marketing", href: "/" },
           { label: "OFF Page SEO", href: "/" },
