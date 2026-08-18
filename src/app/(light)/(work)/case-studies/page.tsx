@@ -6,7 +6,10 @@ import { portfolioItems } from "@/components/home/home/workComponents/portfolio-
 import type { PortfolioCategory } from "@/components/home/home/workComponents/portfolio";
 import BreadcurmbData from "@/components/breadcrum/sections/breadcrumbdata";
 import StarBorder from "@/components/home/home/workComponents/StarBorder";
-import MajorClient from "@/components/home/home/workComponents/major-client";
+// import MajorClient from "@/components/home/home/workComponents/major-client";
+import MajorClientSection from "@/components/pages/service-2/sections/InnerServiceSection";
+import { InnerServiceSection } from "@/components/pages/service-2/sections";
+import MajorClientService from "@/components/home/home/workComponents/majorclient";
 
 interface NavItem {
     label: string;
@@ -46,7 +49,9 @@ export default function PortfolioPage() {
         }
       `}</style>
 
-            <MajorClient />
+            {/* <InnerServiceSection/> */}
+            <MajorClientService />
+
         </>
     );
 }

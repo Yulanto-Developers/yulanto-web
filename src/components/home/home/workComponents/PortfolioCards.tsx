@@ -78,7 +78,7 @@ export default function PortfolioCards({
               aria-label={`Open ${item.title}`}
               tabIndex={-1}
             >
-              +
+              <i className="fa-solid fa-magnifying-glass" style={{fontWeight:'lighter'}}></i>
             </button>
           </div>
         </div>

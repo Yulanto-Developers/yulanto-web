@@ -1,5 +1,5 @@
 import type { PortfolioItem } from "./portfolio";
-import kl from '@/assets/img/portfolio/kl-itech-1.jpg'
+import kl from '@/assets/img/portfolio/kl-itech-2.jpg'
 import img1 from '@/assets/img/sample/gallery/img- (3).jpg'
 import img2 from '@/assets/img/sample/gallery/img- (4).jpg'
 import img3 from '@/assets/img/sample/gallery/img- (5).jpg'

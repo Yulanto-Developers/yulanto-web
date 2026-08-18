@@ -17,7 +17,7 @@ const data = [
     currentPage: "Our Clients",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
   },
-   {
+  {
     path: "/careers",
     title: "Our Career",
     currentPage: "Our Career",
@@ -31,8 +31,8 @@ const data = [
   },
   {
     path: "/recent-project",
-    title: "Recent Project",
-    currentPage: "Recent Project",
+    title: "Recent Projects",
+    currentPage: "Recent Projects",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
   },
   {

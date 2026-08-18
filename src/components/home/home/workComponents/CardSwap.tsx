@@ -74,7 +74,7 @@ const placeNow = (
     x: slot.x,
     y: slot.y,
     z: slot.z,
-    xPercent: window.innerWidth <= 480 ? -25 : window.innerWidth <= 768 ? -35 : -47,
+    xPercent: window.innerWidth <= 480 ? -25 : window.innerWidth <= 768 ? -35 : -40,
     yPercent: -70,
     skewY: skew,
     transformOrigin: "center center",
