@@ -113,8 +113,8 @@ const GalleryGrid = ({
 
       <SectionTitle
         subtitle="Our Infrastructure"
-        titleFirst="Yulanto Web Creations is equipped with modern infrastructure"
-        titleSecond=""
+        titleFirst="Yulanto Web Creations"
+        titleSecond="is equipped with modern infrastructure"
         description="advanced software, development systems, analytical tools, and testing technologies to deliver high-quality websites, e-commerce platforms, web applications, and graphic design solutions. Our technology-driven approach ensures every project is creative, responsive, reliable, and built to meet our clients’ business needs."
       />
 

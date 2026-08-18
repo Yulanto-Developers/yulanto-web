@@ -112,8 +112,8 @@ export default function TimelineSlider() {
     <div className="container py-5">
       <SectionTitle
         subtitle="Our Journey"
-        titleFirst="Our Journey So Far"
-        titleSecond=""
+        titleFirst=" Our Journey "
+        titleSecond=" So Far"
         description="Our journey is a story of continuous growth, innovation, and commitment. Since our establishment in 2015, we have evolved from a small team with a big vision into a growing digital solutions company serving clients across India and international markets. Every milestone reflects our dedication to technology, creativity, customer satisfaction, and long-term business relationships."
       />
 

@@ -26,10 +26,10 @@ const SectionTitle = ({
 
                         <div className="col-xl-9">
                             <div className="px-project-title-box">
-                                <h3 className="px-section-title text-effect">
-                                    <span>{titleFirst} </span>
-                                    <span>{titleSecond}</span>
-                                </h3>
+                                <h4 className="px-about-title text-effect">
+                                    <span className="text-blue-about"> {titleFirst}  </span> {" "}
+                                    <span> {titleSecond} </span>
+                                </h4>
 
                                 <p className="mt-3"
                                     dangerouslySetInnerHTML={{

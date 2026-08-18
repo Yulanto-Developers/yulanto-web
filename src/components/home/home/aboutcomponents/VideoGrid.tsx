@@ -57,8 +57,8 @@ const VideoGrid = ({
     <section className="container my-5">
       <SectionTitle
         subtitle="Video"
-        titleFirst="How Effective Website Design & Development Can Accelerate Business Growth"
-        titleSecond=""
+        titleFirst="How Effective Website Design & Development"
+        titleSecond="Can Accelerate Business Growth"
         description=""
       />
 
