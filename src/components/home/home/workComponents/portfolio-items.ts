@@ -1,4 +1,5 @@
 import type { PortfolioItem } from "./portfolio";
+import kl from '@/assets/img/portfolio/kl-itech-1.jpg'
 import img1 from '@/assets/img/sample/gallery/img- (3).jpg'
 import img2 from '@/assets/img/sample/gallery/img- (4).jpg'
 import img3 from '@/assets/img/sample/gallery/img- (5).jpg'
@@ -10,7 +11,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: "web-1",
     title: "KL iTech",
-    image: img1.src,
+    image: kl.src,
     category: "website",
     date: "Nov, 2024",
     description: "Website Design and Development.",

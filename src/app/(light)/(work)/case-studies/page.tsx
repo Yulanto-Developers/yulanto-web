@@ -6,7 +6,7 @@ import { portfolioItems } from "@/components/home/home/workComponents/portfolio-
 import type { PortfolioCategory } from "@/components/home/home/workComponents/portfolio";
 import BreadcurmbData from "@/components/breadcrum/sections/breadcrumbdata";
 import StarBorder from "@/components/home/home/workComponents/StarBorder";
-import IndustryFilter from "@/components/home/home/workComponents/IndustryFilter";
+import MajorClient from "@/components/home/home/workComponents/major-client";
 
 interface NavItem {
     label: string;
@@ -46,26 +46,7 @@ export default function PortfolioPage() {
         }
       `}</style>
 
-            <div className="container my-5">
-                {/* Section Header */}
-                {/* <div className="row mb-5">
-                    <div className="col-lg-12 col-md-10">
-                        <h2 className="display-5 text-tenor fw-bold mb-3 text-dark">
-                            Showcasing Innovation &amp; Design Excellence
-                        </h2>
-                        <p className="text-muted text-figtree leading-relaxed fs-5">
-                            Explore the vast range of our skills demonstrated in our extensive collection,
-                            where every project serves as evidence of our commitment to outstanding design.
-                            From captivating websites that redefine the online experience to meticulously
-                            crafted logos that deeply connect with your target audience, our portfolio
-                            embodies the core of creativity and innovation. </p>
-                    </div>
-                </div> */}
-
-                <section className="container ">
-                    <IndustryFilter />
-                </section>
-            </div>
+            <MajorClient />
         </>
     );
 }
