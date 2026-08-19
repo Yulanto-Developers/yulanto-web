@@ -491,7 +491,7 @@ export default function RecentProject() {
                 <div className="row py-5  align-items-center">
                     <div className="col-xl-3">
                         <span className="tp-section-subtitle text-black blink-ball">
-                            Global Reach
+                            Recent Work
                         </span>
                     </div>
 
@@ -503,7 +503,7 @@ export default function RecentProject() {
                             </h4>
 
                             <p className="text-figtree text-black mt-2 font-paragraph-cls">
-                                We proudly partner with companies and enterprises worldwide, delivering high-impact web design, custom web development, digital solutions, and strategic digital services across key international markets.
+                                Explore our latest work, where creativity, innovation, and functionality come together to create exceptional digital experiences. As a professional web design and website development company, we create modern, responsive, and user-friendly websites that help businesses strengthen their online presence.
                             </p>
                         </div>
                     </div>
