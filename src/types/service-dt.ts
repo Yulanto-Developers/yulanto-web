@@ -2,13 +2,13 @@ export type ServiceCategory = string;
 
 export interface ServiceItemDT {
     id: number;
-    keyValue?:string;
+    keyValue?: string;
     title: string;
     image: string;
     description: string;
     categories?: ServiceCategory[];
-    active?:boolean,
-    subDesc:string
+    active?: boolean,
+    subDesc: string
 }
 
 //modern agency service data type

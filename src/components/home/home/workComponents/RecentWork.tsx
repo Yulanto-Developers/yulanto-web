@@ -8,6 +8,7 @@ import CardSwap, { Card } from "./CardSwap";
 import Image1 from "@/assets/img/sample/gallery/img- (1).jpg";
 import Image2 from "@/assets/img/sample/gallery/img- (2).jpg";
 import Image3 from "@/assets/img/sample/gallery/img- (3).jpg";
+import kl from '@/assets/img/recent-work/kl-itech-3.jpg';
 
 import Link from "next/link";
 
@@ -94,16 +95,30 @@ export default function RecentProject() {
         {
             title: "Sovereign",
 
-            subTitle: "Tour Booking Platform",
+            subTitle: "Specialist Facade Engineering Consultants – UK",
 
             category: "Web Development",
 
-            image: Image1,
+            image: kl,
 
             description:
-                "From sophisticated website design and development that seamlessly combine aesthetics with performance to distinctive logos and branding solutions that embody each brand’s identity, every project reflects our commitment to quality, creativity, and delivering effective digital solutions that help businesses grow.",
+                "A professional, responsive website designed for a leading facade engineering consultancy serving the UK construction industry. ",
+            services: [
+                "Website Design & Development",
+                "Corporate Website Design",
+                "Responsive & Mobile-Friendly Design",
+                "UI/UX Design",
+                "SEO-Friendly Website Structure",
+                "Content Presentation & Optimization",
+                "Service & Project Showcase",
+                "Contact & Lead Generation Integration",
+                "Performance & Speed Optimization",
+                "Cross-Browser Compatibility",
+                "Website Security & SSL Integration",
+                "Ongoing Website Support & Maintenance",
+            ],
 
-            location: "Chennai - India",
+            location: "United Kingdom",
 
             webDate: "Jan-2026",
 
@@ -112,13 +127,10 @@ export default function RecentProject() {
                 "Css",
                 "Boostrap",
                 "Php",
-                "React js",
-                "Next Js",
-                "Node JS",
             ],
 
             links:
-                "https://yulanto.com/latest-works",
+                "https://www.sovereignfacade.co.uk/",
         },
 
 
@@ -234,7 +246,7 @@ export default function RecentProject() {
 
             image: Image3,
 
-             description:
+            description:
                 "From sophisticated website design and development that seamlessly combine aesthetics with performance to distinctive logos and branding solutions that embody each brand’s identity, every project reflects our commitment to quality, creativity, and delivering effective digital solutions that help businesses grow.",
 
 
@@ -268,7 +280,7 @@ export default function RecentProject() {
 
             image: Image3,
 
-             description:
+            description:
                 "From sophisticated website design and development that seamlessly combine aesthetics with performance to distinctive logos and branding solutions that embody each brand’s identity, every project reflects our commitment to quality, creativity, and delivering effective digital solutions that help businesses grow.",
 
 
@@ -476,42 +488,25 @@ export default function RecentProject() {
                    HEADER
                 ================================================= */}
 
-                <div className="row mb-5">
-
-                    <div className="col-lg-4">
-
+                <div className="row py-5  align-items-center">
+                    <div className="col-xl-3">
                         <span className="tp-section-subtitle text-black blink-ball">
-
                             Recent Work
-
                         </span>
-
                     </div>
 
+                    <div className="col-xl-9">
+                        <div className="px-project-title-box">
 
-                    <div className="col-lg-7 col-md-10">
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">Where Creativity  {' '}</span>  Meets Functionality
+                            </h4>
 
-                        <h2 className="display-5 text-tenor fw-bold mb-3 text-dark">
-
-                            Where Creativity Meets Functionality
-
-                        </h2>
-
-
-                        <p className="text-muted text-figtree leading-relaxed fs-5">
-
-                            Explore our latest work, where creativity,
-                            innovation, and functionality come together
-                            to create exceptional digital experiences.
-                            As a professional web design and website
-                            development company, we create modern,
-                            responsive, and user-friendly websites that
-                            help businesses strengthen their online presence.
-
-                        </p>
-
+                            <p className="text-figtree text-black mt-2 font-paragraph-cls">
+                                Explore our latest work, where creativity, innovation, and functionality come together to create exceptional digital experiences. As a professional web design and website development company, we create modern, responsive, and user-friendly websites that help businesses strengthen their online presence.
+                            </p>
+                        </div>
                     </div>
-
                 </div>
 
 
@@ -519,7 +514,7 @@ export default function RecentProject() {
                    PROJECT CONTENT
                 ================================================= */}
 
-                <div className="row align-items-center g-4">
+                <div className="row align-items-start g-2">
 
 
                     {/* =================================================
@@ -533,7 +528,7 @@ export default function RecentProject() {
                             className="pe-lg-3 animate-fade-in"
                         >
 
-                            <h3 className="h3 fw-bold mb-1 text-tenor text-dark">
+                            <h3 className="h3 fw-bold mb-1 text-tenor text-blue">
 
                                 {activeCard.title}
 
@@ -553,7 +548,28 @@ export default function RecentProject() {
 
                             </p>
 
+                            {activeCard.services && (
+                                <div className="sovereign-services mb-3">
+                                    <h6 className="sovereign-services-title">
+                                        What We Did
+                                    </h6>
 
+                                    <div className="sovereign-services-list">
+                                        {activeCard.services.map((service, index) => (
+                                            <div
+                                                key={index}
+                                                className="sovereign-service-item"
+                                            >
+                                                <span className="sovereign-service-dot">
+                                                    ✓
+                                                </span>
+
+                                                <span>{service}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                             <div
                                 className="d-flex flex-wrap mb-3"
                                 aria-hidden
@@ -590,24 +606,25 @@ export default function RecentProject() {
                             </div>
 
 
-                            <Link
+                            <a
                                 href={
                                     activeCard.links ??
                                     "#"
                                 }
-                                className="fd-btn"
+                                target="_blank"
+                                className="fd-btn text-white"
                             >
 
-                                <span className="fd-btn-text text-tenor">
+                                <span className="fd-btn-text  text-tenor">
 
                                     Visit Website
 
                                 </span>
 
 
-                                <i className="fa-solid fa-arrow-right fd-btn-icon" />
+                                <i className="fa-solid  fa-arrow-right fd-btn-icon" />
 
-                            </Link>
+                            </a>
 
                         </div>
 
@@ -654,7 +671,7 @@ export default function RecentProject() {
 
                                 verticalDistance={30}
 
-                                delay={50000}
+                                delay={5000000}
 
                                 pauseOnHover={false}
 
