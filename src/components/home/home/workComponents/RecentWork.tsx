@@ -12,9 +12,32 @@ import img3 from '@/assets/img/recent-work/ldf.jpg';
 import img4 from '@/assets/img/recent-work/safety-merchant.jpg';
 import img5 from '@/assets/img/recent-work/Jer.jpg';
 import img6 from '@/assets/img/recent-work/tera-plus.jpg';
+import {
+    FaWordpress,
+    FaPhp,
+    FaHtml5,
+    FaCss3Alt,
+    FaBootstrap,
+    FaReact,
+    FaNodeJs,
+    FaCode,
+} from "react-icons/fa";
+import { SiMysql, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
 import Link from "next/link";
-
+const techIcons: Record<string, React.ReactNode> = {
+    WordPress: <FaWordpress />,
+    Mysql: <SiMysql />,
+    Php: <FaPhp />,
+    Html: <FaHtml5 />,
+    Css: <FaCss3Alt />,
+    Boostrap: <FaBootstrap />,
+    Ajax: <FaCode />,
+    "React js": <FaReact />,
+    "Next Js": <SiNextdotjs />,
+    "Node JS": <FaNodeJs />,
+    "Tailwind Css": <SiTailwindcss />,
+};
 
 export default function RecentProject() {
 
@@ -126,9 +149,8 @@ export default function RecentProject() {
             webDate: "Jan-2026",
 
             icons: [
-                "Html",
-                "Css",
-                "Boostrap",
+                "WordPress",
+                "Mysql",
                 "Php",
             ],
 
@@ -172,6 +194,7 @@ export default function RecentProject() {
                 "Html",
                 "Css",
                 "Boostrap",
+                "Ajax",
                 "Php",
             ],
 
@@ -219,10 +242,8 @@ export default function RecentProject() {
                 "Html",
                 "Css",
                 "Boostrap",
+                "Ajax",
                 "Php",
-                "React js",
-                "Next Js",
-                "Node JS",
             ],
 
             links:
@@ -231,7 +252,7 @@ export default function RecentProject() {
 
 
         {
-            title: "Freight Digital ",
+            title: "Freight Digital – UAE",
 
             subTitle: "Freight Digital – UAE",
 
@@ -242,25 +263,37 @@ export default function RecentProject() {
             image: img2,
 
             description:
-                "From sophisticated website design and development that seamlessly combine aesthetics with performance to distinctive logos and branding solutions that embody each brand’s identity, every project reflects our commitment to quality, creativity, and delivering effective digital solutions that help businesses grow.",
+                "Corporate website for a global freight and logistics digital marketing company, built for visibility and growth.",
+            services: [
+                "Corporate Website Design & Development",
+                "Modern UI/UX Design",
+                "Responsive & Mobile-Friendly Design",
+                "SEO-Friendly Website Structure",
+                "Freight & Logistics Industry-Focused Design",
+                "Service & Solutions Presentation",
+                "Lead Generation & Contact Forms",
+                "Website Performance Optimization",
+                "Cross-Browser Compatibility",
+                "Content Structuring & Integration",
+                "SSL & Website Security Integration",
+                "Ongoing Website Support & Maintenance",
+            ],
 
-
-            location: "Chennai - India",
+            location: "UAE",
 
             webDate: "Jan - 2026",
 
             icons: [
-                "Html",
-                "Css",
-                "Boostrap",
-                "Php",
+
                 "React js",
                 "Next Js",
                 "Node JS",
+                "Css",
+                "Tailwind Css"
             ],
 
             links:
-                "https://yulanto.com/latest-works",
+                "https://freightdigitalfzc.com/",
         },
 
 
@@ -349,10 +382,9 @@ export default function RecentProject() {
                 "Html",
                 "Css",
                 "Boostrap",
+                "Ajax",
                 "Php",
-                "React js",
-                "Next Js",
-                "Node JS",
+
             ],
 
             links:
@@ -634,29 +666,29 @@ export default function RecentProject() {
 
                                 {activeCard.icons.map(
                                     (item, idx) => (
-
                                         <span
                                             key={idx}
                                             className="
-                                                badge
-                                                bg-light
-                                                text-figtree
-                                                border
-                                                text-dark
-                                                me-2
-                                                mb-2
-                                                px-2
-                                                py-1
-                                            "
+                badge
+                bg-light
+                text-figtree
+                border
+                text-dark
+                me-2
+                mb-2
+                px-2
+                py-1
+                d-flex
+                align-items-center
+                gap-1
+            "
                                             style={{
                                                 fontSize: 12,
                                             }}
                                         >
-
+                                            {techIcons[item]}
                                             {item}
-
                                         </span>
-
                                     )
                                 )}
 
