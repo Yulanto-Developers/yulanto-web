@@ -577,7 +577,7 @@ export default function RecentProject() {
                    HEADER
                 ================================================= */}
 
-                <div className="row  align-items-center">
+                <div className="row mb-70 align-items-center">
                     <div className="col-xl-3">
                         <span className="tp-section-subtitle text-black blink-ball">
                             Recent Work
