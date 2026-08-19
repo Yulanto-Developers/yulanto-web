@@ -671,7 +671,7 @@ export default function RecentProject() {
 
                                 verticalDistance={30}
 
-                                delay={500000}
+                                delay={5000}
 
                                 pauseOnHover={false}
 
