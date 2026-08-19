@@ -502,7 +502,7 @@ export default function RecentProject() {
                                 <span className="text-blue-about">Where Creativity  {' '}</span>  Meets Functionality
                             </h4>
 
-                            <p className="text-figtree text-black mt-2 font-paragraph-cls">
+                            <p className="text-figtree text-dark mt-2 font-paragraph-cls">
                                 Explore our latest work, where creativity, innovation, and functionality come together to create exceptional digital experiences. As a professional web design and website development company, we create modern, responsive, and user-friendly websites that help businesses strengthen their online presence.
                             </p>
                         </div>
@@ -793,6 +793,11 @@ export default function RecentProject() {
 
                     </div>
 
+                </div>
+
+
+                <div className="mt-50">
+                    <p className="text-figtree text-dark">From sophisticated website design and development that seamlessly combine aesthetics with performance to distinctive logos and branding solutions that embody each brand’s identity, every project reflects our commitment to quality, creativity, and delivering effective digital solutions that help businesses grow.</p>
                 </div>
 
             </div>
