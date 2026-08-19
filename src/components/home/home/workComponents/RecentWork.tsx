@@ -5,10 +5,13 @@
 import { useEffect, useState } from "react";
 import CardSwap, { Card } from "./CardSwap";
 
-import Image1 from "@/assets/img/sample/gallery/img- (1).jpg";
-import Image2 from "@/assets/img/sample/gallery/img- (2).jpg";
-import Image3 from "@/assets/img/sample/gallery/img- (3).jpg";
-import kl from '@/assets/img/recent-work/kl-itech-5.jpg';
+
+import img1 from '@/assets/img/recent-work/Sovereign.jpg';
+import img2 from '@/assets/img/recent-work/freight-digital.jpg';
+import img3 from '@/assets/img/recent-work/ldf.jpg';
+import img4 from '@/assets/img/recent-work/safety-merchant.jpg';
+import img5 from '@/assets/img/recent-work/Jer.jpg';
+import img6 from '@/assets/img/recent-work/tera-plus.jpg';
 
 import Link from "next/link";
 
@@ -99,7 +102,7 @@ export default function RecentProject() {
 
             category: "Web Development",
 
-            image: kl,
+            image: img1,
 
             description:
                 "A professional, responsive website designed for a leading facade engineering consultancy serving the UK construction industry. ",
@@ -132,44 +135,8 @@ export default function RecentProject() {
             links:
                 "https://www.sovereignfacade.co.uk/",
         },
-
-
         {
-            title: "Safety Merchant",
-
-            subTitle: "Brand Identity",
-
-            category: "UI/UX Design",
-
-            topBarLabel: "Reliable",
-
-            image: Image2,
-
-            description:
-                "From sophisticated website design and development that seamlessly combine aesthetics with performance to distinctive logos and branding solutions that embody each brand’s identity, every project reflects our commitment to quality, creativity, and delivering effective digital solutions that help businesses grow.",
-
-
-            location: "Chennai - India",
-
-            webDate: "Jan-2026",
-
-            icons: [
-                "Html",
-                "Css",
-                "Boostrap",
-                "Php",
-                "React js",
-                "Next Js",
-                "Node JS",
-            ],
-
-            links:
-                "https://yulanto.com/latest-works",
-        },
-
-
-        {
-            title: "Terra Pluse ",
+            title: "Terra Pluse",
 
             subTitle: "Mobile Experience",
 
@@ -177,13 +144,27 @@ export default function RecentProject() {
 
             topBarLabel: "Scalable",
 
-            image: Image3,
+            image: img6,
 
             description:
-                "From sophisticated website design and development that seamlessly combine aesthetics with performance to distinctive logos and branding solutions that embody each brand’s identity, every project reflects our commitment to quality, creativity, and delivering effective digital solutions that help businesses grow.",
+                "Integrated engineering, environmental, and facility management solutions supporting sustainable projects across Saudi Arabia.",
 
-
-            location: "Chennai - India",
+            services: [
+                "Corporate Website Design & Development",
+                "Modern UI/UX Design",
+                "Responsive & Mobile-Friendly Design",
+                "SEO-Friendly Website Structure",
+                "Environmental Consulting Service Presentation",
+                "Sector & Industry Showcase",
+                "Project & Partner Presentation",
+                "Website Performance Optimization",
+                "English & Arabic Website Integration",
+                "Contact & Lead Generation Integration",
+                "Website Performance Optimization",
+                "Website Security & SSL Integration",
+                "Cross-Browser Compatibility",
+            ],
+            location: "Saudi Arabia - UAE",
 
             webDate: "Jan - 2026",
 
@@ -192,29 +173,43 @@ export default function RecentProject() {
                 "Css",
                 "Boostrap",
                 "Php",
-                "React js",
-                "Next Js",
-                "Node JS",
             ],
 
             links:
-                "https://yulanto.com/latest-works",
+                "https://www.terrapulse.com.sa/",
         },
 
 
         {
             title: "Johoreventrental",
 
-            subTitle: "Mobile Experience",
+            subTitle: "Johor Event Rental - Malaysia",
 
             category: "App Development",
 
             topBarLabel: "Scalable",
 
-            image: Image3,
+            image: img5,
 
             description:
-                "End-to-end mobile application architecture built for seamless performance.",
+                "Professional event rental website showcasing tents, staging, furniture, lighting, and complete event solutions in Johor.",
+
+            services: [
+                "Event Rental Website Design & Development",
+                "Modern UI/UX Design",
+                "Responsive & Mobile-Friendly Design",
+                "Event Equipment & Product Showcase",
+                "Tent & Canopy Rental Presentation",
+                "Staging, Furniture & Accessories Showcase",
+                "Sound, Lighting & LED Equipment Presentation",
+                "SEO-Friendly Website Structure",
+                "Event Portfolio & Gallery Integration",
+                "Corporate & Wedding Event Service Presentation",
+                "Contact & Quote Request Integration",
+                "Website Performance Optimization",
+                "Cross-Browser Compatibility",
+                "Website Security & SSL Integration",
+            ],
 
             location: "Chennai - India",
 
@@ -238,13 +233,13 @@ export default function RecentProject() {
         {
             title: "Freight Digital ",
 
-            subTitle: "Mobile Experience",
+            subTitle: "Freight Digital – UAE",
 
-            category: "App Development",
+            category: "Web Application",
 
             topBarLabel: "Scalable",
 
-            image: Image3,
+            image: img2,
 
             description:
                 "From sophisticated website design and development that seamlessly combine aesthetics with performance to distinctive logos and branding solutions that embody each brand’s identity, every project reflects our commitment to quality, creativity, and delivering effective digital solutions that help businesses grow.",
@@ -272,19 +267,32 @@ export default function RecentProject() {
         {
             title: "LDFKORMESIC",
 
-            subTitle: "Mobile Experience",
+            subTitle: "LDFKORMESIC - USA",
 
             category: "App Development",
 
             topBarLabel: "Scalable",
 
-            image: Image3,
+            image: img3,
 
             description:
-                "From sophisticated website design and development that seamlessly combine aesthetics with performance to distinctive logos and branding solutions that embody each brand’s identity, every project reflects our commitment to quality, creativity, and delivering effective digital solutions that help businesses grow.",
+                "Marine safety solutions website showcasing lifeboat, fire-fighting, calibration, testing, and fleet services in Malaysia.",
+            services: [
+                "Corporate Website Design & Development",
+                "Modern UI/UX Design",
+                "Responsive & Mobile-Friendly Design",
+                "SEO-Friendly Website Structure",
+                "Professional Service Presentation",
+                "Brand-Focused Website Design",
+                "Content Structuring & Integration",
+                "Lead Generation & Contact Form Integration",
+                "Website Performance Optimization",
+                "Cross-Browser Compatibility",
+                "Website Security & SSL Integration",
+                "Ongoing Website Support & Maintenance",
+            ],
 
-
-            location: "Chennai - India",
+            location: "Unitied States of America (USA)",
 
             webDate: "Jan - 2026",
 
@@ -300,6 +308,55 @@ export default function RecentProject() {
 
             links:
                 "https://yulanto.com/latest-works",
+        },
+        {
+            title: "Safety Merchant",
+
+            subTitle: "Safety Merchant - Malaysia",
+
+            category: "App Development",
+
+            topBarLabel: "Scalable",
+
+            image: img4,
+
+            description:
+                "Modern product showcase website designed to highlight the brand, products, expertise, and business solutions with a professional online presence. What We Did",
+            services: [
+                "Marine Safety Website Design & Development",
+                "Corporate Website Design",
+                "Modern UI/UX Design",
+                "Responsive & Mobile-Friendly Design",
+                "Marine Safety Services Showcase",
+                "Lifeboat & Davit Systems Presentation",
+                "LSA & FFA Services Showcase",
+                "Calibration & Testing Services Presentation",
+                "Load Testing Services Showcase",
+                "Fleet Service Agreement Presentation",
+                "Product & Certification Sections",
+                "SEO-Friendly Website Structure",
+                "Contact & Consultation Form Integration",
+                "Website Performance Optimization",
+                "Cross-Browser Compatibility",
+                "SSL & Website Security Integration"
+            ],
+
+            location: "Unitied States of America (USA)",
+
+            webDate: "Jan - 2026",
+
+            icons: [
+                "Html",
+                "Css",
+                "Boostrap",
+                "Php",
+                "React js",
+                "Next Js",
+                "Node JS",
+            ],
+
+            links:
+                "https://safety-merchant.com/",
         },
 
     ];
@@ -488,7 +545,7 @@ export default function RecentProject() {
                    HEADER
                 ================================================= */}
 
-                <div className="row py-5  align-items-center">
+                <div className="row  align-items-center">
                     <div className="col-xl-3">
                         <span className="tp-section-subtitle text-black blink-ball">
                             Recent Work
