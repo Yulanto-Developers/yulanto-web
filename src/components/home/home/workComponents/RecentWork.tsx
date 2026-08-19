@@ -8,7 +8,7 @@ import CardSwap, { Card } from "./CardSwap";
 import Image1 from "@/assets/img/sample/gallery/img- (1).jpg";
 import Image2 from "@/assets/img/sample/gallery/img- (2).jpg";
 import Image3 from "@/assets/img/sample/gallery/img- (3).jpg";
-import kl from '@/assets/img/recent-work/kl-itech-3.jpg';
+import kl from '@/assets/img/recent-work/kl-itech-4.jpg';
 
 import Link from "next/link";
 
@@ -671,7 +671,7 @@ export default function RecentProject() {
 
                                 verticalDistance={30}
 
-                                delay={5000}
+                                delay={500000}
 
                                 pauseOnHover={false}
 

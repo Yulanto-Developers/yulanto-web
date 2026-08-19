@@ -53,7 +53,7 @@
     align-items: center;
     gap: 8px;
     padding: 0 14px;
-    background: #53ae7d;
+    background: #53ae7daf;
     /* background: rgba(15, 15, 18, 0.589); */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -62,7 +62,7 @@
     transform: translateZ(1px);
     /* Elevates above background image layer */
     pointer-events: none;
-    opacity: .4;
+    /* opacity: .4; */
 }
 
 .card-top-bars {
