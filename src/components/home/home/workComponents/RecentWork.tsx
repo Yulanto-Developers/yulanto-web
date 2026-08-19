@@ -119,7 +119,7 @@ export default function RecentProject() {
     const cardObj = [
 
         {
-            title: "Sovereign",
+            title: "Sovereign - UK",
 
             subTitle: "Specialist Facade Engineering Consultants – UK",
 
@@ -158,7 +158,7 @@ export default function RecentProject() {
                 "https://www.sovereignfacade.co.uk/",
         },
         {
-            title: "Terra Pluse",
+            title: "Terra Pulse - Saudi Arabia - UAE",
 
             subTitle: "Mobile Experience",
 
@@ -204,7 +204,7 @@ export default function RecentProject() {
 
 
         {
-            title: "Johoreventrental",
+            title: "Johor Event Rental - Malaysia",
 
             subTitle: "Johor Event Rental - Malaysia",
 
@@ -298,7 +298,7 @@ export default function RecentProject() {
 
 
         {
-            title: "LDFKORMESIC",
+            title: "LDFKORMESIC - USA",
 
             subTitle: "LDFKORMESIC - USA",
 
@@ -343,7 +343,7 @@ export default function RecentProject() {
                 "https://yulanto.com/latest-works",
         },
         {
-            title: "Safety Merchant",
+            title: "Safety Merchant - Malaysia",
 
             subTitle: "Safety Merchant - Malaysia",
 
@@ -624,11 +624,11 @@ export default function RecentProject() {
                             </h3>
 
 
-                            <h5 className="h6 text-muted text-figtree fw-semibold mb-3">
+                            {/* <h5 className="h6 text-muted text-figtree fw-semibold mb-3">
 
                                 {activeCard.subTitle}
 
-                            </h5>
+                            </h5> */}
 
 
                             <p className="text-secondary mb-4 text-figtree text-left">
