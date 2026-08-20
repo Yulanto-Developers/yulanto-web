@@ -1,0 +1,131 @@
+/* ===== MAIN ===== */
+.yul-st {
+  width: 100%;
+  color: #334155;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* ===== BLUE SECTIONS ===== */
+.yul-st .about-blue-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: #0b3456;
+  color: #ffffff;
+}
+
+.yul-st .about-content-side {
+  padding-left: 25px;
+}
+
+.yul-st .about-content-side h2 {
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.yul-st .about-content-side p {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.8;
+}
+
+/* ===== IMAGE ===== */
+.yul-st .about-img-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+.yul-st .about-img-wrap img {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.yul-st .about-img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+/* ===== SERVICES - WHITE ===== */
+.yul-st .services-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.yul-st .services-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.yul-st .services-content p {
+  color: #334155;
+  line-height: 1.8;
+}
+
+/* ===== SECOND BLUE SECTION ===== */
+.yul-st .second-blue-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets & small laptops */
+@media (max-width: 992px) {
+  .yul-st .about-blue-section {
+    padding: 50px 20px;
+  }
+
+  .yul-st .about-content-side {
+    padding-left: 0;
+  }
+
+  .yul-st .about-img-wrap img {
+    height: 350px;
+  }
+
+  .yul-st .services-section {
+    padding: 50px 20px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 576px) {
+  .yul-st .about-blue-section {
+    padding: 40px 15px;
+  }
+
+  .yul-st .about-img-wrap {
+    border-radius: 12px;
+  }
+
+  .yul-st .about-img-wrap img {
+    height: 250px;
+  }
+
+  .yul-st .about-content-side h2 {
+    font-size: 24px;
+  }
+
+  .yul-st .about-content-side p,
+  .yul-st .services-content p {
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  .yul-st .services-section {
+    padding: 40px 15px;
+  }
+
+  .yul-st .second-blue-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

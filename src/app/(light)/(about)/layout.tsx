@@ -1,8 +1,11 @@
 
-import { MainFooter, PageHeader } from "@/components/layout";
+import { MainFooter } from "@/components/layout";
 import PersonalPortfolioHeader from "@/components/layout/headers/PersonalPortfolioHeader";
 import { ClientProviders } from "@/providers";
+
 import "@/assets/css/style.css";
+import "@/assets/css/style1.css";
+import "glightbox/dist/css/glightbox.css";
 
 export default function AboutUsLayout({ children }: {
 

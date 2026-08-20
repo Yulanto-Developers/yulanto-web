@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -23,23 +19,25 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/assets/*": [
-        "./public/assets/*"
-      ]
+      "@/*": ["./src/*"],
+      "@/assets/*": ["./public/assets/*"]
     }
   },
   "include": [
+    "video.d.ts",
+
     "next-env.d.ts",
+
     "**/*.ts",
+
     "**/*.tsx",
+
     ".next/types/**/*.ts",
+
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+
+    "**/*.mts",
+    "src/components/home/home/aboutcomponents/TimelineSlider.jsx"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

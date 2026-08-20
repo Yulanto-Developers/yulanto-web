@@ -1,0 +1,10 @@
+[33mc1222f2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to ORIG_HEAD
+[33md376d62[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: pull: Fast-forward
+[33mc1222f2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{2}: reset: moving to HEAD
+[33mc1222f2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{3}: commit: our story completed by ak
+[33m54d9a4e[m HEAD@{4}: commit: menu
+[33me6c1d97[m HEAD@{5}: commit: our story completed by ak
+[33m4497745[m HEAD@{6}: pull: Merge made by the 'ort' strategy.
+[33mc9aacbe[m HEAD@{7}: commit: Our Story AK
+[33m8ebf37a[m HEAD@{8}: commit: breadcrum fixed arun
+[33mf25847e[m HEAD@{9}: pull: Fast-forward

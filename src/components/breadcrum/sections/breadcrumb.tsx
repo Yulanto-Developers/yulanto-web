@@ -21,11 +21,10 @@ export default function BreadcrumbBanner({
 
   return (
     <section
-      className="breadcrumb-banner"
-      style={{
+      className="breadcrumb-banner">
+      <div className="breadcrumb-banner-img" style={{
         backgroundImage: `url(${image})`,
-      }}
-    >
+      }}></div>
       <div className="overlay"></div>
 
       <div className="container">

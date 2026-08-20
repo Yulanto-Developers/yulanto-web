@@ -1,38 +1,28 @@
 import Breadcrumbdata from "@/components/breadcrum/sections/breadcrumbdata";
 import { Metadata } from "next";
-import { AboutCompany, TeamSlider, TimelineDemo, VideoCarousel } from "@/components/home/home/aboutcomponents";
-import GalleryData from "@/components/home/home/aboutcomponents/GalleryData";
-import MDProfile from "@/components/home/home/aboutcomponents/MDProfile";
+import { AboutCompany, TimelineSlider, VideoGrid } from "@/components/home/home/aboutcomponents";
+import GalleryGrid  from "@/components/home/home/aboutcomponents/GalleryGrid";
+// import "./globals.scss";
+
 
 export const metadata: Metadata = {
-    title: "Home - Creative Portfolio Nextjs Template",
+  title: "Home - Creative Portfolio Nextjs Template",
 };
- const tutorialVideos = [
-    {
-      src: 'https://example.com/tutorial1.mp4',
-      title: 'React Basics',
-      type: 'video/mp4'
-    },
-    {
-      src: 'https://example.com/tutorial2.mp4',
-      title: 'TypeScript Guide',
-      type: 'video/mp4'
-    }
-  ];
+
+
+
+
 const HomePage = () => {
-    return (
-        <>
-            <Breadcrumbdata />
-            <AboutCompany />
-            <MDProfile/>
-            <TeamSlider />
-            <GalleryData />
-            <TimelineDemo /> 
-             <VideoCarousel  videos={tutorialVideos}
-        autoplay={true}  />
-           
-        </>
-    );
+  return (
+    <>
+      <Breadcrumbdata />
+      <AboutCompany />
+      <TimelineSlider />
+      <GalleryGrid  />
+      <VideoGrid columns={2} />
+
+    </>
+  );
 };
 
 export default HomePage;

@@ -1,0 +1,36 @@
+.px-service-title h4 {
+    color: #000; 
+}
+
+.px-service-num span {
+     color: #000;
+}
+
+.px-service-accordion-wrap .accordion .accordion-items .accordion-header .accordion-buttons .accordion-icon {
+    border: 1px solid #00000024;
+}
+
+.px-service-accordion-wrap .accordion .accordion-items .accordion-header .accordion-buttons .accordion-icon:before {
+    background-color: #000000;
+}
+
+
+.px-service-accordion-wrap .accordion .accordion-items .accordion-body p {
+    color: #00000099;
+}
+
+
+.px-service-category span {
+    color: #000000;
+    background: #00000014;
+  
+}
+
+.px-service-accordion-wrap .accordion .accordion-items .accordion-header .accordion-buttons .accordion-icon:after {
+    background-color: #000000;
+}
+
+.py-60{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}

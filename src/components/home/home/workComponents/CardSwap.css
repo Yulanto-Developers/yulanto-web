@@ -53,7 +53,8 @@
     align-items: center;
     gap: 8px;
     padding: 0 14px;
-    background: rgba(15, 15, 18, 0.85);
+    background: #053456;
+    /* background: rgba(15, 15, 18, 0.589); */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -61,6 +62,7 @@
     transform: translateZ(1px);
     /* Elevates above background image layer */
     pointer-events: none;
+    /* opacity: .4; */
 }
 
 .card-top-bars {
@@ -75,7 +77,7 @@
 .top-bar-dot {
     width: 9px;
     height: 9px;
-    background-color: #053456;
+    background-color: #53ae7d;
     border-radius: 50%;
     display: inline-block;
     flex-shrink: 0;
@@ -236,4 +238,65 @@
 .fd-btn:active {
     transform: translateY(0);
     box-shadow: 0 4px 12px rgba(39, 86, 116, 0.3);
+}
+
+/*new list */
+
+
+.sovereign-services {
+    margin-top: 4px;
+}
+
+.sovereign-services-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #053456;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+
+.sovereign-services-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px 14px;
+}
+
+.sovereign-service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #555;
+}
+
+.sovereign-service-dot {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(83, 174, 125, 0.12);
+    color: #53ae7d;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 1px;
+}
+
+.text-blue{
+    color:#053456
+}
+
+@media (max-width: 991px) {
+    .sovereign-services-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .sovereign-services-list {
+        grid-template-columns: 1fr;
+    }
 }

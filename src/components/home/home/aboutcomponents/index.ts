@@ -1,8 +1,7 @@
+// Export all components from a single file
 export { default as AboutCompany } from './Aboutus';
-export { default as TeamSlider } from './TeamSection';
-export { default as TeamGallery } from './TeamGallery';
-export { default as GalleryData } from './GalleryData';
-export { default as MDProfile } from './MDProfile';
-export { default as TimeLine } from './TimeLine';
-export { TimelineDemo } from './TimelineDemo';
-export { default as VideoCarousel } from './VideoCarousel'
+export { default as GalleryGrid } from './GalleryGrid';
+export { default as GalleryItem } from './GalleryItem';
+export { default as TimelineSlider } from './TimelineSlider';
+export { default as VideoGrid } from './VideoGrid';
+export { default as VideoCard } from './VideoCard';

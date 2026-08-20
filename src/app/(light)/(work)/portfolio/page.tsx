@@ -47,23 +47,29 @@ export default function PortfolioPage() {
 
             <div className="container my-5">
                 {/* Section Header */}
-                <div className="row mb-5">
-                    <div className="col-lg-12 col-md-10">
-                        <h2 className="display-5 text-tenor fw-bold mb-3 text-dark">
-                            Our Portfolio
-                        </h2>
-                        <p className="text-muted text-figtree leading-relaxed fs-5">
-                            Step into our portfolio showcase, where the fusion of creativity and
-                            functionality is brought to life. Explore our awe-inspiring website designs,
-                            eye-catching logos, engaging brochures, compelling advertisements, and
-                            unforgettable business cards. Every project exemplifies our unwavering
-                            commitment to delivering excellence, driving innovation, and guaranteeing client
-                            satisfaction.
-                        </p>
+                <div className="row mb-70 align-items-center">
+                    <div className="col-xl-3">
+                        <span className="tp-section-subtitle text-black blink-ball">
+                           Design Showcase
+                        </span>
+                    </div>
+
+                    <div className="col-xl-9">
+                        <div className="px-project-title-box">
+
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">Turning Ideas  {' '}</span>  into Powerful Digital Experiences.
+                            </h4>
+
+                            <p className="text-figtree text-dark mt-2 font-paragraph-cls">
+                               Explore our portfolio, showcasing the perfect blend of creativity, functionality, and innovation. From modern website designs and distinctive logos to engaging brochures, impactful advertisements, and professional business cards, every project reflects our commitment to quality and attention to detail. Our work is crafted to strengthen brands, create meaningful digital experiences, and deliver solutions that exceed client expectations.
+ 
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <section className="container py-5">
+                <section className="container">
                     {/* Outer Pill Container around all buttons */}
                     <div className="portfolio-category-nav-wrapper">
                         <div className="portfolio-category-nav">
@@ -89,7 +95,7 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Portfolio Cards */}
-                    <div className="mt-5">
+                    <div className="">
                         <PortfolioCards
                             items={filteredItems}
                             activeCategory={activeCategory}
