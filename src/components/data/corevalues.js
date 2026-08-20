@@ -1,4 +1,3 @@
-import img2 from "@/assets/images/about/mini-2.jpg";
 import Creativity from "@/assets/images/core_value/Creativity.jpg";
 import Customer from "@/assets/images/core_value/Customer-Delight.jpg";
 import Efficiency from "@/assets/images/core_value/Efficiency.jpg";

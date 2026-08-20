@@ -15,6 +15,8 @@ export default function TeamSlider() {
         titleFirst="Meet Our Team"
         titleSecond=""
         description="Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions. With expertise, creativity, and a commitment to excellence, we transform ideas into impactful results."
+        animationType="text-reveal-lines"
+        delay={300}
       />
       <div className="container pt-3">
         <Swiper
