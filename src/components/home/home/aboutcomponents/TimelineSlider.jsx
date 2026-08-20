@@ -1,16 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import "./TimeLine.css";
 import { timelineData } from "@/components/data/timelineData";
 import SectionTitle from "@/components/sectiontitle/SectionTitle";
 
-const CARD_WIDTH = 320;
-const CARD_GAP = 40;
-
 export default function TimelineSlider() {
   const viewportRef = useRef(null);
   const trackRef = useRef(null);
+  const intervalRef = useRef(null);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -21,100 +19,119 @@ export default function TimelineSlider() {
     prevTranslate: 0,
   });
 
-  const intervalRef = useRef();
+  const getStepWidth = useCallback(() => {
+    if (!viewportRef.current || !trackRef.current) return 360;
+    const item = viewportRef.current.querySelector(".timeline-item");
+    if (!item) return 360;
+    const style = window.getComputedStyle(trackRef.current);
+    const gap = parseFloat(style.gap) || 32;
+    return item.offsetWidth + gap;
+  }, []);
 
-  const stepWidth = CARD_WIDTH + CARD_GAP;
+  const updatePosition = useCallback(
+    (index) => {
+      if (!trackRef.current) return;
+      const stepWidth = getStepWidth();
+      const offset = -index * stepWidth;
 
-  const updatePosition = (index) => {
-    if (!viewportRef.current || !trackRef.current) return;
+      drag.current.prevTranslate = offset;
+      trackRef.current.style.transform = `translate3d(${offset}px, 0, 0)`;
+    },
+    [getStepWidth]
+  );
 
-    const viewportWidth = viewportRef.current.offsetWidth;
-
-    const offset = viewportWidth / 2 - CARD_WIDTH / 2 - index * stepWidth;
-
-    drag.current.prevTranslate = offset;
-
-    trackRef.current.style.transform = `translateX(${offset}px)`;
-  };
+  const startAutoplay = useCallback(() => {
+    clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % timelineData.length);
+    }, 3500);
+  }, []);
 
   useEffect(() => {
     updatePosition(currentIndex);
-  }, [currentIndex]);
+  }, [currentIndex, updatePosition]);
 
   useEffect(() => {
-    const resize = () => updatePosition(currentIndex);
-
-    window.addEventListener("resize", resize);
-
-    intervalRef.current = setInterval(() => {
-      setCurrentIndex((prev) =>
-        prev === timelineData.length - 1 ? 0 : prev + 1,
-      );
-    }, 3000);
+    const handleResize = () => updatePosition(currentIndex);
+    window.addEventListener("resize", handleResize);
+    startAutoplay();
 
     return () => {
       clearInterval(intervalRef.current);
-      window.removeEventListener("resize", resize);
+      window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [currentIndex, startAutoplay, updatePosition]);
 
   const getX = (e) => (e.touches ? e.touches[0].clientX : e.clientX);
 
   const dragStart = (e) => {
     clearInterval(intervalRef.current);
-
     drag.current.dragging = true;
     drag.current.startX = getX(e);
 
-    trackRef.current.classList.add("dragging");
+    if (trackRef.current) {
+      trackRef.current.classList.add("dragging");
+    }
   };
 
   const dragMove = (e) => {
     if (!drag.current.dragging) return;
-
     const current = getX(e);
-
     drag.current.dragOffset = current - drag.current.startX;
 
-    trackRef.current.style.transform = `translateX(${
-      drag.current.prevTranslate + drag.current.dragOffset
-    }px)`;
+    if (trackRef.current) {
+      const translate = drag.current.prevTranslate + drag.current.dragOffset;
+      trackRef.current.style.transform = `translate3d(${translate}px, 0, 0)`;
+    }
   };
 
   const dragEnd = () => {
     if (!drag.current.dragging) return;
-
     drag.current.dragging = false;
 
-    trackRef.current.classList.remove("dragging");
+    if (trackRef.current) {
+      trackRef.current.classList.remove("dragging");
+    }
 
-    if (
-      drag.current.dragOffset < -50 &&
-      currentIndex < timelineData.length - 1
-    ) {
-      setCurrentIndex((prev) => prev + 1);
-    } else if (drag.current.dragOffset > 50 && currentIndex > 0) {
-      setCurrentIndex((prev) => prev - 1);
+    const threshold = 50;
+    if (drag.current.dragOffset < -threshold) {
+      setCurrentIndex((prev) => (prev + 1) % timelineData.length);
+    } else if (drag.current.dragOffset > threshold) {
+      setCurrentIndex((prev) =>
+        prev === 0 ? timelineData.length - 1 : prev - 1
+      );
     } else {
       updatePosition(currentIndex);
     }
 
     drag.current.dragOffset = 0;
+    startAutoplay();
+  };
 
-    intervalRef.current = setInterval(() => {
-      setCurrentIndex((prev) =>
-        prev === timelineData.length - 1 ? 0 : prev + 1,
-      );
-    }, 3000);
+  // Helper function to split title words in half and wrap second half in span
+  const renderFormattedTitle = (title) => {
+    if (!title) return null;
+    const words = title.trim().split(" ");
+    if (words.length === 1) return title;
+
+    const midIndex = Math.ceil(words.length / 2);
+    const firstHalf = words.slice(0, midIndex).join(" ");
+    const secondHalf = words.slice(midIndex).join(" ");
+
+    return (
+      <>
+        {firstHalf} <span className="text-blue-about">{secondHalf}</span>
+      </>
+    );
   };
 
   return (
-    <div className="container py-5">
+    <div className="container-fluid container-xxl py-4 px-3 px-md-4">
       <SectionTitle
         subtitle="Our Journey"
         titleFirst=" Our Journey "
         titleSecond=" So Far"
-        description="Our journey is a story of continuous growth, innovation, and commitment. Since our establishment in 2015, we have evolved from a small team with a big vision into a growing digital solutions company serving clients across India and international markets. Every milestone reflects our dedication to technology, creativity, customer satisfaction, and long-term business relationships."
+        description="Our journey is a story of continuous growth, innovation, and commitment. Since our establishment in 2015, we have evolved from a small team with a big vision into a growing digital solutions company."
       />
 
       <div
@@ -131,31 +148,26 @@ export default function TimelineSlider() {
         <div className="timeline-line" />
 
         <div className="timeline-track" ref={trackRef}>
-          {timelineData.map((item, index) => {
-            const Icon = item.icon;
-
-            return (
-              <div
-                key={item.year}
-                className={`timeline-item ${
-                  currentIndex === index ? "active" : ""
-                }`}
-                onClick={() => setCurrentIndex(index)}
-              >
-                <div className="timeline-node">
-                  <div className="node-circle">{item.year}</div>
-                </div>
-
-                <div className="timeline-card">
-                  <Icon className="card-icon" />
-
-                  <h4>{item.title}</h4>
-
-                  <p>{item.desc}</p>
-                </div>
+          {timelineData.map((item, index) => (
+            <div
+              key={item.year}
+              className={`timeline-item ${
+                currentIndex === index ? "active" : ""
+              }`}
+              onClick={() => setCurrentIndex(index)}
+            >
+              <div className="timeline-node">
+                <div className="node-circle">{item.year}</div>
               </div>
-            );
-          })}
+
+              <div className="timeline-card">
+                <h4 className="px-about-title text-effect timeline-card-heading">
+                  {renderFormattedTitle(item.title)}
+                </h4>
+                <p>{item.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

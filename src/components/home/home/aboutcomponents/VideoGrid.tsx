@@ -7,8 +7,7 @@ interface VideoItem {
   id: number | string;
   title: string;
   year: string;
-  poster?: string;
-  src: string;
+  youtubeId: string;
   priority?: boolean;
 }
 
@@ -17,30 +16,27 @@ interface VideoGridProps {
   columns?: 1 | 2 | 3 | 4;
 }
 
+// Updated data matching the provided YouTube links
 const videoData: VideoItem[] = [
   {
     id: 1,
-    title: "Core",
-    year: "2026",
-    poster:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800",
-    src: "/videos/video.mp4",
+    title: "Responsive Web Design Company",
+    year: "2017",
+    youtubeId: "GLHe-zBsh7k",
     priority: true,
   },
   {
     id: 2,
-    title: "360 Abroad",
-    year: "2026",
-    poster:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800",
-    src: "/videos/video2.mp4",
+    title: "Web Development Company in Chennai",
+    year: "2017",
+    youtubeId: "prWzEbXKaCw",
     priority: false,
   },
 ];
 
 const VideoGrid = ({
   videos = videoData,
-  columns = 3,
+  columns = 2,
 }: VideoGridProps) => {
   const getColumnClass = () => {
     const colMap: Record<number, string> = {
@@ -50,7 +46,7 @@ const VideoGrid = ({
       4: "col-12 col-md-6 col-lg-4 col-xl-3",
     };
 
-    return colMap[columns] || colMap[3];
+    return colMap[columns] || colMap[2];
   };
 
   return (
@@ -65,14 +61,13 @@ const VideoGrid = ({
       <div className="row g-4 mt-3">
         {videos.map((video, index) => (
           <div
-            key={`${video.id}-${video.src}-${index}`}
+            key={`${video.id}-${video.youtubeId}-${index}`}
             className={getColumnClass()}
           >
             <VideoCard
               title={video.title}
               year={video.year}
-              poster={video.poster}
-              src={video.src}
+              youtubeId={video.youtubeId}
               priority={video.priority ?? false}
             />
           </div>
