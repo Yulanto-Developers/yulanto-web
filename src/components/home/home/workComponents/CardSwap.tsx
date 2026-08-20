@@ -14,10 +14,11 @@ import "./CardSwap.css";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   customClass?: string;
+  projectLink?: string;
 }
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ customClass, className, ...rest }, ref) => {
+  ({ customClass, className, projectLink, ...rest }, ref) => {
     return (
       <div
         ref={ref}
@@ -464,11 +465,19 @@ const CardSwap = ({
           },
 
           onClick: () => {
+
+            if (order.current[0] === index) {
+              const link = (child.props as any)?.projectLink;
+
+              if (link) {
+                window.open(link, "_blank", "noopener,noreferrer");
+              }
+
+              return;
+            }
             activateCard(index);
 
-            onCardClick?.(
-              index
-            );
+            onCardClick?.(index);
           },
         }
       );

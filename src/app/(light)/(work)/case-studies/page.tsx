@@ -48,7 +48,32 @@ export default function PortfolioPage() {
           animation: fadeInText 0.35s ease-out forwards;
         }
       `}</style>
+            <div className="container my-5">
+                {/* Section Header */}
+                <div className="row mb-70 align-items-center">
+                    <div className="col-xl-3">
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            From Vision to Reality
+                        </span>
+                    </div>
 
+                    <div className="col-xl-9">
+                        <div className="px-project-title-box">
+
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">Real projects.{' '}</span>   Creative solutions. Measurable business value.
+                            </h4>
+
+                            <p className="text-figtree text-dark mt-2 font-paragraph-cls">
+                                Explore our successful projects and discover how we transform ideas into engaging, innovative, and impactful digital experiences that help businesses grow and stand out online.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
             {/* <InnerServiceSection/> */}
             <MajorClientService />
 

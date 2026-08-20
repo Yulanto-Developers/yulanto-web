@@ -53,7 +53,7 @@
     align-items: center;
     gap: 8px;
     padding: 0 14px;
-    background: #53ae7daf;
+    background: #053456;
     /* background: rgba(15, 15, 18, 0.589); */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -77,7 +77,7 @@
 .top-bar-dot {
     width: 9px;
     height: 9px;
-    background-color: #053456;
+    background-color: #53ae7d;
     border-radius: 50%;
     display: inline-block;
     flex-shrink: 0;
