@@ -45,22 +45,29 @@ export default function PortfolioPage() {
           animation: fadeInText 0.35s ease-out forwards;
         }
       `}</style>
-
             <div className="container my-5">
                 {/* Section Header */}
-                {/* <div className="row mb-5">
-                    <div className="col-lg-12 col-md-10">
-                        <h2 className="display-5 text-tenor fw-bold mb-3 text-dark">
-                            Showcasing Innovation &amp; Design Excellence
-                        </h2>
-                        <p className="text-muted text-figtree leading-relaxed fs-5">
-                            Explore the vast range of our skills demonstrated in our extensive collection,
-                            where every project serves as evidence of our commitment to outstanding design.
-                            From captivating websites that redefine the online experience to meticulously
-                            crafted logos that deeply connect with your target audience, our portfolio
-                            embodies the core of creativity and innovation. </p>
+                <div className="row mb-10 align-items-center">
+                    <div className="col-xl-3">
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            Industries We Specialize In
+                        </span>
                     </div>
-                </div> */}
+
+                    <div className="col-xl-9">
+                        <div className="px-project-title-box">
+
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">Building Digital Experiences  {' '}</span>   Across Industries.
+                            </h4>
+
+                            <p className="text-figtree text-dark mt-2 font-paragraph-cls">
+                                We deliver innovative web and digital solutions for businesses across diverse industries. From startups to established enterprises, our industry-focused approach creates impactful digital experiences that drive growth and deliver results.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
                 <section className="container ">
                     <IndustryFilter />

@@ -51,8 +51,8 @@ export default function Industry() {
             <div className="industry-container">
 
                 {/* Section Header */}
-                <div className="industry-header">
-                    {/* <span className="industry-badge">Portfolio Highlights</span> */}
+                {/* <div className="industry-header">
+                  
 
                     <h2 className="industry-heading">
                         Filter By Industry
@@ -61,7 +61,7 @@ export default function Industry() {
                     <p className="industry-subheading">
                         Explore our custom web solutions engineered across specialized market sectors.
                     </p>
-                </div>
+                </div> */}
 
                 <div className="industry-layout">
 
@@ -92,11 +92,10 @@ export default function Industry() {
                                                     industry.id
                                                 )
                                             }
-                                            className={`filter-btn ${
-                                                isActive
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`filter-btn ${isActive
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                         >
                                             <span className="filter-icon">
                                                 <IconComponent size={18} />
@@ -125,9 +124,11 @@ export default function Industry() {
                         {/* 1. CATEGORY SHOWCASE TITLE */}
 
                         <div className="category-title-header">
-                            <h3 className="category-heading">
-                                {activeCategoryObj?.label || 'Projects'} Showcase
+                            <h3 className="category-heading text-tenor">
+                                Our Work Across  {" "}
+                                {activeCategoryObj?.label || 'Projects'} {" "}Industries
                             </h3>
+                            <p className='text-figtree industry-desc-text'>Explore our industry-focused projects and digital solutions designed to help businesses grow and succeed.</p>
                         </div>
 
 
@@ -281,7 +282,7 @@ export default function Industry() {
 
                         <div>
 
-                            {activeCategoryObj?.industryImg && (
+                            {activeCategoryObj?.image === true && (
 
                                 <div className="banner-frame">
 
@@ -301,11 +302,11 @@ export default function Industry() {
                             {activeCategoryObj?.industryDesc && (
 
                                 <div className="industry-description mt-20">
-
-                                    <p className="industry-desc-text">
-                                        Explore the vast range of our skills demonstrated in our extensive collection, where every project serves as evidence of our commitment to outstanding design. From captivating websites that redefine the online experience to meticulously crafted logos that deeply connect with your target audience, our portfolio embodies the core of creativity and innovation.s
-                                    </p>
-
+                                    {
+                                        activeCategoryObj.industryDesc.map((item: string, index: number) => {
+                                            return <p key={index} className='industry-desc-text text-figtree' dangerouslySetInnerHTML={{ __html: item }} />
+                                        })
+                                    }
                                 </div>
 
                             )}

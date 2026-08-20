@@ -8,8 +8,9 @@ export interface IndustryCategory {
   id: string;
   label: string;
   icon: LucideIcon;
+  image?: boolean;
   industryImg?: string;
-  industryDesc?: string;
+  industryDesc?: string[];
 }
 
 export interface IndustryProject {
@@ -32,71 +33,273 @@ export const INDUSTRIES: IndustryCategory[] = [
     id: 'corporate',
     label: 'Corporate',
     icon: Building2,
+    image: true,
     industryImg: '/assets/img/all-works/head-img/corporate.jpg',
-    industryDesc: 'Empowering corporate brands with high-performance digital platforms tailored for dynamic enterprise growth.'
+    industryDesc: [
+      "We create professional website design and digital solutions for corporate businesses across diverse industries, helping organizations build a strong online presence and achieve their business goals.",
+      "From corporate websites and B2B web development to responsive website design, WordPress development, UI/UX design, and digital marketing solutions, our experienced team delivers customized solutions based on each industry’s unique requirements.",
+      "Our portfolio showcases modern, SEO-friendly, mobile-responsive, and conversion-focused websites designed to enhance brand credibility, improve user experience, and generate business opportunities. Whether you are an established enterprise, growing company, or emerging business, we provide reliable web design and website development services that support long-term digital growth and strengthen your competitive presence online."
+    ]
   },
   {
     id: 'software',
     label: 'Software & IT',
     icon: Laptop,
+    image: false,
     industryImg: '/assets/img/all-works/head-img/software.jpg',
-    industryDesc: 'Cutting-edge software and IT solutions designed to scale operations and optimize technical infrastructure.'
+    industryDesc: [
+      "We deliver professional web design and website development solutions for Software and IT companies, helping technology businesses build a strong, credible, and competitive online presence.",
+      "Our expertise includes IT company website design, software company website development, SaaS website design, technology website development, WordPress development, responsive web design, UI/UX design, and SEO-friendly website development. We create modern, scalable, mobile-responsive, and user-focused websites that clearly communicate complex technology services and solutions while improving user engagement and generating quality business leads.",
+      "From software development companies and IT consulting firms to SaaS providers, technology startups, cloud service providers, and digital transformation companies, we develop customized digital experiences aligned with each business's goals and target audience. Our SEO-optimized websites are structured to improve search engine visibility, strengthen brand authority, and support long-term online growth. With a focus on performance, usability, security, and conversion, we help Software and IT businesses establish a powerful digital presence and turn their website into an effective business growth platform."
+    ]
   },
   {
     id: 'realestate',
     label: 'Real Estate',
     icon: Building,
+    image: false,
     industryImg: '/assets/img/all-works/head-img/realestate.jpg',
-    industryDesc: 'Showcasing premium residential and commercial spaces with engaging architectural visuals and seamless lead conversion.'
+    industryDesc: [
+      "We create professional real estate website design and development solutions that help property businesses establish a strong online presence, showcase their projects, and generate quality leads.",
+      "Our expertise includes real estate website design, property website development, builder and developer websites, residential and commercial property websites, real estate portal development, WordPress development, responsive web design, UI/UX design, and SEO-friendly website development.",
+      "We build modern, mobile-responsive, user-friendly websites that effectively present property listings, ongoing projects, floor plans, amenities, locations, galleries, and other essential property information. From real estate developers, builders, construction companies, property consultants, architects, and real estate agencies to commercial and residential property businesses, we provide customized digital solutions aligned with their brand identity and business objectives.",
+      "Our SEO-optimized real estate websites are structured to improve search engine visibility, attract potential buyers and investors, and support effective lead generation. With engaging layouts, intuitive navigation, fast performance, and conversion-focused features, we help real estate businesses build credibility, showcase their projects professionally, and achieve sustainable digital growth."
+    ]
   },
   {
     id: 'interior',
     label: 'Interior & Architect',
     icon: Paintbrush,
+    image: false,
     industryImg: '/assets/img/all-works/head-img/interior.jpg',
-    industryDesc: 'Visually stunning design portfolios tailored for architects, interior designers, and creative studios.'
+    industryDesc: [
+      "We deliver  professional website design and development solutions for Interior Design and Architecture businesses, helping creative professionals and firms showcase their expertise, projects, and design capabilities through a powerful online presence.",
+      "Our services include  interior design website design, architecture website development, architect portfolio websites, interior designer websites, architectural firm website design, WordPress website development, responsive web design, UI/UX design, and SEO-friendly website development.",
+      "We create visually engaging, modern, mobile-responsive websites that highlight completed projects, design portfolios, services, project galleries, client testimonials, and company expertise while providing a seamless user experience. From  interior designers, architects, architecture firms, design studios, residential interior companies, commercial interior designers, and turnkey interior solution providers, we develop customized websites that reflect each brand’s unique creativity and professional identity.",
+      "Our  SEO-optimized websites are designed to improve online visibility, attract potential clients, generate quality enquiries, and strengthen brand credibility. By combining creative website design, intuitive navigation, high-quality visual presentation, performance optimization, and conversion-focused strategies, we help Interior and Architecture businesses turn their websites into effective platforms for showcasing their work and driving long-term business growth."
+    ]
   },
   {
     id: 'engineering',
     label: 'Engineering Company',
     icon: Wrench,
+    image: false,
     industryImg: '/assets/img/all-works/head-img/engineering.jpg',
-    industryDesc: 'Robust and trustworthy web presence engineered specifically for industrial and technical service providers.'
+    industryDesc: [
+      "We provide professional website design and website development solutions for engineering companies, helping businesses establish a strong digital presence, showcase their technical expertise, and build credibility with clients and industry partners.",
+      "Our services include engineering company website design, industrial website development, engineering website development, responsive web design, WordPress development, UI/UX design, corporate website design, and SEO-friendly website development. We create modern, professional, mobile-responsive websites that effectively present engineering services, technical capabilities, projects, products, certifications, industries served, and company expertise in a clear and engaging manner.",
+      "From civil engineering, mechanical engineering, electrical engineering, structural engineering, manufacturing, industrial engineering, infrastructure, MEP, EPC, and engineering consultancy companies, we develop customized digital solutions aligned with each organization’s business objectives and target audience.",
+      "Our SEO-optimized engineering websites are structured to improve search engine visibility, attract relevant B2B enquiries, and strengthen online brand authority. With a focus on performance, usability, professional design, and lead generation, we help engineering companies showcase their capabilities, connect with potential clients, and achieve sustainable digital growth."
+    ]
   },
   {
     id: 'health',
     label: 'Health Care',
     icon: HeartPulse,
+    image: false,
     industryImg: '/assets/img/all-works/head-img/health.jpg',
-    industryDesc: 'Patient-centric medical and healthcare platforms built with safety, clarity, and trust in mind.'
+    industryDesc: [
+      "We deliver professional healthcare website design and website development solutions that help healthcare organizations establish a trusted digital presence, communicate their services effectively, and connect with patients and healthcare professionals.",
+      "Our expertise includes healthcare website design, hospital website development, clinic website design, medical website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. We create modern, mobile-responsive, user-friendly websites that clearly present medical services, departments, doctors, treatments, facilities, health information, appointment options, and other essential details.",
+      "From hospitals, multispecialty clinics, diagnostic centers, dental clinics, medical practitioners, healthcare consultants, wellness centers, and specialty healthcare providers, we develop customized websites that reflect their professional identity and meet the needs of their target audience.",
+      "Our SEO-optimized healthcare websites are structured to improve online visibility, support local search rankings, attract relevant enquiries, and build patient confidence. By combining clean design, intuitive navigation, fast performance, engaging content, and conversion-focused features, we help healthcare businesses create a credible online presence and achieve sustainable digital growth."
+    ]
   },
   {
     id: 'media',
     label: 'Media',
     icon: Tv,
+    image: true,
     industryImg: '/assets/img/all-works/head-img/media.jpg',
-    industryDesc: 'Dynamic media production hubs and broadcasting web applications designed for rich content delivery.'
+    industryDesc:
+      [
+        "We provide professional website design and website development solutions for media and entertainment businesses, helping organizations build a strong digital presence, showcase their content, and engage their audiences effectively.",
+        "Our expertise includes media company website design, entertainment website development, digital media website design, news and magazine website development, publishing website design, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. We create modern, visually engaging, mobile-responsive websites that make it easy to present news, articles, videos, events, publications, portfolios, and multimedia content while delivering a seamless user experience.",
+        "From media companies, news portals, digital publishers, advertising agencies, production houses, broadcasting companies, magazines, entertainment businesses, and creative media agencies, we develop customized digital solutions aligned with their brand identity and audience requirements. Our SEO-optimized media websites are structured to improve search engine visibility, increase organic traffic, enhance content discoverability, and encourage audience engagement.",
+        "By combining creative design, intuitive navigation, fast performance, content-focused layouts, and conversion-driven strategies, we help media businesses strengthen their online brand, reach wider audiences, and achieve sustainable digital growth."
+      ]
   },
   {
     id: 'ecommerce',
     label: 'Ecommerce',
     icon: ShoppingCart,
+    image: true,
     industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
-    industryDesc: 'High-converting online store experiences engineered for security, speed, and seamless checkout.'
+    industryDesc: [
+      "We deliver professional e-commerce website design and development solutions that help online businesses build powerful digital storefronts, showcase their products, and increase sales through seamless shopping experiences.",
+      "Our expertise includes e-commerce website design, online store development, Shopify development, WooCommerce development, WordPress e-commerce solutions, custom e-commerce development, responsive web design, UI/UX design, payment gateway integration, and SEO-friendly e-commerce website development. We create modern, mobile-responsive, user-friendly online stores with intuitive product navigation, advanced search and filtering, secure checkout, shopping cart functionality, customer accounts, product galleries, offers, and seamless payment integration.",
+      "From retail businesses, D2C brands, fashion and lifestyle stores, electronics retailers, wholesalers, manufacturers, and online marketplaces to growing startups and established enterprises, we develop customized e-commerce solutions tailored to specific business requirements and target audiences. Our SEO-optimized e-commerce websites are designed to improve product visibility, attract organic traffic, enhance user engagement, and generate quality leads and online sales.",
+      "By combining attractive design, high performance, secure technology, conversion-focused UI/UX, and digital marketing best practices, we help e-commerce businesses create a competitive online presence, reach more customers, and achieve sustainable business growth."
+    ]
   },
-  { id: 'import', label: 'Import & Exports', icon: Ship },
-  { id: 'logistics', label: 'Logistic', icon: Truck },
-  { id: 'education', label: 'Education & Institute', icon: GraduationCap },
-  { id: 'tour', label: 'Tour & Travels', icon: Plane },
-  { id: 'cleaning', label: 'Cleaning & Staffing', icon: Sparkles },
-  { id: 'consultancy', label: 'Consultancy', icon: Briefcase },
-  { id: 'publisher', label: 'Publisher', icon: BookOpen },
-  { id: 'hospitality', label: 'Hospitality & Solar', icon: Sun },
-  { id: 'manufacturer', label: 'Manufacturer', icon: Factory },
-  { id: 'resorts', label: 'Resorts & Restaurants', icon: UtensilsCrossed },
-  { id: 'events', label: 'Event & Sports Management', icon: Trophy },
-  { id: 'finance', label: 'Financial', icon: Landmark },
-  { id: 'others', label: 'Other Industries', icon: Layers },
+  {
+    id: 'import',
+    label: 'Import & Exports',
+    icon: Ship,
+    image: false,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions for Import and Export companies, helping businesses establish a strong global digital presence, showcase their products and services, and connect with international buyers, suppliers, and business partners.",
+      "Our expertise includes import export website design, international trading company website development, export business website design, trading company website development, B2B website development, corporate website design, WordPress development, responsive web design, UI/UX design, and SEO-friendly website development. We create modern, mobile-responsive, and professional websites that effectively present product categories, export destinations, sourcing capabilities, certifications, company information, logistics services, and international trade expertise.",
+      "From importers, exporters, trading companies, merchant exporters, sourcing companies, wholesale suppliers, manufacturers, logistics businesses, and international trade consultants, we develop customized digital solutions aligned with their business goals and global target markets. Our SEO-optimized import and export websites are structured to improve search engine visibility, attract international enquiries, strengthen brand credibility, and generate valuable B2B opportunities.",
+      "By combining professional design, clear product presentation, intuitive navigation, multilingual-ready structures, performance optimization, and conversion-focused features, we help Import & Export businesses build trust with global customers and achieve sustainable international growth."
+    ]
+  },
+  {
+    id: 'logistics',
+    label: 'Logistic',
+    icon: Truck,
+    image: false,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We deliver professional logistics website design and website development solutions that help logistics and supply chain businesses establish a strong digital presence, showcase their services, and connect with customers and business partners.",
+      "Our expertise includes logistics company website design, logistics website development, transportation website design, freight forwarding website development, supply chain management website design, courier and delivery website development, warehouse management website design, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. We create modern, mobile-responsive, and user-friendly websites that clearly present logistics services, transportation solutions, freight services, warehousing facilities, shipment management, distribution networks, tracking features, and service locations.",
+      "From logistics companies, freight forwarders, shipping companies, transport operators, courier services, warehouse providers, supply chain companies, cargo businesses, and third-party logistics (3PL) providers, we develop customized digital solutions tailored to their business requirements and target markets. Our SEO-optimized logistics websites are designed to improve search engine visibility, attract relevant B2B enquiries, strengthen brand credibility, and generate new business opportunities.",
+      "By combining professional design, intuitive navigation, fast performance, clear service presentation, and conversion-focused strategies, we help logistics businesses enhance their online presence, build customer trust, and achieve sustainable digital growth."
+    ]
+  },
+  {
+    id: 'education',
+    label: 'Education & Institute',
+    icon: GraduationCap,
+    image: false,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions for educational institutions, helping schools, colleges, universities, training centers, coaching institutes, and educational organizations build a strong and engaging digital presence.",
+      "Our expertise includes education website design, school website development, college website design, university website development, institute website design, e-learning website development, online course website design, WordPress development, responsive web design, UI/UX design, and SEO-friendly website development. We create modern, mobile-responsive, user-friendly websites that effectively present courses, academic programs, admissions information, faculty profiles, facilities, events, campus details, student resources, and educational services.",
+      "From schools, colleges, universities, professional training institutes, coaching centers, vocational institutions, skill development centers, and online education providers, we develop customized digital solutions aligned with their educational goals and target audience. Our SEO-optimized education websites are structured to improve search engine visibility, attract prospective students, increase online enquiries, and strengthen institutional credibility.",
+      "By combining engaging design, intuitive navigation, fast performance, clear content presentation, and conversion-focused features, we help educational institutions connect with students and parents, showcase their academic excellence, and achieve sustainable digital growth."
+    ]
+  },
+  {
+    id: 'tour',
+    label: 'Tour & Travels',
+    icon: Plane,
+    image: true,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions for Tour and Travel businesses, helping travel companies build a strong online presence, showcase destinations, promote tour packages, and attract more travelers.",
+      "Our expertise includes travel website design, tourism website development, tour operator website design, travel agency website development, holiday package website design, hotel and travel booking website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
+      "We create modern, visually engaging, mobile-responsive websites that effectively present tour packages, destinations, itineraries, travel experiences, accommodation options, transportation services, travel guides, galleries, and booking enquiries. From travel agencies, tour operators, destination management companies, tourism companies, holiday planners, adventure travel businesses, pilgrimage tour operators, and corporate travel companies, we develop customized digital solutions tailored to their services and target audiences. ",
+      "Our SEO-optimized travel websites are designed to improve search engine visibility, attract organic traffic, generate quality enquiries, and increase tour and travel bookings. By combining engaging visuals, intuitive navigation, fast performance, user-friendly interfaces, and conversion-focused features, we help Tour and Travel businesses inspire travelers, build brand credibility, reach new markets, and achieve sustainable digital growth."
+    ]
+  },
+  {
+    id: 'cleaning',
+    label: 'Cleaning & Staffing',
+    icon: Sparkles,
+    image: false,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We deliver professional website design and website development solutions for Cleaning and Staffing companies, helping service-based businesses establish a strong online presence, showcase their expertise, and connect with potential customers and clients. ",
+      "Our expertise includes cleaning company website design, staffing agency website development, recruitment website design, facility management website development, housekeeping service website design, manpower supply website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
+      "We create modern, mobile-responsive, and user-friendly websites that clearly present cleaning services, staffing solutions, recruitment services, workforce management, facility management, housekeeping, commercial cleaning, residential cleaning, and other professional services. From commercial cleaning companies, residential cleaning services, facility management companies, staffing agencies, recruitment firms, manpower suppliers, housekeeping companies, and workforce management providers, we develop customized websites tailored to their business objectives and target markets.",
+      "Our SEO-optimized cleaning and staffing websites are designed to improve search engine visibility, attract local and B2B enquiries, generate qualified leads, and strengthen brand credibility. By combining professional design, clear service presentation, intuitive navigation, fast performance, lead generation features, and conversion-focused strategies, we help Cleaning and Staffing businesses build customer trust, expand their reach, and achieve sustainable digital growth."
+    ]
+  },
+  {
+    id: 'consultancy',
+    label: 'Consultancy',
+    icon: Briefcase,
+    image: false,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions for consultancy businesses, helping consulting firms establish a credible online presence, showcase their expertise, and connect with potential clients across different markets. ",
+      "Our expertise includes consultancy website design, consulting firm website development, business consulting website design, management consultancy website development, corporate website design, professional services website development, WordPress development, responsive web design, UI/UX design, and SEO-friendly website development. ",
+      "We create modern, professional, mobile-responsive websites that effectively present consulting services, industry expertise, company profiles, case studies, client success stories, team profiles, insights, and business solutions. From business consultants, management consultants, financial consultants, HR consultants, IT consultants, legal and professional advisory firms, marketing consultants, engineering consultants, and corporate advisory companies, we develop customized digital solutions aligned with their brand identity and business objectives.",
+      " Our SEO-optimized consultancy websites are structured to improve search engine visibility, attract relevant organic traffic, generate qualified enquiries, and establish authority within the target industry. By combining professional design, clear service communication, intuitive navigation, fast performance, engaging content, and conversion-focused features, we help consultancy businesses build trust, strengthen their online reputation, attract new clients, and achieve sustainable digital growth."
+    ]
+  },
+  {
+    id: 'publisher',
+    label: 'Publisher',
+    icon: BookOpen,
+    image: true,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions for publishing businesses, helping publishers, media houses, editorial companies, and content-driven organizations establish a strong digital presence and reach wider audiences. ",
+      "Our expertise includes publisher website design, publishing website development, online magazine website design, digital publishing website development, news portal development, e-book website design, magazine website development, WordPress publishing solutions, responsive web design, UI/UX design, and SEO-friendly website development. ",
+      "We create modern, mobile-responsive, content-focused websites that make it easy to showcase books, magazines, articles, authors, publications, news, editorial content, and digital resources in an engaging and organized manner. From book publishers, magazine publishers, newspaper companies, academic publishers, educational publishers, digital publishing platforms, independent publishers, and media publishing houses, we develop customized websites tailored to their content strategy, brand identity, and target audience. ",
+      "Our SEO-optimized publishing websites are designed to improve search engine visibility, increase organic traffic, enhance content discoverability, and build a loyal online readership. By combining intuitive navigation, engaging layouts, fast performance, structured content, social media integration, and conversion-focused features, we help publishing businesses strengthen their digital brand, expand their audience, showcase their publications effectively, and achieve sustainable online growth."
+    ]
+  },
+  {
+    id: 'hospitality',
+    label: 'Hospitality & Solar',
+    icon: Sun,
+    image: true,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions for Hospitality and Solar businesses, helping companies in these industries build a strong digital presence, showcase their services, and connect with customers through modern and engaging websites. ",
+      "Our expertise includes hospitality website design, hotel website development, resort website design, restaurant website development, tourism website solutions, solar company website design, solar energy website development, renewable energy website design, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
+      "For the hospitality sector, we create visually appealing websites for hotels, resorts, restaurants, serviced apartments, guest houses, event venues, and hospitality businesses, featuring rooms, facilities, dining options, services, galleries, locations, and booking enquiries. For the solar and renewable energy sector, we develop professional websites for solar energy companies, solar panel installers, renewable energy providers, EPC companies, solar consultants, and clean energy businesses, presenting solar solutions, products, projects, services, and technical expertise clearly. ",
+      "Our SEO-optimized Hospitality and Solar websites are designed to improve search engine visibility, attract relevant organic traffic, generate quality enquiries, and strengthen brand credibility. By combining creative design, intuitive navigation, mobile responsiveness, fast performance, engaging content, and conversion-focused features, we help businesses across both industries build customer trust, reach wider markets, and achieve sustainable digital growth."
+    ]
+  },
+  {
+    id: 'manufacturer',
+    label: 'Manufacturer',
+    icon: Factory,
+    image: false,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions for manufacturing companies, helping manufacturers establish a strong digital presence, showcase their products and capabilities, and connect with customers, distributors, and business partners. ",
+      "Our expertise includes manufacturing company website design, industrial website development, B2B website design, factory website development, engineering website design, product catalogue website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
+      "We create modern, professional, mobile-responsive websites that effectively present manufacturing capabilities, product ranges, production facilities, machinery, technologies, certifications, quality standards, industries served, and completed projects. From industrial manufacturers, machinery manufacturers, equipment manufacturers, automotive companies, engineering manufacturers, component manufacturers, electrical manufacturers, textile manufacturers, chemical manufacturers, and OEM companies, we develop customized digital solutions tailored to their business objectives and target markets. ",
+      "Our SEO-optimized manufacturing websites are structured to improve search engine visibility, attract relevant B2B traffic, generate qualified enquiries, and strengthen brand credibility in competitive industrial markets. By combining professional design, clear product presentation, intuitive navigation, high-performance technology, and conversion-focused features, we help manufacturing businesses showcase their capabilities, build trust with prospective clients, expand their market reach, and achieve sustainable digital growth."
+    ]
+  },
+  {
+    id: 'resorts',
+    label: 'Resorts & Restaurants',
+    icon: UtensilsCrossed,
+    image: true,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions for resorts, restaurants, and hospitality businesses, helping brands create a strong online presence, showcase their unique experiences, and attract more guests and customers. ",
+      "Our expertise includes resort website design, hotel and resort website development, restaurant website design, hospitality website development, food and beverage website design, online table reservation solutions, hotel booking website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
+      "We create visually engaging, mobile-responsive websites that highlight resort accommodations, rooms and suites, amenities, restaurants, menus, dining experiences, event spaces, activities, galleries, special offers, locations, and booking or enquiry options. From luxury resorts, boutique hotels, beach resorts, family resorts, fine-dining restaurants, cafés, multi-cuisine restaurants, cloud kitchens, catering businesses, and hospitality groups, we develop customized digital solutions aligned with each brand’s identity and target audience. ",
+      "Our SEO-optimized resort and restaurant websites are designed to improve local search visibility, attract organic traffic, generate reservations and enquiries, and increase customer engagement. By combining stunning visual presentation, intuitive navigation, fast performance, mobile-friendly design, compelling content, and conversion-focused features, we help Resorts & Restaurants build customer trust, showcase memorable experiences, reach new audiences, and achieve sustainable business growth."
+    ]
+  },
+  {
+    id: 'events',
+    label: 'Event & Sports Management',
+    icon: Trophy,
+    image: false,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions for Event and Sports Management companies, helping organizations build a strong digital presence, promote events, engage audiences, and showcase their sports and event management capabilities. ",
+      "Our expertise includes event management website design, sports management website development, event company website design, sports event website development, tournament website design, conference and exhibition website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
+      "We create modern, engaging, mobile-responsive websites that effectively present upcoming events, sports tournaments, schedules, venues, registrations, ticketing information, sponsors, participants, galleries, achievements, and event highlights. From event management companies, sports management firms, tournament organizers, sports academies, event planners, conference organizers, exhibition companies, corporate event agencies, and entertainment event businesses, we develop customized digital solutions aligned with their brand identity and audience requirements. ",
+      "Our SEO-optimized event and sports websites are structured to improve search engine visibility, attract relevant audiences, increase event registrations, generate enquiries, and strengthen online brand credibility. By combining engaging visual design, intuitive navigation, fast performance, registration and enquiry features, social media integration, and conversion-focused strategies, we help Event & Sports Management businesses promote their events effectively, connect with participants and audiences, and achieve sustainable digital growth."
+    ]
+  },
+  {
+    id: 'finance',
+    label: 'Financial',
+    icon: Landmark,
+    image: true,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions for financial businesses, helping financial institutions and service providers establish a trustworthy digital presence, communicate their services clearly, and build stronger relationships with customers. ",
+      "Our expertise includes financial services website design, finance company website development, banking website design, investment company website development, accounting website design, fintech website development, insurance website design, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
+      "We create modern, professional, mobile-responsive websites that effectively present financial products, investment solutions, accounting services, insurance plans, loan services, wealth management, financial consulting, and other specialized services. From finance companies, investment firms, accounting firms, insurance agencies, fintech companies, financial consultants, wealth management companies, loan providers, and corporate financial service providers, we develop customized digital solutions aligned with their brand identity, business objectives, and target audience. ",
+      "Our SEO-optimized financial websites are structured to improve search engine visibility, attract relevant organic traffic, generate qualified enquiries, and strengthen online credibility. By combining clean professional design, intuitive navigation, secure and scalable technology, fast performance, informative content, and conversion-focused features, we help financial businesses build customer confidence, expand their digital reach, generate valuable leads, and achieve sustainable business growth."
+    ]
+  },
+  {
+    id: 'others',
+    label: 'Other',
+    icon: Layers,
+    image: false,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions across a wide range of industries, helping businesses establish a strong digital presence, showcase their products and services, and connect with their target audiences. ",
+      "Our expertise includes custom website design, business website development, corporate website design, WordPress development, responsive web design, UI/UX design, e-commerce website development, SEO-friendly website development, and digital marketing solutions tailored to different business requirements. We work with startups, small businesses, SMEs, service providers, professional firms, local businesses, and established enterprises across diverse sectors, creating modern, mobile-responsive, user-friendly, and conversion-focused websites. Whether you operate in automotive, construction, retail, agriculture, legal services, beauty and wellness, transportation, security, entertainment, hospitality, technology, or other specialized industries, we develop customized digital solutions that reflect your brand identity and business objectives. ",
+      "Our SEO-optimized websites are designed to improve search engine visibility, attract relevant organic traffic, generate quality enquiries, and strengthen online brand credibility. By combining creative website design, intuitive navigation, high performance, engaging content, scalable technology, and effective SEO strategies, we help businesses from diverse industries build a professional online presence, reach new customers, increase enquiries, and achieve sustainable digital growth."
+    ]
+  },
 ];
 
 export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
@@ -1185,144 +1388,144 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     ]
   },
   others: {
-  bannerImg: '/assets/img/all-works/head-img/other.jpg',
-  projects: [
-    {
-      id: 'kormesic',
-      name: 'KORMESIC',
-      logo: '/assets/img/all-works/2026/ldf.png',
-      location: 'Chennai',
-      url: 'https://www.ldfkormesic.com/',
-      borderClass: 'brb'
-    },
-    {
-      id: 'fusioninternational',
-      name: 'Fusion International',
-      logo: '/assets/img/all-works/2026/fusionintl.png',
-      location: 'Chennai',
-      url: 'https://www.fusionintl.net/',
-      borderClass: 'brlb'
-    },
-    {
-      id: 'anandasuvai',
-      name: 'Anandasuvai',
-      logo: '/assets/img/all-works/2026/anandasuvai.png',
-      location: 'Chennai',
-      url: 'https://www.anandasuvai.com/',
-      borderClass: 'brlb'
-    },
-    {
-      id: 'aiyanaar',
-      name: 'Aiyanaar',
-      logo: '/assets/img/all-works/2026/Aiyanar.png',
-      location: 'Chennai',
-      url: 'https://www.aiyanaar.com/',
-      borderClass: 'brb'
-    },
-    {
-      id: 'adhelant',
-      name: 'Adhelant',
-      logo: '/assets/img/all-works/new/adhelant.png',
-      location: 'Saudi Arabia',
-      url: 'https://www.adhelant.com/',
-      borderClass: 'brlb'
-    },
-    {
-      id: 'daforth',
-      name: 'Daforth',
-      logo: '/assets/img/all-works/new/danforth.png',
-      location: 'Canada.',
-      url: 'https://danforthdisabilityservices.com/',
-      borderClass: 'brlb'
-    },
-    {
-      id: 'arivion',
-      name: 'Arivion',
-      logo: '/assets/img/all-works/new/arivion.png',
-      location: 'Tiruvannamalai, India.',
-      url: 'https://arivion.in/',
-      borderClass: 'brb'
-    },
-    {
-      id: 'rootvis',
-      name: 'Rootvis',
-      logo: '/assets/img/all-works/new/rootvis.png',
-      location: 'Chennai, India.',
-      url: 'https://www.rootvis.com/',
-      borderClass: 'brlb'
-    },
-    {
-      id: 'rcsblr',
-      name: 'RCSBLR',
-      logo: '/assets/img/all-works/new/rcsblr.png',
-      location: 'Bangalore, India',
-      url: 'https://www.rcsblr.com/',
-      borderClass: 'brlb'
-    },
-    {
-      id: 'recyclersplaza',
-      name: 'Recyclers Plaza',
-      logo: '/assets/img/all-works/recyclers-logo.png',
-      location: 'United States.',
-      url: 'https://www.recyclersplaza.com/',
-      borderClass: 'brb'
-    },
-    {
-      id: 'ecube',
-      name: 'Ecube',
-      logo: '/assets/img/all-works/ecube-logo.png',
-      location: 'Chennai, India',
-      url: 'https://www.ecubelive.com/',
-      borderClass: 'brlb'
-    },
-    {
-      id: 'riverbridge',
-      name: 'River Bridge',
-      logo: '/assets/img/all-works/riverbridge-logo.png',
-      location: 'India.',
-      url: 'https://www.riverbridgecapital.in/',
-      borderClass: 'brlb'
-    },
-    {
-      id: 'u2vprints',
-      name: 'U2V Prints',
-      logo: '/assets/img/all-works/u2v-logo.png',
-      location: 'Ambur, India',
-      url: 'https://www.u2vprints.com/',
-      borderClass: 'brb'
-    },
-    {
-      id: 'spkenterprices',
-      name: 'SPK Enterprices',
-      logo: '/assets/img/all-works/spk-logo.png',
-      location: 'Chennai, India.',
-      url: 'http://spkenterprisesgroup.com/',
-      borderClass: 'brlb'
-    },
-    {
-      id: 'karunalaya',
-      name: 'Karunalaya',
-      logo: '/assets/img/all-works/karunalaya-logo.png',
-      location: 'Chennai, India.',
-      url: 'https://karunalaya.ngo/',
-      borderClass: 'brlb'
-    },
-    {
-      id: 'altazbusinesssolution',
-      name: 'Altaz Business Solution',
-      logo: '/assets/img/all-works/altaz-logo.png',
-      location: 'Chennai, India.',
-      url: 'http://www.atlaz.in/',
-      borderClass: ''
-    },
-    {
-      id: 'alphonsaaqua',
-      name: 'Alphonsa Aqua',
-      logo: '/assets/img/all-works/alphonsa-logo.png',
-      location: 'Chennai, India.',
-      url: 'https://alphonsaaqua.com/',
-      borderClass: 'brl'
-    }
-  ]
-}
+    bannerImg: '/assets/img/all-works/head-img/other.jpg',
+    projects: [
+      {
+        id: 'kormesic',
+        name: 'KORMESIC',
+        logo: '/assets/img/all-works/2026/ldf.png',
+        location: 'Chennai',
+        url: 'https://www.ldfkormesic.com/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'fusioninternational',
+        name: 'Fusion International',
+        logo: '/assets/img/all-works/2026/fusionintl.png',
+        location: 'Chennai',
+        url: 'https://www.fusionintl.net/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'anandasuvai',
+        name: 'Anandasuvai',
+        logo: '/assets/img/all-works/2026/anandasuvai.png',
+        location: 'Chennai',
+        url: 'https://www.anandasuvai.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'aiyanaar',
+        name: 'Aiyanaar',
+        logo: '/assets/img/all-works/2026/Aiyanar.png',
+        location: 'Chennai',
+        url: 'https://www.aiyanaar.com/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'adhelant',
+        name: 'Adhelant',
+        logo: '/assets/img/all-works/new/adhelant.png',
+        location: 'Saudi Arabia',
+        url: 'https://www.adhelant.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'daforth',
+        name: 'Daforth',
+        logo: '/assets/img/all-works/new/danforth.png',
+        location: 'Canada.',
+        url: 'https://danforthdisabilityservices.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'arivion',
+        name: 'Arivion',
+        logo: '/assets/img/all-works/new/arivion.png',
+        location: 'Tiruvannamalai, India.',
+        url: 'https://arivion.in/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'rootvis',
+        name: 'Rootvis',
+        logo: '/assets/img/all-works/new/rootvis.png',
+        location: 'Chennai, India.',
+        url: 'https://www.rootvis.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'rcsblr',
+        name: 'RCSBLR',
+        logo: '/assets/img/all-works/new/rcsblr.png',
+        location: 'Bangalore, India',
+        url: 'https://www.rcsblr.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'recyclersplaza',
+        name: 'Recyclers Plaza',
+        logo: '/assets/img/all-works/recyclers-logo.png',
+        location: 'United States.',
+        url: 'https://www.recyclersplaza.com/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'ecube',
+        name: 'Ecube',
+        logo: '/assets/img/all-works/ecube-logo.png',
+        location: 'Chennai, India',
+        url: 'https://www.ecubelive.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'riverbridge',
+        name: 'River Bridge',
+        logo: '/assets/img/all-works/riverbridge-logo.png',
+        location: 'India.',
+        url: 'https://www.riverbridgecapital.in/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'u2vprints',
+        name: 'U2V Prints',
+        logo: '/assets/img/all-works/u2v-logo.png',
+        location: 'Ambur, India',
+        url: 'https://www.u2vprints.com/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'spkenterprices',
+        name: 'SPK Enterprices',
+        logo: '/assets/img/all-works/spk-logo.png',
+        location: 'Chennai, India.',
+        url: 'http://spkenterprisesgroup.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'karunalaya',
+        name: 'Karunalaya',
+        logo: '/assets/img/all-works/karunalaya-logo.png',
+        location: 'Chennai, India.',
+        url: 'https://karunalaya.ngo/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'altazbusinesssolution',
+        name: 'Altaz Business Solution',
+        logo: '/assets/img/all-works/altaz-logo.png',
+        location: 'Chennai, India.',
+        url: 'http://www.atlaz.in/',
+        borderClass: ''
+      },
+      {
+        id: 'alphonsaaqua',
+        name: 'Alphonsa Aqua',
+        logo: '/assets/img/all-works/alphonsa-logo.png',
+        location: 'Chennai, India.',
+        url: 'https://alphonsaaqua.com/',
+        borderClass: 'brl'
+      }
+    ]
+  }
 };

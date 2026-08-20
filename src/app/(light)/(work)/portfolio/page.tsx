@@ -95,7 +95,7 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Portfolio Cards */}
-                    <div className="mt-5">
+                    <div className="">
                         <PortfolioCards
                             items={filteredItems}
                             activeCategory={activeCategory}
