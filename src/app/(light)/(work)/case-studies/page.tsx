@@ -10,6 +10,8 @@ import StarBorder from "@/components/home/home/workComponents/StarBorder";
 import MajorClientSection from "@/components/pages/service-2/sections/InnerServiceSection";
 import { InnerServiceSection } from "@/components/pages/service-2/sections";
 import MajorClientService from "@/components/home/home/workComponents/majorclient";
+import IntroContent from "@/components/home/home/myComponents/common/IntroContent";
+import SectionTitle from "@/components/sectiontitle/SectionTitle";
 
 interface NavItem {
     label: string;
@@ -48,8 +50,8 @@ export default function PortfolioPage() {
           animation: fadeInText 0.35s ease-out forwards;
         }
       `}</style>
-            <div className="container my-5">
-                {/* Section Header */}
+            {/* <div className="container my-5">
+                
                 <div className="row mb-70 align-items-center">
                     <div className="col-xl-3">
                         <span className="tp-section-subtitle text-black blink-ball">
@@ -61,7 +63,7 @@ export default function PortfolioPage() {
                         <div className="px-project-title-box">
 
                             <h4 className="px-about-title mb-20">
-                                <span className="text-blue-about">Real projects.{' '}</span>   Creative solutions. Measurable business value.
+                                <span className="text-blue-about">Real Projects. {' '}</span>Creative Solutions. Real Results. Measurable business value.
                             </h4>
 
                             <p className="text-figtree text-dark mt-2 font-paragraph-cls">
@@ -73,7 +75,14 @@ export default function PortfolioPage() {
                 </div>
 
 
-            </div>
+            </div> */}
+            <IntroContent leftTitle={'From Vision to Reality'} rightTitle1={'Real Projects.'} rightTitle2={' Creative Solutions. Real Results.'} description={'Explore our successful projects and discover how we transform ideas into engaging, innovative, and impactful digital experiences that help businesses grow and stand out online.'} />
+            {/* <SectionTitle
+                    subtitle="From Vision to Reality"
+                    titleFirst="Real Projects."
+                    titleSecond="Creative Solutions. Real Results. Measurable business value."
+                    description="Explore our successful projects and discover how we transform ideas into engaging, innovative, and impactful digital experiences that help businesses grow and stand out online."
+                  /> */}
             {/* <InnerServiceSection/> */}
             <MajorClientService />
 
