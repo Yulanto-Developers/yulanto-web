@@ -82,34 +82,26 @@ export const CtaCard = forwardRef<HTMLDivElement, CtaCardProps>(
         >
           <div className="row align-items-center g-4">
             {/* Exact Content Column */}
-            <div className="col-12 col-lg-9 text-start text-light">
+            <div className="col-12 col-lg-12 text-start text-light">
               
                 <h4 className="px-about-title mb-20">
-              <span className="text-light"> Are you interested in increasing your website's traffic?</span> 
+              <span className="text-light"> Want to Increase Your Website Traffic?</span> 
             </h4>
               <motion.p
                 className="lead text-light mb-0 opacity-90"
                 variants={itemVariants}
               >
-                We assist in enhancing the online visibility and boosting the search engine ranking of your business website as SEO specialists.
+               Improve your online presence with professional Chennai SEO services designed to attract the right audience and generate sustainable organic growth.
+
+Our SEO specialists in Chennai can help improve your search visibility, increase qualified website traffic, and create opportunities for more enquiries and conversions.
               </motion.p>
+              <p className="text-light" style={{ fontSize: "16px" }}>Contact our SEO team today to discuss your SEO requirements.</p>
+
+
             </div>
 
-            {/* Form Column */}
-            <motion.div
-              className="col-12 col-lg-3"
-              variants={itemVariants}
-            >
-              
-                <button
-                  type="submit"
-                  className="btn cta-submit-btn d-inline-flex align-items-center justify-content-center"
-                >
-                  Contact Sales
-                  <span className="ms-2">&rarr;</span>
-                </button>
-            
-            </motion.div>
+           
+         
           </div>
         </motion.div>
       </div>

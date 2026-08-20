@@ -10,76 +10,34 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "1. What is Off-Page SEO?",
+    question: "1. What is SEO and why is it important for my website?",
     answer:
-      "Off-Page SEO refers to optimization activities performed outside your website to improve its authority, credibility, visibility, and search engine ranking potential. It includes link building, citations, brand mentions, content promotion, digital PR, and other external SEO activities.",
+      "SEO, or Search Engine Optimization, is the process of improving a website's visibility in organic search results. Effective SEO helps search engines understand your website and can increase relevant organic traffic, brand visibility, enquiries, and business opportunities.",
     meta: "Overview",
   },
   {
-    question: "2. Why is Off-Page SEO important for my website?",
+    question: "2. How do you optimize website content for SEO?",
     answer:
-      "Off-Page SEO helps search engines evaluate your website's authority and reputation. Quality backlinks, relevant brand mentions, and strong external signals can support better organic visibility and help your website compete for valuable search terms.",
-    meta: "Importance",
+      "Our SEO agency in Chennai focuses on keyword research, search intent, high-quality content, optimized title tags and meta descriptions, structured headings, SEO-friendly URLs, internal linking, image optimization, technical SEO, and other relevant on-page SEO factors.",
+    meta: "Optimization",
   },
   {
-    question: "3. What Off-Page SEO services do you provide in Chennai?",
+    question: "3. What role do keywords play in SEO?",
     answer:
-      "Our Chennai SEO services include strategic link building, local citations, directory optimization, guest posting, competitor backlink analysis, brand mentions, content promotion, and other ethical off-page SEO strategies.",
-    meta: "Services",
+      "Keywords help search engines understand the topics and search queries relevant to a webpage. Our SEO experts in Chennai identify relevant keywords based on search intent, competition, business relevance, and potential value, then incorporate them naturally throughout the website.",
+    meta: "Keywords",
   },
   {
-    question: "4. How does link building help SEO?",
+    question: "4. How long does SEO take to show results?",
     answer:
-      "Quality backlinks can act as external signals of trust and relevance. Links from authoritative and relevant websites can strengthen your website's authority and support its ability to rank for competitive keywords.",
-    meta: "Link Building",
-  },
-  {
-    question: "5. How long does Off-Page SEO take to show results?",
-    answer:
-      "SEO results vary depending on your website's current authority, competition, industry, target keywords, backlink profile, content quality, and overall SEO strategy. Off-page SEO is generally a long-term process, so consistent optimization is important for sustainable results.",
+      "SEO is a long-term process, and the timeline varies depending on your website's current authority, competition, industry, technical condition, content quality, and target keywords. Consistent optimization and quality content can help build sustainable organic growth over time.",
     meta: "Timeline",
   },
   {
-    question: "6. Can Off-Page SEO improve local rankings in Chennai?",
+    question: "5. How can I monitor my SEO performance?",
     answer:
-      "Yes. Local SEO activities such as business citations, local directories, location-relevant mentions, and consistent business information can help strengthen your local online presence. Our local SEO services in Chennai are designed for businesses targeting customers in Chennai and surrounding areas.",
-    meta: "Local SEO",
-  },
-  {
-    question: "7. Do you provide customized SEO services?",
-    answer:
-      "Yes. Our SEO services company in Chennai develops customized SEO strategies based on your website, industry, competitors, target audience, location, and business goals. We do not follow the same strategy for every website.",
-    meta: "Strategy",
-  },
-  {
-    question: "8. How do you build backlinks?",
-    answer:
-      "We focus on acquiring relevant and quality backlinks through appropriate content promotion, industry-related websites, business listings, guest content opportunities, digital outreach, and other ethical SEO methods. The focus is on quality and relevance rather than generating large numbers of low-quality links.",
-    meta: "Backlinks",
-  },
-  {
-    question: "9. Can Off-Page SEO increase website traffic?",
-    answer:
-      "Yes. Off-page SEO can contribute to increased organic visibility and referral traffic. When your website earns quality links and gains visibility across relevant online platforms, more potential customers may discover your business.",
-    meta: "Traffic",
-  },
-  {
-    question: "10. How can I choose the best SEO company in Chennai?",
-    answer:
-      "When choosing an SEO company, consider its experience, SEO approach, reporting process, understanding of your industry, technical expertise, content strategy, link-building practices, and ability to provide a customized SEO plan. Avoid agencies that guarantee instant rankings or rely on questionable link-building practices.",
-    meta: "Guide",
-  },
-  {
-    question: "11. Do you offer SEO consultation in Chennai?",
-    answer:
-      "Yes. Our SEO consultant in Chennai can evaluate your website, identify SEO opportunities, analyze competitors, review your existing backlink profile, and recommend a suitable SEO strategy based on your business objectives.",
-    meta: "Consultation",
-  },
-  {
-    question: "12. What makes your SEO service different?",
-    answer:
-      "Our approach combines technical SEO, on-page optimization, content strategy, local SEO, and off-page SEO to create a complete search engine optimization strategy. Instead of focusing only on rankings, we aim to improve visibility, qualified traffic, brand authority, and long-term business growth.",
-    meta: "Features",
+      "SEO performance can be monitored using tools such as Google Search Console, Google Analytics, and professional SEO platforms. Important metrics include organic traffic, keyword rankings, impressions, click-through rate, conversions, backlinks, and search visibility.",
+    meta: "Analytics",
   },
 ];
 
@@ -176,7 +134,7 @@ export default function Faq() {
         }}
       >
         <h4 className="px-about-title mb-20 text-center">
-          <span className="text-blue-about">Frequently Asked Questions </span> About Off-Page SEO
+          <span className="text-blue-about">Frequently Asked Questions </span> About SEO
         </h4>
 
         {/* FAQ List */}

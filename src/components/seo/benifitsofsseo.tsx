@@ -60,9 +60,9 @@ export const SeoServices: React.FC = () => {
 
   const seoData = [
     {
-      title: "Strategic Link Building",
+      title: "Increased Visibility & Organic Traffic",
       description:
-        "We identify relevant, authoritative, and industry-related websites to build quality backlinks that support your SEO objectives. Our approach focuses on relevance, authority, natural link placement, and long-term value rather than simply increasing backlink numbers.",
+        "Our SEO experts in Chennai optimize your website to improve its visibility in search engine results pages (SERPs). Better visibility for relevant keywords can help your business attract more qualified organic traffic.",
       icon: (
         <svg
           width="28"
@@ -82,9 +82,9 @@ export const SeoServices: React.FC = () => {
       delay: 100,
     },
     {
-      title: "Local SEO & Citation Building",
+      title: "Improved User Experience",
       description:
-        "For businesses targeting customers in Chennai, local visibility is extremely important. Our local SEO services in Chennai include business citations, local directory optimization, location-based listings, and other strategies that help strengthen your local online presence.",
+        "SEO involves more than keywords and rankings. We optimize website structure, navigation, content, mobile experience, and page usability to create a better experience for visitors while making your website easier for search engines to understand.",
       icon: (
         <svg
           width="28"
@@ -106,9 +106,9 @@ export const SeoServices: React.FC = () => {
       delay: 200,
     },
     {
-      title: "Business Directory Submissions",
+      title: "Higher-Quality Leads & Conversions",
       description:
-        "We submit and optimize business information across relevant and trustworthy directories to improve brand visibility and maintain consistent business information across online platforms.",
+        "By targeting relevant keywords based on user search intent, SEO can help attract visitors who are actively looking for your products or services. This targeted traffic can create better opportunities for enquiries, leads, and conversions.",
       icon: (
         <svg
           width="28"
@@ -129,9 +129,9 @@ export const SeoServices: React.FC = () => {
       delay: 300,
     },
     {
-      title: "Guest Posting",
+      title: "Cost-Effective Long-Term Marketing",
       description:
-        "Publishing useful and relevant content on authoritative websites can help establish industry expertise, generate referral traffic, and earn valuable backlinks.",
+        "Unlike advertising campaigns that require continuous spending to maintain visibility, SEO can deliver long-term organic traffic when your website continues to provide relevant content and maintain strong search performance.",
       icon: (
         <svg
           width="28"
@@ -150,9 +150,9 @@ export const SeoServices: React.FC = () => {
       delay: 400,
     },
     {
-      title: "Brand Mentions",
+      title: "Builds Brand Credibility & Authority",
       description:
-        "We work on increasing your brand's online visibility through relevant content, industry platforms, business profiles, and other digital channels where your target audience is active.",
+        "Consistent visibility in organic search results can strengthen brand awareness and establish your business as a credible source within your industry. High-quality content and authoritative SEO practices can further support your online reputation.",
       icon: (
         <svg
           width="28"
@@ -172,9 +172,9 @@ export const SeoServices: React.FC = () => {
       delay: 500,
     },
     {
-      title: "Competitor Backlink Analysis",
+      title: "Sustainable Search Growth",
       description:
-        "Our SEO consultant in Chennai analyzes competitor backlink profiles to identify potential link opportunities, industry-specific platforms, content opportunities, and gaps in your current SEO strategy.",
+        "SEO is a long-term strategy. By continuously improving content, technical performance, user experience, and website authority, businesses can build a sustainable organic search presence and adapt to changes in search engine algorithms.",
       icon: (
         <svg
           width="28"
@@ -210,9 +210,8 @@ export const SeoServices: React.FC = () => {
           <div className="col-xl-9">
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">Our Off-Page </span> SEO Services
+                <span className="text-blue-about">Benefits of SEO </span> for Your Website 
               </h4>
-              <p className="text-figtree text-black mt-2">As one of the professional SEO agencies in Chennai, we implement ethical and sustainable off-page SEO techniques that focus on long-term growth.</p>
             </div>
           </div>
         </div>

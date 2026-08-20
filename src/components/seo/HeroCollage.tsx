@@ -42,18 +42,19 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
           <div className="row align-items-center mb-5" data-aos="fade-up">
             <div className="col-xl-3">
               <span className="tp-section-subtitle text-black blink-ball">
-                Join Our Journey
+                SEO Company in Chennai
               </span>
             </div>
 
             <div className="col-xl-9">
               <div className="px-project-title-box">
                 <h4 className="px-about-title mb-20">
-                  <span className="text-blue-about">Off-Page SEO Services  </span>
-                  in Chennai
+                  <span className="text-blue-about">Result-Driven SEO Strategies to   </span>
+                  Increase Traffic, Rankings & Leads
                 </h4>
                 <p className="text-figtree text-black mt-2 font-paragraph-cls">
-                  Off-Page SEO is an essential part of a successful search engine optimization strategy that focuses on improving your website’s authority, credibility, visibility, and reputation outside your own website. While on-page SEO optimizes your website content and technical elements, off-page SEO helps search engines understand how trustworthy and relevant your business is within your industry.
+                  Looking for a reliable SEO company in Chennai to improve your website's search engine rankings and generate quality leads? Our Chennai SEO services are designed to increase online visibility, attract relevant organic traffic, and help businesses achieve sustainable growth.
+
                 </p>
               </div>
             </div>
@@ -127,9 +128,8 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
               )}
             </div>
           </div>
-          <p className="text-figtree text-black mt-20 font-paragraph-cls">As a professional SEO company in Chennai, we provide result-oriented off-page SEO strategies designed to improve search rankings, strengthen your online presence, attract quality traffic, and generate more business opportunities. Our Chennai SEO services include strategic link building, business citations, local SEO, content promotion, brand mentions, social signals, and other ethical off-page optimization techniques.
-
-            Whether you are a startup, local business, e-commerce company, or established organization, our team develops customized off-page SEO campaigns based on your business goals, competition, target audience, and industry.</p>
+          <p className="text-figtree text-black mt-20 font-paragraph-cls">As a professional SEO agency in Chennai, we combine keyword research, technical SEO, on-page optimization, content strategy, link building, and performance analytics to create customized search engine optimization strategies aligned with your business goals.
+</p>
 
 
         </div>

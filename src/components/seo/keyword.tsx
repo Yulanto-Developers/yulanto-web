@@ -7,9 +7,9 @@ import "aos/dist/aos.css";
 // Updated content array with SVG icon markup for each item
 const cardContents = [
   {
-    title: "Keyword Research",
+    title: "Keyword Optimization",
     description:
-      "Identifying relevant and high-performing keywords that match your target audience and search intent, helping your website attract qualified organic traffic.",
+      "We research and strategically integrate relevant keywords into website content, title tags, headings, meta descriptions, URLs, and other important elements. Our focus is on natural keyword usage that matches search intent rather than keyword stuffing.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +28,9 @@ const cardContents = [
     ),
   },
   {
-    title: "High-Quality Content",
+    title: "High-Quality SEO Content",
     description:
-      "Creating valuable, original, and engaging content that answers user queries, builds trust, and improves your website’s visibility in search results.",
+      "We create useful, informative, original, and well-structured content that addresses the needs of your target audience. High-quality content helps establish relevance, answer user queries, and support long-term search visibility.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ const cardContents = [
   {
     title: "Title Tags & Meta Descriptions",
     description:
-      "Optimizing title tags and meta descriptions to accurately describe your pages and encourage users to click through from search engine results.",
+      "We create descriptive and compelling title tags and meta descriptions that accurately represent each page and encourage relevant users to click through from search results.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -74,9 +74,9 @@ const cardContents = [
     ),
   },
   {
-    title: "SEO-Friendly URLs",
+    title: "SEO-Friendly URL Structure",
     description:
-      "Creating clean, descriptive URLs that are easy for users and search engines to understand, improving website structure and search visibility.",
+      "We develop clean, concise, descriptive URLs that help users and search engines understand the purpose and hierarchy of your web pages.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -95,9 +95,9 @@ const cardContents = [
     ),
   },
   {
-    title: "Heading Optimization",
+    title: "Optimized Headings",
     description:
-      "Using well-structured and relevant headings to organize content, improve readability, and help search engines understand the main topics of each page.",
+      "We use properly structured H1, H2, H3, and other headings to organize content clearly. Relevant keywords are incorporated naturally into headings where appropriate to improve content relevance and readability.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ const cardContents = [
   {
     title: "Schema Markup",
     description:
-      "Adding structured data to help search engines better understand your content and improve the appearance of your website in search results.",
+      "We implement appropriate structured data and schema markup to provide search engines with additional information about your website and its content. Depending on the website, this may include relevant business, product, service, FAQ, review, or other supported schema types.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -316,8 +316,9 @@ export default function RuixenBentoCards() {
             <div className="px-project-title-box">
             
                 <h4 className="px-about-title mb-20">
-              <span className="text-blue-about"> We Do A Straightforward Professional</span>   On-Page SEO Plan That Rely On Organic Results That Are Genuine.
+              <span className="text-blue-about"> Professional On-Page SEO Focused </span>   on Genuine Organic Results
             </h4>
+            <p className="text-figtree text-black mt-2 "> We follow transparent and ethical SEO practices focused on sustainable growth. Our approach is designed to improve website quality, relevance, authority, and user experience without relying on misleading or manipulative techniques.</p>
             
             </div>
           </div>

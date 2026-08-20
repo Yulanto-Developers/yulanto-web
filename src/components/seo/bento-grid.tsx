@@ -61,45 +61,45 @@ export const BentoGrid: React.FC = () => {
 
   const bentoItems = [
     {
-      name: "Build Website Authority",
+      name: "Keyword Research",
       description:
-        "Quality backlinks from relevant and authoritative websites can help strengthen your website's authority. A strong backlink profile can support better search engine visibility and help your website compete for valuable keywords.",
+        "Effective SEO starts with understanding what your customers are searching for. Our SEO experts in Chennai conduct detailed keyword research to identify relevant, high-value, and commercially focused search terms. We analyze search intent, competition, keyword relevance, and opportunities to create a focused SEO strategy.",
       imageUrl: "/images/keyword-research.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-tall",
       delay: 100,
     },
     {
-      name: "Improve Search Rankings",
+      name: "Better On-Page Optimization",
       description:
-        "Off-page optimization works alongside on-page and technical SEO to improve your website's overall ranking potential. Strategic link building and online brand promotion can help your important pages gain greater visibility in search results.",
+        "We optimize important website elements, including page content, title tags, meta descriptions, headings, URLs, internal links, images, and structured data. Our on-page SEO approach helps search engines better understand your website while providing visitors with useful and engaging content.",
       imageUrl: "/images/onsite-optimization.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-full-tall",
       delay: 200,
     },
     {
-      name: "Increase Online Visibility",
+      name: "Technical SEO",
       description:
-        "Off-page SEO helps your business appear across multiple relevant online platforms. Business listings, industry websites, local directories, content platforms, and brand mentions can increase your digital presence.",
+        "Our technical SEO process focuses on improving website crawlability, indexing, mobile usability, page experience, website structure, and other technical factors that can influence search performance. A technically optimized website provides a stronger foundation for long-term SEO growth.",
       imageUrl: "/images/link-building.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-short",
       delay: 300,
     },
     {
-      name: "Generate Referral Traffic",
+      name: "Strategic Link Building",
       description:
-        "A good backlink is not only valuable for SEO. Links placed on relevant websites can introduce your business to a new audience and generate targeted referral traffic.",
+        "Quality backlinks can help strengthen your website's authority and credibility. We follow relevant and ethical link-building practices to develop a natural backlink profile and improve your website's authority within your industry.",
       imageUrl: "/images/analytics.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-short",
       delay: 400,
     },
     {
-      name: "Strengthen Brand Reputation",
+      name: "SEO Analytics & Performance Tracking",
       description:
-        "Consistent brand mentions and positive online visibility can help establish your business as a reliable name within your industry. This is particularly valuable for businesses competing in crowded markets such as Chennai.",
+        "We continuously analyze SEO performance to identify opportunities for improvement. We monitor keyword rankings, organic traffic, search visibility, user engagement, conversions, and other important SEO metrics to refine the strategy and maximize results.",
       imageUrl: "/images/technical-seo.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-tall",
@@ -122,7 +122,7 @@ export const BentoGrid: React.FC = () => {
             <div className="px-project-title-box">
             
                 <h4 className="px-about-title mb-20">
-              <span className="text-blue-about"> How Do We Achieve </span>   Maximum Results
+              <span className="text-blue-about"> How Do We Achieve  </span>  Maximum SEO Results?
             </h4>
             
             </div>

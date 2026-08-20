@@ -308,16 +308,18 @@ export function HeroSection({
       {/* Left Content Area */}
       <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "672px" }}>
         <span className="tp-section-subtitle text-black blink-ball">
-          SEO AT ITS BEST
+         SEO at Its Best
         </span>
         <div className="px-project-title-box">
           <h4 className="px-about-title mb-20">
-            <span className="text-blue-about">Why Do You Need  </span> Off-Page SEO?
+            <span className="text-blue-about">Professional SEO Services in Chennai  </span> That Drive Organic Growth
           </h4>
           <p className="text-figtree text-black mt-2 font-paragraph-cls">
-            Having a well-designed website with quality content is only the beginning. To compete effectively in search engine results, your website needs authority and recognition from other relevant and trustworthy online sources.
-            Our SEO experts in Chennai use carefully planned off-page SEO strategies to build your website's credibility and improve its overall search engine performance.
-          </p>
+           Our SEO strategies are built around the keywords and search queries your potential customers use on Google and other search engines. We optimize your website to improve its relevance, authority, user experience, and organic search performance.
+
+As one of the trusted search engine optimization companies in Chennai, we focus on ethical, data-driven SEO practices rather than shortcuts. Our goal is to improve your website's visibility for valuable search terms, attract targeted visitors, increase enquiries, and support long-term business growth.
+
+Whether you are a startup, local business, service provider, eCommerce company, or established organization, our SEO services in Chennai can be tailored to your industry, target audience, competition, and business objectives.</p>
         </div>
       </div>
     </div>
