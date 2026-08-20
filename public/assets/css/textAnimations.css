@@ -1,0 +1,50 @@
+/* assets/css/textAnimations.css */
+
+/* Text Reveal Animation */
+[data-aos="text-reveal"] {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.2s ease;
+}
+
+[data-aos="text-reveal"].aos-animate {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Text Reveal Lines */
+[data-aos="text-reveal-lines"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+[data-aos="text-reveal-lines"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image Zoom */
+[data-aos="image-zoom"] {
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+
+[data-aos="image-zoom"].aos-animate {
+  transform: scale(1);
+}
+
+/* Custom Delays */
+[data-aos-delay="100"] {
+  transition-delay: 0.1s;
+}
+[data-aos-delay="200"] {
+  transition-delay: 0.2s;
+}
+[data-aos-delay="300"] {
+  transition-delay: 0.3s;
+}
+[data-aos-delay="400"] {
+  transition-delay: 0.4s;
+}
+[data-aos-delay="500"] {
+  transition-delay: 0.5s;
+}
