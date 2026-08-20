@@ -4,72 +4,62 @@ import * as React from "react";
 import {
     FaReact,
     FaAws,
-    FaDocker,
     FaNodeJs,
     FaGithub,
-    FaTwitter,
-    FaLinkedin,
-    FaInstagram,
-    FaGoogle,
-    FaApple,
+    FaHtml5,
+    FaCss3Alt,
+    FaBootstrap,
+    FaWordpress,
+    FaShopify,
+    FaLaravel,
 } from "react-icons/fa";
 import {
-    SiNextdotjs,
-    SiVercel,
-    SiRedux,
-    SiTypescript,
-    SiFacebook,
+    SiTailwindcss,
+    SiJavascript,
+    SiWoocommerce,
 } from "react-icons/si";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
-const fallbackUrls = [
-    "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-    "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
-];
-
+// Exactly 14 orbit icons based on your requested tech stack
 const iconConfigs = [
     { Icon: FaReact, color: "#61DAFB" },
-    { Icon: FaAws, color: "#FF9900" },
-    { Icon: FaDocker, color: "#2496ED" },
+    { Icon: SiTailwindcss, color: "#06B6D4" },
     { Icon: FaNodeJs, color: "#339933" },
-    { Icon: SiNextdotjs, color: "#000000" },
-    { Icon: SiVercel, color: "#000000" },
-    { Icon: SiRedux, color: "#764ABC" },
-    { Icon: SiTypescript, color: "#3178C6" },
-    { Icon: FaGithub, color: "#181717" },
-    { Icon: FaTwitter, color: "#1DA1F2" },
-    { Icon: FaLinkedin, color: "#0077B5" },
-    { Icon: FaInstagram, color: "#E1306C" },
-    { Icon: FaGoogle, color: "#DB4437" },
-    { Icon: FaApple, color: "#000000" },
-    { Icon: SiFacebook, color: "#1877F2" },
-    { Icon: null, img: fallbackUrls[0] },
-    { Icon: null, img: fallbackUrls[1] },
+    { Icon: FaAws, color: "#FF9900" },
+    { Icon: SiJavascript, color: "#F7DF1E" },
+    { Icon: SiWoocommerce, color: "#96588A" },
+    { Icon: MdOutlineShoppingCart, color: "#111827" }, // Ecommerce
+    { Icon: FaHtml5, color: "#E34F26" },
+    { Icon: FaCss3Alt, color: "#1572B6" },
+    { Icon: FaBootstrap, color: "#7952B3" },
+    { Icon: FaGithub, color: "#181717" }, // Git
+    { Icon: FaWordpress, color: "#21759B" },
+    { Icon: FaShopify, color: "#7AB55C" },
+    { Icon: FaLaravel, color: "#FF2D20" },
 ];
 
 export default function CareerBreadcrumbSection() {
     const orbitCount = 3;
-    const orbitGap = 8; // rem between orbits
+    const orbitGap = 7; // rem between orbits
     const iconsPerOrbit = Math.ceil(iconConfigs.length / orbitCount);
 
     return (
         <section
             style={{
                 position: "relative",
-                
                 margin: "40px 0 0",
                 paddingLeft: "40px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
                 height: "550px",
-               
                 backgroundColor: "#f5f5f5",
                 overflow: "hidden",
-                
             }}
         >
             {/* Left side: Heading and Text Content */}
-            <div className="container"
+            <div
+                className="container"
                 style={{
                     width: "50%",
                     zIndex: 10,
@@ -77,10 +67,9 @@ export default function CareerBreadcrumbSection() {
                 }}
             >
                 {/* Title Tag */}
-              
-                 <span className="tp-section-subtitle text-black blink-ball mb-20">
-          Yulanto Careers
-        </span>
+                <span className="tp-section-subtitle text-black blink-ball mb-20">
+                    Yulanto Careers
+                </span>
 
                 {/* Main Heading */}
                 <h4
@@ -97,9 +86,9 @@ export default function CareerBreadcrumbSection() {
                         className="text-blue-about"
                         style={{ color: "#53ae7d" }}
                     >
-                        We care
+                        We Care About
                     </span>{" "}
-                    your Future
+                    Your Future
                 </h4>
 
                 {/* Content Paragraphs */}
@@ -112,18 +101,13 @@ export default function CareerBreadcrumbSection() {
                     }}
                 >
                     <p style={{ margin: "0 0 12px 0" }}>
-                        Progress towards empowering and cultivating innovation within your talent by engaging
-                        with Yulanto. Yulanto offers a dynamic learning platform that is crucial for
-                        achieving success. 
+                        At Yulanto, we believe in empowering talent, encouraging innovation, and creating opportunities for continuous growth. Join us in a dynamic work environment where you can learn, develop your skills, and build a rewarding career.
                     </p>
 
                     <p style={{ margin: "0 0 12px 0" }}>
-                       We strive to build a team of skilled individuals who excel in a
-                        work environment that emphasizes technical proficiency. Share your ideas and
-                        showcase your passion by contributing to our team.
+                        We are committed to building a passionate team that values creativity, technical excellence, collaboration, and continuous learning. Bring your ideas, explore new opportunities, and showcase your potential as you contribute to meaningful projects and grow with Yulanto.
+                        Join Yulanto and take the next step toward a successful future.
                     </p>
-
-                 
                 </div>
             </div>
 
@@ -150,20 +134,31 @@ export default function CareerBreadcrumbSection() {
                         justifyContent: "center",
                     }}
                 >
-                    {/* Center Circle */}
+                    {/* Center Fixed Logo Image */}
                     <div
                         style={{
-                            width: "96px",
-                            height: "96px",
+                            width: "100px",
+                            height: "100px",
                             borderRadius: "50%",
-                            backgroundColor: "#f9fafb",
-                            boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+                            
+                           
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
+                            zIndex: 2,
+                            padding: "12px",
                         }}
                     >
-                        <FaReact style={{ width: "48px", height: "48px", color: "#61DAFB" }} />
+                        <img
+                            src="assets/img/usa/preloader.gif" // Update with your logo path
+                            alt="Center Logo"
+                            style={{
+                                width: "100%",
+                                borderRadius: "50%",
+                                height: "100%",
+                                objectFit: "contain",
+                            }}
+                        />
                     </div>
 
                     {/* Generate Orbits */}
@@ -207,25 +202,13 @@ export default function CareerBreadcrumbSection() {
                                                     transform: "translate(-50%, -50%)",
                                                 }}
                                             >
-                                                {cfg.Icon ? (
-                                                    <cfg.Icon
-                                                        style={{
-                                                            width: "32px",
-                                                            height: "32px",
-                                                            color: cfg.color,
-                                                        }}
-                                                    />
-                                                ) : (
-                                                    <img
-                                                        src={cfg.img}
-                                                        alt="icon"
-                                                        style={{
-                                                            width: "32px",
-                                                            height: "32px",
-                                                            objectFit: "contain",
-                                                        }}
-                                                    />
-                                                )}
+                                                <cfg.Icon
+                                                    style={{
+                                                        width: "32px",
+                                                        height: "32px",
+                                                        color: cfg.color,
+                                                    }}
+                                                />
                                             </div>
                                         );
                                     })}

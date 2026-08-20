@@ -1,0 +1,327 @@
+import React from 'react';
+import { ArrowRight, Search, TrendingUp, BarChart3, Globe, FileText, Settings, Zap } from 'lucide-react';
+
+interface LandingPageProps {
+  brandColor?: string;
+  accentColor?: string;
+  showMockups?: boolean;
+  logoComponent?: React.ReactNode;
+}
+
+export function HeroSection({
+  showMockups = true,
+  logoComponent
+}: LandingPageProps) {
+  return (
+    <div
+      style={{
+        background: "#fff",
+        padding: "32px",
+        display: "flex",
+        flexDirection: "row-reverse",
+        flexWrap: "wrap-reverse",
+        gap: "60px",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      {/* Right Side - Product Mockups */}
+      {showMockups && (
+        <div
+          style={{
+            position: "relative",
+            maxWidth: "448px",
+            width: "100%",
+            margin: "32px auto 0 auto",
+          }}
+        >
+          {/* Desktop Application Window */}
+          <div
+            style={{
+              position: "relative",
+              backgroundColor: "#ffffff",
+              borderRadius: "16px",
+              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+              border: "1px solid #e2e8f0",
+              overflow: "hidden",
+              transform: "rotate(2deg)",
+              transition: "transform 0.3s ease",
+            }}
+          >
+            {/* Application Header */}
+            <div
+              style={{
+                backgroundColor: "rgba(241, 245, 249, 0.5)",
+                padding: "16px 24px",
+                borderBottom: "1px solid #e2e8f0",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                  <div style={{ display: "flex", gap: "8px" }}>
+                    <div style={{ width: "12px", height: "12px", backgroundColor: "#ef4444", borderRadius: "50%" }} />
+                    <div style={{ width: "12px", height: "12px", backgroundColor: "#eab308", borderRadius: "50%" }} />
+                    <div style={{ width: "12px", height: "12px", backgroundColor: "#22c55e", borderRadius: "50%" }} />
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                    <svg style={{ width: "16px", height: "16px", color: "#64748b" }} viewBox="0 0 24 24" fill="none">
+                      <path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <svg style={{ width: "16px", height: "16px", color: "#64748b" }} viewBox="0 0 24 24" fill="none">
+                      <path d="m14 5 7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div style={{ flex: 1, maxWidth: "280px", margin: "0 24px" }}>
+                  <div
+                    style={{
+                      backgroundColor: "#ffffff",
+                      borderRadius: "9999px",
+                      padding: "6px 16px",
+                      fontSize: "14px",
+                      color: "#64748b",
+                      border: "1px solid #e2e8f0",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                    }}
+                  >
+                    <Search size={14} /> SEO Analysis
+                  </div>
+                </div>
+
+                <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                  <div
+                    style={{
+                      width: "32px",
+                      height: "32px",
+                      backgroundColor: "#f1f5f9",
+                      borderRadius: "8px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <span style={{ fontSize: "12px" }}>📈</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Application Content */}
+            <div style={{ padding: "32px", backgroundColor: "#ffffff", minHeight: "320px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
+                {logoComponent || (
+                  <div
+                    style={{
+                    
+                    
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1)",
+                    }}
+                  >
+                    <span style={{ color: "#ffffff", fontWeight: "bold", fontSize: "18px" }}></span>
+                  </div>
+                )}
+               
+              </div>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                  <h3 style={{ color: "#64748b", fontWeight: 500, margin: 0 }}>SEO Performance</h3>
+                  <div style={{ height: "8px", backgroundColor: "#f1f5f9", borderRadius: "9999px", overflow: "hidden" }}>
+                    <div style={{ height: "100%", backgroundColor: "#2563eb", width: "75%", borderRadius: "9999px" }} />
+                  </div>
+                </div>
+
+                {/* SEO Feature Grid */}
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "16px" }}>
+                  {[
+                    { name: "Keywords", color: "#3b82f6", icon: "🔍" },
+                    { name: "Analytics", color: "#22c55e", icon: "📊" },
+                    { name: "Backlinks", color: "#a855f7", icon: "🔗" },
+                    { name: "Content", color: "#f97316", icon: "📝" },
+                    { name: "Rankings", color: "#ef4444", icon: "🏆" },
+                    { name: "Traffic", color: "#64748b", icon: "🌐" },
+                  ].map((item, index) => (
+                    <div key={index} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px", cursor: "pointer" }}>
+                      <div
+                        style={{
+                          width: "48px",
+                          height: "48px",
+                          backgroundColor: item.color,
+                          borderRadius: "12px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          boxShadow: "0 4px 6px -1px rgba(0,0,0,0.1)",
+                        }}
+                      >
+                        <span style={{ color: "#ffffff", fontWeight: "bold", fontSize: "20px" }}>{item.icon}</span>
+                      </div>
+                      <span style={{ fontSize: "10px", color: "#64748b", textAlign: "center", fontWeight: 500 }}>{item.name}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* SEO Stats */}
+                <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", marginTop: "8px" }}>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, backgroundColor: "#f8fafc", padding: "8px", borderRadius: "8px" }}>
+                    <span style={{ fontSize: "20px", fontWeight: "bold", color: "#2563eb" }}>#1</span>
+                    <span style={{ fontSize: "10px", color: "#64748b" }}>Ranking</span>
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, backgroundColor: "#f8fafc", padding: "8px", borderRadius: "8px" }}>
+                    <span style={{ fontSize: "20px", fontWeight: "bold", color: "#22c55e" }}>45K+</span>
+                    <span style={{ fontSize: "10px", color: "#64748b" }}>Traffic</span>
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, backgroundColor: "#f8fafc", padding: "8px", borderRadius: "8px" }}>
+                    <span style={{ fontSize: "20px", fontWeight: "bold", color: "#a855f7" }}>150+</span>
+                    <span style={{ fontSize: "10px", color: "#64748b" }}>Keywords</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Stacked Windows Behind */}
+          <div
+            style={{
+              position: "absolute",
+              top: "-16px",
+              left: "-16px",
+              width: "100%",
+              height: "100%",
+              background: "linear-gradient(135deg, #3b82f6, #2563eb)",
+              borderRadius: "16px",
+              boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1)",
+              transform: "rotate(6deg)",
+              zIndex: -10,
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: "-32px",
+              left: "-32px",
+              width: "100%",
+              height: "100%",
+              background: "linear-gradient(135deg, #8b5cf6, #6d28d9)",
+              borderRadius: "16px",
+              boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1)",
+              transform: "rotate(12deg)",
+              zIndex: -20,
+            }}
+          />
+
+          {/* Mobile App Mockup */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "-48px",
+              right: "-48px",
+              width: "176px",
+              height: "320px",
+              backgroundColor: "#0f172a",
+              borderRadius: "40px",
+              padding: "8px",
+              boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25)",
+              transform: "rotate(-12deg)",
+              transition: "transform 0.3s ease",
+            }}
+          >
+            <div style={{ width: "100%", height: "100%", backgroundColor: "#ffffff", borderRadius: "32px", overflow: "hidden", border: "1px solid #e2e8f0" }}>
+              {/* Phone Header */}
+              <div
+                style={{
+                  backgroundColor: "rgba(241,245,249,0.3)",
+                  padding: "12px 24px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  fontSize: "12px",
+                  borderBottom: "1px solid #e2e8f0",
+                }}
+              >
+                <span style={{ fontWeight: 600, color: "#0f172a" }}>9:41</span>
+                <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+                  <div style={{ width: "16px", height: "8px", backgroundColor: "#22c55e", borderRadius: "2px" }} />
+                  <span style={{ color: "#64748b", fontWeight: 500 }}>100%</span>
+                </div>
+              </div>
+
+              {/* Phone Content */}
+              <div style={{ padding: "16px", display: "flex", flexDirection: "column", gap: "24px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                  
+                </div>
+
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "8px" }}>
+                  {[
+                    { icon: "🔍", label: "Search" },
+                    { icon: "📊", label: "Stats" },
+                    { icon: "🔗", label: "Links" },
+                    { icon: "📝", label: "Content" },
+                  ].map((item, i) => (
+                    <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
+                      <div
+                        style={{
+                          width: "32px",
+                          height: "32px",
+                          backgroundColor: "#f1f5f9",
+                          borderRadius: "8px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <span style={{ fontSize: "16px" }}>{item.icon}</span>
+                      </div>
+                      <span style={{ fontSize: "8px", color: "#64748b" }}>{item.label}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "10px", color: "#64748b" }}>
+                    <span>SEO Score</span>
+                    <span style={{ color: "#2563eb", fontWeight: "bold" }}>92%</span>
+                  </div>
+                  <div style={{ height: "4px", backgroundColor: "#f1f5f9", borderRadius: "9999px", overflow: "hidden" }}>
+                    <div style={{ height: "100%", backgroundColor: "#2563eb", width: "92%", borderRadius: "9999px" }} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Left Content Area */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "672px" }}>
+        <span className="tp-section-subtitle text-black blink-ball">
+          SEO AT ITS BEST
+        </span>
+        <div className="px-project-title-box">
+          <h4 className="px-about-title mb-20">
+            <span className="text-blue-about">Why Do You Need  </span> Off-Page SEO?
+          </h4>
+          <p className="text-figtree text-black mt-2 font-paragraph-cls">
+            Having a well-designed website with quality content is only the beginning. To compete effectively in search engine results, your website needs authority and recognition from other relevant and trustworthy online sources.
+            Our SEO experts in Chennai use carefully planned off-page SEO strategies to build your website's credibility and improve its overall search engine performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default HeroSection;

@@ -24,8 +24,8 @@ import {
 const COLORS = {
   navy: "#053456",
   green: "#53ae7d",
-  greenAlt: "#69B481",
-  darkGreen: "#168B68",
+  greenAlt: "#53ae7d",
+  darkGreen: "#53ae7d",
   white: "#FFFFFF",
   lightBg: "#f5f5f5",
   softGreen: "#DDF4E8",
@@ -56,10 +56,10 @@ const NEARBY_LANDMARKS = [
     left: "22%",
   },
   {
-    name: "SRP Tools Junction",
-    type: "Transit / Landmark",
+    name: "Appasamy",
+    type: "Appartment",
     top: "78%",
-    left: "76%",
+    left: "55%",
   },
 ];
 
@@ -248,7 +248,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon, title, value, index }) 
           </span>
           <span
             style={{
-              fontSize: "13px",
+              fontSize: "15px",
               fontWeight: 500,
               color: "rgba(5, 52, 86, 0.75)",
               marginTop: "2px",
@@ -368,12 +368,12 @@ const AnimatedDivider: React.FC = () => {
             width: "38px",
             height: "38px",
             borderRadius: "50%",
-            backgroundColor: COLORS.white,
-            border: `2px solid ${COLORS.green}`,
+            backgroundColor: "rgb(5, 52, 86)",
+            border: `2px solid #053456`,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            color: COLORS.navy,
+            color: "white",
             boxShadow: `0 6px 16px rgba(105, 180, 129, 0.35)`,
             cursor: "pointer",
           }}
@@ -386,14 +386,14 @@ const AnimatedDivider: React.FC = () => {
 };
 
 // ==========================================
-// MAIN MAP 3D LOCATION PIN & RIPPLES
+// MAIN MAP 3D LOCATION PIN (NO RIPPLES, LOGO INSIDE)
 // ==========================================
 const LocationPin: React.FC = () => {
   return (
     <div
       style={{
         position: "absolute",
-        top: "50%",
+        top: "60%",
         left: "50%",
         transform: "translate(-50%, -100%)",
         zIndex: 10,
@@ -402,34 +402,6 @@ const LocationPin: React.FC = () => {
         alignItems: "center",
       }}
     >
-      <div style={{ position: "absolute", bottom: "4px", width: "0", height: "0" }}>
-        {[0, 0.8, 1.6].map((delay, i) => (
-          <motion.div
-            key={i}
-            animate={{
-              scale: [1, 2.8],
-              opacity: [0.7, 0],
-            }}
-            transition={{
-              duration: 2.8,
-              repeat: Infinity,
-              delay,
-              ease: "easeOut",
-            }}
-            style={{
-              position: "absolute",
-              top: "-25px",
-              left: "-25px",
-              width: "50px",
-              height: "50px",
-              borderRadius: "50%",
-              border: `2px solid ${COLORS.greenAlt}`,
-              boxShadow: `0 0 12px ${COLORS.green}`,
-            }}
-          />
-        ))}
-      </div>
-
       <motion.div
         animate={{
           y: [0, -12, 0],
@@ -446,36 +418,46 @@ const LocationPin: React.FC = () => {
           filter: "drop-shadow(0 14px 12px rgba(5, 52, 86, 0.35))",
         }}
       >
-        <a
-          href="https://www.google.com/maps/place/Yulanto+Web+Creations+Pvt+Ltd/@12.9724698,80.2510529,1504m/data=!3m1!1e3!4m6!3m5!1s0x3a525df3d6bf9167:0xc1aae342aa473d1!8m2!3d12.9725177!4d80.2518352!16s%2Fg%2F11b7rnd8vq?entry=ttu"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div
-            style={{
-              width: "58px",
-              height: "72px",
-              background: `linear-gradient(135deg, #53ae7d 0%, ${COLORS.darkGreen} 100%)`,
-              borderRadius: "50% 50% 50% 0",
-              transform: "rotate(-45deg)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              border: "3px solid #FFFFFF",
-              boxShadow: `inset 0 2px 6px rgba(255, 255, 255, 0.6), 0 0 20px rgba(105, 180, 129, 0.5)`,
-            }}
-          >
-            <div
-              style={{
-                width: "22px",
-                height: "22px",
-                borderRadius: "50%",
-                backgroundColor: COLORS.white,
-                boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
-              }}
-            />
-          </div>
-        </a>
+    <div style={{ position: "relative" }}>
+  <a
+    href="https://www.google.com/maps/place/Yulanto+Web+Creations+Pvt+Ltd/@12.9724698,80.2510529,1504m/data=!3m1!1e3!4m6!3m5!1s0x3a525df3d6bf9167:0xc1aae342aa473d1!8m2!3d12.9725177!4d80.2518352!16s%2Fg%2F11b7rnd8vq?entry=ttu"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "inline-block",
+      textDecoration: "none",
+      cursor: "pointer",
+    }}
+  >
+    <div
+      style={{
+        width: "60px",
+        height: "60px",
+        borderRadius: "50%",
+        backgroundColor: "white",
+
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        padding: "6px",
+        cursor: "pointer",
+      }}
+    >
+      <img
+        src="/assets/img/logo/favicon.png"
+        alt="Yulanto Web Creations"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "contain",
+          display: "block",
+          cursor: "pointer",
+        }}
+      />
+    </div>
+  </a>
+</div>
       </motion.div>
     </div>
   );
@@ -508,22 +490,7 @@ const LandmarkPin: React.FC<LandmarkPinProps> = ({ name, type, top, left }) => {
       }}
     >
       <motion.div
-        animate={{
-          opacity: isHovered ? 1 : 0.88,
-          scale: isHovered ? 1.05 : 1,
-        }}
-        style={{
-          backgroundColor: "rgba(255, 255, 255, 0.95)",
-          backdropFilter: "blur(8px)",
-          padding: "6px 12px",
-          borderRadius: "10px",
-          border: `1px solid ${isHovered ? COLORS.green : COLORS.borderGreen}`,
-          boxShadow: isHovered
-            ? "0 8px 20px rgba(5, 52, 86, 0.18)"
-            : "0 4px 12px rgba(5, 52, 86, 0.1)",
-          whiteSpace: "nowrap",
-          transition: "border 0.2s ease, box-shadow 0.2s ease",
-        }}
+       
       >
         <div style={{ fontSize: "12px", fontWeight: 800, color: COLORS.navy }}>
           {name}
@@ -695,7 +662,7 @@ export const ContactLocationSection: React.FC<ContactLocationProps> = ({
   phone = "+91 99621 57250",
   email = "info@yulanto.com",
   address = "F3, #4/608, First Floor, V.O.C Street, Kottivakkam, OMR, Chennai - 600 041, India., Chennai, Tamil Nadu, 600041",
-  workingHours = "Mon - Fri : 10:00 AM - 7:00 PM",
+  workingHours = "Mon - Fri : 10:00 AM - 7:00 PM\nAlternative Saturday : 10:00 AM - 5:30 PM",
   locationTitle = "Yulanto Web Creations",
   locationAddress = "F3, #4/608, First Floor, V.O.C Street, Kottivakkam, OMR, Chennai - 600 041, India., Chennai, Tamil Nadu, 600041",
   className,
@@ -704,9 +671,9 @@ export const ContactLocationSection: React.FC<ContactLocationProps> = ({
   const { isMobile, isTablet } = useWindowSize();
 
   const contactItems = [
+    { icon: <MapPin size={20} />, title: "Address", value: address },
     { icon: <Phone size={20} />, title: "Phone", value: phone },
     { icon: <Mail size={20} />, title: "Email", value: email },
-    { icon: <MapPin size={20} />, title: "Address", value: address },
     { icon: <Clock size={20} />, title: "Working Hours", value: workingHours },
   ];
 

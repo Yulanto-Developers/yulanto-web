@@ -18,25 +18,29 @@ const Hero: React.FC<HeroProps> = ({ images, className = "" }) => {
       {/* Content Container */}
       <div className="container position-relative z-2">
         <div className="row justify-content-start">
-          <div className="col-12 col-lg-10 text-start">
-            {/* Title */}
-            <h4 className="px-about-title mb-3">
-              <span className="text-blue-about">Careers</span>
-             
-            </h4>
 
-            {/* Description */}
-            <div className="tp-contact-us-text tp_fade_anim">
-              <p className="m-0 mb-2">
-                Our aim is to create potential career pathways and foster opportunities for growth.
+          <div className="row  align-items-center">
+            <div className="col-xl-3">
+              <span className="tp-section-subtitle text-black blink-ball">
+                Join Our Journey
 
-              </p>
-              <p className="m-0 mb-2">
-                We provide avenues for career
-                advancement through the accumulation of experience, the acquisition of new skills,
-                the assumption of leadership responsibilities, and the continuous update on industry
-                trends and technologies.
-              </p>
+
+              </span>
+            </div>
+
+            <div className="col-xl-9">
+              <div className="px-project-title-box">
+
+                <h4 className="px-about-title mb-20">
+                  <span className="text-blue-about">Shape Your Future
+                  </span> With Us
+                </h4>
+                <p className="text-figtree text-black mt-2 font-paragraph-cls">
+                  Our aim is to create potential career pathways and foster opportunities for growth.
+
+                  We provide avenues for career advancement through the accumulation of experience, the acquisition of new skills, the assumption of leadership responsibilities, and the continuous update on industry trends and technologies.
+                </p>
+              </div>
             </div>
           </div>
         </div>

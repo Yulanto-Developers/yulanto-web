@@ -164,7 +164,7 @@ We work with businesses across major markets in Singapore and Malaysia, deliveri
         ctaTitleRest="Digital Success"
         ctaDescription="Looking for a reliable web design, web development, e-commerce, SEO, or digital marketing partner in Singapore or Malaysia? Yulanto Web Creations is ready to turn your ideas into powerful digital solutions."
         ctaButtonText="Let's discuss your requirements and create a digital strategy that moves your business forward."
-        ctaHref="#contact"
+      
       />
       <GlobalComp />
     </>

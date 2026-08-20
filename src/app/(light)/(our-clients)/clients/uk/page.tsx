@@ -154,7 +154,7 @@ Whether you need a new website, eCommerce store, website redesign, SEO campaign,
         ctaTitleRest=" Business Online"
         ctaDescription="Looking for a reliable web design and digital marketing company for your UK business? Let's discuss your requirements and create a digital solution that works for your business."
         ctaButtonText="Let's discuss your requirements and create a digital strategy that moves your business forward."
-        ctaHref="#contact"
+        
       />
       <GlobalComp />
     </>

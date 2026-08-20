@@ -1,11 +1,8 @@
 import { DesignStudioHeader, MainFooter } from "@/components/layout";
 import PersonalPortfolioHeader from "@/components/layout/headers/PersonalPortfolioHeader";
 import { ClientProviders } from "@/providers";
-// CHANGED: Imported directly from FloatingIcon where our wrapper now lives safely
 import FloatingActionsWrapper from "@/components/home/home/components/FloatingIcon";
-import { QuoteProvider } from "@/components/home/home/myComponents/Content/QuoteContext";
 import QuoteModal from "@/components/home/home/myComponents/Pop";
-import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
 import "@/assets/css/style.css";
 import "@/assets/css/custome.css";
 
@@ -15,7 +12,7 @@ export default function DesignStudioLayout({
   children: React.ReactNode;
 }) {
   return (
-    <QuoteProvider>
+   
       <ClientProviders>
         <PersonalPortfolioHeader />
 
@@ -29,10 +26,8 @@ export default function DesignStudioLayout({
         </div>
 
         {/* Renders perfectly outside the scroll wrapper track */}
-        <FloatingActionsWrapper />
-        <QuoteModal />
-        <FloatingQuoteButton />
+       
       </ClientProviders>
-    </QuoteProvider>
+   
   );
 }

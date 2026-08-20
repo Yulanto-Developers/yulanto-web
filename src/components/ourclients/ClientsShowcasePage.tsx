@@ -111,7 +111,7 @@ const styles: Record<string, CSSProperties> = {
   heroBadge: { background: "#eef2ff", color: "#334155", borderRadius: 999, padding: "7px 16px", fontSize: ".82rem", fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 6 },
   clientCategory: { color: colors.muted, fontSize: ".82rem", margin: "6px 0 12px" },
   badgeCompleted: { background: "#e9fbf1", color: "#1a9b5c", fontWeight: 600, fontSize: ".72rem", padding: "5px 14px", borderRadius: 10, display: "inline-block" },
-  visitLink: { color: colors.brand, fontSize: ".85rem", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 4, textDecoration: "none" },
+  visitLink: { color: colors.brand, fontSize: "1rem", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 4, textDecoration: "none" },
 };
 
 const ScrollToTop: React.FC = () => {
@@ -216,17 +216,17 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
   const flatClients: (ClientItem & { _countryLabel: string; _countryFlag: React.ReactNode })[] =
     clientGroups && clientGroups.length > 0
       ? clientGroups.flatMap((g) =>
-          g.clients.map((c) => ({
-            ...c,
-            _countryLabel: g.countryLabel,
-            _countryFlag: g.countryFlag,
-          }))
-        )
-      : (clients || []).map((c) => ({
+        g.clients.map((c) => ({
           ...c,
-          _countryLabel: countryLabel || "",
-          _countryFlag: countryFlag,
-        }));
+          _countryLabel: g.countryLabel,
+          _countryFlag: g.countryFlag,
+        }))
+      )
+      : (clients || []).map((c) => ({
+        ...c,
+        _countryLabel: countryLabel || "",
+        _countryFlag: countryFlag,
+      }));
 
   useEffect(() => {
     AOS.init({
@@ -325,6 +325,7 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
           border-color: #053456;
           box-shadow: 0 8px 20px rgba(5, 52, 86, 0.08);
         }
+         
 
         .dx-testimonial-card {
           background: #fff;
@@ -773,7 +774,7 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
               data-aos-delay="200"
               style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap", marginTop: 8 }}
             >
-              <a href={ctaHref} className="btn-primary">
+              <a href={ctaHref} className="btn-primary" style={{ fontSize: "18px" }}>
                 {ctaButtonText}
               </a>
             </div>

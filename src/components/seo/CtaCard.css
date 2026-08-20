@@ -1,0 +1,54 @@
+/* Card Container */
+.cta-card-container {
+  background-color: #053456;
+  
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Background Image & Overlay */
+.cta-bg-image {
+  opacity: 0.2;
+}
+
+.cta-overlay {
+  background: linear-gradient(180deg, rgba(5, 52, 86, 0.5) 0%, rgba(5, 52, 86, 0.95) 100%);
+}
+
+/* Custom Input Styling */
+.cta-input {
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  border-radius: 50rem !important;
+  padding-left: 1.25rem !important;
+}
+
+.cta-input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.cta-input:focus {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Custom Submit Button Styling */
+.cta-submit-btn {
+  height: 50px;
+  background-color: #ffffff !important;
+  color: #053456 !important;
+  font-weight: 600 !important;
+  border-radius: 50rem !important;
+  padding-left: 1.75rem !important;
+  padding-right: 1.75rem !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap;
+}
+
+.cta-submit-btn:hover {
+  background-color: #f8f9fa !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

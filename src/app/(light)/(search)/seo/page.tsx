@@ -1,15 +1,23 @@
-import Header from "@/components/contact_us/header";
-import Cta from "@/components/contact_us/cta";
-import GetINTouch from "@/components/contact_us/getintouch";
 import Breadcrumbdata from "@/components/breadcrum/sections/breadcrumbdata";
+import Bento from "@/components/seo/bento-grid";
+import CtaCard from "@/components/seo/CtaCard";
+import Benifit from "@/components/seo/benifitsofsseo";
+import Keyword from "@/components/seo/keyword";
+import Faq from "@/components/seo/Faq";
+import Start from "@/components/seo/start";
+import Hero from "@/components/seo/HeroCollage";
 
 export default function Page() {
   return (
     <main>
       <Breadcrumbdata />
-      
-      
-      
+      <Hero />
+      <Start />
+      <Bento />
+      <CtaCard />
+      <Benifit />
+      <Keyword />
+      <Faq />
     </main>
   );
 }

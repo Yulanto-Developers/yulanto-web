@@ -155,7 +155,7 @@ We provide complete digital solutions in UAE, from strategy and design to develo
         ctaTitleRest="Business in UAE"
         ctaDescription="Ready to strengthen your digital presence? Talk to our team today and share your requirements. We will understand your business objectives and recommend the right website, technology, SEO, and digital marketing solutions for your UAE market"
         ctaButtonText="Whether you need a website, e-commerce store, custom web application, SEO, Google Ads, social media marketing, website redesign, or ongoing website maintenance, send us your requirements. Our team will get back to you with a suitable solution for your business."
-        ctaHref="#contact"
+      
       />
       <GlobalComp />
     </>

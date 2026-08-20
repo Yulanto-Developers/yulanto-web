@@ -157,7 +157,7 @@ techs={[
         ctaTitleRest="Success Globally"
         ctaDescription="Your customers are online—make sure your business stands out. Whether you need a website, eCommerce store, custom web application, SEO campaign, digital marketing strategy, branding solution, or ongoing website support, Yulanto Web Creations is ready to help you turn your ideas into powerful digital experiences."
         ctaButtonText="Let’s build, grow, and strengthen your digital presence across global markets."
-        ctaHref="#contact"
+      
       />
       <GlobalComp />
     </>

@@ -52,19 +52,19 @@ const Pin = ({ color }: { color: string }) => (
 // ==========================================
 const THEME_COLORS = {
   orange: {
-    bg: "#fff7ed",
-    text: "#f97316",
-    border: "#ffedd5",
+    bg: "#f5f5f5",
+    text: "#53ae7d",
+    border: "#e5e7eb",
   },
   blue: {
-    bg: "#eff6ff",
-    text: "#2563eb",
-    border: "#dbeafe",
+    bg: "#f5f5f5",
+    text: "#053456",
+    border: "#e5e7eb",
   },
   purple: {
-    bg: "#faf5ff",
-    text: "#9333ea",
-    border: "#f3e8ff",
+    bg: "#f5f5f5",
+    text: "#53ae7d",
+    border: "#e5e7eb",
   },
 };
 
@@ -110,7 +110,6 @@ const CultureCard = ({
       }}
     >
       {/* SIDE DECORATIVE IMAGE */}
-
       {sideImgSrc && (
         <img
           src={sideImgSrc}
@@ -122,20 +121,18 @@ const CultureCard = ({
             width: "200px",
             height: "200px",
             objectFit: "contain",
-            borderRadius:"50px",
+            borderRadius: "50px",
             transform: "translateY(-50%)",
             zIndex: 1,
             pointerEvents: "none",
 
-            // LEFT cards → image on far left
-            // RIGHT cards → image on far right
             ...(isLeft
               ? {
-                left: "-250px",
-              }
+                  left: "-250px",
+                }
               : {
-                right: "-250px",
-              }),
+                  right: "-250px",
+                }),
           }}
         />
       )}
@@ -192,7 +189,7 @@ const CultureCard = ({
           <p
             style={{
               color: "#6b7280",
-              fontSize: "13px",
+              fontSize: "15px !important",
               lineHeight: "1.5",
               margin: 0,
             }}
@@ -225,9 +222,9 @@ const DEFAULT_CARD_POSITIONS: CardPosition[] = [
 export default function WorkCultureSection() {
   const data: CultureItem[] = [
     {
-      title: "Values and Beliefs",
+      title: "Values & Beliefs",
       description:
-        "The core principles and beliefs that guide decision-making and behavior within the organization.",
+        "We are guided by strong values that shape our decisions, encourage integrity, and create a positive and respectful workplace.",
       imgSrc: "/assets/img/careers/1.png",
       sideImgSrc: "/assets/img/careers/Values.png",
       colorTheme: "orange",
@@ -236,7 +233,7 @@ export default function WorkCultureSection() {
     {
       title: "Communication",
       description:
-        "The openness, transparency, and effectiveness of communication channels between employees and management.",
+        "We encourage open, transparent, and effective communication, ensuring that every team member has the opportunity to share ideas, feedback, and perspectives.",
       imgSrc: "/assets/img/careers/2.png",
       sideImgSrc: "/assets/img/careers/communication.png",
       colorTheme: "blue",
@@ -245,7 +242,7 @@ export default function WorkCultureSection() {
     {
       title: "Collaboration",
       description:
-        "The degree to which employees work together, share ideas, and support each other to achieve common goals.",
+        "We believe great results come from teamwork. Our team works together, shares knowledge, supports one another, and contributes toward achieving common goals.",
       imgSrc: "/assets/img/careers/3.png",
       sideImgSrc: "/assets/img/careers/Collaboration.png",
       colorTheme: "purple",
@@ -254,7 +251,7 @@ export default function WorkCultureSection() {
     {
       title: "Leadership Style",
       description:
-        "The approach and behavior of leaders in the organization, which sets the tone for the rest of the workforce.",
+        "We promote supportive and approachable leadership that inspires employees, encourages initiative, and creates opportunities for professional growth.",
       imgSrc: "/assets/img/careers/4.png",
       sideImgSrc: "/assets/img/careers/leadership.png",
       colorTheme: "orange",
@@ -263,7 +260,7 @@ export default function WorkCultureSection() {
     {
       title: "Employee Engagement",
       description:
-        "The level of involvement, enthusiasm, and commitment employees have towards their work and the organization.",
+        "We encourage our team to take ownership of their work, stay motivated, contribute new ideas, and actively participate in our growth and success.",
       imgSrc: "/assets/img/careers/5.png",
       sideImgSrc: "/assets/img/careers/Employee Engagement.png",
       colorTheme: "blue",
@@ -272,7 +269,7 @@ export default function WorkCultureSection() {
     {
       title: "Work-Life Balance",
       description:
-        "The emphasis placed on maintaining a healthy balance between work responsibilities and personal life.",
+        "We value a healthy balance between professional responsibilities and personal well-being, creating a work environment where employees can perform at their best.",
       imgSrc: "/assets/img/careers/6.png",
       sideImgSrc: "/assets/img/careers/Work-Life Balance.png",
       colorTheme: "purple",
@@ -281,7 +278,7 @@ export default function WorkCultureSection() {
     {
       title: "Recognition & Reward",
       description:
-        "The acknowledgment and appreciation of employee contributions through rewards, incentives, and advancement.",
+        "We appreciate dedication, creativity, and performance by recognizing valuable contributions and providing opportunities for growth and advancement.",
       imgSrc: "/assets/img/careers/7.png",
       sideImgSrc: "/assets/img/careers/Recognition & Reward.png",
       colorTheme: "orange",
@@ -290,7 +287,7 @@ export default function WorkCultureSection() {
     {
       title: "Adaptability",
       description:
-        "The organization's ability to embrace change, learn from failures, and adapt to new opportunities.",
+        "We embrace change, continuous learning, and new technologies. Our team is encouraged to learn from challenges, adapt quickly, and explore new opportunities.",
       imgSrc: "/assets/img/careers/8.png",
       sideImgSrc: "/assets/img/careers/Adaptability.png",
       colorTheme: "blue",
@@ -315,7 +312,6 @@ export default function WorkCultureSection() {
           inset: 0,
           pointerEvents: "none",
           opacity: 0.06,
-          // backgroundImage: "linear-gradient(#000 1px, transparent 1px)",
           backgroundSize: "100% 32px",
           marginTop: "4px",
         }}

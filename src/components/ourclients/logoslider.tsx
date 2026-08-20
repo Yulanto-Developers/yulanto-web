@@ -20,34 +20,34 @@ const WIPE_DURATION = 0.92;
 const WIPE_TIMES = [0, 0.4, 1];
 
 const DEFAULT_LOGOS: LogoEntry[] = [
-  { id: 1, logo: "/assets/img/partners/AEROVON.png" },
-  { id: 2, logo: "/assets/img/partners/AEZEN.png" },
-  { id: 3, logo: "/assets/img/partners/ALPHONSA.png" },
-  { id: 4, logo: "/assets/img/partners/ASTRO.png" },
-  { id: 5, logo: "/assets/img/partners/BBI.png" },
-  { id: 6, logo: "/assets/img/partners/bioxgreen.png" },
-  { id: 7, logo: "/assets/img/partners/BISHMILLAH.png" },
+  { id: 1, logo: "/assets/img/partners/logo-1.png" },
+  { id: 2, logo: "/assets/img/partners/logo-2.png" },
+  { id: 3, logo: "/assets/img/partners/logo-3.png" },
+  { id: 4, logo: "/assets/img/partners/logo-4.png" },
+  { id: 5, logo: "/assets/img/partners/logo-5.png" },
+  { id: 6, logo: "/assets/img/partners/logo-6.png" },
+  { id: 7, logo: "/assets/img/partners/logo-7.png" },
   {
     id: 8,
-    logo: "/assets/img/partners/CHENNAI-CLEANERS.png",
+    logo: "/assets/img/partners/logo-8.png",
   },
-  { id: 9, logo: "/assets/img/partners/CHOLAS.png" },
-  { id: 10, logo: "/assets/img/partners/CLOUD-WALK.png" },
-  { id: 11, logo: "/assets/img/partners/devior.png" },
-  { id: 12, logo: "/assets/img/partners/DI.png" },
-  { id: 13, logo: "/assets/img/partners/ebara.png" },
-  { id: 14, logo: "/assets/img/partners/ELSH.png" },
-  { id: 15, logo: "/assets/img/partners/EPC.png" },
-  { id: 16, logo: "/assets/img/partners/EXPRESS.png" },
-  { id: 17, logo: "/assets/img/partners/GOLDEN.png" },
-  { id: 18, logo: "/assets/img/partners/grayeye.png" },
-  { id: 19, logo: "/assets/img/partners/hub.png" },
-  { id: 20, logo: "/assets/img/partners/KLEANTERRA.png" },
-  { id: 21, logo: "/assets/img/partners/LEADTEQS.png" },
-  { id: 22, logo: "/assets/img/partners/LOTUS.png" },
-  { id: 23, logo: "/assets/img/partners/MARG.png" },
-  { id: 24, logo: "/assets/img/partners/MAVERICK.png" },
-  { id: 25, logo: "/assets/img/partners/pest-tech.png" },
+  { id: 9, logo: "/assets/img/partners/logo-9.png" },
+  { id: 10, logo: "/assets/img/partners/logo-10.png" },
+  { id: 11, logo: "/assets/img/partners/logo-11.png" },
+  { id: 12, logo: "/assets/img/partners/logo-12.png" },
+  { id: 13, logo: "/assets/img/partners/logo-13.png" },
+  { id: 14, logo: "/assets/img/partners/logo-14.png" },
+  { id: 15, logo: "/assets/img/partners/logo-15.png" },
+  { id: 16, logo: "/assets/img/partners/logo-16.png" },
+  { id: 17, logo: "/assets/img/partners/logo-17.png" },
+  { id: 18, logo: "/assets/img/partners/logo-18.png" },
+  { id: 19, logo: "/assets/img/partners/logo-19.png" },
+  { id: 20, logo: "/assets/img/partners/logo-20.png" },
+  { id: 21, logo: "/assets/img/partners/logo-21.png" },
+  { id: 22, logo: "/assets/img/partners/logo-22.png" },
+  { id: 23, logo: "/assets/img/partners/logo-23.png" },
+  { id: 24, logo: "/assets/img/partners/logo-24.png" },
+  // { id: 25, logo: "/assets/img/partners/logo-25.png" },
 ];
 
 function LogoItem({
@@ -118,30 +118,35 @@ function LogoItem({
         }
       }}
       whileHover={{
-        scale: 1.07,
+        y: -2,
+        boxShadow: "inset 1px 17px 15px rgba(0, 0, 0, 0.1)",
         opacity: 1,
         filter: "blur(0px)",
         transition: {
-          type: "spring",
-          stiffness: 340,
-          damping: 24,
+          duration: 0.3,
+          ease: "easeInOut",
         },
       }}
       style={{
-        display: "flex",
-        width: "150px",
+        display: "grid",
+        placeContent: "center",
+        width: "180px",
+        minHeight: "120px",
         flexShrink: 0,
         cursor: "default",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "8px",
+        borderRadius: "20px",
+        backgroundColor: "#ffffff",
+        boxShadow: "inset 1px -17px 15px rgba(0, 0, 0, 0.1)",
+        padding: "10px",
+        boxSizing: "border-box",
+        transition: "box-shadow 0.3s, transform 0.3s",
       }}
     >
       <span
         style={{
           display: "flex",
-          height: "100px",
-          width: "150px",
+          height: "100%",
+          width: "100%",
           alignItems: "center",
           justifyContent: "center",
         }}
@@ -151,8 +156,8 @@ function LogoItem({
           alt={logo.name ?? "Partner logo"}
           draggable={false}
           style={{
-            height: "100%",
-            width: "100%",
+            maxHeight: "80px",
+            maxWidth: "100%",
             objectFit: "contain",
           }}
         />
@@ -167,6 +172,8 @@ function LogoItem({
             fontWeight: 500,
             letterSpacing: "0.02em",
             color: "#6b7280",
+            textAlign: "center",
+            marginTop: "6px",
           }}
         >
           {logo.name}
@@ -234,9 +241,7 @@ export default function LogoCloudSwap({
         overflow: "hidden",
       }}
     >
-      {/* =========================
-          SECTION HEADER
-      ========================== */}
+      {/* SECTION HEADER */}
       <div className="container">
         <div className="row align-items-center">
           {/* Left Label */}
@@ -269,9 +274,7 @@ export default function LogoCloudSwap({
         </div>
       </div>
 
-      {/* =========================
-          LOGO SECTION
-      ========================== */}
+      {/* LOGO SECTION */}
       <div
         style={{
           margin: "40px auto 0",
@@ -287,7 +290,7 @@ export default function LogoCloudSwap({
               flexWrap: "wrap",
               alignItems: "center",
               justifyContent: "center",
-              gap: "30px",
+              gap: "20px",
             }}
           >
             {logos.map((logo, index) => (
@@ -307,11 +310,11 @@ export default function LogoCloudSwap({
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
+              gridTemplateColumns: "repeat(2, 1fr)",
               justifyItems: "center",
               alignItems: "center",
               columnGap: "12px",
-              rowGap: "24px",
+              rowGap: "20px",
               width: "100%",
             }}
           >

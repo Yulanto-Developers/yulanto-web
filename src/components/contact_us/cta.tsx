@@ -26,18 +26,21 @@ const BlogDetailsArea = () => {
                         <BlogQuoteIcon />
                       </i>
 
-                      <div className="postbox-details-quote">
+                      <div className="postbox-details-quote col-lg-8">
                         <p>
                           “Let’s turn your ideas into impactful digital experiences. Whether you have a question, need guidance, or are ready to start a project, our team is here to help. Get in touch with us or visit our office for a conversation over a cup of coffee.”
                         </p>
 
-                        {/* Added Button */}
-                        {/* <div className="mt-20 px-btn-grey ">
-                          <Link href="#" className="">
-                            Request a Quote
-                          </Link>
-                        </div> */}
-                      </div>  
+
+                      </div>
+                      <div className="col-lg-4">
+                        <div className="tp-contact-us-img">
+                          <Image src="/assets/img/tocontact/QR2.png" alt="Contact Us" width={170} height={170} />
+                        </div>
+                      </div>
+
+
+
                     </div>
                   </blockquote>
                 </div>

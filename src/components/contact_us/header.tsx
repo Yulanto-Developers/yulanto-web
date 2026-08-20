@@ -7,40 +7,34 @@ const ContactUsTopIntro = () => {
         <div className="tp-contact-us-ptb pt-60 p-relative">
             <div className="container container-1230">
                 <div className="tp-contact-us-wrap-ptb">
-                    <div className="row justify-content-center">
-                        <div className="col-xl-12">
-                            <div className="tp-contact-us-heading tp_fade_anim" data-delay=".3">
-                                <div className="tp-contact-us-title-box d-flex align-items-center mb-20">
-                                    {/* <span className="tp-section-subtitle pre tp_fade_anim">  How Can We Help You ?</span>
-                                    <div>
-                                        <BigArrowIcon />
-                                    </div> */}
-                                </div>
-                               
-                                  <h4 className="px-about-title mb-20">
-                    <span className="text-blue-about">How Can We Help You? Have a project in mind? {" "}</span> Let’s bring your ideas to life
-                  </h4>
+
+                    <div className="row  align-items-center">
+                        <div className="col-xl-3">
+                            <span className="tp-section-subtitle text-black blink-ball">
+                                How Can We Help You
+
+                            </span>
+                        </div>
+
+                        <div className="col-xl-9">
+                            <div className="px-project-title-box">
+
+                                <h4 className="px-about-title mb-20">
+                                    <span className="text-blue-about">Have a project in mind? </span> Let’s bring your ideas to life
+                                </h4>
+                                <p className="text-figtree text-black mt-2 font-paragraph-cls">
+                                    Yulanto offers more than a
+                                    mere website. it promises a digital masterpiece that enhances your online presence and
+                                    drives your success to new heights.
+                                </p>
+
                             </div>
                         </div>
                     </div>
-                    <div className="row">
-                       
-                        <div className="col-lg-8">
-                            <div className="tp-contact-us-text tp_fade_anim">
-                                <p className="m-0">Yulanto offers more than a
-                                mere website; it promises a digital masterpiece that enhances your online presence and
-                                drives your success to new heights.</p>
-                            </div>
-                        </div>
-                         <div className="col-lg-4">
-                            <div className="tp-contact-us-img">
-                                <Image src="/assets/img/tocontact/QR2.png" alt="Contact Us" width={170} height={170} />
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
-           
+
         </div>
     );
 };
