@@ -780,7 +780,7 @@ export default function RecentProject() {
 
                                         <Card
                                             key={index}
-
+                                            projectLink={item.links}
                                             style={{
 
                                                 backgroundImage:

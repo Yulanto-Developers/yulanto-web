@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import AnimatedCounterTree from "@/components/shared/MetricsCounter/AnimatedCounterThree";
 import { SmartLink } from "@/components/common";
 import { TextArrowIcon } from "@/svg";
@@ -12,665 +13,469 @@ import { gsap } from "gsap";
 
 import "./majorclient.css";
 
-gsap.registerPlugin(
-    ScrollTrigger,
-    ScrollSmoother
-);
-
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 /* =========================================================
    LEFT NAVIGATION DATA
 ========================================================= */
 
 export const majorCItems = [
-    "Naturographer",
-    "Core",
-    "Grayt",
-    "Freight Digital",
+  "Naturographer",
+  "Core",
+  "Grayt",
+  "Freight Digital",
 ];
 
-
 /* =========================================================
-   SERVICE DATA
+   SERVICE DATA (WITH SOLUTIONS INTRO PARAGRAPH)
 ========================================================= */
 
 export const innerClient = [
-    {
-        id: 1,
+  {
+    id: 1,
 
-        title: "Naturographer",
+    title: "Naturographers – Wildlife Photography & Eco-Tourism Website Design",
 
-        descriptions: [
-            "Strong branding sets your startup apart, signaling quality and professionalism. It builds trust with your audience, making you stand out in a crowded market.",
-        ],
+    descriptions: [
+      "Naturographers is a wildlife photography and eco-tourism website designed to showcase immersive safari experiences, wildlife photography workshops, and cinematic storytelling for nature enthusiasts. Our goal was to create a visually engaging and user-friendly website that reflects the brand’s passion for wildlife, adventure, nature, and photography.",
+    ],
 
-        categories: [
-            "Brand Naming",
-            "Creative Direction",
-            "Brand Strategy",
-            "Graphic charter",
-            "Logo Design",
-        ],
+    challenges: [
+      "Outdated website design and user interface",
+      "Weak wildlife photography presentation",
+      "Poor visual storytelling",
+      "Low user engagement",
+      "Inconsistent UI elements",
+      "Lack of a premium brand identity",
+      "Limited focus on safari and photography experiences",
+      "Poor overall user experience across devices",
+    ],
 
-        images: [
-            "/assets/img/service/inner-service/service-1.jpg",
-            "/assets/img/service/inner-service/service-2.jpg",
-        ],
-    },
+    solutionIntro:
+      "We redesigned Naturographers as a modern wildlife photography and eco-tourism website with a strong focus on visual storytelling, user experience, and brand presentation.",
 
-    {
-        id: 2,
+    solutions: [
+      "High-quality wildlife and nature photography",
+      "Cinematic visual storytelling",
+      "Nature-inspired color palette",
+      "Modern and responsive website design",
+      "Smooth and intuitive navigation",
+      "Interactive safari and tour sections",
+      "Dedicated photography workshop presentation",
+      "Clear and engaging call-to-action sections",
+      "Consistent UI design and visual hierarchy",
+      "Premium typography and modern layouts",
+      "Mobile-friendly and responsive experience",
+      "Optimized presentation of wildlife photography and eco-tourism services",
+    ],
 
-        title: "Core",
+    images: [
+      "/assets/img/service/inner-service/service-1.jpg",
+      "/assets/img/service/inner-service/service-2.jpg",
+    ],
+  },
 
-        descriptions: [
-            "A process of assumption & validation with a goal of taking into account all the necessary variables, which are always custom and are to be uncovered.",
+  {
+    id: 2,
 
-            "Every business has digital potential, and we are here to help you leverage that potential.",
-        ],
+    title: "Core",
 
-        categories: [
-            "Wireframe",
-            "UI design",
-            "Prototyping",
-            "Design system",
-            "UI & UX audit",
-            "Design System",
-            "Interactive Experiences",
-        ],
+    descriptions: [
+      "A process of assumption & validation with a goal of taking into account all the necessary variables, which are always custom and are to be uncovered.",
 
-        images: [
-            "/assets/img/service/inner-service/service-3.jpg",
-            "/assets/img/service/inner-service/service-4.jpg",
-        ],
-    },
+      "Every business has digital potential, and we are here to help you leverage that potential.",
+    ],
 
-    {
-        id: 3,
+    challenges: [
+      "Unclear digital product positioning",
+      "Complex user flows slowing down conversions",
+      "Lack of scalable visual component architecture",
+    ],
 
-        title: "Grayt",
+    solutionIntro:
+      "We transformed Core into an agile design framework built for modern digital products.",
 
-        descriptions: [
-            "Marketing strategy is proudly responsible for the half of a campaign's success, another half relies solely on its implementation.",
+    solutions: [
+      "End-to-end UI & UX audit and rapid wireframing",
+      "Custom interactive prototyping and user validation",
+      "Comprehensive design system implementation",
+    ],
 
-            "We focus on creating visuals that communicate your value and engage your audience.",
-        ],
+    images: [
+      "/assets/img/service/inner-service/service-3.jpg",
+      "/assets/img/service/inner-service/service-4.jpg",
+    ],
+  },
 
-        categories: [
-            "Animated logos",
-            "Product Illustrations",
-            "Launch Videos",
-            "Illustrations",
-            "Visual Effects",
-            "Illustration 3D",
-        ],
+  {
+    id: 3,
 
-        images: [
-            "/assets/img/service/inner-service/service-5.jpg",
-            "/assets/img/service/inner-service/service-6.jpg",
-        ],
-    },
+    title: "Grayt",
 
-    {
-        id: 4,
+    descriptions: [
+      "Marketing strategy is proudly responsible for half of a campaign's success; the other half relies solely on its implementation.",
 
-        title: "Freight Digital",
+      "We focus on creating visuals that communicate your value and engage your audience.",
+    ],
 
-        descriptions: [
-            "Efficiency and scalability. The two factors which any decision gets filtered out with - programming language, framework, library, each line of code, and server side.",
-        ],
+    challenges: [
+      "Low visual engagement on key marketing campaigns",
+      "Static branding failing to resonate with modern audiences",
+    ],
 
-        categories: [
-            "Integration",
-            "Front-end",
-            "Back-end",
-            "Webflow",
-        ],
+    solutionIntro:
+      "We revitalized Grayt's visual presence through high-impact motion design and storytelling assets.",
 
-        images: [
-            "/assets/img/service/inner-service/service-7.jpg",
-            "/assets/img/service/inner-service/service-8.jpg",
-        ],
-    },
+    solutions: [
+      "Custom 3D visual assets and animated logo identities",
+      "High-conversion launch videos and product illustrations",
+    ],
+
+    images: [
+      "/assets/img/service/inner-service/service-5.jpg",
+      "/assets/img/service/inner-service/service-6.jpg",
+    ],
+  },
+
+  {
+    id: 4,
+
+    title: "Freight Digital",
+
+    descriptions: [
+      "Efficiency and scalability are the two factors through which every decision gets filtered—programming language, framework, library, line of code, and server architecture.",
+    ],
+
+    challenges: [
+      "Legacy software integration bottlenecks in logistics",
+      "Slow front-end load times impacting client retention",
+    ],
+
+    solutionIntro:
+      "We architected a streamlined Webflow and modern frontend strategy tailored for logistics scalability.",
+
+    solutions: [
+      "Scalable front-end & back-end web application architecture",
+      "Seamless API integrations and high-performance Webflow workflows",
+    ],
+
+    images: [
+      "/assets/img/service/inner-service/service-7.jpg",
+      "/assets/img/service/inner-service/service-8.jpg",
+    ],
+  },
 ];
-
 
 /* =========================================================
    TYPES
 ========================================================= */
 
 interface InnerServiceItemProps {
-    id: number;
-    title: string;
-    descriptions: string[];
-    categories: string[];
-    images: string[];
-    isLastItem?: boolean;
+  id: number;
+  title: string;
+  descriptions: string[];
+  challenges?: string[];
+  solutionIntro?: string;
+  solutions?: string[];
+  images: string[];
+  isLastItem?: boolean;
 }
-
 
 /* =========================================================
    RIGHT SIDE SERVICE ITEM
 ========================================================= */
 
 const MajorInnerItems = ({
-    id,
-    title,
-    descriptions,
-    categories,
-    images,
-    isLastItem = false,
+  id,
+  title,
+  descriptions,
+  challenges = [],
+  solutionIntro,
+  solutions = [],
+  images,
+  isLastItem = false,
 }: InnerServiceItemProps) => {
+  const [activeTab, setActiveTab] = useState<"challenges" | "solutions">("challenges");
 
-    return (
-        <div
-            id={`major-service-${id}`}
-            className={`major-inner-service-item ${!isLastItem
-                ? "major-inner-service-spacing"
-                : ""
-                }`}
-        >
+  return (
+    <div
+      id={`major-service-${id}`}
+      className={`major-inner-service-item ${
+        !isLastItem ? "major-inner-service-spacing" : ""
+      }`}
+    >
+      {/* =========================================
+          NUMBER + CONTENT
+      ========================================= */}
 
-            {/* =========================================
-                NUMBER + CONTENT
-            ========================================= */}
+      <div className="major-inner-service-right">
+        <div className="major-service-content-grid">
+          {/* NUMBER */}
 
-            <div className="major-inner-service-right">
+          <div className="major-inner-service-number">
+            <h2>
+              <AnimatedCounterTree end={id} duration={0.2} />
+            </h2>
+          </div>
 
-                <div className="major-service-content-grid">
+          {/* CONTENT */}
 
-                    {/* NUMBER */}
+          <div className="major-inner-service-content">
+            <div className="major-inner-service-text text-tenor">
+              <span>{title}</span>
 
-                    <div className="major-inner-service-number">
-
-                        <h2>
-                            <AnimatedCounterTree
-                                end={id}
-                                duration={0.2}
-                            />
-                        </h2>
-
-                    </div>
-
-
-                    {/* CONTENT */}
-
-                    <div className="major-inner-service-content">
-
-                        <div className="major-inner-service-text text-tenor">
-
-                            <span>
-                                {title}
-                            </span>
-
-
-                            {descriptions.map(
-                                (description, index) => (
-                                    <p className="text-figtree"
-                                        key={`description-${id}-${index}`}
-                                    >
-                                        {description}
-                                    </p>
-                                )
-                            )}
-
-                        </div>
-
-
-                        {/* CATEGORIES */}
-
-                        <div className="major-inner-service-category text-figtree">
-
-                            {categories.map(
-                                (category, index) => (
-
-                                    <p
-                                        key={`${category}-${index}`}
-                                        className="major-inner-service-category-item d-flex justify-content-between align-items-center"
-                                    >
-
-                                        <span>
-                                            {category}
-                                        </span>
-
-                                        <i>
-                                            <TextArrowIcon />
-                                        </i>
-
-                                    </p>
-
-                                )
-                            )}
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+              {descriptions.map((description, index) => (
+                <p
+                  className="text-figtree"
+                  key={`description-${id}-${index}`}
+                >
+                  {description}
+                </p>
+              ))}
             </div>
 
-
             {/* =========================================
-                IMAGES
+                CHALLENGES & SOLUTIONS ANIMATED BOX
             ========================================= */}
 
-            <div className="row gx-10 major-inner-service-images-row">
+            <div className="cs-box-wrapper text-figtree">
+              {/* Tab Header Controls */}
 
-                <div className="major-inner-service-thumb-text">
+              <div className="cs-tab-header">
+                <button
+                  type="button"
+                  className={`cs-tab-btn ${
+                    activeTab === "challenges" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("challenges")}
+                >
+                  Challenges ({challenges.length})
+                </button>
 
-                    <span className="text-tenor">
-                        (Our Recent  Work in {title})
-                    </span>
+                <button
+                  type="button"
+                  className={`cs-tab-btn ${
+                    activeTab === "solutions" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("solutions")}
+                >
+                  Solutions ({solutions.length})
+                </button>
+              </div>
 
+              {/* Tab Content Cards */}
+
+              <div className="cs-tab-body">
+                <div
+                  key={activeTab}
+                  className="cs-list-container cs-fade-in"
+                >
+                  {/* Solution Overview Paragraph */}
+                  {activeTab === "solutions" && solutionIntro && (
+                    <p className="cs-solution-intro-text mb-3">
+                      {solutionIntro}
+                    </p>
+                  )}
+
+                  {(activeTab === "challenges" ? challenges : solutions).map(
+                    (item, index) => (
+                      <div
+                        key={`${activeTab}-${index}`}
+                        className="cs-item d-flex justify-content-between align-items-center"
+                        style={{ animationDelay: `${index * 0.05}s` }}
+                      >
+                        <span className="cs-item-text">{item}</span>
+
+                        <i className="cs-item-icon">
+                          <TextArrowIcon />
+                        </i>
+                      </div>
+                    )
+                  )}
                 </div>
-
-
-                {images.map((image, index) => (
-
-                    <div
-                        key={`${image}-${index}`}
-                        className="col-xl-6 col-lg-6"
-                    >
-
-                        <div className="major-inner-service-thumb">
-
-                            <div className="major-inner-service-ripple-image">
-
-                                <Image
-                                    className="w-100 img-fluid"
-                                    width={643}
-                                    height={720}
-                                    src={image}
-                                    alt={`${title} ${index + 1}`}
-                                />
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                ))}
-
+              </div>
             </div>
-
+          </div>
         </div>
-    );
-};
+      </div>
 
+      {/* =========================================
+          IMAGES
+      ========================================= */}
+
+      <div className="row gx-10 major-inner-service-images-row">
+        <div className="major-inner-service-thumb-text">
+          <span className="text-tenor">
+            (Our Recent Work in {title})
+          </span>
+        </div>
+
+        {images.map((image, index) => (
+          <div
+            key={`${image}-${index}`}
+            className="col-xl-6 col-lg-6"
+          >
+            <div className="major-inner-service-thumb">
+              <div className="major-inner-service-ripple-image">
+                <Image
+                  className="w-100 img-fluid"
+                  width={643}
+                  height={720}
+                  src={image}
+                  alt={`${title} ${index + 1}`}
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 /* =========================================================
    MAIN COMPONENT
 ========================================================= */
 
 const MajorClientService = () => {
+  useGSAP(() => {
+    if (window.innerWidth <= 991) {
+      return;
+    }
 
-    useGSAP(() => {
+    const section = document.querySelector(".major-client-service-area");
+    const leftColumn = document.querySelector(".major-client-left-column");
+    const serviceItems = gsap.utils.toArray<HTMLElement>(
+      ".major-inner-service-item"
+    );
+    const navItems = gsap.utils.toArray<HTMLElement>(
+      ".major-client-service-nav li"
+    );
 
-        /* =========================================
-           DESKTOP ONLY
-        ========================================= */
+    if (
+      !section ||
+      !leftColumn ||
+      serviceItems.length === 0 ||
+      navItems.length === 0
+    ) {
+      return;
+    }
 
-        if (window.innerWidth <= 991) {
-            return;
-        }
+    const setActiveService = (activeIndex: number) => {
+      navItems.forEach((item, index) => {
+        item.classList.toggle(
+          "major-service-nav-active",
+          index === activeIndex
+        );
+      });
+    };
 
+    const ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top top+=100",
+        end: "bottom bottom",
+        pin: leftColumn,
+        pinSpacing: false,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+      });
 
-        /* =========================================
-           ELEMENTS
-        ========================================= */
-
-        const section =
-            document.querySelector(
-                ".major-client-service-area"
-            );
-
-        const leftColumn =
-            document.querySelector(
-                ".major-client-left-column"
-            );
-
-        const serviceItems =
-            gsap.utils.toArray<HTMLElement>(
-                ".major-inner-service-item"
-            );
-
-        const navItems =
-            gsap.utils.toArray<HTMLElement>(
-                ".major-client-service-nav li"
-            );
-
-
-        if (
-            !section ||
-            !leftColumn ||
-            serviceItems.length === 0 ||
-            navItems.length === 0
-        ) {
-            return;
-        }
-
-
-        /* =========================================
-           ACTIVE LEFT MENU
-        ========================================= */
-
-        const setActiveService = (
-            activeIndex: number
-        ) => {
-
-            navItems.forEach(
-                (item, index) => {
-
-                    item.classList.toggle(
-                        "major-service-nav-active",
-                        index === activeIndex
-                    );
-
-                }
-            );
-
-        };
-
-
-        /* =========================================
-           GSAP CONTEXT
-        ========================================= */
-
-        const ctx = gsap.context(() => {
-
-
-            /* =========================================
-               LEFT SIDE PIN
-
-               IMPORTANT:
-               This controls ONLY the left menu.
-
-               It ends when the bottom of the
-               service section reaches the bottom
-               of the viewport.
-
-               This prevents the left menu from
-               staying over the footer.
-            ========================================= */
-
-            ScrollTrigger.create({
-
-                trigger: section,
-
-                start: "top top+=100",
-
-                end: "bottom bottom",
-
-                pin: leftColumn,
-
-                pinSpacing: false,
-
-                anticipatePin: 1,
-
-                invalidateOnRefresh: true,
-
-            });
-
-
-            /* =========================================
-               RIGHT CONTENT -> ACTIVE LEFT MENU
-
-               This is separate from the pin.
-
-               45% controls when the left item
-               becomes active.
-            ========================================= */
-
-            serviceItems.forEach(
-                (service, index) => {
-
-                    ScrollTrigger.create({
-
-                        trigger: service,
-
-                        start: "top 45%",
-
-                        end: "bottom 45%",
-
-
-                        /* SCROLL DOWN */
-
-                        onEnter: () => {
-
-                            setActiveService(
-                                index
-                            );
-
-                        },
-
-
-                        /* SCROLL UP */
-
-                        onEnterBack: () => {
-
-                            setActiveService(
-                                index
-                            );
-
-                        },
-
-                    });
-
-                }
-            );
-
-
-            /* =========================================
-               FIRST ACTIVE ITEM
-            ========================================= */
-
-            setActiveService(0);
-
-
-            /* =========================================
-               REFRESH
-            ========================================= */
-
-            ScrollTrigger.refresh();
-
+      serviceItems.forEach((service, index) => {
+        ScrollTrigger.create({
+          trigger: service,
+          start: "top 45%",
+          end: "bottom 45%",
+          onEnter: () => setActiveService(index),
+          onEnterBack: () => setActiveService(index),
         });
+      });
 
-
-        /* =========================================
-           CLEANUP
-        ========================================= */
-
-        return () => {
-            ctx.revert();
-        };
-
+      setActiveService(0);
+      ScrollTrigger.refresh();
     });
 
-
-    /* =====================================================
-       RENDER
-    ===================================================== */
-
-    return (
-
-        <section
-            id="major-client-services"
-            className="major-client-service-area"
-        >
-
-            <div className="container container-1830">
-
-                <div className="row major-client-service-row">
-
-
-                    {/* =====================================
-                        LEFT SIDE
-                    ===================================== */}
-
-                    <div className="col-lg-3 major-client-left-column">
-
-                        <div className="major-client-left">
-
-                            <span className="major-client-left-title text-tenor">
-                                Services
-                            </span>
-
-
-                            <ul className="major-client-service-nav text-figtree">
-
-                                {majorCItems.map(
-                                    (item, index) => (
-
-                                        <li
-                                            key={item}
-                                        >
-
-                                            <a
-                                                href={`#major-service-${index + 1
-                                                    }`}
-
-                                                onClick={(e) => {
-
-                                                    e.preventDefault();
-
-
-                                                    /* =====================
-                                                       FIND TARGET
-                                                    ===================== */
-
-                                                    const target =
-                                                        document.getElementById(
-                                                            `major-service-${index + 1
-                                                            }`
-                                                        );
-
-
-                                                    if (!target) {
-                                                        return;
-                                                    }
-
-
-                                                    /* =====================
-                                                       SCROLLSMOOTHER
-                                                    ===================== */
-
-                                                    const smoother =
-                                                        ScrollSmoother.get();
-
-
-                                                    if (smoother) {
-
-                                                        smoother.scrollTo(
-                                                            target,
-                                                            true,
-                                                            "top top+=100"
-                                                        );
-
-                                                    } else {
-
-                                                        target.scrollIntoView({
-                                                            behavior: "smooth",
-
-                                                            block: "start",
-                                                        });
-
-                                                    }
-
-                                                }}
-                                            >
-
-                                                <span className="nav-num">
-
-                                                    {String(
-                                                        index + 1
-                                                    ).padStart(
-                                                        2,
-                                                        "0"
-                                                    )}
-
-                                                    .
-
-                                                </span>
-
-
-                                                <span className="nav-label">
-
-                                                    {item}
-
-                                                </span>
-
-                                            </a>
-
-                                        </li>
-
-                                    )
-                                )}
-
-                            </ul>
-
-                        </div>
-
-                    </div>
-
-
-                    {/* =====================================
-                        RIGHT SIDE
-
-                        IMPORTANT:
-                        KEEP col-lg-7
-                    ===================================== */}
-
-                    <div className="col-lg-7 major-client-right-column">
-
-                        {innerClient.map(
-                            (
-                                service,
-                                index
-                            ) => (
-
-                                <MajorInnerItems
-
-                                    key={service.id}
-
-                                    id={service.id}
-
-                                    title={
-                                        service.title
-                                    }
-
-                                    descriptions={
-                                        service.descriptions
-                                    }
-
-                                    categories={
-                                        service.categories
-                                    }
-
-                                    images={
-                                        service.images
-                                    }
-
-                                    isLastItem={
-                                        index ===
-                                        innerClient.length - 1
-                                    }
-
-                                />
-
-                            )
-                        )}
-
-                    </div>
-
-                </div>
-
+    return () => {
+      ctx.revert();
+    };
+  });
+
+  return (
+    <section
+      id="major-client-services"
+      className="major-client-service-area"
+    >
+      <div className="container container-1830">
+        <div className="row major-client-service-row">
+          {/* LEFT SIDE */}
+
+          <div className="col-lg-3 major-client-left-column">
+            <div className="major-client-left">
+              <span className="major-client-left-title text-tenor">
+                Services
+              </span>
+
+              <ul className="major-client-service-nav text-figtree">
+                {majorCItems.map((item, index) => (
+                  <li key={item}>
+                    <a
+                      href={`#major-service-${index + 1}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+
+                        const target = document.getElementById(
+                          `major-service-${index + 1}`
+                        );
+
+                        if (!target) {
+                          return;
+                        }
+
+                        const smoother = ScrollSmoother.get();
+
+                        if (smoother) {
+                          smoother.scrollTo(target, true, "top top+=100");
+                        } else {
+                          target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          });
+                        }
+                      }}
+                    >
+                      <span className="nav-num">
+                        {String(index + 1).padStart(2, "0")}.
+                      </span>
+
+                      <span className="nav-label">{item}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
+          </div>
 
-        </section>
-    );
+          {/* RIGHT SIDE */}
+
+          <div className="col-lg-7 major-client-right-column">
+            {innerClient.map((service, index) => (
+              <MajorInnerItems
+                key={service.id}
+                id={service.id}
+                title={service.title}
+                descriptions={service.descriptions}
+                challenges={service.challenges}
+                solutionIntro={service.solutionIntro}
+                solutions={service.solutions}
+                images={service.images}
+                isLastItem={index === innerClient.length - 1}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
-
 
 export default MajorClientService;

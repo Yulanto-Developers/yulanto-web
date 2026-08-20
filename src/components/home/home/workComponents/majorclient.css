@@ -105,7 +105,7 @@
     transition:
         transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
         opacity 0.35s ease;
-       
+
 }
 
 
@@ -659,4 +659,129 @@
     .major-inner-service-spacing {
         margin-bottom: 60px;
     }
+}
+
+
+/* =========================================
+   CHALLENGES & SOLUTIONS BOX DESIGN
+========================================= */
+
+.cs-box-wrapper {
+    margin-top: 30px;
+    background: #275674;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: border-color 0.3s ease;
+}
+
+.cs-box-wrapper:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.cs-tab-header {
+    display: flex;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.cs-tab-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 8px 20px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.cs-tab-btn:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.cs-tab-btn.active {
+    background: #53ae7d;
+    color: #fdfcfc;
+    border-color: #53ae7d;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.cs-tab-body {
+    position: relative;
+}
+
+.cs-list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cs-item {
+    padding: 14px 12px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    transition: background 0.3s ease, padding 0.3s ease;
+    border-radius: 8px;
+}
+
+.cs-item:last-child {
+    border-bottom: none;
+}
+
+.cs-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.cs-item-text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.cs-item-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.cs-item:hover .cs-item-icon {
+    transform: translateX(6px) translateY(-3px);
+    color: #ffffff;
+}
+
+/* Staggered Fade-in Animation */
+.cs-fade-in .cs-item {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: csFadeIn 0.4s ease forwards;
+}
+
+@keyframes csFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cs-solution-intro-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 10px 12px 14px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 8px;
 }
