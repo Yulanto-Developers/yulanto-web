@@ -2,6 +2,7 @@
 import React from "react";
 import { visionMissionData } from "@/components/data/visionMissionData";
 import "@/assets/css/style.css";
+import "@/assets/css/style1.css";
 
 const VisionMission = () => {
   const { vision, mission } = visionMissionData;

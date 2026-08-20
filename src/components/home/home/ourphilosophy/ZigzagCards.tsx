@@ -3,6 +3,7 @@
 import React from "react";
 import ZigzagCard from "./ZigzagCard";
 import "@/assets/css/style.css";
+import "@/assets/css/style1.css";
 
 type ZigzagCardItem = {
   id: number;
