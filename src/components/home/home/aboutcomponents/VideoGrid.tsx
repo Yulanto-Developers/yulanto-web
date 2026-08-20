@@ -56,6 +56,8 @@ const VideoGrid = ({
         titleFirst="How Effective Website Design & Development"
         titleSecond="Can Accelerate Business Growth"
         description=""
+        animationType="text-reveal-lines"
+        delay={300}
       />
 
       <div className="row g-4 mt-3">

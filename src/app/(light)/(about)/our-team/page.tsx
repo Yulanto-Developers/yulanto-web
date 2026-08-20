@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const HomePage = () => {
     return (
         <>
-           {/* <Breadcrumbdata /> */}
+           <Breadcrumbdata />
             <MDProfile/>
             <TeamSlider />
         </>

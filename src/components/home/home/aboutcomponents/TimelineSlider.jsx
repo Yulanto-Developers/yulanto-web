@@ -37,7 +37,7 @@ export default function TimelineSlider() {
       drag.current.prevTranslate = offset;
       trackRef.current.style.transform = `translate3d(${offset}px, 0, 0)`;
     },
-    [getStepWidth]
+    [getStepWidth],
   );
 
   const startAutoplay = useCallback(() => {
@@ -98,7 +98,7 @@ export default function TimelineSlider() {
       setCurrentIndex((prev) => (prev + 1) % timelineData.length);
     } else if (drag.current.dragOffset > threshold) {
       setCurrentIndex((prev) =>
-        prev === 0 ? timelineData.length - 1 : prev - 1
+        prev === 0 ? timelineData.length - 1 : prev - 1,
       );
     } else {
       updatePosition(currentIndex);
@@ -132,6 +132,8 @@ export default function TimelineSlider() {
         titleFirst=" Our Journey "
         titleSecond=" So Far"
         description="Our journey is a story of continuous growth, innovation, and commitment. Since our establishment in 2015, we have evolved from a small team with a big vision into a growing digital solutions company."
+        animationType="text-reveal-lines"
+        delay={300}
       />
 
       <div

@@ -327,7 +327,6 @@
 
 /* End Team Member */
 
-/*  MD Profile */
 /* ==========================
    MD Profile
 ========================== */
@@ -338,15 +337,10 @@
   width: 100%;
   display: flex;
   align-items: center;
-  background: linear-gradient(to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #ffffff 50%,
-      #ffffff 100%);
   padding: 60px 0;
+  background: #fff;
 }
 
-/* Add this - Container Flex */
 .md-profile .container {
   display: flex;
   align-items: center;
@@ -359,74 +353,69 @@
   z-index: 2;
 }
 
-/* ==========================
-   Background Text (Two-Color Split)
-========================== */
+/* Background Text */
 
 .md-profile .bg-text {
   position: absolute;
   inset: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  z-index: 1;
   font-size: 170px;
   font-weight: 800;
   letter-spacing: 5px;
+  color: transparent;
+  white-space: nowrap;
   pointer-events: none;
   user-select: none;
-  background: linear-gradient(120deg,
-      rgba(9, 50, 84, 0.08) 0%,
-      rgba(9, 50, 84, 0.08) 50%,
-      rgba(46, 176, 129, 0.15) 50%,
-      rgba(46, 176, 129, 0.15) 100%);
+  background: linear-gradient(
+    120deg,
+    rgba(9, 50, 84, 0.08) 0%,
+    rgba(9, 50, 84, 0.08) 50%,
+    rgba(46, 176, 129, 0.15) 50%,
+    rgba(46, 176, 129, 0.15) 100%
+  );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* ==========================
-   Left
-========================== */
+@media (max-width: 991px) {
+  .md-profile .bg-text {
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 767px) {
+  .md-profile .bg-text {
+    font-size: 55px;
+    letter-spacing: 3px;
+  }
+}
+
+/* Left */
 
 .md-profile .left {
   flex: 1;
 }
 
-.md-profile .left h3 {
-  font-size: 50px;
-  color: #093254;
-  margin-bottom: 5px;
-}
-
-.md-profile .left h3 span {
-  color: #2eb081;
-  font-size: 32px;
-  font-weight: 400;
-}
-
-.md-profile .left h1 {
-  font-size: 72px;
-  color: #2eb081;
-  line-height: 1;
-  margin: 10px 0;
-}
-
-.md-profile .left h2 {
-  font-size: 52px;
-  color: #093254;
-  margin-bottom: 20px;
-}
-
 .md-profile .left p {
-  font-size: 16px;
   line-height: 1.8;
   color: #222;
   max-width: 450px;
 }
 
-/* ==========================
-   Center
-========================== */
+/* MD Title */
+
+.md-desk-title {
+  font-size: 30px;
+  line-height: 1.2;
+  color: #093254;
+  margin-bottom: 5px;
+}
+
+/* Center */
 
 .md-profile .center {
   flex: 1;
@@ -442,38 +431,26 @@
   z-index: 1;
 }
 
-/* ==========================
-   Right
-========================== */
+/* Right */
 
 .md-profile .right {
   flex: 1;
   text-align: right;
 }
 
-.md-profile .right span {
-  color: #2eb081;
-  font-size: 24px;
-  font-weight: 700;
+.md-profile .right p {
+  line-height: 1.8;
+  color: #222;
+  margin-bottom: 20px;
 }
 
-.md-profile .right h2 {
-  color: #093254;
-  font-size: 64px;
-  line-height: 1;
-  margin-top: 10px;
-}
-
-/* ==========================
-   Responsive
-========================== */
+/* Responsive */
 
 @media (max-width: 991px) {
   .md-profile {
     padding: 70px 0;
   }
 
-  /* Stack columns on tablet */
   .md-profile .container {
     flex-direction: column;
     gap: 40px;
@@ -491,53 +468,33 @@
     margin-inline: auto;
   }
 
-  .md-profile .right {
-    text-align: center;
-  }
-
-  .md-profile .bg-text {
-    font-size: 90px;
-  }
-
-  .md-profile .left h1 {
-    font-size: 56px;
-  }
-
-  .md-profile .left h2 {
-    font-size: 42px;
-  }
-
-  .md-profile .right h2 {
-    font-size: 48px;
-  }
-
   .md-profile .center img {
     max-width: 340px;
+  }
+
+  .md-desk-title {
+    font-size: 24px;
+    line-height: 1.25;
   }
 }
 
 @media (max-width: 767px) {
   .md-profile .bg-text {
-    font-size: 55px;
+    letter-spacing: 3px;
   }
 
-  .md-profile .left h3 {
-    font-size: 32px;
-  }
-
-  .md-profile .left h1 {
-    font-size: 44px;
-  }
-
-  .md-profile .left h2 {
-    font-size: 34px;
-  }
-
-  .md-profile .right h2 {
-    font-size: 36px;
+  .md-desk-title {
+    font-size: 22px;
+    line-height: 1.3;
   }
 }
 
+@media (max-width: 480px) {
+  .md-desk-title {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
 /* End MD Profile */
 /* ===========================
    Core Values Section
@@ -580,10 +537,12 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0.15) 0%,
-      rgba(9, 50, 84, 0.45) 50%,
-      rgba(9, 50, 84, 0.85) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(9, 50, 84, 0.45) 50%,
+    rgba(9, 50, 84, 0.85) 100%
+  );
   z-index: 1;
   transition: background 0.4s ease;
 }
@@ -659,10 +618,12 @@
 
 .core-value-card.active::before,
 .core-value-card:hover::before {
-  background: linear-gradient(to bottom,
-      rgba(9, 50, 84, 0.2) 0%,
-      rgba(9, 50, 84, 0.75) 60%,
-      rgba(9, 50, 84, 0.95) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(9, 50, 84, 0.2) 0%,
+    rgba(9, 50, 84, 0.75) 60%,
+    rgba(9, 50, 84, 0.95) 100%
+  );
 }
 
 .core-value-card.active .core-value-card-title,
@@ -794,13 +755,15 @@
 /* Background gradient for Vision card */
 .vision-mission-col::before {
   background: #093254;
-  background: linear-gradient(#093254c9, #093254b3), url(/assets/images/about/pattern.png);
+  background:
+    linear-gradient(#093254c9, #093254b3), url(/assets/images/about/pattern.png);
 }
 
 /* Background gradient for Mission card */
 .clr.vision-mission-col::before {
   background: #2eb081;
-  background: linear-gradient(#2eb0818a, #118f61e0), url(/assets/images/about/pattern.png);
+  background:
+    linear-gradient(#2eb0818a, #118f61e0), url(/assets/images/about/pattern.png);
 }
 
 @media (min-width: 768px) {
@@ -818,7 +781,9 @@
 .vision-mission-col h3,
 .vision-mission-col p,
 .vision-mission-col .accent-line {
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .vision-mission-col.active .section-badge,
