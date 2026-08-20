@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import './HeroCollage.css';
 
 export interface HeroCollageProps extends React.HTMLAttributes<HTMLDivElement> {
-  title?: React.ReactNode;
+  title?: string;
   subtitle?: string;
   stats?: { value: string; label: string }[];
   images?: string[];

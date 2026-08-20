@@ -93,7 +93,7 @@ export interface ClientsShowcasePageProps {
   ctaTitleRest: string;
   ctaDescription: string;
   ctaButtonText: string;
-  ctaHref: string;
+  ctaHref ?: string;
 }
 
 const colors = {
