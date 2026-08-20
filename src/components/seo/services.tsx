@@ -38,7 +38,7 @@ const seoServices = [
 ];
 
 export default function SeoServicesList() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section

@@ -14,13 +14,13 @@ export interface HeroCollageProps extends React.HTMLAttributes<HTMLDivElement> {
 
 // Sample placeholder images structured to mirror your reference image
 const INTERNAL_IMAGES = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80", // 1. Center Girl
-  "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&q=80", // 2. Curology Bottle
-  "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&q=80", // 3. Bread Bowl
-  "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&q=80", // 4. Flower Heart
-  "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&q=80", // 5. Red Car
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&q=80", // 6. Sunset Mountain
-  "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&q=80", // 7. Umbrellas
+  "assets/img/seo/top/top-img-1.jpg", // 1. Center Girl
+  "assets/img/seo/top/top-img-2.jpg", // 2. Curology Bottle
+  "assets/img/seo/top/top-img-3.jpg", // 3. Bread Bowl
+  "assets/img/seo/top/top-img-4.jpg", // 4. Flower Heart
+  "assets/img/seo/top/top-img-5.jpg", // 5. Red Car
+  "assets/img/seo/top/top-img-6.jpg", // 6. Sunset Mountain
+  "assets/img/seo/top/top-img-7.jpg", // 7. Umbrellas
 ];
 
 const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
