@@ -4,6 +4,7 @@ import PersonalPortfolioHeader from "@/components/layout/headers/PersonalPortfol
 import { ClientProviders } from "@/providers";
 
 import "@/assets/css/style.css";
+import "@/assets/css/style1.css";
 import "glightbox/dist/css/glightbox.css";
 
 export default function AboutUsLayout({ children }: {

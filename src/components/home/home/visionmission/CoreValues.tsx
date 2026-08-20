@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import "@/assets/css/style.css";
+import "@/assets/css/style1.css";
 import SectionTitle from "@/components/sectiontitle/SectionTitle";
 import coreValuesData from "@/components/data/corevalues";
 

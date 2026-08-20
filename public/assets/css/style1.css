@@ -1,0 +1,1023 @@
+/* ===========================
+   CommonStyles
+=========================== */
+.pt-60 {
+  padding-top: 60px;
+}
+
+.pb-60 {
+  padding-bottom: 60px;
+}
+
+/* Team Member */
+/* ==========================================
+   Team Slider Section & Base Layout
+   ========================================== */
+.tm-slider-section {
+  background: #ffffff;
+  padding: 40px 0 30px;
+  overflow: hidden;
+}
+
+.tm-slider-swiper {
+  padding: 80px 10px 70px;
+  /* Top padding added so top-left tooltips aren't clipped */
+}
+
+.tm-slider-swiper .swiper-wrapper {
+  align-items: flex-start;
+}
+
+.tm-slider-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Outer Wrapper for positioning relative elements */
+.tm-slider-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================
+   Card Setup
+   ========================================== */
+.tm-slider-card {
+  width: 190px;
+  height: 450px;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+  transition:
+    transform 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.45s ease;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Profile Image */
+.tm-slider-card img.tm-slider-profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.tm-slider-wrapper:hover img.tm-slider-profile,
+.tm-slider-card:hover img.tm-slider-profile {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+/* Header Info Inside Card */
+.tm-slider-content {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+  padding: 0 20px;
+}
+
+.tm-slider-content h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #0f172a;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.tm-slider-content span {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Light Palette Variants */
+.tm-slider-shade-pink {
+  background: #fce7f3;
+}
+
+.tm-slider-shade-yellow {
+  background: #fef3c7;
+}
+
+.tm-slider-shade-slate {
+  background: #f1f5f9;
+}
+
+.tm-slider-shade-cream {
+  background: #fef9c3;
+}
+
+/* ==========================================
+   Skill Bar Floating Menu
+   ========================================== */
+.tm-slider-skill-bar {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 30;
+}
+
+.tm-slider-skill {
+  width: 42px;
+  height: 42px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.12);
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tm-slider-skill img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Staggered Slide-In Animations on Hover */
+.tm-slider-wrapper:hover .tm-slider-skill,
+.tm-slider-card:hover .tm-slider-skill {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tm-slider-wrapper:hover .tm-slider-skill:nth-child(1),
+.tm-slider-card:hover .tm-slider-skill:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.tm-slider-wrapper:hover .tm-slider-skill:nth-child(2),
+.tm-slider-card:hover .tm-slider-skill:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.tm-slider-wrapper:hover .tm-slider-skill:nth-child(3),
+.tm-slider-card:hover .tm-slider-skill:nth-child(3) {
+  transition-delay: 0.15s;
+}
+
+.tm-slider-wrapper:hover .tm-slider-skill:nth-child(4),
+.tm-slider-card:hover .tm-slider-skill:nth-child(4) {
+  transition-delay: 0.2s;
+}
+
+.tm-slider-wrapper:hover .tm-slider-skill:nth-child(5),
+.tm-slider-card:hover .tm-slider-skill:nth-child(5) {
+  transition-delay: 0.25s;
+}
+
+.tm-slider-skill:hover {
+  transform: translateX(4px) scale(1.15) !important;
+  background: #0f172a;
+}
+
+.tm-slider-skill:hover img {
+  filter: brightness(0) invert(1);
+}
+
+/* ==========================================
+   Top-Left Frosted Glass Tooltip Design
+   ========================================== */
+.tm-slider-tooltip {
+  position: absolute;
+  bottom: calc(60% + 12px);
+  /* Positioned above the card */
+  left: -70%;
+  width: 260px;
+  padding: 12px 16px;
+  /* Frosted Glass Background & Blur */
+  background: rgba(15, 23, 42, 0.65);
+  /* Semi-transparent dark slate */
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(12px) saturate(180%);
+  /* Text Clarity & Styling */
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: normal;
+  word-break: break-word;
+  text-align: left;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  /* Boosts typography visibility over blur */
+
+  /* Borders & Radius */
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  /* Soft top inner highlight */
+
+  /* Animation setup */
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px) scale(0.95);
+  transform-origin: bottom left;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Top-Left Arrow (pointing down toward the card) */
+.tm-slider-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid rgba(15, 23, 42, 0.65);
+}
+
+/* Tooltip Hover State */
+.tm-slider-wrapper:hover .tm-slider-tooltip,
+.tm-slider-card:hover .tm-slider-tooltip {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ==========================================
+   Offset & Responsive Styles
+   ========================================== */
+.up {
+  margin-top: 0;
+}
+
+.down {
+  margin-top: 70px;
+}
+
+.tm-slider-section .swiper-backface-hidden .swiper-slide {
+  margin-right: 40px !important;
+}
+
+@media (max-width: 991px) {
+  .tm-slider-card {
+    width: 220px;
+    height: 440px;
+    border-radius: 110px;
+  }
+
+  .tm-slider-content h4 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tm-slider-card {
+    width: 200px;
+    height: 410px;
+    border-radius: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tm-slider-card {
+    width: 230px;
+    height: 440px;
+    border-radius: 115px;
+  }
+
+  .down {
+    margin-top: 0 !important;
+  }
+}
+
+/* ==========================================
+   Shift Tooltip to Right Side for Leftmost Slides
+   ========================================== */
+
+/* Target active slide and previous slide on the left */
+.swiper-slide-active .tm-slider-tooltip,
+.swiper-slide-prev .tm-slider-tooltip {
+  left: auto !important;
+  right: -50% !important;
+  text-align: right;
+  transform-origin: bottom right;
+  bottom: calc(55% + 12px);
+  z-index: 99999 !important;
+}
+
+/* Flip arrow to point from left side of tooltip down toward the card */
+.swiper-slide-active .tm-slider-tooltip::after,
+.swiper-slide-prev .tm-slider-tooltip::after {
+  right: auto !important;
+  left: 20px !important;
+}
+
+/* End Team Member */
+
+/*  MD Profile */
+/* ==========================
+   MD Profile
+========================== */
+
+.md-profile {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom,
+      #ffffff 0%,
+      #ffffff 50%,
+      #ffffff 50%,
+      #ffffff 100%);
+  padding: 60px 0;
+}
+
+/* Add this - Container Flex */
+.md-profile .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================
+   Background Text (Two-Color Split)
+========================== */
+
+.md-profile .bg-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 170px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  pointer-events: none;
+  user-select: none;
+  background: linear-gradient(120deg,
+      rgba(9, 50, 84, 0.08) 0%,
+      rgba(9, 50, 84, 0.08) 50%,
+      rgba(46, 176, 129, 0.15) 50%,
+      rgba(46, 176, 129, 0.15) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==========================
+   Left
+========================== */
+
+.md-profile .left {
+  flex: 1;
+}
+
+.md-profile .left h3 {
+  font-size: 50px;
+  color: #093254;
+  margin-bottom: 5px;
+}
+
+.md-profile .left h3 span {
+  color: #2eb081;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.md-profile .left h1 {
+  font-size: 72px;
+  color: #2eb081;
+  line-height: 1;
+  margin: 10px 0;
+}
+
+.md-profile .left h2 {
+  font-size: 52px;
+  color: #093254;
+  margin-bottom: 20px;
+}
+
+.md-profile .left p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #222;
+  max-width: 450px;
+}
+
+/* ==========================
+   Center
+========================== */
+
+.md-profile .center {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.md-profile .center img {
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================
+   Right
+========================== */
+
+.md-profile .right {
+  flex: 1;
+  text-align: right;
+}
+
+.md-profile .right span {
+  color: #2eb081;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.md-profile .right h2 {
+  color: #093254;
+  font-size: 64px;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 991px) {
+  .md-profile {
+    padding: 70px 0;
+  }
+
+  /* Stack columns on tablet */
+  .md-profile .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .md-profile .left,
+  .md-profile .center,
+  .md-profile .right {
+    width: 100%;
+    text-align: center;
+    flex: none;
+  }
+
+  .md-profile .left p {
+    margin-inline: auto;
+  }
+
+  .md-profile .right {
+    text-align: center;
+  }
+
+  .md-profile .bg-text {
+    font-size: 90px;
+  }
+
+  .md-profile .left h1 {
+    font-size: 56px;
+  }
+
+  .md-profile .left h2 {
+    font-size: 42px;
+  }
+
+  .md-profile .right h2 {
+    font-size: 48px;
+  }
+
+  .md-profile .center img {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 767px) {
+  .md-profile .bg-text {
+    font-size: 55px;
+  }
+
+  .md-profile .left h3 {
+    font-size: 32px;
+  }
+
+  .md-profile .left h1 {
+    font-size: 44px;
+  }
+
+  .md-profile .left h2 {
+    font-size: 34px;
+  }
+
+  .md-profile .right h2 {
+    font-size: 36px;
+  }
+}
+
+/* End MD Profile */
+/* ===========================
+   Core Values Section
+=========================== */
+
+.core-value-section {
+  padding: 35px 0 40px;
+  background: #fff;
+}
+
+/* ===========================
+   Cards Wrapper
+=========================== */
+
+.core-value-wrapper {
+  display: flex;
+  gap: 15px;
+  height: 420px;
+  margin-top: 50px;
+}
+
+/* ===========================
+   Card Styling
+=========================== */
+
+.core-value-card {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: flex 0.5s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay Gradient */
+.core-value-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(9, 50, 84, 0.45) 50%,
+      rgba(9, 50, 84, 0.85) 100%);
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+/* ===========================
+   Content Overlay
+=========================== */
+
+.core-value-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* ===========================
+   Title (Vertical LTR - No Rotation)
+=========================== */
+
+.core-value-card-title {
+  margin: 0;
+  color: #093254;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  white-space: pre-line;
+
+  /* Vertical top-to-bottom, Left-to-Right without rotate */
+  writing-mode: vertical-rl;
+  direction: ltr;
+
+  text-shadow:
+    1px 1px 6px rgba(255, 255, 255, 0.9),
+    0 0 10px rgba(255, 255, 255, 0.7);
+
+  transition: all 0.4s ease;
+}
+
+/* ===========================
+   Description
+=========================== */
+
+.core-value-card-description {
+  margin: 0;
+  color: #fff;
+  font-size: 15px !important;
+  line-height: 1.6;
+  max-width: 95%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  max-height: 0;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    max-height 0.4s ease;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* ===========================
+   Hover / Active States
+=========================== */
+
+.core-value-card.active,
+.core-value-card:hover {
+  flex: 2.5;
+}
+
+.core-value-card.active::before,
+.core-value-card:hover::before {
+  background: linear-gradient(to bottom,
+      rgba(9, 50, 84, 0.2) 0%,
+      rgba(9, 50, 84, 0.75) 60%,
+      rgba(9, 50, 84, 0.95) 100%);
+}
+
+.core-value-card.active .core-value-card-title,
+.core-value-card:hover .core-value-card-title {
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  writing-mode: horizontal-tb;
+  direction: ltr;
+  font-size: 26px;
+}
+
+.core-value-card.active .core-value-card-description,
+.core-value-card:hover .core-value-card-description {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  max-height: 150px;
+}
+
+/* ===========================
+   Tablet View
+=========================== */
+
+@media (max-width: 1024px) {
+  .core-value-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: auto;
+  }
+
+  .core-value-card {
+    height: 300px;
+    flex: unset !important;
+  }
+
+  .core-value-card.active,
+  .core-value-card:hover {
+    flex: unset !important;
+  }
+
+  .core-value-card-title {
+    writing-mode: horizontal-tb;
+    direction: ltr;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .core-value-card-description {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    max-width: 100%;
+    font-size: 14px !important;
+    max-height: none;
+  }
+}
+
+/* ===========================
+   Mobile View
+=========================== */
+
+@media (max-width: 767px) {
+  .core-value-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    height: auto;
+  }
+
+  .core-value-card {
+    height: 240px;
+    flex: unset !important;
+  }
+
+  .core-value-overlay {
+    padding: 20px 16px;
+  }
+
+  .core-value-card-title {
+    writing-mode: horizontal-tb;
+    direction: ltr;
+    font-size: 22px;
+    color: #fff;
+  }
+
+  .core-value-card-description {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    max-width: 100%;
+    font-size: 14px !important;
+    max-height: none;
+  }
+}
+
+/* End core Value */
+/*  Vision Mission */
+.vision-mission-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.vision-mission-col {
+  flex: 1 1 100%;
+  padding: 28px 16px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .vision-mission-col {
+    flex: 1 1 45%;
+  }
+}
+
+.vision-mission-col:hover {
+  background: #093254;
+  background:
+    linear-gradient(#093254c9, #093254b3), url(/assets/images/about/pattern.png);
+  filter: brightness(1.5);
+  background-repeat: no-repeat;
+}
+
+.clr.vision-mission-col:hover {
+  background: #2eb081;
+  background:
+    linear-gradient(#2eb0818a, #118f61e0), url(/assets/images/about/pattern.png);
+  filter: brightness(1.5);
+  background-repeat: no-repeat;
+}
+
+.vision-mission-col:hover .section-badge {
+  color: #ffffff;
+}
+
+.vision-mission-col:hover h3 {
+  color: #ffffff;
+}
+
+.vision-mission-col:hover p {
+  color: #f0f4f8;
+}
+
+.vision-mission-col:hover .accent-line {
+  background: #ffffff;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  margin-bottom: 4px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.vision-mission-col h3 {
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+.vision-mission-col p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 0;
+  transition: color 0.3s ease;
+}
+
+.accent-line {
+  width: 40px;
+  height: 3px;
+  background: #d1d5db;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  transition: background 0.3s ease;
+}
+
+.core-value-card.active .core-value-card-title,
+.core-value-card:hover .core-value-card-title {
+  color: #fff;
+  text-shadow: none;
+  writing-mode: unset;
+}
+
+.core-value-card.active .core-value-overlay {
+  justify-content: flex-end !important;
+  gap: 25px !important;
+}
+
+/* Right border only on the first column (desktop) */
+@media (min-width: 768px) {
+  .border-right-col {
+    border-right: 1px solid #e5e7eb;
+    padding-right: 40px;
+  }
+
+  .border-right-col:hover {
+    border-right-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (max-width: 576px) {
+  .vision-mission-col h3 {
+    font-size: 26px;
+  }
+
+  .vision-mission-col p {
+    font-size: 16px;
+  }
+
+  .vision-mission-col {
+    padding: 19px 8px;
+  }
+}
+
+/* End Vision Mission */
+/* zig zagcards */
+.zigzag-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Responsive Grid Layout */
+.zigzag-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  justify-items: center;
+  /* Centers cards in their grid cells */
+}
+
+@media (min-width: 768px) {
+  .zigzag-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+  }
+
+  /* Shift the right column down (Items 2, 4, 6...) */
+  .zigzag-grid .card-item:nth-child(even) {
+    transform: translateY(7rem);
+  }
+}
+
+/* Fixed Card Wrapper Height for 100% Equal Sizes */
+.card-item {
+  width: 100%;
+  /* max-width: 350px; Limit card width to 350px */
+  height: 440px;
+}
+
+/* For smaller screens, make cards full width */
+@media (max-width: 767px) {
+  .card-item {
+    max-width: 100%;
+    /* Full width on mobile */
+  }
+}
+
+/* Card Container - Text First, Image Bottom */
+.zigzag-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 0 !important;
+  overflow: visible;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.596) !important;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zigzag-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* --- 3D BOARD PIN IMAGE AT TOP CENTER --- */
+.card-pin {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+}
+
+/* Text Area - Fills top portion with clean scroll for extra long copy */
+.zigzag-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  overflow-y: auto;
+}
+
+/* Image Sizing - Fixed at the BOTTOM */
+.zigzag-card img.card-img-bottom {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 0 !important;
+}
+
+/* Subtle scrollbar */
+.zigzag-card .card-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.zigzag-card .card-body::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+}
+
+/* Decorative line next to title */
+.zigzag-card .card-title {
+  color: #2eb081;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  padding-left: 0.75rem;
+  border-left: 3px solid #0060af;
+  margin-bottom: 0.75rem;
+}
+
+/* Quote-style body text */
+.zigzag-card .card-text {
+  color: #475569;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.py-60 {
+  padding-top: 60px;
+  padding-bottom: 180px;
+}
+
+/* End zig zagcards */

@@ -247,7 +247,7 @@ export default function RecentProject() {
             ],
 
             links:
-                "https://yulanto.com/latest-works",
+                "https://johoreventrental.com/",
         },
 
 
@@ -340,7 +340,7 @@ export default function RecentProject() {
             ],
 
             links:
-                "https://yulanto.com/latest-works",
+                "https://ldfkormesic.com/",
         },
         {
             title: "Safety Merchant - Malaysia",
