@@ -762,6 +762,7 @@
 
 /* End core Value */
 /*  Vision Mission */
+/* Vision Mission Base */
 .vision-mission-row {
   display: flex;
   flex-wrap: wrap;
@@ -769,11 +770,37 @@
 }
 
 .vision-mission-col {
+  position: relative;
   flex: 1 1 100%;
   padding: 28px 16px;
-  transition: all 0.3s ease;
   border-radius: 8px;
   cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Pseudo-element to animate background gradient smoothly */
+.vision-mission-col::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Background gradient for Vision card */
+.vision-mission-col::before {
+  background: #093254;
+  background: linear-gradient(#093254c9, #093254b3), url(/assets/images/about/pattern.png);
+}
+
+/* Background gradient for Mission card */
+.clr.vision-mission-col::before {
+  background: #2eb081;
+  background: linear-gradient(#2eb0818a, #118f61e0), url(/assets/images/about/pattern.png);
 }
 
 @media (min-width: 768px) {
@@ -782,38 +809,32 @@
   }
 }
 
-.vision-mission-col:hover {
-  background: #093254;
-  background:
-    linear-gradient(#093254c9, #093254b3), url(/assets/images/about/pattern.png);
-  filter: brightness(1.5);
-  background-repeat: no-repeat;
+/* Active State Styles */
+.vision-mission-col.active::before {
+  opacity: 1;
 }
 
-.clr.vision-mission-col:hover {
-  background: #2eb081;
-  background:
-    linear-gradient(#2eb0818a, #118f61e0), url(/assets/images/about/pattern.png);
-  filter: brightness(1.5);
-  background-repeat: no-repeat;
+.vision-mission-col .section-badge,
+.vision-mission-col h3,
+.vision-mission-col p,
+.vision-mission-col .accent-line {
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.vision-mission-col:hover .section-badge {
+.vision-mission-col.active .section-badge,
+.vision-mission-col.active h3 {
   color: #ffffff;
 }
 
-.vision-mission-col:hover h3 {
-  color: #ffffff;
-}
-
-.vision-mission-col:hover p {
+.vision-mission-col.active p {
   color: #f0f4f8;
 }
 
-.vision-mission-col:hover .accent-line {
+.vision-mission-col.active .accent-line {
   background: #ffffff;
 }
 
+/* Base Typography & Structure */
 .section-badge {
   display: inline-block;
   font-size: 12px;
@@ -822,7 +843,6 @@
   color: #6b7280;
   margin-bottom: 4px;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
 .vision-mission-col h3 {
@@ -831,7 +851,6 @@
   letter-spacing: -0.02em;
   margin-bottom: 8px;
   color: #111827;
-  transition: color 0.3s ease;
 }
 
 .vision-mission-col p {
@@ -839,7 +858,6 @@
   line-height: 1.8;
   color: #374151;
   margin-bottom: 0;
-  transition: color 0.3s ease;
 }
 
 .accent-line {
@@ -848,29 +866,17 @@
   background: #d1d5db;
   border-radius: 4px;
   margin-bottom: 16px;
-  transition: background 0.3s ease;
 }
 
-.core-value-card.active .core-value-card-title,
-.core-value-card:hover .core-value-card-title {
-  color: #fff;
-  text-shadow: none;
-  writing-mode: unset;
-}
-
-.core-value-card.active .core-value-overlay {
-  justify-content: flex-end !important;
-  gap: 25px !important;
-}
-
-/* Right border only on the first column (desktop) */
+/* Right border configuration */
 @media (min-width: 768px) {
   .border-right-col {
     border-right: 1px solid #e5e7eb;
     padding-right: 40px;
+    transition: border-color 0.3s ease;
   }
 
-  .border-right-col:hover {
+  .border-right-col.active {
     border-right-color: rgba(255, 255, 255, 0.3);
   }
 }

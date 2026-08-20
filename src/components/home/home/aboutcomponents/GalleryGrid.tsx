@@ -73,8 +73,8 @@ const defaultImages: GalleryImage[] = [
 
 const GalleryGrid = ({
   images = defaultImages,
-  containerClass = "container py-5",
-  rowClass = "row g-4",
+  containerClass = "container py-3",
+  rowClass = "row g-4 mt-2",
 }: GalleryGridProps) => {
 
   useEffect(() => {
