@@ -11,14 +11,9 @@ export const lightMenu: MenuItem[] = [
     links: [
       { label: "Our Story", href: "/our-story" },
       { label: "Vision & Mission", href: "/our-mission-vision" },
-      { label: "Our Philosophy", href: "/" },
-      { label: "Why Choose Us", href: "/" },
-      { label: "Meet Our Team", href: "/" },
-      // { label: "Our Story", href: "/our-story" },
-      // { label: "Vision & Mission", href: "/our-mission-vision" },
-      // { label: "Our Philosophy", href: "/our-philosophy" },
-      // { label: "Why Choose Us", href: "/why-choose-us" },
-      // { label: "Meet Our Team", href: "/our-team" },
+      { label: "Our Philosophy", href: "/our-philosophy" },
+      { label: "Why Choose Us", href: "/why-choose-us" },
+      { label: "Meet Our Team", href: "/our-team" },
     ],
   },
   {

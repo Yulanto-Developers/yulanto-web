@@ -24,7 +24,7 @@ const AboutUs = () => {
           <div className="row align-items-center">
             <div className="col-lg-9 mb-4 mb-lg-0">
               <h4
-                className="px-about-title"
+                className="px-about-title  text-tenor"
                 data-aos="text-reveal"
                 data-aos-delay="100"
               >

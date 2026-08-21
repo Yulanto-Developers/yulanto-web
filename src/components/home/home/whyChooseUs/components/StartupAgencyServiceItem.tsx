@@ -5,7 +5,7 @@ interface ServiceItemProps extends ServiceItemDT {
     index: number;
 }
 
-const StartupAgencyServiceItem: React.FC<ServiceItemProps> = ({ id, title, image, description, index }) => {
+const StartupAgencyServiceItem: React.FC<ServiceItemProps> = ({ id, title, image, description, index ,keyValue}) => {
     const collapseId = `collapse-${index}`;
     const isActive = index === 0;
 
@@ -21,7 +21,7 @@ const StartupAgencyServiceItem: React.FC<ServiceItemProps> = ({ id, title, image
                         <div className="row align-items-center">
                             <div className="col-xxl-3 col-xl-2 col-lg-4 col-md-2 col-2">
                                 <div className="px-service-num">
-                                    <span>({id})</span>
+                                    <span>({keyValue})</span>
                                 </div>
                             </div>
                             <div className="col-xxl-9 col-xl-10 col-lg-8 col-md-10 col-10">
