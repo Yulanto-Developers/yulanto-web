@@ -785,3 +785,38 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     margin-bottom: 8px;
 }
+
+
+/* tech slider */
+.cs-tech-swiper {
+  width: 100%;
+  overflow: hidden;
+  padding: 5px 0 10px;
+}
+
+.cs-tech-swiper .cs-tech-slide {
+  width: max-content !important;
+  max-width: max-content !important;
+  flex: 0 0 auto !important;
+  display: flex !important;
+}
+
+.cs-tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  width: max-content;
+  white-space: nowrap;
+
+  padding: 9px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.045);
+  color: #e2e8f0;
+
+  font-size: 12px;
+  font-weight: 500;
+}

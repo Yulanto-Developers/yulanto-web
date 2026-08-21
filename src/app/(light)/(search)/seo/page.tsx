@@ -6,6 +6,7 @@ import Keyword from "@/components/seo/keyword";
 import Faq from "@/components/seo/Faq";
 import Start from "@/components/seo/start";
 import Hero from "@/components/seo/HeroCollage";
+import Services from "@/components/seo/services"
 
 export default function Page() {
   return (
@@ -18,6 +19,7 @@ export default function Page() {
       <Benifit />
       <Keyword />
       <Faq />
+     <Services />
     </main>
   );
 }

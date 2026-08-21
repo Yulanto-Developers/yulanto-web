@@ -14,13 +14,13 @@ export interface HeroCollageProps extends React.HTMLAttributes<HTMLDivElement> {
 
 // Sample placeholder images structured to mirror your reference image
 const INTERNAL_IMAGES = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80", // 1. Center Girl
-  "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&q=80", // 2. Curology Bottle
-  "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&q=80", // 3. Bread Bowl
-  "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&q=80", // 4. Flower Heart
-  "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&q=80", // 5. Red Car
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&q=80", // 6. Sunset Mountain
-  "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&q=80", // 7. Umbrellas
+  "assets/img/seo/top/top-img-1.jpg", // 1. Center Girl
+  "assets/img/seo/top/top-img-2.jpg", // 2. Curology Bottle
+  "assets/img/seo/top/top-img-3.jpg", // 3. Bread Bowl
+  "assets/img/seo/top/top-img-4.jpg", // 4. Flower Heart
+  "assets/img/seo/top/top-img-5.jpg", // 5. Red Car
+  "assets/img/seo/top/top-img-6.jpg", // 6. Sunset Mountain
+  "assets/img/seo/top/top-img-7.jpg", // 7. Umbrellas
 ];
 
 const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
@@ -42,18 +42,19 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
           <div className="row align-items-center mb-5" data-aos="fade-up">
             <div className="col-xl-3">
               <span className="tp-section-subtitle text-black blink-ball">
-                Join Our Journey
+                SEO Company in Chennai
               </span>
             </div>
 
             <div className="col-xl-9">
               <div className="px-project-title-box">
                 <h4 className="px-about-title mb-20">
-                  <span className="text-blue-about">Off-Page SEO Services  </span>
-                  in Chennai
+                  <span className="text-blue-about">Result-Driven SEO Strategies to   </span>
+                  Increase Traffic, Rankings & Leads
                 </h4>
                 <p className="text-figtree text-black mt-2 font-paragraph-cls">
-                  Off-Page SEO is an essential part of a successful search engine optimization strategy that focuses on improving your website’s authority, credibility, visibility, and reputation outside your own website. While on-page SEO optimizes your website content and technical elements, off-page SEO helps search engines understand how trustworthy and relevant your business is within your industry.
+                  Looking for a reliable SEO company in Chennai to improve your website's search engine rankings and generate quality leads? Our Chennai SEO services are designed to increase online visibility, attract relevant organic traffic, and help businesses achieve sustainable growth.
+
                 </p>
               </div>
             </div>
@@ -127,9 +128,8 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
               )}
             </div>
           </div>
-          <p className="text-figtree text-black mt-20 font-paragraph-cls">As a professional SEO company in Chennai, we provide result-oriented off-page SEO strategies designed to improve search rankings, strengthen your online presence, attract quality traffic, and generate more business opportunities. Our Chennai SEO services include strategic link building, business citations, local SEO, content promotion, brand mentions, social signals, and other ethical off-page optimization techniques.
-
-            Whether you are a startup, local business, e-commerce company, or established organization, our team develops customized off-page SEO campaigns based on your business goals, competition, target audience, and industry.</p>
+          <p className="text-figtree text-black mt-20 font-paragraph-cls">As a professional SEO agency in Chennai, we combine keyword research, technical SEO, on-page optimization, content strategy, link building, and performance analytics to create customized search engine optimization strategies aligned with your business goals.
+</p>
 
 
         </div>
