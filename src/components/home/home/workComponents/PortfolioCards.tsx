@@ -60,15 +60,15 @@ export default function PortfolioCards({
           <div className="portfolio-modal-card-overlay">
             <div className="portfolio-card-info">
               {item.category && (
-                <span className="portfolio-card-category">
-                  &bull; {item.category.replace("-", " ")}
+                <span className="portfolio-card-category d-flex justify-content-start gap-1">
+                 <span>&bull; </span> {item.category.replace("-", " ")}
                 </span>
               )}
 
               <h3 className="portfolio-card-title">{item.title}</h3>
 
               {item.description && (
-                <p className="portfolio-card-description">{item.description}</p>
+                <p className="portfolio-card-description text-white">{item.description}</p>
               )}
             </div>
 

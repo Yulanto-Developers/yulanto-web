@@ -106,6 +106,19 @@ export const INDUSTRIES: IndustryCategory[] = [
     ]
   },
   {
+    id: 'marine',
+    label: 'New Marine, Oil & Gas',
+    icon: HeartPulse,
+    image: false,
+    industryImg: '/assets/img/all-works/head-img/health.jpg',
+    industryDesc: [
+      "We deliver professional healthcare website design and website development solutions that help healthcare organizations establish a trusted digital presence, communicate their services effectively, and connect with patients and healthcare professionals.",
+      "Our expertise includes healthcare website design, hospital website development, clinic website design, medical website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. We create modern, mobile-responsive, user-friendly websites that clearly present medical services, departments, doctors, treatments, facilities, health information, appointment options, and other essential details.",
+      "From hospitals, multispecialty clinics, diagnostic centers, dental clinics, medical practitioners, healthcare consultants, wellness centers, and specialty healthcare providers, we develop customized websites that reflect their professional identity and meet the needs of their target audience.",
+      "Our SEO-optimized healthcare websites are structured to improve online visibility, support local search rankings, attract relevant enquiries, and build patient confidence. By combining clean design, intuitive navigation, fast performance, engaging content, and conversion-focused features, we help healthcare businesses create a credible online presence and achieve sustainable digital growth."
+    ]
+  },
+  {
     id: 'media',
     label: 'Media',
     icon: Tv,
@@ -119,19 +132,19 @@ export const INDUSTRIES: IndustryCategory[] = [
         "By combining creative design, intuitive navigation, fast performance, content-focused layouts, and conversion-driven strategies, we help media businesses strengthen their online brand, reach wider audiences, and achieve sustainable digital growth."
       ]
   },
-  {
-    id: 'ecommerce',
-    label: 'Ecommerce',
-    icon: ShoppingCart,
-    image: true,
-    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
-    industryDesc: [
-      "We deliver professional e-commerce website design and development solutions that help online businesses build powerful digital storefronts, showcase their products, and increase sales through seamless shopping experiences.",
-      "Our expertise includes e-commerce website design, online store development, Shopify development, WooCommerce development, WordPress e-commerce solutions, custom e-commerce development, responsive web design, UI/UX design, payment gateway integration, and SEO-friendly e-commerce website development. We create modern, mobile-responsive, user-friendly online stores with intuitive product navigation, advanced search and filtering, secure checkout, shopping cart functionality, customer accounts, product galleries, offers, and seamless payment integration.",
-      "From retail businesses, D2C brands, fashion and lifestyle stores, electronics retailers, wholesalers, manufacturers, and online marketplaces to growing startups and established enterprises, we develop customized e-commerce solutions tailored to specific business requirements and target audiences. Our SEO-optimized e-commerce websites are designed to improve product visibility, attract organic traffic, enhance user engagement, and generate quality leads and online sales.",
-      "By combining attractive design, high performance, secure technology, conversion-focused UI/UX, and digital marketing best practices, we help e-commerce businesses create a competitive online presence, reach more customers, and achieve sustainable business growth."
-    ]
-  },
+  // {
+  //   id: 'ecommerce',
+  //   label: 'Ecommerce',
+  //   icon: ShoppingCart,
+  //   image: true,
+  //   industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+  //   industryDesc: [
+  //     "We deliver professional e-commerce website design and development solutions that help online businesses build powerful digital storefronts, showcase their products, and increase sales through seamless shopping experiences.",
+  //     "Our expertise includes e-commerce website design, online store development, Shopify development, WooCommerce development, WordPress e-commerce solutions, custom e-commerce development, responsive web design, UI/UX design, payment gateway integration, and SEO-friendly e-commerce website development. We create modern, mobile-responsive, user-friendly online stores with intuitive product navigation, advanced search and filtering, secure checkout, shopping cart functionality, customer accounts, product galleries, offers, and seamless payment integration.",
+  //     "From retail businesses, D2C brands, fashion and lifestyle stores, electronics retailers, wholesalers, manufacturers, and online marketplaces to growing startups and established enterprises, we develop customized e-commerce solutions tailored to specific business requirements and target audiences. Our SEO-optimized e-commerce websites are designed to improve product visibility, attract organic traffic, enhance user engagement, and generate quality leads and online sales.",
+  //     "By combining attractive design, high performance, secure technology, conversion-focused UI/UX, and digital marketing best practices, we help e-commerce businesses create a competitive online presence, reach more customers, and achieve sustainable business growth."
+  //   ]
+  // },
   {
     id: 'import',
     label: 'Import & Exports',
@@ -210,19 +223,19 @@ export const INDUSTRIES: IndustryCategory[] = [
       " Our SEO-optimized consultancy websites are structured to improve search engine visibility, attract relevant organic traffic, generate qualified enquiries, and establish authority within the target industry. By combining professional design, clear service communication, intuitive navigation, fast performance, engaging content, and conversion-focused features, we help consultancy businesses build trust, strengthen their online reputation, attract new clients, and achieve sustainable digital growth."
     ]
   },
-  {
-    id: 'publisher',
-    label: 'Publisher',
-    icon: BookOpen,
-    image: true,
-    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
-    industryDesc: [
-      "We provide professional website design and website development solutions for publishing businesses, helping publishers, media houses, editorial companies, and content-driven organizations establish a strong digital presence and reach wider audiences. ",
-      "Our expertise includes publisher website design, publishing website development, online magazine website design, digital publishing website development, news portal development, e-book website design, magazine website development, WordPress publishing solutions, responsive web design, UI/UX design, and SEO-friendly website development. ",
-      "We create modern, mobile-responsive, content-focused websites that make it easy to showcase books, magazines, articles, authors, publications, news, editorial content, and digital resources in an engaging and organized manner. From book publishers, magazine publishers, newspaper companies, academic publishers, educational publishers, digital publishing platforms, independent publishers, and media publishing houses, we develop customized websites tailored to their content strategy, brand identity, and target audience. ",
-      "Our SEO-optimized publishing websites are designed to improve search engine visibility, increase organic traffic, enhance content discoverability, and build a loyal online readership. By combining intuitive navigation, engaging layouts, fast performance, structured content, social media integration, and conversion-focused features, we help publishing businesses strengthen their digital brand, expand their audience, showcase their publications effectively, and achieve sustainable online growth."
-    ]
-  },
+  // {
+  //   id: 'publisher',
+  //   label: 'Publisher',
+  //   icon: BookOpen,
+  //   image: true,
+  //   industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+  //   industryDesc: [
+  //     "We provide professional website design and website development solutions for publishing businesses, helping publishers, media houses, editorial companies, and content-driven organizations establish a strong digital presence and reach wider audiences. ",
+  //     "Our expertise includes publisher website design, publishing website development, online magazine website design, digital publishing website development, news portal development, e-book website design, magazine website development, WordPress publishing solutions, responsive web design, UI/UX design, and SEO-friendly website development. ",
+  //     "We create modern, mobile-responsive, content-focused websites that make it easy to showcase books, magazines, articles, authors, publications, news, editorial content, and digital resources in an engaging and organized manner. From book publishers, magazine publishers, newspaper companies, academic publishers, educational publishers, digital publishing platforms, independent publishers, and media publishing houses, we develop customized websites tailored to their content strategy, brand identity, and target audience. ",
+  //     "Our SEO-optimized publishing websites are designed to improve search engine visibility, increase organic traffic, enhance content discoverability, and build a loyal online readership. By combining intuitive navigation, engaging layouts, fast performance, structured content, social media integration, and conversion-focused features, we help publishing businesses strengthen their digital brand, expand their audience, showcase their publications effectively, and achieve sustainable online growth."
+  //   ]
+  // },
   {
     id: 'hospitality',
     label: 'Hospitality & Solar',
@@ -307,12 +320,28 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     bannerImg: '/assets/img/all-works/head-img/corporate.jpg',
     projects: [
       {
+        id: 'Core',
+        name: 'Core',
+        logo: '',
+        location: 'Maharashtra, India.',
+        url: 'https://core.co.in/',
+        borderClass: 'brb'
+      },
+      {
         id: 'klitech',
         name: 'KL iTech',
         logo: '/assets/img/all-works/new/klitech.png',
         location: 'Chennai, India',
         url: 'https://klitech.in/',
         borderClass: 'brb'
+      },
+      {
+        id: 'Sovereign',
+        name: 'Sovereign',
+        logo: '',
+        location: 'Bristol, UK',
+        url: 'https://www.sovereignfacade.co.uk/',
+        borderClass: 'brlb'
       },
       {
         id: 'typhoonelec',
@@ -338,35 +367,43 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'https://www.bioxgreen.com/',
         borderClass: 'brb'
       },
+      // {
+      //   id: 'ebara',
+      //   name: 'Ebara Machinery',
+      //   logo: '/assets/img/all-works/eb-logo.png',
+      //   location: 'Chennai, India',
+      //   url: 'https://www.ebara.com/global/emi/index.html',
+      //   borderClass: 'brlb'
+      // },
+      // {
+      //   id: 'bmceramics',
+      //   name: 'BM Ceramics',
+      //   logo: '/assets/img/all-works/bmc-logo.png',
+      //   location: 'Chennai, India',
+      //   url: 'https://www.bmceramics.in/',
+      //   borderClass: 'brlb'
+      // },
+      // {
+      //   id: 'myglobalstudies',
+      //   name: 'My Global Studies',
+      //   logo: '/assets/img/all-works/mgs-logo.png',
+      //   location: 'Chennai, India',
+      //   url: 'https://www.myglobalstudies.com/',
+      //   borderClass: ''
+      // },
       {
-        id: 'ebara',
-        name: 'Ebara Machinery',
-        logo: '/assets/img/all-works/eb-logo.png',
-        location: 'Chennai, India',
-        url: 'https://www.ebara.com/global/emi/index.html',
-        borderClass: 'brlb'
+        id: 'GrayT',
+        name: 'GrayT',
+        logo: '',
+        location: 'New Delhi, India',
+        url: 'https://grayeyeit.com/',
+        borderClass: 'brl'
       },
       {
-        id: 'bmceramics',
-        name: 'BM Ceramics',
-        logo: '/assets/img/all-works/bmc-logo.png',
-        location: 'Chennai, India',
-        url: 'https://www.bmceramics.in/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'myglobalstudies',
-        name: 'My Global Studies',
-        logo: '/assets/img/all-works/mgs-logo.png',
-        location: 'Chennai, India',
-        url: 'https://www.myglobalstudies.com/',
-        borderClass: ''
-      },
-      {
-        id: 'grayeyeit',
-        name: 'GrayeyeIT',
-        logo: '/assets/img/all-works/grayit-logo.png',
-        location: 'Chennai, India',
+        id: 'jpr',
+        name: 'JPR Steels',
+        logo: '',
+        location: 'Kancheepuram, India',
         url: 'https://grayeyeit.com/',
         borderClass: 'brl'
       },
@@ -384,11 +421,19 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         borderClass: 'brb'
       },
       {
-        id: 'vakaman',
-        name: 'Vakaman Developers',
-        logo: '/assets/img/all-works/new/vakaman.png',
-        location: 'Coimbatore, India',
-        url: 'https://vakaman.com/',
+        id: 'srivamanas',
+        name: "Srivamana's Living",
+        logo: '/assets/img/all-works/svl-logo.png',
+        location: 'Chennai, India',
+        url: 'https://www.srivamanasliving.com/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'rayaanyarealty',
+        name: 'Rayaanya Realty',
+        logo: '',
+        location: 'Chennai , India',
+        url: 'https://www.rayaanyarealty.com/',
         borderClass: 'brlb'
       },
       {
@@ -399,22 +444,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'https://www.irishomez.com/',
         borderClass: 'brlb'
       },
-      {
-        id: 'srivamanas',
-        name: "Srivamana's Living",
-        logo: '/assets/img/all-works/svl-logo.png',
-        location: 'Chennai, India',
-        url: 'https://www.srivamanasliving.com/',
-        borderClass: 'brb'
-      },
-      {
-        id: 'kaaninilam',
-        name: 'Kaani Nilam Realty',
-        logo: '/assets/img/all-works/kn-logo.png',
-        location: 'Chennai, India',
-        url: 'https://www.kaaninilamrealty.com/',
-        borderClass: 'brlb'
-      },
+
       {
         id: 'vishvahomes',
         name: 'Vishva Homes',
@@ -431,50 +461,96 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'http://www.aldinfoundations.com/',
         borderClass: ''
       },
+      {
+        id: 'propnext',
+        name: 'Prop Next',
+        logo: '',
+        location: 'Chennai, India',
+        url: 'https://www.propnextindia.in/',
+        borderClass: ''
+      },
+    ],
+  },
+  marine: {
+    bannerImg: '/assets/img/all-works/head-img/real-estate.jpg',
+    projects: [
+      {
+        id: 'blueanchore',
+        name: 'Blue Anchore',
+        logo: '',
+        location: 'Muscat, Oman',
+        url: 'https://blueanchor.llc/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'safety',
+        name: "Safety Merchant",
+        logo: '',
+        location: 'Selangor, Malaysia',
+        url: 'https://safety-merchant.com/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'preservemetals',
+        name: 'Preserve Metals',
+        logo: '',
+        location: 'Chennai , India',
+        url: '',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'ams',
+        name: 'AMS',
+        logo: '',
+        location: 'Singapore',
+        url: 'https://www.asianic.sg/',
+        borderClass: 'brlb'
+      },
+
+      {
+        id: 'vishvahomes',
+        name: 'Vishva Homes',
+        logo: '/assets/img/all-works/vh-logo.png',
+        location: 'Chennai, India',
+        url: 'https://altiscalserv.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'aldinfoundation',
+        name: 'Aldin Foundation',
+        logo: '/assets/img/all-works/aldin-logo.ico',
+        location: 'Chennai, India',
+        url: 'http://www.aldinfoundations.com/',
+        borderClass: ''
+      },
+      {
+        id: 'propnext',
+        name: 'Prop Next',
+        logo: '',
+        location: 'Chennai, India',
+        url: 'https://www.propnextindia.in/',
+        borderClass: ''
+      },
     ],
   },
   engineering: {
     bannerImg: '/assets/img/all-works/head-img/engineering.jpg',
     projects: [
       {
-        id: 'preservemetals',
-        name: 'Preserve Metals',
-        logo: '/assets/img/all-works/2026/preserved-materials.png',
-        location: 'Singapore',
-        url: 'https://preservemetals.com/',
-        borderClass: 'brb'
-      },
-      {
-        id: 'altisclaserv',
-        name: 'Altis Claserv',
-        logo: '/assets/img/all-works/2026/Altis-claserv.png',
-        location: 'Singapore',
-        url: 'https://altiscalserv.com/',
-        borderClass: 'brlb'
-      },
-      {
         id: 'qualtronmicrowave',
         name: 'Qualtron Microwave',
         logo: '/assets/img/all-works/2026/Quantrum-microwave.png',
-        location: 'Chennai',
+        location: 'Chennai, India',
         url: 'https://www.qualtronmicrowave.com/',
         borderClass: 'brlb'
       },
       {
-        id: 'parkadelectric',
-        name: 'Parkad Electric',
-        logo: '/assets/img/all-works/new/parkad.png',
+        id: 'Parkad',
+        name: 'Parkad',
+        logo: '',
         location: 'Singapore',
         url: 'https://www.parkad.com.sg/',
         borderClass: 'brb'
-      },
-      {
-        id: 'ddcmaritime',
-        name: 'DDC Maritime',
-        logo: '/assets/img/all-works/new/ddcmaritime.png',
-        location: 'India',
-        url: 'https://www.ddcmaritime.com/',
-        borderClass: 'brlb'
       },
       {
         id: 'hubelectrical',
@@ -507,14 +583,6 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         location: 'Chennai, India',
         url: 'https://www.srisaippworks.com/',
         borderClass: 'brlb'
-      },
-      {
-        id: 'blackstormenergy',
-        name: 'Blackstorm Energy',
-        logo: '/assets/img/all-works/blackstorm-logo.png',
-        location: 'Sharjah, UAE',
-        url: 'http://www.blackstormenergy.com/',
-        borderClass: 'brb'
       },
       {
         id: 'sriatchayaengineering',
@@ -652,6 +720,30 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     bannerImg: '/assets/img/all-works/head-img/software.jpg',
     projects: [
       {
+        id: 'profice',
+        name: 'Profice',
+        logo: '',
+        location: 'Chennai, India.',
+        url: 'https://profice.co.uk/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'aiyanaar',
+        name: 'Aiyanaar',
+        logo: '',
+        location: 'Austin, USA.',
+        url: 'https://www.aiyanaar.com/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'BudsCube',
+        name: 'BudsCube',
+        logo: '',
+        location: 'Chenni, India.',
+        url: 'https://www.budscube.com/',
+        borderClass: 'brb'
+      },
+      {
         id: 'jdscarercm',
         name: 'JDS Care RCM',
         logo: '/assets/img/all-works/2026/jds.png',
@@ -723,30 +815,30 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'https://sigillieum.com/',
         borderClass: 'brlb'
       },
-      {
-        id: 'quantomstridesllc',
-        name: 'Quantom Strides LLC',
-        logo: '/assets/img/all-works/quantom-logo.png',
-        location: 'United States.',
-        url: 'https://www.quantumstrides.com/',
-        borderClass: ''
-      },
-      {
-        id: 'qeads',
-        name: 'Qeads',
-        logo: '/assets/img/all-works/qeads-logo.png',
-        location: 'Chennai, India.',
-        url: 'https://www.qeads.in/',
-        borderClass: 'brl'
-      },
-      {
-        id: 'hamsa',
-        name: 'Hamsa',
-        logo: '/assets/img/all-works/hamsa-logo.png',
-        location: 'Nottingham, England.',
-        url: 'https://hamsaitsolution.co.uk/',
-        borderClass: 'brl'
-      }
+      // {
+      //   id: 'quantomstridesllc',
+      //   name: 'Quantom Strides LLC',
+      //   logo: '/assets/img/all-works/quantom-logo.png',
+      //   location: 'United States.',
+      //   url: 'https://www.quantumstrides.com/',
+      //   borderClass: ''
+      // },
+      // {
+      //   id: 'qeads',
+      //   name: 'Qeads',
+      //   logo: '/assets/img/all-works/qeads-logo.png',
+      //   location: 'Chennai, India.',
+      //   url: 'https://www.qeads.in/',
+      //   borderClass: 'brl'
+      // },
+      // {
+      //   id: 'hamsa',
+      //   name: 'Hamsa',
+      //   logo: '/assets/img/all-works/hamsa-logo.png',
+      //   location: 'Nottingham, England.',
+      //   url: 'https://hamsaitsolution.co.uk/',
+      //   borderClass: 'brl'
+      // }
     ]
   },
   interior: {
@@ -777,13 +869,21 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         borderClass: 'brlb'
       },
       {
-        id: 'ysventures',
-        name: 'YS Ventures',
-        logo: '/assets/img/all-works/ys-ventures-logo.png',
+        id: 'yshomes',
+        name: 'YS Homes',
+        logo: '',
         location: 'Chennai, India.',
-        url: 'https://www.ysventures.in/',
+        url: 'https://www.yshomes.in/',
         borderClass: ''
       },
+      // {
+      //   id: 'ysventures',
+      //   name: 'YS Ventures',
+      //   logo: '/assets/img/all-works/ys-ventures-logo.png',
+      //   location: 'Chennai, India.',
+      //   url: 'https://www.ysventures.in/',
+      //   borderClass: ''
+      // },
       {
         id: 'violetinterior',
         name: 'Violet Interior',
@@ -799,46 +899,54 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         location: 'Chennai, India',
         url: 'https://bluecube.co.in/',
         borderClass: 'brl'
-      }
+      },
+      {
+        id: 'pkhomes',
+        name: 'PK Homes',
+        logo: '',
+        location: 'Chennai, India',
+        url: 'https://www.pkhomes.in/',
+        borderClass: 'brl'
+      },
     ]
   },
-  ecommerce: {
-    bannerImg: '/assets/img/all-works/head-img/ecommerce.jpg',
-    projects: [
-      {
-        id: 'bhcart',
-        name: 'BH Cart',
-        logo: '/assets/img/all-works/new/bhcart.png',
-        location: 'Kingdom Of Bahrain',
-        url: 'https://www.bhcart.com/',
-        borderClass: 'brb'
-      },
-      {
-        id: 'yourclosetin',
-        name: 'Yourcloset.in',
-        logo: '/assets/img/all-works/yourcloset-logo.png',
-        location: 'Chennai, India.',
-        url: 'https://yourcloset.in/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'gokulsantol',
-        name: 'Gokul Santol',
-        logo: '/assets/img/all-works/new/gokulsantol.png',
-        location: 'Chennai, India.',
-        url: 'https://gokulsantol.com/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'sriyascollection',
-        name: 'Sriyas Collection',
-        logo: '/assets/img/all-works/new/sriyascollection.png',
-        location: 'Chennai, India.',
-        url: 'https://sriyascollection.com/',
-        borderClass: ''
-      }
-    ]
-  },
+  // ecommerce: {
+  //   bannerImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+  //   projects: [
+  //     {
+  //       id: 'bhcart',
+  //       name: 'BH Cart',
+  //       logo: '/assets/img/all-works/new/bhcart.png',
+  //       location: 'Kingdom Of Bahrain',
+  //       url: 'https://www.bhcart.com/',
+  //       borderClass: 'brb'
+  //     },
+  //     {
+  //       id: 'yourclosetin',
+  //       name: 'Yourcloset.in',
+  //       logo: '/assets/img/all-works/yourcloset-logo.png',
+  //       location: 'Chennai, India.',
+  //       url: 'https://yourcloset.in/',
+  //       borderClass: 'brlb'
+  //     },
+  //     {
+  //       id: 'gokulsantol',
+  //       name: 'Gokul Santol',
+  //       logo: '/assets/img/all-works/new/gokulsantol.png',
+  //       location: 'Chennai, India.',
+  //       url: 'https://gokulsantol.com/',
+  //       borderClass: 'brlb'
+  //     },
+  //     {
+  //       id: 'sriyascollection',
+  //       name: 'Sriyas Collection',
+  //       logo: '/assets/img/all-works/new/sriyascollection.png',
+  //       location: 'Chennai, India.',
+  //       url: 'https://sriyascollection.com/',
+  //       borderClass: ''
+  //     }
+  //   ]
+  // },
   import: {
     bannerImg: '/assets/img/all-works/head-img/import.jpg',
     projects: [
@@ -1197,19 +1305,19 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       }
     ]
   },
-  publisher: {
-    bannerImg: '/assets/img/all-works/head-img/publisher.jpg',
-    projects: [
-      {
-        id: 'chennaipublishing',
-        name: 'Chennai Publishing',
-        logo: '/assets/img/all-works/cp-logo.png',
-        location: 'Chennai, India.',
-        url: 'https://chennaipublishing.com/',
-        borderClass: ''
-      }
-    ]
-  },
+  // publisher: {
+  //   bannerImg: '/assets/img/all-works/head-img/publisher.jpg',
+  //   projects: [
+  //     {
+  //       id: 'chennaipublishing',
+  //       name: 'Chennai Publishing',
+  //       logo: '/assets/img/all-works/cp-logo.png',
+  //       location: 'Chennai, India.',
+  //       url: 'https://chennaipublishing.com/',
+  //       borderClass: ''
+  //     }
+  //   ]
+  // },
   hospitality: {
     bannerImg: '/assets/img/all-works/head-img/Hospitality.jpg',
     projects: [

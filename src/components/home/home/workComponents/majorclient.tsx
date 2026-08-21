@@ -15,6 +15,18 @@ import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "./majorclient.css";
+import img1 from '@/assets/img/case-study/naturographers-old.jpg'
+import img2 from '@/assets/img/case-study/naturographers-new.jpg'
+import img3 from '@/assets/img/case-study/core-old.jpg'
+import img4 from '@/assets/img/case-study/core-new.jpg'
+import img5 from '@/assets/img/case-study/grayt.jpg'
+import img6 from '@/assets/img/case-study/grayt-2.jpg'
+import img7 from '@/assets/img/case-study/freight-Digital-1.jpg'
+import img8 from '@/assets/img/case-study/freight-Digital-2.jpg'
+import img9 from '@/assets/img/case-study/harithams-1.jpg'
+import img10 from '@/assets/img/case-study/harithams-2.jpg'
+import img11 from '@/assets/img/case-study/veedalayam-1.jpg'
+import img12 from '@/assets/img/case-study/veedalayam-2.jpg'
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -74,10 +86,9 @@ export const innerClient = [
       "Optimized presentation of wildlife photography and eco-tourism services",
     ],
     result: 'The redesigned Naturographers website delivers a premium, immersive, and SEO-friendly digital experience that combines wildlife photography, eco-tourism, safari adventures, and cinematic storytelling.',
-    tech: [''],
+    tech: ['Web Design | UI/UX Design | Admin Panel Development | Responsive Design | SEO Optimisation | Image Gallery Integration | Tour Booking System | Rental Camera | Eco-Tourism Solutions | Performance Optimisation'],
     images: [
-      "/assets/img/service/inner-service/service-1.jpg",
-      "/assets/img/service/inner-service/service-2.jpg",
+      img1.src, img2.src
     ],
   },
 
@@ -122,10 +133,9 @@ export const innerClient = [
       "SEO-friendly website structure and content organisation",
     ],
     result: 'The redesigned CORE Energy Systems website delivers a professional, technically focused, responsive, and SEO-friendly digital experience. It makes CORE’s complex engineering capabilities easier to understand while providing a structured platform to showcase its projects, sectors, innovation, global operations, and industry expertise.',
-    tech: [],
+    tech: ['Website Design | UI/UX Design | Responsive Web Development | Corporate Website Development | SEO-Friendly Website Structure | Content Architecture | Performance Optimisation'],
     images: [
-      "/assets/img/service/inner-service/service-3.jpg",
-      "/assets/img/service/inner-service/service-4.jpg",
+      img3.src, img4.src
     ],
   },
 
@@ -177,10 +187,9 @@ export const innerClient = [
       "Clear corporate information architecture",
     ],
     reuslt: 'The new GRAYT website delivers a modern, responsive, SEO-friendly, and conversion-focused digital experience. It provides a structured platform for showcasing GRAYT\'s technology products while making product discovery, enquiries, customer support, and brand exploration more convenient.',
-    tech: [],
+    tech: ['Website Design | UI/UX Design | Responsive Web Development | Corporate Website Development | Product Catalogue Website | Technology Website Design | SEO-Friendly Website Structure | Product Showcase | Enquiry Management | Customer Support Integration | Warranty & Diagnostic Features | Mobile Optimisation | Performance Optimisation'],
     images: [
-      "/assets/img/service/inner-service/service-5.jpg",
-      "/assets/img/service/inner-service/service-6.jpg",
+      img5.src, img6.src
     ],
   },
 
@@ -231,8 +240,7 @@ export const innerClient = [
       'Website Design | UI/UX Design | Responsive Web Development | Corporate Website Development | Logistics Website Design | Freight Forwarding Website | SEO-Friendly Website Structure | Digital Marketing Website | Lead Generation | Service Showcase | Content Architecture | Mobile Optimisation | Performance Optimisation | Conversion-Focused Design'
     ],
     images: [
-      "/assets/img/service/inner-service/service-7.jpg",
-      "/assets/img/service/inner-service/service-8.jpg",
+      img7.src, img8.src
     ],
   },
   {
@@ -281,8 +289,7 @@ export const innerClient = [
       'Website Design | UI/UX Design | Responsive Web Development | Real Estate Website Design | Property Project Showcase | Real Estate SEO Structure | Lead Generation | Project Catalogue | Property Enquiry Integration | Brochure Integration | Mobile Optimisation | Performance Optimisation | Content Architecture | Conversion-Focused Design'
     ],
     images: [
-      "/assets/img/service/inner-service/service-7.jpg",
-      "/assets/img/service/inner-service/service-8.jpg",
+      img9.src, img10.src
     ],
   },
   {
@@ -334,8 +341,7 @@ export const innerClient = [
       'Website Design | UI/UX Design | Responsive Web Development | Education Website Design | Institute Website Development | SEO-Friendly Website Structure | Program Showcase | Content Architecture | Student-Focused UX | Lead Generation | Call-to-Action Optimisation | Mobile Optimisation | Performance Optimisation | Education SEO'
     ],
     images: [
-      "/assets/img/service/inner-service/service-7.jpg",
-      "/assets/img/service/inner-service/service-8.jpg",
+      img11.src, img12.src
     ],
   },
 ];
@@ -508,7 +514,7 @@ const MajorInnerItems = ({
                       className="cs-result-container mt-4 p-3 rounded"
                       style={{
                         backgroundColor: "rgba(59, 130, 246, 0.08)",
-                        borderLeft: "4px solid #3b82f6",
+                        borderLeft: "4px solid #53ae7d",
                       }}
                     >
                       <h6 className="cs-result-title fs-4 text-white text-tenor mb-2">
