@@ -90,7 +90,7 @@
     margin: 0;
 
     padding: 0;
-
+    padding-left: 10px;
     list-style: none;
 }
 
@@ -669,6 +669,7 @@
 .cs-box-wrapper {
     margin-top: 30px;
     background: #275674;
+    /* background: #53ae7d; */
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 24px;
@@ -789,34 +790,46 @@
 
 /* tech slider */
 .cs-tech-swiper {
-  width: 100%;
-  overflow: hidden;
-  padding: 5px 0 10px;
+    width: 100%;
+    overflow: hidden;
+    padding: 5px 0 10px;
 }
 
 .cs-tech-swiper .cs-tech-slide {
-  width: max-content !important;
-  max-width: max-content !important;
-  flex: 0 0 auto !important;
-  display: flex !important;
+    width: max-content !important;
+    max-width: max-content !important;
+    flex: 0 0 auto !important;
+    display: flex !important;
 }
 
 .cs-tech-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: max-content;
+    white-space: nowrap;
 
-  width: max-content;
-  white-space: nowrap;
+    padding: 8px 14px;
 
-  padding: 9px 15px;
+    background: #315d7d;
+    color: #ffffff;
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50px;
+    border: 1px solid #315d7d;
+    border-radius: 50px;
 
-  background: rgba(255, 255, 255, 0.045);
-  color: #e2e8f0;
+    font-size: 12px;
+    font-weight: 500;
 
-  font-size: 12px;
-  font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cs-tech-pill:hover {
+    background: #53ae7d;
+    border-color: #fdfcfc;
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }

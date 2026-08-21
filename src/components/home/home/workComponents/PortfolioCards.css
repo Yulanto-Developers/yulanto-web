@@ -288,3 +288,17 @@
   animation: portfolioFadeIn 0.4s ease-out forwards;
 
 }
+
+.portfolio-card-description{
+  font-size: 13px !important;
+}
+
+.portfolio-card-category{
+  color: #f0e9e9;
+
+}
+.portfolio-card-category span{
+    /* background: #275674; */
+  color: #275674;
+
+}
