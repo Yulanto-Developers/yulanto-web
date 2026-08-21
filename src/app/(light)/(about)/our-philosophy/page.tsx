@@ -1,7 +1,7 @@
 import Breadcrumbdata from "@/components/breadcrum/sections/breadcrumbdata";
-import ZigzagCards from "@/components/home/home/ourphilosophy/ZigzagCards";
-import  philosophyData  from "@/components/data/philosophyData"
 import { Metadata } from "next";
+import GradientCardDemo from "@/components/home/home/ourphilosophy/GradientCardDemo";
+import { useAOS } from '@/components/hooks/useAOS';
 
 export const metadata: Metadata = {
   title: "Home - Creative Portfolio Nextjs Template",
@@ -14,9 +14,8 @@ const HomePage = () => {
   return (
     <>
       <Breadcrumbdata />
-      <ZigzagCards cards={philosophyData}
-        pin="/assets/images/pin.png"
-      />
+      <GradientCardDemo />
+      
     </>
   );
 };
