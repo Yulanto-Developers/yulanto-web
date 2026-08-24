@@ -35,7 +35,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 ========================================================= */
 
 export const majorCItems = [
-  "Naturographer",
+  "Naturographers",
   "Core",
   "Grayt",
   "Freight Digital",
@@ -50,6 +50,7 @@ export const majorCItems = [
 export const innerClient = [
   {
     id: 1,
+    url: 'https://naturographers.com/',
 
     title: "Naturographers – Wildlife Photography & Eco-Tourism Website Design",
 
@@ -94,6 +95,7 @@ export const innerClient = [
 
   {
     id: 2,
+    url: 'https://core.co.in/',
 
     title: "CORE Energy Systems – Industrial & Engineering Website Design",
 
@@ -141,6 +143,7 @@ export const innerClient = [
 
   {
     id: 3,
+    url: 'https://grayt.in/',
 
     title: "GRAYT – Technology & Consumer Electronics Website Design",
 
@@ -195,6 +198,7 @@ export const innerClient = [
 
   {
     id: 4,
+    url: 'https://freightdigitalfzc.com/',
 
     title: "Freight Digital FZC – Logistics & Freight Industry Website Design",
 
@@ -245,6 +249,7 @@ export const innerClient = [
   },
   {
     id: 5,
+    url: 'https://www.harithams.com/',
 
     title: "Harithams – Real Estate & Property Website Design",
 
@@ -294,6 +299,7 @@ export const innerClient = [
   },
   {
     id: 6,
+    url: 'https://www.vedaalayam.com/',
 
     title: "Vedaalayam – Education & Innovation Institute Website Design",
 
@@ -361,6 +367,7 @@ interface InnerServiceItemProps {
   isLastItem?: boolean;
   result?: string;
   tech?: string[];
+  url: string;
 }
 
 /* =========================================================
@@ -376,6 +383,7 @@ const MajorInnerItems = ({
   result = "",
   tech = [],
   images,
+  url,
   isLastItem = false,
 }: InnerServiceItemProps) => {
   const [activeTab, setActiveTab] = useState<"challenges" | "solutions">(
@@ -427,8 +435,7 @@ const MajorInnerItems = ({
               <div className="cs-tab-header">
                 <button
                   type="button"
-                  className={`cs-tab-btn ${activeTab === "challenges" ? "active" : ""
-                    }`}
+                  className={`cs-tab-btn ${activeTab === "challenges" ? "active" : ""}`}
                   onClick={() => setActiveTab("challenges")}
                 >
                   Challenges ({challenges.length})
@@ -436,8 +443,7 @@ const MajorInnerItems = ({
 
                 <button
                   type="button"
-                  className={`cs-tab-btn ${activeTab === "solutions" ? "active" : ""
-                    }`}
+                  className={`cs-tab-btn ${activeTab === "solutions" ? "active" : ""}`}
                   onClick={() => setActiveTab("solutions")}
                 >
                   Solutions ({solutions.length})
@@ -528,6 +534,28 @@ const MajorInnerItems = ({
                       </p>
                     </div>
                   )}
+
+                  {/* VISIT US BUTTON */}
+                  <div className="mt-3">
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cs-visit-btn btn"
+                      style={{
+                        display: "inline-block",
+                        backgroundColor: "#53ae7d",
+                        color: "#ffffff",
+                        padding: "8px 20px",
+                        borderRadius: "6px",
+                        textDecoration: "none",
+                        fontWeight: "600",
+                        fontSize: "14px",
+                      }}
+                    >
+                      Visit Us
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -599,11 +627,11 @@ const MajorInnerItems = ({
       ========================================= */}
 
       <div className="row gx-10 major-inner-service-images-row">
-        <div className="major-inner-service-thumb-text">
+        {/* <div className="major-inner-service-thumb-text">
           <span className="text-tenor">
             (Our Recent Work in {title})
           </span>
-        </div>
+        </div> */}
 
         {images.map((image, index) => (
           <div
@@ -765,6 +793,7 @@ const MajorClientService = () => {
                 result={service.result}
                 tech={service.tech}
                 images={service.images}
+                url={service.url}
                 isLastItem={index === innerClient.length - 1}
               />
             ))}
