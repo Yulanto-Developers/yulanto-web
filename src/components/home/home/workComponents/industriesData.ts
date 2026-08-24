@@ -34,7 +34,7 @@ export const INDUSTRIES: IndustryCategory[] = [
     label: 'Corporate',
     icon: Building2,
     image: true,
-    industryImg: '/assets/img/all-works/head-img/corporate.jpg',
+    industryImg: '/assets/img/industry/corproate.jpg',
     industryDesc: [
       "We create professional website design and digital solutions for corporate businesses across diverse industries, helping organizations build a strong online presence and achieve their business goals.",
       "From corporate websites and B2B web development to responsive website design, WordPress development, UI/UX design, and digital marketing solutions, our experienced team delivers customized solutions based on each industry’s unique requirements.",
@@ -123,7 +123,7 @@ export const INDUSTRIES: IndustryCategory[] = [
     label: 'Media',
     icon: Tv,
     image: true,
-    industryImg: '/assets/img/all-works/head-img/media.jpg',
+    industryImg: '/assets/img/industry/Media.jpg',
     industryDesc:
       [
         "We provide professional website design and website development solutions for media and entertainment businesses, helping organizations build a strong digital presence, showcase their content, and engage their audiences effectively.",
@@ -189,7 +189,7 @@ export const INDUSTRIES: IndustryCategory[] = [
     label: 'Tour & Travels',
     icon: Plane,
     image: true,
-    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryImg: '/assets/img/industry/tour.jpg',
     industryDesc: [
       "We provide professional website design and website development solutions for Tour and Travel businesses, helping travel companies build a strong online presence, showcase destinations, promote tour packages, and attract more travelers.",
       "Our expertise includes travel website design, tourism website development, tour operator website design, travel agency website development, holiday package website design, hotel and travel booking website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
@@ -254,7 +254,7 @@ export const INDUSTRIES: IndustryCategory[] = [
     label: 'Hospitality & Solar',
     icon: Sun,
     image: true,
-    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryImg: '/assets/img/industry/hospital.jpg',
     industryDesc: [
       "We provide professional website design and website development solutions for Hospitality and Solar businesses, helping companies in these industries build a strong digital presence, showcase their services, and connect with customers through modern and engaging websites. ",
       "Our expertise includes hospitality website design, hotel website development, resort website design, restaurant website development, tourism website solutions, solar company website design, solar energy website development, renewable energy website design, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
@@ -280,7 +280,7 @@ export const INDUSTRIES: IndustryCategory[] = [
     label: 'Resorts & Restaurants',
     icon: UtensilsCrossed,
     image: true,
-    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryImg: '/assets/img/industry/resort.jpg',
     industryDesc: [
       "We provide professional website design and website development solutions for resorts, restaurants, and hospitality businesses, helping brands create a strong online presence, showcase their unique experiences, and attract more guests and customers. ",
       "Our expertise includes resort website design, hotel and resort website development, restaurant website design, hospitality website development, food and beverage website design, online table reservation solutions, hotel booking website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
@@ -306,7 +306,7 @@ export const INDUSTRIES: IndustryCategory[] = [
     label: 'Financial',
     icon: Landmark,
     image: true,
-    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryImg: '/assets/img/industry/financial.jpg',
     industryDesc: [
       "We provide professional website design and website development solutions for financial businesses, helping financial institutions and service providers establish a trustworthy digital presence, communicate their services clearly, and build stronger relationships with customers. ",
       "Our expertise includes financial services website design, finance company website development, banking website design, investment company website development, accounting website design, fintech website development, insurance website design, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
@@ -1202,7 +1202,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     ]
   },
   tour: {
-    bannerImg: '/assets/img/all-works/head-img/travel.jpg',
+    bannerImg: '/assets/img/industry/tour.jpg',
     projects: [
       {
         id: 'natrurographers',
