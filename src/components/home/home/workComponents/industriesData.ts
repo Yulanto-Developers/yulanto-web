@@ -1,7 +1,7 @@
 import {
   Building2, Laptop, Building, Paintbrush, Wrench, HeartPulse, Tv,
   ShoppingCart, Ship, Truck, GraduationCap, Plane, Sparkles, Briefcase,
-  BookOpen, Sun, Factory, UtensilsCrossed, Trophy, Landmark, Layers, LucideIcon
+  BookOpen, Sun, Factory, Anvil, UtensilsCrossed, Trophy, Landmark, Layers, LucideIcon,
 } from 'lucide-react';
 
 export interface IndustryCategory {
@@ -107,15 +107,15 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'marine',
-    label: 'New Marine, Oil & Gas',
-    icon: HeartPulse,
+    label: 'Marine, Oil & Gas',
+    icon: Ship,
     image: false,
     industryImg: '/assets/img/all-works/head-img/health.jpg',
     industryDesc: [
-      "We deliver professional healthcare website design and website development solutions that help healthcare organizations establish a trusted digital presence, communicate their services effectively, and connect with patients and healthcare professionals.",
-      "Our expertise includes healthcare website design, hospital website development, clinic website design, medical website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. We create modern, mobile-responsive, user-friendly websites that clearly present medical services, departments, doctors, treatments, facilities, health information, appointment options, and other essential details.",
-      "From hospitals, multispecialty clinics, diagnostic centers, dental clinics, medical practitioners, healthcare consultants, wellness centers, and specialty healthcare providers, we develop customized websites that reflect their professional identity and meet the needs of their target audience.",
-      "Our SEO-optimized healthcare websites are structured to improve online visibility, support local search rankings, attract relevant enquiries, and build patient confidence. By combining clean design, intuitive navigation, fast performance, engaging content, and conversion-focused features, we help healthcare businesses create a credible online presence and achieve sustainable digital growth."
+      "We provide professional website design and website development solutions for Marine, Oil & Gas companies, helping businesses establish a strong digital presence, showcase their technical expertise, and communicate their products and services effectively to clients across local and international markets. ",
+      "Our expertise includes marine company website design, oil and gas website development, offshore company website design, petroleum company website development, marine engineering website design, energy company website development, industrial website design, B2B website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
+      "We create modern, professional, mobile-responsive websites that clearly present company capabilities, marine services, offshore operations, oil and gas solutions, engineering expertise, equipment, products, projects, certifications, safety standards, and industry experience. ",
+      "From marine engineering companies, ship management companies, offshore service providers, oil and gas contractors, petroleum companies, drilling and exploration businesses, energy companies, marine equipment suppliers, and industrial service providers, we develop customized digital solutions aligned with their brand identity and business objectives. Our SEO-optimized Marine, Oil & Gas websites are structured to improve search engine visibility, attract relevant B2B traffic, generate qualified business enquiries, and strengthen brand credibility in competitive global markets. By combining professional design, clear technical content, intuitive navigation, high performance, mobile compatibility, and conversion-focused features, we help Marine, Oil & Gas businesses showcase their capabilities, build trust with international clients and partners, expand their market reach, and achieve sustainable digital growth."
     ]
   },
   {
@@ -236,6 +236,19 @@ export const INDUSTRIES: IndustryCategory[] = [
   //     "Our SEO-optimized publishing websites are designed to improve search engine visibility, increase organic traffic, enhance content discoverability, and build a loyal online readership. By combining intuitive navigation, engaging layouts, fast performance, structured content, social media integration, and conversion-focused features, we help publishing businesses strengthen their digital brand, expand their audience, showcase their publications effectively, and achieve sustainable online growth."
   //   ]
   // },
+  {
+    id: 'steel',
+    label: 'Steel & TMT',
+    icon: Anvil,
+    image: true,
+    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryDesc: [
+      "We provide professional website design and website development solutions for Steel and TMT companies, helping manufacturers, suppliers, distributors, and industrial businesses establish a strong digital presence and showcase their products, manufacturing capabilities, and technical expertise. ",
+      "Our expertise includes steel company website design, TMT bar website development, steel manufacturer website design, TMT steel website development, structural steel website design, iron and steel industry website development, industrial website design, B2B website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
+      "We create modern, professional, mobile-responsive websites that effectively present steel products, TMT bars, specifications, grades, sizes, manufacturing facilities, quality standards, certifications, projects, applications, and company capabilities. From steel manufacturers, TMT bar manufacturers, steel suppliers, iron and steel distributors, structural steel companies, rebar manufacturers, metal processing companies, and construction material suppliers, we develop customized digital solutions aligned with their business objectives and target markets. ",
+      "Our SEO-optimized Steel and TMT websites are designed to improve search engine visibility, attract relevant B2B traffic, generate qualified enquiries, and strengthen brand credibility in the competitive steel and construction materials market. By combining professional design, clear product presentation, intuitive navigation, fast performance, technical content, and conversion-focused features, we help Steel and TMT businesses showcase their products effectively, connect with builders and contractors, expand their market reach, and achieve sustainable digital growth."
+    ]
+  },
   {
     id: 'hospitality',
     label: 'Hospitality & Solar',
@@ -508,28 +521,37 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       },
 
       {
-        id: 'vishvahomes',
-        name: 'Vishva Homes',
-        logo: '/assets/img/all-works/vh-logo.png',
-        location: 'Chennai, India',
+        id: 'altis',
+        name: 'Altis Calserv PTE LTD',
+        logo: '',
+        location: 'Singapore',
         url: 'https://altiscalserv.com/',
         borderClass: 'brlb'
       },
       {
-        id: 'aldinfoundation',
-        name: 'Aldin Foundation',
-        logo: '/assets/img/all-works/aldin-logo.ico',
-        location: 'Chennai, India',
-        url: 'http://www.aldinfoundations.com/',
-        borderClass: ''
-      },
-      {
-        id: 'propnext',
-        name: 'Prop Next',
+        id: 'ddc',
+        name: 'DDC Maritime',
         logo: '',
         location: 'Chennai, India',
-        url: 'https://www.propnextindia.in/',
-        borderClass: ''
+        url: 'https://www.ddcmaritime.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'black',
+        name: 'Black Strom Energy',
+        logo: '',
+        location: 'Sharjah, UAE',
+        url: 'http://www.blackstormenergy.com/',
+        borderClass: 'brlb'
+      },
+
+      {
+        id: 'newahipping',
+        name: 'New Shipping',
+        logo: '',
+        location: 'Chennai, India',
+        url: 'https://www.newshipping.co.jp/',
+        borderClass: 'brlb'
       },
     ],
   },
@@ -706,14 +728,14 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'http://cholashealthcare.com/',
         borderClass: 'brl'
       },
-      {
-        id: 'aezensolutions',
-        name: 'Aezen Solutions',
-        logo: '/assets/img/all-works/aezen-logo.png',
-        location: 'Kanchipuram, India',
-        url: 'https://aezensolutions.com/',
-        borderClass: 'brl'
-      }
+      // {
+      //   id: 'aezensolutions',
+      //   name: 'Aezen Solutions',
+      //   logo: '/assets/img/all-works/aezen-logo.png',
+      //   location: 'Kanchipuram, India',
+      //   url: 'https://aezensolutions.com/',
+      //   borderClass: 'brl'
+      // }
     ]
   },
   software: {
@@ -951,6 +973,22 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     bannerImg: '/assets/img/all-works/head-img/import.jpg',
     projects: [
       {
+        id: 'tmkinternational',
+        name: 'TMK International',
+        logo: '',
+        location: 'Chennai, India',
+        url: 'https://www.tmkinternational.org/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'brinthatraders',
+        name: 'Brintha Traders',
+        logo: '',
+        location: 'Haryana, India',
+        url: 'https://www.brinthatraders.com/',
+        borderClass: 'brb'
+      },
+      {
         id: 'oortecloud',
         name: 'Oorte Cloud',
         logo: '/assets/img/all-works/2026/Oort-e-cloud.png',
@@ -958,14 +996,14 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'https://www.oortecloud.com/',
         borderClass: 'brb'
       },
-      {
-        id: 'ams',
-        name: 'AMS',
-        logo: '/assets/img/all-works/new/asianic.png',
-        location: 'Singapore',
-        url: 'http://asianic.sg/',
-        borderClass: 'brlb'
-      },
+      // {
+      //   id: 'ams',
+      //   name: 'AMS',
+      //   logo: '/assets/img/all-works/new/asianic.png',
+      //   location: 'Singapore',
+      //   url: 'http://asianic.sg/',
+      //   borderClass: 'brlb'
+      // },
       {
         id: 'flavoyageexport',
         name: 'Flavoyage Export',
@@ -990,33 +1028,18 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'https://www.zaikexports.com/',
         borderClass: 'brlb'
       },
-      {
-        id: 'balkanindiaexports',
-        name: 'Balkan India Exports',
-        logo: '/assets/img/all-works/bie-logo.png',
-        location: 'Chennai, India',
-        url: 'http://www.balkanindiaexports.com/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'newshipping',
-        name: 'New Shipping',
-        logo: '/assets/img/all-works/newship-logo.png',
-        location: 'Chennai, India.',
-        url: 'http://newshipping.co.jp/',
-        borderClass: ''
-      }
+
     ]
   },
   logistics: {
     bannerImg: '/assets/img/all-works/head-img/logistics.jpg',
     projects: [
       {
-        id: 'blueanchor',
-        name: 'Blue Anchor',
-        logo: '/assets/img/all-works/2026/blueanchor.png',
-        location: 'Dubai, UAE',
-        url: 'https://blueanchor.llc/',
+        id: 'freightdigital',
+        name: 'Freight Digital',
+        logo: '',
+        location: 'Sharjah, UAE',
+        url: 'https://freightdigitalfzc.com/',
         borderClass: 'brb'
       },
       {
@@ -1028,12 +1051,12 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         borderClass: 'brlb'
       },
       {
-        id: 'elshaddai',
-        name: 'El Shaddai',
-        logo: '/assets/img/all-works/elshaddai-logo.png',
+        id: 'aerovonexpress',
+        name: 'Aerovon Express',
+        logo: '/assets/img/all-works/aerovon-logo.png',
         location: 'Chennai, India.',
-        url: 'http://elshaddaiforwarders.com/',
-        borderClass: 'brlb'
+        url: 'https://aerovonexpress.com/',
+        borderClass: 'brl'
       },
       {
         id: 'lotusil',
@@ -1044,13 +1067,25 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         borderClass: ''
       },
       {
-        id: 'aerovonexpress',
-        name: 'Aerovon Express',
-        logo: '/assets/img/all-works/aerovon-logo.png',
+        id: 'elshaddai',
+        name: 'El Shaddai',
+        logo: '/assets/img/all-works/elshaddai-logo.png',
         location: 'Chennai, India.',
-        url: 'https://aerovonexpress.com/',
-        borderClass: 'brl'
-      }
+        url: 'http://elshaddaiforwarders.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'raycontainer',
+        name: 'Ray Container',
+        logo: '',
+        location: 'Bangalore, India.',
+        url: 'https://www.rcsblr.com/',
+        borderClass: 'brlb'
+      },
+
+
+
+
     ]
   },
   education: {
@@ -1063,6 +1098,38 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         location: 'Chennai, India',
         url: 'https://www.vedaalayam.com/',
         borderClass: 'brb'
+      },
+      {
+        id: 'truimphhub',
+        name: 'Truimph Hub',
+        logo: '/assets/img/all-works/new/triumphhub.png',
+        location: 'Coimbatore, India.',
+        url: 'https://www.triumphhub.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'tuteeconnect',
+        name: 'Tuteeconnect',
+        logo: '/assets/img/all-works/tutee-logo.png',
+        location: 'Chennai, India.',
+        url: 'https://www.tuteeconnect.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'amalametric',
+        name: 'Amala Metric',
+        logo: '/assets/img/all-works/new/amalimatric.png',
+        location: 'Madurai, India.',
+        url: 'https://amalimatric.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'margvidhyalaya',
+        name: 'Marg Vidhyalaya',
+        logo: '/assets/img/all-works/marg-logo.png',
+        location: 'Chennai, India.',
+        url: 'https://www.margvidhyalaya.com/',
+        borderClass: 'brlb'
       },
       {
         id: 'ppti',
@@ -1088,46 +1155,18 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'https://cgkgmeenambakkam.co.in/',
         borderClass: 'brb'
       },
-      {
-        id: 'truimphhub',
-        name: 'Truimph Hub',
-        logo: '/assets/img/all-works/new/triumphhub.png',
-        location: 'Coimbatore, India.',
-        url: 'https://www.triumphhub.com/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'amalametric',
-        name: 'Amala Metric',
-        logo: '/assets/img/all-works/new/amalimatric.png',
-        location: 'Madurai, India.',
-        url: 'https://amalimatric.com/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'maverick',
-        name: 'Maverick',
-        logo: '/assets/img/all-works/maverick-logo.png',
-        location: 'United Arab Emirates',
-        url: 'https://mbalondon.org.uk/',
-        borderClass: 'brb'
-      },
-      {
-        id: 'margvidhyalaya',
-        name: 'Marg Vidhyalaya',
-        logo: '/assets/img/all-works/marg-logo.png',
-        location: 'Chennai, India.',
-        url: 'https://www.margvidhyalaya.com/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'tuteeconnect',
-        name: 'Tuteeconnect',
-        logo: '/assets/img/all-works/tutee-logo.png',
-        location: 'Chennai, India.',
-        url: 'https://www.tuteeconnect.com/',
-        borderClass: 'brlb'
-      },
+
+
+      // {
+      //   id: 'maverick',
+      //   name: 'Maverick',
+      //   logo: '/assets/img/all-works/maverick-logo.png',
+      //   location: 'United Arab Emirates',
+      //   url: 'https://mbalondon.org.uk/',
+      //   borderClass: 'brb'
+      // },
+
+
       {
         id: 'harshitaacademy',
         name: 'Harshita Academy',
@@ -1152,25 +1191,41 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'https://hindi-online-class.com/',
         borderClass: 'brl'
       },
-      {
-        id: 'halimanagementconsultancies',
-        name: 'Hali Management Consultancies',
-        logo: '/assets/img/all-works/hali-logo.png',
-        location: 'Chennai, India.',
-        url: 'https://www.haliconsult.com/',
-        borderClass: ''
-      }
+      // {
+      //   id: 'halimanagementconsultancies',
+      //   name: 'Hali Management Consultancies',
+      //   logo: '/assets/img/all-works/hali-logo.png',
+      //   location: 'Chennai, India.',
+      //   url: 'https://www.haliconsult.com/',
+      //   borderClass: ''
+      // }
     ]
   },
   tour: {
     bannerImg: '/assets/img/all-works/head-img/travel.jpg',
     projects: [
       {
+        id: 'natrurographers',
+        name: 'Naturograhers',
+        logo: '',
+        location: 'Chennai, India',
+        url: 'http://staride.com',
+        borderClass: ''
+      },
+      {
         id: 'staride',
         name: 'Staride',
         logo: '/assets/img/all-works/starride-logo.png',
         location: 'San Diego.',
         url: 'http://staride.com',
+        borderClass: ''
+      },
+      {
+        id: 'gsrt',
+        name: 'GSRT Adventures',
+        logo: '',
+        location: ' Malaysia',
+        url: 'https://gsrtadventures.com/',
         borderClass: ''
       },
       {
@@ -1188,19 +1243,11 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     projects: [
       {
         id: 'bridgegreenupcycle',
-        name: 'Bridgegreenupcycle',
+        name: 'Bridge Green Upcycle',
         logo: '/assets/img/all-works/new/bridgegreenupcycle.png',
         location: 'United States.',
         url: 'https://bridgegreenupcycle.com/',
         borderClass: 'brb'
-      },
-      {
-        id: 'shammahalnissi',
-        name: 'Shammah Al Nissi',
-        logo: '/assets/img/all-works/new/shammahalnissi.png',
-        location: 'UAE.',
-        url: 'https://www.shammahalnissi.com/',
-        borderClass: 'brlb'
       },
       {
         id: 'immertiza',
@@ -1210,6 +1257,15 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'https://immertiza.com/',
         borderClass: 'brlb'
       },
+      {
+        id: 'shammahalnissi',
+        name: 'Shammah Al Nissi',
+        logo: '/assets/img/all-works/new/shammahalnissi.png',
+        location: 'UAE.',
+        url: 'https://www.shammahalnissi.com/',
+        borderClass: 'brlb'
+      },
+
       {
         id: 'chennaicleaners',
         name: 'Chennai Cleaners',
@@ -1245,6 +1301,14 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         logo: '/assets/img/all-works/2026/Phani-Pavan.png',
         location: 'Chennai, India.',
         url: 'https://phanipavan.com/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'terrapulse',
+        name: 'Terra Pulse',
+        logo: '',
+        location: 'Saudi, UAE.',
+        url: 'https://www.terrapulse.com.sa/',
         borderClass: 'brb'
       },
       {
@@ -1305,6 +1369,36 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       }
     ]
   },
+  steel: {
+    bannerImg: '/assets/img/all-works/head-img/consultancy.jpg',
+    projects: [
+      {
+        id: 'jpr',
+        name: 'JPR TMT Bars',
+        logo: '',
+        location: 'Kancheepuram, India.',
+        url: 'https://www.jprsteels.com/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'terrapulse',
+        name: 'Terra Pulse',
+        logo: '',
+        location: 'Saudi, UAE.',
+        url: 'https://www.terrapulse.com.sa/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'ralago',
+        name: 'Ralago Engineering',
+        logo: '/assets/img/all-works/new/ralago.png',
+        location: 'Chennai, India.',
+        url: 'https://www.ralago.in/',
+        borderClass: 'brlb'
+      },
+
+    ]
+  },
   // publisher: {
   //   bannerImg: '/assets/img/all-works/head-img/publisher.jpg',
   //   projects: [
@@ -1344,6 +1438,14 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         location: 'Chennai, India.',
         url: 'https://www.indian-farmer.com/',
         borderClass: 'brl'
+      },
+      {
+        id: 'danforth',
+        name: 'Danforth Disability',
+        logo: '',
+        location: 'Chennai, India.',
+        url: 'https://danforthdisabilityservices.com/',
+        borderClass: 'brl'
       }
     ]
   },
@@ -1351,11 +1453,35 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     bannerImg: '/assets/img/all-works/head-img/manufacturer.jpg',
     projects: [
       {
-        id: 'ralagoengineering',
-        name: 'Ralago ENgineering',
-        logo: '/assets/img/all-works/new/ralago.png',
+        id: 'kormesic',
+        name: 'KORMESIC',
+        logo: '/assets/img/all-works/2026/ldf.png',
+        location: 'Chennai',
+        url: 'https://www.ldfkormesic.com/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'fusioninternational',
+        name: 'Fusion International',
+        logo: '/assets/img/all-works/2026/fusionintl.png',
+        location: 'Chennai',
+        url: 'https://www.fusionintl.net/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'anandasuvai',
+        name: 'Anandasuvai',
+        logo: '/assets/img/all-works/2026/anandasuvai.png',
+        location: 'Chennai',
+        url: 'https://www.anandasuvai.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'winner',
+        name: 'Winner Leather Creation',
+        logo: '',
         location: 'Chennai, India.',
-        url: 'https://www.ralago.in/',
+        url: 'https://www.winnerleather.com/',
         borderClass: 'brb'
       },
       {
@@ -1382,14 +1508,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'http://www.udayamgroups.com/',
         borderClass: 'brb'
       },
-      {
-        id: 'callosumtechnologies',
-        name: 'Callosum Technologies',
-        logo: '/assets/img/all-works/callosum-logo.png',
-        location: 'Washington.',
-        url: 'https://www.callosumtech.com/',
-        borderClass: 'brlb'
-      },
+
       {
         id: 'ceconozonators',
         name: 'Cecon Ozonators',
@@ -1404,6 +1523,14 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         logo: '/assets/img/all-works/terrabio-logo.png',
         location: 'Chennai, India',
         url: 'https://terrabionaturals.com/',
+        borderClass: ''
+      },
+      {
+        id: 'arivion',
+        name: 'Arivion',
+        logo: '',
+        location: ' Tiruvannamalai, India',
+        url: 'https://arivion.in/',
         borderClass: ''
       }
     ]
@@ -1433,6 +1560,14 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     bannerImg: '/assets/img/all-works/head-img/events-and-sport.jpg',
     projects: [
       {
+        id: 'johoreventrental.com.my',
+        name: 'johoreventrental.com.my',
+        logo: '',
+        location: 'Toronto',
+        url: 'johoreventrental.com.my',
+        borderClass: 'brb'
+      },
+      {
         id: 'gtaballoons',
         name: 'GTA Balloons',
         logo: '/assets/img/all-works/2026/gta-balloons.png',
@@ -1449,21 +1584,14 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         borderClass: 'brlb'
       },
       {
-        id: 'bqab',
-        name: 'BQAB',
-        logo: '/assets/img/all-works/new/BQAB.png',
-        location: 'Qatar.',
-        url: 'https://www.bqab.qa/',
+        id: 'ecube',
+        name: 'ECUBE',
+        logo: '',
+        location: 'Chenai, India',
+        url: 'https://www.ecubelive.com/',
         borderClass: 'brlb'
       },
-      {
-        id: 'knotsandrings',
-        name: 'Knots and Rings',
-        logo: '/assets/img/all-works/new/knotsandrings.png',
-        location: 'Chennai, India.',
-        url: 'https://www.knotsandrings.com/',
-        borderClass: ''
-      },
+
       {
         id: 'sgeventrental',
         name: 'SG Event Rental',
@@ -1492,6 +1620,22 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         location: 'Chennai, India.',
         url: 'https://www.finsolutions.live/',
         borderClass: 'brl'
+      },
+      {
+        id: 'uff',
+        name: 'UFF',
+        logo: '',
+        location: 'Chennai, India.',
+        url: 'https://www.unicfin.com/',
+        borderClass: 'brl'
+      },
+      {
+        id: 'riverbrige',
+        name: 'River Bridge',
+        logo: '',
+        location: 'Chennai, India.',
+        url: 'https://www.riverbridgecapital.in/',
+        borderClass: 'brl'
       }
     ]
   },
@@ -1499,116 +1643,20 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     bannerImg: '/assets/img/all-works/head-img/other.jpg',
     projects: [
       {
-        id: 'kormesic',
-        name: 'KORMESIC',
-        logo: '/assets/img/all-works/2026/ldf.png',
-        location: 'Chennai',
-        url: 'https://www.ldfkormesic.com/',
-        borderClass: 'brb'
-      },
-      {
-        id: 'fusioninternational',
-        name: 'Fusion International',
-        logo: '/assets/img/all-works/2026/fusionintl.png',
-        location: 'Chennai',
-        url: 'https://www.fusionintl.net/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'anandasuvai',
-        name: 'Anandasuvai',
-        logo: '/assets/img/all-works/2026/anandasuvai.png',
-        location: 'Chennai',
-        url: 'https://www.anandasuvai.com/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'aiyanaar',
-        name: 'Aiyanaar',
-        logo: '/assets/img/all-works/2026/Aiyanar.png',
-        location: 'Chennai',
-        url: 'https://www.aiyanaar.com/',
-        borderClass: 'brb'
-      },
-      {
-        id: 'adhelant',
-        name: 'Adhelant',
-        logo: '/assets/img/all-works/new/adhelant.png',
-        location: 'Saudi Arabia',
-        url: 'https://www.adhelant.com/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'daforth',
-        name: 'Daforth',
-        logo: '/assets/img/all-works/new/danforth.png',
-        location: 'Canada.',
-        url: 'https://danforthdisabilityservices.com/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'arivion',
-        name: 'Arivion',
-        logo: '/assets/img/all-works/new/arivion.png',
-        location: 'Tiruvannamalai, India.',
-        url: 'https://arivion.in/',
-        borderClass: 'brb'
-      },
-      {
-        id: 'rootvis',
-        name: 'Rootvis',
-        logo: '/assets/img/all-works/new/rootvis.png',
-        location: 'Chennai, India.',
-        url: 'https://www.rootvis.com/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'rcsblr',
-        name: 'RCSBLR',
-        logo: '/assets/img/all-works/new/rcsblr.png',
-        location: 'Bangalore, India',
-        url: 'https://www.rcsblr.com/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'recyclersplaza',
-        name: 'Recyclers Plaza',
-        logo: '/assets/img/all-works/recyclers-logo.png',
-        location: 'United States.',
-        url: 'https://www.recyclersplaza.com/',
-        borderClass: 'brb'
-      },
-      {
-        id: 'ecube',
-        name: 'Ecube',
-        logo: '/assets/img/all-works/ecube-logo.png',
+        id: 'chenddur',
+        name: 'Sri Chenddur Infras',
+        logo: '',
         location: 'Chennai, India',
-        url: 'https://www.ecubelive.com/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'riverbridge',
-        name: 'River Bridge',
-        logo: '/assets/img/all-works/riverbridge-logo.png',
-        location: 'India.',
-        url: 'https://www.riverbridgecapital.in/',
-        borderClass: 'brlb'
-      },
-      {
-        id: 'u2vprints',
-        name: 'U2V Prints',
-        logo: '/assets/img/all-works/u2v-logo.png',
-        location: 'Ambur, India',
-        url: 'https://www.u2vprints.com/',
+        url: 'https://www.srichenddurinfras.com/',
         borderClass: 'brb'
       },
       {
-        id: 'spkenterprices',
-        name: 'SPK Enterprices',
-        logo: '/assets/img/all-works/spk-logo.png',
-        location: 'Chennai, India.',
+        id: 'spk',
+        name: 'SPK Enterpries',
+        logo: '',
+        location: 'Thiruvallur, India',
         url: 'http://spkenterprisesgroup.com/',
-        borderClass: 'brlb'
+        borderClass: 'brb'
       },
       {
         id: 'karunalaya',
@@ -1619,21 +1667,30 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         borderClass: 'brlb'
       },
       {
-        id: 'altazbusinesssolution',
-        name: 'Altaz Business Solution',
-        logo: '/assets/img/all-works/altaz-logo.png',
-        location: 'Chennai, India.',
-        url: 'http://www.atlaz.in/',
-        borderClass: ''
-      },
-      {
         id: 'alphonsaaqua',
         name: 'Alphonsa Aqua',
         logo: '/assets/img/all-works/alphonsa-logo.png',
         location: 'Chennai, India.',
         url: 'https://alphonsaaqua.com/',
         borderClass: 'brl'
-      }
+      },
+      {
+        id: 'alfafa',
+        name: 'Al Safa International',
+        logo: '',
+        location: 'Chennai',
+        url: '',
+        borderClass: 'brb'
+      },
+
+      {
+        id: 'trumed',
+        name: 'Trumed In Solutions',
+        logo: '',
+        location: 'Chennai',
+        url: 'http://trumedsolutions.com/',
+        borderClass: 'brb'
+      },
     ]
   }
 };
