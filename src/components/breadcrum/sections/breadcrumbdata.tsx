@@ -85,8 +85,7 @@ const data = [
     currentPage: "SEO",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-<<<<<<< Updated upstream
-=======
+
   {
     path: "/offpageseo",
     title: "Off Page Seo",
@@ -105,7 +104,7 @@ const data = [
     currentPage: "Startup Webiste Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
->>>>>>> Stashed changes
+
 ];
 
 export default function BreadcurmbData() {
