@@ -1,0 +1,2094 @@
+/* =========================================
+   WEBSITE BENEFITS
+========================================= */
+
+.website-benefits {
+    width: 100%;
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 16px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BADGE LAYOUT / ROW
+========================================= */
+
+.website-benefits-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    width: auto;
+    max-width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   COMMON BADGE
+========================================= */
+
+.custom-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 35px;
+
+    padding: 0 12px;
+
+    gap: 7px;
+
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+
+    white-space: nowrap;
+
+    flex: 0 0 auto;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   BADGE ICON
+========================================= */
+
+.custom-badge-icon {
+    width: 16px;
+    height: 16px;
+
+    min-width: 16px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   BADGE WIDTHS
+========================================= */
+
+.custom-badge-professional {
+    width: 180px;
+}
+
+.custom-badge-responsive {
+    width: 250px;
+}
+
+.custom-badge-navigation {
+    width: 160px;
+}
+
+.custom-badge-seo {
+    width: 160px;
+}
+
+.custom-badge-performance {
+    width: 230px;
+}
+
+.custom-badge-conversion {
+    width: 180px;
+}
+
+.custom-badge-scalable {
+    width: 280px;
+}
+
+
+/* =========================================
+   BADGE COLORS
+========================================= */
+
+.custom-badge-professional {
+    color: #6c3cf0;
+    background-color: #f1edff;
+}
+
+.custom-badge-responsive {
+    color: #008af5;
+    background-color: #eaf6ff;
+}
+
+.custom-badge-navigation {
+    color: #198754;
+    background-color: #eaf8f0;
+}
+
+.custom-badge-seo {
+    color: #d57463;
+    background-color: #fff0ed;
+}
+
+.custom-badge-performance {
+    color: #eaa65d;
+    background-color: #fff8ed;
+}
+
+.custom-badge-conversion {
+    color: #0f766e;
+    background-color: #e7f8f5;
+}
+
+.custom-badge-scalable {
+    color: #777777;
+    background-color: #f1f1f1;
+}
+
+
+/* =========================================
+   BADGE HOVER
+========================================= */
+
+.custom-badge:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   LAST BADGE ROW
+========================================= */
+
+.website-benefits-row:last-child {
+    width: auto !important;
+    max-width: fit-content;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+/* =========================================
+   STARTUP BENEFITS
+========================================= */
+
+.startup-benefits {
+    width: 100%;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.startup-benefits-header {
+    width: 100%;
+
+    margin-bottom: 45px;
+}
+
+.startup-benefits-intro {
+    max-width: 900px;
+
+    margin: 0;
+
+    color: #555555;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BENEFITS LIST
+========================================= */
+
+.startup-benefits-list {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0 auto 70px;
+}
+
+
+/* =========================================
+   VERTICAL TIMELINE
+========================================= */
+
+
+
+
+/* =========================================
+   BENEFIT ITEM
+========================================= */
+
+.startup-benefit-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) minmax(320px, 420px);
+
+    gap: 50px;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom: 35px;
+
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid #e8eef2;
+
+    box-sizing: border-box;
+}
+
+.startup-benefit-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   ZIG-ZAG
+========================================= */
+
+/*
+   Normal:
+   
+   CONTENT | IMAGE
+
+   Reverse:
+
+   IMAGE | CONTENT
+*/
+
+.startup-benefit-item-reverse {
+    grid-template-columns:
+        minmax(320px, 420px) minmax(0, 1fr);
+}
+
+
+/* =========================================
+   REVERSE IMAGE
+========================================= */
+
+.startup-benefit-item-reverse .startup-benefit-image {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+/* =========================================
+   REVERSE CONTENT
+========================================= */
+
+.startup-benefit-item-reverse .startup-benefit-content-wrapper {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+/* =========================================
+   LEFT / CONTENT WRAPPER
+========================================= */
+
+.startup-benefit-content-wrapper {
+    min-width: 0;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   NUMBER + ICON + TITLE
+========================================= */
+
+.startup-benefit-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 16px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.startup-benefit-number {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    border-radius: 30px;
+
+    background: #053456;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================
+   BENEFIT ICON
+========================================= */
+
+.startup-benefit-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #edf5f8;
+
+    color: #053456;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.startup-benefit-meta .startup-benefit-content {
+    padding-left: 0 !important;
+
+    min-width: 0;
+}
+
+.startup-benefit-meta .startup-benefit-content h5 {
+    margin: 0;
+
+    color: #053456;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.startup-benefit-content {
+    padding-left: 74px;
+}
+
+.startup-benefit-content p {
+    max-width: 800px;
+
+    margin: 0;
+
+    color: #555555;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BENEFIT IMAGE
+========================================= */
+
+.startup-benefit-image {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 250px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #f1f5f7;
+
+    box-shadow:
+        0 10px 30px rgba(5, 52, 86, 0.08);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.startup-benefit-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+/* =========================================
+   IMAGE HOVER
+========================================= */
+
+.startup-benefit-item:hover .startup-benefit-image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   ICON HOVER
+========================================= */
+
+.startup-benefit-item:hover .startup-benefit-icon {
+    background: #053456;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   STRONG TEXT
+========================================= */
+
+.startup-benefits strong {
+    color: #053456;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   BUDGET CARD
+========================================= */
+
+.startup-budget-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 42px 45px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(135deg,
+            #053456 0%,
+            #074b6c 100%);
+
+    color: #ffffff;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 20px 45px rgba(5, 52, 86, 0.16);
+}
+
+
+/* =========================================
+   BUDGET DECORATIVE CIRCLE
+========================================= */
+
+.startup-budget-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -80px;
+    top: -90px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   BUDGET TOP
+========================================= */
+
+.startup-budget-top {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.startup-budget-top span {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================
+   BUDGET ICON
+========================================= */
+
+.startup-budget-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   BUDGET HEADING
+========================================= */
+
+.startup-budget-card>h4 {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 750px;
+
+    margin: 0 0 28px;
+
+    color: #ffffff;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================
+   BUDGET CONTENT
+========================================= */
+
+.startup-budget-content {
+    position: relative;
+
+    z-index: 1;
+
+    margin-bottom: 25px;
+}
+
+.startup-budget-content h5 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+.startup-budget-content p,
+.startup-budget-paragraph {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.86);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BUDGET PARAGRAPHS
+========================================= */
+
+.startup-budget-paragraph {
+    position: relative;
+
+    z-index: 1;
+
+    margin-top: 18px;
+}
+
+
+/* =========================================
+   BUDGET STRONG TEXT
+========================================= */
+
+.startup-budget-card strong {
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TABLET - 991px
+========================================= */
+
+@media (max-width: 991px) {
+
+    /* =====================================
+       BENEFIT ITEM
+    ===================================== */
+
+    .startup-benefit-item {
+        grid-template-columns:
+            minmax(0, 1fr) 300px;
+
+        gap: 30px;
+
+        margin-bottom: 45px;
+
+        padding-bottom: 45px;
+    }
+
+
+    /* =====================================
+       REVERSE ITEM
+    ===================================== */
+
+    .startup-benefit-item-reverse {
+        grid-template-columns:
+            300px minmax(0, 1fr);
+    }
+
+    .startup-benefit-item-reverse .startup-benefit-image {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .startup-benefit-item-reverse .startup-benefit-content-wrapper {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
+    .startup-benefit-content {
+        padding-left: 0;
+    }
+
+    .startup-benefit-meta .startup-benefit-content {
+        padding-left: 0 !important;
+    }
+
+    .startup-benefit-meta .startup-benefit-content h5 {
+        font-size: 21px;
+    }
+
+
+    /* =====================================
+       IMAGE
+    ===================================== */
+
+    .startup-benefit-image {
+        height: 220px;
+    }
+
+
+    /* =====================================
+       BUDGET
+    ===================================== */
+
+    .startup-budget-card {
+        padding: 35px 30px;
+    }
+
+    .startup-budget-card>h4 {
+        font-size: 28px;
+    }
+}
+
+
+/* =========================================
+   TABLET - 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================
+       BADGES
+    ===================================== */
+
+    .website-benefits {
+        gap: 12px;
+    }
+
+    .website-benefits-row {
+        gap: 10px;
+    }
+
+    .custom-badge {
+        height: 35px;
+
+        padding: 0 12px;
+
+        font-size: 13px;
+    }
+
+    .custom-badge-professional {
+        width: 170px;
+    }
+
+    .custom-badge-responsive {
+        width: 180px;
+    }
+
+    .custom-badge-navigation {
+        width: 150px;
+    }
+
+    .custom-badge-seo {
+        width: 150px;
+    }
+
+    .custom-badge-performance {
+        width: 200px;
+    }
+
+    .custom-badge-conversion {
+        width: 170px;
+    }
+
+    .custom-badge-scalable {
+        width: 200px;
+    }
+
+
+    /* =====================================
+       BENEFITS
+    ===================================== */
+
+    .startup-benefit-item {
+        grid-template-columns:
+            minmax(0, 1fr) 260px;
+
+        gap: 25px;
+    }
+
+
+    /* =====================================
+       REVERSE
+    ===================================== */
+
+    .startup-benefit-item-reverse {
+        grid-template-columns:
+            260px minmax(0, 1fr);
+    }
+
+
+    /* =====================================
+       NUMBER
+    ===================================== */
+
+    .startup-benefit-number {
+        width: 52px;
+    }
+
+
+    /* =====================================
+       ICON
+    ===================================== */
+
+    .startup-benefit-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    /* =====================================
+       TITLE
+    ===================================== */
+
+    .startup-benefit-meta .startup-benefit-content h5 {
+        font-size: 20px;
+    }
+
+
+    /* =====================================
+       DESCRIPTION
+    ===================================== */
+
+    .startup-benefit-content p {
+        font-size: 14px;
+    }
+
+
+    /* =====================================
+       BUDGET
+    ===================================== */
+
+    .startup-budget-card {
+        padding: 32px 25px;
+    }
+
+    .startup-budget-card>h4 {
+        font-size: 27px;
+    }
+
+    .startup-budget-content h5 {
+        font-size: 20px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    /* =====================================
+       BADGES
+    ===================================== */
+
+    .website-benefits {
+        width: 100%;
+
+        gap: 10px;
+
+        padding: 0 10px;
+    }
+
+    .website-benefits-row {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .custom-badge {
+        width: auto;
+
+        min-width: 0;
+        max-width: 100%;
+
+        height: 36px;
+
+        padding: 0 12px;
+
+        font-size: 12px;
+    }
+
+    .custom-badge-icon {
+        width: 15px;
+        height: 15px;
+
+        min-width: 15px;
+    }
+
+
+    /* =====================================
+       BENEFITS HEADER
+    ===================================== */
+
+    .startup-benefits-header {
+        margin-bottom: 35px;
+    }
+
+    .startup-benefits-intro {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================
+       BENEFITS LIST
+    ===================================== */
+
+    .startup-benefits-list {
+        margin-bottom: 50px;
+    }
+
+
+    /* =====================================
+       MOBILE TIMELINE
+    ===================================== */
+
+    .startup-benefits-list::before {
+        left: 22px;
+
+        top: 28px;
+
+        bottom: 0;
+    }
+
+
+    /* =====================================
+       BENEFIT ITEM
+    ===================================== */
+
+    .startup-benefit-item {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        width: 100%;
+
+        margin-bottom: 35px;
+
+        padding-bottom: 35px;
+    }
+
+
+    /* =====================================
+       IMPORTANT:
+       RESET ZIG-ZAG ON MOBILE
+    ===================================== */
+
+    .startup-benefit-item-reverse {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .startup-benefit-item-reverse .startup-benefit-image,
+    .startup-benefit-item-reverse .startup-benefit-content-wrapper {
+        grid-column: auto;
+
+        grid-row: auto;
+    }
+
+
+    /* =====================================
+       CONTENT WRAPPER
+    ===================================== */
+
+    .startup-benefit-content-wrapper {
+        width: 100%;
+    }
+
+
+    /* =====================================
+       META
+    ===================================== */
+
+    .startup-benefit-meta {
+        margin-bottom: 12px;
+
+        gap: 10px;
+    }
+
+
+    /* =====================================
+       NUMBER
+    ===================================== */
+
+    .startup-benefit-number {
+        width: 44px;
+        height: 28px;
+
+        font-size: 10px;
+    }
+
+
+    /* =====================================
+       ICON
+    ===================================== */
+
+    .startup-benefit-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
+    .startup-benefit-content {
+        padding-left: 0;
+    }
+
+    .startup-benefit-meta .startup-benefit-content {
+        padding-left: 0 !important;
+    }
+
+
+    /* =====================================
+       TITLE
+    ===================================== */
+
+    .startup-benefit-meta .startup-benefit-content h5 {
+        font-size: 19px;
+
+        line-height: 1.35;
+    }
+
+
+    /* =====================================
+       DESCRIPTION
+    ===================================== */
+
+    .startup-benefit-content p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================
+       BENEFIT IMAGE
+    ===================================== */
+
+    .startup-benefit-image {
+        width: 100%;
+
+        height: 210px;
+
+        border-radius: 14px;
+    }
+
+
+    /* =====================================
+       BUDGET CARD
+    ===================================== */
+
+    .startup-budget-card {
+        width: 100%;
+
+        padding: 28px 22px;
+
+        border-radius: 18px;
+    }
+
+    .startup-budget-top {
+        gap: 10px;
+
+        margin-bottom: 15px;
+    }
+
+    .startup-budget-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .startup-budget-top span {
+        font-size: 10px;
+    }
+
+    .startup-budget-card>h4 {
+        font-size: 25px;
+
+        line-height: 1.3;
+
+        margin-bottom: 25px;
+    }
+
+    .startup-budget-content {
+        margin-bottom: 22px;
+    }
+
+    .startup-budget-content h5 {
+        font-size: 19px;
+    }
+
+    .startup-budget-content p,
+    .startup-budget-paragraph {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+}
+
+/* =========================================
+   SEO FRIENDLY SECTION
+========================================= */
+
+.seo-friendly-section {
+    width: 100%;
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    padding-bottom: 60px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SEO APPROACH
+========================================= */
+
+.seo-approach-wrapper {
+    margin-top: 40px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.seo-approach-heading {
+    margin-bottom: 25px;
+}
+
+.seo-approach-heading h5 {
+    margin-bottom: 8px;
+
+    color: #053456;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+.seo-approach-heading p {
+    /* max-width: 750px; */
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.seo-approach-card {
+    position: relative;
+
+    height: 100%;
+
+    min-height: 150px;
+
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border: 1px solid #e5e8eb;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.seo-approach-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d4e1e8;
+
+    box-shadow:
+        0 12px 30px rgba(5, 52, 86, 0.08);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.seo-approach-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #edf5f8;
+
+    color: #053456;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.seo-approach-card:hover .seo-approach-icon {
+    background: #053456;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.seo-approach-number {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    color: #b8c4ca;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.seo-approach-title {
+    max-width: 210px;
+
+    margin: 25px 0 0;
+
+    color: #053456;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .seo-friendly-section {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+
+    .seo-approach-wrapper {
+        margin-top: 35px;
+    }
+
+    .seo-approach-card {
+        min-height: 140px;
+
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .seo-friendly-section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        padding-bottom: 40px;
+    }
+
+    .seo-approach-wrapper {
+        margin-top: 30px;
+    }
+
+    .seo-approach-heading h5 {
+        font-size: 19px;
+    }
+
+    .seo-approach-heading p {
+        font-size: 13px;
+    }
+
+    .seo-approach-card {
+        min-height: 125px;
+
+        padding: 18px;
+
+        border-radius: 14px;
+    }
+
+    .seo-approach-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .seo-approach-title {
+        margin-top: 20px;
+
+        font-size: 15px;
+    }
+
+    .seo-approach-number {
+        top: 16px;
+        right: 17px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* why choose us */
+
+
+/* =========================================
+   WHY CHOOSE US SECTION
+========================================= */
+
+.why-choose-section {
+    width: 100%;
+
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.why-choose-header {
+    max-width: 1000px;
+}
+
+.why-choose-header p {
+    margin-bottom: 12px;
+
+    color: #555555;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.why-choose-card {
+    position: relative;
+
+    height: 100%;
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 28px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5eaee;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.why-choose-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #cbdbe4;
+
+    box-shadow:
+        0 15px 35px rgba(5, 52, 86, 0.09);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.why-choose-card-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.why-choose-number {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 46px;
+
+    height: 28px;
+
+    border-radius: 30px;
+
+    /* background: #053456; */
+
+    color: #053456;
+
+    font-size: 45px;
+
+    font-weight: 800;
+    opacity: 0.5;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.why-choose-icon {
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #edf5f8;
+
+    color: #053456;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================
+   ICON HOVER
+========================================= */
+
+.why-choose-card:hover .why-choose-icon {
+    background: #053456;
+
+    color: #ffffff;
+
+    transform: rotate(-4deg);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.why-choose-card-content {
+    flex: 1;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.why-choose-card-content h5 {
+    margin: 0 0 12px;
+
+    color: #053456;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.why-choose-card-content p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   BOTTOM LINE
+========================================= */
+
+.why-choose-card-line {
+    width: 45px;
+
+    height: 3px;
+
+    margin-top: 25px;
+
+    border-radius: 10px;
+
+    background: #053456;
+
+    transition:
+        width 0.3s ease;
+}
+
+
+/* =========================================
+   LINE HOVER
+========================================= */
+
+.why-choose-card:hover .why-choose-card-line {
+    width: 80px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .why-choose-section {
+        margin-top: 60px;
+
+        margin-bottom: 60px;
+    }
+
+    .why-choose-card {
+        min-height: 290px;
+
+        padding: 25px;
+    }
+
+    .why-choose-card-content h5 {
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .why-choose-section {
+        margin-top: 45px;
+
+        margin-bottom: 45px;
+    }
+
+    .why-choose-header p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .why-choose-card {
+        min-height: auto;
+
+        padding: 22px;
+
+        border-radius: 15px;
+    }
+
+    .why-choose-card-top {
+        margin-bottom: 22px;
+    }
+
+    .why-choose-icon {
+        width: 46px;
+
+        height: 46px;
+
+        border-radius: 12px;
+    }
+
+    .why-choose-card-content h5 {
+        font-size: 19px;
+    }
+
+    .why-choose-card-content p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    .why-choose-card-line {
+        margin-top: 22px;
+    }
+
+}
+
+/* why yulanto hover card */
+
+
+/* =========================================
+   AMBASSADOR CARD
+========================================= */
+
+.ambassador-card {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 280px;
+
+    padding: 50px 50px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #053456;
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 40px rgba(5, 52, 86, 0.12);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.ambassador-card-content {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 45px 50px;
+
+    box-sizing: border-box;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+
+/* =========================================
+   DEFAULT
+========================================= */
+
+.ambassador-card-default {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    visibility: visible;
+}
+
+
+/* =========================================
+   HOVER CONTENT
+========================================= */
+
+.ambassador-card-hover {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    visibility: hidden;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.ambassador-card:hover .ambassador-card-default {
+    opacity: 0;
+
+    transform: translateY(-25px);
+
+    visibility: hidden;
+}
+
+
+.ambassador-card:hover .ambassador-card-hover {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    visibility: visible;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.ambassador-card-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    margin-bottom: 15px;
+
+    padding: 6px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 30px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.ambassador-card h4 {
+    max-width: 700px;
+
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.ambassador-card p {
+    max-width: 800px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   STRONG
+========================================= */
+
+.ambassador-card strong {
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   HOVER HINT
+========================================= */
+
+.ambassador-card-hint {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.ambassador-card-arrow {
+    font-size: 18px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.ambassador-card:hover .ambassador-card-arrow {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.ambassador-card-cta {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: fit-content;
+
+    margin-top: 25px;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #053456;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.ambassador-card-cta span {
+    font-size: 18px;
+}
+
+
+.ambassador-card:hover .ambassador-card-cta {
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   DECORATIVE EFFECT
+========================================= */
+
+.ambassador-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -120px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    pointer-events: none;
+}
+
+
+.ambassador-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    left: -100px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .ambassador-card {
+        min-height: 360px;
+
+        border-radius: 17px;
+    }
+
+    .ambassador-card-content {
+        padding: 30px 25px;
+    }
+
+    .ambassador-card h4 {
+        font-size: 24px;
+
+        line-height: 1.3;
+    }
+
+    .ambassador-card p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .ambassador-card-label {
+        font-size: 10px;
+    }
+
+}
