@@ -134,7 +134,7 @@ export default function FAQSection({
               style={{
                 width: "100%",
                 display: "flex",
-               justifyContent: "space-between",
+                justifyContent: "space-between",
                 alignItems: "center",
                 padding: "1rem 1.25rem",
                 fontSize: "1rem",

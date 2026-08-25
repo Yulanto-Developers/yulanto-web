@@ -63,7 +63,8 @@ export const SeoAboutSection: React.FC = () => {
                 {/* Google Lens & Browser Action Icons */}
                 <div className="chrome-address-actions">
                   {/* Google Lens Icon */}
-                  <svg className="lens-icon" viewBox="0 0 24 24" fill="none" title="Search with Google Lens">
+                  <svg className="lens-icon" viewBox="0 0 24 24" fill="none">
+                    <title>Search with Google Lens</title>
                     <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" fill="#4285F4"/>
                     <path d="M19 6.5C19 5.12 17.88 4 16.5 4H14.5L13.25 2.5H10.75L9.5 4H7.5C6.12 4 5 5.12 5 6.5V8.5L3.5 9.75V14.25L5 15.5V17.5C5 18.88 6.12 20 7.5 20H16.5C17.88 20 19 18.88 19 17.5V15.5L20.5 14.25V9.75L19 8.5V6.5Z" stroke="#ea4335" strokeWidth="1.5"/>
                   </svg>
