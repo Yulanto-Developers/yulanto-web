@@ -85,12 +85,6 @@ const data = [
     currentPage: "SEO",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-  {
-    path: "/web-design/startup-webiste-design",
-    title: "Startup Webiste Desgin",
-    currentPage: "Startup Webiste Design",
-    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
-  },
 ];
 
 export default function BreadcurmbData() {

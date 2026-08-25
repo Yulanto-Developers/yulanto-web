@@ -52,7 +52,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                   <span className="text-blue-about">Result-Driven SEO Strategies to   </span>
                   Increase Traffic, Rankings & Leads
                 </h4>
-                <p className="text-figtree text-black mt-2 font-paragraph-cls">
+                <p className="text-figtree text-black mt-2">
                   Looking for a reliable SEO company in Chennai to improve your website's search engine rankings and generate quality leads? Our Chennai SEO services are designed to increase online visibility, attract relevant organic traffic, and help businesses achieve sustainable growth.
 
                 </p>

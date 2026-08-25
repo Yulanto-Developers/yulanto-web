@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   FileText,
   Settings,
@@ -40,6 +42,14 @@ const seoServices = [
 export default function SeoServicesList() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
   return (
     <section
       style={{
@@ -62,13 +72,13 @@ export default function SeoServicesList() {
       >
         {/* Title Block */}
         <div className="row align-items-center mb-20">
-          <div className="col-xl-3">
+          <div className="col-xl-3" data-aos="fade-down" data-aos-delay="100">
             <span className="tp-section-subtitle text-black blink-ball">
               Our Chennai SEO Services
             </span>
           </div>
 
-          <div className="col-xl-9">
+          <div className="col-xl-9" data-aos="fade-up" data-aos-delay="200">
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
                 <span className="text-blue-about">Our SEO solutions can include</span>
@@ -92,6 +102,8 @@ export default function SeoServicesList() {
             return (
               <div
                 key={index}
+                data-aos="zoom-in"
+                data-aos-delay={100 + (index % 3) * 100}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 style={{

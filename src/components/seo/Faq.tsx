@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface FAQItem {
   question: string;
@@ -73,6 +75,12 @@ export default function Faq() {
   });
 
   useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-out-cubic",
+    });
+
     if (typeof document === "undefined") return;
     const styleId = "inline-faq-keyframes-brand";
     if (document.getElementById(styleId)) return;
@@ -133,7 +141,11 @@ export default function Faq() {
           padding: "6rem 1.5rem",
         }}
       >
-        <h4 className="px-about-title mb-20 text-center">
+        <h4 
+          className="px-about-title mb-20 text-center"
+          data-aos="fade-down"
+          data-aos-delay="100"
+        >
           <span className="text-blue-about">Frequently Asked Questions </span> About SEO
         </h4>
 
@@ -156,6 +168,8 @@ export default function Faq() {
             return (
               <li
                 key={item.question}
+                data-aos="fade-up"
+                data-aos-delay={150 + index * 100}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => {
                   setHoveredIndex(null);

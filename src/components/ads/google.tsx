@@ -28,16 +28,41 @@ export function HeroSection({
     <div
       style={{
         background: "#fff",
-        padding: "32px",
+        padding: "30px",
         display: "flex",
-        flexDirection: "row-reverse",
-        flexWrap: "wrap-reverse",
+        flexDirection: "row",
+        flexWrap: "wrap",
         gap: "60px",
         alignItems: "center",
         justifyContent: "center",
         overflow: "hidden",
       }}
     >
+      {/* Left Content Area */}
+      <div
+        data-aos="fade-right"
+        data-aos-delay="200"
+        style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "672px" }}
+      >
+        <span className="tp-section-subtitle text-black blink-ball" data-aos="fade-down" data-aos-delay="300">
+          Google Ads
+        </span>
+        <div className="px-project-title-box">
+          <h4 className="px-about-title mb-20" data-aos="fade-up" data-aos-delay="400">
+            <span className="text-blue-about">Google Ads Management  </span> Services in Chennai
+          </h4>
+          <p className="text-figtree text-black mt-2 font-paragraph-cls" data-aos="fade-up" data-aos-delay="500">
+            Google is one of the most powerful platforms for businesses looking to reach customers who are actively searching for their products and services. With properly planned Google Ads campaigns, your business can appear prominently when potential customers search for relevant keywords.
+          </p>
+          <p className="text-figtree text-black mt-2" data-aos="fade-up" data-aos-delay="500">
+            Our team manages your Google Ads campaign from strategy and keyword research to ad creation, bidding, conversion tracking, optimization, and performance reporting. We focus on maximizing your advertising budget while improving clicks, leads, conversions, and overall return on investment.
+          </p>
+          <p className="text-figtree text-black mt-2" data-aos="fade-up" data-aos-delay="500">
+            Whether you are a startup, small business, or established company, our Google Ads services in Chennai can be customized according to your marketing objectives and budget.
+          </p>
+        </div>
+      </div>
+
       {/* Right Side - Product Mockups */}
       {showMockups && (
         <div
@@ -108,7 +133,7 @@ export function HeroSection({
                       gap: "8px",
                     }}
                   >
-                    <Search size={14} /> SEO Analysis
+                    <Search size={14} /> Google Ads Dashboard
                   </div>
                 </div>
 
@@ -124,7 +149,7 @@ export function HeroSection({
                       justifyContent: "center",
                     }}
                   >
-                    <span style={{ fontSize: "12px" }}>📈</span>
+                    <span style={{ fontSize: "12px" }}>🎯</span>
                   </div>
                 </div>
               </div>
@@ -149,21 +174,21 @@ export function HeroSection({
 
               <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
                 <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                  <h3 style={{ color: "#64748b", fontWeight: 500, margin: 0 }}>SEO Performance</h3>
+                  <h3 style={{ color: "#64748b", fontWeight: 500, margin: 0 }}>Campaign ROI Performance</h3>
                   <div style={{ height: "8px", backgroundColor: "#f1f5f9", borderRadius: "9999px", overflow: "hidden" }}>
-                    <div style={{ height: "100%", backgroundColor: "#2563eb", width: "75%", borderRadius: "9999px" }} />
+                    <div style={{ height: "100%", backgroundColor: "#2563eb", width: "85%", borderRadius: "9999px" }} />
                   </div>
                 </div>
 
-                {/* SEO Feature Grid */}
+                {/* Google Ads Feature Grid */}
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "16px" }}>
                   {[
-                    { name: "Keywords", color: "#3b82f6", icon: "🔍" },
-                    { name: "Analytics", color: "#22c55e", icon: "📊" },
-                    { name: "Backlinks", color: "#a855f7", icon: "🔗" },
-                    { name: "Content", color: "#f97316", icon: "📝" },
-                    { name: "Rankings", color: "#ef4444", icon: "🏆" },
-                    { name: "Traffic", color: "#64748b", icon: "🌐" },
+                    { name: "Search Ads", color: "#3b82f6", icon: "🎯" },
+                    { name: "Display", color: "#22c55e", icon: "🖼️" },
+                    { name: "Shopping", color: "#a855f7", icon: "🛍️" },
+                    { name: "Video Ads", color: "#f97316", icon: "▶️" },
+                    { name: "Re-target", color: "#ef4444", icon: "🔄" },
+                    { name: "Conversions", color: "#64748b", icon: "📈" },
                   ].map((item, index) => (
                     <div
                       key={index}
@@ -190,31 +215,31 @@ export function HeroSection({
                   ))}
                 </div>
 
-                {/* SEO Stats */}
+                {/* Google Ads Stats */}
                 <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", marginTop: "8px" }}>
                   <div
                     data-aos="fade-up"
                     data-aos-delay="700"
                     style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, backgroundColor: "#f8fafc", padding: "8px", borderRadius: "8px" }}
                   >
-                    <span style={{ fontSize: "20px", fontWeight: "bold", color: "#2563eb" }}>#1</span>
-                    <span style={{ fontSize: "10px", color: "#64748b" }}>Ranking</span>
+                    <span style={{ fontSize: "20px", fontWeight: "bold", color: "#2563eb" }}>10x</span>
+                    <span style={{ fontSize: "10px", color: "#64748b" }}>ROAS</span>
                   </div>
                   <div
                     data-aos="fade-up"
                     data-aos-delay="800"
                     style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, backgroundColor: "#f8fafc", padding: "8px", borderRadius: "8px" }}
                   >
-                    <span style={{ fontSize: "20px", fontWeight: "bold", color: "#22c55e" }}>45K+</span>
-                    <span style={{ fontSize: "10px", color: "#64748b" }}>Traffic</span>
+                    <span style={{ fontSize: "20px", fontWeight: "bold", color: "#22c55e" }}>5.2%</span>
+                    <span style={{ fontSize: "10px", color: "#64748b" }}>CTR</span>
                   </div>
                   <div
                     data-aos="fade-up"
                     data-aos-delay="900"
                     style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, backgroundColor: "#f8fafc", padding: "8px", borderRadius: "8px" }}
                   >
-                    <span style={{ fontSize: "20px", fontWeight: "bold", color: "#a855f7" }}>150+</span>
-                    <span style={{ fontSize: "10px", color: "#64748b" }}>Keywords</span>
+                    <span style={{ fontSize: "20px", fontWeight: "bold", color: "#a855f7" }}>1200+</span>
+                    <span style={{ fontSize: "10px", color: "#64748b" }}>Leads</span>
                   </div>
                 </div>
               </div>
@@ -255,81 +280,108 @@ export function HeroSection({
             }}
           />
 
-          {/* Mobile App Mockup */}
+          {/* Tablet Device Mockup */}
           <div
             data-aos="fade-up-left"
             data-aos-delay="500"
             style={{
               position: "absolute",
               bottom: "-48px",
-              right: "-48px",
-              width: "176px",
-              height: "320px",
-              backgroundColor: "#0f172a",
-              borderRadius: "40px",
-              padding: "8px",
-              boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25)",
-              transform: "rotate(-12deg)",
+              right: "-56px",
+              width: "280px",
+              height: "200px",
+              backgroundColor: "#1e293b",
+              borderRadius: "20px",
+              padding: "10px",
+              boxShadow: "0 25px 50px -12px rgba(0,0,0,0.35)",
+              transform: "rotate(-6deg)",
               transition: "transform 0.3s ease",
             }}
           >
-            <div style={{ width: "100%", height: "100%", backgroundColor: "#ffffff", borderRadius: "32px", overflow: "hidden", border: "1px solid #e2e8f0" }}>
-              {/* Phone Header */}
+            {/* Tablet Camera Hole */}
+            <div
+              style={{
+                position: "absolute",
+                top: "6px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "6px",
+                height: "6px",
+                backgroundColor: "#475569",
+                borderRadius: "50%",
+              }}
+            />
+
+            {/* Tablet Screen */}
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                backgroundColor: "#ffffff",
+                borderRadius: "12px",
+                overflow: "hidden",
+                border: "1px solid #e2e8f0",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {/* Tablet App Topbar */}
               <div
                 style={{
-                  backgroundColor: "rgba(241,245,249,0.3)",
-                  padding: "12px 24px",
+                  backgroundColor: "#f8fafc",
+                  padding: "8px 12px",
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  fontSize: "12px",
                   borderBottom: "1px solid #e2e8f0",
                 }}
               >
-                <span style={{ fontWeight: 600, color: "#0f172a" }}>9:41</span>
-                <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-                  <div style={{ width: "16px", height: "8px", backgroundColor: "#22c55e", borderRadius: "2px" }} />
-                  <span style={{ color: "#64748b", fontWeight: 500 }}>100%</span>
+                <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                  <div style={{ width: "8px", height: "8px", backgroundColor: "#2563eb", borderRadius: "50%" }} />
+                  <span style={{ fontSize: "10px", fontWeight: 700, color: "#0f172a" }}>Google Ads Suite</span>
+                </div>
+                <div style={{ display: "flex", gap: "4px" }}>
+                  <span style={{ fontSize: "8px", backgroundColor: "#dbeafe", color: "#1e40af", padding: "2px 6px", borderRadius: "4px", fontWeight: 600 }}>Active</span>
                 </div>
               </div>
 
-              {/* Phone Content */}
-              <div style={{ padding: "16px", display: "flex", flexDirection: "column", gap: "24px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "12px" }}></div>
+              {/* Tablet Body Analytics */}
+              <div style={{ padding: "12px", display: "flex", flexDirection: "column", gap: "10px", flex: 1 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div>
+                    <span style={{ fontSize: "9px", color: "#64748b", display: "block" }}>Ad Impressions</span>
+                    <span style={{ fontSize: "14px", fontWeight: 800, color: "#0f172a" }}>184.2K</span>
+                  </div>
+                  <div style={{ textAlign: "right" }}>
+                    <span style={{ fontSize: "9px", color: "#22c55e", fontWeight: 700 }}>+24.5% 📈</span>
+                    <span style={{ fontSize: "8px", color: "#94a3b8", display: "block" }}>vs last month</span>
+                  </div>
+                </div>
 
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "8px" }}>
-                  {[
-                    { icon: "🔍", label: "Search" },
-                    { icon: "📊", label: "Stats" },
-                    { icon: "🔗", label: "Links" },
-                    { icon: "📝", label: "Content" },
-                  ].map((item, i) => (
-                    <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
-                      <div
-                        style={{
-                          width: "32px",
-                          height: "32px",
-                          backgroundColor: "#f1f5f9",
-                          borderRadius: "8px",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <span style={{ fontSize: "16px" }}>{item.icon}</span>
-                      </div>
-                      <span style={{ fontSize: "8px", color: "#64748b" }}>{item.label}</span>
-                    </div>
+                {/* Mini Visual Chart Bar Simulation */}
+                <div style={{ display: "flex", alignItems: "flex-end", gap: "6px", height: "48px", padding: "4px 0", borderBottom: "1px dashed #e2e8f0" }}>
+                  {[35, 55, 40, 75, 60, 90, 80, 100].map((h, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        flex: 1,
+                        height: `${h}%`,
+                        backgroundColor: i === 7 ? "#2563eb" : "#93c5fd",
+                        borderRadius: "2px",
+                      }}
+                    />
                   ))}
                 </div>
 
-                <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "10px", color: "#64748b" }}>
-                    <span>SEO Score</span>
-                    <span style={{ color: "#2563eb", fontWeight: "bold" }}>92%</span>
+                {/* Quick Campaign Metrics */}
+                <div style={{ display: "flex", justifyContent: "space-between", gap: "6px" }}>
+                  <div style={{ flex: 1, backgroundColor: "#f1f5f9", padding: "4px 6px", borderRadius: "6px", textAlign: "center" }}>
+                    <span style={{ fontSize: "7px", color: "#64748b", display: "block" }}>Cost/Click</span>
+                    <span style={{ fontSize: "9px", fontWeight: 700, color: "#0f172a" }}>₹12.40</span>
                   </div>
-                  <div style={{ height: "4px", backgroundColor: "#f1f5f9", borderRadius: "9999px", overflow: "hidden" }}>
-                    <div style={{ height: "100%", backgroundColor: "#2563eb", width: "92%", borderRadius: "9999px" }} />
+                  <div style={{ flex: 1, backgroundColor: "#f1f5f9", padding: "4px 6px", borderRadius: "6px", textAlign: "center" }}>
+                    <span style={{ fontSize: "7px", color: "#64748b", display: "block" }}>Conv. Value</span>
+                    <span style={{ fontSize: "9px", fontWeight: 700, color: "#2563eb" }}>₹4.2L</span>
                   </div>
                 </div>
               </div>
@@ -337,30 +389,6 @@ export function HeroSection({
           </div>
         </div>
       )}
-
-      {/* Left Content Area */}
-      <div
-        data-aos="fade-right"
-        data-aos-delay="200"
-        style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "672px" }}
-      >
-        <span className="tp-section-subtitle text-black blink-ball" data-aos="fade-down" data-aos-delay="300">
-          SEO at Its Best
-        </span>
-        <div className="px-project-title-box">
-          <h4 className="px-about-title mb-20" data-aos="fade-up" data-aos-delay="400">
-            <span className="text-blue-about">Professional SEO Services in Chennai </span> That Drive Organic Growth
-          </h4>
-          <p className="text-figtree text-black mt-2 " data-aos="fade-up" data-aos-delay="500">
-            Our SEO strategies are built around the keywords and search queries your potential customers use on Google and other search engines. We optimize your website to improve its relevance, authority, user experience, and organic search performance.
-           </p>
-           <p className="text-figtree text-black mt-2 " data-aos="fade-up" data-aos-delay="500">     As one of the trusted search engine optimization companies in Chennai, we focus on ethical, data-driven SEO practices rather than shortcuts. Our goal is to improve your website's visibility for valuable search terms, attract targeted visitors, increase enquiries, and support long-term business growth.
-             </p>
-          <p className="text-figtree text-black mt-2 " data-aos="fade-up" data-aos-delay="500">            Whether you are a startup, local business, service provider, eCommerce company, or established organization, our SEO services in Chennai can be tailored to your industry, target audience, competition, and business objectives.
-          </p>
-      
-        </div>
-      </div>
     </div>
   );
 }
