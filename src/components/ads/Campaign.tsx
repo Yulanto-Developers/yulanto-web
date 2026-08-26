@@ -3,12 +3,14 @@
 import React from 'react';
 import {
   FaMagnifyingGlassChart,
+  FaClipboardCheck,
   FaBullseye,
   FaMagnifyingGlass,
   FaImage,
   FaRotateLeft,
   FaBagShopping,
   FaChartLine,
+  FaGears,
 } from 'react-icons/fa6';
 
 interface FeatureProps {
@@ -143,13 +145,13 @@ export const Campaign: React.FC = () => {
       title: 'PPC Solutions Designed Around Your Business Goals',
       description:
         'Our Google Ads agency in Chennai provides end-to-end PPC campaign management services to help businesses improve their online visibility and lead generation.',
-      icon: <FaMagnifyingGlassChart size={24} />,
+      icon: <FaGears size={24} />, /* Changed icon */
     },
     {
       title: 'PPC Audit',
       description:
         'Our PPC audit evaluates your existing campaigns, keywords, ad groups, targeting, bidding strategies, conversion tracking, landing pages, and overall account structure to identify opportunities for improvement.',
-      icon: <FaMagnifyingGlassChart size={24} />,
+      icon: <FaClipboardCheck size={24} />, /* Changed icon */
     },
     {
       title: 'Google Ads Campaign Management',

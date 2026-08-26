@@ -28,7 +28,7 @@ const ProcessItem: React.FC<ProcessItemProps> = ({ title, description, icon, del
     display: 'flex',
     alignItems: 'flex-start',
     gap: '24px',
-    padding: '32px',
+    padding: '20px',
     borderRadius: '16px',
     backgroundColor: '#ffffff',
     border: '1px solid transparent',
