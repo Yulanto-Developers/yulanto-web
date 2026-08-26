@@ -1,0 +1,152 @@
+/* =========================================
+   TECHNOLOGY ICON BAR
+========================================= */
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: 100%;
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   TECHNOLOGY ITEM
+========================================= */
+
+.tech-item {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid #e3e7ec;
+    border-radius: 10px;
+
+    color: #315d7d;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.tech-icon {
+    width: 20px;
+    height: 20px;
+
+    min-width: 20px;
+
+    margin-left: 10px;
+
+    flex-shrink: 0;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================
+   TECHNOLOGY NAME
+========================================= */
+
+.tech-item span {
+    display: block;
+
+    margin-left: 8px;
+    margin-right: 12px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    opacity: 0;
+
+    transform: translateX(-8px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.35s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.tech-item:hover {
+    width: max-content;
+
+    background: #315d7d;
+    border-color: #315d7d;
+
+    color: #ffffff;
+
+    box-shadow: 0 8px 20px rgba(49, 93, 125, 0.18);
+}
+
+
+.tech-item:hover .tech-icon {
+    transform: scale(1.1);
+}
+
+
+.tech-item:hover span {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .tech-icons {
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .tech-item {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tech-icon {
+        width: 19px;
+        height: 19px;
+
+        min-width: 19px;
+
+        margin-left: 10px;
+    }
+
+    .tech-item span {
+        font-size: 13px;
+    }
+}

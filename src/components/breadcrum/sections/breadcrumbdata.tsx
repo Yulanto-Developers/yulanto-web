@@ -105,11 +105,20 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
+<<<<<<< Updated upstream
     path: "/website-development/dynamic-website-development",
     title: "Dynamic Website Development",
     currentPage: "Dynamic Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+=======
+    path: "/web-design/corporate-webiste-desgin",
+    title: "Corporate Webiste Desgin",
+    currentPage: "Corporate Webiste Desgin",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+
+>>>>>>> Stashed changes
 ];
 
 export default function BreadcurmbData() {
