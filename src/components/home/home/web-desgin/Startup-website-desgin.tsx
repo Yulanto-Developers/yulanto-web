@@ -4,6 +4,7 @@ import IntroContent from '../myComponents/common/IntroContent'
 import StickyScrollReveal from './StickyScrollReveal'
 import img from '@/assets/img/sample/Harithams.jpg'
 import img2 from '@/assets/img/sample/Naturographers.jpg'
+import './common.css';
 import {
     FaCartShopping,
     FaShirt,
@@ -385,80 +386,7 @@ function Startupwebsitedesign() {
           font-size: 25px !important;
         }
 
-        /* Glassmorphism Stats Card Styles */
-        .stats-glass-card {
-          position: relative;
-          padding: 2rem 1.5rem;
-        //   background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.85));
-          border-radius: 1.25rem;
-        //   border: 1px solid #053456;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-          backdrop-filter: blur(12px);
-          overflow: hidden;
-        }
-        .stats-glow-bg {
-          position: absolute;
-          top: -30px;
-          right: -30px;
-          width: 160px;
-          height: 160px;
-          background: radial-gradient(circle, rgba(37, 99, 235, 0.35) 0%, rgba(37, 99, 235, 0) 70%);
-          border-radius: 50%;
-          animation: ambientGlow 5s infinite ease-in-out;
-          pointer-events: none;
-        }
-        .stats-badge-tag {
-          display: inline-block;
-          font-size: 0.75rem;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-          color: #053456;
-          background: rgba(37, 99, 235, 0.15);
-          border: 1px solid #053456;
-          padding: 0.35rem 0.85rem;
-          border-radius: 50px;
-          margin-bottom: 1.25rem;
-        }
-        .stats-grid-wrapper {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1rem;
-          position: relative;
-          z-index: 1;
-        }
-        .stat-box-item {
-          background: #053456;
-          border: 1px solid rgba(255, 255, 255, 0.07);
-          border-radius: 0.85rem;
-          padding: 1.1rem 0.75rem;
-          text-align: center;
-          transition: all 0.3s ease;
-        }
-        .stat-box-item:hover {
-          transform: translateY(-4px);
-          background: #53ae7d;
-          border-color: #fff;
-          
-          box-shadow: 0 10px 20px rgba(37, 99, 235, 0.15);
-        }
-        .stat-value-num {
-          font-size: 1.75rem;
-          font-weight: 800;
-          background: linear-gradient(135deg, #ffffff 40%, #60a5fa 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          line-height: 1.1;
-        }
-        .stat-label-text {
-          font-size: 0.8rem;
-          font-weight: 500;
-          color: #fff;
-          margin-top: 0.35rem;
-        }
-          .img-border-cls{
-          border-radius:20px;
-          }
+        
       `}</style>
 
             <IntroContent

@@ -335,7 +335,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'Core',
         name: 'Core',
-        logo: '',
+        logo: '/assets/img/all-works/new/core.png',
         location: 'Maharashtra, India.',
         url: 'https://core.co.in/',
         borderClass: 'brb'
@@ -351,7 +351,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'Sovereign',
         name: 'Sovereign',
-        logo: '',
+        logo: '/assets/img/all-works/new/Sovereign.png',
         location: 'Bristol, UK',
         url: 'https://www.sovereignfacade.co.uk/',
         borderClass: 'brlb'
@@ -407,7 +407,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'GrayT',
         name: 'GrayT',
-        logo: '',
+        logo: '/assets/img/all-works/new/grayt.png',
         location: 'New Delhi, India',
         url: 'https://grayeyeit.com/',
         borderClass: 'brl'
@@ -415,7 +415,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'jpr',
         name: 'JPR Steels',
-        logo: '',
+        logo: '/assets/img/all-works/new/jpr.png',
         location: 'Kancheepuram, India',
         url: 'https://grayeyeit.com/',
         borderClass: 'brl'
@@ -444,7 +444,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'rayaanyarealty',
         name: 'Rayaanya Realty',
-        logo: '',
+        logo: '/assets/img/all-works/new/rayaanaya.png',
         location: 'Chennai , India',
         url: 'https://www.rayaanyarealty.com/',
         borderClass: 'brlb'
@@ -477,7 +477,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'propnext',
         name: 'Prop Next',
-        logo: '',
+        logo: '/assets/img/all-works/new/propnext.png',
         location: 'Chennai, India',
         url: 'https://www.propnextindia.in/',
         borderClass: ''
@@ -490,7 +490,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'blueanchore',
         name: 'Blue Anchore',
-        logo: '',
+        logo: '/assets/img/all-works/2026/blue-anchor.png',
         location: 'Muscat, Oman',
         url: 'https://blueanchor.llc/',
         borderClass: 'brb'
@@ -498,7 +498,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'safety',
         name: "Safety Merchant",
-        logo: '',
+        logo: '/assets/img/all-works/2026/safety-merchant.png',
         location: 'Selangor, Malaysia',
         url: 'https://safety-merchant.com/',
         borderClass: 'brb'
@@ -506,7 +506,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'preservemetals',
         name: 'Preserve Metals',
-        logo: '',
+        logo: '/assets/img/all-works/2026/peserve-Metals.png',
         location: 'Chennai , India',
         url: '',
         borderClass: 'brlb'
@@ -514,7 +514,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'ams',
         name: 'AMS',
-        logo: '',
+        logo: '/assets/img/all-works/2026/ams.png',
         location: 'Singapore',
         url: 'https://www.asianic.sg/',
         borderClass: 'brlb'
@@ -523,7 +523,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'altis',
         name: 'Altis Calserv PTE LTD',
-        logo: '',
+        logo: '/assets/img/all-works/2026/altis.png',
         location: 'Singapore',
         url: 'https://altiscalserv.com/',
         borderClass: 'brlb'
@@ -531,7 +531,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'ddc',
         name: 'DDC Maritime',
-        logo: '',
+        logo: '/assets/img/all-works/2026/dcc.png',
         location: 'Chennai, India',
         url: 'https://www.ddcmaritime.com/',
         borderClass: 'brlb'
@@ -539,7 +539,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'black',
         name: 'Black Strom Energy',
-        logo: '',
+        logo: '/assets/img/all-works/2026/black-storm.png',
         location: 'Sharjah, UAE',
         url: 'http://www.blackstormenergy.com/',
         borderClass: 'brlb'
@@ -548,7 +548,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'newahipping',
         name: 'New Shipping',
-        logo: '',
+        logo: '/assets/img/all-works/2026/new-shipping.png',
         location: 'Chennai, India',
         url: 'https://www.newshipping.co.jp/',
         borderClass: 'brlb'
@@ -569,7 +569,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'Parkad',
         name: 'Parkad',
-        logo: '',
+        logo: '/assets/img/all-works/new/Parkad.png',
         location: 'Singapore',
         url: 'https://www.parkad.com.sg/',
         borderClass: 'brb'
@@ -744,7 +744,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'profice',
         name: 'Profice',
-        logo: '',
+        logo: '/assets/img/all-works/2026/Profice.png',
         location: 'Chennai, India.',
         url: 'https://profice.co.uk/',
         borderClass: 'brb'
@@ -752,7 +752,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'aiyanaar',
         name: 'Aiyanaar',
-        logo: '',
+        logo: '/assets/img/all-works/2026/Aiyanaar.png',
         location: 'Austin, USA.',
         url: 'https://www.aiyanaar.com/',
         borderClass: 'brb'
@@ -760,7 +760,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'BudsCube',
         name: 'BudsCube',
-        logo: '',
+        logo: '/assets/img/all-works/2026/budscube.png',
         location: 'Chenni, India.',
         url: 'https://www.budscube.com/',
         borderClass: 'brb'
@@ -893,7 +893,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'yshomes',
         name: 'YS Homes',
-        logo: '',
+        logo: '/assets/img/all-works/new/ys-Homes.png',
         location: 'Chennai, India.',
         url: 'https://www.yshomes.in/',
         borderClass: ''
@@ -925,7 +925,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'pkhomes',
         name: 'PK Homes',
-        logo: '',
+        logo: '/assets/img/all-works/new/pk-homes.png',
         location: 'Chennai, India',
         url: 'https://www.pkhomes.in/',
         borderClass: 'brl'
@@ -975,7 +975,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'tmkinternational',
         name: 'TMK International',
-        logo: '',
+        logo: '/assets/img/all-works/2026/tmk.png',
         location: 'Chennai, India',
         url: 'https://www.tmkinternational.org/',
         borderClass: 'brb'
@@ -983,7 +983,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'brinthatraders',
         name: 'Brintha Traders',
-        logo: '',
+        logo: '/assets/img/all-works/2026/brintha-traders.png',
         location: 'Haryana, India',
         url: 'https://www.brinthatraders.com/',
         borderClass: 'brb'
@@ -1037,7 +1037,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'freightdigital',
         name: 'Freight Digital',
-        logo: '',
+        logo: '/assets/img/all-works/new/freight-digital.png',
         location: 'Sharjah, UAE',
         url: 'https://freightdigitalfzc.com/',
         borderClass: 'brb'
@@ -1077,7 +1077,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'raycontainer',
         name: 'Ray Container',
-        logo: '',
+        logo: '/assets/img/all-works/new/ray.png',
         location: 'Bangalore, India.',
         url: 'https://www.rcsblr.com/',
         borderClass: 'brlb'
@@ -1207,7 +1207,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'natrurographers',
         name: 'Naturograhers',
-        logo: '',
+        logo: '/assets/img/all-works/2026/naturo.png',
         location: 'Chennai, India',
         url: 'http://staride.com',
         borderClass: ''
@@ -1223,8 +1223,8 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'gsrt',
         name: 'GSRT Adventures',
-        logo: '',
-        location: ' Malaysia',
+        logo: '/assets/img/all-works/2026/gsrt.png',
+        location: 'Malaysia',
         url: 'https://gsrtadventures.com/',
         borderClass: ''
       },
@@ -1306,7 +1306,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'terrapulse',
         name: 'Terra Pulse',
-        logo: '',
+        logo: '/assets/img/all-works/2026/teraplus.png',
         location: 'Saudi, UAE.',
         url: 'https://www.terrapulse.com.sa/',
         borderClass: 'brb'
@@ -1375,7 +1375,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'jpr',
         name: 'JPR TMT Bars',
-        logo: '',
+        logo: '/assets/img/all-works/new/jpr.png',
         location: 'Kancheepuram, India.',
         url: 'https://www.jprsteels.com/',
         borderClass: 'brb'
@@ -1383,7 +1383,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'terrapulse',
         name: 'Terra Pulse',
-        logo: '',
+        logo: '/assets/img/all-works/2026/teraplus.png',
         location: 'Saudi, UAE.',
         url: 'https://www.terrapulse.com.sa/',
         borderClass: 'brb'
@@ -1442,7 +1442,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'danforth',
         name: 'Danforth Disability',
-        logo: '',
+        logo: '/assets/img/all-works/2026/dan.png',
         location: 'Chennai, India.',
         url: 'https://danforthdisabilityservices.com/',
         borderClass: 'brl'
@@ -1479,7 +1479,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'winner',
         name: 'Winner Leather Creation',
-        logo: '',
+        logo: '/assets/img/all-works/2026/winner.png',
         location: 'Chennai, India.',
         url: 'https://www.winnerleather.com/',
         borderClass: 'brb'
@@ -1528,7 +1528,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'arivion',
         name: 'Arivion',
-        logo: '',
+        logo: '/assets/img/all-works/2026/arivom.png',
         location: ' Tiruvannamalai, India',
         url: 'https://arivion.in/',
         borderClass: ''
@@ -1562,9 +1562,9 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'johoreventrental.com.my',
         name: 'johoreventrental.com.my',
-        logo: '',
+        logo: 'assets/img/all-works/2026/jer.png',
         location: 'Toronto',
-        url: 'johoreventrental.com.my',
+        url: 'https://johoreventrental.com.my',
         borderClass: 'brb'
       },
       {
@@ -1586,7 +1586,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'ecube',
         name: 'ECUBE',
-        logo: '',
+        logo: 'assets/img/all-works/2026/e-cube.png',
         location: 'Chenai, India',
         url: 'https://www.ecubelive.com/',
         borderClass: 'brlb'
@@ -1624,7 +1624,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'uff',
         name: 'UFF',
-        logo: '',
+        logo: '/assets/img/all-works/2026/uff.png',
         location: 'Chennai, India.',
         url: 'https://www.unicfin.com/',
         borderClass: 'brl'
@@ -1632,7 +1632,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'riverbrige',
         name: 'River Bridge',
-        logo: '',
+        logo: '/assets/img/all-works/2026/river.png',
         location: 'Chennai, India.',
         url: 'https://www.riverbridgecapital.in/',
         borderClass: 'brl'
@@ -1645,7 +1645,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'chenddur',
         name: 'Sri Chenddur Infras',
-        logo: '',
+        logo: '/assets/img/all-works/2026/Sri-Chenddur.png',
         location: 'Chennai, India',
         url: 'https://www.srichenddurinfras.com/',
         borderClass: 'brb'
@@ -1653,7 +1653,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'spk',
         name: 'SPK Enterpries',
-        logo: '',
+        logo: 'assets/img/all-works/2026/spk.png',
         location: 'Thiruvallur, India',
         url: 'http://spkenterprisesgroup.com/',
         borderClass: 'brb'
@@ -1677,7 +1677,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'alfafa',
         name: 'Al Safa International',
-        logo: '',
+        logo: 'assets/img/all-works/2026/al-safa.png',
         location: 'Chennai',
         url: '',
         borderClass: 'brb'
@@ -1686,7 +1686,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'trumed',
         name: 'Trumed In Solutions',
-        logo: '',
+        logo: 'assets/img/all-works/2026/trumed.png',
         location: 'Chennai',
         url: 'http://trumedsolutions.com/',
         borderClass: 'brb'

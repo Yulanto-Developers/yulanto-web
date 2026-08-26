@@ -1,4 +1,5 @@
 import BreadcurmbData from "@/components/breadcrum/sections/breadcrumbdata";
+import Corporatewebistedesgin from "@/components/home/home/web-desgin/Corporate-webiste-desgin";
 import Startupwebsitedesgin from "@/components/home/home/web-desgin/Startup-website-desgin";
 
 export default async function Page({
@@ -15,8 +16,13 @@ export default async function Page({
 
             {pages === "startup-webiste-design" && (
                 <>
-        <Startupwebsitedesgin />
-        </>
+                    <Startupwebsitedesgin />
+                </>
+            )}
+            {pages === "corporate-webiste-desgin" && (
+                <>
+                    <Corporatewebistedesgin />
+                </>
             )}
         </>
     );

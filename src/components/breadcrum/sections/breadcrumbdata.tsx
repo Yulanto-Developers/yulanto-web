@@ -105,11 +105,22 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
+
+
     path: "/website-development/dynamic-website-development",
     title: "Dynamic Website Development",
     currentPage: "Dynamic Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+  {
+
+    path: "/web-design/corporate-webiste-desgin",
+    title: "Corporate Webiste Desgin",
+    currentPage: "Corporate Webiste Desgin",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+
+
 ];
 
 export default function BreadcurmbData() {
