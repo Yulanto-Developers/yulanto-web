@@ -104,7 +104,12 @@ const data = [
     currentPage: "Startup Webiste Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-
+  {
+    path: "/website-development/dynamic-website-development",
+    title: "Dynamic Website Development",
+    currentPage: "Dynamic Website Development",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
 ];
 
 export default function BreadcurmbData() {

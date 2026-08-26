@@ -62,7 +62,7 @@ const GradientCard = React.forwardRef<HTMLDivElement, GradientCardProps>(
             alt={`${title} background graphic`}
             variants={imageAnimation}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
-            className="position-absolute end-0 bottom-0 w-75 opacity-80 pointer-events-none"
+            className="position-absolute w-75 opacity-80 pointer-events-none"
             style={{ right: "-25%", bottom: "-25%" }}
           />
 
@@ -82,8 +82,8 @@ const GradientCard = React.forwardRef<HTMLDivElement, GradientCardProps>(
 
             {/* Title and Description */}
             <div className="flex-grow-1">
-              <h3 className="fs-2 fw-bold text-dark mb-2">{title}</h3>
-              <p className="text-dark text-opacity-70 tx-14" style={{ maxWidth: "280px" }}>
+              <h3 className="fs-2 fw-bold text-dark mb-2 text-tenor">{title}</h3>
+              <p className="text-dark text-opacity-70 tx-14 text-figtree" style={{ maxWidth: "280px" }}>
                 {description}
               </p>
             </div>
