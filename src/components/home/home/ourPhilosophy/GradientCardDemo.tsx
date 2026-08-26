@@ -3,6 +3,7 @@ import { GradientCard } from "./GradientCard";
 import "./pholosophy.css";
 import { useAOS } from "@/components/hooks/useAOS";
 
+
 // Data for the cards with company values
 const cardData = [
     {
@@ -11,7 +12,7 @@ const cardData = [
         description:
             "Our customers are at the heart of everything we do. We follow a customer-first approach by understanding their goals, listening to their needs, and delivering solutions that create real business value.",
         imageUrl:
-            "https://images.unsplash.com/photo-1552581234-26160f608093?w=400&h=400&fit=crop",
+            "/assets/images/philosophy/Image-1.png",
         gradient: "orange" as const,
         aosDelay: 100,
     },
@@ -21,7 +22,7 @@ const cardData = [
         description:
             "We believe success should always be accompanied by humility. We remain approachable, respectful, and open to learning while maintaining positive and professional relationships with our clients and team.",
         imageUrl:
-            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=400&fit=crop",
+            "/assets/images/philosophy/Image-2.png",
         gradient: "gray" as const,
         aosDelay: 200,
     },
@@ -31,7 +32,7 @@ const cardData = [
         description:
             "Our passion for design, technology, and innovation drives us to deliver high-quality work. We approach every project with dedication, creativity, and attention to detail.",
         imageUrl:
-            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=400&fit=crop",
+            "/assets/images/philosophy/Image-3.png",
         gradient: "purple" as const,
         aosDelay: 300,
     },
@@ -41,7 +42,7 @@ const cardData = [
         description:
             "Customer satisfaction is one of our highest priorities. We strive to create outstanding web and digital solutions that effectively represent our clients' brands and support their growth.",
         imageUrl:
-            "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=400&fit=crop",
+            "/assets/images/philosophy/Image-4.png",
         gradient: "green" as const,
         aosDelay: 100,
     },
@@ -51,7 +52,7 @@ const cardData = [
         description:
             "We are committed to continuous improvement and excellence in everything we do. By embracing emerging technologies, adopting innovative tools, and staying ahead of industry trends, we continuously enhance our services and deliver better results.",
         imageUrl:
-            "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=400&fit=crop",
+            "/assets/images/philosophy/Image-5.png",
         gradient: "purple" as const,
         aosDelay: 200,
     },
@@ -61,7 +62,7 @@ const cardData = [
         description:
             "We believe strong businesses are built on trust, transparency, and genuine communication. Since our inception, we have maintained an honest and open approach with our clients, building long-term relationships based on reliability, integrity, and mutual respect.",
         imageUrl:
-            "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=400&fit=crop",
+            "/assets/images/philosophy/Image-6.png",
         gradient: "orange" as const,
         aosDelay: 300,
     },
@@ -103,7 +104,7 @@ const GradientCardDemo = () => {
                         </div>
 
                         <p
-                            className="mt-3"
+                            className="mt-3 text-figtree"
                             data-aos="fade-up"
                             data-aos-delay="150"
                             
