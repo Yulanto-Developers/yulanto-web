@@ -21,7 +21,7 @@
 }
 
 .bento-card-full-tall {
-  min-height: 580px;
+  min-height: 800px;
 }
 
 /* Centered Image Placement */
@@ -51,4 +51,23 @@
   font-size: 0.9rem !important;
   color: #718096 !important;
   line-height: 1.5;
+}
+/* Ensure center column takes full height of the adjacent two cards */
+.bento-card-full-tall {
+  height: 100%;
+  min-height: 800px; /* Minimum fallback height for desktop */
+}
+
+/* Allow center image wrapper to take all available space */
+.bento-center-card-img-wrapper {
+  min-height: 280px;
+  height: 100%;
+}
+
+/* Make center image fill its parent vertically without stretching aspect ratio */
+.bento-tall-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 600px; /* Adjust this value if you want it taller or shorter */
 }

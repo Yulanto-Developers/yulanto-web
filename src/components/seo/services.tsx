@@ -48,10 +48,13 @@ export default function SeoServicesList() {
       once: true,
       easing: "ease-out-cubic",
     });
+    AOS.refresh();
   }, []);
 
   return (
     <section
+      data-aos="fade-up"
+      data-aos-duration="600"
       style={{
         backgroundColor: "#ffffff",
         border: "1px solid #e5e7eb",
@@ -72,13 +75,13 @@ export default function SeoServicesList() {
       >
         {/* Title Block */}
         <div className="row align-items-center mb-20">
-          <div className="col-xl-3" data-aos="fade-down" data-aos-delay="100">
+          <div className="col-xl-3" data-aos="fade-right" data-aos-delay="100">
             <span className="tp-section-subtitle text-black blink-ball">
               Our Chennai SEO Services
             </span>
           </div>
 
-          <div className="col-xl-9" data-aos="fade-up" data-aos-delay="200">
+          <div className="col-xl-9" data-aos="fade-left" data-aos-delay="200">
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
                 <span className="text-blue-about">Our SEO solutions can include</span>
@@ -98,12 +101,18 @@ export default function SeoServicesList() {
           {seoServices.map((item, index) => {
             const IconComponent = item.icon;
             const isHovered = hoveredIndex === index;
+            
+            // Calculate row and column indices for smooth progressive staggering
+            const rowIndex = Math.floor(index / 3);
+            const colIndex = index % 3;
+            const animationDelay = 100 + rowIndex * 100 + colIndex * 50;
 
             return (
               <div
                 key={index}
-                data-aos="zoom-in"
-                data-aos-delay={100 + (index % 3) * 100}
+                data-aos="fade-up"
+                data-aos-delay={animationDelay}
+                data-aos-anchor-placement="top-bottom"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 style={{

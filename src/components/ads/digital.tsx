@@ -13,17 +13,12 @@ export interface OffPageFeatureProps {
 }
 
 export default function OffPageSeoBanner() {
-  const integrationPoints = [
-    { title: "SEO & Content Synergy", icon: <FaChartLine size={18} /> },
-    { title: "Social Media Ads", icon: <FaBullhorn size={18} /> },
-    { title: "Landing Page CRO", icon: <FaLayerGroup size={18} /> },
-  ];
-
+ 
   return (
     <section
       style={{
-        padding: "80px 24px",
-        backgroundColor: "#ffffff",
+        padding: "60px 24px",
+       
         overflowX: "hidden",
         width: "100%",
         boxSizing: "border-box",
@@ -52,13 +47,7 @@ export default function OffPageSeoBanner() {
           <div style={{ marginBottom: "16px" }}>
             <span
               className="tp-section-subtitle text-black blink-ball"
-              style={{
-                fontSize: "13px",
-                fontWeight: 600,
-                letterSpacing: "1px",
-                textTransform: "uppercase",
-                color: "#2563eb",
-              }}
+             
             >
               Google Ads Integration
             </span>
@@ -116,26 +105,7 @@ export default function OffPageSeoBanner() {
               gap: "12px",
             }}
           >
-            {integrationPoints.map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  padding: "10px 16px",
-                  borderRadius: "10px",
-                  backgroundColor: "#f8fafc",
-                  border: "1px solid #e2e8f0",
-                  color: "#0f172a",
-                  fontSize: "13px",
-                  fontWeight: 600,
-                }}
-              >
-                <span style={{ color: "#2563eb" }}>{item.icon}</span>
-                {item.title}
-              </div>
-            ))}
+           
           </div>
         </motion.div>
 
@@ -159,7 +129,7 @@ export default function OffPageSeoBanner() {
               position: "absolute",
               inset: "-10px",
               borderRadius: "24px",
-              background: "linear-gradient(135deg, rgba(37,99,235,0.08), rgba(147,197,253,0.12))",
+              // background: "linear-gradient(135deg, rgba(37,99,235,0.08), rgba(147,197,253,0.12))",
               zIndex: 0,
             }}
           />
@@ -188,61 +158,7 @@ export default function OffPageSeoBanner() {
               }}
             />
 
-            {/* Overlay Metric Badge */}
-            <div
-              style={{
-                position: "absolute",
-                bottom: "16px",
-                left: "16px",
-                right: "16px",
-                backgroundColor: "rgba(255, 255, 255, 0.92)",
-                backdropFilter: "blur(8px)",
-                padding: "14px 18px",
-                borderRadius: "14px",
-                border: "1px solid rgba(255, 255, 255, 0.6)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                <div
-                  style={{
-                    width: "36px",
-                    height: "36px",
-                    backgroundColor: "#2563eb",
-                    borderRadius: "10px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "#ffffff",
-                  }}
-                >
-                  <FaChartLine size={16} />
-                </div>
-                <div>
-                  <span style={{ display: "block", fontSize: "11px", color: "#64748b", fontWeight: 500 }}>
-                    Integrated Campaign Growth
-                  </span>
-                  <span style={{ fontSize: "14px", fontWeight: 700, color: "#0f172a" }}>
-                    +340% Conversions
-                  </span>
-                </div>
-              </div>
-              <span
-                style={{
-                  fontSize: "11px",
-                  fontWeight: 700,
-                  color: "#16a34a",
-                  backgroundColor: "#dcfce7",
-                  padding: "4px 10px",
-                  borderRadius: "20px",
-                }}
-              >
-                Verified Strategy
-              </span>
-            </div>
+       
           </div>
         </motion.div>
       </div>

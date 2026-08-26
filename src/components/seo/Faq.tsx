@@ -111,7 +111,7 @@ export default function Faq() {
         minHeight: "100vh",
         width: "100%",
         overflow: "hidden",
-        backgroundColor: "#f5f5f5",
+       
         color: "#053456",
         fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
       }}
@@ -123,8 +123,6 @@ export default function Faq() {
           inset: 0,
           zIndex: 0,
           pointerEvents: "none",
-          background:
-            "radial-gradient(ellipse 60% 80% at 20% 0%, rgba(83, 174, 125, 0.18), transparent 70%), radial-gradient(ellipse 50% 60% at 80% 100%, rgba(5, 52, 86, 0.08), transparent 70%)",
         }}
       />
 

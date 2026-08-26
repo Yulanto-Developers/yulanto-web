@@ -306,7 +306,6 @@ export function HeroSection({
                 backgroundColor: "#1e293b",
                 borderRadius: "20px",
                 padding: "10px",
-                // boxShadow: "0 25px 50px -12px rgba(0,0,0,0.35)",
                 transform: "rotate(-6deg)",
                 transition: "transform 0.3s ease",
               }}

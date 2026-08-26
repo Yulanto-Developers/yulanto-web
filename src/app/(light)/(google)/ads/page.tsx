@@ -6,6 +6,8 @@ import Campaign from "@/components/ads/Campaign"
 import Process from "@/components/ads/Process"
 import Why from "@/components/ads/WhyChoose"
 import Digital from "@/components/ads/digital"
+import Faq from "@/components/ads/Faq"
+import Last from "@/components/ads/lastGoogleAds"
 
 
 
@@ -20,6 +22,8 @@ export default function Page() {
       <Process />
       <Why />
       <Digital />
+      <Faq />
+      <Last />
 
      
      

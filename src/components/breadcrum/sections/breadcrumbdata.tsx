@@ -104,6 +104,12 @@ const data = [
     currentPage: "Startup Webiste Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+   {
+    path: "/media_marketing",
+    title: " Social Media Marketing",
+    currentPage: " Social Media Marketing",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
 
 ];
 

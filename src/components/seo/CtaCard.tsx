@@ -447,7 +447,7 @@ export function CtaCard({
                     position: "absolute",
                     display: "flex",
                     top: "1.5rem",
-                    left: "-30px",
+                    left: "-132px",
                     borderRadius: "0.85rem",
                     padding: "0.6rem 0.85rem",
                     alignItems: "center",

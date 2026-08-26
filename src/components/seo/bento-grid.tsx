@@ -12,6 +12,7 @@ interface BentoCardProps {
   colClass: string;
   cardHeightClass?: string;
   animationDelay?: number;
+  isCenterCard?: boolean; // Added optional prop for center card layout tweaks
 }
 
 const BentoCard: React.FC<BentoCardProps> = ({
@@ -21,6 +22,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
   colClass,
   cardHeightClass = "",
   animationDelay = 0,
+  isCenterCard = false,
 }) => {
   return (
     <div
@@ -32,12 +34,18 @@ const BentoCard: React.FC<BentoCardProps> = ({
       <div
         className={`bento-card-custom w-100 position-relative overflow-hidden rounded-4 p-4 d-flex flex-column justify-content-between ${cardHeightClass}`}
       >
-        {/* Centered Image Area */}
-        <div className="bento-image-container flex-grow-1 d-flex align-items-center justify-content-center my-3">
+        {/* Expanded Image Area for Center Card */}
+        <div
+          className={`bento-image-container flex-grow-1 d-flex align-items-center justify-content-center my-3 ${
+            isCenterCard ? "bento-center-card-img-wrapper" : ""
+          }`}
+        >
           <img
             src={imageUrl}
             alt={name}
-            className="bento-center-img img-fluid rounded-3"
+            className={`bento-center-img img-fluid rounded-3 ${
+              isCenterCard ? "bento-tall-img" : ""
+            }`}
           />
         </div>
 
@@ -64,7 +72,7 @@ export const BentoGrid: React.FC = () => {
       name: "Keyword Research",
       description:
         "Effective SEO starts with understanding what your customers are searching for. Our SEO experts in Chennai conduct detailed keyword research to identify relevant, high-value, and commercially focused search terms. We analyze search intent, competition, keyword relevance, and opportunities to create a focused SEO strategy.",
-      imageUrl: "/images/keyword-research.jpg",
+      imageUrl: "/assets/img/usa/banner-europe.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-tall",
       delay: 100,
@@ -73,16 +81,16 @@ export const BentoGrid: React.FC = () => {
       name: "Better On-Page Optimization",
       description:
         "We optimize important website elements, including page content, title tags, meta descriptions, headings, URLs, internal links, images, and structured data. Our on-page SEO approach helps search engines better understand your website while providing visitors with useful and engaging content.",
-      imageUrl: "/images/onsite-optimization.jpg",
+      imageUrl: "/assets/img/usa/banner-europe.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
-      cardHeightClass: "bento-card-full-tall",
+      cardHeightClass: "bento-card-full-tall h-100", // Ensured full height filling
       delay: 200,
     },
     {
       name: "Technical SEO",
       description:
         "Our technical SEO process focuses on improving website crawlability, indexing, mobile usability, page experience, website structure, and other technical factors that can influence search performance. A technically optimized website provides a stronger foundation for long-term SEO growth.",
-      imageUrl: "/images/link-building.jpg",
+      imageUrl: "/assets/img/usa/banner-europe.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-short",
       delay: 300,
@@ -91,7 +99,7 @@ export const BentoGrid: React.FC = () => {
       name: "Strategic Link Building",
       description:
         "Quality backlinks can help strengthen your website's authority and credibility. We follow relevant and ethical link-building practices to develop a natural backlink profile and improve your website's authority within your industry.",
-      imageUrl: "/images/analytics.jpg",
+      imageUrl: "/assets/img/usa/banner-europe.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-short",
       delay: 400,
@@ -100,7 +108,7 @@ export const BentoGrid: React.FC = () => {
       name: "SEO Analytics & Performance Tracking",
       description:
         "We continuously analyze SEO performance to identify opportunities for improvement. We monitor keyword rankings, organic traffic, search visibility, user engagement, conversions, and other important SEO metrics to refine the strategy and maximize results.",
-      imageUrl: "/images/technical-seo.jpg",
+      imageUrl: "/assets/img/usa/banner-europe.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-tall",
       delay: 500,
@@ -110,21 +118,19 @@ export const BentoGrid: React.FC = () => {
   return (
     <section className="bento-grid-section py-5">
       <div className="container">
-          <div className="row  align-items-center mb-20" >
+        <div className="row align-items-center mb-20">
           <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">
               Yulanto SEO
-
             </span>
           </div>
 
           <div className="col-xl-9">
             <div className="px-project-title-box">
-            
-                <h4 className="px-about-title mb-20">
-              <span className="text-blue-about"> How Do We Achieve  </span>  Maximum SEO Results?
-            </h4>
-            
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about"> How Do We Achieve </span>{" "}
+                Maximum SEO Results?
+              </h4>
             </div>
           </div>
         </div>
@@ -135,9 +141,9 @@ export const BentoGrid: React.FC = () => {
             <BentoCard {...bentoItems[3]} colClass="col-12" />
           </div>
 
-          {/* Column 2 (Full Center Height) */}
+          {/* Column 2 (Full Center Height with larger image) */}
           <div className="col-12 col-lg-4 d-flex flex-column">
-            <BentoCard {...bentoItems[1]} colClass="col-12" />
+            <BentoCard {...bentoItems[1]} colClass="col-12" isCenterCard={true} />
           </div>
 
           {/* Column 3 */}
