@@ -1,0 +1,507 @@
+/* =====================================================
+   SECTION
+===================================================== */
+
+.corporate-approach-section {
+    width: 100%;
+    padding: 30px 0 100px;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.corporate-approach-grid {
+    display: grid;
+
+    grid-template-columns: 1.45fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.approach-card {
+    position: relative;
+
+    height: 390px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    cursor: pointer;
+
+    background: #e9eef1;
+
+    box-shadow:
+        0 8px 25px rgba(20, 45, 65, 0.08);
+
+    isolation: isolate;
+
+    transition:
+        box-shadow 0.4s ease;
+}
+
+
+/* Small card */
+
+.approach-card-small {
+    height: 390px;
+}
+
+
+/* Large card */
+
+.approach-card-large {
+    height: 390px;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.approach-card:hover {
+    box-shadow:
+        0 20px 45px rgba(20, 45, 65, 0.16);
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.approach-image-wrapper {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+}
+
+
+.approach-image {
+    object-fit: cover;
+
+    transition:
+        transform 0.8s cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+}
+
+
+.approach-card:hover
+.approach-image {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.approach-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.02) 20%,
+            rgba(0, 0, 0, 0.55) 100%
+        );
+
+    transition:
+        background 0.4s ease;
+}
+
+
+.approach-card:hover
+.approach-overlay {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(49, 93, 125, 0.05) 10%,
+            rgba(15, 35, 48, 0.68) 100%
+        );
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.approach-card-content {
+    position: absolute;
+
+    left: 28px;
+    right: 28px;
+    bottom: 25px;
+
+    z-index: 2;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   CATEGORY
+===================================================== */
+
+.approach-category {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.3px;
+
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.approach-card-content h3 {
+    max-width: 430px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    line-height: 1.25;
+}
+
+
+/* =====================================================
+   VIEW DETAILS
+===================================================== */
+
+.approach-view {
+    display: block;
+
+    margin-top: 12px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    opacity: 0;
+
+    transform: translateY(8px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.approach-card:hover
+.approach-view {
+    opacity: 0.9;
+
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   MODAL BACKDROP
+===================================================== */
+
+.approach-modal-backdrop {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background:
+        rgba(15, 20, 24, 0.78);
+
+    backdrop-filter: blur(8px);
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.approach-modal {
+    position: relative;
+
+    width: min(700px, 100%);
+
+    max-height: 90vh;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.3);
+
+    cursor: default;
+}
+
+
+/* =====================================================
+   MODAL IMAGE
+===================================================== */
+
+.approach-modal-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 360px;
+
+    overflow: hidden;
+}
+
+
+.approach-modal-img {
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   MODAL CONTENT
+===================================================== */
+
+.approach-modal-content {
+    padding: 12px 12px 12px;
+}
+
+
+.approach-modal-category {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #315d7d;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.approach-modal-content h2 {
+    margin: 0 0 14px;
+
+    color: #111111;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    line-height: 1.25;
+}
+
+
+.approach-modal-content p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 16px !important;
+    font-weight: 400;
+
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.approach-modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #222222;
+
+    font-size: 25px;
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.approach-modal-close:hover {
+    background: #ffffff;
+
+    transform: rotate(90deg);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .corporate-approach-grid {
+        grid-template-columns: 1.2fr 1fr;
+
+        gap: 15px;
+    }
+
+    .approach-card,
+    .approach-card-small,
+    .approach-card-large {
+        height: 330px;
+    }
+
+    .approach-card-content {
+        left: 22px;
+        right: 22px;
+        bottom: 20px;
+    }
+
+    .approach-card-content h3 {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .corporate-approach-section {
+        padding: 40px 0 60px;
+    }
+
+    .corporate-approach-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .approach-card,
+    .approach-card-small,
+    .approach-card-large {
+        height: 300px;
+    }
+
+    .approach-card-content h3 {
+        font-size: 21px;
+    }
+
+    .approach-modal-backdrop {
+        padding: 15px;
+    }
+
+    .approach-modal {
+        max-height: 92vh;
+
+        border-radius: 18px;
+    }
+
+    .approach-modal-image {
+        height: 300px;
+    }
+
+    .approach-modal-content {
+        padding: 25px 22px 28px;
+    }
+
+    .approach-modal-content h2 {
+        font-size: 23px;
+    }
+
+    .approach-modal-content p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .approach-card,
+    .approach-card-small,
+    .approach-card-large {
+        height: 250px;
+
+        border-radius: 16px;
+    }
+
+    .approach-card-content {
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .approach-card-content h3 {
+        font-size: 19px;
+    }
+
+    .approach-modal-image {
+        height: 240px;
+    }
+
+}

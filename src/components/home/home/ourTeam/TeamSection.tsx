@@ -13,7 +13,7 @@ export default function TeamSlider() {
 
   // Helper to check if skill is an image URL
   const isImageUrl = (skill: string) => {
-    return typeof skill === 'string' && skill.startsWith('http');
+    return typeof skill === 'string';
   };
 
   // Get skill display name
@@ -25,7 +25,7 @@ export default function TeamSlider() {
   // Get skills in chunks of 5
   const getSkillChunks = (skills: string[] | undefined): string[][] => {
     if (!skills || skills.length === 0) return [];
-    
+
     const chunks: string[][] = [];
     for (let i = 0; i < skills.length; i += MAX_VISIBLE_SKILLS) {
       chunks.push(skills.slice(i, i + MAX_VISIBLE_SKILLS));
@@ -44,10 +44,7 @@ export default function TeamSlider() {
         subtitle="Our Team"
         titleFirst="Meet Our Team"
         titleSecond=""
-        description="Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions. With expertise, creativity, and a commitment to excellence, we transform ideas into impactful results."
-        animationType="text-reveal-lines"
-        delay={300}
-      />
+        description="Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions. With expertise, creativity, and a commitment to excellence, we transform ideas into impactful results."/>
       <div className="container pt-3">
         <Swiper
           modules={[Autoplay]}
@@ -134,8 +131,8 @@ export default function TeamSlider() {
                     )}
 
                     <div className="tm-slider-content">
-                      <h4>{member.name}</h4>
-                      <span>{member.role}</span>
+                      <h4 className="text-tenor">{member.name}</h4>
+                      <span className="text-figtree">{member.role}</span>
                     </div>
 
                     <img
