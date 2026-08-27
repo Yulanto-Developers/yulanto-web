@@ -114,11 +114,11 @@
 ===================================================== */
 
 .why-corporate-heading {
-    max-width: 900px;
+    /* max-width: 900px; */
 
     margin: 0 auto;
 
-    text-align: center;
+    /* text-align: center; */
 }
 
 
@@ -270,7 +270,7 @@
 ===================================================== */
 
 .why-corporate-heading>p {
-    max-width: 780px;
+    /* max-width: 780px; */
 
     margin: 0 auto;
 

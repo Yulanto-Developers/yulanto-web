@@ -199,7 +199,7 @@ function FeatureRow({
                         TITLE
                     ================================================= */}
 
-                    <h3 className="zigzag-feature-title">
+                    <h3 className="zigzag-feature-title text-tenor">
                         {feature.title}
                     </h3>
 
