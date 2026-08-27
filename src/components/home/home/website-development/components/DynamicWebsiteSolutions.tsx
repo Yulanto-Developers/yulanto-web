@@ -4,11 +4,13 @@ import React, { useEffect } from 'react';
 import SectionTitle from "@/components/sectiontitle/SectionTitle";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FiSettings, FiTrendingUp, FiSearch } from 'react-icons/fi';
 
 const CARD_DATA = [
   {
     id: 'easy-manage',
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop',
+    icon: FiSettings,
     title: 'Easy to Manage',
     text: 'A dynamic website is a perfect solution for large corporations aiming to effortlessly publish and oversee products.',
     aosDelay: '100',
@@ -16,6 +18,7 @@ const CARD_DATA = [
   {
     id: 'highly-scalable',
     image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop',
+    icon: FiTrendingUp,
     title: 'Highly Scalable Solution',
     text: 'Access modules providing interactive features like e-commerce, blogs, and secure login.',
     aosDelay: '200',
@@ -23,6 +26,7 @@ const CARD_DATA = [
   {
     id: 'search-engine-support',
     image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop',
+    icon: FiSearch,
     title: 'Supported By Search Engines',
     text: 'Pages are indexed quickly, giving higher rankings to recently updated content.',
     aosDelay: '300',
@@ -31,18 +35,18 @@ const CARD_DATA = [
 
 type WebDevCardProps = {
   id: string;
-  index: number;
   image: string;
+  icon: React.ElementType;
   title: string;
   text: string;
   aosDelay?: string;
 };
 
 type DynamicWebsiteSolutionsProps = {
-  cards?: Omit<WebDevCardProps, 'index'>[];
+  cards?: WebDevCardProps[];
 };
 
-const WebDevCard = ({ image, title, text, index, aosDelay }: WebDevCardProps) => {
+const WebDevCard = ({ image, icon: Icon, title, text, aosDelay }: WebDevCardProps) => {
   return (
     <div
       className="web-dev-img-card"
@@ -52,8 +56,12 @@ const WebDevCard = ({ image, title, text, index, aosDelay }: WebDevCardProps) =>
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="web-dev-card-content">
-        <div className="web-dev-card-number">{index + 1}</div>
-        <h3 className="web-dev-card-title">{title}</h3>
+        <div className="web-dev-card-header">
+          <h3 className="web-dev-card-title">{title}</h3>
+          <div className="web-dev-card-icon-box">
+            <Icon className="web-dev-card-icon" />
+          </div>
+        </div>
         <p className="web-dev-card-text">{text}</p>
       </div>
     </div>
@@ -83,66 +91,92 @@ const DynamicWebsiteSolutions = ({ cards = CARD_DATA }: DynamicWebsiteSolutionsP
           background-position: center;
           background-repeat: no-repeat;
           aspect-ratio: 4 / 5;
+          max-height: 480px;
+          width: 100%;
+          margin: 0 auto 30px auto;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           overflow: hidden;
           display: flex;
           align-items: flex-end;
-          padding: 20px;
-          margin-bottom: 30px;
+          padding: 16px;
         }
 
         .web-dev-img-card:hover {
           transform: translateY(-8px);
-          box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+          box-shadow: 0 10px 30px rgba(5, 52, 86, 0.2);
         }
 
         .web-dev-card-content {
           background-color: #ffffff;
           border-radius: 16px;
-          padding: 25px;
+          padding: 20px;
           width: 100%;
           position: relative;
           box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
-        .web-dev-card-number {
-          position: absolute;
-          top: 25px;
-          left: 25px;
-          background-color: #000000;
+        /* Flexbox wrapper to align Title at start and Icon at end */
+        .web-dev-card-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          margin-bottom: 12px;
+        }
+
+        .web-dev-card-title {
+          color: #053456;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 1.3;
+          margin: 0;
+        }
+
+        .web-dev-card-icon-box {
+          background-color: #053456;
           color: #ffffff;
-          width: 32px;
-          height: 32px;
+          width: 38px;
+          height: 38px;
+          min-width: 38px;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-weight: 700;
-          font-size: 14px;
+          transition: background-color 0.3s ease;
         }
 
-        .web-dev-card-title {
-          color: #000000;
-          font-weight: 700;
-          font-size: 20px;
-          margin-bottom: 8px;
-          line-height: 1.3;
-          margin-top: 45px;
+        .web-dev-img-card:hover .web-dev-card-icon-box {
+          background-color: #53ae7d;
+        }
+
+        .web-dev-card-icon {
+          font-size: 18px;
         }
 
         .web-dev-card-text {
-          font-size: 14px;
+          font-size: 13.5px;
           line-height: 1.5;
           margin-bottom: 0;
+          color: #4b5563;
         }
 
-         .dyncardtitle .px-section-subtitle {
+        .dyncardtitle .px-section-subtitle {
           padding-top: 20px !important;
         }
 
         @media (min-width: 768px) {
           .web-dev-solutions-section .row {
             --bs-gutter-x: 1.5rem;
+          }
+          .web-dev-img-card {
+            max-height: 440px;
+          }
+        }
+
+        @media (min-width: 1200px) {
+          .web-dev-img-card {
+            max-width: 380px;
+            max-height: 460px;
           }
         }
 
@@ -152,13 +186,14 @@ const DynamicWebsiteSolutions = ({ cards = CARD_DATA }: DynamicWebsiteSolutionsP
             transform: none !important;
           }
           .web-dev-img-card {
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 4 / 5;
+            max-height: 420px;
           }
         }
       ` }} />
 
       <section className="web-dev-solutions-section">
-        <div className="container container-1750">
+        <div className="container">
           <SectionTitle
             subtitle="Simple to Handle"
             titleFirst="Why Dynamic "
@@ -169,13 +204,13 @@ const DynamicWebsiteSolutions = ({ cards = CARD_DATA }: DynamicWebsiteSolutionsP
             data-aos-duration="600"
           />
 
-          <div className="row mt-3">
-            {cards.map((card, index) => (
-              <div key={card.id} className="col-12 col-md-4">
+          <div className="row mt-3 justify-content-center">
+            {cards.map((card) => (
+              <div key={card.id} className="col-12 col-md-4 d-flex justify-content-center">
                 <WebDevCard
                   id={card.id}
-                  index={index}
                   image={card.image}
+                  icon={card.icon}
                   title={card.title}
                   text={card.text}
                   aosDelay={card.aosDelay}
