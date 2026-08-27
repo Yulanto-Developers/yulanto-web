@@ -1124,14 +1124,14 @@
 .vision-mission-col::before {
   background: #093254;
   background:
-    linear-gradient(#093254c9, #093254b3), url(/assets/images/about/pattern.png);
+    linear-gradient(#093254c9, #093254b3), url(/assets/images/patterns/pattern.png);
 }
 
 /* Background gradient for Mission card */
 .clr.vision-mission-col::before {
   background: #2eb081;
   background:
-    linear-gradient(#2eb0818a, #118f61e0), url(/assets/images/about/pattern.png);
+    linear-gradient(#2eb0818a, #118f61e0), url(/assets/images/patterns/pattern.png);
 }
 
 @media (min-width: 768px) {

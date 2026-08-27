@@ -21,8 +21,12 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Fix corner clipping and sub-pixel bleeding on transform */
+  isolation: isolate;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .whychooseA2-card:hover {
@@ -36,6 +40,11 @@
   height: 220px;
   width: 100%;
   overflow: hidden;
+  /* Hardware acceleration & seam removal fixes */
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin-bottom: -1px; /* Overlaps content area by 1px to close sub-pixel gap */
 }
 
 .whychooseA2-card-image {
@@ -43,23 +52,22 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
+  /* Hardware acceleration to prevent image jitter on hover */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .whychooseA2-card:hover .whychooseA2-card-image {
-  transform: scale(1.05);
+  transform: scale(1.05) translateZ(0);
 }
 
-/* Gradient Mask smoothly fading image into white content area */
+/* Gradient Mask smoothly fading image into content area */
 .whychooseA2-card-image-wrap::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.25) 0%,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: linear-gradient(#ffffff30 0%, #53ae7d59 40%, #53ae7d 100%);
   pointer-events: none;
 }
 
@@ -102,19 +110,24 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  background-color: #53ae7d;
+  position: relative;
+  z-index: 1; /* Ensures body layer sits over the 1px wrapper overlap */
 }
 
 .whychooseA2-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #093254;
-  margin-bottom: 12px;
-  line-height: 1.3;
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .whychooseA2-description {
   font-size: 15px;
-  color: #64748b;
+  color: #ffffffd9;
   line-height: 1.65;
   margin: 0;
 }
