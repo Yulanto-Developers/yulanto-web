@@ -111,9 +111,9 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/website-development/dynamic-website-development",
-    title: "Dynamic Website Development",
-    currentPage: "Dynamic Website Development ",
+    path: "/web-design/website-redesign",
+    title: "Webiste Redesgin",
+    currentPage: "Webiste Redesgin",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
 

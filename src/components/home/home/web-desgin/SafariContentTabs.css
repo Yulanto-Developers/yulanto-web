@@ -1,0 +1,748 @@
+/* =========================================================
+   SAFARI SECTION
+========================================================= */
+
+.safari-section {
+    width: 100%;
+    padding: 60px 20px;
+}
+
+
+/* =========================================================
+   SAFARI BROWSER
+========================================================= */
+
+.safari-browser {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid #d8d8d8;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.12),
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.safari-topbar {
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 18px;
+
+    background: #f5f5f7;
+
+    border-bottom: 1px solid #ddd;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   MAC DOTS
+========================================================= */
+
+.safari-dots {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+.dot.close {
+    background: #ff5f57;
+}
+
+.dot.minimize {
+    background: #febc2e;
+}
+
+.dot.maximize {
+    background: #28c840;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.safari-navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-shrink: 0;
+}
+
+.nav-icon {
+    font-size: 28px;
+
+    line-height: 1;
+
+    color: #555;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.nav-icon.disabled {
+    color: #aaa;
+}
+
+
+/* =========================================================
+   ADDRESS BAR
+========================================================= */
+
+.safari-address {
+    flex: 1;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    height: 34px;
+
+    border-radius: 9px;
+
+    background: #e8e8eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    user-select: none;
+}
+
+.lock-icon {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.safari-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    color: #555;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.safari-tabs {
+    height: 48px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 0 12px;
+
+    background: #e9e9eb;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.safari-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   INDIVIDUAL TAB
+========================================================= */
+
+.safari-tab {
+    position: relative;
+
+    height: 42px;
+
+    min-width: 190px;
+
+    max-width: 260px;
+
+    padding: 0 15px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    border-radius: 10px 10px 0 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #666;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+
+    font-size: 14px;
+
+    flex-shrink: 0;
+}
+
+.safari-tab:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.safari-tab.active {
+    background: #ffffff;
+
+    color: #222;
+}
+
+
+/* =========================================================
+   TAB FAVICON
+========================================================= */
+
+.tab-favicon {
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 10px;
+
+    background: #1c6d89;
+
+    color: #ffffff;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TAB TITLE
+========================================================= */
+
+.tab-title {
+    flex: 1;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   TAB CLOSE
+========================================================= */
+
+.tab-close {
+    font-size: 17px;
+
+    color: #888;
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+
+    flex-shrink: 0;
+}
+
+.safari-tab:hover .tab-close,
+.safari-tab.active .tab-close {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   NEW TAB
+========================================================= */
+
+.new-tab {
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 24px;
+
+    color: #555;
+
+    width: 45px;
+
+    height: 40px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.new-tab:hover {
+    color: #111;
+}
+
+
+/* =========================================================
+   SAFARI LOADING BAR
+========================================================= */
+
+.safari-loading-track {
+    width: 100%;
+
+    height: 4px;
+
+    background: #e5e5e5;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* Actual animated bar */
+
+.safari-loading-bar {
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background: #1c6d89;
+
+    transform: scaleX(0);
+
+    transform-origin: left center;
+
+    animation:
+        safariLoading 0.8s ease-in-out forwards;
+}
+
+
+/* Left → Right animation */
+
+@keyframes safariLoading {
+
+    0% {
+        transform: scaleX(0);
+    }
+
+    20% {
+        transform: scaleX(0.15);
+    }
+
+    40% {
+        transform: scaleX(0.40);
+    }
+
+    60% {
+        transform: scaleX(0.65);
+    }
+
+    80% {
+        transform: scaleX(0.85);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+/* =========================================================
+   BROWSER CONTENT
+========================================================= */
+
+.safari-content {
+    min-height: 520px;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.safari-image-wrapper {
+    padding: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    animation:
+        safariImage 0.45s ease;
+}
+
+.safari-image {
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    display: block;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.safari-text {
+    padding: 70px 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    animation:
+        safariText 0.45s ease;
+}
+
+
+/* Number */
+
+.safari-number {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #888;
+
+    margin-bottom: 15px;
+}
+
+
+/* Heading */
+
+.safari-text h2 {
+    margin: 0 0 22px;
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    line-height: 1.1;
+
+    font-weight: 600;
+
+    color: #111;
+}
+
+
+/* Description */
+
+.safari-text p {
+    margin: 0;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #666;
+}
+
+
+/* =========================================================
+   BROWSER STATUS
+========================================================= */
+
+.safari-status {
+    height: 34px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #f5f5f7;
+
+    border-top: 1px solid #ddd;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CONTENT ANIMATIONS
+========================================================= */
+
+@keyframes safariImage {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(25px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0) scale(1);
+    }
+}
+
+
+@keyframes safariText {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .safari-section {
+        padding: 35px 12px;
+    }
+
+
+    /* Top bar */
+
+    .safari-topbar {
+        gap: 12px;
+
+        padding: 0 12px;
+    }
+
+
+    .safari-navigation,
+    .safari-actions {
+        display: none;
+    }
+
+
+    .safari-address {
+        margin-left: 10px;
+
+        max-width: none;
+    }
+
+
+    /* Tabs */
+
+    .safari-tab {
+        min-width: 160px;
+    }
+
+
+    /* Content */
+
+    .safari-content {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Image */
+
+    .safari-image-wrapper {
+        padding: 20px;
+    }
+
+    .safari-image {
+        height: 300px;
+    }
+
+
+    /* Text */
+
+    .safari-text {
+        padding: 30px 25px 45px;
+    }
+
+    .safari-text h2 {
+        font-size: 32px;
+    }
+
+    .safari-text p {
+        font-size: 15px;
+    }
+
+
+    /* Status */
+
+    .safari-status {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .safari-section {
+        padding: 25px 8px;
+    }
+
+    .safari-browser {
+        border-radius: 12px;
+    }
+
+    .safari-topbar {
+        height: 50px;
+    }
+
+    .safari-address {
+        height: 30px;
+
+        font-size: 12px;
+    }
+
+    .safari-dots {
+        gap: 5px;
+    }
+
+    .dot {
+        width: 10px;
+
+        height: 10px;
+    }
+
+    .safari-tabs {
+        padding: 0 6px;
+    }
+
+    .safari-tab {
+        min-width: 145px;
+
+        height: 40px;
+
+        padding: 0 10px;
+
+        font-size: 12px;
+    }
+
+    .safari-loading-track,
+    .safari-loading-bar {
+        height: 3px;
+    }
+
+    .safari-image {
+        height: 240px;
+    }
+
+    .safari-text {
+        padding: 25px 20px 35px;
+    }
+
+    .safari-text h2 {
+        font-size: 28px;
+    }
+
+    .safari-text p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+}

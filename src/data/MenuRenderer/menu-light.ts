@@ -30,7 +30,7 @@ export const lightMenu: MenuItem[] = [
         subLinks: [
           { label: "Startup Website Design", href: "/web-design/startup-webiste-design" },
           { label: "Corporate Website Design", href: "/web-design/corporate-webiste-desgin" },
-          { label: "Website Redesign", href: "/" },
+          { label: "Website Redesign", href: "/web-design/website-redesign" },
           { label: "Landing Page Design", href: "/" },
           { label: "UI/UX Design", href: "/" },
         ]
