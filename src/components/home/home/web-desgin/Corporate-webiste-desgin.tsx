@@ -350,9 +350,7 @@ function Corporatewebistedesgin() {
                         </h4>
                         <CorporateApproachGrid items={corporateApproach} />
                     </div>
-                    {/* =====================================================
-    WHY CHOOSE US
-===================================================== */}
+                  
 
                     <section className="why-corporate-section">
 
@@ -380,21 +378,22 @@ function Corporatewebistedesgin() {
                                 }}
                             >
 
-                                <div className="why-corporate-label">
+                                {/* <div className="why-corporate-label">
                                     <span></span>
                                     WHY CHOOSE US
                                     <span></span>
-                                </div>
-
-                                <h2>
-                                    Why We are the top
-                                    <br />
-                                    <span>choice for corporate web design</span>
-                                </h2>
-
-                                <div className="why-corporate-heading-line">
+                                </div> */}
+ <div className="col-12">
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">
+                                     Why We are the top
+                                </span>{" "}
+                               choice for corporate web design
+                            </h4>
+                        </div>
+                                {/* <div className="why-corporate-heading-line">
                                     <span></span>
-                                </div>
+                                </div> */}
 
                                 <p>
                                     With the support of a top-notch, well-trained, and highly
@@ -448,7 +447,7 @@ function Corporatewebistedesgin() {
 
                                                 {/* NUMBER */}
 
-                                                <span className="why-card-number">
+                                                <span className="why-card-number text-tenor">
                                                     {item.number}
                                                 </span>
 
@@ -477,7 +476,7 @@ function Corporatewebistedesgin() {
 
                                                 <div className="why-card-content">
 
-                                                    <h3>
+                                                    <h3 className="text-tenor">
                                                         {item.title}
                                                     </h3>
 

@@ -32,7 +32,6 @@ function CorporateApproachGrid({
         <>
             <section className="corporate-approach-section">
                 <div className="container">
-
                     {/* ==============================
                         GRID
                     ============================== */}
@@ -96,15 +95,15 @@ function CorporateApproachGrid({
 
                                 <div className="approach-card-content">
 
-                                    <span className="approach-category">
+                                    <span className="approach-category text-tenor">
                                         {item.category}
                                     </span>
 
-                                    <h3>
+                                    <h3 className="text-tenor">
                                         {item.title}
                                     </h3>
 
-                                    <span className="approach-view">
+                                    <span className="approach-view text-figtree">
                                         View Details
                                     </span>
 
