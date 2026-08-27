@@ -104,6 +104,12 @@ const data = [
     currentPage: "Startup Webiste Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+  {
+    path: "/web-design/corporate-webiste-desgin",
+    title: "Corporate Webiste Desgin",
+    currentPage: "Corporate Webiste Desgin",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
 
 ];
 
