@@ -264,7 +264,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'manufacturer',
-    label: 'Manufacturer',
+    label: 'Product Manufacturer',
     icon: Factory,
     image: false,
     industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
@@ -290,7 +290,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'events',
-    label: 'Event & Sports Management',
+    label: 'Event Management',
     icon: Trophy,
     image: false,
     industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
