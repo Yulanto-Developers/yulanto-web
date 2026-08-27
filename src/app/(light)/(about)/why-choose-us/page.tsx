@@ -1,7 +1,6 @@
 import Breadcrumbdata from "@/components/breadcrum/sections/breadcrumbdata";
 import { WhyChooseUs} from '@/components/home/home/whyChooseUs'
 import { Metadata } from "next";
-// import { CreativeAgencyStep } from "@/components/home/creative-agency/sections";
 
 export const metadata: Metadata = {
   title: "Home - Creative Portfolio Nextjs Template",

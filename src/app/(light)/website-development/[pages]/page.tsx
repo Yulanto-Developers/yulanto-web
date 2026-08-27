@@ -15,7 +15,7 @@ export default async function Page({
 
             {pages === "dynamic-website-development" && (
                 <>
-        <DynamicWebsiteDevelopment />
+                <DynamicWebsiteDevelopment />
         </>
             )}
         </>

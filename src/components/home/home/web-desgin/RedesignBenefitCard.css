@@ -1,0 +1,460 @@
+/* =========================================================
+   REDESIGN BENEFIT CARD
+========================================================= */
+
+.redesign-benefit-card {
+    position: relative;
+
+    width: 100%;
+    height: 420px;
+
+    border-radius: 14px;
+
+    overflow: visible;
+
+    cursor: pointer;
+
+    background: #ffffff;
+
+    border: 1px dashed #a1a1aa;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        border-color 0.3s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.redesign-benefit-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #053456;
+
+    /* box-shadow:
+        0 15px 30px rgba(5, 52, 86, 0.14); */
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.redesign-benefit-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 13px;
+
+    transition:
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.5s ease;
+}
+
+
+.redesign-benefit-card:hover
+.redesign-benefit-image {
+    transform: scale(1.07);
+
+    filter: brightness(0.65);
+}
+
+
+/* =========================================================
+   NORMAL IMAGE GRADIENT
+========================================================= */
+
+.redesign-image-gradient {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    border-radius: 13px;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.88) 0%,
+            rgba(0, 0, 0, 0.65) 18%,
+            rgba(0, 0, 0, 0.15) 50%,
+            rgba(0, 0, 0, 0) 75%
+        );
+
+    transition:
+        opacity 0.4s ease;
+}
+
+
+.redesign-benefit-card:hover
+.redesign-image-gradient {
+    opacity: 0;
+}
+
+
+/* =========================================================
+   CORNER PLUS WRAPPER
+========================================================= */
+
+.redesign-plus {
+    position: absolute;
+
+    z-index: 20;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    /* background: #ffffff; */
+
+    /* border-radius: 50%; */
+
+    color: #053456;
+
+    transition:
+        color 0.3s ease,
+        transform 0.4s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   PLUS POSITIONS
+========================================================= */
+
+.redesign-plus.top-left {
+    top: -14px;
+    left: -14px;
+}
+
+.redesign-plus.top-right {
+    top: -14px;
+    right: -14px;
+}
+
+.redesign-plus.bottom-left {
+    bottom: -14px;
+    left: -14px;
+}
+
+.redesign-plus.bottom-right {
+    bottom: -14px;
+    right: -14px;
+}
+
+
+/* =========================================================
+   PLUS ICON
+========================================================= */
+
+.redesign-plus-icon {
+    transition:
+        transform 0.4s ease,
+        color 0.3s ease;
+}
+
+
+/* Hover plus */
+
+.redesign-plus .plus-hovered {
+    color: #053456;
+
+    transform:
+        rotate(90deg)
+        scale(1.15);
+}
+
+
+/* =========================================================
+   NORMAL TITLE
+========================================================= */
+
+.redesign-normal-content {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 5;
+
+    padding: 25px 24px 24px;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.4s ease;
+}
+
+
+.redesign-normal-content h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+/* Hide normal title on hover */
+
+.redesign-benefit-card:hover
+.redesign-normal-content {
+    opacity: 0;
+
+    transform: translateY(15px);
+}
+
+
+/* =========================================================
+   HOVER OVERLAY
+========================================================= */
+
+.redesign-hover-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 10;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 30px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5, 52, 86, 0.97),
+            rgba(5, 52, 86, 0.91)
+        );
+
+    opacity: 0;
+
+    transform: translateY(100%);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* Show overlay */
+
+.redesign-benefit-card:hover
+.redesign-hover-overlay {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   HOVER ICON
+========================================================= */
+
+.redesign-hover-icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #053456;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+
+    transform:
+        translateY(25px)
+        scale(0.9);
+
+    transition:
+        opacity 0.4s ease 0.12s,
+        transform 0.45s ease 0.12s;
+}
+
+
+/* Show icon */
+
+.redesign-benefit-card:hover
+.redesign-hover-icon {
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================================================
+   HOVER CONTENT
+========================================================= */
+
+.redesign-hover-content {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.45s ease 0.18s,
+        transform 0.45s ease 0.18s;
+}
+
+
+.redesign-benefit-card:hover
+.redesign-hover-content {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   HOVER TITLE
+========================================================= */
+
+.redesign-hover-content h3 {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.redesign-hover-content p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 15px !important;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   PLUS HOVER GLOW
+========================================================= */
+
+/* .redesign-benefit-card:hover
+.redesign-plus {
+    box-shadow:
+        0 3px 12px rgba(5, 52, 86, 0.18);
+} */
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .redesign-benefit-card {
+        height: 400px;
+    }
+
+    .redesign-hover-content h3 {
+        font-size: 22px;
+    }
+
+    .redesign-hover-content p {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .redesign-benefit-card {
+        height: 390px;
+    }
+
+    .redesign-normal-content {
+        padding: 22px;
+    }
+
+    .redesign-normal-content h3 {
+        font-size: 21px;
+    }
+
+    .redesign-hover-overlay {
+        padding: 25px;
+    }
+
+    .redesign-hover-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .redesign-hover-content h3 {
+        font-size: 21px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .redesign-benefit-card {
+        height: 350px;
+    }
+
+    .redesign-hover-overlay {
+        padding: 22px;
+    }
+
+    .redesign-hover-content p {
+        font-size: 13px;
+
+        line-height: 1.55;
+    }
+}

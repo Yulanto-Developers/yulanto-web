@@ -214,61 +214,7 @@ your audience.`,
     ],
   },
   //digital studio service data end
-  //   ak add
-  {
-    id: 14,
-    keyValue: "01",
-    title: "Quality Design",
-    image: "/assets/images/whychoose/quality-design.jpg",
-    description: `Quality is at the heart of everything we do. Every website we create reflects our commitment to modern design, usability, performance, and attention to detail.`,
-    subDesc: "",
-    categories: [],
-  },
-  {
-    id: 15,
-    keyValue: "02",
-    title: "Innovative Approach",
-    image: "/assets/images/whychoose/innovation-approach.jpg",
-    description: `We continuously explore new ideas, technologies, and creative approaches throughout every stage of development. Our innovative mindset helps us create distinctive digital experiences that make your brand stand out.`,
-    subDesc: "",
-    categories: [],
-  },
-  {
-    id: 16,
-    keyValue: "03",
-    title: "Customized Solutions",
-    image: "/assets/images/whychoose/customized-solutions.jpg",
-    description: `We take the time to understand your business, objectives, and unique requirements. Our customized solutions are thoughtfully designed to address your specific needs and deliver meaningful results.`,
-    subDesc: "",
-    categories: [],
-  },
-  {
-    id: 17,
-    keyValue: "04",
-    title: "Professional Team",
-    image: "/assets/images/whychoose/team.jpg",
-    description: `Our team of skilled and experienced web designers and developers combines creativity, technical expertise, and industry knowledge to build professional websites that perform effectively.`,
-    subDesc: "",
-    categories: [],
-  },
-  {
-    id: 18,
-    keyValue: "05",
-    title: "On-Time Delivery",
-    image: "/assets/images/whychoose/on-time-delivery.jpg",
-    description: `We understand the importance of deadlines in business. Our structured approach to project management helps us maintain timelines and deliver projects efficiently, with a commitment to promise less and deliver more.`,
-    subDesc: "",
-    categories: [],
-  },
-  {
-    id: 19,
-    keyValue: "06",
-    title: "Reliable Customer Support",
-    image: "/assets/images/whychoose/customer-support.jpg",
-    description: `Our relationship with you doesn't end after your website goes live. Our dedicated technical support team is always ready to assist with maintenance, updates, troubleshooting, and ongoing website requirements.`,
-    subDesc: "",
-    categories: [],
-  },
+  
 ];
 
 // service-2 inner service data start

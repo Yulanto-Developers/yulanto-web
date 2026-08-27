@@ -18,6 +18,7 @@ import FloatingQuoteButton from "@/components/home/home/myComponents/common/Floa
 import "@/assets/css/style.css";
 
 
+
 export default function DesignStudioLayout({
     children,
 }: {
