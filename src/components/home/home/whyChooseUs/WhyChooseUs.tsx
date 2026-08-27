@@ -1,122 +1,87 @@
-// import StartupAgencyServiceItem from "./components/StartupAgencyServiceItem";
-// import SmartLink from "@/components/common/SmartLink";
-// import { servicesData } from "@/data/services-data";
-// import { bgColorPropsDt } from "@/types/custom-dt";
-// import { PlusIcon } from "@/svg";
-// import "./whychoose.css";
-
-// const Service: React.FC<bgColorPropsDt> = () => {
-//     // display service data
-//     const displayServiceItem = servicesData.slice(13, 19);
-
-//     return (
-//         <div className="px-service-area service-skew-anim py-60 z-index-2">
-//             <div className="container container-1550">
-
-//                 {/* title */}
-//                 <div className="px-service-title-wrap mb-60">
-//                     <div className="row">
-//                         <div className="col-xl-3">
-//                             <div className="px-service-subtitle-box pt-40">
-//                                 <span className="px-section-subtitle ">
-//                                     <i><PlusIcon strokeColor="currentcolor" /></i>
-//                                     Why Choose Yulanto
-//                                 </span>
-//                             </div>
-//                         </div>
-//                         <div className="col-xl-9">
-//                             <div className="px-service-title-box d-flex justify-content-between align-items-center">
-//                                 <h3 className="px-section-title ft-30 text-tenor mb-0 text-effect" style={{ lineHeight: "1.2"}}>
-//                                     WE CREATE MEANINGFUL WEBSITES
-//                                 </h3>
-//                                 <p style={{ width: "100%", maxWidth: "400px" }}>Our high-performance web solutions are designed to bring added value to your products and services, ultimately boosting your business's market share. </p>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-
-//             {/* accordion */}
-//             <div className="px-service-accordion-wrap">
-//                 <div className="accordion" id="accordionExample">
-//                     {displayServiceItem.map((service, index) => (
-//                         <StartupAgencyServiceItem key={service.id} {...service} index={index} />
-//                     ))}
-//                 </div>
-//             </div>
-//         </div>
-//         </div >
-//     );
-// };
-
-// export default Service;
 "use client";
-import StartupAgencyServiceItem from "./components/StartupAgencyServiceItem";
-import { servicesData } from "@/data/services-data";
-import { bgColorPropsDt } from "@/types/custom-dt";
-import { PlusIcon } from "@/svg";
+
+import React, { ReactNode } from "react";
 import "./whychoose.css";
-import { useAOS } from '@/components/hooks/useAOS';
+import { useAOS } from "@/components/hooks/useAOS";
+import SectionTitle from "@/components/sectiontitle/SectionTitle";
+import whychoosseData, { WhyChooseItem } from "./whychoosedata";
 
-const Service: React.FC<bgColorPropsDt> = () => {
-    useAOS();
-    // Display service data
-    const displayServiceItem = servicesData.slice(13, 19);
+import {
+  Palette,
+  Lightbulb,
+  Sliders,
+  Users,
+  Clock,
+  Headphones
+} from "lucide-react";
 
-    return (
-        <div
-            className="px-service-area service-skew-anim pt-30 pb-60 z-index-2"
-        >
-            <div className="container container-1550">
-                {/* Title */}
-                <div className="px-service-title-wrap mb-40">
-                    <div className="row">
-                        <div className="col-xl-12">
-                            <div className="px-service-subtitle-box pt-40">
-                                <span className="px-section-subtitle mb-3">
-                                    <i>
-                                        <PlusIcon strokeColor="currentcolor" />
-                                    </i>
-                                    Why Choose Yulanto?
-                                </span>
-                            </div>
-
-                            <div className="px-service-title-box">
-                                <h3
-                                    className="px-about-title ft-30 text-tenor mb-0 text-effect"
-                                    style={{ lineHeight: "1.2" }}
-                                >
-                                    We Create{" "}
-                                    <span className="text-blue-about">
-                                        Meaningful Websites
-                                    </span>
-                                </h3>
-                            </div>
-
-                            <p className="mt-3">
-                                At Yulanto, we create high-performance websites and digital
-                                solutions that add real value to your products and services.
-                                Our goal is to strengthen your online presence, engage your
-                                audience, and support sustainable business growth.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Accordion */}
-                <div className="px-service-accordion-wrap">
-                    <div className="accordion" id="accordionExample">
-                        {displayServiceItem.map((service, index) => (
-                            <StartupAgencyServiceItem
-                                key={service.id}
-                                {...service}
-                                index={index}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+const iconMap: Record<number, ReactNode> = {
+  1: <Palette />,
+  2: <Lightbulb />,
+  3: <Sliders />,
+  4: <Users />,
+  5: <Clock />,
+  6: <Headphones />,
 };
 
-export default Service;
+interface WhyChooseA2Props {
+  data?: WhyChooseItem[];
+}
+
+const WhyChooseA2: React.FC<WhyChooseA2Props> = ({ data = whychoosseData }) => {
+  useAOS();
+
+  return (
+    <section className="whychooseA2-section" id="why-choose-us">
+      <div className="container">
+        <SectionTitle
+          subtitle="Why Choose Yulanto?"
+          titleFirst="We Create"
+          titleSecond="Meaningful Websites"
+          description="At Yulanto, we create high-performance websites and digital solutions that add real value to your products and services. Our goal is to strengthen your online presence, engage your audience, and support sustainable business growth."
+          animationType="text-reveal-lines"
+          delay={300}
+        />
+
+        <div className="row g-4 whychooseA2-row">
+          {data.map((item: WhyChooseItem, index: number) => (
+            <div
+              key={item.id}
+              className="col-12 col-md-6 col-lg-4"
+              data-aos="fade-up"
+              data-aos-delay={(index * 100 + 200).toString()}
+              data-aos-duration="800"
+              data-aos-once="true"
+            >
+              <div className="whychooseA2-card">
+                {/* Image & Floating Pill Badges */}
+                <div className="whychooseA2-card-image-wrap">
+                  <img
+                    src={item.image || "/assets/images/whychoose/quality-design.jpg"}
+                    alt={item.title}
+                    className="whychooseA2-card-image"
+                  />
+                  
+                  <div className="whychooseA2-badges-overlay">
+                    <span className="whychooseA2-badge-pill">
+                      {iconMap[item.id] || <Palette />}
+                      {item.badgeText || "Featured"}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Title & Description */}
+                <div className="whychooseA2-card-body">
+                  <h3 className="whychooseA2-title">{item.title}</h3>
+                  <p className="whychooseA2-description">{item.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default WhyChooseA2;

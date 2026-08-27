@@ -41,16 +41,17 @@ const CreativeAgencyFunfact = () => {
 	}
 	return (
 		<>
-			<SectionTitle
-				subtitle="Our Achievements"
-				titleFirst="Website Creators "
-				titleSecond="in Chennai"
-				description="Impactful Dynamic Designing Trusted By Enterprises
-Dynamic website design provides adaptability, engagement, and expandability, allowing it to be utilized for various purposes, ranging from individual blogs to extensive e-commerce websites." animationType="text-reveal-lines" delay={300} />
+
 			<div
 				className="ar-funfact-area ar-funfact-bg"
-				style={{ backgroundImage: `url(${funfactStyles.sectionBackgroundShape})` }}
+				style={{ backgroundImage: `url(${funfactStyles.sectionBackgroundShape})`, paddingTop: "20px" }}
 			>
+				<SectionTitle
+					subtitle="Our Achievements"
+					titleFirst="Website Creators "
+					titleSecond="in Chennai"
+					description="Impactful Dynamic Designing Trusted By Enterprises
+Dynamic website design provides adaptability, engagement, and expandability, allowing it to be utilized for various purposes, ranging from individual blogs to extensive e-commerce websites." animationType="text-reveal-lines" delay={300} />
 
 				<div className="container container-1330">
 					<div className="row">

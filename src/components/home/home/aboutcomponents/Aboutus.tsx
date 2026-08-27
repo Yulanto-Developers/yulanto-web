@@ -87,7 +87,7 @@ const AboutUs = () => {
                   data-aos="text-reveal"
                   data-aos-delay="200"
                 >
-                  <span className="text-white">Building Digital</span> Experiences That Matter
+                  <span className="text-white">Building Digital Experiences That Matter </span>
                 </h4>
 
                 <p
@@ -182,7 +182,7 @@ const AboutUs = () => {
                   data-aos="text-reveal-flip"
                   data-aos-delay="200"
                 >
-                  <span className="text-white">Experience,</span> Creativity & Growth
+                  <span className="text-white">Experience, Creativity & Growth </span>
                 </h4>
 
                 <p

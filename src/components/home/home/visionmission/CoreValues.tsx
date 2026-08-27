@@ -24,7 +24,7 @@ const CoreValues = ({ values = coreValuesData, columns = 6 }) => {
       id="core-values"
       data-aos="fade-up"
       data-aos-duration="1000"
-      data-aos-offset="200"  // Increased from 80 to 200
+      data-aos-offset="200"
       data-aos-easing="ease-in-out"
       data-aos-once="true"
     >
@@ -53,28 +53,21 @@ const CoreValues = ({ values = coreValuesData, columns = 6 }) => {
                 style={{
                   backgroundImage: `url(${imageUrl})`,
                 }}
-                data-aos="fade-up"
-                data-aos-delay={(index * 100 + 200).toString()}
-                data-aos-duration="800"
-                data-aos-offset="150"  // Increased from 50 to 150
-                data-aos-easing="ease-in-out"
-                data-aos-once="true"
               >
                 <div className="core-value-overlay">
-                  <h3 
-                    className="core-value-card-title"
-                    data-aos="fade-up"
-                    data-aos-delay={(index * 100 + 300).toString()}
-                    data-aos-duration="600"
-                  >
-                    {value.title}
-                  </h3>
-                  <p 
-                    className="core-value-card-description"
-                    data-aos="fade-up"
-                    data-aos-delay={(index * 100 + 400).toString()}
-                    data-aos-duration="600"
-                  >
+                  <div className="title-container">
+                    {/* Default vertical title */}
+                    <h3 className="title-vertical">
+                      {value.title}
+                    </h3>
+
+                    {/* Expanded horizontal title */}
+                    <h3 className="title-horizontal">
+                      {value.title}
+                    </h3>
+                  </div>
+
+                  <p className="core-value-card-description">
                     {value.description}
                   </p>
                 </div>

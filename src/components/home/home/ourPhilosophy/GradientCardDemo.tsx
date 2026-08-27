@@ -2,7 +2,7 @@
 import { GradientCard } from "./GradientCard";
 import "./pholosophy.css";
 import { useAOS } from "@/components/hooks/useAOS";
-
+import SectionTitle from "@/components/sectiontitle/SectionTitle";
 
 // Data for the cards with company values
 const cardData = [
@@ -75,51 +75,18 @@ const GradientCardDemo = () => {
         <section className="philosophy-section pt-30 pb-50">
             <div className="container">
                 {/* Section Header */}
-                <div className="row pb-30">
-                    <div className="col-xl-12">
-                        <div
-                            className="px-service-subtitle-box pt-40"
-                            data-aos="fade-up"
-                            data-aos-delay="50"
-                        >
-                            <span className="px-section-subtitle mb-3">
-                                Our Philosophy
-                            </span>
-                        </div>
-
-                        <div
-                            className="px-service-title-box"
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                        >
-                            <h3
-                                className="px-about-title ft-30 text-tenor mb-0 text-effect"
-                                style={{ lineHeight: "1.2" }}
-                            >
-                                Honesty &{" "}
-                                <span className="text-blue-about">
-                                    Transparency
-                                </span>
-                            </h3>
-                        </div>
-
-                        <p
-                            className="mt-3 text-figtree"
-                            data-aos="fade-up"
-                            data-aos-delay="150"
-                            
-                        >
-                            At Yulanto, honesty and transparency are at the heart of everything we do.
+                <SectionTitle
+                        subtitle="Our Philosophy"
+                        titleFirst="Honesty & "
+                        titleSecond="Transparency"
+                        description="At Yulanto, honesty and transparency are at the heart of everything we do.
                             We believe in building strong, long-term relationships through open communication,
                             ethical practices, and complete accountability. Our commitment to integrity has
                             earned the trust and confidence of our clients, enabling us to grow together and
-                            deliver lasting value with reliability and professionalism.
-                        </p>
-                    </div>
-                </div>
+                            deliver lasting value with reliability and professionalism."/>
 
                 {/* Cards Grid */}
-                <div className="row g-4">
+                <div className="row g-4 py-3">
                     {cardData.map((card, index) => (
                         <div
                             key={index}

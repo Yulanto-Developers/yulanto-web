@@ -6,48 +6,48 @@ import SectionTitle from "../../../../sectiontitle/SectionTitle";
 import advantagesData from "./advantagesdata";
 
 type AdvantageItem = {
-    id: string;
-    title: string;
-    description: string;
+  id: string;
+  title: string;
+  description: string;
 };
 
 type AdvantagesProps = {
-    items?: AdvantageItem[];
-    heading?: string;
-    subtitle?: string;
+  items?: AdvantageItem[];
+  heading?: string;
+  subtitle?: string;
 };
 
 const AdvantageRow = ({ item, index }: { item: AdvantageItem; index: number }) => (
-    <div
-        className="advantage-item"
-        data-aos="fade-up"
-        data-aos-delay={index * 50}
-        data-aos-duration="800"
-        data-aos-offset="150"
-        data-aos-easing="ease-in-out"
-        data-aos-once="true"
-        suppressHydrationWarning
-    >
-        <span className="advantage-number">{item.id}</span>
-        <div>
-            <h4 className="advantage-title">{item.title}</h4>
-            <p className="advantage-description">{item.description}</p>
-        </div>
+  <div
+    className="advantage-item"
+    data-aos="fade-up"
+    data-aos-delay={index * 50}
+    data-aos-duration="800"
+    data-aos-offset="150"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true"
+    suppressHydrationWarning
+  >
+    <span className="advantage-number">{item.id}</span>
+    <div>
+      <h4 className="advantage-title">{item.title}</h4>
+      <p className="advantage-description">{item.description}</p>
     </div>
+  </div>
 );
 
 const Advantages = ({
-    items = advantagesData,
-    subtitle = "Features"
+  items = advantagesData,
+  subtitle = "Features"
 }: AdvantagesProps) => {
-    useAOS();
+  useAOS();
 
-    return (
-        <>
-            <style jsx global>{`
+  return (
+    <>
+      <style jsx global>{`
         /* Outer section is transparent/default */
         .advantages-section {
-          padding: 10px 0 80px;
+          padding: 10px 0 30px;
           background: transparent;
         }
 
@@ -55,6 +55,7 @@ const Advantages = ({
         .advantages-card-container {
           background-color: #053456;
           border-radius: 12px;
+          padding: 40px;
         }
 
         /* List Item Styling */
@@ -102,7 +103,7 @@ const Advantages = ({
         /* Responsive Breakpoints */
         @media (max-width: 767px) {
           .advantages-section {
-            padding: 50px 0;
+            padding: 40px 0;
           }
           .advantages-card-container {
             padding: 24px 16px;
@@ -120,28 +121,28 @@ const Advantages = ({
         }
       `}</style>
 
-            <section className="advantages-section">
-                <SectionTitle
-                    subtitle={subtitle}
-                    titleFirst="Advantages Of Dynamic"
-                    titleSecond="Web Designing?"
-                    description="Each section of the webpage is distinct in a dynamic website, making it convenient to apply updates across various pages simultaneously."
-                    delay={300}
-                />
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-12">
-                            <div className="advantages-card-container">
-                                {items.map((item, index) => (
-                                    <AdvantageRow key={item.id} item={item} index={index} />
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
-    );
+      <section className="advantages-section">
+        <SectionTitle
+          subtitle={subtitle}
+          titleFirst="Advantages Of Dynamic"
+          titleSecond="Web Designing?"
+          description="Each section of the webpage is distinct in a dynamic website, making it convenient to apply updates across various pages simultaneously."
+          delay={300}
+        />
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-12">
+              <div className="advantages-card-container">
+                {items.map((item, index) => (
+                  <AdvantageRow key={item.id} item={item} index={index} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default Advantages;
