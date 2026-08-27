@@ -154,7 +154,7 @@ const DynamicWebsiteSolutions = ({ cards = CARD_DATA }: DynamicWebsiteSolutionsP
         }
       `}</style>
 
-            <section className="container container-1750 py-5">
+            <section className="container container-1750">
 
                 <SectionTitle
                     subtitle="Simple to Handle"

@@ -1,10 +1,8 @@
 'use client';
 import React from 'react'
 import BreadcurmbData from '@/components/breadcrum/sections/breadcrumbdata'
-import CreativeAgencyFunfact from './components/CreativeAgencyFunfact'
-import DynamicWebsiteSolutions from './components/DynamicWebsiteSolutions'
-import Advantages from './components/Advantages'
 import { useAOS } from '@/components/hooks/useAOS';
+import {DynamicWebsiteSolutions, WhyUsA1, CreativeAgencyFunfact, Advantages, FAQA1} from './components/index'
 import '../aboutcomponents/ourStory.css';
 import '@/assets/css/textAnimations.css';
 import image1 from "@/assets/images/ourstory/image-1.jpg";
@@ -73,6 +71,8 @@ function DynamicWebsiteDevelopment() {
             </section>
             <DynamicWebsiteSolutions />
             <Advantages />
+            <WhyUsA1/>
+            <FAQA1/>
         </div>
     )
 }

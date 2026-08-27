@@ -788,6 +788,26 @@
 }
 
 /* ===========================
+   Core Values Section
+=========================== */
+
+.core-value-section {
+  padding: 35px 0 40px;
+  background: #fff;
+}
+
+/* ===========================
+   Cards Wrapper
+=========================== */
+
+.core-value-wrapper {
+  display: flex;
+  gap: 15px;
+  height: 420px;
+  margin-top: 50px;
+}
+
+/* ===========================
    Card Styling
 =========================== */
 
@@ -797,10 +817,12 @@
   overflow: hidden;
   border-radius: 14px;
   cursor: pointer;
-  transition: flex 0.5s ease;
+  /* Smoother, ultra-fluid physics curve for flex expansion */
+  transition: flex 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  will-change: flex;
 }
 
 /* Overlay Gradient */
@@ -815,7 +837,7 @@
     rgba(9, 50, 84, 0.85) 100%
   );
   z-index: 1;
-  transition: background 0.4s ease;
+  transition: background 0.6s ease;
 }
 
 /* ===========================
@@ -830,31 +852,95 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 12px;
+}
+
+/* Container to handle perfectly overlapping title cross-fade */
+.title-container {
+  position: relative;
+  min-height: 40px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 8px;
 }
 
 /* ===========================
-   Title (Vertical LTR - No Rotation)
+   Base Title Shared Styles
 =========================== */
 
-.core-value-card-title {
+.title-vertical,
+.title-horizontal {
   margin: 0;
-  color: #093254;
-  font-size: 28px;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.2;
-  white-space: pre-line;
+}
 
-  /* Vertical top-to-bottom, Left-to-Right without rotate */
+/* ===========================
+   1. Vertical Title (Default View)
+=========================== */
+
+.title-vertical {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #093254;
+  font-size: 28px;
+  white-space: pre-line;
   writing-mode: vertical-rl;
   direction: ltr;
-
   text-shadow:
     1px 1px 6px rgba(255, 255, 255, 0.9),
     0 0 10px rgba(255, 255, 255, 0.7);
 
-  transition: all 0.4s ease;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  /* Slower cross-fade transition */
+  transition: 
+    opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.5s ease;
+}
+
+/* Hide Vertical Title on Hover */
+.core-value-card.active .title-vertical,
+.core-value-card:hover .title-vertical {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+}
+
+/* ===========================
+   2. Horizontal Title (Expanded View)
+=========================== */
+
+.title-horizontal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-size: 26px;
+  white-space: pre-line;
+  writing-mode: horizontal-tb;
+  direction: ltr;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  /* Gentle delay to sync smoothly with card expansion */
+  transition: 
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+    visibility 0.6s ease 0.1s;
+}
+
+/* Reveal Horizontal Title on Hover */
+.core-value-card.active .title-horizontal,
+.core-value-card:hover .title-horizontal {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* ===========================
@@ -871,10 +957,12 @@
   visibility: hidden;
   transform: translateY(15px);
   max-height: 0;
+  overflow: hidden;
   transition:
-    opacity 0.4s ease,
-    transform 0.4s ease,
-    max-height 0.4s ease;
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+    max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+    visibility 0.6s ease 0.1s;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
@@ -895,15 +983,6 @@
     rgba(9, 50, 84, 0.75) 60%,
     rgba(9, 50, 84, 0.95) 100%
   );
-}
-
-.core-value-card.active .core-value-card-title,
-.core-value-card:hover .core-value-card-title {
-  color: #fff;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  writing-mode: horizontal-tb;
-  direction: ltr;
-  font-size: 26px;
 }
 
 .core-value-card.active .core-value-card-description,
@@ -936,12 +1015,21 @@
     flex: unset !important;
   }
 
-  .core-value-card-title {
-    writing-mode: horizontal-tb;
-    direction: ltr;
+  .title-container {
+    position: relative;
+    min-height: auto;
+  }
+
+  .title-vertical {
+    display: none !important;
+  }
+
+  .title-horizontal {
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
     font-size: 24px;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   }
 
   .core-value-card-description {
@@ -975,11 +1063,21 @@
     padding: 20px 16px;
   }
 
-  .core-value-card-title {
-    writing-mode: horizontal-tb;
-    direction: ltr;
+  .title-container {
+    position: relative;
+    min-height: auto;
+  }
+
+  .title-vertical {
+    display: none !important;
+  }
+
+  .title-horizontal {
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
     font-size: 22px;
-    color: #fff;
   }
 
   .core-value-card-description {
@@ -991,7 +1089,6 @@
     max-height: none;
   }
 }
-
 /* End core Value */
 /*  Vision Mission */
 /* Vision Mission Base */
