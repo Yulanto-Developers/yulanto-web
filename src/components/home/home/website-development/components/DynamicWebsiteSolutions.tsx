@@ -1,187 +1,192 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import SectionTitle from "@/components/sectiontitle/SectionTitle";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const CARD_DATA = [
-    {
-        id: 'easy-manage',
-        title: 'Easy to Manage',
-        text: 'A dynamic website is a perfect solution for large corporations aiming to effortlessly publish and oversee a diverse range of their products and services. The dynamic interface of these websites allows for content and graphics creation without requiring any specialized IT knowledge, and updates can be easily made within the company.',
-        patternClass: 'web-dev-card-pattern-dots',
-        aosDelay: '100',
-    },
-    {
-        id: 'highly-scalable',
-        title: 'Highly Scalable',
-        text: 'Dynamic websites are highly valued for their extensive scalability. Opting for a dynamic web design for your company allows you to access a diverse range of modules that provide an abundance of interactive features on the webpage, such as articles, blogs, e-commerce, event calendars, secure login, forums, and more.',
-        patternClass: 'web-dev-card-pattern-dots',
-        aosDelay: '200',
-    },
-    {
-        id: 'search-engine-support',
-        title: 'Supported By Search Engines',
-        text: 'Because of the regular content updates, search engines tend to prefer dynamic websites. Pages are indexed by web crawlers, giving higher rankings to new and recently updated content.',
-        patternClass: 'web-dev-card-pattern-dots',
-        aosDelay: '300',
-    },
+  {
+    id: 'easy-manage',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop',
+    title: 'Easy to Manage',
+    text: 'A dynamic website is a perfect solution for large corporations aiming to effortlessly publish and oversee products.',
+    aosDelay: '100',
+  },
+  {
+    id: 'highly-scalable',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop',
+    title: 'Highly Scalable Solution',
+    text: 'Access modules providing interactive features like e-commerce, blogs, and secure login.',
+    aosDelay: '200',
+  },
+  {
+    id: 'search-engine-support',
+    image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop',
+    title: 'Supported By Search Engines',
+    text: 'Pages are indexed quickly, giving higher rankings to recently updated content.',
+    aosDelay: '300',
+  },
 ];
 
 type WebDevCardProps = {
-    id: string;
-    title: string;
-    text: string;
-    patternClass: string;
-    aosDelay?: string;
+  id: string;
+  index: number;
+  image: string;
+  title: string;
+  text: string;
+  aosDelay?: string;
 };
 
 type DynamicWebsiteSolutionsProps = {
-    cards?: WebDevCardProps[];
+  cards?: Omit<WebDevCardProps, 'index'>[];
 };
 
-// 2. Reusable Card Component
-const WebDevCard = ({ title, text, patternClass, aosDelay }: WebDevCardProps) => {
-    return (
-        <div 
-            className={`web-dev-card ${patternClass}`}
-            data-aos="fade-up"
-            data-aos-delay={aosDelay || '0'}
-            data-aos-duration="800"
-            data-aos-easing="ease-out-cubic"
-        >
-            <h3 className="web-dev-card-title text-tenor">{title}</h3>
-            <p className="web-dev-card-text text-tenor">{text}</p>
-        </div>
-    );
+const WebDevCard = ({ image, title, text, index, aosDelay }: WebDevCardProps) => {
+  return (
+    <div
+      className="web-dev-img-card"
+      data-aos="fade-up"
+      data-aos-delay={aosDelay || '0'}
+      data-aos-duration="1000"
+      style={{ backgroundImage: `url(${image})` }}
+    >
+      <div className="web-dev-card-content">
+        <div className="web-dev-card-number">{index + 1}</div>
+        <h3 className="web-dev-card-title">{title}</h3>
+        <p className="web-dev-card-text">{text}</p>
+      </div>
+    </div>
+  );
 };
 
-// 3. Main Layout Component
 const DynamicWebsiteSolutions = ({ cards = CARD_DATA }: DynamicWebsiteSolutionsProps) => {
-    // Initialize AOS
-    React.useEffect(() => {
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50,
-        });
-    }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 50,
+    });
+  }, []);
 
-    return (
-        <>
-            <style>{`
-      
-        /* Column Container with Custom Small Dashed Border */
-        .web-dev-card-col {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
+        .web-dev-solutions-section {
+          padding: 30px 0;
+        }
+
+        .web-dev-img-card {
           position: relative;
-          padding: 2rem 1rem;
-        }
-
-        /* Fine/Small Right Dashed Border on Desktop (4px dash, 4px gap) */
-        @media (min-width: 768px) {
-          .web-dev-card-col:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 10%;
-            right: 0;
-            height: 80%;
-            width: 2px;
-            background-image: linear-gradient(to bottom, #53ae7d  50%, transparent 50%);
-            background-size: 2px 8px;
-            background-repeat: repeat-y;
-          }
-        }
-
-        /* Fine/Small Bottom Dashed Border on Mobile (4px dash, 4px gap) */
-        @media (max-width: 767.98px) {
-          .web-dev-card-col:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 10%;
-            width: 80%;
-            height: 2px;
-            background-image: linear-gradient(to right, #53ae7d  50%, transparent 50%);
-            background-size: 8px 2px;
-            background-repeat: repeat-x;
-          }
-        }
-
-        /* Base Pattern Card Structure */
-        .web-dev-card {
-          position: relative;
-          border-radius: 12px;
-          padding: 1rem;
-          background-color: #ffffff;
-          transition: transform 0.3s ease;
+          border-radius: 24px;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          aspect-ratio: 4 / 5;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
           overflow: hidden;
-          height: 100%;
+          display: flex;
+          align-items: flex-end;
+          padding: 20px;
+          margin-bottom: 30px;
         }
 
-        /* Pattern Styles */
-        .web-dev-card-pattern-dots {
-          background-image: radial-gradient(rgba(31, 224, 121, 0.2) 1.5px, transparent 1.5px);
-          background-size: 16px 16px;
+        .web-dev-img-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
-        /* Hover State */
-        .web-dev-card:hover {
-          transform: translateY(-4px);
+        .web-dev-card-content {
+          background-color: #ffffff;
+          border-radius: 16px;
+          padding: 25px;
+          width: 100%;
+          position: relative;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .web-dev-card-number {
+          position: absolute;
+          top: 25px;
+          left: 25px;
+          background-color: #000000;
+          color: #ffffff;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 700;
+          font-size: 14px;
         }
 
         .web-dev-card-title {
-          color: #053456;
+          color: #000000;
           font-weight: 700;
-          font-size: 28px;
-          margin-bottom: 1rem;
+          font-size: 20px;
+          margin-bottom: 8px;
           line-height: 1.3;
+          margin-top: 45px;
         }
 
         .web-dev-card-text {
-          color: #475569;
-          font-size: 15px;
-          line-height: 1.65;
+          font-size: 14px;
+          line-height: 1.5;
           margin-bottom: 0;
-          position: relative;
-          z-index: 1;
         }
 
-        /* AOS Override - Disable animation on mobile if needed */
+         .dyncardtitle .px-section-subtitle {
+          padding-top: 20px !important;
+        }
+
+        @media (min-width: 768px) {
+          .web-dev-solutions-section .row {
+            --bs-gutter-x: 1.5rem;
+          }
+        }
+
         @media (max-width: 576px) {
           [data-aos] {
             opacity: 1 !important;
             transform: none !important;
           }
+          .web-dev-img-card {
+            aspect-ratio: 1 / 1;
+          }
         }
-      `}</style>
+      ` }} />
 
-            <section className="container container-1750">
+      <section className="web-dev-solutions-section">
+        <div className="container container-1750">
+          <SectionTitle
+            subtitle="Simple to Handle"
+            titleFirst="Why Dynamic "
+            titleSecond="Website Designing?"
+            description=""
+            className="mb-0 pb-0 dyncardtitle"
+            data-aos="fade-up"
+            data-aos-duration="600"
+          />
 
-                <SectionTitle
-                    subtitle="Simple to Handle"
-                    titleFirst="Why Dynamic "
-                    titleSecond=" Website Designing? "
-                    description=""
-                    className="mb-0 pb-0"
-                    data-aos="fade-up"
-                    data-aos-duration="600"
+          <div className="row mt-3">
+            {cards.map((card, index) => (
+              <div key={card.id} className="col-12 col-md-4">
+                <WebDevCard
+                  id={card.id}
+                  index={index}
+                  image={card.image}
+                  title={card.title}
+                  text={card.text}
+                  aosDelay={card.aosDelay}
                 />
-
-                <div className="row g-0">
-                    {cards.map((card) => (
-                        <div key={card.id} className="col-12 col-md-4 web-dev-card-col">
-                            <WebDevCard
-                                id={card.id}
-                                title={card.title}
-                                text={card.text}
-                                patternClass={card.patternClass}
-                                aosDelay={card.aosDelay}
-                            />
-                        </div>
-                    ))}
-                </div>
-            </section>
-        </>
-    );
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default DynamicWebsiteSolutions;
