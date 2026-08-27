@@ -1,4 +1,8 @@
-/* Layout Settings */
+/* Layout Settings & Global Overflow Guards */
+.px-about-6-area {
+  overflow-x: hidden; /* Prevent section overflow */
+}
+
 .seo-about-wrapper {
   padding: 60px 20px;
   background-color: #ffffff;
@@ -12,6 +16,7 @@
   flex-direction: column;
   gap: 40px;
   align-items: center;
+  box-sizing: border-box;
 }
 
 @media (min-width: 992px) {
@@ -24,6 +29,7 @@
   .seo-content-column {
     flex: 1;
     width: 50%;
+    min-width: 0; /* Prevents flex child overflow on x-axis */
   }
 }
 
@@ -34,6 +40,9 @@
   overflow: hidden;
   box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
   background-color: #f8fafc;
+  width: 100%; /* Restricts max width to parent container */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Header & Tabs */
@@ -43,12 +52,14 @@
   background-color: #e2e8f0;
   padding: 10px 14px;
   border-bottom: 1px solid #cbd5e1;
+  overflow: hidden;
 }
 
 .chrome-controls {
   display: flex;
   gap: 8px;
   margin-right: 16px;
+  flex-shrink: 0;
 }
 
 .chrome-controls .control {
@@ -68,6 +79,7 @@
   padding: 6px 14px;
   border-radius: 8px 8px 0 0;
   margin-right: 8px;
+  min-width: 0; /* Ensures inner text clips cleanly */
 }
 
 .chrome-tab.active-tab {
@@ -80,6 +92,7 @@
   width: 16px;
   height: 16px;
   margin-right: 8px;
+  flex-shrink: 0;
 }
 
 .tab-title {
@@ -87,6 +100,8 @@
   font-weight: 500;
   color: #1e293b;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .close-tab {
@@ -94,12 +109,14 @@
   color: #64748b;
   margin-left: 10px;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .chrome-new-tab {
   font-size: 18px;
   color: #64748b;
   margin-left: 4px;
+  flex-shrink: 0;
 }
 
 /* Address Bar with Google Lens & Icons */
@@ -110,6 +127,7 @@
   background-color: #ffffff;
   padding: 8px 14px;
   border-bottom: 1px solid #e2e8f0;
+  overflow: hidden;
 }
 
 .nav-buttons {
@@ -117,10 +135,12 @@
   gap: 10px;
   color: #94a3b8;
   font-size: 16px;
+  flex-shrink: 0;
 }
 
 .chrome-address-bar {
   flex: 1;
+  min-width: 0; /* Allows address bar text truncation without forcing overflow */
   background-color: #f1f5f9;
   border-radius: 20px;
   padding: 5px 14px;
@@ -129,6 +149,7 @@
   align-items: center;
   justify-content: space-between;
   border: 1px solid #e2e8f0;
+  box-sizing: border-box;
 }
 
 .url-left {
@@ -138,19 +159,25 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-width: 0;
 }
 
 .ssl-lock {
   font-size: 11px;
+  flex-shrink: 0;
 }
 
 .chrome-address-bar .protocol {
   color: #10b981;
   font-weight: 500;
+  flex-shrink: 0;
 }
 
 .chrome-address-bar .domain {
   color: #334155;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Chrome Address Actions (Lens, Mic, Star) */
@@ -159,6 +186,7 @@
   align-items: center;
   gap: 8px;
   padding-left: 8px;
+  flex-shrink: 0;
 }
 
 .lens-icon {
@@ -187,6 +215,7 @@
 .chrome-content-area {
   padding: 20px;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 
 .seo-dashboard-summary {
@@ -357,12 +386,16 @@
 .kw-text {
   color: #334155;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .kw-rank-wrap {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .kw-pos {
@@ -395,6 +428,7 @@
   background-color: #10b981;
   border-radius: 50%;
   animation: pulse 2s infinite;
+  flex-shrink: 0;
 }
 
 .status-text {
@@ -409,9 +443,9 @@
   100% { opacity: 1; transform: scale(1); }
 }
 
-
-
-
+.seo-content-column {
+  min-width: 0;
+}
 
 .seo-content-column p {
   line-height: 1.6;

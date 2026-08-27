@@ -72,7 +72,7 @@ export const BentoGrid: React.FC = () => {
       name: "Keyword Research",
       description:
         "Effective SEO starts with understanding what your customers are searching for. Our SEO experts in Chennai conduct detailed keyword research to identify relevant, high-value, and commercially focused search terms. We analyze search intent, competition, keyword relevance, and opportunities to create a focused SEO strategy.",
-      imageUrl: "/assets/img/usa/banner-europe.jpg",
+      imageUrl: "/assets/img/seo/top/SEO-Results-1.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-tall",
       delay: 100,
@@ -81,7 +81,7 @@ export const BentoGrid: React.FC = () => {
       name: "Better On-Page Optimization",
       description:
         "We optimize important website elements, including page content, title tags, meta descriptions, headings, URLs, internal links, images, and structured data. Our on-page SEO approach helps search engines better understand your website while providing visitors with useful and engaging content.",
-      imageUrl: "/assets/img/usa/banner-europe.jpg",
+      imageUrl: "/assets/img/seo/top/SEO-Results-3.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-full-tall h-100", // Ensured full height filling
       delay: 200,
@@ -90,7 +90,7 @@ export const BentoGrid: React.FC = () => {
       name: "Technical SEO",
       description:
         "Our technical SEO process focuses on improving website crawlability, indexing, mobile usability, page experience, website structure, and other technical factors that can influence search performance. A technically optimized website provides a stronger foundation for long-term SEO growth.",
-      imageUrl: "/assets/img/usa/banner-europe.jpg",
+      imageUrl: "/assets/img/seo/top/SEO-Results-4.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-short",
       delay: 300,
@@ -99,7 +99,7 @@ export const BentoGrid: React.FC = () => {
       name: "Strategic Link Building",
       description:
         "Quality backlinks can help strengthen your website's authority and credibility. We follow relevant and ethical link-building practices to develop a natural backlink profile and improve your website's authority within your industry.",
-      imageUrl: "/assets/img/usa/banner-europe.jpg",
+      imageUrl: "/assets/img/seo/top/SEO-Results-2.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-short",
       delay: 400,
@@ -108,7 +108,7 @@ export const BentoGrid: React.FC = () => {
       name: "SEO Analytics & Performance Tracking",
       description:
         "We continuously analyze SEO performance to identify opportunities for improvement. We monitor keyword rankings, organic traffic, search visibility, user engagement, conversions, and other important SEO metrics to refine the strategy and maximize results.",
-      imageUrl: "/assets/img/usa/banner-europe.jpg",
+      imageUrl: "/assets/img/seo/top/SEO-Results-5.jpg",
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-tall",
       delay: 500,
@@ -116,8 +116,8 @@ export const BentoGrid: React.FC = () => {
   ];
 
   return (
-    <section className="bento-grid-section py-5">
-      <div className="container">
+    <section className="px-about-6-area pt-50 pb-80 pb-lg-110 bento-grid-section">
+      <div className="container container-1550">
         <div className="row align-items-center mb-20">
           <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">

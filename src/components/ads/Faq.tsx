@@ -179,22 +179,16 @@ export default function FAQSection({
 
   return (
     <section
+      className="px-about-6-area pt-50 pb-80 pb-lg-110"
       style={{
         width: "100%",
         backgroundColor: "#ffffff",
-        paddingTop: "4rem",
-        paddingBottom: "4rem",
         overflow: "hidden",
       }}
     >
       <div
-        className="container"
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          paddingLeft: "15px",
-          paddingRight: "15px",
-        }}
+        className="container container-1550"
+        
       >
         {/* Header Block */}
         <h4

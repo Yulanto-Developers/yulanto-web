@@ -18,31 +18,31 @@ export interface ImageCarouselHeroProps {
 const DEFAULT_ONLINE_IMAGES: ImageCard[] = [
   {
     id: "1",
-    src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&auto=format&fit=crop",
+    src: "assets/img/googleads/top-1.jpg",
     alt: "Abstract Fluid Art",
     rotation: -6,
   },
   {
     id: "2",
-    src: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=400&auto=format&fit=crop",
+    src: "assets/img/googleads/top-2.jpg",
     alt: "Oil Painting",
     rotation: 4,
   },
   {
     id: "3",
-    src: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&auto=format&fit=crop",
+    src: "assets/img/googleads/top-3.jpg",
     alt: "Colorful Splash",
     rotation: -3,
   },
   {
     id: "4",
-    src: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&auto=format&fit=crop",
+    src: "assets/img/googleads/top-4.jpg",
     alt: "Neon Gradient",
     rotation: 5,
   },
   {
     id: "5",
-    src: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&auto=format&fit=crop",
+    src: "assets/img/googleads/top-5.jpg",
     alt: "Neon Gradient",
     rotation: 6,
   },
@@ -52,8 +52,8 @@ export function ImageCarouselHero({
   images = DEFAULT_ONLINE_IMAGES,
 }: ImageCarouselHeroProps) {
   return (
-    <section className="seo-hero-section">
-      <div className="seo-hero-container">
+    <section className="px-about-6-area pt-50 pb-80 pb-lg-110  position-relative overflow-hidden">
+      <div className="container container-1550">
         {/* Soft Background Accent Glows */}
         <div className="bg-blur-circle blur-top-right" />
         <div className="bg-blur-circle blur-bottom-left" />
@@ -90,7 +90,6 @@ export function ImageCarouselHero({
         <div className="carousel-stage">
           <div className="carousel-3d-perspective">
             {images?.map((image, index) => {
-              // Apply different rotation angles for each card to create a staggered look
               const rotationAngles = [-4, 3, -2, 5, -3];
               const rotation = rotationAngles[index % rotationAngles.length] || 0;
 
@@ -125,7 +124,7 @@ export function ImageCarouselHero({
           </div>
         </div>
 
-        <p className="text-figtree text-black mt-2" data-aos="fade-up" >
+        <p className="text-figtree text-black mt-2" data-aos="fade-up">
           As an experienced Google Ads management agency in Chennai, we help
           businesses make the most of Google Ads, Google AdWords, PPC campaigns,
           search advertising, display advertising, remarketing, and

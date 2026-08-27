@@ -196,13 +196,6 @@ export const Campaign: React.FC = () => {
     width: '100%',
   };
 
-  const sectionStyles: React.CSSProperties = {
-    padding: '60px 20px',
-    maxWidth: '1200px',
-    margin: '0 auto',
-    backgroundColor: '#ffffff',
-  };
-
   const gridStyles: React.CSSProperties = {
     display: 'grid',
     gridTemplateColumns: 'repeat(4, 1fr)',
@@ -213,34 +206,36 @@ export const Campaign: React.FC = () => {
 
   return (
     <div style={wrapperStyles}>
-      <section style={sectionStyles}>
-        {/* Title Section */}
-        <div className="row align-items-center mb-5" data-aos="fade-up">
-          <div className="col-xl-3">
-            <span className="tp-section-subtitle text-black blink-ball">
-              Google Ads
-            </span>
-          </div>
-          <div className="col-xl-9">
-            <div className="px-project-title-box">
-              <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">Google Ads </span>
-                Campaign Services
-              </h4>
+      <section className="px-about-6-area pt-80 pb-80 seo-hero-section" style={{ backgroundColor: '#ffffff' }}>
+        <div className="container container-1550 seo-hero-container">
+          {/* Title Section */}
+          <div className="row align-items-center mb-5" data-aos="fade-up">
+            <div className="col-xl-3">
+              <span className="tp-section-subtitle text-black blink-ball">
+                Google Ads
+              </span>
+            </div>
+            <div className="col-xl-9">
+              <div className="px-project-title-box">
+                <h4 className="px-about-title mb-20">
+                  <span className="text-blue-about">Google Ads </span>
+                  Campaign Services
+                </h4>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div style={gridStyles}>
-          {features.map((feature, index) => (
-            <Feature
-              key={feature.title}
-              title={feature.title}
-              description={feature.description}
-              icon={feature.icon}
-              index={index}
-            />
-          ))}
+          <div style={gridStyles}>
+            {features.map((feature, index) => (
+              <Feature
+                key={feature.title}
+                title={feature.title}
+                description={feature.description}
+                icon={feature.icon}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </div>

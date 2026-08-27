@@ -211,6 +211,7 @@ const PlusCard: React.FC<{
         padding: "28px 24px 24px 24px",
         backgroundColor: isHovered ? "#f5f5f5" : "#ffffff",
         minHeight: "220px",
+        height: "100%",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -286,59 +287,53 @@ export default function RuixenBentoCards() {
 
   return (
     <section
+      className="py-5"
       style={{
         backgroundColor: "#ffffff",
         border: "1px solid #e5e7eb",
-        padding: "0",
         fontFamily: "sans-serif",
         overflow: "hidden",
       }}
-    > 
-       
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-       
-          padding: "48px 16px",
-          boxSizing: "border-box",
-        }}
-      >
-        <div className="row  align-items-center" >
+    >
+      <div className="container container-1550 py-4">
+        <div className="row align-items-center mb-20">
           <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">
-               Drive Ethically
-
+              Drive Ethically
             </span>
           </div>
 
           <div className="col-xl-9">
             <div className="px-project-title-box">
-            
-                <h4 className="px-about-title mb-20">
-              <span className="text-blue-about"> Professional On-Page SEO Focused </span>   on Genuine Organic Results
-            </h4>
-            <p className="text-figtree text-black mt-2 "> We follow transparent and ethical SEO practices focused on sustainable growth. Our approach is designed to improve website quality, relevance, authority, and user experience without relying on misleading or manipulative techniques.</p>
-            
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">
+                  {" "}
+                  Professional On-Page SEO Focused{" "}
+                </span>{" "}
+                on Genuine Organic Results
+              </h4>
+              <p className="text-figtree text-black mt-2 ">
+                {" "}
+                We follow transparent and ethical SEO practices focused on
+                sustainable growth. Our approach is designed to improve
+                website quality, relevance, authority, and user experience
+                without relying on misleading or manipulative techniques.
+              </p>
             </div>
           </div>
         </div>
-        {/* Responsive Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "24px",
-          }}
-        >
+
+        {/* Responsive Bootstrap Row (3 cards per row on desktop) */}
+        <div className="row justify-content-center">
           {cardContents.map((card, index) => (
-            <PlusCard
-              key={index}
-              index={index}
-              title={card.title}
-              description={card.description}
-              icon={card.icon}
-            />
+            <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
+              <PlusCard
+                index={index}
+                title={card.title}
+                description={card.description}
+                icon={card.icon}
+              />
+            </div>
           ))}
         </div>
 
@@ -354,10 +349,7 @@ export default function RuixenBentoCards() {
             padding: "0 16px",
             marginTop: "48px",
           }}
-        >
-
-
-        </div>
+        ></div>
       </div>
     </section>
   );

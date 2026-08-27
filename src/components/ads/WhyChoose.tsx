@@ -269,8 +269,12 @@ export default function AboutSection3() {
   };
 
   return (
-    <section style={styles.section} ref={heroRef}>
-      <div style={styles.container}>
+    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{
+        backgroundColor: "#ffffff ",
+      
+      }}
+>
+      <div className="container container-1550">
         <div style={styles.relativeWrapper}>
           {/* Header Bar / Title Section */}
           <div className="row align-items-center mb-5" data-aos="fade-up">
@@ -314,7 +318,7 @@ export default function AboutSection3() {
                 preserveAspectRatio="xMidYMid slice"
                 width="100%"
                 height="100%"
-                xlinkHref="https://images.unsplash.com/photo-1718601980986-0ce75101d52d?w=1200&auto=format&fit=crop"
+                xlinkHref="/assets/img/googleads/image-@.jpg"
               />
             </svg>
           </TimelineContent>

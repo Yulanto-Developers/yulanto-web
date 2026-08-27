@@ -190,14 +190,6 @@ export const PpcProcess: React.FC = () => {
 
   const wrapperStyles: React.CSSProperties = {
     width: '100%',
-    padding: '90px 0',
-   
-  };
-
-  const containerStyles: React.CSSProperties = {
-    maxWidth: '1280px',
-    margin: '0 auto',
-    padding: '0 24px',
   };
 
   const gridStyles: React.CSSProperties = {
@@ -208,36 +200,38 @@ export const PpcProcess: React.FC = () => {
 
   return (
     <div style={wrapperStyles}>
-      <section style={containerStyles}>
-        {/* Section Header */}
-        <div className="row align-items-center mb-5" data-aos="fade-up" data-aos-duration="800">
-          <div className="col-xl-3">
-            <span className="tp-section-subtitle text-black blink-ball">
-             Our Google PPC Campaign Process
-            </span>
-          </div>
-          <div className="col-xl-9">
-            <div className="px-project-title-box">
-              <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">A Structured Approach to </span>
-                Pay-Per-Click Advertising
-              </h4>
-              <p className="text-figtree text-black mt-2">Our PPC management services in Chennai follow a structured process designed to improve campaign efficiency and maximize advertising opportunities.</p>
+      <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
+        <div className="container container-1550">
+          {/* Section Header */}
+          <div className="row align-items-center mb-5" data-aos="fade-up" data-aos-duration="800">
+            <div className="col-xl-3">
+              <span className="tp-section-subtitle text-black blink-ball">
+                Our Google PPC Campaign Process
+              </span>
+            </div>
+            <div className="col-xl-9">
+              <div className="px-project-title-box">
+                <h4 className="px-about-title mb-20">
+                  <span className="text-blue-about">A Structured Approach to </span>
+                  Pay-Per-Click Advertising
+                </h4>
+                <p className="text-figtree text-black mt-2">Our PPC management services in Chennai follow a structured process designed to improve campaign efficiency and maximize advertising opportunities.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Minimal Process List Grid with Staggered AOS Animations */}
-        <div style={gridStyles}>
-          {steps.map((step, index) => (
-            <ProcessItem
-              key={step.title}
-              title={step.title}
-              description={step.description}
-              icon={step.icon}
-              delay={(index % 3) * 100}
-            />
-          ))}
+          {/* Minimal Process List Grid with Staggered AOS Animations */}
+          <div style={gridStyles}>
+            {steps.map((step, index) => (
+              <ProcessItem
+                key={step.title}
+                title={step.title}
+                description={step.description}
+                icon={step.icon}
+                delay={(index % 3) * 100}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </div>

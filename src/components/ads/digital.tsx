@@ -13,21 +13,18 @@ export interface OffPageFeatureProps {
 }
 
 export default function OffPageSeoBanner() {
- 
   return (
     <section
+      className="px-about-6-area pt-50 pb-80 pb-lg-110"
       style={{
-        padding: "60px 24px",
-       
         overflowX: "hidden",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
       <div
+        className="container container-1550"
         style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
           gap: "48px",
@@ -45,10 +42,7 @@ export default function OffPageSeoBanner() {
           style={{ width: "100%", boxSizing: "border-box" }}
         >
           <div style={{ marginBottom: "16px" }}>
-            <span
-              className="tp-section-subtitle text-black blink-ball"
-             
-            >
+            <span className="tp-section-subtitle text-black blink-ball">
               Google Ads Integration
             </span>
           </div>
@@ -104,9 +98,7 @@ export default function OffPageSeoBanner() {
               flexWrap: "wrap",
               gap: "12px",
             }}
-          >
-           
-          </div>
+          ></div>
         </motion.div>
 
         {/* Right Content / Image Frame */}
@@ -129,7 +121,6 @@ export default function OffPageSeoBanner() {
               position: "absolute",
               inset: "-10px",
               borderRadius: "24px",
-              // background: "linear-gradient(135deg, rgba(37,99,235,0.08), rgba(147,197,253,0.12))",
               zIndex: 0,
             }}
           />
@@ -148,7 +139,7 @@ export default function OffPageSeoBanner() {
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80"
+              src="assets/img/googleads/bottom-1.jpg"
               alt="Google Ads & Digital Marketing Integration"
               style={{
                 width: "100%",
@@ -157,8 +148,6 @@ export default function OffPageSeoBanner() {
                 display: "block",
               }}
             />
-
-       
           </div>
         </motion.div>
       </div>

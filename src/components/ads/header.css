@@ -1,20 +1,9 @@
 /* Outer Section Wrapper - Pure White Background */
 .seo-hero-section {
   width: 100%;
-  
   padding: 60px 0;
-  overflow: hidden;
-}
-
-/* Inner Container - Fixed 1200px Max Width */
-.seo-hero-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
- 
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+  overflow: hidden; /* Ensures background glows don't bleed out */
+  position: relative; /* Establishes positioning context */
 }
 
 /* Background Soft Accents */
@@ -53,18 +42,20 @@
   width: 100%;
   padding: 40px 0;
   margin-top: 20px;
-  overflow: visible;
+  overflow: hidden; /* FIX: Prevents rotated cards from bleeding outside viewport */
 }
 
+/* Grid layout for better row display */
 .carousel-3d-perspective {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 30px;
+  justify-items: center;
+  align-items: center;
   perspective: 1000px;
   padding: 20px;
+  max-width: 100%; /* FIX: Ensures grid doesn't expand past parent width */
+  box-sizing: border-box;
 }
 
 /* Cards - Row wise layout */
@@ -172,32 +163,11 @@
   transform: rotate(-1deg) scale(1.08) translateY(-5px);
 }
 
-/* Responsive row adjustments */
+/* Responsive adjustments */
 @media (max-width: 992px) {
   .carousel-3d-perspective {
     gap: 20px;
   }
-}
-
-@media (max-width: 768px) {
-  .carousel-3d-perspective {
-    gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .carousel-3d-perspective {
-    gap: 10px;
-  }
-}
-
-/* Grid layout for better row display */
-.carousel-3d-perspective {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 30px;
-  justify-items: center;
-  align-items: center;
 }
 
 @media (max-width: 768px) {

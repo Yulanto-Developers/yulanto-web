@@ -24,8 +24,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     title: "Strategic Link Building",
     tag: "Backlinks",
     iconClass: "fa-solid fa-link",
-    image:
-      "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80",
+    image: "assets/img/offpage/seo-Service-1.jpg",
     description:
       "We identify relevant, authoritative, and industry-related websites to build quality backlinks that support your SEO objectives. Our approach focuses on relevance, authority, natural link placement, and long-term value rather than simply increasing backlink numbers.",
   },
@@ -34,8 +33,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     title: "Local SEO & Citation Building",
     tag: "Local SEO",
     iconClass: "fa-solid fa-location-dot",
-    image:
-      "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
+    image: "assets/img/offpage/seo-Service-2.jpg",
     description:
       "For businesses targeting customers in Chennai, local visibility is extremely important. Our local SEO services in Chennai include business citations, local directory optimization, location-based listings, and other strategies that help strengthen your local online presence.",
   },
@@ -44,8 +42,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     title: "Business Directory Submissions",
     tag: "Directories",
     iconClass: "fa-solid fa-folder-tree",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    image: "assets/img/offpage/seo-Service-3.jpg",
     description:
       "We submit and optimize business information across relevant and trustworthy directories to improve brand visibility and maintain consistent business information across online platforms.",
   },
@@ -54,8 +51,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     title: "Guest Posting",
     tag: "Content Outreach",
     iconClass: "fa-solid fa-newspaper",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+    image: "assets/img/offpage/seo-Service-4.jpg",
     description:
       "Publishing useful and relevant content on authoritative websites can help establish industry expertise, generate referral traffic, and earn valuable backlinks.",
   },
@@ -64,8 +60,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     title: "Brand Mentions",
     tag: "Brand Awareness",
     iconClass: "fa-solid fa-bullhorn",
-    image:
-      "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=80",
+    image: "assets/img/offpage/seo-Service-5.jpg",
     description:
       "We work on increasing your brand's online visibility through relevant content, industry platforms, business profiles, and other digital channels where your target audience is active.",
   },
@@ -74,8 +69,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     title: "Competitor Backlink Analysis",
     tag: "Analysis",
     iconClass: "fa-solid fa-chart-bar",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    image: "assets/img/offpage/seo-Service-6.jpg",
     description:
       "Our SEO consultant in Chennai analyzes competitor backlink profiles to identify potential link opportunities, industry-specific platforms, content opportunities, and gaps in your current SEO strategy.",
   },
@@ -84,8 +78,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     title: "Content Promotion",
     tag: "Content Marketing",
     iconClass: "fa-solid fa-share-alt",
-    image:
-      "https://images.unsplash.com/photo-1432889821006-c0b2e7d04c9d?auto=format&fit=crop&w=800&q=80",
+    image: "assets/img/offpage/seo-Service-7.jpg",
     description:
       "Creating valuable content is only part of SEO. We also focus on promoting useful website content through relevant online channels to increase its reach, visibility, and potential for earning natural backlinks.",
   },
@@ -94,8 +87,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     title: "Social Media Promotion",
     tag: "Social Media",
     iconClass: "fa-solid fa-share-nodes",
-    image:
-      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80",
+    image: "assets/img/offpage/seo-Service-8.jpg",
     description:
       "Social media activity can support brand awareness and content distribution. We use appropriate social platforms to promote valuable content and increase opportunities for audience engagement and brand discovery.",
   },
@@ -143,14 +135,13 @@ export default function OffPageSeoParallax() {
     <div
       ref={ref}
       style={{
-        height: "220vh",
+        height: "240vh",
         paddingTop: "4rem",
         paddingBottom: "4rem",
         overflow: "hidden",
         position: "relative",
         display: "flex",
         flexDirection: "column",
-       
         perspective: "1000px",
         transformStyle: "preserve-3d",
       }}
@@ -233,17 +224,12 @@ export function Header() {
       }}
     >
       <div className="px-project-title-box">
-      
-         <h4 className="px-about-title mb-20">
-                  <span className="text-blue-about">Our Off-Page   </span>
-                   SEO Services
-                </h4>
+        <h4 className="px-about-title mb-20">
+          <span className="text-blue-about">Our Off-Page </span>
+          SEO Services
+        </h4>
 
-
-        <p
-          className="text-figtree text-black mt-2 "
-         
-        >
+        <p className="text-figtree text-black mt-2">
           As one of the professional SEO agencies in Chennai, we implement ethical and sustainable off-page SEO techniques that focus on long-term growth.
         </p>
       </div>
@@ -262,7 +248,7 @@ export function ProductCard({
     <motion.div
       style={{
         x: translate,
-        height: "380px",
+        height: "440px",
         width: "320px",
         minWidth: "320px",
         maxWidth: "320px",
@@ -300,7 +286,7 @@ export function ProductCard({
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(to top, rgba(5, 52, 86, 0.95) 0%, rgba(5, 52, 86, 0.65) 55%, rgba(0, 0, 0, 0.25) 100%)",
+            "linear-gradient(to top, rgba(5, 52, 86, 0.98) 0%, rgba(5, 52, 86, 0.8) 60%, rgba(0, 0, 0, 0.3) 100%)",
           zIndex: 2,
         }}
       />
@@ -378,12 +364,9 @@ export function ProductCard({
             style={{
               fontSize: "0.85rem !important",
               lineHeight: 1.6,
-              color: "rgba(255, 255, 255, 0.88)",
+              color: "rgba(255, 255, 255, 0.9)",
               margin: 0,
-              display: "-webkit-box",
-              WebkitLineClamp: 4,
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
+              overflow: "visible",
             }}
           >
             {product.description}

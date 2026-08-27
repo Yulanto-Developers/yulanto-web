@@ -53,26 +53,17 @@ export default function SeoServicesList() {
 
   return (
     <section
+      className="px-about-6-area pt-50 pb-80 pb-lg-110"
       data-aos="fade-up"
       data-aos-duration="600"
       style={{
         backgroundColor: "#ffffff",
         border: "1px solid #e5e7eb",
-        padding: "0",
         fontFamily: "sans-serif",
         overflow: "hidden",
       }}
     >
-      <div
-        style={{
-          backgroundColor: "#ffffff",
-          padding: "3rem 2rem",
-          maxWidth: "75rem",
-          margin: "0 auto",
-          fontFamily:
-            "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-        }}
-      >
+      <div className="container container-1550">
         {/* Title Block */}
         <div className="row align-items-center mb-20">
           <div className="col-xl-3" data-aos="fade-right" data-aos-delay="100">
@@ -101,7 +92,7 @@ export default function SeoServicesList() {
           {seoServices.map((item, index) => {
             const IconComponent = item.icon;
             const isHovered = hoveredIndex === index;
-            
+
             // Calculate row and column indices for smooth progressive staggering
             const rowIndex = Math.floor(index / 3);
             const colIndex = index % 3;

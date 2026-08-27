@@ -218,14 +218,18 @@ export function CtaCard({
     const isMobile = window.innerWidth < 768;
 
     const ctx = gsap.context(() => {
-      gsap.set(".main-card", { y: window.innerHeight + 200, autoAlpha: 1 });
+   gsap.set(".main-card", {
+  y: isMobile ? 80 : 120,
+  // scale: isMobile ? 0.96 : 0.92,
+  autoAlpha: 1,
+});
       gsap.set([".seo-content-left", ".seo-content-right", ".mockup-scroll-wrapper", ".floating-badge", ".phone-widget"], { autoAlpha: 0 });
 
       const scrollTl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=2500",
+        end: isMobile ? "+=1450" : "+=1650",
           pin: true,
           scrub: 1,
           anticipatePin: 1,
@@ -245,7 +249,7 @@ export function CtaCard({
         .fromTo(".floating-badge", { y: 100, autoAlpha: 0, scale: 0.7, rotationZ: -10 }, { y: 0, autoAlpha: 1, scale: 1, rotationZ: 0, ease: "back.out(1.5)", duration: 1.5, stagger: 0.2 }, "-=2.0")
         .fromTo(".seo-content-left", { x: -50, autoAlpha: 0 }, { x: 0, autoAlpha: 1, ease: "expo.out", duration: 1.5 }, "-=1.5")
         .fromTo(".seo-content-right", { x: 50, autoAlpha: 0 }, { x: 0, autoAlpha: 1, ease: "expo.out", duration: 1.5 }, "-=1.5")
-        .to({}, { duration: 2.5 })
+        .to({}, { duration: 0.8 })
         .to([".mockup-scroll-wrapper", ".floating-badge", ".seo-content-left", ".seo-content-right"], {
           scale: 0.9, y: -40, z: -200, autoAlpha: 0, ease: "power3.in", duration: 1.2, stagger: 0.05,
         })

@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 export default function GoogleAdsHeroSection() {
   useEffect(() => {
     AOS.init({
@@ -16,35 +15,27 @@ export default function GoogleAdsHeroSection() {
   }, []);
 
   return (
-    <section
+    <section className="px-about-6-area pt-50 pb-80 pb-lg-110"
       style={{
-      
-        padding: "4rem 0",
-       
+        
+        overflowX: "hidden", // Prevents horizontal scroll globally on this section
+     
       }}
     >
-          <h4 className="px-about-title mb-20 text-center">
-              <span className="text-blue-about">
-                Grow Your Business
-                {" "}
-              </span>
-              with Google Ads
-
-            </h4>
-      <div
-        className="container"
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          paddingLeft: "15px",
-          paddingRight: "15px",
-        }}
+      <h4 className="px-about-title mb-20 text-center">
+        <span className="text-blue-about">Grow Your Business </span>
+        with Google Ads
+      </h4>
+      
+      <div className="container container-1550"
+       
       >
         {/* Top Hero Layout */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+            // Changed minwidth from 340px to 280px to safely fit small mobile devices
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
             gap: "3rem",
             alignItems: "center",
             marginBottom: "3rem",
@@ -52,18 +43,7 @@ export default function GoogleAdsHeroSection() {
         >
           {/* Left Column Text Content */}
           <div data-aos="fade-right">
-
-
-            {/* Main Headline */}
-
-        
-
-
-            {/* Sub-text Paragraph */}
-            <p
-              className="text-figtree text-black mt-2"
-            
-            >
+            <p className="text-figtree text-black mt-2">
               Get your business in front of customers who are actively searching for your products or services. Partner with a{" "}
               <strong style={{ color: "#0a192f" }}>Google Ads agency in Chennai</strong> that focuses on strategic PPC campaign management, targeted advertising, measurable performance, and continuous optimization.
             </p>
@@ -109,31 +89,31 @@ export default function GoogleAdsHeroSection() {
                 <strong style={{ color: "#53ae7d" }}>Google advertising campaigns</strong> aligned with your business goals.
               </p>
             </div>
-               <p
-              className="text-figtree text-black mt-2"
-            
-            > Start your Google Ads campaign today and turn relevant searches into valuable business opportunities.</p>
-          
+
+            <p className="text-figtree text-black mt-2">
+              Start your Google Ads campaign today and turn relevant searches into valuable business opportunities.
+            </p>
           </div>
 
           {/* Right Column: Google Ads Mockup Graphics */}
-          <div data-aos="fade-left" data-aos-delay="200" style={{ position: "relative" }}>
-            {/* Soft Blue Arc Background Accent */}
+          <div data-aos="fade-left" data-aos-delay="200" style={{ position: "relative", width: "100%" }}>
+            {/* Soft Blue Arc Background Accent (Constrained inside boundaries) */}
             <div
               style={{
                 position: "absolute",
-                top: "-10%",
-                right: "-10%",
+                top: "-5%",
+                right: "0%",
                 width: "100%",
-                height: "110%",
+                height: "100%",
                 background: "radial-gradient(circle at 70% 30%, #dbeafe 0%, rgba(219,234,254,0) 70%)",
                 borderRadius: "50%",
                 zIndex: 0,
+                pointerEvents: "none",
               }}
             />
 
             {/* Wrapper Container */}
-            <div style={{ position: "relative", zIndex: 1, padding: "1rem" }}>
+            <div style={{ position: "relative", zIndex: 1, padding: "1rem 0" }}>
               {/* Top Google Ads Header Logo */}
               <div
                 style={{
@@ -159,7 +139,9 @@ export default function GoogleAdsHeroSection() {
                   boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.08)",
                   overflow: "hidden",
                   maxWidth: "460px",
+                  width: "100%",
                   margin: "0 auto",
+                  boxSizing: "border-box",
                 }}
               >
                 {/* Window Top Controls Bar */}
@@ -192,13 +174,13 @@ export default function GoogleAdsHeroSection() {
                       marginBottom: "1.25rem",
                     }}
                   >
-                    <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", overflow: "hidden" }}>
                       <span style={{ fontWeight: 700, color: "#4285f4", fontSize: "1.1rem" }}>G</span>
-                      <span style={{ fontSize: "0.875rem", color: "#1e293b", fontWeight: 500 }}>
+                      <span style={{ fontSize: "0.875rem", color: "#1e293b", fontWeight: 500, whiteSpace: "nowrap" }}>
                         Best Business Solutions
                       </span>
                     </div>
-                    <i className="fa-solid fa-microphone" style={{ color: "#4285f4", fontSize: "0.9rem" }} />
+                    <i className="fa-solid fa-microphone" style={{ color: "#4285f4", fontSize: "0.9rem", flexShrink: 0 }} />
                   </div>
 
                   {/* Ad Result Card Mockup */}
@@ -211,7 +193,7 @@ export default function GoogleAdsHeroSection() {
                       boxShadow: "0 2px 4px rgba(0,0,0,0.02)",
                     }}
                   >
-                    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.35rem" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.35rem", flexWrap: "wrap" }}>
                       <span
                         style={{
                           backgroundColor: "#e6f4ea",
@@ -242,40 +224,39 @@ export default function GoogleAdsHeroSection() {
               <div
                 style={{
                   position: "absolute",
-                  bottom: "-20px",
-                  left: "0px",
+                  bottom: "-10px",
+                  left: "10px", // Moved inside boundary to eliminate overflow
                   backgroundColor: "#ffffff",
                   border: "1px solid #e2e8f0",
                   borderRadius: "1rem",
-                  padding: "1rem 1.25rem",
+                  padding: "0.75rem 1rem",
                   boxShadow: "0 15px 25px -5px rgba(0, 0, 0, 0.1)",
-                  minWidth: "180px",
+                  maxWidth: "180px",
+                  zIndex: 2,
                 }}
               >
-                <div style={{ fontSize: "0.75rem", color: "#64748b", fontWeight: 600, marginBottom: "0.5rem" }}>
+                <div style={{ fontSize: "0.75rem", color: "#64748b", fontWeight: 600, marginBottom: "0.25rem" }}>
                   Performance Overview
                 </div>
-                <div style={{ display: "flex", alignItems: "baseline", gap: "0.35rem", marginBottom: "0.25rem" }}>
-                  <span style={{ fontSize: "1.35rem", fontWeight: 800, color: "#53ae7d" }}>+152%</span>
+                <div style={{ display: "flex", alignItems: "baseline", gap: "0.35rem" }}>
+                  <span style={{ fontSize: "1.2rem", fontWeight: 800, color: "#53ae7d" }}>+152%</span>
                   <i className="fa-solid fa-arrow-up" style={{ color: "#53ae7d", fontSize: "0.85rem" }} />
                 </div>
-                <div style={{ fontSize: "0.75rem", color: "#94a3b8" }}>Conversions</div>
+                <div style={{ fontSize: "0.7rem", color: "#94a3b8" }}>Conversions</div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom 5-Column Cards Grid */}
+        {/* Bottom Cards Grid */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 200px), 1fr))",
             gap: "1.25rem",
             marginTop: "2rem",
           }}
-        >
-        
-        </div>
+        ></div>
       </div>
     </section>
   );

@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 const benefitsData = [
   {
     title: "Exceptional Brand Development",
@@ -57,8 +55,8 @@ const benefitsData = [
 
 export default function SocialMediaBenefits() {
   return (
-    <section style={{ padding: "5rem 1.5rem", backgroundColor: "#ffff" }}>
-      <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
+    <section className="px-about-6-area pt-50 pb-40 pb-lg-110" style={{ backgroundColor: "#ffff" }}>
+      <div className="container container-1550">
         
           {/* Title Section */}
                 <div className="row align-items-center mb-5" data-aos="fade-up">
@@ -98,19 +96,18 @@ export default function SocialMediaBenefits() {
                   padding: isFeatured ? "2rem" : "1.5rem",
                   boxShadow: "0 1px 3px rgba(0, 0, 0, 0.05)",
                   gridColumn: isFeatured || isWide ? "span 2" : "span 1",
-                  gridRow: isFeatured ? "span 2" : "span 1",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
                 }}
               >
-                <blockquote style={{ margin: 0, height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                <div style={{ margin: 0, height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                   
                   {/* Card Content */}
                   <div style={{ marginBottom: "1.5rem" }}>
                     <h3
                       style={{
-                        fontSize: isFeatured ? "1.5rem" : "1.125rem !important",
+                        fontSize: "15px !important",
                         fontWeight: 600,
                         color: "#0f172a",
                         marginBottom: "0.5rem",
@@ -120,7 +117,7 @@ export default function SocialMediaBenefits() {
                     </h3>
                     <p
                       style={{
-                        fontSize: isFeatured ? "1.125rem" : "0.875rem !important",
+                        fontSize: "15px !important",
                         color: "#475569",
                         lineHeight: 1.6,
                         margin: 0,
@@ -207,7 +204,7 @@ export default function SocialMediaBenefits() {
                     </div>
                   </div>
 
-                </blockquote>
+                </div>
               </div>
             );
           })}

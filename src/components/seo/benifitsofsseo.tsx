@@ -198,8 +198,8 @@ export const SeoServices: React.FC = () => {
   ];
 
   return (
-    <section className="py-5" style={{ backgroundColor: "#f8f9fa" }}>
-      <div className="container py-4">
+    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ backgroundColor: "#f8f9fa" }}>
+      <div className="container container-1550">
         <div className="row align-items-center mb-20">
           <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">

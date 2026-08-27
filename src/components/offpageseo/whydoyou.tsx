@@ -52,7 +52,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
             alignItems: "center",
             justifyContent: "center",
             margin: "1rem 0",
-            maxHeight: "220px",
+         
             overflow: "hidden",
           }}
         >
@@ -111,7 +111,7 @@ export const BentoGrid: React.FC = () => {
       name: "Build Website Authority",
       description:
         "Quality backlinks from relevant and authoritative websites can help strengthen your website's authority. A strong backlink profile can support better search engine visibility and help your website compete for valuable keywords.",
-      imageUrl: "/images/keyword-research.jpg",
+      imageUrl: "assets/img/offpage/Off-Page-1.jpg",
       colClass: "col-12",
       minHeight: "340px",
       delay: 100,
@@ -120,7 +120,7 @@ export const BentoGrid: React.FC = () => {
       name: "Improve Search Rankings",
       description:
         "Off-page optimization works alongside on-page and technical SEO to improve your website's overall ranking potential. Strategic link building and online brand promotion can help your important pages gain greater visibility in search results.",
-      imageUrl: "/images/onsite-optimization.jpg",
+      imageUrl: "assets/img/offpage/Off-Page-3.jpg",
       colClass: "col-12",
       minHeight: "700px",
       delay: 200,
@@ -129,7 +129,7 @@ export const BentoGrid: React.FC = () => {
       name: "Increase Online Visibility",
       description:
         "Off-page SEO helps your business appear across multiple relevant online platforms. Business listings, industry websites, local directories, content platforms, and brand mentions can increase your digital presence.",
-      imageUrl: "/images/link-building.jpg",
+      imageUrl: "assets/img/offpage/Off-Page-4.jpg",
       colClass: "col-12",
       minHeight: "340px",
       delay: 300,
@@ -138,7 +138,7 @@ export const BentoGrid: React.FC = () => {
       name: "Generate Referral Traffic",
       description:
         "A good backlink is not only valuable for SEO. Links placed on relevant websites can introduce your business to a new audience and generate targeted referral traffic.",
-      imageUrl: "/images/analytics.jpg",
+      imageUrl: "assets/img/offpage/Off-Page-2.jpg",
       colClass: "col-12",
       minHeight: "340px",
       delay: 400,
@@ -147,7 +147,7 @@ export const BentoGrid: React.FC = () => {
       name: "Strengthen Brand Reputation",
       description:
         "Consistent brand mentions and positive online visibility can help establish your business as a reliable name within your industry. This is particularly valuable for businesses competing in crowded markets such as Chennai.",
-      imageUrl: "/images/technical-seo.jpg",
+      imageUrl: "assets/img/offpage/Off-Page-5.jpg",
       colClass: "col-12",
       minHeight: "340px",
       delay: 500,
@@ -155,8 +155,11 @@ export const BentoGrid: React.FC = () => {
   ];
 
   return (
-    <section style={{ padding: "4rem 0"}}>
-      <div className="container">
+    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{
+        backgroundColor: "#ffffff",
+      
+      }}>
+      <div className="container container-1550">
         {/* Title Block */}
         <div className="row align-items-center mb-5" data-aos="fade-up">
           <div className="col-xl-3">

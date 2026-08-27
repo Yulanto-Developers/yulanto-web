@@ -51,7 +51,7 @@ export default function SeoServicesList() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Divide 9 items cleanly into 3 explicit columns (like BentoGrid structure)
+  // Divide 9 items cleanly into 3 explicit columns
   const col1 = seoServices.slice(0, 3);
   const col2 = seoServices.slice(3, 6);
   const col3 = seoServices.slice(6, 9);
@@ -63,7 +63,7 @@ export default function SeoServicesList() {
     return (
       <div
         key={index}
-        className="mb-4"
+        className="mb-4 flex-grow-1"
         data-aos="fade-up"
         data-aos-delay={delay}
         data-aos-duration="800"
@@ -75,6 +75,8 @@ export default function SeoServicesList() {
           gap: "0.85rem",
           padding: "1.25rem 1.25rem",
           boxSizing: "border-box",
+          height: "100%",
+          minHeight: "84px",
           border: isHovered ? "1px solid #53ae7d" : "1px solid #e5e7eb",
           borderRadius: "0.5rem",
           backgroundColor: isHovered ? "#f8fdfa" : "#ffffff",
@@ -105,6 +107,7 @@ export default function SeoServicesList() {
             lineHeight: "1.35",
             color: isHovered ? "#53ae7d" : "#053456",
             transition: "color 0.25s ease",
+            flex: 1,
           }}
         >
           {item.name}
@@ -115,23 +118,12 @@ export default function SeoServicesList() {
 
   return (
     <section
+      className="px-about-6-area pt-50 pb-80 pb-lg-110"
       style={{
         backgroundColor: "#ffffff",
-        border: "1px solid #e5e7eb",
-        padding: "0",
-        fontFamily: "sans-serif",
       }}
     >
-      <div
-        style={{
-          backgroundColor: "#ffffff",
-          padding: "3rem 2rem",
-          maxWidth: "75rem",
-          margin: "0 auto",
-          fontFamily:
-            "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-        }}
-      >
+      <div className="container container-1550">
         {/* ROW 1: Title Section */}
         <div className="row align-items-center mb-4" data-aos="fade-up">
           <div className="col-xl-12">
@@ -153,20 +145,20 @@ export default function SeoServicesList() {
           </div>
         </div>
 
-        {/* 3 Explicit Bootstrap Columns (Matching BentoGrid Layout Structure) */}
-        <div className="row g-3 justify-content-center">
+        {/* 3 Explicit Bootstrap Columns with Equal Height Alignment */}
+        <div className="row g-3 justify-content-center align-items-stretch">
           {/* Column 1 */}
-          <div className="col-12 col-md-6 col-lg-4 d-flex flex-column">
+          <div className="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-between">
             {col1.map((item, idx) => renderCard(item, idx, 100 + idx * 100))}
           </div>
 
           {/* Column 2 */}
-          <div className="col-12 col-md-6 col-lg-4 d-flex flex-column">
+          <div className="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-between">
             {col2.map((item, idx) => renderCard(item, idx + 3, 200 + idx * 100))}
           </div>
 
           {/* Column 3 */}
-          <div className="col-12 col-md-6 col-lg-4 d-flex flex-column">
+          <div className="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-between">
             {col3.map((item, idx) => renderCard(item, idx + 6, 300 + idx * 100))}
           </div>
         </div>

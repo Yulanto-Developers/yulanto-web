@@ -13,18 +13,18 @@ export interface BenefitItem {
 }
 
 const BENEFITS_DATA: BenefitItem[] = [
-  { id: "1", title: "Higher Search Engine Visibility", tag: "Visibility", category: "Reach", iconClass: "fa-solid fa-eye", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" },
-  { id: "2", title: "Improved Website Authority", tag: "Authority", category: "Trust", iconClass: "fa-solid fa-award", image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" },
-  { id: "3", title: "Better Keyword Ranking Potential", tag: "Rankings", category: "SEO", iconClass: "fa-solid fa-chart-line", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" },
-  { id: "4", title: "Quality Backlink Acquisition", tag: "Backlinks", category: "Authority", iconClass: "fa-solid fa-link", image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" },
-  { id: "5", title: "Increased Referral Traffic", tag: "Traffic", category: "Reach", iconClass: "fa-solid fa-users-rays", image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=800&q=80" },
-  { id: "6", title: "Improved Local Search Visibility", tag: "Local SEO", category: "Targeting", iconClass: "fa-solid fa-location-dot", image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" },
-  { id: "7", title: "Greater Brand Awareness", tag: "Awareness", category: "Branding", iconClass: "fa-solid fa-bullhorn", image: "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=80" },
-  { id: "8", title: "Stronger Online Reputation", tag: "Reputation", category: "Trust", iconClass: "fa-solid fa-shield-halved", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" },
-  { id: "9", title: "Better Industry Credibility", tag: "Credibility", category: "Authority", iconClass: "fa-solid fa-user-check", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" },
-  { id: "10", title: "More Qualified Website Visitors", tag: "Leads", category: "Conversion", iconClass: "fa-solid fa-bullseye", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" },
-  { id: "11", title: "Long-Term Organic Growth", tag: "Growth", category: "Strategy", iconClass: "fa-solid fa-seedling", image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?auto=format&fit=crop&w=800&q=80" },
-  { id: "12", title: "Greater Competitive Advantage", tag: "Advantage", category: "Market", iconClass: "fa-solid fa-trophy", image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" },
+  { id: "1", title: "Higher Search Engine Visibility", tag: "Visibility", category: "Reach", iconClass: "fa-solid fa-eye", image: "assets/img/offpage/Benefits-1.jpg" },
+  { id: "2", title: "Improved Website Authority", tag: "Authority", category: "Trust", iconClass: "fa-solid fa-award", image: "assets/img/offpage/Benefits-2.jpg" },
+  { id: "3", title: "Better Keyword Ranking Potential", tag: "Rankings", category: "SEO", iconClass: "fa-solid fa-chart-line", image: "assets/img/offpage/Benefits-3.jpg" },
+  { id: "4", title: "Quality Backlink Acquisition", tag: "Backlinks", category: "Authority", iconClass: "fa-solid fa-link", image: "assets/img/offpage/Benefits-4.jpg" },
+  { id: "5", title: "Increased Referral Traffic", tag: "Traffic", category: "Reach", iconClass: "fa-solid fa-chart-line-up", image: "assets/img/offpage/Benefits-5.jpg" },
+  { id: "6", title: "Improved Local Search Visibility", tag: "Local SEO", category: "Targeting", iconClass: "fa-solid fa-location-dot", image: "assets/img/offpage/Benefits-6.jpg" },
+  { id: "7", title: "Greater Brand Awareness", tag: "Awareness", category: "Branding", iconClass: "fa-solid fa-bullhorn", image: "assets/img/offpage/Benefits-7.jpg" },
+  { id: "8", title: "Stronger Online Reputation", tag: "Reputation", category: "Trust", iconClass: "fa-solid fa-star-half-stroke", image: "assets/img/offpage/Benefits-8.jpg" },
+  { id: "9", title: "Better Industry Credibility", tag: "Credibility", category: "Authority", iconClass: "fa-solid fa-user-check", image: "assets/img/offpage/Benefits-9.jpg" },
+  { id: "10", title: "More Qualified Website Visitors", tag: "Leads", category: "Conversion", iconClass: "fa-solid fa-bullseye", image: "assets/img/offpage/Benefits-10.jpg" },
+  { id: "11", title: "Long-Term Organic Growth", tag: "Growth", category: "Strategy", iconClass: "fa-solid fa-seedling", image: "assets/img/offpage/Benefits-11.jpg" },
+  { id: "12", title: "Greater Competitive Advantage", tag: "Advantage", category: "Market", iconClass: "fa-solid fa-trophy", image: "assets/img/offpage/Benefits-12.jpg" },
 ];
 
 export default function BenefitsSection() {
@@ -41,7 +41,7 @@ export default function BenefitsSection() {
         const nextIndex = (currentIndex + 1) % BENEFITS_DATA.length;
         return BENEFITS_DATA[nextIndex].id;
       });
-    }, 4000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [isPaused]);
@@ -49,8 +49,8 @@ export default function BenefitsSection() {
   const activeItem = BENEFITS_DATA.find((item) => item.id === selectedId) || BENEFITS_DATA[0];
 
   return (
-    <section style={{ backgroundColor: "#fff", padding: "5rem 0" }}>
-      <div className="container">
+    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" >
+      <div className="container container-1550">
         {/* Header Section */}
         <div className="row align-items-center mb-5">
           <div className="col-xl-3">

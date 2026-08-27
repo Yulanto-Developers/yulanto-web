@@ -23,15 +23,14 @@ export default function ChooseSeoAgencySection() {
 
   return (
     <section
+      className="px-about-6-area pt-50 pb-80 pb-lg-110"
       data-aos="fade-up"
       data-aos-duration="600"
       style={{
-      
-       
         overflow: "hidden",
       }}
     >
-      <div className="container" style={{ padding: "4rem 15px", maxWidth: "1200px", margin: "0 auto" }}>
+      <div className="container container-1550">
         {/* Header Block */}
         <div className="row align-items-center mb-5" data-aos="fade-up">
           <div className="col-xl-3">

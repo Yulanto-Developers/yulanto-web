@@ -14,13 +14,13 @@ export interface HeroCollageProps extends React.HTMLAttributes<HTMLDivElement> {
 
 // Sample placeholder images structured to mirror your reference image
 const INTERNAL_IMAGES = [
-  "assets/img/seo/top/top-img-1.jpg", // 1. Center Girl
+  "assets/img/seo/top/top-img-4.jpg", // 1. Center Girl
   "assets/img/seo/top/top-img-2.jpg", // 2. Curology Bottle
   "assets/img/seo/top/top-img-3.jpg", // 3. Bread Bowl
-  "assets/img/seo/top/top-img-4.jpg", // 4. Flower Heart
-  "assets/img/seo/top/top-img-5.jpg", // 5. Red Car
-  "assets/img/seo/top/top-img-6.jpg", // 6. Sunset Mountain
-  "assets/img/seo/top/top-img-7.jpg", // 7. Umbrellas
+  "assets/img/seo/top/top-img-6.jpg", // 4. Flower Heart
+  "assets/img/seo/top/top-img-7.jpg", // 5. Red Car
+  "assets/img/seo/top/top-img-5.jpg", // 6. Sunset Mountain
+  "assets/img/seo/top/top-img-1.jpg", // 7. Umbrellas
 ];
 
 const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
@@ -36,8 +36,12 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
     const activeImages = images.length > 0 ? images : INTERNAL_IMAGES;
 
     return (
-      <section ref={ref} className={`hero-collage-section py-5 ${className}`} {...props}>
-        <div className="container">
+      <section 
+        ref={ref} 
+        className={`px-about-6-area pt-50 pb-80 pb-lg-110 ${className}`} 
+        {...props}
+      >
+        <div className="container container-1550">
           {/* Section Header */}
           <div className="row align-items-center mb-5" data-aos="fade-up">
             <div className="col-xl-3">
@@ -49,12 +53,11 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
             <div className="col-xl-9">
               <div className="px-project-title-box">
                 <h4 className="px-about-title mb-20">
-                  <span className="text-blue-about">Result-Driven SEO Strategies to   </span>
+                  <span className="text-blue-about">Result-Driven SEO Strategies to </span>
                   Increase Traffic, Rankings & Leads
                 </h4>
                 <p className="text-figtree text-black mt-2">
                   Looking for a reliable SEO company in Chennai to improve your website's search engine rankings and generate quality leads? Our Chennai SEO services are designed to increase online visibility, attract relevant organic traffic, and help businesses achieve sustainable growth.
-
                 </p>
               </div>
             </div>
@@ -128,12 +131,10 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
               )}
             </div>
           </div>
-          <p className="text-figtree text-black mt-20 font-paragraph-cls">As a professional SEO agency in Chennai, we combine keyword research, technical SEO, on-page optimization, content strategy, link building, and performance analytics to create customized search engine optimization strategies aligned with your business goals.
-</p>
-
-
+          <p className="text-figtree text-black mt-20 font-paragraph-cls">
+            As a professional SEO agency in Chennai, we combine keyword research, technical SEO, on-page optimization, content strategy, link building, and performance analytics to create customized search engine optimization strategies aligned with your business goals.
+          </p>
         </div>
-
       </section>
     );
   }

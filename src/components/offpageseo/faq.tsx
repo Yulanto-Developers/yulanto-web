@@ -186,7 +186,7 @@ export default function FAQSection({
     <section
       style={{
         width: "100%",
-        maxWidth: "1200px",
+        maxWidth: "1230px",
         margin: "0 auto",
         paddingTop: "4rem",
         paddingBottom: "4rem",

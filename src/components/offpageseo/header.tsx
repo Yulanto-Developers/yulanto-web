@@ -24,11 +24,11 @@ export interface CoverflowCarouselProps {
 }
 
 const DEFAULT_SLIDES: CoverflowSlide[] = [
-    { src: "https://picsum.photos/id/1015/600/600", alt: "SEO Strategy 1" },
-    { src: "https://picsum.photos/id/1018/600/600", alt: "SEO Strategy 2" },
-    { src: "https://picsum.photos/id/1025/600/600", alt: "SEO Strategy 3" },
-    { src: "https://picsum.photos/id/1035/600/600", alt: "SEO Strategy 4" },
-    { src: "https://picsum.photos/id/1040/600/600", alt: "SEO Strategy 5" },
+    { src: "assets/img/offpage/top-1.jpg", alt: "SEO Strategy 1" },
+    { src: "assets/img/offpage/top-2.jpg", alt: "SEO Strategy 2" },
+    { src: "assets/img/offpage/top-3.jpg", alt: "SEO Strategy 3" },
+    { src: "assets/img/offpage/top-4.jpg", alt: "SEO Strategy 4" },
+    { src: "assets/img/offpage/top-5.jpg", alt: "SEO Strategy 5" },
 ];
 
 const useIsoLayoutEffect =
@@ -192,8 +192,8 @@ export default function SeoCoverflowSection({
     };
 
     return (
-        <section style={{ backgroundColor: "#ffffff", padding: "3rem 0", overflow: "hidden" }}>
-            <div style={{ maxWidth: "75rem", margin: "0 auto", padding: "0 1.5rem" }}>
+        <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
+            <div className="container container-1550">
 
                 {/* Title Section */}
                 <div className="row align-items-center mb-5" data-aos="fade-up">
