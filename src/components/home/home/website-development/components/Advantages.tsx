@@ -37,7 +37,7 @@ const AdvantageRow = ({ item, index }: { item: AdvantageItem; index: number }) =
 );
 
 const Advantages = ({
-  items = advantagesData,
+  items = advantagesData.slice(0,4),
   subtitle = "Features"
 }: AdvantagesProps) => {
   useAOS();

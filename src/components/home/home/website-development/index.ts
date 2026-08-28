@@ -1,0 +1,2 @@
+export {default as DynamicWebsiteDevelopment} from "@/components/home/home/website-development/Dynamic-Website-Development"
+export {default as CustomWebsiteDevelopment } from "@/components/home/home/website-development/Custom-Website-Development"
