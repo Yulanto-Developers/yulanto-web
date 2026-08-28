@@ -129,6 +129,13 @@ const data = [
     currentPage: "Website Redesign ",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+   {
+    path: "/logo-design&branding",
+    title: " Logo Design & branding",
+    
+    currentPage: "Logo Design & branding",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
                       
 ];
 

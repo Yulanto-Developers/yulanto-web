@@ -59,7 +59,7 @@ export const lightMenu: MenuItem[] = [
       {
         label: "Graphic Design", href: "/",
         subLinks: [
-          { label: "Logo Design & Branding", href: "/" },
+          { label: "Logo Design & Branding", href: "/logo-design&branding" },
           { label: "Brochure & Company Profile Design", href: "/" },
           { label: "Flyer & Poster Design", href: "/" },
           { label: "Packaging Design", href: "/" },
