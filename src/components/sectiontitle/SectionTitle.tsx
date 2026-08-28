@@ -48,7 +48,7 @@ const SectionTitle = ({
             data-aos-delay={delayMs}
             data-aos-once={triggerOnce}
         >
-            <div className="container container-1550">
+            <div className="container">
                 <div className="px-project-title-wrap">
                     <div className="row">
                         <div className="col-xl-3">
