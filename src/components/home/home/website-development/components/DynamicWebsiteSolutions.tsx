@@ -10,7 +10,7 @@ import { FiSettings, FiTrendingUp, FiSearch } from 'react-icons/fi';
 const CARD_DATA = [
   {
     id: 'easy-manage',
-    image: '/assets/images/webdev/Image-1.jpg',
+    image: '/assets/images/webdev/image-1.jpg',
     icon: FiSettings,
     title: 'Easy to Manage',
     text: 'A dynamic website is a perfect solution for large corporations aiming to effortlessly publish and oversee products.',
@@ -18,7 +18,7 @@ const CARD_DATA = [
   },
   {
     id: 'highly-scalable',
-    image: '/assets/images/webdev/Image-2.jpg',
+    image: '/assets/images/webdev/image-2.jpg',
     icon: FiTrendingUp,
     title: 'Highly Scalable Solution',
     text: 'Access modules providing interactive features like e-commerce, blogs, and secure login.',
@@ -26,7 +26,7 @@ const CARD_DATA = [
   },
   {
     id: 'search-engine-support',
-    image: '/assets/images/webdev/Image-3.jpg',
+    image: '/assets/images/webdev/image-3.jpg',
     icon: FiSearch,
     title: 'Supported By Search Engines',
     text: 'Pages are indexed quickly, giving higher rankings to recently updated content.',
