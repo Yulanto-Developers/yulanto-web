@@ -45,7 +45,6 @@ const HeroSectionDemo = () => {
         title={heroData.title}
         subtitle={heroData.subtitle}
         bulletPoints={bulletList}
-        stats={heroData.stats}
         images={heroData.images}
       />
     </div>
