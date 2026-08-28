@@ -44,13 +44,13 @@ const AboutUs = () => {
               <div
                 data-aos="image-zoom"
                 data-aos-delay="300"
-                style={{ width: 'auto', height: 'auto' }}
+                
               >
                 <img
                   src={image3.src}
                   alt="Team collaborating in modern web development office"
-                  className="img-fluid"
-                  style={{ width: '100%', height: 'auto' }}
+                  className="img-fluid about-small-img"
+                  
                 />
               </div>
             </div>
@@ -69,13 +69,13 @@ const AboutUs = () => {
                 className="about-img-wrap"
                 data-aos="image-zoom"
                 data-aos-delay="100"
-                style={{ width: 'auto', height: 'auto' }}
+                
               >
                 <img
                   src={image1.src}
                   alt="Team collaborating in modern web development office"
-                  className="img-fluid"
-                  style={{ width: '100%', height: 'auto' }}
+                  className="img-fluid about-small-img"
+                  
                 />
               </div>
             </div>
@@ -139,13 +139,13 @@ const AboutUs = () => {
               <div
                 data-aos="image-rotate"
                 data-aos-delay="300"
-                style={{ width: 'auto', height: 'auto' }}
+                
               >
                 <img
                   src={image4.src}
                   alt="Team collaborating in modern web development office"
-                  className="img-fluid"
-                  style={{ width: '100%', height: 'auto' }}
+                  className="img-fluid about-small-img"
+                  
                 />
               </div>
             </div>
@@ -164,13 +164,13 @@ const AboutUs = () => {
                 className="about-img-wrap"
                 data-aos="image-zoom"
                 data-aos-delay="100"
-                style={{ width: 'auto', height: 'auto' }}
+                
               >
                 <img
                   src={image2.src}
                   alt="Digital growth and web analytics strategies"
-                  className="img-fluid"
-                  style={{ width: '100%', height: 'auto' }}
+                  className="img-fluid about-small-img"
+                  
                 />
               </div>
             </div>
