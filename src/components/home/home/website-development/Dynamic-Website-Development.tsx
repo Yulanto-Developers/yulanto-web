@@ -29,7 +29,7 @@ function DynamicWebsiteDevelopment() {
                                     <img
                                         src={image.src}
                                         alt="Digital growth and web analytics strategies"
-                                        className="img-fluid about-small-img"
+                                        className="about-small-img"
                                         
                                     />
                                 </div>

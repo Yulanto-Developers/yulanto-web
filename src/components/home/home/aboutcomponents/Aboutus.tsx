@@ -49,7 +49,7 @@ const AboutUs = () => {
                 <img
                   src={image3.src}
                   alt="Team collaborating in modern web development office"
-                  className="img-fluid about-small-img"
+                  className="about-small-img"
                   
                 />
               </div>
@@ -74,7 +74,7 @@ const AboutUs = () => {
                 <img
                   src={image1.src}
                   alt="Team collaborating in modern web development office"
-                  className="img-fluid about-small-img"
+                  className="about-small-img"
                   
                 />
               </div>
@@ -144,7 +144,7 @@ const AboutUs = () => {
                 <img
                   src={image4.src}
                   alt="Team collaborating in modern web development office"
-                  className="img-fluid about-small-img"
+                  className="about-small-img"
                   
                 />
               </div>
@@ -169,7 +169,7 @@ const AboutUs = () => {
                 <img
                   src={image2.src}
                   alt="Digital growth and web analytics strategies"
-                  className="img-fluid about-small-img"
+                  className="about-small-img"
                   
                 />
               </div>
