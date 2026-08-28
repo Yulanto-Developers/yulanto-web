@@ -29,17 +29,18 @@ export default function DemoPage() {
         <div className="row align-items-center mb-5">
           <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">
-              Our Works
+              Our Logo Design Portfolio
             </span>
           </div>
           <div className="col-xl-9">
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">Our Logo Portfolio</span>
+                <span className="text-blue-about">Creative Logo Concepts </span>for Different Industries
               </h4>
               <p className="text-figtree text-black mt-2">
-                Our designers initiate the branding logo design process by employing creativity, an
-                eye for detail, and a profound understanding of branding principles.
+                Our designers have experience creating logos for startups, small businesses, established companies, professionals, institutions, and various industries.
+
+                From simple and elegant wordmarks to modern abstract symbols, we develop logo concepts based on the unique requirements of each brand.
               </p>
             </div>
           </div>

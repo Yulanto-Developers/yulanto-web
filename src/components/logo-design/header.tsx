@@ -49,19 +49,19 @@ export default function CardSpread({
                 <div className="row align-items-center mb-5">
                     <div className="col-xl-3">
                         <span className="tp-section-subtitle text-black blink-ball">
-                            Off-Page SEO in Chennai
+                           Logo Design Company in Chennai
                         </span>
                     </div>
                     <div className="col-xl-9">
                         <div className="px-project-title-box">
                             <h4 className="px-about-title mb-20">
-                                <span className="text-blue-about">Business Logo </span>
-                                 Design in Chennai
+                                <span className="text-blue-about">Creative Logo Designs That </span>
+                               Build a Strong Brand Identity
                             </h4>
                           <p className="text-figtree text-black mt-2">
-                              We Create Interesting Logos
-                              That Create Value Your Business Objectives. Logo Designs That Identify With Your
-                              Brand
+                            A great logo is more than just a graphic—it is the visual identity of your business. At Yulanto Web Creations, we create distinctive, professional, and memorable logos that help businesses establish a strong presence across digital and offline platforms.
+
+As a logo design company in Chennai, we combine creativity, strategic thinking, typography, colors, and visual elements to create logos that reflect your brand personality and business goals.
                           </p>
                         </div>
                     </div>
@@ -120,6 +120,7 @@ export default function CardSpread({
             })}
           </div>
         </div>
+         <p className="text-figtree text-black mt-2"> Whether you are launching a new business, refreshing an existing brand, or looking for a completely new identity, our creative team can develop a logo that makes your brand stand out.If you are looking for logo designers in Chennai who understand branding and modern design trends, we can help transform your ideas into a professional visual identity.</p>
       </div>
     </section>
   );

@@ -3,39 +3,33 @@ import HeroSection from "./hero-section-9";
 import { Award, Layers, Sparkles } from "lucide-react";
 
 const HeroSectionDemo = () => {
+  const bulletList = [
+    "Business Logo Design",
+    "Corporate Logo Design",
+    "Startup Logo Design",
+    "Brand Identity Design",
+    "Custom Logo Design",
+    "Minimalist Logo Design",
+    "Modern Logo Design",
+    "Professional Logo Design",
+    "Logo Redesign",
+    "Logo Refresh",
+    "Product Logo Design",
+    "Personal Branding Logo",
+    "Social Media Logo Design",
+    "Print & Digital Logo Design",
+  ];
+
   const heroData = {
-    sectionSubtitle: "LOGO AS A BRANDING TOOL",
+    sectionSubtitle: "Logo Design Services in Chennai",
     title: (
       <>
-        <span className="text-blue-about">What Goes Into Making</span> That Ideal Logo
+        <span className="text-blue-about">Complete Creative </span> Branding Support
       </>
     ),
     subtitle:
-      "We are one of the top logo design company in Chennai, dedicating significant design efforts to craft the ideal logo for your brand. Our logos are not only eye-catching but also enduring. Creating a logo demands a creative flair, encompassing expertise in wordplay, color schemes, image curation, abstract ideation, font selection, and more.",
-    bulletPoints: [
-      "Proficient Understanding of Word Styles and Design",
-      "Generating Images that Align with Business Nature",
-      "Incorporating Company's Goals into the Logo Design",
-      "Unique and Creative Concepts that Go Beyond Traditional Approaches",
-      "Showcasing the Distinctiveness of the Business Project",
-    ],
-    stats: [
-      {
-        value: "500+",
-        label: "Logos Designed",
-        icon: <Award style={{ height: "20px", width: "20px", color: "#6b7280" }} />,
-      },
-      {
-        value: "100%",
-        label: "Custom Concepts",
-        icon: <Sparkles style={{ height: "20px", width: "20px", color: "#6b7280" }} />,
-      },
-      {
-        value: "10+",
-        label: "Years Experience",
-        icon: <Layers style={{ height: "20px", width: "20px", color: "#6b7280" }} />,
-      },
-    ],
+      "We provide professional logo design solutions for businesses at different stages of growth. Whether you need a simple business logo or a complete visual identity, our team can create a design aligned with your requirements.",
+    
     images: [
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
@@ -50,7 +44,7 @@ const HeroSectionDemo = () => {
         sectionSubtitle={heroData.sectionSubtitle}
         title={heroData.title}
         subtitle={heroData.subtitle}
-        bulletPoints={heroData.bulletPoints}
+        bulletPoints={bulletList}
         stats={heroData.stats}
         images={heroData.images}
       />

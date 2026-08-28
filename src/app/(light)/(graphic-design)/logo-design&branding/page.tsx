@@ -5,9 +5,12 @@ import Logport from "@/components/logo-design/logoportfolio"
 import Branding from "@/components/logo-design/branding"
 import LogoServicesDemo from "@/components/logo-design/services";
 import { ShuffleHero } from "@/components/logo-design/shuffle-grid";
-// import FAQA1 from './components/index';
+
 import faqa1Data from '@/components/home/home/website-development/components/faqa1data';
 import FAQA1 from '@/components/home/home/website-development/components/FAQA1';
+import Categories from '@/components/logo-design/LogoPortfolioCategories'
+import Design from '@/components/logo-design/Design'
+import Last from '@/components/logo-design/last'
 
 
 export default function Page() {
@@ -16,7 +19,11 @@ export default function Page() {
       <Breadcrumbdata />
       <Header />
       <Thelogo/>
+    
       <Logport />
+        <Categories />
+        <Design />
+
       <Branding />
       <LogoServicesDemo />
       <ShuffleHero />
@@ -24,6 +31,8 @@ export default function Page() {
         highlightedText="Frequently Asked Questions" 
         titleSuffix="About Logo Design"
          />
+         <Last />
+      
     </main>
   );
 }

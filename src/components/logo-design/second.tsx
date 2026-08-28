@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import "aos/dist/aos.css";
+import { CheckCircle2 } from "lucide-react";
 
 interface HeroProps {
   imageSrc?: string | null;
@@ -9,6 +10,15 @@ interface HeroProps {
 
 const FALLBACK_IMAGE =
   "assets/img/social/bootom-1.jpg";
+ const featuresList = [
+  "Understanding your business and brand personality",
+  "Researching your target audience and industry",
+  "Developing creative logo concepts",
+  "Selecting suitable typography and color combinations",
+  "Creating distinctive symbols and visual elements",
+  "Refining the design based on your feedback",
+  "Delivering high-quality files for print and digital use",
+];
 
 export default function Hero({ imageSrc }: HeroProps) {
   const initialSrc = imageSrc && imageSrc.trim() !== "" ? imageSrc : FALLBACK_IMAGE;
@@ -25,25 +35,50 @@ export default function Hero({ imageSrc }: HeroProps) {
             {/* Text Side */}
             <div style={textColumnStyle}>
               <span className="tp-section-subtitle text-black blink-ball">
-                THE LOGO MAKERS
+             Professional Logo Design in Chennai
               </span>
 
               <div>
-                <h4 className="px-about-title mb-20" style={headingStyle}>
-                  <span className="text-blue-about" style={blueTextStyle}>
-                    A Powerful And Recognizable Logo {" "}
+                <h4 className="px-about-title mb-20" >
+                  <span className="text-blue-about">
+                    Logos Designed to Make {" "}
                   </span>
-                  Is crucial for  effective branding.
+                  Your Brand Recognizable
 
                 </h4>
 
                 <p className="text-figtree text-black mt-2" style={paragraphStyle}>
-                  A logo may appear as a compact design linked to a name, yet its
-                  influence in establishing brand recognition is substantial. On numerous
-                  occasions, a captivating and well-thought-out logo design has played a pivotal
-                  role in the triumph of businesses. We possess exceptional expertise in crafting
-                  extraordinary and groundbreaking logos.
+                Your logo is often the first visual element customers notice about your business. A thoughtfully designed logo can communicate your brand values, create recognition, and build a consistent identity across your marketing materials.
+                 Our logo design in Chennai focuses on creating unique concepts rather than relying on generic templates. We study your business, industry, competitors, target audience, and brand objectives before developing design concepts.
                 </p>
+                <h5>Our logo design approach includes:</h5>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "12px" }}>
+              {featuresList.map((item, index) => (
+                <li
+                  key={index}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    color: "#1a1a1a",
+                    fontSize: "1rem",
+                    fontFamily: "text-figtree",
+                  }}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
+                  <CheckCircle2
+                    style={{
+                      height: "20px",
+                      width: "20px",
+                      flexShrink: 0,
+                      color: "#53ae7d",
+                    }}
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
               </div>
             </div>
 

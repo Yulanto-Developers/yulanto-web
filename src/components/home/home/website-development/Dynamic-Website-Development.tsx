@@ -74,8 +74,8 @@ function DynamicWebsiteDevelopment() {
             <Advantages />
             <WhyUsA1/>
             <FAQA1 num1={0} num2={5}
-        highlightedText="Frequently Asked " 
-        titleSuffix="Questions"
+              highlightedText="Frequently Asked " 
+               titleSuffix="Questions"
             />
         </div>
     )

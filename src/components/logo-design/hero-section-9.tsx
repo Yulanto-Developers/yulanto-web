@@ -17,7 +17,6 @@ interface HeroSectionProps {
   title: React.ReactNode;
   subtitle: string;
   bulletPoints: string[];
-  stats: StatProps[];
   images: string[];
   className?: string;
 }
@@ -43,24 +42,11 @@ const itemVariants = {
   },
 };
 
-const imageVariants = {
-  hidden: { opacity: 0, scale: 0.85 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut" as const,
-    },
-  },
-};
-
 const HeroSection = ({
   sectionSubtitle,
   title,
   subtitle,
   bulletPoints,
-  stats,
   images,
   className = "",
 }: HeroSectionProps) => {
@@ -75,7 +61,12 @@ const HeroSection = ({
   return (
     <section
       className={`px-about-6-area pt-50 pb-80 pb-lg-110 ${className}`}
-      style={{ width: "100%", overflow: "hidden", position: "relative" ,backgroundColor:"#fff" }}
+      style={{
+        width: "100%",
+        overflow: "hidden",
+        position: "relative",
+        backgroundColor: "#fff",
+      }}
     >
       <div className="container container-1550">
         <div className="row align-items-center">
@@ -105,7 +96,7 @@ const HeroSection = ({
                     aspectRatio: "1 / 1",
                     overflow: "hidden",
                   }}
-                   whileHover={{ scale: 1.03 }}
+                  whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.3 }}
                 >
                   <img
@@ -136,8 +127,11 @@ const HeroSection = ({
               initial="hidden"
               animate="visible"
             >
-              {/* Title Section Integration */}
-              <div className="row align-items-center mb-3 style-override" style={{ width: "100%" }}>
+              {/* Title Section */}
+              <div
+                className="row align-items-center mb-3 style-override"
+                style={{ width: "100%" }}
+              >
                 {sectionSubtitle && (
                   <div className="col-12 mb-2">
                     <span className="tp-section-subtitle text-black blink-ball">
@@ -163,17 +157,18 @@ const HeroSection = ({
                   </div>
                 </div>
               </div>
-
-              {/* Bullet Points */}
+                <h5 className="mt-20">Our services include:</h5>
+              {/* Bullet Points Grid (2 Columns) */}
               <motion.ul
                 style={{
                   listStyle: "none",
                   padding: 0,
                   marginTop: "16px",
                   marginBottom: "24px",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "12px",
+                  display: "grid",
+                  gridTemplateColumns: "repeat(2, 1fr)",
+                  gap: "12px 16px",
+                  width: "100%",
                 }}
                 variants={itemVariants}
               >
@@ -183,18 +178,18 @@ const HeroSection = ({
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      gap: "12px",
+                      gap: "10px",
                       color: "#1a1a1a",
-                      fontSize: "1rem",
-                      fontFamily:"text-figtree"
+                      fontSize: "0.9375rem",
+                      fontFamily: "text-figtree",
                     }}
                     data-aos="fade-up"
-                    data-aos-delay={index * 100}
+                    data-aos-delay={(index % 2) * 50}
                   >
                     <CheckCircle2
                       style={{
-                        height: "20px",
-                        width: "20px",
+                        height: "18px",
+                        width: "18px",
                         flexShrink: 0,
                         color: "#53ae7d",
                       }}
@@ -215,51 +210,7 @@ const HeroSection = ({
                 }}
                 variants={itemVariants}
               >
-                {stats.map((stat, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "12px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        height: "44px",
-                        width: "44px",
-                        borderRadius: "50%",
-                        backgroundColor: "#f3f4f6",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      {stat.icon}
-                    </div>
-                    <div>
-                      <p
-                        style={{
-                          fontSize: "1.25rem",
-                          fontWeight: 700,
-                          margin: 0,
-                          color: "#111827",
-                        }}
-                      >
-                        {stat.value}
-                      </p>
-                      <p
-                        style={{
-                          fontSize: "0.875rem",
-                          color: "#6b7280",
-                          margin: 0,
-                        }}
-                      >
-                        {stat.label}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+               
               </motion.div>
             </motion.div>
           </div>

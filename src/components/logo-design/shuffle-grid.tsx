@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { CheckCircle2 } from "lucide-react"; // Ensure lucide-react is installed
+import { Check } from "lucide-react";
 
 const squareData = [
   {
@@ -71,11 +71,32 @@ const squareData = [
   },
 ];
 
-const featuresList = [
-  "Experienced Design Experts",
-  "Eye-catching and Unforgettable Logo Designs",
-  "Proficient in Logo Type Selection",
-  "A Variety of Design Choices to Select From",
+const processSteps = [
+  {
+    title: "Requirement Understanding",
+    description:
+      "We learn about your business, industry, audience, competitors, and branding preferences.",
+  },
+  {
+    title: "Research & Concept Development",
+    description:
+      "Our designers research relevant visual styles and develop creative concepts based on your requirements.",
+  },
+  {
+    title: "Design Creation",
+    description:
+      "We transform the selected concept into a professional logo using appropriate typography, colors, shapes, and visual elements.",
+  },
+  {
+    title: "Feedback & Refinement",
+    description:
+      "Your feedback helps us refine the design and create a final concept that matches your expectations.",
+  },
+  {
+    title: "Final Delivery",
+    description:
+      "The approved logo is prepared in suitable formats for your website, social media, print materials, and other branding requirements.",
+  },
 ];
 
 const shuffle = (array: (typeof squareData)[0][]) => {
@@ -169,44 +190,83 @@ export const ShuffleHero = () => {
         >
           <div>
             <span className="tp-section-subtitle text-black blink-ball">
-              WHY CHOOSE YULANTO AS YOUR LOGO DESIGN PARTNER
+              Our Logo Design Process
             </span>
             <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">
-                Developing Your Brand's Success{" "}
-              </span>
-              Through Effective Logo Design.
+              <span className="text-blue-about">From Your Idea </span>
+              to a Professional Brand Identity
             </h4>
             <p className="text-figtree text-black mt-2 mb-20">
-              Our team consists of skilled graphic designers with creative talent,
-              capable of crafting a unique logo design from the ground up. This
-              logo will not only enhance your brand but also be easily
-              remembered by your target audience.
+              We follow a structured design process to ensure your logo represents your business effectively.
             </p>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "12px" }}>
-              {featuresList.map((item, index) => (
+            <ul
+              style={{
+                listStyle: "none",
+                padding: 0,
+                margin: 0,
+                display: "flex",
+                flexDirection: "column",
+                gap: "16px",
+              }}
+            >
+              {processSteps.map((step, index) => (
                 <li
                   key={index}
                   style={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     gap: "12px",
                     color: "#1a1a1a",
-                    fontSize: "1rem",
                     fontFamily: "text-figtree",
                   }}
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
-                  <CheckCircle2
+                  <div
                     style={{
-                      height: "20px",
-                      width: "20px",
+                      height: "22px",
+                      width: "22px",
+                      borderRadius: "50%",
+                      backgroundColor: "#53ae7d",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                       flexShrink: 0,
-                      color: "#53ae7d",
+                      marginTop: "2px",
                     }}
-                  />
-                  <span>{item}</span>
+                  >
+                    <Check
+                      style={{
+                        height: "14px",
+                        width: "14px",
+                        color: "#ffffff",
+                        strokeWidth: 3,
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <h6
+                      style={{
+                        margin: 0,
+                        fontSize: "1rem",
+                        fontWeight: 600,
+                        color: "#053456",
+                        fontFamily: "tex-figtree",
+                      }}
+                    >
+                      {step.title}
+                    </h6>
+                    <p
+                      style={{
+                        margin: "4px 0 0 0",
+                        fontSize: "0.875rem !important",
+                        color: "#000",
+                        lineHeight: "1.5",
+                      }}
+                    >
+                      {step.description}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ul>

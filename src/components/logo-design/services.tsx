@@ -5,15 +5,15 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import { Card } from "./card";
 
-// FontAwesome Icons Setup
+// FontAwesome Solid (Filled) Icons Setup
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFont,
-  faFontAwesome,
-  faShieldHalved,
-  faIcons,
-  faShapes,
-  faLayerGroup,
+  faUserGear,       // Experienced Designers
+  faPenRuler,       // Custom-Created Concepts
+  faFileCircleCheck,// Professional File Formats
+  faBullseye,       // Brand-Focused Approach
+  faPalette,        // Multiple Design Options
+  faPrint,          // Digital & Print Ready
 } from "@fortawesome/free-solid-svg-icons";
 
 export interface HighlightCardProps {
@@ -84,7 +84,8 @@ export const HighlightCard: FC<HighlightCardProps> = ({
             >
               <div
                 style={{
-                  padding: "18px",
+                  width: "64px",
+                  height: "64px",
                   borderRadius: "50%",
                   border: "2px solid #53ae7d",
                   backgroundColor: "#053456",
@@ -99,11 +100,12 @@ export const HighlightCard: FC<HighlightCardProps> = ({
             </div>
           )}
 
-          {/* Title utilizing h4 tag */}
+          {/* Title */}
           <h4
             style={{
               marginBottom: "16px",
               fontSize: "1.35rem",
+              fontFamily:"text-figtree",
               fontWeight: 700,
               color: "#53ae7d",
               margin: "0 0 16px 0",
@@ -112,7 +114,7 @@ export const HighlightCard: FC<HighlightCardProps> = ({
             {title}
           </h4>
 
-          {/* Description utilizing p tags */}
+          {/* Description */}
           <div style={{ flexGrow: 1 }}>
             {description.map((line, idx) => (
               <p
@@ -157,105 +159,97 @@ export default function LogoServicesDemo() {
 
   const logoTypesData: Omit<HighlightCardProps, "aosDelay">[] = [
     {
-      title: "Wordmark or Logotype",
+      title: "Experienced Designers",
       description: [
-        "These logos consist mainly of text, with the company's name stylized in a unique font or typography.",
-        "Examples include Coca-Cola, Google, and FedEx.",
+        "Our creative team understands branding, typography, color psychology, composition, and modern design principles.",
       ],
       icon: (
         <FontAwesomeIcon
-          icon={faFont}
-          style={{ fontSize: "28px", color: "#53ae7d" }}
+          icon={faUserGear}
+          style={{ fontSize: "26px", color: "#53ae7d" }}
         />
       ),
     },
     {
-      title: "Lettermark",
+      title: "Custom-Created Concepts",
       description: [
-        "Similar to wordmarks, but they use initials or abbreviations of the company's name to create a distinct design.",
-        "Examples include IBM, CNN, and HBO.",
+        "We create designs according to your business requirements instead of depending on generic templates.",
       ],
       icon: (
         <FontAwesomeIcon
-          icon={faFontAwesome}
-          style={{ fontSize: "28px", color: "#53ae7d" }}
+          icon={faPenRuler}
+          style={{ fontSize: "26px", color: "#53ae7d" }}
         />
       ),
     },
     {
-      title: "Emblem",
+      title: "Professional File Formats",
       description: [
-        "These logos integrate text within a symbol or icon, often encased in a shape like a badge or seal.",
-        "Examples include Starbucks, Harley-Davidson, and the NFL.",
+        "We provide appropriate file formats so your logo can be used across different digital and print applications.",
       ],
       icon: (
         <FontAwesomeIcon
-          icon={faShieldHalved}
-          style={{ fontSize: "28px", color: "#53ae7d" }}
+          icon={faFileCircleCheck}
+          style={{ fontSize: "26px", color: "#53ae7d" }}
         />
       ),
     },
     {
-      title: "Pictorial Mark or Symbol",
+      title: "Brand-Focused Approach",
       description: [
-        "These logos are composed of a recognizable symbol or icon without any text.",
-        "Examples include Apple, Nike, and Twitter.",
+        "Every design decision is made with your brand personality, audience, and business objectives in mind.",
       ],
       icon: (
         <FontAwesomeIcon
-          icon={faIcons}
-          style={{ fontSize: "28px", color: "#53ae7d" }}
+          icon={faBullseye}
+          style={{ fontSize: "26px", color: "#53ae7d" }}
         />
       ),
     },
     {
-      title: "Abstract Mark",
+      title: "Multiple Design Options",
       description: [
-        "These logos use abstract shapes or forms to represent the brand without relying on literal imagery.",
-        "Examples include Pepsi, Adidas, and Shell.",
+        "We explore different creative directions to help you choose a concept that best represents your business.",
       ],
       icon: (
         <FontAwesomeIcon
-          icon={faShapes}
-          style={{ fontSize: "28px", color: "#53ae7d" }}
+          icon={faPalette}
+          style={{ fontSize: "26px", color: "#53ae7d" }}
         />
       ),
     },
     {
-      title: "Combination Mark",
+      title: "Digital & Print Ready",
       description: [
-        "These logos combine a wordmark or lettermark with a symbol or icon.",
-        "Examples include Burger King, Adidas, and Doritos.",
+        "Your final logo can be prepared for websites, social media, business cards, brochures, signage, packaging, and other marketing materials.",
       ],
       icon: (
         <FontAwesomeIcon
-          icon={faLayerGroup}
-          style={{ fontSize: "28px", color: "#53ae7d" }}
+          icon={faPrint}
+          style={{ fontSize: "26px", color: "#53ae7d" }}
         />
       ),
     },
   ];
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110"
-      
-    >
-      <div   className="container container-1550" >
+    <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
+      <div className="container container-1550">
         {/* Title Section */}
         <div className="row align-items-center mb-5">
           <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">
-              Logo Design Services
+              Why Choose Yulanto for Logo Design?
             </span>
           </div>
           <div className="col-xl-9">
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">Different Logo Types </span>
-                For Different Business
+                <span className="text-blue-about">Creative Ideas. Professional Design. </span>
+                Stronger Branding.
               </h4>
               <p className="text-figtree text-black mt-2">
-                Before designing the logo itself, there is a wide range of logo types available to choose from. Our company, located in Chennai, is renowned as the top logo design company that excels in selecting the most suitable logo type for achieving success.
+                Choosing the right logo design company in Chennai can make a significant difference to your brand identity. At Yulanto Web Creations, we focus on creating logos that are not only attractive but also meaningful and practical for your business.
               </p>
             </div>
           </div>
