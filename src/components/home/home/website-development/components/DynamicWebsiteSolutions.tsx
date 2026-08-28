@@ -6,10 +6,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FiSettings, FiTrendingUp, FiSearch } from 'react-icons/fi';
 
+
 const CARD_DATA = [
   {
     id: 'easy-manage',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop',
+    image: '/assets/images/webdev/image-1.jpg',
     icon: FiSettings,
     title: 'Easy to Manage',
     text: 'A dynamic website is a perfect solution for large corporations aiming to effortlessly publish and oversee products.',
@@ -17,7 +18,7 @@ const CARD_DATA = [
   },
   {
     id: 'highly-scalable',
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop',
+    image: '/assets/images/webdev/image-2.jpg',
     icon: FiTrendingUp,
     title: 'Highly Scalable Solution',
     text: 'Access modules providing interactive features like e-commerce, blogs, and secure login.',
@@ -25,7 +26,7 @@ const CARD_DATA = [
   },
   {
     id: 'search-engine-support',
-    image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop',
+    image: '/assets/images/webdev/image-3.jpg',
     icon: FiSearch,
     title: 'Supported By Search Engines',
     text: 'Pages are indexed quickly, giving higher rankings to recently updated content.',

@@ -6,6 +6,8 @@ import SectionTitle from "../../../../sectiontitle/SectionTitle";
 import whyusData from "./whyusdata";
 import "./dynamicwebdesign.css";
 
+const listdt = whyusData.slice(0,8)
+
 const WhyUsA1 = () => {
     useAOS();
 
@@ -21,7 +23,7 @@ const WhyUsA1 = () => {
 
             <div className="container">
                 <div className="whyus-a3-grid">
-                    {whyusData.map((item, index) => (
+                    {listdt.map((item, index) => (
                         <div
                             className="whyus-a3-card text-figtree"
                             key={item.id}

@@ -117,6 +117,12 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
    {
+    path: "/website-development/custom-website-development",
+    title: "Custom Website Development",
+    currentPage: "Custom Website Development",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+   {
     path: "/web-design/corporate-webiste-desgin",
     title: " Corporate Website Design",
     currentPage: " Corporate Website Design ",
@@ -125,7 +131,6 @@ const data = [
    {
     path: "/web-design/website-redesign",
     title: " Website Redesign",
-    
     currentPage: "Website Redesign ",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },

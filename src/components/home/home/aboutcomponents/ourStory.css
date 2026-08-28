@@ -1,4 +1,5 @@
 /* ===== MAIN ===== */
+
 .yul-st {
   width: 100%;
   color: #334155;
@@ -6,13 +7,28 @@
   overflow: hidden;
 }
 
+
+/* ===== SMALL IMAGE ===== */
+
+.yul-st .about-small-img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+
 /* ===== BLUE SECTIONS ===== */
+
 .yul-st .about-blue-section {
   width: 100%;
   padding: 60px 20px;
   background: #0b3456;
   color: #ffffff;
 }
+
+
+/* ===== ABOUT CONTENT ===== */
 
 .yul-st .about-content-side {
   padding-left: 25px;
@@ -31,19 +47,24 @@
   line-height: 1.8;
 }
 
+
 /* ===== IMAGE ===== */
+
 .yul-st .about-img-wrap {
   position: relative;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   overflow: hidden;
   border-radius: 18px;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
 
 .yul-st .about-img-wrap img {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
+  max-width: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
@@ -52,7 +73,9 @@
   transform: scale(1.04);
 }
 
+
 /* ===== SERVICES - WHITE ===== */
+
 .yul-st .services-section {
   width: 100%;
   padding: 60px 20px;
@@ -69,16 +92,21 @@
   line-height: 1.8;
 }
 
+
 /* ===== SECOND BLUE SECTION ===== */
+
 .yul-st .second-blue-section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
+
 /* ===== RESPONSIVE ===== */
 
-/* Tablets & small laptops */
+/* Tablets & Small Laptops */
+
 @media (max-width: 992px) {
+
   .yul-st .about-blue-section {
     padding: 50px 20px;
   }
@@ -87,17 +115,17 @@
     padding-left: 0;
   }
 
-  .yul-st .about-img-wrap img {
-    height: 350px;
-  }
-
   .yul-st .services-section {
     padding: 50px 20px;
   }
+
 }
 
-/* Mobile devices */
+
+/* ===== MOBILE ===== */
+
 @media (max-width: 576px) {
+
   .yul-st .about-blue-section {
     padding: 40px 15px;
   }
@@ -107,7 +135,9 @@
   }
 
   .yul-st .about-img-wrap img {
-    height: 250px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
   }
 
   .yul-st .about-content-side h2 {
@@ -128,4 +158,5 @@
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
 }

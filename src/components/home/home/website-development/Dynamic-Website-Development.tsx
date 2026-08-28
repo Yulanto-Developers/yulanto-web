@@ -5,7 +5,8 @@ import { useAOS } from '@/components/hooks/useAOS';
 import {DynamicWebsiteSolutions, WhyUsA1, CreativeAgencyFunfact, Advantages, FAQA1} from './components/index'
 import '../aboutcomponents/ourStory.css';
 import '@/assets/css/textAnimations.css';
-import image1 from "@/assets/images/ourstory/image-1.jpg";
+import image from "@/assets/images/webdev/Image.jpg";
+
 
 function DynamicWebsiteDevelopment() {
     // Use the AOS hook
@@ -23,13 +24,13 @@ function DynamicWebsiteDevelopment() {
                                     className="about-img-wrap"
                                     data-aos="image-zoom"
                                     data-aos-delay="100"
-                                    style={{ width: 'auto', height: 'auto' }}
+                                    
                                 >
                                     <img
-                                        src={image1.src}
+                                        src={image.src}
                                         alt="Digital growth and web analytics strategies"
-                                        className="img-fluid"
-                                        style={{ width: '100%', height: 'auto' }}
+                                        className="about-small-img"
+                                        
                                     />
                                 </div>
                             </div>

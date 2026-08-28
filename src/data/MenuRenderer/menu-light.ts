@@ -39,7 +39,7 @@ export const lightMenu: MenuItem[] = [
         label: "Website Development", href: "/",
         subLinks: [
           { label: "Dynamic Website Development", href: "/website-development/dynamic-website-development" },
-          { label: "Custom Website Development", href: "/" },
+          { label: "Custom Website Development", href: "/website-development/custom-website-development" },
           { label: "PHP Website Development", href: "/" },
           { label: "React Website Development", href: "/" },
           { label: "API Integration", href: "/" },
