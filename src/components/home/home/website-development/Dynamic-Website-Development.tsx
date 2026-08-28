@@ -5,7 +5,8 @@ import { useAOS } from '@/components/hooks/useAOS';
 import {DynamicWebsiteSolutions, WhyUsA1, CreativeAgencyFunfact, Advantages, FAQA1} from './components/index'
 import '../aboutcomponents/ourStory.css';
 import '@/assets/css/textAnimations.css';
-import image1 from "@/assets/images/ourstory/image-1.jpg";
+import image from "@/assets/images/webdev/Image.jpg";
+
 
 function DynamicWebsiteDevelopment() {
     // Use the AOS hook
@@ -18,7 +19,7 @@ function DynamicWebsiteDevelopment() {
                 <section className="about-blue-section second-blue-section">
                     <div className="container-fulid">
                         <div className="row align-items-center">
-                            <div className="col-lg-5 order-lg-2 mb-4 mb-lg-0">
+                            <div className="col-xl-3 col-lg-5 order-lg-2 mb-4 mb-lg-0">
                                 <div
                                     className="about-img-wrap"
                                     data-aos="image-zoom"
@@ -26,7 +27,7 @@ function DynamicWebsiteDevelopment() {
                                     style={{ width: 'auto', height: 'auto' }}
                                 >
                                     <img
-                                        src={image1.src}
+                                        src={image.src}
                                         alt="Digital growth and web analytics strategies"
                                         className="img-fluid"
                                         style={{ width: '100%', height: 'auto' }}
@@ -34,7 +35,7 @@ function DynamicWebsiteDevelopment() {
                                 </div>
                             </div>
 
-                            <div className="col-lg-7 order-lg-1">
+                            <div className="col-lg-7 col-xl-9 order-lg-1">
                                 <div className="about-content-side">
                                     <span className="px-section-subtitle text-white our-development pt-40">
                                         We Are Creative Agency

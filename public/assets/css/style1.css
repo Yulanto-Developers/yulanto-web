@@ -229,13 +229,13 @@
 }
 
 .tm-slider-skill:hover {
-  transform: translateX(4px) scale(1.15) !important;
-  background: #0f172a;
+  /* transform: translateX(4px) scale(1.15) !important; */
+  background: #d6ccc6;
 }
 
-.tm-slider-skill:hover img {
+/* .tm-slider-skill:hover img {
   filter: brightness(0) invert(1);
-}
+} */
 
 /* ==========================================
    Top-Left Frosted Glass Tooltip Design
@@ -581,12 +581,12 @@
     background: #f1f5f9;
   }
 
-  .tm-slider-skill:hover img {
+  /* .tm-slider-skill:hover img {
     filter: brightness(0) invert(0);
-  }
+  } */
 
   .tm-slider-skill:hover .skill-text {
-    color: #0f172a;
+    color: #d6ccc6;
   }
 
   .tm-slider-card {
