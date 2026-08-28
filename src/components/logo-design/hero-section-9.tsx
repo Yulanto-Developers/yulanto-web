@@ -50,7 +50,7 @@ const imageVariants = {
     scale: 1,
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };
@@ -105,8 +105,7 @@ const HeroSection = ({
                     aspectRatio: "1 / 1",
                     overflow: "hidden",
                   }}
-                  variants={imageVariants}
-                  whileHover={{ scale: 1.03 }}
+                   whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.3 }}
                 >
                   <img

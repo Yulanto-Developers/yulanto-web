@@ -9,7 +9,6 @@ import { ShuffleHero } from "@/components/logo-design/shuffle-grid";
 import faqa1Data from '@/components/home/home/website-development/components/faqa1data';
 import FAQA1 from '@/components/home/home/website-development/components/FAQA1';
 
-// const faqs: FAQItem[] = faqa1Data.slice(4,5);
 
 export default function Page() {
   return (
