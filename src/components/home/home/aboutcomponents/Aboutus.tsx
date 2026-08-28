@@ -28,7 +28,7 @@ const AboutUs = () => {
                 data-aos="text-reveal"
                 data-aos-delay="100"
               >
-                Yulanto <span className="text-blue-about">Digital Solutions</span>
+                Leading Web Design Company in <span className="text-blue-about"> Chennai Since 2015 </span>
               </h4>
 
               <p
@@ -123,7 +123,7 @@ const AboutUs = () => {
                 data-aos="text-reveal"
                 data-aos-delay="100"
               >
-                Yulanto <span className="text-blue-about">Digital Solutions</span>
+                Complete Digital Solutions for <span className="text-blue-about">Your Business Success </span>
               </h4>
 
               <p

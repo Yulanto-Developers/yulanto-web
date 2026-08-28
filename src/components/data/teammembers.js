@@ -2,8 +2,8 @@ const MEMBERS = [
   {
     id: 1,
     name: "Jayarani",
-    role: "Director - Admin",
-    desc: "Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions.",
+    role: "Director – Administration",
+    desc: "Oversees Administration,  and operations, ensuring smooth business processes and efficient organizational management.",
     image: "/assets/images/our-team/mam.png",
     shade: "tm-slider-shade-yellow",
     skills: [
@@ -15,8 +15,8 @@ const MEMBERS = [
   {
     id: 2,
     name: "Manigandan",
-    role: "Sr. Web Designer",
-    desc: "Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions.",
+    role: "Team Leader",
+    desc: "He manages project teams, coordinates development activities, ensures quality delivery, and supports the team in achieving client goals.",
     image: "/assets/images/our-team/Mani.png",
     shade: "tm-slider-shade-slate",
     skills: [
@@ -34,8 +34,8 @@ const MEMBERS = [
   {
     id: 3,
     name: "Arun Kumaran",
-    role: "Web Designer & SEO Analyst",
-    desc: "Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions.",
+    role: "Senior Web Designer & SEO Analyst",
+    desc: "He creates engaging websites and implements SEO strategies to improve visibility, traffic, and online growth.",
     image: "/assets/images/our-team/Arun.png",
     shade: "tm-slider-shade-pink",
     skills: [
@@ -47,7 +47,7 @@ const MEMBERS = [
       "/assets/images/our-team/skills/my-sql.png",
       "/assets/images/our-team/skills/shopify.png",
       "/assets/images/our-team/skills/wordpress.png",
-      "/assets/images/our-team/skills/google-ads",
+      "/assets/images/our-team/skills/google-ads.png",
       "/assets/images/our-team/skills/seo.png",
     ],
   },
@@ -56,7 +56,7 @@ const MEMBERS = [
     id: 4,
     name: "Santhosh Kumar",
     role: "Full Stack Developer",
-    desc: "Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions.",
+    desc: "He builds responsive web solutions, develops robust applications, and delivers reliable, scalable websites tailored to client needs.",
     image: "/assets/images/our-team/Santhosh.png",
     shade: "tm-slider-shade-yellow",
     skills: [
@@ -77,7 +77,7 @@ const MEMBERS = [
     id: 5,
     name: "Ezhilvannan",
     role: "Full Stack Developer",
-    desc: "Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions.",
+    desc: "He develops responsive websites and web applications, delivering secure, scalable, user-friendly solutions tailored to client needs.",
     image: "/assets/images/our-team/Ezhil.png",
     shade: "tm-slider-shade-slate",
     skills: [
@@ -98,7 +98,7 @@ const MEMBERS = [
     id: 6,
     name: "Vincent Herbert",
     role: "UI/UX Designer",
-    desc: "Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions.",
+    desc: "He creates intuitive, engaging, and user-friendly interfaces that enhance user experience, usability, and visual appeal across digital platforms.",
     image: "/assets/images/our-team/Herbert.png",
     shade: "tm-slider-shade-cream",
     skills: [
@@ -118,7 +118,7 @@ const MEMBERS = [
     id: 7,
     name: "Sapthagri Vasan",
     role: "Business Analyst",
-    desc: "Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions.",
+    desc: "He understands client requirements, plans effective solutions, coordinates projects, and helps deliver successful digital solutions aligned with goals.",
     image: "/assets/images/our-team/Sapathagiri.png",
     shade: "tm-slider-shade-pink",
     skills: [
@@ -131,8 +131,8 @@ const MEMBERS = [
   {
     id: 8,
     name: "Nitheesh Anto",
-    role: "Full Stack Developer",
-    desc: "Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions.",
+    role: "Front-End Designer",
+    desc: "He creates responsive, modern, and user-friendly website interfaces with engaging designs, smooth layouts, and seamless experiences.",
     image: "assets/images/our-team/Santo.png",
     shade: "tm-slider-shade-cream",
     skills: [
