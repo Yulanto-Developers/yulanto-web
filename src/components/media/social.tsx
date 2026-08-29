@@ -10,37 +10,37 @@ const socialPlatforms = [
     name: "LinkedIn",
     description:
       "Reach business professionals, decision-makers, and B2B audiences through targeted LinkedIn marketing campaigns and professional content.",
-    logo: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?q=80&w=400&auto=format&fit=crop",
+    logo: "/assets/img/social/icon-lindin.jpg",
   },
   {
     name: "Facebook",
     description:
       "Connect with a broad audience through engaging posts, targeted advertising, lead generation campaigns, and community building.",
-    logo: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=400&auto=format&fit=crop",
+    logo: "/assets/img/social/icon-facebook.jpg",
   },
   {
     name: "Instagram",
     description:
       "Build visual brand awareness through reels, stories, creative posts, influencer collaborations, and targeted Instagram advertising.",
-    logo: "https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=400&auto=format&fit=crop",
+    logo: "/assets/img/social/icon-instagram.jpg",
   },
   {
     name: "Pinterest",
     description:
       "Promote visually appealing products, services, ideas, and website content while reaching audiences actively searching for inspiration.",
-    logo: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=400&auto=format&fit=crop",
+    logo: "/assets/img/social/icon-pinstrest.jpg",
   },
   {
     name: "X (Twitter)",
     description:
       "Build conversations around your brand, share industry updates, participate in trending discussions, and engage with your audience in real time.",
-    logo: "https://images.unsplash.com/photo-1611605698335-8b1569810432?q=80&w=400&auto=format&fit=crop",
+    logo: "/assets/img/social/icon-twitter.jpg",
   },
   {
     name: "YouTube",
     description:
       "Use engaging video content to educate your audience, showcase your products and services, improve brand visibility, and generate website traffic.",
-    logo: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?q=80&w=400&auto=format&fit=crop",
+    logo: "/assets/img/social/icon-youtube.jpg",
   },
 ];
 
@@ -151,7 +151,7 @@ export default function ClientFeedback() {
                           overflow: "hidden",
                           flexShrink: 0,
                           border: `1px solid ${
-                            isHovered ? "#53ae7d" : "#e5e7eb"
+                            isHovered ? "#053456" : "#e5e7eb"
                           }`,
                           transform: isHovered
                             ? "rotate(6deg) scale(1.1)"

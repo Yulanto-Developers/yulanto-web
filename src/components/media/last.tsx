@@ -55,7 +55,7 @@ export default function AboutSection() {
               }}
             >
               <img
-                src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=800&q=80"
+                src="assets/img/social/last-bottom-.jpg"
                 alt="Social Media Marketing"
                 style={{
                   width: '100%',

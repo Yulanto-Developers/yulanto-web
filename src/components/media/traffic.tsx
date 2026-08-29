@@ -102,7 +102,8 @@ export default function SeoServicesList() {
         </div>
         <span
           style={{
-            fontSize: "0.95rem",
+            fontSize: "15px",
+            fontFamily: "Figtree, Figtree Fallback",
             fontWeight: 600,
             lineHeight: "1.35",
             color: isHovered ? "#53ae7d" : "#053456",

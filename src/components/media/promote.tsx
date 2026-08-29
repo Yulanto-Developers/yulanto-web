@@ -114,7 +114,7 @@ export default function SocialMediaMarketingDemo() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=900&q=80"
+          src="assets/img/social/bottom-1.jpg"
           alt="Social media marketing"
           style={{
             width: '100%',
@@ -137,7 +137,7 @@ export default function SocialMediaMarketingDemo() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+          src="assets/img/social/bottom-2.jpg"
           alt="Social media content creation"
           style={{
             width: '100%',
@@ -160,7 +160,7 @@ export default function SocialMediaMarketingDemo() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=900&q=80"
+          src="assets/img/social/bottom-3.jpg"
           alt="Social media advertising"
           style={{
             width: '100%',
@@ -206,7 +206,7 @@ export default function SocialMediaMarketingDemo() {
               <div style={{ fontSize: '1.5rem', color: '#53ae7d', marginBottom: '1rem' }}>
                 <FontAwesomeIcon icon={faBullhorn} />
               </div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color:'white' }}>1. Social Media Platform Selection</h3>
+              <h3 style={{ fontSize: '1.25rem', fontFamily: "Figtree, Figtree Fallback", fontWeight: 'bold', color:'white' }}>1. Social Media Platform Selection</h3>
               <p className="text-figtree mt-2" style={{ fontSize: '15px !important', color: '#e5e7eb' }}>
                 Our SMM experts identify the platforms where your target audience is most active. Depending on your business objectives, we can create strategies for:
               </p>
@@ -225,7 +225,7 @@ export default function SocialMediaMarketingDemo() {
               <div style={{ fontSize: '1.5rem', color: '#53ae7d', marginBottom: '1rem' }}>
                 <FontAwesomeIcon icon={faPenNib} />
               </div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold',color:'white' }}>2. Social Media Content Creation</h3>
+              <h3 style={{ fontSize: '1.25rem',fontFamily: "Figtree, Figtree Fallback", fontWeight: 'bold',color:'white' }}>2. Social Media Content Creation</h3>
               <p className="text-figtree mt-2" style={{ fontSize: '15px !important ', color: '#e5e7eb' }}>
                 We create engaging and relevant content based on your brand identity, industry, audience, and marketing objectives. Our content services include posts, graphics, infographics, reels, videos, polls, and educational posts.
               </p>
@@ -258,8 +258,8 @@ export default function SocialMediaMarketingDemo() {
                 key={idx}
                 style={{ backgroundColor: CARD_BG, color: '#ffffff', padding: '1.5rem', borderRadius: '0.5rem' }}
               >
-                <FontAwesomeIcon icon={item.icon} style={{ color: '#53ae7d', marginBottom: '0.5rem', fontSize: '1.25rem' }} />
-                <h4 style={{ fontWeight: 'bold', fontSize: '1.1rem',color:'white' }}>{item.title}</h4>
+                <FontAwesomeIcon icon={item.icon} style={{ color: '#53ae7d', marginBottom: '0.5rem',fontFamily: "Figtree, Figtree Fallback", fontSize: '1.25rem' }} />
+                <h4 style={{ fontWeight: 'bold', fontSize: '1.1rem',color:'white',fontFamily: "Figtree, Figtree Fallback", }}>{item.title}</h4>
                 <p className="text-figtree mt-2" style={{ color: '#e5e7eb',fontSize:"15px !important" }}>
                   {item.text}
                 </p>
@@ -348,10 +348,10 @@ export default function SocialMediaMarketingDemo() {
 
           <span
             style={{
-              fontSize: '0.95rem',
+             fontFamily: "Figtree, Figtree Fallback",
               fontWeight: '500',
               color: '#ffffff',
-              fontFamily:"text-figtree"
+            
             }}
           >
             {point}

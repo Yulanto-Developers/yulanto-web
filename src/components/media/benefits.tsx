@@ -6,8 +6,8 @@ const benefitsData = [
     text: "Build a professional and recognizable brand identity across multiple social media channels.",
     author: "Brand Strategy",
     role: "Identity & Design",
-    avatar: "https://tailus.io/images/reviews/shekinah.webp",
-    initials: "BD",
+    avatar: "assets/img/social/Benefits-icon-1.png",
+  
     featured: true,
   },
   {
@@ -15,8 +15,8 @@ const benefitsData = [
     text: "Create relevant and engaging content that attracts your ideal customers and encourages meaningful interactions.",
     author: "Audience Growth",
     role: "Community Management",
-    avatar: "https://tailus.io/images/reviews/jonathan.webp",
-    initials: "EA",
+    avatar: "assets/img/social/Benefits-icon-2.png",
+ 
     wide: true,
   },
   {
@@ -24,32 +24,32 @@ const benefitsData = [
     text: "Consistent social media marketing helps customers remember your brand and strengthens your online presence.",
     author: "Visibility Team",
     role: "Market Reach",
-    avatar: "https://tailus.io/images/reviews/yucel.webp",
-    initials: "BR",
+    avatar: "assets/img/social/Benefits-icon-3.png",
+  
   },
   {
     title: "Gain Real-Time Insights",
     text: "Monitor audience interactions, comments, engagement patterns, and social trends to understand customer expectations.",
     author: "Research Lead",
     role: "Consumer Analytics",
-    avatar: "https://tailus.io/images/reviews/rodrigo.webp",
-    initials: "CI",
+    avatar: "assets/img/social/Benefits-icon-4.png",
+ 
   },
   {
     title: "Improve Your Marketing Strategy",
     text: "Use campaign performance and genuine customer feedback to continuously improve your social media marketing efforts.",
     author: "Performance Ops",
     role: "Strategy Optimization",
-    avatar: "https://tailus.io/images/reviews/shekinah.webp",
-    initials: "MS",
+    avatar: "assets/img/social/Benefits-icon-6.png",
+   
   },
   {
     title: "Build Customer Relationships",
     text: "Respond to customers, answer questions, encourage conversations, and develop long-term relationships with your audience.",
     author: "Customer Success",
     role: "Relationship Management",
-    avatar: "https://tailus.io/images/reviews/jonathan.webp",
-    initials: "CR",
+    avatar: "assets/img/social/Benefits-icon-5.png",
+
   },
 ];
 
@@ -108,6 +108,7 @@ export default function SocialMediaBenefits() {
                     <h3
                       style={{
                         fontSize: "15px !important",
+                        fontFamily: "Figtree, Figtree Fallback",
                         fontWeight: 600,
                         color: "#0f172a",
                         marginBottom: "0.5rem",
@@ -133,6 +134,7 @@ export default function SocialMediaBenefits() {
                       display: "flex",
                       alignItems: "center",
                       gap: "0.75rem",
+                      fontFamily: "Figtree, Figtree Fallback",
                       paddingTop: "1rem",
                       borderTop: "1px solid #f1f5f9",
                     }}
@@ -141,8 +143,8 @@ export default function SocialMediaBenefits() {
                     <div
                       style={{
                         position: "relative",
-                        width: "2.75rem",
-                        height: "2.75rem",
+                        width: "3.75rem",
+                        height: "3.75rem",
                         borderRadius: "50%",
                         overflow: "hidden",
                         backgroundColor: "#e2e8f0",
@@ -183,6 +185,7 @@ export default function SocialMediaBenefits() {
                         style={{
                           display: "block",
                           fontSize: "0.875rem",
+                          fontFamily: "Figtree, Figtree Fallback",
                           fontWeight: 500,
                           fontStyle: "normal",
                           color: "#0f172a",

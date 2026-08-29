@@ -31,10 +31,10 @@ const HeroSectionDemo = () => {
       "We provide professional logo design solutions for businesses at different stages of growth. Whether you need a simple business logo or a complete visual identity, our team can create a design aligned with your requirements.",
     
     images: [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
+      "assets/img/logodesign/logo-srvices/logo-srvices-1.jpg",
+      "assets/img/logodesign/logo-srvices/logo-srvices-2.jpg",
+      "assets/img/logodesign/logo-srvices/logo-srvices-3.jpg",
+      "assets/img/logodesign/logo-srvices/logo-srvices-4.jpg",
     ],
   };
 

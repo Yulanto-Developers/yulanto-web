@@ -70,9 +70,9 @@ const fanCardVariants = {
 
 // Default fallback images from Unsplash
 const defaultImages = [
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop",
+  "assets/img/social/top-1.jpg",
+  "assets/img/social/top-2.jpg",
+  "assets/img/social/top-3.jpg",
 ];
 
 export default function HeroSection({
