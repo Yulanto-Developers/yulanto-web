@@ -13,6 +13,8 @@ import { motion } from 'framer-motion'; // Imported Framer Motion
 import { Variants } from 'framer-motion';
 import ScrollRevealText from '@/components/ScrollRevealText';
 
+// import en1 from '@/assets/img/website/startup/image-1.jpg'
+
 const TextArrowIcon = () => (
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 10L10 1M10 1H1M10 1V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -126,7 +128,7 @@ const StartupAgencyAbout = () => {
 
                             <h4 className="px-about-title mb-55">
                                 <span className='text-blue-about'>We are a professional design agency</span> specializing in
-                                <Link href={'/website'} > website design</Link> ,<Link href={'/development'}>web development</Link> , <Link href={'/e-comerce'}>E-commerce</Link>, <Link href={'/graphic-desgin'}>Graphic Design</Link>, <Link href={'/seo'}>SEO</Link>, and <Link href={'/digital'}>digital marketing</Link>.
+                                <Link href={'/website'} > website design</Link>, <Link href={'/development'}>web development</Link>, <Link href={'/e-comerce'}>E-commerce</Link>, <Link href={'/graphic-desgin'}>Graphic Design</Link>, <Link href={'/seo'}>SEO</Link>, and <Link href={'/digital'}>digital marketing</Link>.
                             </h4>
 
                             <div className="row">

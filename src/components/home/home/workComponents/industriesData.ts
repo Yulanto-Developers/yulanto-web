@@ -81,7 +81,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'engineering',
-    label: 'Engineering Company',
+    label: 'Engineering & Electronic',
     icon: Wrench,
     image: false,
     industryImg: '/assets/img/all-works/head-img/engineering.jpg',
@@ -120,7 +120,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'media',
-    label: 'Media',
+    label: 'Media & Ads',
     icon: Tv,
     image: true,
     industryImg: '/assets/img/industry/Media.jpg',
@@ -241,7 +241,7 @@ export const INDUSTRIES: IndustryCategory[] = [
     label: 'Steel & TMT',
     icon: Anvil,
     image: true,
-    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryImg: '/assets/img/industry/tmt.jpg',
     industryDesc: [
       "We provide professional website design and website development solutions for Steel and TMT companies, helping manufacturers, suppliers, distributors, and industrial businesses establish a strong digital presence and showcase their products, manufacturing capabilities, and technical expertise. ",
       "Our expertise includes steel company website design, TMT bar website development, steel manufacturer website design, TMT steel website development, structural steel website design, iron and steel industry website development, industrial website design, B2B website development, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
@@ -254,7 +254,7 @@ export const INDUSTRIES: IndustryCategory[] = [
     label: 'Hospitality & Solar',
     icon: Sun,
     image: true,
-    industryImg: '/assets/img/industry/hospital.jpg',
+    industryImg: '/assets/img/industry/solar.jpg',
     industryDesc: [
       "We provide professional website design and website development solutions for Hospitality and Solar businesses, helping companies in these industries build a strong digital presence, showcase their services, and connect with customers through modern and engaging websites. ",
       "Our expertise includes hospitality website design, hotel website development, resort website design, restaurant website development, tourism website solutions, solar company website design, solar energy website development, renewable energy website design, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
@@ -409,7 +409,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         name: 'GrayT',
         logo: '/assets/img/all-works/new/grayt.png',
         location: 'New Delhi, India',
-        url: 'https://grayeyeit.com/',
+        url: 'https://grayt.in/',
         borderClass: 'brl'
       },
       {
@@ -417,7 +417,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         name: 'JPR Steels',
         logo: '/assets/img/all-works/new/jpr.png',
         location: 'Kancheepuram, India',
-        url: 'https://grayeyeit.com/',
+        url: 'https://www.jprsteels.com/',
         borderClass: 'brl'
       },
     ],
@@ -508,7 +508,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         name: 'Preserve Metals',
         logo: '/assets/img/all-works/2026/peserve-Metals.png',
         location: 'Chennai , India',
-        url: '',
+        url: 'https://preservemetals.com/',
         borderClass: 'brlb'
       },
       {
@@ -662,7 +662,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'greenchillibrands',
         name: 'Green Chilli Brands',
-        logo: '/assets/img/all-works/gcb-logo.png',
+        logo: '/assets/img/all-works/2026/gcb.png',
         location: 'Chennai, India',
         url: 'https://www.greenchillibrands.com/',
         borderClass: 'brlb'
@@ -1151,7 +1151,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         id: 'cgkgmeenambakkam',
         name: 'CGKG Meenambakkam',
         logo: '/assets/img/all-works/new/CGKG.png',
-        location: 'Chennai, India Emirates',
+        location: 'Chennai, India',
         url: 'https://cgkgmeenambakkam.co.in/',
         borderClass: 'brb'
       },
@@ -1205,11 +1205,11 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     bannerImg: '/assets/img/industry/tour.jpg',
     projects: [
       {
-        id: 'natrurographers',
+        id: 'natruro Graphers',
         name: 'Naturograhers',
         logo: '/assets/img/all-works/2026/naturo.png',
         location: 'Chennai, India',
-        url: 'http://staride.com',
+        url: 'https://naturographers.com/',
         borderClass: ''
       },
       {
@@ -1536,7 +1536,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     ]
   },
   resorts: {
-    bannerImg: '/assets/img/all-works/head-img/resort.jpg',
+    bannerImg: '/assets/img/resort.jpg',
     projects: [
       {
         id: 'segretodc',
@@ -1679,7 +1679,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         name: 'Al Safa International',
         logo: 'assets/img/all-works/2026/al-safa.png',
         location: 'Chennai',
-        url: '',
+        url: 'https://alsafainternational.com',
         borderClass: 'brb'
       },
 

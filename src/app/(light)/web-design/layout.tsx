@@ -14,7 +14,9 @@ import QuoteModal from "@/components/home/home/myComponents/Pop";
 
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
 
- 
+import 'aos/dist/aos.css';
+import AOSInit from '@/components/AOSInit/AOSInit'
+import '@/assets/css/textAnimations.css';
 import "@/assets/css/style.css";
 
 
@@ -26,33 +28,33 @@ export default function DesignStudioLayout({
 }) {
     return (
         <QuoteProvider>
-           
 
-              
 
-                    <PersonalPortfolioHeader />
 
-                    <div id="smooth-wrapper">
-                        <div id="smooth-content">
 
-                            {children}
+            <PersonalPortfolioHeader />
 
-                            <MainFooter />
+            <div id="smooth-wrapper">
+                <div id="smooth-content">
+                    <AOSInit />
+                    {children}
 
-                        </div>
-                    </div>
+                    <MainFooter />
 
-                    {/* Floating actions */}
-                    <FloatingActionsWrapper />
+                </div>
+            </div>
 
-                    {/* Quote modal */}
-                    <QuoteModal />
-                    
+            {/* Floating actions */}
+            <FloatingActionsWrapper />
 
-                    {/* Floating quote button */}
-                    <FloatingQuoteButton />
+            {/* Quote modal */}
+            <QuoteModal />
 
-                   
+
+            {/* Floating quote button */}
+            <FloatingQuoteButton />
+
+
         </QuoteProvider>
     );
 }

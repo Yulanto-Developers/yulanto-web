@@ -76,10 +76,10 @@ const GradientCardDemo = () => {
             <div className="container">
                 {/* Section Header */}
                 <SectionTitle
-                        subtitle="Our Philosophy"
-                        titleFirst="Honesty & "
-                        titleSecond="Transparency"
-                        description="At Yulanto, honesty and transparency are at the heart of everything we do.
+                    subtitle="Our Philosophy"
+                    titleFirst="Honesty & "
+                    titleSecond="Transparency"
+                    description="At Yulanto, honesty and transparency are at the heart of everything we do.
                             We believe in building strong, long-term relationships through open communication,
                             ethical practices, and complete accountability. Our commitment to integrity has
                             earned the trust and confidence of our clients, enabling us to grow together and
