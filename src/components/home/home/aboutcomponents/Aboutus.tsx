@@ -1,4 +1,3 @@
-// app/about/page.tsx or components/AboutUs.tsx
 'use client';
 
 import React, { useEffect } from 'react';
@@ -20,7 +19,7 @@ const AboutUs = () => {
                 INTRO - WHITE SECTION
             ========================================= */}
       <div className="services-section">
-        <div className="services-content">
+        <div className="services-content container">
           <div className="row align-items-center">
             <div className="col-lg-9 mb-4 mb-lg-0">
               <h4
@@ -115,7 +114,7 @@ const AboutUs = () => {
                 SERVICES - WHITE SECTION
             ========================================= */}
       <div className="services-section">
-        <div className="services-content">
+        <div className="services-content container">
           <div className="row align-items-center">
             <div className="col-lg-9 mb-4 mb-lg-0">
               <h4
