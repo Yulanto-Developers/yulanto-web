@@ -30,13 +30,7 @@ const keyframeStyles = `
 interface NewProps {
   num1: number;
   num2: number;
-<<<<<<< Updated upstream
-  /** Main highlighted text (e.g., "Frequently Asked Questions") */
   highlightedText?: string;
-  /** Text that follows the highlighted portion (e.g., "About SEO" or "About Logo Design") */
-=======
-  highlightedText?: string;
->>>>>>> Stashed changes
   titleSuffix?: string;
 }
 
@@ -54,28 +48,6 @@ const FAQA1: React.FC<NewProps> = ({
 }) => {
   const [activeIndex, setActiveIndex] = useState<number>(-1);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-<<<<<<< Updated upstream
-  const [glowPos, setGlowPos] = useState<GlowPos>({ x: 0, y: 0, index: null });
-
-  const faqs: FAQItem[] = faqa1Data.slice(num1, num2);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-out-cubic",
-    });
-
-    if (typeof document === "undefined") return;
-    const styleId = "inline-faq-keyframes-brand";
-    if (document.getElementById(styleId)) return;
-
-    const styleTag = document.createElement("style");
-    styleTag.id = styleId;
-    styleTag.innerHTML = keyframeStyles;
-    document.head.appendChild(styleTag);
-
-=======
 
   const [glowPos, setGlowPos] = useState<GlowPos>({
     x: 0,
@@ -105,23 +77,17 @@ const FAQA1: React.FC<NewProps> = ({
 
     document.head.appendChild(styleTag);
 
->>>>>>> Stashed changes
     return () => {
       styleTag.remove();
     };
   }, []);
 
-<<<<<<< Updated upstream
-  const handleMouseMove = (e: React.MouseEvent<HTMLLIElement>, index: number) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-=======
   const handleMouseMove = (
     e: React.MouseEvent<HTMLLIElement>,
     index: number
   ) => {
     const rect = e.currentTarget.getBoundingClientRect();
 
->>>>>>> Stashed changes
     setGlowPos({
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
@@ -150,16 +116,12 @@ const FAQA1: React.FC<NewProps> = ({
       />
 
       {/* Main Content Area */}
-<<<<<<< Updated upstream
-      <section className="px-about-6-area pt-30 pb-80 pb-lg-110" style={{ backgroundColor: "#f5f5f5" }}>
-=======
       <section
         className="px-about-6-area pt-30 pb-80 pb-lg-110"
         style={{
           backgroundColor: "#f5f5f5",
         }}
       >
->>>>>>> Stashed changes
         <div className="container container-1550">
           <div
             style={{
@@ -176,12 +138,6 @@ const FAQA1: React.FC<NewProps> = ({
               data-aos="fade-down"
               data-aos-delay="100"
             >
-<<<<<<< Updated upstream
-              <span className="text-blue-about">{highlightedText} </span>
-              {titleSuffix}
-            </h4>
-
-=======
               <span className="text-blue-about">
                 {highlightedText}{" "}
               </span>
@@ -189,7 +145,6 @@ const FAQA1: React.FC<NewProps> = ({
               {titleSuffix}
             </h4>
 
->>>>>>> Stashed changes
             {/* FAQ List */}
             <ul
               style={{
@@ -214,11 +169,6 @@ const FAQA1: React.FC<NewProps> = ({
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => {
                       setHoveredIndex(null);
-<<<<<<< Updated upstream
-                      setGlowPos((prev) => ({ ...prev, index: null }));
-                    }}
-                    onMouseMove={(e) => handleMouseMove(e, index)}
-=======
 
                       setGlowPos((prev) => ({
                         ...prev,
@@ -228,7 +178,6 @@ const FAQA1: React.FC<NewProps> = ({
                     onMouseMove={(e) =>
                       handleMouseMove(e, index)
                     }
->>>>>>> Stashed changes
                     style={{
                       position: "relative",
                       overflow: "hidden",
@@ -240,16 +189,11 @@ const FAQA1: React.FC<NewProps> = ({
                       boxShadow: isOpen
                         ? "0 20px 40px -15px rgba(83, 174, 125, 0.2)"
                         : "0 10px 30px -10px rgba(5, 52, 86, 0.05)",
-<<<<<<< Updated upstream
-                      transform: isHovered ? "translateY(-2px)" : "translateY(0px)",
-                      transition: "all 300ms cubic-bezier(0.16, 1, 0.3, 1)",
-=======
                       transform: isHovered
                         ? "translateY(-2px)"
                         : "translateY(0px)",
                       transition:
                         "all 300ms cubic-bezier(0.16, 1, 0.3, 1)",
->>>>>>> Stashed changes
                     }}
                   >
                     {/* Glow Overlay */}
@@ -258,12 +202,6 @@ const FAQA1: React.FC<NewProps> = ({
                         position: "absolute",
                         inset: 0,
                         pointerEvents: "none",
-<<<<<<< Updated upstream
-                        opacity: isHovered || isOpen ? 1 : 0,
-                        transition: "opacity 500ms ease",
-                        background: isGlowActive
-                          ? `radial-gradient(280px circle at ${glowPos.x}px ${glowPos.y}px, rgba(83, 174, 125, 0.12), transparent 70%)`
-=======
                         opacity:
                           isHovered || isOpen ? 1 : 0,
                         transition: "opacity 500ms ease",
@@ -275,22 +213,17 @@ const FAQA1: React.FC<NewProps> = ({
                               rgba(83, 174, 125, 0.12),
                               transparent 70%
                             )`
->>>>>>> Stashed changes
                           : "none",
                       }}
                     />
 
                     <button
                       type="button"
-<<<<<<< Updated upstream
-                      onClick={() => setActiveIndex(isOpen ? -1 : index)}
-=======
                       onClick={() =>
                         setActiveIndex(
                           isOpen ? -1 : index
                         )
                       }
->>>>>>> Stashed changes
                       style={{
                         position: "relative",
                         width: "100%",
@@ -323,17 +256,12 @@ const FAQA1: React.FC<NewProps> = ({
                           backgroundColor: isOpen
                             ? "#53ae7d"
                             : "rgba(83, 174, 125, 0.08)",
-<<<<<<< Updated upstream
-                          color: isOpen ? "#ffffff" : "#053456",
-                          transform: isHovered ? "scale(1.05)" : "scale(1)",
-=======
                           color: isOpen
                             ? "#ffffff"
                             : "#053456",
                           transform: isHovered
                             ? "scale(1.05)"
                             : "scale(1)",
->>>>>>> Stashed changes
                           transition: "all 300ms ease",
                         }}
                       >
@@ -344,13 +272,9 @@ const FAQA1: React.FC<NewProps> = ({
                           style={{
                             width: "1.25rem",
                             height: "1.25rem",
-<<<<<<< Updated upstream
-                            transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
-=======
                             transform: isOpen
                               ? "rotate(45deg)"
                               : "rotate(0deg)",
->>>>>>> Stashed changes
                             transition:
                               "transform 400ms cubic-bezier(0.16, 1, 0.3, 1)",
                           }}
@@ -361,17 +285,6 @@ const FAQA1: React.FC<NewProps> = ({
                             strokeWidth="2"
                             strokeLinecap="round"
                           />
-<<<<<<< Updated upstream
-                          <path
-                            d="M5 12h14"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                          />
-                        </svg>
-                      </span>
-
-=======
 
                           <path
                             d="M5 12h14"
@@ -382,7 +295,6 @@ const FAQA1: React.FC<NewProps> = ({
                         </svg>
                       </span>
 
->>>>>>> Stashed changes
                       {/* Item Body */}
                       <div
                         style={{
@@ -412,11 +324,8 @@ const FAQA1: React.FC<NewProps> = ({
                           >
                             {item.question}
                           </h2>
-<<<<<<< Updated upstream
-=======
 
                           {/* Optional Meta */}
->>>>>>> Stashed changes
                           {item.meta && (
                             <span
                               style={{
@@ -424,15 +333,10 @@ const FAQA1: React.FC<NewProps> = ({
                                 alignItems: "center",
                                 padding: "0.25rem 0.75rem",
                                 borderRadius: "9999px",
-<<<<<<< Updated upstream
-                                border: "1px solid rgba(83, 174, 125, 0.3)",
-                                backgroundColor: "rgba(83, 174, 125, 0.1)",
-=======
                                 border:
                                   "1px solid rgba(83, 174, 125, 0.3)",
                                 backgroundColor:
                                   "rgba(83, 174, 125, 0.1)",
->>>>>>> Stashed changes
                                 fontSize: "0.625rem",
                                 fontWeight: 600,
                                 textTransform: "uppercase",
@@ -452,23 +356,14 @@ const FAQA1: React.FC<NewProps> = ({
                             fontSize: "0.9375rem",
                             lineHeight: 1.6,
                             color: "rgba(5, 52, 86, 0.8)",
-<<<<<<< Updated upstream
-                            maxHeight: isOpen ? "16rem" : "0px",
-=======
                             maxHeight: isOpen
                               ? "50rem"
                               : "0px",
->>>>>>> Stashed changes
                             opacity: isOpen ? 1 : 0,
                             transition:
                               "max-height 400ms cubic-bezier(0.16, 1, 0.3, 1), opacity 300ms ease",
                           }}
                         >
-<<<<<<< Updated upstream
-                          <p style={{ margin: 0, paddingRight: "0.5rem" }}>
-                            {item.answer}
-                          </p>
-=======
                           <div
                             style={{
                               display: "flex",
@@ -518,7 +413,6 @@ const FAQA1: React.FC<NewProps> = ({
                                 </ul>
                               )}
                           </div>
->>>>>>> Stashed changes
                         </div>
                       </div>
                     </button>

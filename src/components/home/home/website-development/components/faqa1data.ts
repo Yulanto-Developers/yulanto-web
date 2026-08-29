@@ -71,75 +71,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Support",
   },
-<<<<<<< Updated upstream
-  //*********************** */
- {
-  id: 6,
-  question: "What is logo design and why is it important?",
-  answer:
-    "Logo design is the process of creating a visual symbol that represents a business or brand. A professional logo helps customers recognize your business and creates consistency across your marketing and communication materials.",
-  meta: "Logo Design",
-},
-
-{
-  id: 7,
-  question: "How much does logo design in Chennai cost?",
-  answer:
-    "The cost of logo design depends on factors such as the complexity of the concept, number of design options, revisions, branding requirements, and deliverables. Contact us with your requirements to receive a suitable quotation.",
-  meta: "Pricing",
-},
-
-{
-  id: 8,
-  question: "What information should I provide to a logo designer?",
-  answer:
-    "You can provide information about your business, industry, target audience, preferred colors, competitors, brand personality, existing branding, and any design ideas you may have. This helps the designer create a logo that aligns with your business.",
-  meta: "Requirements",
-},
-
-{
-  id: 9,
-  question: "What file formats will I receive?",
-  answer:
-    "Depending on your project requirements, final logo files can be provided in commonly used formats such as AI, EPS, SVG, PDF, PNG, and JPG. Vector formats are particularly useful for scaling your logo for large-format printing.",
-  meta: "File Formats",
-},
-
-{
-  id: 10,
-  question: "Can I request changes to the logo?",
-  answer:
-    "Yes. Logo projects can include revisions based on the agreed scope of work. Your feedback helps the designer refine the concept and move toward the final design.",
-  meta: "Revisions",
-},
-
-{
-  id: 11,
-  question: "Can I use the logo on my website and social media?",
-  answer:
-    "Yes. A professionally designed logo can be optimized for websites, social media profiles, digital advertising, business cards, brochures, signage, packaging, and other brand communication materials.",
-  meta: "Usage",
-},
-
-{
-  id: 12,
-  question: "Can I trademark my logo?",
-  answer:
-    "A logo may be eligible for trademark protection depending on its originality and applicable legal requirements. If trademark protection is important for your business, it is advisable to consult an intellectual-property professional.",
-  meta: "Trademark",
-},
-
-{
-  id: 13,
-  question: "What if I already have a logo but want to improve it?",
-  answer:
-    "We can help with logo redesign and brand refresh projects. We can retain valuable elements of your existing identity while creating a cleaner, more modern, and professional design.",
-  meta: "Logo Redesign",
-},
-  
-  
-=======
-
   {
     id: 6,
     question: "How much does website development cost in Chennai?",
@@ -160,7 +91,78 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Web Development",
   },
->>>>>>> Stashed changes
+  //*********************** */
+  {
+    id: 8,
+    question: "What is logo design and why is it important?",
+    answer: [
+      "Logo design is the process of creating a visual symbol that represents a business or brand. A professional logo helps customers recognize your business and creates consistency across your marketing and communication materials.",
+    ],
+    meta: "Logo Design",
+  },
+
+  {
+    id: 9,
+    question: "How much does logo design in Chennai cost?",
+    answer: [
+      "The cost of logo design depends on factors such as the complexity of the concept, number of design options, revisions, branding requirements, and deliverables. Contact us with your requirements to receive a suitable quotation.",
+    ],
+    meta: "Pricing",
+  },
+
+  {
+    id: 10,
+    question: "What information should I provide to a logo designer?",
+    answer: [
+      "You can provide information about your business, industry, target audience, preferred colors, competitors, brand personality, existing branding, and any design ideas you may have. This helps the designer create a logo that aligns with your business.",
+    ],
+    meta: "Requirements",
+  },
+
+  {
+    id: 11,
+    question: "What file formats will I receive?",
+    answer: [
+      "Depending on your project requirements, final logo files can be provided in commonly used formats such as AI, EPS, SVG, PDF, PNG, and JPG. Vector formats are particularly useful for scaling your logo for large-format printing.",
+    ],
+    meta: "File Formats",
+  },
+
+  {
+    id: 12,
+    question: "Can I request changes to the logo?",
+    answer: [
+      "Yes. Logo projects can include revisions based on the agreed scope of work. Your feedback helps the designer refine the concept and move toward the final design.",
+    ],
+    meta: "Revisions",
+  },
+
+  {
+    id: 13,
+    question: "Can I use the logo on my website and social media?",
+    answer: [
+      "Yes. A professionally designed logo can be optimized for websites, social media profiles, digital advertising, business cards, brochures, signage, packaging, and other brand communication materials.",
+    ],
+    meta: "Usage",
+  },
+
+  {
+    id: 14,
+    question: "Can I trademark my logo?",
+    answer: [
+      "A logo may be eligible for trademark protection depending on its originality and applicable legal requirements. If trademark protection is important for your business, it is advisable to consult an intellectual-property professional.",
+    ],
+    meta: "Trademark",
+  },
+
+  {
+    id: 15,
+    question: "What if I already have a logo but want to improve it?",
+    answer: [
+      "We can help with logo redesign and brand refresh projects. We can retain valuable elements of your existing identity while creating a cleaner, more modern, and professional design.",
+    ],
+    meta: "Logo Redesign",
+  },
 ];
 
 export default faqa1Data;
