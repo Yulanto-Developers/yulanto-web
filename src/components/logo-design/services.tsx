@@ -105,7 +105,7 @@ export const HighlightCard: FC<HighlightCardProps> = ({
             style={{
               marginBottom: "16px",
               fontSize: "1.35rem",
-              fontFamily:"text-figtree",
+              fontFamily: "Figtree, Figtree Fallback",
               fontWeight: 700,
               color: "#53ae7d",
               margin: "0 0 16px 0",

@@ -51,18 +51,17 @@ export default function Hero({ imageSrc }: HeroProps) {
                 Your logo is often the first visual element customers notice about your business. A thoughtfully designed logo can communicate your brand values, create recognition, and build a consistent identity across your marketing materials.
                  Our logo design in Chennai focuses on creating unique concepts rather than relying on generic templates. We study your business, industry, competitors, target audience, and brand objectives before developing design concepts.
                 </p>
-                <h5>Our logo design approach includes:</h5>
+                <h5 className ="mt-20">Our logo design approach includes:</h5>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "12px" }}>
               {featuresList.map((item, index) => (
-                <li
+                <li 
                   key={index}
                   style={{
                     display: "flex",
                     alignItems: "center",
                     gap: "12px",
-                    color: "#1a1a1a",
-                    fontSize: "1rem",
-                    fontFamily: "text-figtree",
+                    fontSize:"20px"
+                 
                   }}
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
@@ -75,7 +74,7 @@ export default function Hero({ imageSrc }: HeroProps) {
                       color: "#53ae7d",
                     }}
                   />
-                  <span>{item}</span>
+                  <span className="text-figtree text-black mt-2">{item}</span>
                 </li>
               ))}
             </ul>

@@ -105,6 +105,7 @@ export const LogoPortfolioCategories = () => {
                     fontSize: "1.0625rem",
                     fontWeight: 600,
                     color: "#053456",
+                    fontFamily: "Figtree, Figtree Fallback",
                     margin: 0,
                   }}
                 >

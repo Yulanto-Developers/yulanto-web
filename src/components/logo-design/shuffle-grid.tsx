@@ -2,97 +2,53 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { Check } from "lucide-react";
 
 const squareData = [
-  {
-    id: 1,
-    src: "assets/img/logodesign/Logo-1.jpg",
-  },
-  {
-    id: 2,
-    src: "assets/img/logodesign/Logo-2.jpg",
-  },
-  {
-    id: 3,
-    src: "assets/img/logodesign/Logo-3.jpg",
-  },
-  {
-    id: 4,
-    src: "assets/img/logodesign/Logo-4.jpg",
-  },
-  {
-    id: 5,
-    src: "assets/img/logodesign/Logo-5.jpg",
-  },
-  {
-    id: 6,
-    src: "assets/img/logodesign/Logo-6.jpg",
-  },
-  {
-    id: 7,
-    src: "assets/img/logodesign/Logo-7.jpg",
-  },
-  {
-    id: 8,
-    src: "assets/img/logodesign/Logo-8.jpg",
-  },
-  {
-    id: 9,
-    src: "assets/img/logodesign/Logo-9.jpg",
-  },
-  {
-    id: 10,
-    src: "assets/img/logodesign/Logo-10.jpg",
-  },
-  {
-    id: 11,
-    src: "assets/img/logodesign/Logo-11.jpg",
-  },
-  {
-    id: 12,
-    src: "assets/img/logodesign/Logo-12.jpg",
-  },
-  // {
-  //   id: 13,
-  //   src: "assets/img/logodesign/Logo-13.jpg",
-  // },
-  // {
-  //   id: 14,
-  //   src: "assets/img/logodesign/Logo-14.jpg",
-  // },
-  // {
-  //   id: 15,
-  //   src: "assets/img/logodesign/Logo-15.jpg",
-  // },
-  // {
-  //   id: 16,
-  //   src: "assets/img/logodesign/Logo-16.jpg",
-  // },
+  { id: 1, src: "assets/img/logodesign/Logo-1.jpg" },
+  { id: 2, src: "assets/img/logodesign/Logo-2.jpg" },
+  { id: 3, src: "assets/img/logodesign/Logo-3.jpg" },
+  { id: 4, src: "assets/img/logodesign/Logo-4.jpg" },
+  { id: 5, src: "assets/img/logodesign/Logo-5.jpg" },
+  { id: 6, src: "assets/img/logodesign/Logo-6.jpg" },
+  { id: 7, src: "assets/img/logodesign/Logo-7.jpg" },
+  { id: 8, src: "assets/img/logodesign/Logo-8.jpg" },
+  { id: 9, src: "assets/img/logodesign/Logo-9.jpg" },
+  { id: 10, src: "assets/img/logodesign/Logo-10.jpg" },
+  { id: 11, src: "assets/img/logodesign/Logo-11.jpg" },
+  { id: 12, src: "assets/img/logodesign/Logo-12.jpg" },
+  { id: 13, src: "assets/img/logodesign/Logo-13.jpg" },
+  { id: 14, src: "assets/img/logodesign/Logo-14.jpg" },
+  { id: 15, src: "assets/img/logodesign/Logo-15.jpg" },
+  { id: 16, src: "assets/img/logodesign/Logo-16.jpg" },
 ];
 
 const processSteps = [
   {
+    iconClass: "fa-solid fa-lightbulb",
     title: "Requirement Understanding",
     description:
       "We learn about your business, industry, audience, competitors, and branding preferences.",
   },
   {
+    iconClass: "fa-solid fa-magnifying-glass",
     title: "Research & Concept Development",
     description:
       "Our designers research relevant visual styles and develop creative concepts based on your requirements.",
   },
   {
+    iconClass: "fa-solid fa-pen-nib",
     title: "Design Creation",
     description:
       "We transform the selected concept into a professional logo using appropriate typography, colors, shapes, and visual elements.",
   },
   {
+    iconClass: "fa-solid fa-comments",
     title: "Feedback & Refinement",
     description:
       "Your feedback helps us refine the design and create a final concept that matches your expectations.",
   },
   {
+    iconClass: "fa-solid fa-paper-plane",
     title: "Final Delivery",
     description:
       "The approved logo is prepared in suitable formats for your website, social media, print materials, and other branding requirements.",
@@ -162,7 +118,8 @@ const ShuffleGrid = () => {
         display: "grid",
         gridTemplateColumns: "repeat(4, 1fr)",
         gridTemplateRows: "repeat(4, 1fr)",
-        height: "450px",
+        height: "100%",
+        minHeight: "450px",
         gap: "8px",
       }}
     >
@@ -180,25 +137,29 @@ export const ShuffleHero = () => {
       }}
     >
       <div className="container container-1550">
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            alignItems: "center",
-            gap: "32px",
-          }}
-        >
-          <div>
+        {/* Title Section */}
+        <div className="row align-items-center mb-5">
+          <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">
               Our Logo Design Process
             </span>
-            <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">From Your Idea </span>
-              to a Professional Brand Identity
-            </h4>
-            <p className="text-figtree text-black mt-2 mb-20">
-              We follow a structured design process to ensure your logo represents your business effectively.
-            </p>
+          </div>
+          <div className="col-xl-9">
+            <div className="px-project-title-box">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">From Your Idea </span>
+                to a Professional Brand Identity
+              </h4>
+              <p className="text-figtree text-black mt-2">
+                We follow a structured design process to ensure your logo represents your business effectively.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Content Section: Split into 6 and 6 */}
+        <div className="row align-items-center g-4">
+          <div className="col-lg-6 d-flex flex-column justify-content-center">
             <ul
               style={{
                 listStyle: "none",
@@ -217,41 +178,28 @@ export const ShuffleHero = () => {
                     alignItems: "flex-start",
                     gap: "12px",
                     color: "#1a1a1a",
-                   fontFamily: "Figtree, Figtree Fallback",
+                    fontFamily: "Figtree, Figtree Fallback",
                   }}
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
-                  <div
+                  <i
+                    className={step.iconClass}
                     style={{
-                      height: "22px",
-                      width: "22px",
-                      borderRadius: "50%",
-                      backgroundColor: "#53ae7d",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
+                      fontSize: "20px",
+                      color: "#53ae7d",
                       flexShrink: 0,
-                      marginTop: "2px",
+                      marginTop: "6px",
                     }}
-                  >
-                    <Check
-                      style={{
-                        height: "14px",
-                        width: "14px",
-                        color: "#ffffff",
-                        strokeWidth: 3,
-                      }}
-                    />
-                  </div>
+                  ></i>
                   <div>
                     <h6
                       style={{
                         margin: 0,
-                        fontSize: "1rem",
-                        fontWeight: 600,
+                        fontSize: "20px",
                         color: "#053456",
-                        fontFamily: "tex-figtree",
+                        fontFamily: "Figtree, Figtree Fallback",
+                        fontWeight:"400",
                       }}
                     >
                       {step.title}
@@ -259,7 +207,7 @@ export const ShuffleHero = () => {
                     <p
                       style={{
                         margin: "4px 0 0 0",
-                        fontSize: "20px !important",
+                        fontSize: "16px",
                         color: "#000",
                         lineHeight: "1.5",
                         fontFamily: "Figtree, Figtree Fallback",
@@ -272,7 +220,10 @@ export const ShuffleHero = () => {
               ))}
             </ul>
           </div>
-          <ShuffleGrid />
+
+          <div className="col-lg-6 d-flex flex-column h-100">
+            <ShuffleGrid />
+          </div>
         </div>
       </div>
     </section>

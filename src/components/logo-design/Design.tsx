@@ -167,7 +167,7 @@ export const LogoTypesSection = () => {
                   <h3
                     style={{
                       fontSize: "1.25rem",
-                      fontFamily:"text-figtree",
+                    fontFamily: "Figtree, Figtree Fallback",
                       fontWeight: 700,
                       color: "#053456",
                       marginBottom: "10px",
@@ -181,7 +181,7 @@ export const LogoTypesSection = () => {
                       lineHeight: "1.6",
                       color: "rgba(5, 52, 86, 0.75)",
                       margin: 0,
-                      fontFamily: "text-figtree",
+                    fontFamily: "Figtree, Figtree Fallback",
                     }}
                   >
                     {item.description}

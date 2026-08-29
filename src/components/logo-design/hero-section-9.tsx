@@ -180,8 +180,8 @@ const HeroSection = ({
                       alignItems: "center",
                       gap: "10px",
                       color: "#1a1a1a",
-                      fontSize: "0.9375rem",
-                      fontFamily: "text-figtree",
+                      fontSize: "20px",
+                     fontFamily: "Figtree, Figtree Fallback",
                     }}
                     data-aos="fade-up"
                     data-aos-delay={(index % 2) * 50}
