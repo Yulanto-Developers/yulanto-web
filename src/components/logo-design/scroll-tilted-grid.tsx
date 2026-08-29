@@ -15,7 +15,7 @@ import {
  */
 export const DEFAULT_GRID_IMAGES: readonly string[] = [
   "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1550585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
@@ -27,7 +27,7 @@ export const DEFAULT_GRID_IMAGES: readonly string[] = [
   "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1545505313-94ddf0286df2?q=80&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
 ];
@@ -89,7 +89,7 @@ function Tile({
         <div
           style={{
             position: "relative",
-            width: "270px",
+            width: "550px",
             height: "270px",
             overflow: "hidden",
             borderRadius: rounded,
@@ -116,7 +116,7 @@ function Tile({
         position: "relative",
         zIndex: 10,
         margin: "0 auto",
-        width: "270px",
+        width: "550px",
         height: "270px",
         perspective: `${perspective}px`,
         willChange: "transform",
@@ -125,7 +125,7 @@ function Tile({
       <motion.div
         style={{
           position: "relative",
-          width: "270px",
+          width: "550px",
           height: "270px",
           overflow: "hidden",
           willChange: "filter, transform",

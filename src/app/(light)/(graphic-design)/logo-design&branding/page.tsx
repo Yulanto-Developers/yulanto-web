@@ -31,7 +31,7 @@ export default function Page() {
         highlightedText="Frequently Asked Questions" 
         titleSuffix="About Logo Design"
          />
-         <Last />
+         <Last />  
       
     </main>
   );

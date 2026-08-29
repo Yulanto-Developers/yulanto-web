@@ -141,6 +141,13 @@ const data = [
     currentPage: "Logo Design & branding",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+     {
+    path: "/company-profile-design",
+    title: "Brochure & Company Profile Design",
+    
+    currentPage: "Logo Design & branding",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
                       
 ];
 

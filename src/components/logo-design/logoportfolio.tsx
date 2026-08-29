@@ -47,7 +47,7 @@ export default function DemoPage() {
         </div>
 
         {/* Renders exactly 16 images across 4 rows (4 per row) with no looping */}
-        <ScrollTiltedGrid images={customImages} columns={4} loop={false} />
+        <ScrollTiltedGrid images={customImages} columns={2} loop={false} />
       </div>
     </section>
   );
