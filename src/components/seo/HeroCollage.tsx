@@ -131,10 +131,12 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
               )}
             </div>
           </div>
-          <p className="text-figtree text-black mt-20 font-paragraph-cls">
+           <p className="text-figtree text-black mt-80">
             As a professional SEO agency in Chennai, we combine keyword research, technical SEO, on-page optimization, content strategy, link building, and performance analytics to create customized search engine optimization strategies aligned with your business goals.
           </p>
+         
         </div>
+        
       </section>
     );
   }
