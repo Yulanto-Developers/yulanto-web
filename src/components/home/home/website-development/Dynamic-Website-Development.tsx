@@ -25,7 +25,7 @@ function DynamicWebsiteDevelopment() {
             {/* <DynamicWebsiteSolutions /> */}
             <ProcessSection />
             <WhyUsA1 />
-            <FAQA1 num1={0} num2={8}
+            <FAQA1 num1={0} num2={7}
                 highlightedText="Frequently Asked Questions"
                 titleSuffix="" />
         </>
