@@ -53,22 +53,22 @@ const squareData = [
     id: 12,
     src: "assets/img/logodesign/Logo-12.jpg",
   },
-  {
-    id: 13,
-    src: "assets/img/logodesign/Logo-13.jpg",
-  },
-  {
-    id: 14,
-    src: "assets/img/logodesign/Logo-14.jpg",
-  },
-  {
-    id: 15,
-    src: "assets/img/logodesign/Logo-15.jpg",
-  },
-  {
-    id: 16,
-    src: "assets/img/logodesign/Logo-16.jpg",
-  },
+  // {
+  //   id: 13,
+  //   src: "assets/img/logodesign/Logo-13.jpg",
+  // },
+  // {
+  //   id: 14,
+  //   src: "assets/img/logodesign/Logo-14.jpg",
+  // },
+  // {
+  //   id: 15,
+  //   src: "assets/img/logodesign/Logo-15.jpg",
+  // },
+  // {
+  //   id: 16,
+  //   src: "assets/img/logodesign/Logo-16.jpg",
+  // },
 ];
 
 const processSteps = [
@@ -144,10 +144,10 @@ const ShuffleGrid = () => {
 
     const shuffleLoop = () => {
       setSquares(generateSquares());
-      timeoutRef.current = setTimeout(shuffleLoop, 60000);
+      timeoutRef.current = setTimeout(shuffleLoop, 3000);
     };
 
-    timeoutRef.current = setTimeout(shuffleLoop, 60000);
+    timeoutRef.current = setTimeout(shuffleLoop, 3000);
 
     return () => {
       if (timeoutRef.current) {
@@ -217,7 +217,7 @@ export const ShuffleHero = () => {
                     alignItems: "flex-start",
                     gap: "12px",
                     color: "#1a1a1a",
-                    fontFamily: "text-figtree",
+                   fontFamily: "Figtree, Figtree Fallback",
                   }}
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
@@ -259,9 +259,10 @@ export const ShuffleHero = () => {
                     <p
                       style={{
                         margin: "4px 0 0 0",
-                        fontSize: "0.875rem !important",
+                        fontSize: "20px !important",
                         color: "#000",
                         lineHeight: "1.5",
+                        fontFamily: "Figtree, Figtree Fallback",
                       }}
                     >
                       {step.description}
