@@ -27,7 +27,7 @@ export default function Page() {
       <Branding />
       <LogoServicesDemo />
       <ShuffleHero />
-      <FAQA1 num1={5} num2={13}
+      <FAQA1 num1={7} num2={15}
         highlightedText="Frequently Asked Questions" 
         titleSuffix="About Logo Design"
          />
