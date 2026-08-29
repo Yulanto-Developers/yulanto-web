@@ -3,47 +3,75 @@
 export interface FAQItem {
   id: number;
   question: string;
-  answer: string;
-  meta: string;
+  answer: string[];
+  list?: string[];
+  meta?: string;
 }
 
 const faqa1Data: FAQItem[] = [
   {
     id: 1,
     question: "How does a dynamic website differ from a static website?",
-    answer:
-      "A static website comprises of unchanging HTML pages that are presented to all users without any personalization. Conversely, a dynamic website employs server-side scripting languages (such as PHP, Python) to generate web pages in a dynamic manner. This enables customization, interactivity, and real-time updates depending on user input or database queries.",
+    answer: [
+      "A static website generally consists of fixed HTML pages where the content remains largely unchanged unless the underlying files are manually edited. A dynamic website can generate and display content using server-side technologies and databases.",
+      "Dynamic websites are particularly useful when businesses need regular content updates, user interaction, database functionality, e-commerce, booking systems, or other advanced features.",
+    ],
     meta: "Comparison",
   },
+
   {
     id: 2,
     question: "What are the advantages of a dynamic website?",
-    answer:
-      "Dynamic websites provide a range of features including customization and personalization, interactivity, regular updates of dynamic content, e-commerce functionality, integration with databases, real-time updates, scalability, responsive design, search engine optimization (SEO) compatibility, and the ability to track analytics.",
+    answer: [
+      "Dynamic websites provide greater flexibility and functionality. Key advantages include easy content management, database integration, interactive features, scalability, personalized functionality, e-commerce capabilities, regular content updates, analytics integration, and compatibility with various digital marketing requirements.",
+    ],
     meta: "Benefits",
   },
+
   {
     id: 3,
-    question: "What types of websites can benefit from dynamic functionality?",
-    answer:
-      "Dynamic functionality offers numerous advantages for a diverse array of websites, encompassing e-commerce stores, news portals, social networking platforms, online forums, blogs, content management systems (CMS), educational platforms, booking systems, and business directories.",
+    question: "What types of websites can use dynamic functionality?",
+    answer: [
+      "Almost any business website can benefit from dynamic functionality when its requirements demand it. Common examples include:",
+    ],
+    list: [
+      "Corporate websites",
+      "Business websites",
+      "E-commerce websites",
+      "News and media portals",
+      "Blogs",
+      "Educational websites",
+      "Booking websites",
+      "Membership websites",
+      "Business directories",
+      "Customer portals",
+      "Real estate websites",
+      "Service-based websites",
+      "Custom web applications",
+    ],
     meta: "Use Cases",
   },
+
   {
     id: 4,
     question: "How is content managed on a dynamic website?",
-    answer:
-      "Content on a dynamic website is commonly controlled through a content management system (CMS) or a database-driven platform. Website administrators have the ability to add, modify, or delete content using a user-friendly interface, eliminating the need to make direct edits to HTML files. The content is stored in a database and is dynamically presented on the web pages.",
+    answer: [
+      "Content is generally managed through a CMS or database-driven administration panel. Authorized users can log in and update pages, products, services, images, blogs, testimonials, and other website information through a user-friendly interface.",
+      "This eliminates the need to manually edit individual HTML files for every content update.",
+    ],
     meta: "CMS",
   },
+
   {
     id: 5,
-    question:
-      "Do you provide post-development maintenance support for a dynamic website?",
-    answer:
-      "Yes. We provide maintenance support after the project is live for free but for a limited time period. After that, our prices are nominal for extended periods of support post-development. The prices depend on pre-agreed terms and conditions. For more details, talk to our experts and book a free consultation session.",
+    question: "Do you provide post-development maintenance and support?",
+    answer: [
+      "Yes. We provide post-development support for our websites for a limited period after the project goes live. Extended website maintenance and support can also be provided based on your requirements and mutually agreed terms.",
+      "Our support services can include content updates, technical assistance, website maintenance, troubleshooting, security updates, backups, and other website-related requirements.",
+    ],
     meta: "Support",
   },
+<<<<<<< Updated upstream
   //*********************** */
  {
   id: 6,
@@ -110,6 +138,29 @@ const faqa1Data: FAQItem[] = [
 },
   
   
+=======
+
+  {
+    id: 6,
+    question: "How much does website development cost in Chennai?",
+    answer: [
+      "The cost of website development depends on factors such as the number of pages, design requirements, CMS platform, functionality, integrations, database requirements, e-commerce features, and customization.",
+      "Contact our team to discuss your requirements and receive a suitable website development proposal.",
+    ],
+    meta: "Pricing",
+  },
+
+  {
+    id: 7,
+    question:
+      "Why should I choose a professional web development company in Chennai?",
+    answer: [
+      "A professional development team can help you build a website that is not only visually appealing but also responsive, user-friendly, scalable, secure, and aligned with your business objectives.",
+      "By working with experienced web developers in Chennai, you can get a website designed around your specific business requirements rather than relying on a generic template-based solution.",
+    ],
+    meta: "Web Development",
+  },
+>>>>>>> Stashed changes
 ];
 
 export default faqa1Data;
