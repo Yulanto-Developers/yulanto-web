@@ -553,7 +553,7 @@ const MajorInnerItems = ({
                         fontSize: "14px",
                       }}
                     >
-                      Visit Us
+                      Visit Website
                     </a>
                   </div>
                 </div>

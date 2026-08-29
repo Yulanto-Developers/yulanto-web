@@ -187,7 +187,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                 </div>
             </div>
             <div className="position-abs">
-                <span className="text-tenor text-white" style={{ fontSize: '18px' }}>© 2026 Yulanto Web Creations. All Rights Reserved.</span>
+                <span className="text-tenor text-white" style={{ fontSize: '18px' }}>©2015 - {new Date().getFullYear()} Yulanto Web Creations. All Rights Reserved.</span>
             </div>
             {/* Copyright */}
             <div className={`px-copyright-area ${copyrightClassName}  media-margin-cls`}>
