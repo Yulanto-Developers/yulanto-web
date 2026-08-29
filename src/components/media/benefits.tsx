@@ -143,8 +143,8 @@ export default function SocialMediaBenefits() {
                     <div
                       style={{
                         position: "relative",
-                        width: "3.75rem",
-                        height: "3.75rem",
+                        width: "3.50rem",
+                        height: "3.50rem",
                         borderRadius: "50%",
                         overflow: "hidden",
                         backgroundColor: "#e2e8f0",
@@ -175,7 +175,7 @@ export default function SocialMediaBenefits() {
                           zIndex: 0,
                         }}
                       >
-                        {item.initials}
+                       
                       </span>
                     </div>
 

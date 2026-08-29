@@ -44,15 +44,16 @@ const INJECTED_STYLES = `
   }
 
   .premium-depth-card {
-    background: #053456;
-    box-shadow: 
-      0 40px 100px -20px rgba(0, 0, 0, 0.9),
-      0 20px 40px -20px rgba(0, 0, 0, 0.8),
-      inset 0 1px 2px rgba(255, 255, 255, 0.2),
-      inset 0 -2px 4px rgba(0, 0, 0, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    position: relative;
-  }
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100%;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
 
   .card-sheen {
     position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 50;
@@ -218,9 +219,10 @@ export function CtaCard({
     const isMobile = window.innerWidth < 768;
 
     const ctx = gsap.context(() => {
-   gsap.set(".main-card", {
-  y: isMobile ? 80 : 120,
-  // scale: isMobile ? 0.96 : 0.92,
+  gsap.set(".main-card", {
+  y: 0,
+  x: 0,
+  scale: 1,
   autoAlpha: 1,
 });
       gsap.set([".seo-content-left", ".seo-content-right", ".mockup-scroll-wrapper", ".floating-badge", ".phone-widget"], { autoAlpha: 0 });
@@ -236,30 +238,153 @@ export function CtaCard({
         },
       });
 
-      scrollTl
-        .to(".main-card", { y: 0, ease: "power3.inOut", duration: 2 }, 0)
-        .to(".main-card", { width: "100%", height: "100%", borderRadius: "0px", ease: "power3.inOut", duration: 1.5 })
-        .fromTo(".mockup-scroll-wrapper",
-          { y: 300, z: -500, rotationX: 50, rotationY: -30, autoAlpha: 0, scale: 0.6 },
-          { y: 0, z: 0, rotationX: 0, rotationY: 0, autoAlpha: 1, scale: 1, ease: "expo.out", duration: 2.5 }, "-=0.8"
-        )
-        .fromTo(".phone-widget", { y: 40, autoAlpha: 0, scale: 0.95 }, { y: 0, autoAlpha: 1, scale: 1, stagger: 0.15, ease: "back.out(1.2)", duration: 1.5 }, "-=1.5")
-        .to(".progress-ring", { strokeDashoffset: 40, duration: 2, ease: "power3.inOut" }, "-=1.2")
-        .to(".counter-val", { innerHTML: metricValue, snap: { innerHTML: 1 }, duration: 2, ease: "expo.out" }, "-=2.0")
-        .fromTo(".floating-badge", { y: 100, autoAlpha: 0, scale: 0.7, rotationZ: -10 }, { y: 0, autoAlpha: 1, scale: 1, rotationZ: 0, ease: "back.out(1.5)", duration: 1.5, stagger: 0.2 }, "-=2.0")
-        .fromTo(".seo-content-left", { x: -50, autoAlpha: 0 }, { x: 0, autoAlpha: 1, ease: "expo.out", duration: 1.5 }, "-=1.5")
-        .fromTo(".seo-content-right", { x: 50, autoAlpha: 0 }, { x: 0, autoAlpha: 1, ease: "expo.out", duration: 1.5 }, "-=1.5")
-        .to({}, { duration: 0.8 })
-        .to([".mockup-scroll-wrapper", ".floating-badge", ".seo-content-left", ".seo-content-right"], {
-          scale: 0.9, y: -40, z: -200, autoAlpha: 0, ease: "power3.in", duration: 1.2, stagger: 0.05,
-        })
-        .to(".main-card", { 
-          width: isMobile ? "92vw" : "85vw", 
-          height: isMobile ? "92vh" : "85vh", 
-          borderRadius: isMobile ? "32px" : "40px", 
-          ease: "expo.inOut", 
-          duration: 1.8 
-        }, "pullback");
+    scrollTl
+  // First scroll: phone comes directly into view
+  .to(".main-card", {
+    y: 0,
+    scale: 1,
+    autoAlpha: 1,
+    ease: "power3.out",
+    duration: 1,
+  }, 0)
+
+  // Phone enters
+  .fromTo(
+    ".mockup-scroll-wrapper",
+    {
+      y: 300,
+      z: -500,
+      rotationX: 50,
+      rotationY: -30,
+      autoAlpha: 0,
+      scale: 0.6,
+    },
+    {
+      y: 0,
+      z: 0,
+      rotationX: 0,
+      rotationY: 0,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      duration: 2.5,
+    },
+    "-=0.3"
+  )
+
+  // Phone widgets
+  .fromTo(
+    ".phone-widget",
+    {
+      y: 40,
+      autoAlpha: 0,
+      scale: 0.95,
+    },
+    {
+      y: 0,
+      autoAlpha: 1,
+      scale: 1,
+      stagger: 0.15,
+      ease: "back.out(1.2)",
+      duration: 1.5,
+    },
+    "-=1.5"
+  )
+
+  .to(
+    ".progress-ring",
+    {
+      strokeDashoffset: 40,
+      duration: 2,
+      ease: "power3.inOut",
+    },
+    "-=1.2"
+  )
+
+  .to(
+    ".counter-val",
+    {
+      innerHTML: metricValue,
+      snap: { innerHTML: 1 },
+      duration: 2,
+      ease: "expo.out",
+    },
+    "-=2"
+  )
+
+  .fromTo(
+    ".floating-badge",
+    {
+      y: 100,
+      autoAlpha: 0,
+      scale: 0.7,
+      rotationZ: -10,
+    },
+    {
+      y: 0,
+      autoAlpha: 1,
+      scale: 1,
+      rotationZ: 0,
+      ease: "back.out(1.5)",
+      duration: 1.5,
+      stagger: 0.2,
+    },
+    "-=2"
+  )
+
+  // Left content
+  .fromTo(
+    ".seo-content-left",
+    {
+      x: -50,
+      autoAlpha: 0,
+    },
+    {
+      x: 0,
+      autoAlpha: 1,
+      ease: "expo.out",
+      duration: 1.5,
+    },
+    "-=1.5"
+  )
+
+  // Right content
+  .fromTo(
+    ".seo-content-right",
+    {
+      x: 50,
+      autoAlpha: 0,
+    },
+    {
+      x: 0,
+      autoAlpha: 1,
+      ease: "expo.out",
+      duration: 1.5,
+    },
+    "-=1.5"
+  )
+
+  .to({}, { duration: 0.8 })
+
+  // Exit animation
+  .to(
+    [
+      ".mockup-scroll-wrapper",
+      ".floating-badge",
+      ".seo-content-left",
+      ".seo-content-right",
+    ],
+    {
+      scale: 0.9,
+      y: -40,
+      z: -200,
+      autoAlpha: 0,
+      ease: "power3.in",
+      duration: 1.2,
+      stagger: 0.05,
+    }
+  )
+ 
 
     }, containerRef);
 
@@ -295,19 +420,19 @@ export function CtaCard({
         <div
           ref={mainCardRef}
           className="main-card premium-depth-card gsap-reveal"
-          style={{
-            overflow: "hidden",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            pointerEvents: "auto",
-            width: "85vw",
-            maxWidth: "100%",
-            height: "85vh",
-            borderRadius: "40px"
-          }}
+         style={{
+  position: "relative",
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  pointerEvents: "auto",
+  background: "transparent",
+  overflow: "visible",
+}}
         >
-          <div className="card-sheen" aria-hidden="true" />
+        
 
           <div className="hero-card-grid">
             
