@@ -4,7 +4,7 @@
 
 .website-benefits {
     width: 100%;
-    margin: 20px auto;
+    margin: 40px auto;
 
     display: flex;
     flex-direction: column;
@@ -1210,9 +1210,9 @@
    SEO APPROACH
 ========================================= */
 
-.seo-approach-wrapper {
+/* .seo-approach-wrapper {
     margin-top: 40px;
-}
+} */
 
 
 /* =========================================
@@ -1238,11 +1238,7 @@
 
     margin: 0;
 
-    color: #666;
-
-    font-size: 14px;
-
-    line-height: 1.7;
+    font-size: 16px !important;
 }
 
 
@@ -1468,7 +1464,7 @@
 .why-choose-header p {
     margin-bottom: 12px;
 
-    color: #555555;
+    /* color: #555555; */
 
     font-size: 15px;
 
@@ -1643,9 +1639,9 @@
 .why-choose-card-content p {
     margin: 0;
 
-    color: #666666;
+    /* color: #666666; */
 
-    font-size: 14px;
+    font-size: 16px !important;
 
     line-height: 1.75;
 }
@@ -1779,16 +1775,16 @@
 
     border-radius: 22px;
 
-    background: #053456;
+    background: #fdfbfb;
 
-    color: #ffffff;
+    color: #053456;
 
     box-sizing: border-box;
 
     cursor: pointer;
 
     box-shadow:
-        0 15px 40px rgba(5, 52, 86, 0.12);
+        0 15px 40px rgba(3, 33, 54, 0.12);
 }
 
 
@@ -1880,11 +1876,11 @@
 
     padding: 6px 12px;
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #053456;
 
     border-radius: 30px;
 
-    color: rgba(255, 255, 255, 0.75);
+    color: #053456;
 
     font-size: 11px;
 
@@ -1903,7 +1899,7 @@
 
     margin: 0 0 15px;
 
-    color: #ffffff;
+    color: #053456;
 
     font-size: 32px;
 
@@ -1921,10 +1917,7 @@
     max-width: 800px;
 
     margin: 0;
-
-    color: rgba(255, 255, 255, 0.82);
-
-    font-size: 15px;
+    font-size: 15px !important;
 
     line-height: 1.8;
 }
@@ -1935,7 +1928,7 @@
 ========================================= */
 
 .ambassador-card strong {
-    color: #ffffff;
+    color: #053456;
 
     font-weight: 700;
 }
@@ -1954,7 +1947,7 @@
 
     margin-top: 25px;
 
-    color: rgba(255, 255, 255, 0.6);
+    color: #053456;
 
     font-size: 12px;
 
@@ -1964,9 +1957,11 @@
 
 .ambassador-card-arrow {
     font-size: 18px;
-
-    transition:
-        transform 0.3s ease;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
 }
 
 

@@ -55,8 +55,8 @@
 ========================================= */
 
 .tech-icon {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 
     min-width: 20px;
 
@@ -100,10 +100,10 @@
 .tech-item:hover {
     width: max-content;
 
-    background: #315d7d;
+    background: #ffffff;
     border-color: #315d7d;
 
-    color: #ffffff;
+    color: #053456;
 
     box-shadow: 0 8px 20px rgba(49, 93, 125, 0.18);
 }

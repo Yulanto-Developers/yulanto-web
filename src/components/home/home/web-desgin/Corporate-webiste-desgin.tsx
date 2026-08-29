@@ -2,20 +2,27 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import BreadcurmbData from "@/components/breadcrum/sections/breadcrumbdata";
+import BreadcrumbData from "@/components/breadcrum/sections/breadcrumbdata";
 import IntroContent from "../myComponents/common/IntroContent";
 import img from "@/assets/img/sample/Harithams.jpg";
+import img1 from "@/assets/img/website/corporate/demo-0.1.jpg";
+import img2 from "@/assets/img/website/corporate/demo-0.jpg";
 import "./common.css";
 import "./icon-design.css";
+import a1 from '@/assets/img/website/corporate/Branding.jpg'
+import a2 from '@/assets/img/website/corporate/Clear.jpg'
+import a3 from '@/assets/img/website/corporate/Professional.jpg'
+import a4 from '@/assets/img/website/corporate/Content.jpg'
+import a5 from '@/assets/img/website/corporate/Security.jpg'
+import a6 from '@/assets/img/website/corporate/SEO.jpg';
 
 import {
-    FaHtml5,
-    FaCss3Alt,
-    FaBootstrap,
-    FaJs,
-    FaReact,
-    FaNodeJs,
-    FaPhp,
+    FaShieldHalved,
+    FaMagnifyingGlass,
+    FaMobileScreenButton,
+    FaGaugeHigh,
+    FaUserCheck,
+    FaChartLine,
     FaFileSignature,
     FaFileLines,
     FaUserShield,
@@ -24,7 +31,6 @@ import {
     FaComments,
 } from "react-icons/fa6";
 
-import { SiJquery, SiMysql } from "react-icons/si";
 import {
     FaPalette,
     FaBars,
@@ -33,28 +39,65 @@ import {
     FaShieldAlt,
     FaSearch,
 } from "react-icons/fa";
-import AnimatedFeatureGrid from "../myComponents/common/AnimatedFeatureGrid";
-import { imageOptimizer } from "next/dist/server/image-optimizer";
-import CorporateApproachGrid from "../myComponents/common/CorporateApproachGrid";
 
-function Corporatewebistedesgin() {
+import {
+    FaHtml5,
+    FaCss3Alt,
+    FaJs,
+    FaWordpress,
+    FaPhp,
+    FaReact,
+    FaNodeJs,
+    FaShopify,
+} from "react-icons/fa6";
+
+import {
+    FaObjectGroup,
+    FaSliders,
+    FaBarsStaggered,
+    FaMagnifyingGlassChart,
+    FaSitemap,
+    FaGlobe,
+    FaTabletScreenButton,
+    FaFolderTree,
+    FaServer,
+    FaScrewdriverWrench,
+} from "react-icons/fa6";
+
+import { SiCodeigniter, SiWoocommerce, SiMysql } from "react-icons/si";
+import AnimatedFeatureGrid from "../myComponents/common/AnimatedFeatureGrid";
+import CorporateApproachGrid from "../myComponents/common/CorporateApproachGrid";
+import { useAOS } from "@/components/hooks/useAOS";
+
+function CorporateWebsiteDesign() {
     const stats = [
         { value: "50+", label: "Corporate Websites" },
-        { value: "200+", label: "Happy Clients" },
+        { value: "200+", label: "Active Clients" },
         { value: "150+", label: "Chennai Clients" },
         { value: "100%", label: "Client Satisfaction" },
     ];
 
     const technologies = [
-        { name: "HTML", icon: FaHtml5 },
-        { name: "CSS", icon: FaCss3Alt },
-        { name: "Bootstrap", icon: FaBootstrap },
-        { name: "JavaScript", icon: FaJs },
-        { name: "jQuery", icon: SiJquery },
-        { name: "React.js", icon: FaReact },
-        { name: "Node.js", icon: FaNodeJs },
-        { name: "PHP", icon: FaPhp },
-        { name: "MySQL", icon: SiMysql },
+        { name: "HTML5", icon: FaHtml5, color: "#E34F26" },
+        { name: "CSS3", icon: FaCss3Alt, color: "#1572B6" },
+        { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
+        { name: "WordPress", icon: FaWordpress, color: "#21759B" },
+        { name: "PHP", icon: FaPhp, color: "#777BB4" },
+        { name: "CodeIgniter", icon: SiCodeigniter, color: "#EF4223" },
+        { name: "React", icon: FaReact, color: "#61DAFB" },
+        { name: "Node Js", icon: FaNodeJs, color: "#339933" },
+        { name: "WooCommerce", icon: SiWoocommerce, color: "#96588A" },
+        { name: "Shopify", icon: FaShopify, color: "#95BF47" },
+        { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+    ];
+
+    const corporate = [
+        { text: "Professional and modern visual design", icon: <FaShieldHalved /> },
+        { text: "Mobile-responsive and user-friendly layouts", icon: <FaMobileScreenButton /> },
+        { text: "SEO-friendly website structure", icon: <FaMagnifyingGlass /> },
+        { text: "Fast-loading and performance-focused development", icon: <FaGaugeHigh /> },
+        { text: "Clear navigation and improved user experience", icon: <FaUserCheck /> },
+        { text: "Scalable solutions that support business growth", icon: <FaChartLine /> },
     ];
 
     const features = [
@@ -62,81 +105,137 @@ function Corporatewebistedesgin() {
             icon: FaPalette,
             title: "Branding Consistency",
             description:
-                "Corporate websites should reflect the organization's brand identity, including its logo, color scheme, typography, and tone of voice. Consistency across all branding elements helps to reinforce brand recognition and trust.",
-            image: img,
+                "Your corporate website should represent your brand consistently across every page. We incorporate your logo, brand colors, typography, imagery, and communication style to create a unified visual identity.",
+            image: a1,
         },
         {
             icon: FaBars,
             title: "Clear Navigation",
             description:
-                "A clear and intuitive navigation structure is essential for corporate websites, allowing visitors to easily find the information they're looking for.",
-            image: img,
+                "Visitors should be able to find the information they need quickly. We create logical page structures and intuitive navigation menus that make it easy for users to explore your website.",
+            image: a2,
         },
         {
             icon: FaLaptop,
             title: "Professional Appearance",
             description:
-                "Corporate websites should convey professionalism and credibility. This includes high-quality visuals, clean layout designs, and attention to detail in all aspects of the site's presentation.",
-            image: img,
+                "A professional website creates a strong first impression. Our website designers in Chennai focus on clean layouts, quality visuals, balanced typography, attractive sections, and modern design elements.",
+            image: a3,
         },
         {
             icon: FaFileAlt,
             title: "Content Strategy",
             description:
-                "Content should be carefully planned and crafted to align with the organization's goals and target audience.",
-            image: img,
+                "Good design works best when supported by relevant content. We organize your website content to clearly communicate your company profile, products, services, capabilities, achievements, and other important information.",
+            image: a4,
         },
         {
             icon: FaShieldAlt,
-            title: "Security and Compliance",
+            title: "Security and Reliability",
             description:
-                "Corporate websites often handle sensitive information, so security measures such as SSL certificates, data encryption, and compliance with relevant regulations are essential.",
-            image: img,
+                "Website security is an important part of corporate website development. We consider SSL implementation, secure development practices, software updates, hosting requirements, and other appropriate security measures.",
+            image: a5,
         },
         {
             icon: FaSearch,
             title: "SEO Optimization",
             description:
-                "Optimizing the website for search engines is important for improving visibility and driving organic traffic.",
-            image: img,
+                "Search engine visibility is considered during the website creation process. We develop SEO-friendly page structures, headings, URLs, content sections, mobile responsiveness, and technical elements that provide a strong foundation for ongoing SEO.",
+            image: a6,
         },
+    ];
+
+
+
+
+    const scopeOfWork = [
+        { text: "Responsive Website Design", icon: FaMobileScreenButton, color: "#2563EB", bgColor: "#EFF6FF" },
+        { text: "User Experience (UX) Design", icon: FaObjectGroup, color: "#7C3AED", bgColor: "#F5F3FF" },
+        { text: "User Interface (UI) Design", icon: FaPalette, color: "#EC4899", bgColor: "#FDF2F8" },
+        { text: "Slider and Banner Design", icon: FaSliders, color: "#F59E0B", bgColor: "#FFFBEB" },
+        { text: "User-Friendly Navigation Menus", icon: FaBarsStaggered, color: "#10B981", bgColor: "#ECFDF5" },
+        { text: "Website Usability Analysis", icon: FaMagnifyingGlassChart, color: "#06B6D4", bgColor: "#ECFEFF" },
+        { text: "Website Performance Optimization", icon: FaGaugeHigh, color: "#EF4444", bgColor: "#FEF2F2" },
+        { text: "Website Content Structure", icon: FaSitemap, color: "#8B5CF6", bgColor: "#F5F3FF" },
+        { text: "Cross-Browser Testing", icon: FaGlobe, color: "#3B82F6", bgColor: "#EFF6FF" },
+        { text: "Mobile and Tablet Compatibility", icon: FaTabletScreenButton, color: "#14B8A6", bgColor: "#F0FDFA" },
+        { text: "Information Architecture", icon: FaFolderTree, color: "#6366F1", bgColor: "#EEF2FF" },
+        { text: "Server Setup and Deployment", icon: FaServer, color: "#64748B", bgColor: "#F8FAFC" },
+        { text: "Website Support and Maintenance", icon: FaScrewdriverWrench, color: "#D97706", bgColor: "#FFFBEB" },
+        { text: "SEO-Friendly Website Structure", icon: FaMagnifyingGlass, color: "#059669", bgColor: "#ECFDF5" },
     ];
 
     const corporateApproach = [
         {
             id: 1,
-            category: "Research",
-            title: "Discovery and Research",
+            category: "1.1",
+            title: "Discovery & Research",
             description:
-                "This phase involves understanding the client\'s requirements, target audience, and goals for the website.Research into competitors and industry trends also occurs during this stage. In this stage, you outline the site map, structure, and technologies to be used. Content strategy, such as what information will be presented and how it will be organized, is also defined.",
-            image: img,
+                "The first stage is to understand your business requirements, target audience, competitors, industry, website objectives, and expected functionality. This information helps us establish a clear direction for the project.",
+            image: img2,
             size: "large" as const,
         },
         {
             id: 2,
-            category: "Planning",
+            category: "1.2",
             title: "Planning",
             description:
-                "This is where the visual aspects of the website start taking shape. Wireframes are created to outline the layout and structure, followed by the design of the user interface (UI) elements, including colors, typography, and imagery. ilding the website using HTML, CSS, JavaScript, and other relevant technologies. This stage involves both front-end development (client-side) and back-end  development (server-side).",
-            image: img,
+                "We define the website structure, sitemap, navigation, content requirements, functionality, technology, and development approach. A clear plan helps ensure that the website remains organized and aligned with your business goals.",
+            image: img1,
             size: "small" as const,
         },
         {
             id: 3,
-            category: "Design",
-            title: "Design & Development",
+            category: "2.1",
+            title: "Design",
             description:
-                "Before launch, the website undergoes thorough testing to ensure functionality,compatibility across different browsers and devices, and responsiveness. Bugs and issues are identified and resolved during this stage. >Content is created or gathered for  the website, including text, images, videos, and other multimedia elements. This content is then integrated into the  website during development",
+                "Our website designers in Chennai develop the visual concept of the website, including layouts, typography, colors, images, buttons, banners, and other UI elements. The design is created to reflect your brand identity and provide a positive user experience.",
             image: img,
             size: "small" as const,
         },
         {
             id: 4,
-            category: "Quality",
-            title: "Testing and Quality Assurance",
+            category: "2.2",
+            title: "Development",
             description:
-                "Once the website has been thoroughly tested and approved by the client, it is deployed to the live server where it becomes accessible to the public. After launch, the website requires  ongoing maintenance to ensure its performance, security, and  relevance. This includes regular updates to content, softwarepatches, and monitoring for any issues or improvements that may be needed.",
+                "Once the design is approved, our development team converts the design into a functional website using suitable web technologies. This may include front-end development, back-end development, CMS integration, database integration, forms, and other required functionality.",
+            image: img1,
+            size: "large" as const,
+        },
+        {
+            id: 5,
+            category: "3.1",
+            title: "Testing & Quality Assurance",
+            description:
+                "Before launching the website, we conduct functional and compatibility testing. We check responsiveness, navigation, forms, links, content display, browser compatibility, mobile compatibility, and other important website elements.",
+            image: img2,
+            size: "large" as const,
+        },
+        {
+            id: 6,
+            category: "3.2",
+            title: "Content Integration",
+            description:
+                "Website content such as text, images, videos, product information, service details, and other multimedia elements are organized and integrated into the website according to the approved structure.",
             image: img,
+            size: "small" as const,
+        },
+        {
+            id: 7,
+            category: "4.1",
+            title: "Deployment",
+            description:
+                "After testing and client approval, the completed website is deployed to the live hosting server and made accessible to visitors.",
+            image: img1,
+            size: "small" as const,
+        },
+        {
+            id: 8,
+            category: "4.2",
+            title: "Maintenance & Updates",
+            description:
+                "A website requires regular maintenance to remain secure, functional, and up to date. Depending on your requirements, we provide website maintenance, content updates, technical support, software updates, security assistance, and performance monitoring.",
+            image: img2,
             size: "large" as const,
         },
     ];
@@ -147,80 +246,98 @@ function Corporatewebistedesgin() {
             icon: FaFileSignature,
             title: "Defined Contracts",
             description:
-                "Every project we undertake necessitates the signing of a Non-Disclosure Agreement (NDA).",
+                "Every project is clearly documented with agreed requirements, responsibilities, scope, and project terms.",
         },
         {
             number: "02",
             icon: FaFileLines,
             title: "Documented SoW",
             description:
-                "We ensure that the scope of work and timelines are documented in writing.",
+                "We document the scope of work, deliverables, requirements, and project timelines to maintain clarity throughout the development process.",
         },
         {
             number: "03",
             icon: FaUserShield,
             title: "Complete Confidentiality",
             description:
-                "Customer confidentiality is guaranteed by us throughout the entire project.",
+                "We respect the confidentiality of your business information, project details, website content, and other sensitive project-related information.",
         },
         {
             number: "04",
             icon: FaImages,
             title: "Royalty Images",
             description:
-                "We incorporate royalty images to elevate the enrichment and uniqueness of your website.",
+                "Where applicable, we use royalty-free or appropriately licensed images to enhance the visual quality and professional appearance of your website.",
         },
         {
             number: "05",
             icon: FaClock,
             title: "On Time Delivery",
             description:
-                "Our dedication lies in consistently delivering on our promises and agreed timelines.",
+                "We follow a structured workflow to manage design, development, testing, and deployment efficiently and work toward delivering projects within the agreed timeline.",
         },
         {
             number: "06",
             icon: FaComments,
             title: "Meaningful Interactions",
             description:
-                "We focus on the core matter without any unnecessary distractions.",
+                "We focus on understanding your actual business requirements and providing practical website solutions without unnecessary complexity.",
         },
     ];
 
+    const galleryImages = [
+        {
+            src: img1.src,
+            alt: "Corporate website design",
+            className: "gallery-main",
+        },
+        {
+            src: img2.src,
+            alt: "Corporate website development",
+            className: "gallery-small gallery-small-one",
+        },
+        {
+            src: img.src,
+            alt: "Corporate website",
+            className: "gallery-small gallery-small-two",
+        },
+    ];
+
+    useAOS();
+
     return (
         <div>
-            <BreadcurmbData />
+            <BreadcrumbData />
 
             <IntroContent
-                leftTitle="From Vision to Reality"
-                rightTitle1="Real Projects."
-                rightTitle2=" Creative Solutions. Real Results."
-                description="Explore our successful projects and discover how we transform ideas into engaging, innovative, and impactful digital experiences that help businesses grow and stand out online."
+                leftTitle="Website Creation Company in Chennai"
+                rightTitle1="Professional Corporate "
+                rightTitle2=" Website Design Services in Chennai"
+                description="Yulanto is a professional website creation company in Chennai offering modern, responsive, and business-focused website design and development solutions for startups, small businesses, and established companies."
             />
 
             {/* About Section */}
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-12">
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            Start Your Design
+                        </span>
                         <h4 className="px-about-title mb-20">
-                            <span className="text-blue-about">
-                                Company Website Design{" "}
-                            </span>
+                            <span className="text-blue-about">Company Website Design </span>
                             in Chennai
                         </h4>
                     </div>
 
                     <div className="col-md-7">
                         <p className="text-figtree">
-                            Corporate web design focuses on creating websites for
-                            businesses or organizations that represent their brand
-                            identity, communicate their message effectively, and serve
-                            their business goals.
+                            Our corporate websites are designed to strengthen your online presence, communicate your brand effectively, and create meaningful interactions with your target audience.
                             <br />
                             <br />
-                            Corporate web design should prioritize functionality,
-                            usability, and professionalism while effectively
-                            communicating the organization's brand and value proposition
-                            to its target audience.
+                            As an experienced website design agency in Chennai, we combine creative design, user-friendly navigation, responsive development, SEO-friendly structures, and reliable technology to create websites that support your business goals.
+                            <br />
+                            <br />
+                            Whether you need a new corporate website, a website redesign, or a customized business website, our team of experienced website designers in Chennai can create a professional digital platform tailored to your brand.
                         </p>
                     </div>
 
@@ -228,20 +345,13 @@ function Corporatewebistedesgin() {
                         <div className="stats-glass-card">
                             <div className="stats-glow-bg" />
 
-                            <div className="stats-badge-tag">
-                                Startup Website Design
-                            </div>
+                            <div className="stats-badge-tag">Startup Website Design</div>
 
                             <div className="stats-grid-wrapper">
                                 {stats.map((item, index) => (
                                     <div key={index} className="stat-box-item">
-                                        <div className="stat-value-num">
-                                            {item.value}
-                                        </div>
-
-                                        <div className="stat-label-text">
-                                            {item.label}
-                                        </div>
+                                        <div className="stat-value-num">{item.value}</div>
+                                        <div className="stat-label-text">{item.label}</div>
                                     </div>
                                 ))}
                             </div>
@@ -250,264 +360,415 @@ function Corporatewebistedesgin() {
                 </div>
             </div>
 
-            {/* Professional Excellence Section */}
             <div className="professional-section">
-                <div className="container my-5">
+                <div className="container py-5">
                     <div className="row align-items-center pt-50">
-                        <div className="col-12">
+                        <div className="col-12 mb-4">
+                            <span className="tp-section-subtitle text-black blink-ball">
+                                Professional Web Design
+                            </span>
+
                             <h4 className="px-about-title mb-20">
-                                <span className="text-blue-about">
-                                    Professional Excellence
-                                </span>{" "}
+                                <span className="text-blue-about">Professional Excellence </span>
                                 Best Web Designers in Chennai
                             </h4>
                         </div>
 
-                        {/* Image */}
-                        <div className="col-md-4">
-                            <img
-                                src={img.src}
-                                alt="Corporate website design"
-                                className="img-border-cls"
-                            />
-                        </div>
-
-                        {/* Content */}
-                        <div className="col-md-8">
-                            <p className="text-figtree">
-                                We recognize the importance of a Corporate website in
-                                representing your business's brand identity to a
-                                worldwide audience. Yulanto is equipped with the
-                                essential expertise to guarantee that your website is
-                                not only visually appealing but also delivers precise
-                                information, functionality, and efficiency.
-                                <br />
-                                <br />
-                                Our commitment extends beyond the mere development of a
-                                Corporate website; we aim to provide your brand identity
-                                with an unmatched level of quality and performance. Our
-                                team invests substantial time and effort into
-                                conceptualizing and designing each website, ensuring
-                                its uniqueness and competitive edge.
-                            </p>
-                        </div>
-
-                        {/* Technology Icons */}
-                        <div className="col-12">
-
-                            <div className="tech-icons">
-                                {technologies.map((tech) => {
-                                    const Icon = tech.icon;
-
-                                    return (
-                                        <div
-                                            key={tech.name}
-                                            className="tech-item"
-                                        >
-                                            <Icon className="tech-icon" />
-
-                                            <span>{tech.name}</span>
-                                        </div>
-                                    );
-                                })}
+                        <div className="col-lg-4 col-md-5 mb-4 mb-md-0">
+                            <div className="professional-image-wrapper">
+                                <img
+                                    src={img1.src}
+                                    alt="Corporate website design"
+                                    className="professional-image"
+                                />
                             </div>
-                            <h4 className="text-center pt-5 text-tenor fw-bold fs-5">Our Technologies</h4>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-12">
-                        <h4 className="px-about-title mb-20">
-                            <span className="text-blue-about">
-                                Key Considerations are {" "}
-                            </span>
-                            Involved in Corporate Web Design
-                        </h4>
-                    </div>
-
-                    <div className="col-md-12">
-                        <p className="text-figtree">
-                            A meticulously crafted and thoroughly constructed corporate website not only boosts your company
-                            to a leading position on the Search engine but also enhances overall visibility and top ranking
-                            in search engines.
-
-                        </p>
-                    </div>
-                    <div>
-                      
-                        <AnimatedFeatureGrid features={features} />
-                    </div>
-                    <div className="container">
-                          <h4 className="px-about-title mb-20">
-                            <span className="text-blue-about">
-                                Our Approach in  {" "}
-                            </span>
-                            Corporate
-                            Web Design
-                        </h4>
-                        <CorporateApproachGrid items={corporateApproach} />
-                    </div>
-                  
-
-                    <section className="why-corporate-section">
-
-                        <div className="container">
-
-                            {/* SECTION HEADING */}
-
-                            <motion.div
-                                className="why-corporate-heading"
-                                initial={{
-                                    opacity: 0,
-                                    y: 35,
-                                }}
-                                whileInView={{
-                                    opacity: 1,
-                                    y: 0,
-                                }}
-                                viewport={{
-                                    once: true,
-                                    amount: 0.3,
-                                }}
-                                transition={{
-                                    duration: 0.7,
-                                    ease: [0.16, 1, 0.3, 1],
-                                }}
-                            >
-
-                                {/* <div className="why-corporate-label">
-                                    <span></span>
-                                    WHY CHOOSE US
-                                    <span></span>
-                                </div> */}
- <div className="col-12">
-                            <h4 className="px-about-title mb-20">
-                                <span className="text-blue-about">
-                                     Why We are the top
-                                </span>{" "}
-                               choice for corporate web design
-                            </h4>
-                        </div>
-                                {/* <div className="why-corporate-heading-line">
-                                    <span></span>
-                                </div> */}
-
-                                <p>
-                                    With the support of a top-notch, well-trained, and highly
-                                    skilled team of professionals, we guarantee the highest
-                                    quality corporate web design services that are unmatched
-                                    in the industry.
+                        <div className="col-lg-8 col-md-7">
+                            <div className="professional-content">
+                                <p className="text-figtree">
+                                    A corporate website is more than an online presence — it is a digital representation of your company. A professionally designed website helps establish credibility, showcase your products and services, communicate your expertise, and generate valuable business enquiries.
                                 </p>
 
-                            </motion.div>
+                                <p className="professional-list-heading">
+                                    Our corporate website design services focus on:
+                                </p>
 
+                                <div className="corporate-features">
+                                    {corporate.map((item) => (
+                                        <div key={item.text} className="corporate-feature">
+                                            <div className="corporate-feature-icon">
+                                                {item.icon}
+                                            </div>
 
-                            {/* =================================================
-            CARDS
-        ================================================= */}
+                                            <div className="corporate-feature-content">
+                                                <span>{item.text}</span>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
 
-                            <div className="row g-4 mt-4">
+                                <p className="text-figtree mt-20">
+                                    As a trusted website design company in Chennai, we create websites that balance attractive design with usability, functionality, performance, and search engine visibility.
+                                </p>
+                            </div>
+                        </div>
 
-                                {whyChooseUs.map((item, index) => {
+                        <div className="col-12">
+                            <div className="technologies-wrapper">
+                                <h4 className="text-center mt-3 text-tenor fw-bold">
+                                    Our <span className="text-blue-about">Technologies</span>
+                                </h4>
+                                <p>
+                                    We use modern and reliable web technologies to create responsive, secure, scalable, and SEO-friendly websites. Depending on your business requirements, our website development solutions can be built using technologies and platforms such as
+                                </p>
 
-                                    const Icon = item.icon;
+                                <div className="tech-icons">
+                                    {technologies.map((tech) => {
+                                        const Icon = tech.icon;
 
-                                    return (
-                                        <div
-                                            key={item.number}
-                                            className="col-lg-4 col-md-6"
-                                        >
-
-                                            <motion.div
-                                                className="why-corporate-card"
-                                                initial={{
-                                                    opacity: 0,
-                                                    y: 45,
-                                                }}
-                                                whileInView={{
-                                                    opacity: 1,
-                                                    y: 0,
-                                                }}
-                                                viewport={{
-                                                    once: true,
-                                                    amount: 0.2,
-                                                }}
-                                                transition={{
-                                                    duration: 0.6,
-                                                    delay: index * 0.08,
-                                                    ease: [0.16, 1, 0.3, 1],
-                                                }}
-                                                whileHover={{
-                                                    y: -8,
-                                                }}
-                                            >
-
-                                                {/* NUMBER */}
-
-                                                <span className="why-card-number text-tenor">
-                                                    {item.number}
-                                                </span>
-
-
-                                                {/* ICON */}
-
-                                                <motion.div
-                                                    className="why-card-icon"
-                                                    whileHover={{
-                                                        scale: 1.08,
-                                                        rotate: 3,
-                                                    }}
-                                                    transition={{
-                                                        duration: 0.25,
-                                                    }}
-                                                >
-
-                                                    <div className="why-card-icon-inner">
-                                                        <Icon />
-                                                    </div>
-
-                                                </motion.div>
-
-
-                                                {/* CONTENT */}
-
-                                                <div className="why-card-content">
-
-                                                    <h3 className="text-tenor">
-                                                        {item.title}
-                                                    </h3>
-
-                                                    <div className="why-card-line"></div>
-
-                                                    <p>
-                                                        {item.description}
-                                                    </p>
-
+                                        return (
+                                            <div key={tech.name} className="tech-item">
+                                                <div className="tech-icon-wrapper">
+                                                    <Icon className="tech-icon" style={{ color: tech.color }} />
                                                 </div>
 
+                                                <span className="tech-name text-figtree">
+                                                    {tech.name}
+                                                </span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                                                {/* DECORATIVE DOT */}
+            <div
 
-                                                <span className="why-card-dot"></span>
+                data-aos="fade-right"
+                data-aos-delay={400}
+                data-aos-once={true}
+                style={{ backgroundColor: "#053456", margin: "100px auto" }}
+            >
+                <div className="container py-5">
+                    <div className="row align-items-center">
+                        <div className="col-12">
+                            <span className="tp-section-subtitle text-white blink-ball">
+                                Expert Web Design Services
+                            </span>
 
-                                            </motion.div>
+                            <h4 className="px-about-title mb-20 text-white">
+                                <span className="">Best Website </span>
+                                Designers in Chennai
+                            </h4>
+                        </div>
 
+                        <div className="row align-items-start">
+                            <div className="col-md-7">
+                                <p className="text-figtree text-white">
+                                    Your website is often the first point of interaction between your business and potential customers. At Yulanto, we understand the importance of creating a website that reflects your company’s professionalism, values, products, services, and brand identity.
+                                    <br />
+
+                                    Our team of experienced website designers in Chennai spends considerable time understanding your business, target audience, competitors, and objectives before beginning the design process. This helps us create a website that is not only visually appealing but also easy to navigate and effective in generating enquiries.
+                                    <br />
+                                    <br />
+                                    As a dedicated website creation company in Chennai, we focus on developing unique websites rather than relying on generic designs. Every project is planned according to the client’s business requirements, content, branding, functionality, and future growth.
+                                    <br />
+
+                                    From corporate websites and business portals to customized websites, our website creator in Chennai team provides end-to-end design and development support.
+                                </p>
+                            </div>
+
+                            <div className="col-md-5">
+                                <div className="corporate-gallery">
+                                    {galleryImages.map((image, index) => (
+                                        <div key={index} className={image.className}>
+                                            <img src={image.src} alt={image.alt} />
                                         </div>
-                                    );
-                                })}
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="container">
+                <div className="row align-items-start">
+                    {/* LEFT CONTENT */}
+                    <div className="col-md-7">
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            Corporate Website Principles
+                        </span>
 
+                        <h4 className="px-about-title mb-20">
+                            <span className="text-blue-about">
+                                Best Website{" "}
+                            </span>
+                            Designers in Chennai
+                        </h4>
+                        <p className="text-figtree mb-0">
+                            A professionally developed corporate website can help improve
+                            your company’s online credibility, user engagement, brand
+                            visibility, and search engine presence. Our website design
+                            agency in Chennai considers every important aspect of the
+                            website before development.
+                        </p>
+                    </div>
+
+                    {/* RIGHT ANIMATED DESIGN */}
+                    <div className="col-md-5">
+                        <div className="corporate-design-animation">
+
+                            {/* Floating decorative circles */}
+                            <span className="design-orbit orbit-one"></span>
+                            <span className="design-orbit orbit-two"></span>
+
+                            {/* Browser Window */}
+                            <div className="design-browser">
+
+                                {/* Browser Header */}
+                                <div className="browser-header">
+                                    <div className="browser-dots">
+                                        <span className="bg-danger"></span>
+                                        <span className="bg-success"></span>
+                                        <span className="bg-warning"></span>
+                                    </div>
+
+                                    <div className="browser-address">
+                                        www.yulanto.com
+                                    </div>
+                                </div>
+
+                                {/* Website Preview */}
+                                <div className="browser-content">
+
+                                    <div className="preview-navbar">
+                                        <div className="preview-logo">
+                                            YULANTO
+                                        </div>
+
+                                        <div className="preview-nav-items">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+
+                                    <div className="preview-body">
+
+                                        <div className="preview-text">
+                                            <div className="preview-title">
+                                                Corporate Website
+                                            </div>
+
+                                            <p className="preview-description-text">
+                                                A professionally developed corporate website helps improve
+                                                online credibility, brand visibility, user engagement, and
+                                                search engine presence.
+                                            </p>
+
+                                            <div className="preview-button">
+                                                Get Started
+                                            </div>
+                                        </div>
+
+                                        <div className="preview-image">
+                                            <div className="preview-image-inner">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div className="preview-loading"></div>
+
+                                </div>
+                            </div>
+
+                            {/* Floating Cards */}
+                            <div className="design-floating-card card-seo">
+                                <span className="floating-icon">⌕</span>
+
+                                <div>
+                                    <strong>SEO</strong>
+                                    <small>Optimized</small>
+                                </div>
+                            </div>
+
+                            <div className="design-floating-card card-mobile">
+                                <span className="floating-icon">✓</span>
+
+                                <div>
+                                    <strong>Responsive</strong>
+                                    <small>Mobile Ready</small>
+                                </div>
                             </div>
 
                         </div>
+                    </div>
 
-                    </section>
+                    {/* FEATURE GRID */}
+                    <div className="col-12">
+                        <AnimatedFeatureGrid features={features} />
+                    </div>
+
                 </div>
             </div>
+
+
+            <div className="container mb-80">
+                <div className="row justify-content-start mb-5">
+                    <div className="col-lg-8">
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            Scope of Work
+                        </span>
+                        <h4 className="px-about-title mb-20">
+                            <span className="text-blue-about"> Our Corporate </span> Website Design & Development Services
+                        </h4>
+                    </div>
+                </div>
+
+                <div className="row g-4">
+                    {scopeOfWork.map((item, index) => {
+                        const Icon = item.icon;
+                        return (
+                            <div key={index} className="col-lg-4 col-md-6">
+                                <div
+                                    className="d-flex align-items-center p-3 rounded-4 border transition-all duration-300"
+                                    style={{
+                                        backgroundColor: "#ffffff",
+                                        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.04)",
+                                        borderColor: "rgba(226, 232, 240, 0.8)",
+                                        transition: "all 0.3s ease",
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.transform = "translateY(-4px)";
+                                        e.currentTarget.style.boxShadow = "0 14px 30px rgba(0, 0, 0, 0.08)";
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = "translateY(0)";
+                                        e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.04)";
+                                    }}
+                                >
+                                    <div
+                                        className="d-flex align-items-center justify-content-center rounded-3 me-3 flex-shrink-0"
+                                        style={{
+                                            width: "48px",
+                                            height: "48px",
+                                            backgroundColor: item.bgColor,
+                                            color: item.color,
+                                            fontSize: "20px",
+                                        }}
+                                    >
+                                        <Icon />
+                                    </div>
+                                    <span className="fw-semibold text-dark text-figtree" style={{ fontSize: "1rem" }}>
+                                        {item.text}
+                                    </span>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+
+          <div className="container corporate-approach-section">
+
+    <span className="tp-section-subtitle text-black blink-ball">
+        Strategic Design Approach
+    </span>
+
+    <h4 className="px-about-title mb-20">
+        <span className="text-blue-about">
+            Our Approach to{" "}
+        </span>
+        Corporate Web Design
+    </h4>
+
+    <p className="text-figtree corporate-approach-intro">
+        At Yulanto, we follow a structured website design and development
+        process to ensure that every project is planned, designed, tested,
+        and launched professionally.
+    </p>
+
+    <CorporateApproachGrid items={corporateApproach} />
+
+</div>
+
+            <section className="why-corporate-section">
+                <div className="container">
+                    <motion.div
+                        className="why-corporate-heading"
+                        initial={{ opacity: 0, y: 35 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                        <div className="col-12">
+                            <span className="tp-section-subtitle text-black blink-ball">
+        Strategic Design Approach
+    </span>
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">Why We are the top </span>
+                                choice for corporate web design
+                            </h4>
+                        </div>
+
+                        <p>
+                            Choosing the right website design company in Chennai can make a significant difference to your online presence. At Yulanto, we combine creative thinking, technical expertise, structured processes, and business understanding to deliver professional websites.
+                        </p>
+                    </motion.div>
+
+                    <div className="row g-4 mt-4">
+                        {whyChooseUs.map((item, index) => {
+                            const Icon = item.icon;
+
+                            return (
+                                <div key={item.number} className="col-lg-4 col-md-6">
+                                    <motion.div
+                                        className="why-corporate-card"
+                                        initial={{ opacity: 0, y: 45 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true, amount: 0.2 }}
+                                        transition={{
+                                            duration: 0.6,
+                                            delay: index * 0.08,
+                                            ease: [0.16, 1, 0.3, 1],
+                                        }}
+                                        whileHover={{ y: -8 }}
+                                    >
+                                        <span className="why-card-number text-tenor">
+                                            {item.number}
+                                        </span>
+
+                                        <motion.div
+                                            className="why-card-icon"
+                                            whileHover={{ scale: 1.08, rotate: 3 }}
+                                            transition={{ duration: 0.25 }}
+                                        >
+                                            <div className="why-card-icon-inner">
+                                                <Icon />
+                                            </div>
+                                        </motion.div>
+
+                                        <div className="why-card-content">
+                                            <h5>{item.title}</h5>
+                                            <p>{item.description}</p>
+                                        </div>
+                                    </motion.div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
 
-export default Corporatewebistedesgin;
+export default CorporateWebsiteDesign;

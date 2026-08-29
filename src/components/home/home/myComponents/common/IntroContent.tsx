@@ -4,12 +4,13 @@ interface ContentLayout {
     rightTitle1: string;
     rightTitle2: string;
     description: string;
+    css?: string;
 }
-function IntroContent({ leftTitle, rightTitle1, rightTitle2, description }: ContentLayout) {
+function IntroContent({ leftTitle, rightTitle1, rightTitle2, description, css }: ContentLayout) {
     return (
-        <div className="container my-5">
+        <div className={`container ${css || 'my-5'}`}>
 
-            <div className="row mb-70 align-items-center">
+            <div className="row align-items-center">
                 <div className="col-xl-3">
                     <span className="tp-section-subtitle text-black blink-ball">
                         {leftTitle}

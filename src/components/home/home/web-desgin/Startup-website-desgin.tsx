@@ -1,10 +1,16 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import BreadcurmbData from '@/components/breadcrum/sections/breadcrumbdata'
 import IntroContent from '../myComponents/common/IntroContent'
 import StickyScrollReveal from './StickyScrollReveal'
 import img from '@/assets/img/sample/Harithams.jpg'
-import img2 from '@/assets/img/sample/Naturographers.jpg'
+import img2 from '@/assets/img/sample/Naturographers.jpg';
+import { PhotoGallery } from './gallery';
+import IndustryGallery from './IndustryGallery';
+import './industry-gallery.css';
+import './gallery-card.css';
 import './common.css';
+import img1 from '@/assets/img/website/startup/image-@.jpg'
 import {
     FaCartShopping,
     FaShirt,
@@ -49,30 +55,163 @@ import {
 } from "lucide-react";
 import "./status-badge.css";
 import Badge from './Badge';
-
+import { useAOS } from "@/components/hooks/useAOS";
+import v1 from '@/assets/img/website/startup/vector/vec-1.png'
+import v2 from '@/assets/img/website/startup/vector/vec-2.png'
+import v3 from '@/assets/img/website/startup/vector/vec-3.png'
+import v4 from '@/assets/img/website/startup/vector/vec-4.png'
+import v5 from '@/assets/img/website/startup/vector/vec-5.png'
+import v6 from '@/assets/img/website/startup/vector/vec-6.png'
+import v7 from '@/assets/img/website/startup/vector/vec-7.png'
+import v8 from '@/assets/img/website/startup/vector/vec-8.png'
+import v9 from '@/assets/img/website/startup/vector/vec-9.png'
+import v10 from '@/assets/img/website/startup/vector/vec-10.png'
+import v11 from '@/assets/img/website/startup/vector/vec-11.png'
+import v12 from '@/assets/img/website/startup/vector/vec-12.png'
+import v13 from '@/assets/img/website/startup/vector/vec-13.png'
+import en1 from '@/assets/img/website/startup/image-1.jpg'
+import en2 from '@/assets/img/website/startup/image-2.jpg'
+import en3 from '@/assets/img/website/startup/image-3.jpg'
+import en4 from '@/assets/img/website/startup/image-4.jpg'
+import sc1 from '@/assets/img/website/startup/Step-by-Step-1.jpg'
+import sc2 from '@/assets/img/website/startup/Step-by-Step-2.jpg'
+import sc3 from '@/assets/img/website/startup/Step-by-Step-3.jpg'
+import sc4 from '@/assets/img/website/startup/Step-by-Step-4.jpg'
+import sc5 from '@/assets/img/website/startup/Step-by-Step-5.jpg'
+import sc7 from '@/assets/img/website/startup/Step-by-Step-7.jpg'
+import sc6 from '@/assets/img/website/startup/Step-by-Step-6.jpg'
 
 function Startupwebsitedesign() {
+    const consultationText = " Let's build your website and create your online success story."
+    const [typedConsultationText, setTypedConsultationText] = useState('')
+
+    useEffect(() => {
+        let characterIndex = 0
+        const typingTimer = window.setInterval(() => {
+            if (characterIndex >= consultationText.length) {
+                characterIndex = 0
+                setTypedConsultationText('')
+            }
+
+            characterIndex += 1
+            setTypedConsultationText(consultationText.slice(0, characterIndex))
+        }, 8)
+
+        return () => window.clearInterval(typingTimer)
+    }, [])
+
     const stats = [
         { value: '250+', label: 'Startup Websites' },
-        { value: '200+', label: 'Happy Clients' },
+        { value: '200+', label: 'Active Clients' },
         { value: '150+', label: 'Chennai Clients' },
         { value: '100%', label: 'Client Satisfaction' },
     ];
 
     const industries = [
-        { name: 'Retail and eCommerce', icon: <FaCartShopping /> },
-        { name: 'Clothing and fashion', icon: <FaShirt /> },
-        { name: 'FMCG and consumer products', icon: <FaBoxOpen /> },
-        { name: 'Automotive', icon: <FaCar /> },
-        { name: 'Beauty and lifestyle', icon: <FaStar /> },
-        { name: 'Real estate', icon: <FaBuilding /> },
-        { name: 'Interior design', icon: <FaCouch /> },
-        { name: 'Engineering', icon: <FaGears /> },
-        { name: 'Import and export', icon: <FaGlobe /> },
-        { name: 'Travel and tourism', icon: <FaPlane /> },
-        { name: 'Professional services', icon: <FaBriefcase /> },
-        { name: 'Education and institutions', icon: <FaGraduationCap /> },
-        { name: 'Manufacturing & industrial', icon: <FaIndustry /> },
+        {
+            id: 1,
+            name: "Retail and eCommerce",
+            icon: <FaCartShopping />,
+            image: v1.src,
+            description:
+                "High-converting websites designed for modern retail and eCommerce businesses.",
+        },
+        {
+            id: 2,
+            name: "Clothing and fashion",
+            icon: <FaShirt />,
+            image: v2.src,
+            description:
+                "Modern digital experiences for fashion and clothing brands.",
+        },
+        {
+            id: 3,
+            name: "FMCG and consumer products",
+            icon: <FaBoxOpen />,
+            image: v3.src,
+            description:
+                "Professional websites for consumer product businesses.",
+        },
+        {
+            id: 4,
+            name: "Automotive",
+            icon: <FaCar />,
+            image: v4.src,
+            description:
+                "Powerful websites for automotive businesses and brands.",
+        },
+        {
+            id: 5,
+            name: "Beauty and lifestyle",
+            icon: <FaStar />,
+            image: v5.src,
+            description:
+                "Elegant websites for beauty and lifestyle businesses.",
+        },
+        {
+            id: 6,
+            name: "Real estate",
+            icon: <FaBuilding />,
+            image: v6.src,
+            description:
+                "Property-focused websites built to generate quality leads.",
+        },
+        {
+            id: 7,
+            name: "Interior design",
+            icon: <FaCouch />,
+            image: v7.src,
+            description:
+                "Visual-first websites for interior designers and studios.",
+        },
+        {
+            id: 8,
+            name: "Engineering",
+            icon: <FaGears />,
+            image: v8.src,
+            description:
+                "Professional digital platforms for engineering businesses.",
+        },
+        {
+            id: 9,
+            name: "Import and export",
+            icon: <FaGlobe />,
+            image: v9.src,
+            description:
+                "Global-facing websites for import and export companies.",
+        },
+        {
+            id: 10,
+            name: "Travel and tourism",
+            icon: <FaPlane />,
+            image: v10.src,
+            description:
+                "Engaging websites designed for travel and tourism businesses.",
+        },
+        {
+            id: 11,
+            name: "Professional services",
+            icon: <FaBriefcase />,
+            image: v11.src,
+            description:
+                "Credibility-focused websites for professional service providers.",
+        },
+        {
+            id: 12,
+            name: "Education and institutions",
+            icon: <FaGraduationCap />,
+            image: v12.src,
+            description:
+                "Informative and accessible websites for educational institutions.",
+        },
+        {
+            id: 13,
+            name: "Manufacturing & industrial",
+            icon: <FaIndustry />,
+            image: v13.src,
+            description:
+                "Strong digital presence for manufacturing and industrial companies.",
+        },
     ];
 
     const websiteBenefits = [
@@ -126,7 +265,7 @@ function Startupwebsitedesign() {
             number: "01",
             title: "Build a Strong Brand Identity",
             icon: Palette,
-            image: img.src,
+            image: en1.src,
             content:
                 "Your website should communicate your startup's personality and values. We use consistent typography, colors, imagery, layouts, and visual elements to create a recognizable digital identity.",
         },
@@ -136,7 +275,7 @@ function Startupwebsitedesign() {
             number: "02",
             title: "Improve User Experience",
             icon: UsersRound,
-            image: img.src,
+            image: en2.src,
             content: (
                 <>
                     Our <strong>web designers in Chennai</strong> create clean and
@@ -151,7 +290,7 @@ function Startupwebsitedesign() {
             number: "03",
             title: "Generate More Business Opportunities",
             icon: TrendingUp,
-            image: img.src,
+            image: en3.src,
             content:
                 "Strategic page structures, clear calls-to-action, enquiry forms, contact options, and conversion-focused layouts help turn website visitors into potential customers.",
         },
@@ -161,7 +300,7 @@ function Startupwebsitedesign() {
             number: "04",
             title: "Support Search Engine Visibility",
             icon: SearchCheck,
-            image: img.src,
+            image: en4.src,
             content:
                 "Our websites are developed with SEO considerations in mind, providing a strong technical foundation for future search engine optimization and digital marketing campaigns.",
         },
@@ -237,7 +376,7 @@ function Startupwebsitedesign() {
             description:
                 "We begin by understanding your startup, products or services, target audience, competitors, business objectives, and long-term goals.",
 
-            image: img.src,
+            image: sc1.src,
         },
 
         {
@@ -246,7 +385,7 @@ function Startupwebsitedesign() {
             description:
                 "Your website should clearly communicate who you are, what you offer, and why customers should choose you. We structure your content to communicate your startup's story and value proposition effectively.",
 
-            image: img2.src,
+            image: sc2.src,
         },
 
         {
@@ -255,7 +394,7 @@ function Startupwebsitedesign() {
             description:
                 "We design the website around your brand identity using appropriate colors, typography, imagery, icons, graphics, and layouts to create a consistent visual experience.",
 
-            image: img.src,
+            image: sc3.src,
         },
 
         {
@@ -270,7 +409,7 @@ function Startupwebsitedesign() {
                 </>
             ),
 
-            image: img2.src,
+            image: sc4.src,
         },
 
         {
@@ -279,7 +418,7 @@ function Startupwebsitedesign() {
             description:
                 "We strategically structure website pages with clear calls-to-action to encourage visitors to enquire, call, submit a form, request a quotation, or purchase a product.",
 
-            image: img.src,
+            image: sc5.src,
         },
 
         {
@@ -288,7 +427,7 @@ function Startupwebsitedesign() {
             description:
                 "We consider technical and on-page SEO requirements during the website design and development process to create a solid foundation for future search engine optimization.",
 
-            image: img2.src,
+            image: sc6.src,
         },
 
         {
@@ -297,7 +436,7 @@ function Startupwebsitedesign() {
             description:
                 "Before launch, we review the website across devices and screen sizes, check functionality, and make necessary improvements. After launch, the website can be continuously enhanced based on business requirements and user behavior.",
 
-            image: img.src,
+            image: sc7.src,
         },
     ];
 
@@ -367,9 +506,65 @@ function Startupwebsitedesign() {
         },
     };
 
+    const startupGalleryImages = [
+        {
+            id: 1,
+            src: img.src,
+            alt: "Startup website design",
+            x: -320,
+            y: 15,
+            order: 0,
+            zIndex: 50,
+            direction: "left" as const,
+        },
+        {
+            id: 2,
+            src: img.src,
+            alt: "Business website design",
+            x: -160,
+            y: 32,
+            order: 1,
+            zIndex: 40,
+            direction: "left" as const,
+        },
+        {
+            id: 3,
+            src: img.src,
+            alt: "Modern website design",
+            x: 0,
+            y: 8,
+            order: 2,
+            zIndex: 30,
+            direction: "right" as const,
+        },
+        {
+            id: 4,
+            src: img.src,
+            alt: "Corporate website design",
+            x: 160,
+            y: 22,
+            order: 3,
+            zIndex: 20,
+            direction: "right" as const,
+        },
+        {
+            id: 5,
+            src: img.src,
+            alt: "Startup web design",
+            x: 320,
+            y: 44,
+            order: 4,
+            zIndex: 10,
+            direction: "left" as const,
+        },
+    ];
+    useAOS();
     return (
+
         <div>
-            <BreadcurmbData />
+            <div className='mb-50' >
+                <BreadcurmbData />
+            </div>
             <style>{`
         @keyframes fadeInText {
           from { opacity: 0; transform: translateY(6px); }
@@ -389,24 +584,88 @@ function Startupwebsitedesign() {
         
       `}</style>
 
-            <IntroContent
-                leftTitle={'From Vision to Reality'}
-                rightTitle1={'Real Projects.'}
-                rightTitle2={' Creative Solutions. Real Results.'}
-                description={'Explore our successful projects and discover how we transform ideas into engaging, innovative, and impactful digital experiences that help businesses grow and stand out online.'}
+            <IntroContent data-aos='fade-up'
+                leftTitle={'Startup Website Design'}
+                rightTitle1={'Web Designing Company'}
+                rightTitle2={' in Chennai for Startups.'}
+                description={'Launch your business with a professional, high-performing website designed to build credibility, attract customers, and support long-term growth. '}
+                css='mt-5'
             />
 
-            <div className='container my-4'>
+            {/* <PhotoGallery
+                images={[
+                    {
+                        id: 1,
+                        src: "/assets/img/gallery/startup-1.jpg",
+                        alt: "Startup website design",
+                        x: -320,
+                        y: 15,
+                        order: 0,
+                        zIndex: 50,
+                        direction: "left",
+                    },
+                    {
+                        id: 2,
+                        src: "/assets/img/gallery/startup-2.jpg",
+                        alt: "Business website design",
+                        x: -160,
+                        y: 32,
+                        order: 1,
+                        zIndex: 40,
+                        direction: "left",
+                    },
+                    {
+                        id: 3,
+                        src: "/assets/img/gallery/startup-3.jpg",
+                        alt: "Modern website design",
+                        x: 0,
+                        y: 8,
+                        order: 2,
+                        zIndex: 30,
+                        direction: "right",
+                    },
+                    {
+                        id: 4,
+                        src: "/assets/img/gallery/startup-4.jpg",
+                        alt: "Corporate website design",
+                        x: 160,
+                        y: 22,
+                        order: 3,
+                        zIndex: 20,
+                        direction: "right",
+                    },
+                    {
+                        id: 5,
+                        src: "/assets/img/gallery/startup-5.jpg",
+                        alt: "Startup web design",
+                        x: 320,
+                        y: 44,
+                        order: 4,
+                        zIndex: 10,
+                        direction: "left",
+                    },
+                ]}
+            /> */}
+            <PhotoGallery images={startupGalleryImages} />
+
+            <div className='container my-5' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
                 <div className='row align-items-center'>
-                    <div className='col-12'>
-                        <h4 className="px-about-title mb-20">
-                            <span className="text-blue-about">Web Designing Company </span> in Chennai for Startups
-                        </h4>
+                    <div className="col-xl-12">
+                        <div className="px-project-title-box">
+                            <span className="tp-section-subtitle text-black blink-ball">
+                                Start Your Design
+                            </span>
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">Web Designing Company </span> in Chennai for Startups
+                            </h4>
+
+
+                        </div>
                     </div>
 
                     <div className='col-md-7'>
                         <p className='text-figtree'>
-                            Launch your business with a professional, high-performing website designed to build credibility, attract customers, and support long-term growth. As an experienced web designing company in Chennai, Yulanto Web Creations creates tailor-made websites for startups and emerging businesses across different industries.
+                            As an experienced web designing company in Chennai, Yulanto Web Creations creates tailor-made websites for startups and emerging businesses across different industries.
                             <br /><br />
                             Your website is often the first interaction a potential customer has with your brand. A well-planned web design in Chennai can help you establish a strong online presence, showcase your products or services, communicate your brand values, and convert visitors into customers.
                         </p>
@@ -429,129 +688,67 @@ function Startupwebsitedesign() {
                     </div>
                 </div>
             </div>
-            <div style={{ backgroundColor: 'rgb(245 245 245)', margin: '100px 0px 100px 0px !important' }}>
+            <div  data-aos-delay={400} data-aos-once={true} style={{ backgroundColor: '#053456', margin: '100px 0px 100px 0px !important' }}>
                 <div className='container my-5' >
-                    <div className='row align-items-center pt-50'>
-                        {/* <div className='col-3'>
+                    <div className='row align-items-center pt-100 pb-100'>
 
-                        <span className="tp-section-subtitle text-black blink-ball">
-                            Startup Web Design Services
-                        </span>
-                    </div> */}
+
                         <div className='col-12'>
-                            <h4 className="px-about-title mb-20">
-                                <span className="text-blue-about">Special Focus on</span> Startup Web Designing
+                            <span className="tp-section-subtitle text-black blink-ball text-white">
+                                Startup Web Design Services
+                            </span>
+                            <h4 className="px-about-title mb-20 text-white">
+                                <span className="text-white">Special Focus on</span> Startup Web Designing
                             </h4>
                         </div>
                         <div className='col-md-4'>
 
-                            <img src={img.src} alt='img' className='img-border-cls' />
+                            <img src={img1.src} alt='img' className='img-border-cls' />
                         </div>
                         <div className='col-md-8'>
-                            <p className='text-figtree'>
+                            <p className='text-figtree text-white '>
                                 Our experienced web designers in Chennai specialize in creating innovative, attractive, responsive, and user-friendly websites for startups. We combine creative design, intuitive navigation, mobile responsiveness, SEO-friendly development, and conversion-focused layouts to help new businesses establish a strong digital presence.
-                                <br /><br />
-                                Whether you are launching a new product, introducing a service, or building a completely new brand, our team develops website solutions aligned with your business objectives and target audience.
+
+                                Whether you are launching a new product, introducing a service, or building a completely new brand, our team develops website solutions aligned with your business objectives and target audience. From a startup idea to a professional online presence, we design websites that help your business move forward.
                             </p>
                         </div>
 
 
 
-                        {/* In your JSX */}
-                        <div className='col-12 d-flex justify-content-center align-items-center my-4'>
-                            <p className='startup-quote-box'>
-                                From a startup idea to a professional online presence, we design websites that help your business move forward.
-                            </p>
-                        </div>
 
-                        {/* In your <style> tag */}
-                        <style>{`
-  .startup-quote-box {
-   border: 1px solid #053456;     
-  border-left: 4px solid #053456; 
-  color: #053456;
-  text-align: center;
-  background: #53ae7d66;
-  margin: 0 auto;
-  padding: 12px 20px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  border-radius: 4px;
-    
-  }
-`}</style>
                     </div>
                 </div>
             </div>
-            <div className='container my-5'>
-                <style>{`
-        .industry-card {
-          background: #ffffff;
-          border: 1px solid #e2e8f0;
-          border-radius: 12px;
-          padding: 16px 20px;
-          display: flex;
-          align-items: center;
-          gap: 14px;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-          height: 100%;
-        }
+            <div className='container my-5' data-aos='fade-right' data-aos-delay={400} data-aos-once={true}>
 
-        .industry-card:hover {
-          transform: translateY(-4px);
-          border-color: #053456;
-          box-shadow: 0 10px 20px rgba(5, 52, 86, 0.1);
-          background: #f8fafc;
-        }
-
-        .industry-icon-wrapper {
-          width: 44px;
-          height: 44px;
-          min-width: 44px;
-          border-radius: 10px;
-          background: rgba(5, 52, 86, 0.08);
-          color: #053456;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.2rem;
-          transition: all 0.3s ease;
-        }
-
-        .industry-card:hover .industry-icon-wrapper {
-          background: #053456;
-          color: #ffffff;
-        }
-
-        .industry-title {
-          font-size: 0.95rem;
-          font-weight: 600;
-          color: #1e293b;
-          margin: 0;
-          line-height: 1.3;
-        }
-      `}</style>
 
                 <div className='row'>
-                    <div className='col-12'>
-                        <h4 className="px-about-title mb-20">
-                            <span className="text-blue-about">Enhance Your Startup </span>Growth with a Cutting-Edge Website
-                        </h4>
+                    <div className="col-xl-12">
+                        <div className="px-project-title-box">
+                            <span className="tp-section-subtitle text-black blink-ball">
+                                Start Your Design
+                            </span>
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">Enhance Your Startup </span>Growth with a Cutting-Edge Website
+                            </h4>
+
+
+                        </div>
                     </div>
+
 
                     <div className='col-12 d-flex flex-column align-items-start mb-4'>
                         <p className='text-figtree'>
                             Choosing the right web design agency in Chennai can make a significant difference to your startup's online growth. Every business has a unique identity, target audience, and business objective. Therefore, we create customized website designs rather than relying on one-size-fits-all solutions.
                         </p>
 
-                        <p className='fw-bold text-dark mt-2 mb-3' style={{ fontSize: '1.05rem' }}>
+                        <p className='text-figtree text-dark mt-2 mb-3' style={{ fontSize: '1.05rem' }}>
                             Our startup website design services can support businesses across a wide range of industries, including:
                         </p>
                     </div>
 
                     {/* Industry Cards Grid */}
-                    <div className='row g-3'>
+                    {/* <div className='row g-3'>
                         {industries.map((item, index) => (
                             <div key={index} className='col-12 col-sm-6 col-md-4 col-lg-3'>
                                 <div className='industry-card'>
@@ -562,7 +759,10 @@ function Startupwebsitedesign() {
                                 </div>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
+                    <IndustryGallery
+                        industries={industries}
+                    />
                     <div className='mt-50'>
                         <p>As a professional Chennai design company, we focus on creating websites that are visually appealing while also supporting usability, search engine visibility, and business growth.</p>
                     </div>
@@ -570,10 +770,15 @@ function Startupwebsitedesign() {
                 </div>
             </div>
 
-            <div className='container'>
-                <div className='row'>
+            <div className='container pt-50 mb-100' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
+                <div className='row align-items-center'>
+
                     <div className='col-12'>
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            Start Your Design
+                        </span>
                         <h4 className="px-about-title mb-20">
+
                             <span className="text-blue-about">Why Startup Website Design </span> Requires the Right Approach
                         </h4>
                     </div>
@@ -630,8 +835,10 @@ function Startupwebsitedesign() {
 
                     {/* Header */}
                     <div className="startup-benefits-header">
-
-                        <h4 className="px-about-title mb-20">
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            Startup Web Design Services
+                        </span>
+                        <h4 className="px-about-title">
                             <span className="text-blue-about">
                                 Benefits You Get from{" "}
                             </span>
@@ -821,24 +1028,18 @@ function Startupwebsitedesign() {
                 style={{
                     backgroundColor: "rgb(245 245 245)",
                 }}
+                data-aos='fade-right' data-aos-delay={400} data-aos-once={true}
             >
-                <div className="container">
+                <div className="container" >
 
                     <div className="row align-items-center pt-50">
 
-                        {/* Small label */}
-                        <div className="col-12 col-lg-3">
 
+                        {/* Main content */}
+                        <div className="col-12">
                             <span className="tp-section-subtitle text-black blink-ball">
                                 SEO-Friendly Website Design
                             </span>
-
-                        </div>
-
-
-                        {/* Main content */}
-                        <div className="col-12 col-lg-9">
-
                             <h4 className="px-about-title mb-20">
 
                                 <span className="text-blue-about">
@@ -854,9 +1055,7 @@ function Startupwebsitedesign() {
                                 discoverable by your target audience. That's why
                                 SEO considerations are incorporated into our
                                 website planning and development process.
-                            </p>
 
-                            <p>
                                 As a best web design company in Chennai for
                                 businesses looking for design and digital growth
                                 solutions, we focus on creating SEO-friendly
@@ -923,23 +1122,24 @@ function Startupwebsitedesign() {
                             })}
 
                         </div>
-                        <div className='py-5 seo-approach-heading'>
-                            <h5 className='text-tenor'>Looking for a Website Design Agency in Chennai?</h5>
+                        <div className='py-5'>
+                            <h5 className='text-tenor fw-bold' style={{ color: '#053456' }}>Looking for a Website Design Agency in Chennai?</h5>
                             <p>If you are searching for a reliable web design agency in Chennai to create your startup website, Yulanto Web Creations can help turn your business idea into a professional digital presence.
-                                <br />
-                                From planning and UI/UX design to website development and SEO-ready implementation, our team works closely with you throughout the project.
+                                From planning and UI/UX design to website development and SEO-ready implementation, our team works closely with you throughout the project. Have a startup idea?
+                                <span style={{ color: '#053456' }}> {typedConsultationText}
+                                    <span aria-hidden="true" style={{ display: 'inline-block', marginLeft: '2px', animation: 'startup-typing-cursor 0.8s step-end infinite', color: '#053456' }}>|</span></span>
                             </p>
-                            <div className='col-12 d-flex justify-content-center align-items-center my-4'>
-                                <p className='startup-quote-box' style={{ color: '#053456' }}>
-                                    Have a startup idea? Let's build your website and create your online success story.
-                                </p>
-                            </div>
+
                         </div>
                     </div>
 
                 </div>
             </div>
             <div className='container mt-20 mb-20'>
+                <span className="tp-section-subtitle text-black blink-ball">
+                    SEO-Friendly Website Design
+                </span>
+
                 <h4 className="px-about-title mb-20">
                     <span className="text-blue-about">
                         Our Step-by-Step  {" "}
@@ -951,39 +1151,81 @@ function Startupwebsitedesign() {
                     content={startupProcessContent}
                 />
             </div>
-            <div className='container mt-20 mb-20'>
-                <h4 className="px-about-title mb-20">
-                    <span className="text-blue-about">
-                        A Productive   {" "}
-                    </span>
-                    Consultation
-                </h4>
-                <p>Choosing the right technology and website structure is important for startup businesses. Our team explains the available technologies, features, functionalities, and digital opportunities so that you can make informed decisions.
-                    <br />
-                    As an experienced web designing company in Chennai, we provide practical recommendations based on your business goals, target audience, budget, and future growth plans.
-                </p>
+            <div style={{ backgroundColor: '#053456', margin: '100px 0px 100px 0px !important' }}>
+                <div className='container my-5' >
+                    <div className='row align-items-center pb-50 pt-100'>
 
-                <h4 className="px-about-title mb-20">
-                    <span className="text-blue-about">
-                        We Are a Creative  {" "}
-                    </span>
-                    Web Design Agency
-                </h4>
-                <h5 className='text-tenor fw-bold' style={{ color: '#053456' }}>Aligning Business Objectives with Digital Presence</h5>
-                <p>A website should do more than simply look attractive. It should support your business objectives.
-                    <br />
-                    We align your website design with your marketing and business goals so that your products or services are presented clearly and professionally to your target audience.</p>
-                <h5 className='text-tenor fw-bol' style={{ color: '#053456' }}>Analyze and Adapt</h5>
-                <p>Our experience across different industries enables us to develop websites using appropriate technologies and platforms. We continually evaluate modern web design practices and technologies to improve usability, performance, functionality, and scalability.
-                </p>
+
+                        <div className='col-12' data-ao='fade-right' data-aos-delay={400} data-aos-once={true} >
+                            <span className="tp-section-subtitle text-white blink-ball">
+                                Analyze and Adapt
+                            </span>
+                            <h4 className="px-about-title mb-20 text-white">
+                                <span className="text-blue-about text-white">
+                                    A Productive   {" "}
+                                </span>
+                                Consultation
+                            </h4>
+                        </div>
+                        <div className='col-md-4'>
+
+                            <img src={img1.src} alt='img' className='img-border-cls' />
+                        </div>
+                        <div className='col-md-8'>
+                            <p className='text-figtree text-white '>
+                                Choosing the right technology and website structure is important for startup businesses. Our team explains the available technologies, features, functionalities, and digital opportunities so that you can make informed decisions.
+                                {/* <br /> */}
+                                As an experienced web designing company in Chennai, we provide practical recommendations based on your business goals, target audience, budget, and future growth plans.
+                            </p>
+                        </div>
+
+
+
+
+                    </div>
+                    <div className='row align-items-start pt-20 pb-100'>
+                        <div className='col-12' data-ao='fade-right' data-aos-delay={400} data-aos-once={true} >
+                            <span className="tp-section-subtitle text-white blink-ball">
+                                We Are a Creative Web Design Agency
+                            </span>
+                            <h4 className="px-about-title mb-20 text-white">
+                                <span className="text-blue-about text-white">
+                                    Aligning Business   {" "}
+                                </span>
+                                Objectives with Digital Presence
+                            </h4>
+                        </div>
+
+                        <div className='col-md-8'>
+                            <p className='text-figtree text-white '>
+                                Choosing the right technology and website structure is important for startup businesses. Our team explains the available technologies, features, functionalities, and digital opportunities so that you can make informed decisions.
+
+                                As an experienced web designing company in Chennai, we provide practical recommendations based on your business goals, target audience, budget, and future growth plans.
+
+                                <br /> <br />
+                                Our experience across different industries enables us to develop websites using appropriate technologies and platforms. We continually evaluate modern web design practices and technologies to improve usability, performance, functionality, and scalability.
+                            </p>
+                        </div>
+
+                        <div className='col-md-4'>
+
+                            <img src={img1.src} alt='img' className='img-border-cls' />
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
+
             <div className="why-choose-section">
 
                 <div className="container mt-20 mb-20">
 
                     {/* Heading */}
                     <div className="why-choose-header">
-
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            We Are a Creative Web Design Agency
+                        </span>
                         <h4 className="px-about-title mb-20">
 
                             <span className="text-blue-about">
@@ -1072,69 +1314,70 @@ function Startupwebsitedesign() {
                 </div>
 
             </div>
-            <div className='container mt-50 mb-20'>
-                <h4 className="px-about-title mb-20">
-                    <span className="text-blue-about">
-                        Why  {" "}
-                    </span>
-                    Yulanto?
-                </h4>
-                <p>As a web design company in Chennai, we bring together creative design, technical development, SEO, and digital marketing expertise to help startups build a strong online presence.
-
-                    <br />
-                    Whether you are looking for webdesign Chennai, startup website design, responsive web design, WordPress website design, or a complete digital presence, our team can develop a solution around your business requirements.
-                </p>
-                <div className="ambassador-card">
-
-                    {/* Default Content */}
-                    <div className="ambassador-card-content ambassador-card-default">
-
-                        <span className="ambassador-card-label">
-                            OUR WORK
+            <div style={{ background: '#f5f5f5' }}>
+                <div className='container mt-50 pt-30 pb-30'>
+                    <h4 className="px-about-title mb-20">
+                        <span className="text-blue-about">
+                            Why  {" "}
                         </span>
+                        Yulanto?
+                    </h4>
+                    <p>As a web design company in Chennai, we bring together creative design, technical development, SEO, and digital marketing expertise to help startups build a strong online presence.
 
-                        <h4>
-                            {ambassadorCard.default.title}
-                        </h4>
+                        {/* <br /> */}
+                        Whether you are looking for webdesign Chennai, startup website design, responsive web design, WordPress website design, or a complete digital presence, our team can develop a solution around your business requirements.
+                    </p>
+                    <div className="ambassador-card">
 
-                        <p>
-                            {ambassadorCard.default.content}
-                        </p>
+                        {/* Default Content */}
+                        <div className="ambassador-card-content ambassador-card-default">
 
-                        <div className="ambassador-card-hint">
-                            <span>Hover to explore</span>
-                            <span className="ambassador-card-arrow">
-                                →
+                            <span className="ambassador-card-label">
+                                OUR WORK
                             </span>
+
+                            <h4>
+                                {ambassadorCard.default.title}
+                            </h4>
+
+                            <p>
+                                {ambassadorCard.default.content}
+                            </p>
+
+                            <div className="ambassador-card-hint">
+                                <span>Hover to explore</span>
+                                <span className="ambassador-card-arrow">
+                                    →
+                                </span>
+                            </div>
+
                         </div>
 
-                    </div>
 
+                        {/* Hover Content */}
+                        <div className="ambassador-card-content ambassador-card-hover">
 
-                    {/* Hover Content */}
-                    <div className="ambassador-card-content ambassador-card-hover">
+                            <span className="ambassador-card-label">
+                                GET STARTED
+                            </span>
 
-                        <span className="ambassador-card-label">
-                            GET STARTED
-                        </span>
+                            <h4>
+                                {ambassadorCard.hover.title}
+                            </h4>
 
-                        <h4>
-                            {ambassadorCard.hover.title}
-                        </h4>
+                            <p>
+                                {ambassadorCard.hover.content}
+                            </p>
 
-                        <p>
-                            {ambassadorCard.hover.content}
-                        </p>
-
-                        {/* <div className="ambassador-card-cta">
+                            {/* <div className="ambassador-card-cta">
                             Start Your Project
                             <span>→</span>
                         </div> */}
 
-                    </div>
+                        </div>
 
-                </div>
-                {/* <div>
+                    </div>
+                    {/* <div>
                     <h4 className="px-about-title mb-20">
                         <span className="text-blue-about">
                             Contact  {" "}
@@ -1144,6 +1387,7 @@ function Startupwebsitedesign() {
                     <p>Get in touch with our team to discuss your startup website requirements and discover the right web design solution for your business.</p>
                 </div> */}
 
+                </div>
             </div>
 
         </div>
