@@ -505,3 +505,168 @@
     }
 
 }
+
+
+
+
+/* =====================================================
+   WHY CHOOSE US EXTENDED SECTION
+===================================================== */
+
+.why-choose-us-extended-section {
+    padding: 80px 0 100px;
+    background: #f8fafc;
+}
+
+.lead-text {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* =====================================================
+   FEATURE CARDS
+===================================================== */
+
+.extended-feature-card {
+    position: relative;
+    height: 100%;
+    padding: 32px 28px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+
+.card-accent-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #053456, #2563eb);
+    transition: width 0.35s ease;
+}
+
+.extended-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(5, 52, 86, 0.08);
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+.extended-feature-card:hover .card-accent-bar {
+    width: 100%;
+}
+
+.extended-feature-card h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-size: 25px;
+}
+
+.extended-feature-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =====================================================
+   TRUSTED PARTNER CTA BANNER
+===================================================== */
+
+.trusted-partner-banner {
+    background: linear-gradient(135deg, #053456 0%, #0a4b7a 100%);
+    border-radius: 24px;
+    padding: 48px;
+    color: #ffffff;
+    box-shadow: 0 20px 40px rgba(5, 52, 86, 0.2);
+}
+
+.partner-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #60a5fa;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.trusted-partner-banner h3 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.banner-desc {
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 14px;
+}
+
+.banner-footer-text {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* CTA Card Inside Banner */
+.cta-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 30px 24px;
+}
+
+.cta-box h4 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cta-box p {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+    background: #ffffff;
+    color: #053456;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.cta-button:hover {
+    background: #53ae7d;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+    .trusted-partner-banner {
+        padding: 28px 20px;
+    }
+    .trusted-partner-banner h3 {
+        font-size: 1.5rem;
+    }
+}

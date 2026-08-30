@@ -11,6 +11,7 @@ import "./corporate-approach-grid.css";
 
 interface CorporateApproachItem {
     id: number;
+    mainCategory: string;
     category: string;
     title: string;
     description: string;
@@ -37,7 +38,6 @@ function CorporateApproachGrid({
                     ============================== */}
 
                     <div className="corporate-approach-grid">
-
                         {items.map((item, index) => (
                             <motion.div
                                 key={item.id}
@@ -70,11 +70,8 @@ function CorporateApproachGrid({
                                     setSelectedItem(item)
                                 }
                             >
-
                                 {/* IMAGE */}
-
                                 <div className="approach-image-wrapper">
-
                                     <Image
                                         src={item.image}
                                         alt={item.title}
@@ -82,19 +79,13 @@ function CorporateApproachGrid({
                                         className="approach-image"
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                     />
-
                                 </div>
 
-
                                 {/* DARK OVERLAY */}
-
                                 <div className="approach-overlay" />
 
-
                                 {/* CARD CONTENT */}
-
                                 <div className="approach-card-content">
-
                                     <span className="approach-category text-tenor">
                                         {item.category}
                                     </span>
@@ -106,16 +97,12 @@ function CorporateApproachGrid({
                                     <span className="approach-view text-figtree">
                                         View Details
                                     </span>
-
                                 </div>
-
                             </motion.div>
                         ))}
-
                     </div>
                 </div>
             </section>
-
 
             {/* =================================================
                 MODAL / EXPANDED CARD
@@ -125,46 +112,28 @@ function CorporateApproachGrid({
                 {selectedItem && (
                     <motion.div
                         className="approach-modal-backdrop"
-                        initial={{
-                            opacity: 0,
-                        }}
-                        animate={{
-                            opacity: 1,
-                        }}
-                        exit={{
-                            opacity: 0,
-                        }}
-                        onClick={() =>
-                            setSelectedItem(null)
-                        }
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedItem(null)}
                     >
-
                         <motion.div
                             className="approach-modal"
                             layoutId={`approach-card-${selectedItem.id}`}
-                            onClick={(event) =>
-                                event.stopPropagation()
-                            }
+                            onClick={(event) => event.stopPropagation()}
                         >
-
                             {/* CLOSE BUTTON */}
-
                             <button
                                 type="button"
                                 className="approach-modal-close"
-                                onClick={() =>
-                                    setSelectedItem(null)
-                                }
+                                onClick={() => setSelectedItem(null)}
                                 aria-label="Close"
                             >
                                 ×
                             </button>
 
-
                             {/* MODAL IMAGE */}
-
                             <div className="approach-modal-image">
-
                                 <Image
                                     src={selectedItem.image}
                                     alt={selectedItem.title}
@@ -173,12 +142,9 @@ function CorporateApproachGrid({
                                     className="approach-modal-img"
                                     sizes="(max-width: 768px) 100vw, 700px"
                                 />
-
                             </div>
 
-
                             {/* MODAL CONTENT */}
-
                             <motion.div
                                 className="approach-modal-content"
                                 initial={{
@@ -194,23 +160,19 @@ function CorporateApproachGrid({
                                     duration: 0.35,
                                 }}
                             >
+                                <span className="approach-modal-category">
+                                    {selectedItem.mainCategory} ({selectedItem.category})
+                                </span>
 
-                                {/* <span className="approach-modal-category">
-                                    {selectedItem.category}
-                                </span> */}
-
-                                {/* <h2>
+                                <h2>
                                     {selectedItem.title}
-                                </h2> */}
+                                </h2>
 
                                 <p>
                                     {selectedItem.description}
                                 </p>
-
                             </motion.div>
-
                         </motion.div>
-
                     </motion.div>
                 )}
             </AnimatePresence>
