@@ -2342,3 +2342,7 @@ input[name="name"].has-value+.name-next-btn {
         display: none;
     }
 }
+
+.pointer-event{
+    pointer-events: none;
+}

@@ -70,7 +70,7 @@ import CorporateApproachGrid from "../myComponents/common/CorporateApproachGrid"
 import { useAOS } from "@/components/hooks/useAOS";
 
 interface WhyChooseUsProps {
-    featuresList?: string[];
+  featuresList?: string[];
 }
 
 function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
@@ -403,7 +403,8 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
     "Meaningful Interactions: We focus on understanding your actual business requirements and providing practical website solutions without unnecessary complexity.",
   ];
 
-  const activeFeatures = featuresList && featuresList.length > 0 ? featuresList : defaultFeatures;
+  const activeFeatures =
+    featuresList && featuresList.length > 0 ? featuresList : defaultFeatures;
 
   useAOS();
 
@@ -893,9 +894,16 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       {/* =====================================================
           WHY CHOOSE US & TRUSTED PARTNER (EXTENDED SECTION)
       ===================================================== */}
-      <section className="">
-        <div className="container">
-
+      {/* =====================================================
+    WHY CHOOSE US & TRUSTED PARTNER (EXTENDED SECTION)
+===================================================== */}
+      <div
+        className=""
+        data-aos="fade-right"
+        data-aos-delay={400}
+        data-aos-once={true}
+      >
+        <div className="container" >
           {/* MAIN HEADING BLOCK */}
           <div className="row justify-content-start mb-5">
             <div className="col-lg-12">
@@ -905,28 +913,74 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
 
               <h2 className="px-about-title mb-20">
                 Why Choose Us for{" "}
-                <span className="text-blue-about">Corporate Website Design?</span>
+                <span className="text-blue-about">
+                  Corporate Website Design?
+                </span>
               </h2>
 
               <p className="text-figtree lead-text">
-                Choosing the right website design company in Chennai can make a significant difference to your online presence. At Yulanto, we combine creative thinking, technical expertise, structured processes, and business understanding to deliver professional websites.
+                Choosing the right website design company in Chennai can make a
+                significant difference to your online presence. At Yulanto, we
+                combine creative thinking, technical expertise, structured
+                processes, and business understanding to deliver professional
+                websites.
               </p>
             </div>
           </div>
 
-          {/* DYNAMIC 6-CARD GRID FROM STRING ARRAY */}
+          {/* 6-CARD GRID FOR HIGHLIGHTS WITH ICONS */}
           <div className="row g-4 mb-80">
-            {activeFeatures.map((item, index) => {
-              const hasColon = item.includes(":");
-              const title = hasColon ? item.split(":")[0].trim() : `Feature 0${index + 1}`;
-              const description = hasColon ? item.split(":").slice(1).join(":").trim() : item;
-
+            {[
+              {
+                icon: FaFileSignature,
+                title: "Defined Contracts",
+                desc: "Every project is clearly documented with agreed requirements, responsibilities, scope, and project terms.",
+              },
+              {
+                icon: FaFileLines,
+                title: "Documented Scope of Work",
+                desc: "We document the scope of work, deliverables, requirements, and project timelines to maintain clarity throughout the development process.",
+              },
+              {
+                icon: FaUserShield,
+                title: "Complete Confidentiality",
+                desc: "We respect the confidentiality of your business information, project details, website content, and other sensitive project-related information.",
+              },
+              {
+                icon: FaImages,
+                title: "Royalty-Free / Licensed Images",
+                desc: "Where applicable, we use royalty-free or appropriately licensed images to enhance the visual quality and professional appearance of your website.",
+              },
+              {
+                icon: FaClock,
+                title: "On-Time Delivery",
+                desc: "We follow a structured workflow to manage design, development, testing, and deployment efficiently and work toward delivering projects within the agreed timeline.",
+              },
+              {
+                icon: FaComments,
+                title: "Meaningful Interactions",
+                desc: "We focus on understanding your actual business requirements and providing practical website solutions without unnecessary complexity.",
+              },
+            ].map((card, idx) => {
+              const IconComponent = card.icon;
               return (
-                <div key={index} className="col-lg-4 col-md-6">
+                <div key={idx} className="col-lg-4 col-md-6">
                   <div className="extended-feature-card">
                     <div className="card-accent-bar" />
-                    <h5 className="text-tenor" style={{color:'#053456'}}>{title}</h5>
-                    <p>{description}</p>
+                    <div
+                      className="card-icon-wrapper mb-3 d-flex align-items-center justify-content-center rounded-circle"
+                      style={{
+                        width: "45px",
+                        height: "45px",
+                        backgroundColor: "#eff6ff",
+                        color: "#053456",
+                        fontSize: "1.2rem",
+                      }}
+                    >
+                      <IconComponent />
+                    </div>
+                    <h5>{card.title}</h5>
+                    <p>{card.desc}</p>
                   </div>
                 </div>
               );
@@ -934,29 +988,42 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
           </div>
 
           {/* TRUSTED PARTNER & CTA BANNER */}
-          <div className="trusted-partner-banner mb-50">
+          <div className="trusted-partner-banner mb-80">
             <div className="row align-items-center">
               <div className="col-lg-8 mb-4 mb-lg-0">
                 <span className="partner-badge">Your Trusted Partner</span>
                 <h3>Your Trusted Website Design Partner in Chennai</h3>
 
                 <p className="banner-desc">
-                  A successful corporate website should look professional, work smoothly, communicate your business clearly, and provide a strong foundation for digital marketing and SEO.
+                  A successful corporate website should look professional, work
+                  smoothly, communicate your business clearly, and provide a
+                  strong foundation for digital marketing and SEO.
                 </p>
 
                 <p className="banner-desc">
-                  As a website creation company in Chennai, Yulanto provides complete website design and development solutions focused on quality, usability, performance, and business growth. Our experienced website creator in Chennai team works closely with clients to transform ideas into professional websites that represent their brands effectively.
+                  As a website creation company in Chennai, Yulanto provides
+                  complete website design and development solutions focused on
+                  quality, usability, performance, and business growth. Our
+                  experienced website creator in Chennai team works closely with
+                  clients to transform ideas into professional websites that
+                  represent their brands effectively.
                 </p>
 
                 <p className="banner-footer-text">
-                  If you are looking for a website design agency in Chennai, a reliable website design company in Chennai, or experienced website designers in Chennai, Yulanto can help you create a professional online presence tailored to your business.
+                  If you are looking for a website design agency in Chennai, a
+                  reliable website design company in Chennai, or experienced
+                  website designers in Chennai, Yulanto can help you create a
+                  professional online presence tailored to your business.
                 </p>
               </div>
 
               <div className="col-lg-4 text-lg-end text-start">
                 <div className="cta-box">
                   <h4>Let’s build something great together.</h4>
-                  <p>Let’s create a website that represents your brand, engages your customers, and supports your business growth.</p>
+                  <p>
+                    Let’s create a website that represents your brand, engages
+                    your customers, and supports your business growth.
+                  </p>
                   <a href="/contact" className="cta-button">
                     Get Started Today
                   </a>
@@ -964,9 +1031,8 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               </div>
             </div>
           </div>
-
         </div>
-      </section>
+      </div>
     </div>
   );
 }
