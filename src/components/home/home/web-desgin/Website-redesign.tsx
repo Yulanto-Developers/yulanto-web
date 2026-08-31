@@ -1485,7 +1485,7 @@ function Websiteredesign() {
 
 
 
-            <FAQA1 num1={16} num2={24}
+            <FAQA1 num1={23} num2={31}
                 highlightedText="Frequently Asked Questions"
                 titleSuffix="" />
 
