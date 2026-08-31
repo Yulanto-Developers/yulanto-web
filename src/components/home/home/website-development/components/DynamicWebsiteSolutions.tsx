@@ -1,36 +1,85 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import SectionTitle from "@/components/sectiontitle/SectionTitle";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { FiSettings, FiTrendingUp, FiSearch } from 'react-icons/fi';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
+import {
+  FiPenTool,
+  FiTarget,
+  FiSearch,
+  FiSmartphone,
+  FiShield,
+  FiClock,
+  FiTrendingUp,
+  FiDollarSign,
+} from "react-icons/fi";
 
 const CARD_DATA = [
   {
-    id: 'easy-manage',
-    image: '/assets/images/webdev/image-1.jpg',
-    icon: FiSettings,
-    title: 'Easy to Manage',
-    text: 'A dynamic website is a perfect solution for large corporations aiming to effortlessly publish and oversee products.',
-    aosDelay: '100',
+    id: "creative-customized-designs",
+    image: "/assets/images/webdev/image-1.jpg",
+    icon: FiPenTool,
+    title: "Creative & Customized Designs",
+    text: "We create unique website experiences instead of depending entirely on generic templates.",
+    aosDelay: "100",
   },
   {
-    id: 'highly-scalable',
-    image: '/assets/images/webdev/image-2.jpg',
-    icon: FiTrendingUp,
-    title: 'Highly Scalable Solution',
-    text: 'Access modules providing interactive features like e-commerce, blogs, and secure login.',
-    aosDelay: '200',
+    id: "business-focused-development",
+    image: "/assets/images/webdev/image-2.jpg",
+    icon: FiTarget,
+    title: "Business-Focused Development",
+    text: "Every website is planned around your business goals, customers, services, and industry.",
+    aosDelay: "150",
   },
   {
-    id: 'search-engine-support',
-    image: '/assets/images/webdev/image-3.jpg',
+    id: "seo-friendly-structure",
+    image: "/assets/images/webdev/image-3.jpg",
     icon: FiSearch,
-    title: 'Supported By Search Engines',
-    text: 'Pages are indexed quickly, giving higher rankings to recently updated content.',
-    aosDelay: '300',
+    title: "SEO-Friendly Structure",
+    text: "We follow search-engine-friendly development practices to create a strong technical foundation for SEO.",
+    aosDelay: "200",
+  },
+  {
+    id: "responsive-performance",
+    image: "/assets/images/webdev/image-4.jpg",
+    icon: FiSmartphone,
+    title: "Responsive & High-Performance Websites",
+    text: "Our websites are developed to provide a smooth experience across different devices and screen sizes.",
+    aosDelay: "250",
+  },
+  {
+    id: "secure-development",
+    image: "/assets/images/webdev/image-5.jpg",
+    icon: FiShield,
+    title: "Secure Development",
+    text: "We prioritize security, reliable functionality, and maintainable code during the development process.",
+    aosDelay: "300",
+  },
+  {
+    id: "timely-project-delivery",
+    image: "/assets/images/webdev/image-6.jpg",
+    icon: FiClock,
+    title: "Timely Project Delivery",
+    text: "We follow a structured development workflow to keep the project on track and meet agreed timelines.",
+    aosDelay: "350",
+  },
+  {
+    id: "scalable-solutions",
+    image: "/assets/images/webdev/image-7.jpg",
+    icon: FiTrendingUp,
+    title: "Scalable Solutions",
+    text: "Our custom development approach allows your website to accommodate additional features as your business grows.",
+    aosDelay: "400",
+  },
+  {
+    id: "budget-friendly-solutions",
+    image: "/assets/images/webdev/image-8.jpg",
+    icon: FiDollarSign,
+    title: "Budget-Friendly Solutions",
+    text: "We recommend suitable technologies and features based on your requirements and budget rather than adding unnecessary complexity.",
+    aosDelay: "450",
   },
 ];
 
@@ -47,29 +96,41 @@ type DynamicWebsiteSolutionsProps = {
   cards?: WebDevCardProps[];
 };
 
-const WebDevCard = ({ image, icon: Icon, title, text, aosDelay }: WebDevCardProps) => {
+const WebDevCard = ({
+  image,
+  icon: Icon,
+  title,
+  text,
+  aosDelay,
+}: WebDevCardProps) => {
   return (
     <div
       className="web-dev-img-card"
       data-aos="fade-up"
-      data-aos-delay={aosDelay || '0'}
+      data-aos-delay={aosDelay || "0"}
       data-aos-duration="1000"
-      style={{ backgroundImage: `url(${image})` }}
+      style={{
+        backgroundImage: `url(${image})`,
+      }}
     >
       <div className="web-dev-card-content">
         <div className="web-dev-card-header">
           <h3 className="web-dev-card-title">{title}</h3>
+
           <div className="web-dev-card-icon-box">
             <Icon className="web-dev-card-icon" />
           </div>
         </div>
+
         <p className="web-dev-card-text">{text}</p>
       </div>
     </div>
   );
 };
 
-const DynamicWebsiteSolutions = ({ cards = CARD_DATA }: DynamicWebsiteSolutionsProps) => {
+const DynamicWebsiteSolutions = ({
+  cards = CARD_DATA,
+}: DynamicWebsiteSolutionsProps) => {
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -80,125 +141,156 @@ const DynamicWebsiteSolutions = ({ cards = CARD_DATA }: DynamicWebsiteSolutionsP
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: `
-        .web-dev-solutions-section {
-          padding: 30px 0;
-        }
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+            .web-dev-solutions-section {
+              padding: 30px 0;
+            }
 
-        .web-dev-img-card {
-          position: relative;
-          border-radius: 24px;
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          aspect-ratio: 4 / 5;
-          max-height: 480px;
-          width: 100%;
-          margin: 0 auto 30px auto;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          overflow: hidden;
-          display: flex;
-          align-items: flex-end;
-          padding: 16px;
-        }
+            .web-dev-img-card {
+              position: relative;
+              border-radius: 24px;
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              aspect-ratio: 4 / 5;
+              max-height: 480px;
+              width: 100%;
+              margin: 0 auto 30px auto;
+              transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+              overflow: hidden;
+              display: flex;
+              align-items: flex-end;
+              padding: 16px;
+            }
 
-        .web-dev-img-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 10px 30px rgba(5, 52, 86, 0.2);
-        }
+            .web-dev-img-card:hover {
+              transform: translateY(-8px);
+              box-shadow: 0 10px 30px rgba(5, 52, 86, 0.2);
+            }
 
-        .web-dev-card-content {
-          background-color: #ffffff;
-          border-radius: 16px;
-          padding: 20px;
-          width: 100%;
-          position: relative;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
+            .web-dev-card-content {
+              background-color: #ffffff;
+              border-radius: 16px;
+              padding: 20px;
+              width: 100%;
+              position: relative;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            }
 
-        /* Flexbox wrapper to align Title at start and Icon at end */
-        .web-dev-card-header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 12px;
-          margin-bottom: 12px;
-        }
+            .web-dev-card-header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 12px;
+              margin-bottom: 12px;
+            }
 
-        .web-dev-card-title {
-          color: #053456;
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 1.3;
-          margin: 0;
-        }
+            .web-dev-card-title {
+              color: #053456;
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 1.3;
+              margin: 0;
+            }
 
-        .web-dev-card-icon-box {
-          background-color: #053456;
-          color: #ffffff;
-          width: 38px;
-          height: 38px;
-          min-width: 38px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: background-color 0.3s ease;
-        }
+            .web-dev-card-icon-box {
+              background-color: #053456;
+              color: #ffffff;
+              width: 38px;
+              height: 38px;
+              min-width: 38px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+            }
 
-        .web-dev-img-card:hover .web-dev-card-icon-box {
-          background-color: #53ae7d;
-        }
+            .web-dev-img-card:hover
+              .web-dev-card-icon-box {
+              background-color: #53ae7d;
+              transform: rotate(8deg);
+            }
 
-        .web-dev-card-icon {
-          font-size: 18px;
-        }
+            .web-dev-card-icon {
+              font-size: 18px;
+            }
 
-        .web-dev-card-text {
-          font-size: 13.5px;
-          line-height: 1.5;
-          margin-bottom: 0;
-          color: #4b5563;
-        }
+            .web-dev-card-text {
+              font-size: 13.5px;
+              line-height: 1.5;
+              margin-bottom: 0;
+              color: #4b5563;
+            }
 
-        .dyncardtitle .px-section-subtitle {
-          padding-top: 20px !important;
-        }
+            .dyncardtitle .px-section-subtitle {
+              padding-top: 20px !important;
+            }
 
-        @media (min-width: 768px) {
-          .web-dev-solutions-section .row {
-            --bs-gutter-x: 1.5rem;
-          }
-          .web-dev-img-card {
-            max-height: 440px;
-          }
-        }
+            @media (min-width: 768px) {
+              .web-dev-solutions-section .row {
+                --bs-gutter-x: 1.5rem;
+                --bs-gutter-y: 0;
+              }
 
-        @media (min-width: 1200px) {
-          .web-dev-img-card {
-            max-width: 380px;
-            max-height: 460px;
-          }
-        }
+              .web-dev-img-card {
+                max-height: 440px;
+              }
+            }
 
-        @media (max-width: 576px) {
-          [data-aos] {
-            opacity: 1 !important;
-            transform: none !important;
-          }
-          .web-dev-img-card {
-            aspect-ratio: 4 / 5;
-            max-height: 420px;
-          }
-        }
-      ` }} />
+            @media (min-width: 1200px) {
+              .web-dev-img-card {
+                max-width: 380px;
+                max-height: 460px;
+              }
+            }
+
+            @media (max-width: 767px) {
+              .web-dev-img-card {
+                max-width: 420px;
+              }
+            }
+
+            @media (max-width: 576px) {
+              [data-aos] {
+                opacity: 1 !important;
+                transform: none !important;
+              }
+
+              .web-dev-img-card {
+                aspect-ratio: 4 / 5;
+                max-height: 420px;
+              }
+
+              .web-dev-card-content {
+                padding: 18px;
+              }
+
+              .web-dev-card-title {
+                font-size: 17px;
+              }
+
+              .web-dev-card-text {
+                font-size: 13px;
+              }
+            }
+          `,
+        }}
+      />
 
       <section className="web-dev-solutions-section">
         <div className="container">
+
           <SectionTitle
-            subtitle="Simple to Handle"
-            titleFirst="Why Dynamic "
-            titleSecond="Website Designing?"
+            subtitle=""
+            titleFirst="Why Businesses "
+            titleSecond="Choose Us"
             description=""
             className="mb-0 pb-0 dyncardtitle"
             data-aos="fade-up"
@@ -207,7 +299,10 @@ const DynamicWebsiteSolutions = ({ cards = CARD_DATA }: DynamicWebsiteSolutionsP
 
           <div className="row mt-3 justify-content-center">
             {cards.map((card) => (
-              <div key={card.id} className="col-12 col-md-4 d-flex justify-content-center">
+              <div
+                key={card.id}
+                className="col-12 col-md-6 col-lg-4 d-flex justify-content-center"
+              >
                 <WebDevCard
                   id={card.id}
                   image={card.image}
@@ -219,6 +314,7 @@ const DynamicWebsiteSolutions = ({ cards = CARD_DATA }: DynamicWebsiteSolutionsP
               </div>
             ))}
           </div>
+
         </div>
       </section>
     </>

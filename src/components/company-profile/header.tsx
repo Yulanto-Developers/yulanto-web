@@ -1,8 +1,10 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect } from "react";
 import { ArrowDownRight } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Import Swiper React components and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,6 +16,14 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 export default function HeroSection04() {
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: "ease-out-cubic",
+        });
+    }, []);
+
     const portfolioImages = [
         "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
@@ -21,10 +31,13 @@ export default function HeroSection04() {
     ];
 
     return (
-        <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
+        <section
+            className="px-about-6-area pt-50 pb-80 pb-lg-110"
+            style={{ overflow: "hidden" }}
+        >
             <div className="container container-1550">
                 {/* Top Title Row */}
-                <div className="row align-items-center">
+                <div className="row align-items-center" data-aos="fade-up">
                     <div className="col-xl-3">
                         <span className="tp-section-subtitle text-black blink-ball">
                             Graphic Design Company in Chennai
@@ -44,7 +57,7 @@ export default function HeroSection04() {
                 </div>
 
                 {/* Middle Card Block (7-Column Content / 5-Column Image) */}
-                <div style={{ position: "relative", margin: "20px 0" }}>
+                <div style={{ position: "relative", margin: "20px 0" }} data-aos="fade-up" data-aos-delay="100">
                     <div
                         style={{
                             backgroundColor: "#F3F4F6",
@@ -56,7 +69,7 @@ export default function HeroSection04() {
                     >
                         <div className="row align-items-center">
                             {/* 7 Column Content */}
-                            <div className="col-lg-7 mb-4 mb-lg-0">
+                            <div className="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
                                 <div
                                     style={{
                                         fontWeight: 600,
@@ -72,44 +85,27 @@ export default function HeroSection04() {
                             </div>
 
                             {/* 5 Column Image Container */}
-                            <div className="col-lg-5">
+                            <div className="col-lg-5" data-aos="fade-left" data-aos-delay="300">
                                 <div
                                     style={{
-                                        display: "flex",
-                                        alignItems: "center",
-                                        backgroundColor: "#E5E7EB",
+                                        width: "100%",
+                                        height: "220px",
                                         borderRadius: "12px",
                                         overflow: "hidden",
-                                        maxHeight: "220px",
-                                        width: "100%"
+                                        backgroundColor: "#E5E7EB",
                                     }}
                                 >
                                     <img
                                         src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop"
                                         alt="Designer portrait"
                                         style={{
-                                            height: "220px",
                                             width: "100%",
-                                            maxWidth: "220px",
+                                            height: "100%",
                                             objectFit: "cover",
-                                            filter: "grayscale(100%)"
+                                            filter: "grayscale(100%)",
+                                            display: "block"
                                         }}
                                     />
-                                    <div
-                                        style={{
-                                            padding: "12px",
-                                            writingMode: "vertical-rl",
-                                            transform: "rotate(180deg)",
-                                            fontSize: "11px",
-                                            fontWeight: 600,
-                                            letterSpacing: "2px",
-                                            color: "#4B5563",
-                                            flexGrow: 1,
-                                            textAlign: "center"
-                                        }}
-                                    >
-                                        BASED IN BOKARO STEEL CITY
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +118,7 @@ export default function HeroSection04() {
                     style={{ marginTop: "20px" }}
                 >
                     {/* LEFT SIDE - AUTO SWIPER SLIDER / 5 COLUMNS */}
-                    <div className="col-lg-5 col-md-5">
+                    <div className="col-lg-5 col-md-5" data-aos="fade-right" data-aos-delay="200">
                         <div
                             style={{
                                 width: "100%",
@@ -164,7 +160,7 @@ export default function HeroSection04() {
                     </div>
 
                     {/* RIGHT SIDE - CONTENT / 7 COLUMNS */}
-                    <div className="col-lg-7 col-md-7">
+                    <div className="col-lg-7 col-md-7" data-aos="fade-left" data-aos-delay="300">
                         <div style={{ textAlign: "left" }}>
                             <div
                                 style={{

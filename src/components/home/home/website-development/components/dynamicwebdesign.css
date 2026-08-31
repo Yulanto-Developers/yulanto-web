@@ -126,3 +126,308 @@
 .pointer-events-none {
   pointer-events: none;
 }
+/*  */
+/* Custom Section */
+.whyc1-custom-why-section {
+  padding: 3rem 0;
+}
+
+/* Card Styling */
+.whyc1-feature-card {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  position: relative;
+}
+
+.whyc1-feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.08);
+  border-color: #e2e8f0;
+}
+
+/* Icon Box Base & Custom Colors */
+.whyc1-icon-box {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+/* Specific Custom Color Classes */
+.whyc1-bg-primary {
+  background-color: #053456;
+}
+
+.whyc1-bg-secondary {
+  background-color: #53ae7d;
+}
+
+/* Text & Content */
+.whyc1-card-content {
+  flex-grow: 1;
+}
+
+.whyc1-feature-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.whyc1-feature-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Meta Badges */
+.whyc1-card-meta {
+  display: flex;
+  align-items: flex-start;
+  align-self: flex-start;
+}
+
+.whyc1-number-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  background-color: #f8fafc;
+  padding: 0.15rem 0.4rem;
+  border-radius: 10px;
+}
+
+/*  */
+/* Section Container */
+.cardsixdesg1-mosaic-section {
+  background-color: #f8fafc;
+}
+
+/* Base Asymmetric Card Styling */
+.cardsixdesg1-mosaic-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.25rem;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px -10px rgba(5, 52, 86, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Image Background Container */
+.cardsixdesg1-image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cardsixdesg1-mosaic-card:hover .cardsixdesg1-image-bg {
+  transform: scale(1.05);
+}
+
+.cardsixdesg1-image-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay for better text readability */
+.cardsixdesg1-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(5, 52, 86, 0.85) 0%,
+    rgba(3, 33, 56, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+/* Light overlay for non-featured cards */
+.cardsixdesg1-mosaic-card:not(.cardsixdesg1-featured-card) .cardsixdesg1-card-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(248, 250, 252, 0.88) 100%
+  );
+}
+
+/* Content on top of background */
+.cardsixdesg1-card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 1.5rem;
+}
+
+.cardsixdesg1-mosaic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(5, 52, 86, 0.2);
+}
+
+/* Featured Large Cards Gradient Dark Background Option */
+.cardsixdesg1-featured-card {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.cardsixdesg1-featured-card .cardsixdesg1-card-title {
+  color: #ffffff;
+  font-size: 1.35rem;
+}
+
+.cardsixdesg1-featured-card .cardsixdesg1-card-desc {
+  color: #e2e8f0;
+}
+
+.cardsixdesg1-featured-card .cardsixdesg1-index-num {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Accent Variations for Icons & Dots */
+.cardsixdesg1-accent-primary .cardsixdesg1-icon-glow {
+  background-color: rgba(5, 52, 86, 0.08);
+  color: #053456;
+}
+
+.cardsixdesg1-featured-card.cardsixdesg1-accent-primary .cardsixdesg1-icon-glow {
+  background-color: rgba(83, 174, 125, 0.25);
+  color: #53ae7d;
+  backdrop-filter: blur(10px);
+}
+
+.cardsixdesg1-accent-secondary .cardsixdesg1-icon-glow {
+  background-color: rgba(83, 174, 125, 0.12);
+  color: #53ae7d;
+}
+
+
+
+
+/* Card Header Components */
+.cardsixdesg1-card-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardsixdesg1-icon-glow {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.cardsixdesg1-featured-card .cardsixdesg1-icon-glow {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+
+.cardsixdesg1-mosaic-card:hover .cardsixdesg1-icon-glow {
+  transform: scale(1.08);
+}
+
+.cardsixdesg1-index-num {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #e2e8f0;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.cardsixdesg1-featured-card .cardsixdesg1-index-num {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+/* Card Content Typography */
+.cardsixdesg1-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardsixdesg1-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #053456;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cardsixdesg1-card-desc {
+  font-size: 0.925rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.cardsixdesg1-featured-card .cardsixdesg1-card-desc {
+  color: #cbd5e1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cardsixdesg1-mosaic-card {
+    min-height: 250px;
+    padding: 1.75rem;
+  }
+  
+  .cardsixdesg1-card-title {
+    font-size: 1.1rem;
+  }
+  
+  .cardsixdesg1-card-desc {
+    font-size: 0.875rem;
+  }
+}
+
+/*  */
+
+
+/*  */
+

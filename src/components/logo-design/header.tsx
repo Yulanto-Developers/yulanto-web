@@ -17,19 +17,19 @@ interface CardSpreadProps {
 const defaultCards: CardItem[] = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=500&q=80",
+    image: "assets/img/logodesign/top-1.jpg",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80",
+    image: "assets/img/logodesign/top-2.jpg",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=500&q=80",
+    image: "assets/img/logodesign/top-3.jpg",
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80",
+    image: "assets/img/logodesign/top-4.jpg",
   },
 ];
 
