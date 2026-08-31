@@ -158,7 +158,7 @@ export const FaqCard: React.FC<FaqItem> = ({ question, answer }) => {
       <p
         className="text-figtree"
         style={{
-          fontSize: "15px",
+          fontSize: "15px !important",
           color: "#555555",
           lineHeight: "1.6",
           margin: 0,

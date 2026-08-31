@@ -3,6 +3,37 @@
 import React, { useEffect, useRef, useState } from "react";
 import { PageFlip } from "page-flip";
 
+// ==========================================
+// 1. TYPESAFE MODULE DECLARATION FOR PAGE-FLIP
+// ==========================================
+declare module "page-flip" {
+  export interface PageFlipOptions {
+    width: number;
+    height: number;
+    size?: "fixed" | "stretch";
+    minWidth?: number;
+    maxWidth?: number;
+    minHeight?: number;
+    maxHeight?: number;
+    drawShadow?: boolean;
+    maxShadowOpacity?: number;
+    showCover?: boolean;
+    usePortrait?: boolean;
+    startPage?: number;
+    [key: string]: unknown;
+  }
+
+  export class PageFlip {
+    constructor(element: HTMLElement, options?: PageFlipOptions);
+    loadFromHTML(items: NodeListOf<HTMLElement> | HTMLElement[]): void;
+    getPageCount(): number;
+    getCurrentPageIndex(): number;
+    flip(pageIndex: number): void;
+    on(event: string, callback: (e: { data: unknown }) => void): void;
+    destroy(): void;
+  }
+}
+
 interface StepData {
   title: string;
   description: string;
@@ -65,8 +96,8 @@ export default function StPageFlipBook() {
       startPage: 0,
     });
 
-    const pages = bookContainerRef.current.querySelectorAll(".page-leaf");
-    pf.loadFromHTML(pages as unknown as NodeListOf<HTMLElement>);
+    const pages = bookContainerRef.current.querySelectorAll<HTMLElement>(".page-leaf");
+    pf.loadFromHTML(pages);
     pageFlipInstance.current = pf;
 
     pf.on("flip", (e) => {
@@ -97,13 +128,13 @@ export default function StPageFlipBook() {
   };
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ overflow: "hidden" ,backgroundColor:"#fff" }} >
+    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ overflow: "hidden", backgroundColor: "#fff" }}>
       <div className="container container-1550">
         {/* Top Title Row */}
         <div className="row align-items-center mb-50" data-aos="fade-up">
           <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">
-             Our Graphic Design Process
+              Our Graphic Design Process
             </span>
           </div>
 
@@ -111,10 +142,10 @@ export default function StPageFlipBook() {
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
                 <span className="text-blue-about">From Concept to </span>
-              Final Design
+                Final Design
               </h4>
               <p className="text-figtree text-black mt-2">
-               We follow a simple and transparent design process to turn your ideas into professional marketing materials.
+                We follow a simple and transparent design process to turn your ideas into professional marketing materials.
               </p>
             </div>
           </div>
