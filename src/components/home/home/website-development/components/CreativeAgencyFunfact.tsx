@@ -1,14 +1,14 @@
 "use client";
 import AnimatedCounterTwo from "@/components/shared/MetricsCounter/AnimatedCounterTwo";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
-import creativestats from "./creativestatsdata"
+import creativestats, { DyanmicTitle } from "./creativestatsdata"
 
-interface staticDT {
+interface staticDT extends DyanmicTitle {
 	num1: number;
 	num2: number;
 }
 
-const CreativeAgencyFunfact = ({ num1, num2 }: staticDT) => {
+const CreativeAgencyFunfact = ({ num1, num2, titleFirst, titleHighlight, titleSecond, }: staticDT) => {
 
 	const data = creativestats.slice(num1, num2);
 
@@ -26,7 +26,7 @@ const CreativeAgencyFunfact = ({ num1, num2 }: staticDT) => {
 					data-aos="fade-down"
 					data-aos-delay="100"
 				>
-					Dynamic <span className="text-blue-about"> Website  </span> Development
+					{titleFirst}{''}<span className="text-blue-about"> {titleHighlight}{''}  </span> {titleSecond}
 				</h4>
 				<div className="container container-1330 mt-3">
 					<div className="row">

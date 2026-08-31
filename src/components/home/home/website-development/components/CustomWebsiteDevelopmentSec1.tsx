@@ -4,10 +4,8 @@ import React, { useEffect } from 'react';
 import { useAOS } from '@/components/hooks/useAOS';
 import '@/components/home/home/aboutcomponents/ourStory.css';
 import '@/assets/css/textAnimations.css';
-import image1 from "@/assets/images/ourstory/image-1.jpg";
 import image4 from "@/assets/images/ourstory/vector-2.png";
 import CreativeAgencyFunfact from './CreativeAgencyFunfact';
-
 
 const galleryImages = [
     "/assets/images/ourstory/image-1.jpg",
@@ -17,7 +15,7 @@ const galleryImages = [
     "/assets/images/ourstory/image-1.jpg",
 ];
 
-const AbtServices = () => {
+const CustomWebsiteDevelopmentSec1 = () => {
     useAOS();
     return (
         <section className="yul-st">
@@ -297,9 +295,10 @@ const AbtServices = () => {
                         <div className="col-xl-3">
                             <span
                                 className="tp-section-subtitle text-black blink-ball mt-40"
-                                style={{ lineHeight: "25px" }}
+                                style={{ lineHeight: "25px" }} data-aos="text-reveal"
+                                data-aos-delay="100"
                             >
-                                Web Development <br />
+                                Website Development <br />
                                 Company in Chennai
                             </span>
                         </div>
@@ -312,18 +311,19 @@ const AbtServices = () => {
                                     data-aos="text-reveal"
                                     data-aos-delay="100"
                                 >
-                                    Dynamic Website Development Services  <br /> <span className="text-blue-about"> for Growing Businesses </span>
+                                    Secure, Custom-Built Websites Designed  <br /> <span className="text-blue-about"> Around Your Business  </span>
                                 </h4>
                                 <p
                                     className="mb-0"
                                     data-aos="text-reveal-lines"
                                     data-aos-delay="200"
                                 >
-                                    Looking for a reliable web development company in Chennai to build a powerful, scalable, and professional website for your business? At Yulanto Web Creations, we provide result-oriented web development services in Chennai designed to help businesses establish a strong digital presence, engage customers, and achieve their online goals.
+                                    Looking for a reliable website development company in Chennai to build a website that truly represents your brand? At Yulanto Web Creations, we create secure, responsive, scalable, and custom-built websites designed around your business objectives.
                                 </p>
                             </div>
                         </div>
                     </div>
+                  
                 </div>
             </div>
 
@@ -340,108 +340,99 @@ const AbtServices = () => {
                 </div>
             </section>
 
-            <div className="continer">
-                <p
-                    className="mt-2"
-                    data-aos="text-reveal-lines"
-                    data-aos-delay="200"
-                >
-                    As one of the experienced web design and development companies in Chennai, we create dynamic, responsive, database-driven, and easy-to-manage websites tailored to your business requirements. Whether you need a corporate website, business portal, e-commerce website, booking platform, content management system, or custom web application, our experienced web developers in Chennai can develop a solution that fits your needs.
-                </p>
-            </div>
+            <div className="container">
+                  <div className="row align-items-center">
+                        <div className="col-lg-12 mb-4 mb-lg-0">
 
-            <CreativeAgencyFunfact num1={0} num2={4} titleFirst="Dynamic"
-                titleHighlight="Website"
-                titleSecond="Development" />
-
-            {/* =========================================
-                ABOUT SECTION - BLUE
-            ========================================= */}
-            <section className="about-blue-section">
-                <div className="container-fuild">
-                    <div className="row align-items-center">
-                        <div className="col-lg-4 mb-4 mb-lg-0">
-                            <div
-                                className="about-img-wrap"
-                                data-aos="image-zoom"
-                                data-aos-delay="100"
-
+                            <p
+                                className="mt-2"
+                                data-aos="text-reveal-lines"
+                                data-aos-delay="200"
                             >
-                                <img
-                                    src={image1.src}
-                                    alt="Team collaborating in modern web development office"
-                                    className="about-small-img"
-
-                                />
-                            </div>
-                        </div>
-
-                        <div className="col-lg-8">
-                            <div className="about-content-side">
-                                <span className="tp-section-subtitle text-white blink-ball">
-                                    We Are a Creative Web Development Agency
-                                </span>
-                                <h4
-                                    className="px-about-title text-tenor"
-                                    data-aos="text-reveal"
-                                    data-aos-delay="200"
-                                >
-                                    <span className="text-white">Content Management Systems (CMS) & Dynamic Web Development </span>
-                                </h4>
-
-                                <p
-                                    className="text-figtree "
-                                    data-aos="fade-up"
-                                    data-aos-delay="300"
-                                >
-                                    Dynamic websites offer greater flexibility, functionality, and scalability compared with basic static websites. They allow businesses to manage website content, products, services, images, blogs, users, and other information through a convenient content management system.
-                                </p>
-
-                                <p
-                                    className="text-figtree mb-0 "
-                                    data-aos="fade-up"
-                                    data-aos-delay="400"
-                                >
-                                    Our web development services in Chennai include CMS-based development using popular platforms such as WordPress, WooCommerce, and other suitable technologies. A CMS enables business owners and administrators to add, edit, or remove website content without requiring extensive technical knowledge.
-                                </p>
-
-
-                                <p
-                                    className="text-figtree mt-2 "
-                                    data-aos="fade-up"
-                                    data-aos-delay="400"
-                                >
-                                    Dynamic websites can also connect with databases to store and retrieve information efficiently. Depending on project requirements, our web developers in Chennai can work with technologies and databases such as PHP, MySQL, Laravel, CodeIgniter, and other modern web development frameworks.
-                                </p>
-                            </div>
+                                As an experienced web site development company in Chennai, we combine creative design, modern technologies, intuitive navigation, and search-engine-friendly development to deliver websites that provide an engaging experience across desktops, tablets, and mobile devices.
+                            </p>
+                            <p
+                                className="mt-2"
+                                data-aos="text-reveal-lines"
+                                data-aos-delay="200"
+                            >
+                                Our team of professional website developers in Chennai develops websites from the ground up based on your business requirements rather than relying entirely on generic templates. From corporate websites and business portals to customized web applications and eCommerce platforms, we create digital solutions tailored to your goals.
+                            </p>
                         </div>
                     </div>
+            </div>
 
-                </div>
-            </section>
+            <CreativeAgencyFunfact num1={4} num2={8} titleFirst="Custom " titleHighlight="Website" titleSecond="" />
 
             {/* =========================================
                             SERVICES - WHITE SECTION
                         ========================================= */}
             <div className="services-section">
                 <div className="container services-content">
-                    <div className="row align-items-center justify-content-center text-center">
-                        <div className="col-lg-12 mb-4 mb-lg-0">
-                            <h4
-                                className="px-about-title text-tenor"
-                                data-aos="text-reveal"
+                    <div className="row mb-30" >
+                        <div className="col-xl-3">
+                            <span
+                                className="tp-section-subtitle text-black blink-ball mt-0"
+                                style={{ lineHeight: "25px" }} data-aos="text-reveal"
                                 data-aos-delay="100"
                             >
-                                Easy to  <span className="text-blue-about">Manage</span>
-                            </h4>
+                                Custom-Built Websites <br />
+                                for Your Business
+                            </span>
+                        </div>
 
+                        <div className="col-xl-9">
+                            <div className="px-project-title-box">
+
+                                <h4
+                                    className="px-about-title text-tenor"
+                                    data-aos="text-reveal"
+                                    data-aos-delay="100"
+                                >
+                                    Websites Tailored to  <span className="text-blue-about"> Your Brand, Goals & Customers </span>
+                                </h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row align-items-center">
+                        <div className="col-lg-8 mb-4 mb-lg-0">
                             <p
-                                className="mb-0 "
+                                className="mb-2 text-justify"
                                 data-aos="text-reveal-lines"
                                 data-aos-delay="200"
                             >
-                                A professionally developed dynamic website makes it simple to manage your online content. Administrators can update pages, services, products, images, blogs, testimonials, and other information through an easy-to-use interface.
+                                Every business is different, and your website should reflect what makes your business unique. Our custom website development services provide the flexibility to create a website that matches your brand identity, business processes, target audience, and long-term growth plans.
                             </p>
+                            <p
+                                className="mb-2 text-justify"
+                                data-aos="text-reveal-lines"
+                                data-aos-delay="200"
+                            >
+                                As a professional website development company in Chennai, we focus on creating websites that are visually appealing, easy to manage, fast-loading, mobile-friendly, secure, and optimized for search engines.
+                            </p>
+                            <p
+                                className="mb-0 text-justify"
+                                data-aos="text-reveal-lines"
+                                data-aos-delay="200"
+                            >
+                                Custom website development gives you greater control over the website's design, functionality, content structure, integrations, and future scalability. Whether you need a simple business website or a feature-rich web platform, our website developers in Chennai can develop a solution around your specific requirements.
+                            </p>
+                        </div>
+
+                        <div className="col-lg-4 mb-4 mb-lg-0">
+                            <div
+                                data-aos="image-rotate"
+                                data-aos-delay="300"
+
+                            >
+                                <img
+                                    src={image4.src}
+                                    alt="Team collaborating in modern web development office"
+                                    className="about-small-img"
+
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -450,4 +441,4 @@ const AbtServices = () => {
     );
 };
 
-export default AbtServices;
+export default CustomWebsiteDevelopmentSec1;
