@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import { HeroProps } from "./hero.types";
 import "./hero.css";
 
+// Re-export HeroProps so external headers can import it directly
+export type { HeroProps };
+
 const Hero: React.FC<HeroProps> = ({
   subtitle = "Join Our Journey",
   titleBlue = "Shape Your Future",
