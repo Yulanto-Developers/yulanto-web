@@ -2,6 +2,8 @@ import Breadcrumbdata from "@/components/breadcrum/sections/breadcrumbdata";
 import Header from "@/components/company-profile/header";
 import Second from "@/components/company-profile/hero-04";
 import BrochureNeeds from "@/components/company-profile/brochure-needs";
+import Design from "@/components/company-profile/design-formats"
+import Services from "@/components/company-profile/design-services"
 
 export default function Page() {
   return (
@@ -14,6 +16,8 @@ export default function Page() {
         animation="subtle"
       />
       <BrochureNeeds />
+      <Design/>
+      <Services />
     </main>
   );
 }
