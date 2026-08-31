@@ -1,44 +1,41 @@
 "use client";
 
 import React from "react";
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import { HeroProps } from "./hero.types";
 import "./hero.css";
 
-interface HeroProps {
-  images: string[];
-  className?: string;
-}
-
-const Hero: React.FC<HeroProps> = ({ images, className = "" }) => {
-  // Duplicate images array once to create a seamless 50% loop offset
+const Hero: React.FC<HeroProps> = ({
+  subtitle = "Join Our Journey",
+  titleBlue = "Shape Your Future",
+  titleBlack = "With Us",
+  description = "Our aim is to create potential career pathways and foster opportunities for growth. We provide avenues for career advancement through the accumulation of experience, the acquisition of new skills, the assumption of leadership responsibilities, and the continuous update on industry trends and technologies.",
+  images,
+  className = "",
+}) => {
+  // Duplicate images array once for seamless 50% infinite marquee loop
   const duplicatedImages = [...images, ...images];
 
   return (
-    <section className={`animated-marquee-hero overflow-hidden ${className}`}>
+    <section className={`px-about-6-area pt-50 pb-80 pb-lg-110 animated-marquee-hero overflow-hidden ${className}`}>
       {/* Content Container */}
-      <div className="container position-relative z-2">
+      <div className="container container-1550 position-relative z-2">
         <div className="row justify-content-start">
-
-          <div className="row  align-items-center">
+          <div className="row align-items-center">
             <div className="col-xl-3">
               <span className="tp-section-subtitle text-black blink-ball">
-                Join Our Journey
-
-
+                {subtitle}
               </span>
             </div>
 
             <div className="col-xl-9">
               <div className="px-project-title-box">
-
                 <h4 className="px-about-title mb-20">
-                  <span className="text-blue-about">Shape Your Future
-                  </span> With Us
+                  <span className="text-blue-about">{titleBlue} </span>
+                  {titleBlack}
                 </h4>
                 <p className="text-figtree text-black mt-2 font-paragraph-cls">
-                  Our aim is to create potential career pathways and foster opportunities for growth.
-
-                  We provide avenues for career advancement through the accumulation of experience, the acquisition of new skills, the assumption of leadership responsibilities, and the continuous update on industry trends and technologies.
+                  {description}
                 </p>
               </div>
             </div>
@@ -51,7 +48,7 @@ const Hero: React.FC<HeroProps> = ({ images, className = "" }) => {
         <motion.div
           className="d-flex gap-3 marquee-track"
           animate={{
-            x: ["0%", "-50%"], // Animates exactly 50% for an invisible, seamless restart
+            x: ["0%", "-50%"],
           }}
           transition={{
             ease: "linear",

@@ -148,6 +148,20 @@ const data = [
     currentPage: "Logo Design & branding",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+   {
+    path: "/company-profile-design",
+    title: "Brochure & Company Profile Design",
+    
+    currentPage: "Logo Design & branding",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+   {
+    path: "/flyer-poster-design",
+    title: "Flyer & Poster Design",
+    
+    currentPage: "Flyer & Poster Design",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
                       
 ];
 
