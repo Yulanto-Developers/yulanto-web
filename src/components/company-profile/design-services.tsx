@@ -68,7 +68,7 @@ export default function Hero() {
                 <div style={heroWrapperStyle}>
                     <div style={textColumnStyle}>
                         <div>
-                            <h5 className="mt-20 mb-20" style={{ fontSize: "22px", fontWeight: "600" }}>
+                            <h5 className="mt-20 mb-20" >
                                 Our services include:
                             </h5>
 

@@ -5,11 +5,11 @@ export default function DemoPage() {
   // Keep only 6 images in the array
   const customImages = [
     "assets/img/logodesign/logos/Design-portfolio-1.jpg",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop",
+    "assets/img/logodesign/logos/Design-portfolio-2.jpg",
+    "assets/img/logodesign/logos/Design-portfolio-3.jpg",
+    "assets/img/logodesign/logos/Design-portfolio-4.jpg",
+    "assets/img/logodesign/logos/Design-portfolio-5.jpg",
+    "assets/img/logodesign/logos/Design-portfolio-6.jpg",
   ];
 
   return (

@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 const FALLBACK_IMAGE =
-  "assets/img/social/bootom-1.jpg";
+  "assets/img/logodesign/image-1.jpg";
  const featuresList = [
   "Understanding your business and brand personality",
   "Researching your target audience and industry",
