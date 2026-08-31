@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants, HTMLMotionProps } from "framer-motion";
 
 // ==========================================
 // 1. TYPES & INTERFACES
@@ -28,7 +28,7 @@ export interface FaqSectionData {
 }
 
 export interface FaqSectionProps
-  extends Omit<React.ComponentPropsWithoutRef<typeof motion.section>, "ref"> {
+  extends Omit<HTMLMotionProps<"section">, "ref"> {
   data?: FaqSectionData;
 }
 
@@ -37,7 +37,6 @@ export interface FaqSectionProps
 // ==========================================
 
 export const defaultFaqData: FaqSectionData = {
- 
   mainTitleBlue: "Frequently Asked ",
   mainTitleBlack: "Questions",
   rows: [
@@ -139,7 +138,6 @@ export const FaqCard: React.FC<FaqItem> = ({ question, answer }) => {
         padding: "24px",
         backgroundColor: "#ffffff",
         borderRadius: "16px",
-      
         border: "1px solid #eaeaea",
         width: "380px",
         flexShrink: 0,
@@ -160,7 +158,7 @@ export const FaqCard: React.FC<FaqItem> = ({ question, answer }) => {
       <p
         className="text-figtree"
         style={{
-          fontSize: "15px !important",
+          fontSize: "15px",
           color: "#555555",
           lineHeight: "1.6",
           margin: 0,
@@ -235,9 +233,10 @@ export const HorizontalScroller: React.FC<{
 // 4. MAIN FAQ SECTION COMPONENT
 // ==========================================
 
-export const FaqSection = React.forwardRef<HTMLDivElement, FaqSectionProps>(
+export const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
   ({ className, data = defaultFaqData, ...props }, ref) => {
-    const containerVariants = {
+    // Animation Variants with explicit TypeScript Typing
+    const containerVariants: Variants = {
       hidden: { opacity: 0 },
       visible: {
         opacity: 1,
@@ -248,14 +247,14 @@ export const FaqSection = React.forwardRef<HTMLDivElement, FaqSectionProps>(
       },
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
       hidden: { y: 20, opacity: 0 },
       visible: {
         y: 0,
         opacity: 1,
         transition: {
           duration: 0.5,
-          ease: "easeOut",
+          ease: "easeInOut",
         },
       },
     };
@@ -286,8 +285,6 @@ export const FaqSection = React.forwardRef<HTMLDivElement, FaqSectionProps>(
         <div className="container container-1550">
           {/* Header Section */}
           <div className="row align-items-center mb-50" data-aos="fade-up">
-          
-
             <div className="col-xl-12">
               <motion.div
                 className="px-project-title-box"
@@ -308,12 +305,14 @@ export const FaqSection = React.forwardRef<HTMLDivElement, FaqSectionProps>(
                     </span>
                   )}
                 </motion.h4>
-                <motion.p
-                  className="text-figtree text-black mt-2"
-                  variants={itemVariants}
-                >
-                  {data.mainDescription}
-                </motion.p>
+                {data.mainDescription && (
+                  <motion.p
+                    className="text-figtree text-black mt-2"
+                    variants={itemVariants}
+                  >
+                    {data.mainDescription}
+                  </motion.p>
+                )}
               </motion.div>
             </div>
           </div>
