@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -34,19 +35,18 @@ export default function Hero() {
         });
     }, []);
 
-    // Split list evenly into two columns (6 items left, 5 items right)
-    const halfLength = Math.ceil(featuresList.length / 2);
-    const leftColumnItems = featuresList.slice(0, halfLength);
-    const rightColumnItems = featuresList.slice(halfLength);
+    const midIndex = 5; 
+    const column1Items = featuresList.slice(0, midIndex);
+    const column2Items = featuresList.slice(midIndex);
 
     return (
         <section
-            className="px-about-6-area pt-50 pb-80 pb-lg-110"
+            className="px-about-6-area pt-50 pb-80 pb-lg-110 overflow-hidden"
             style={{ backgroundColor: "#ffffff" }}
         >
             <div className="container container-1550">
                 {/* Header Title Section */}
-                <div className="row align-items-center mb-30" data-aos="fade-up">
+                <div className="row align-items-center mb-30 gx-4" data-aos="fade-up">
                     <div className="col-xl-3">
                         <span className="tp-section-subtitle text-black blink-ball">
                             Our Graphic Design Services
@@ -68,23 +68,22 @@ export default function Hero() {
                 <div style={heroWrapperStyle}>
                     <div style={textColumnStyle}>
                         <div>
-                            <h5 className="mt-20 mb-20" >
+                            <h5 className="mt-20 mb-20">
                                 Our services include:
                             </h5>
 
-                            {/* 2-Column Split Layout */}
-                            <div className="row">
-                                {/* Left Column (6 Cols) */}
-                                <div className="col-md-6">
+                            {/* 3-Column Split Layout with standard grid gutter */}
+                            <div className="row align-items-center gx-4">
+                                {/* First Column (4 Cols) */}
+                                <div className="col-lg-4 col-md-6 mb-30">
                                     <ul style={listStyle}>
-                                        {leftColumnItems.map((item, index) => (
+                                        {column1Items.map((item, index) => (
                                             <li
                                                 key={index}
                                                 style={listItemStyle}
                                                 data-aos="fade-up"
                                                 data-aos-delay={index * 50}
                                             >
-                                                {/* Matching Font Awesome Icon */}
                                                 <i className={`${item.icon} text-blue-about`} style={iconStyle} />
                                                 <span className="text-figtree text-black">
                                                     {item.title}
@@ -94,17 +93,16 @@ export default function Hero() {
                                     </ul>
                                 </div>
 
-                                {/* Right Column (6 Cols) */}
-                                <div className="col-md-6">
+                                {/* Second Column (4 Cols) */}
+                                <div className="col-lg-4 col-md-6 mb-30">
                                     <ul style={listStyle}>
-                                        {rightColumnItems.map((item, index) => (
+                                        {column2Items.map((item, index) => (
                                             <li
-                                                key={index + halfLength}
+                                                key={index + midIndex}
                                                 style={listItemStyle}
                                                 data-aos="fade-up"
-                                                data-aos-delay={(index + halfLength) * 50}
+                                                data-aos-delay={(index + midIndex) * 50}
                                             >
-                                                {/* Matching Font Awesome Icon */}
                                                 <i className={`${item.icon} text-blue-about`} style={iconStyle} />
                                                 <span className="text-figtree text-black">
                                                     {item.title}
@@ -112,6 +110,17 @@ export default function Hero() {
                                             </li>
                                         ))}
                                     </ul>
+                                </div>
+
+                                {/* Third Column (4 Cols) - Fixed Image */}
+                                <div className="col-lg-4 mb-30" data-aos="fade-left">
+                                    <div style={imageContainerStyle}>
+                                        <img
+                                            src="/assets/img/services/graphic-design.jpg" // Replace with your image path
+                                            alt="Graphic Design Services"
+                                            style={imageStyle}
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -130,6 +139,7 @@ export default function Hero() {
 const heroWrapperStyle: React.CSSProperties = {
     width: "100%",
     padding: "10px 0 40px 0",
+    boxSizing: "border-box",
 };
 
 const textColumnStyle: React.CSSProperties = {
@@ -160,4 +170,20 @@ const iconStyle: React.CSSProperties = {
     width: "24px",
     textAlign: "center",
     flexShrink: 0,
+};
+
+const imageContainerStyle: React.CSSProperties = {
+    width: "100%",
+    overflow: "hidden",
+    borderRadius: "12px",
+};
+
+const imageStyle: React.CSSProperties = {
+    maxWidth: "100%",
+    width: "100%",
+    height: "auto",
+    maxHeight: "350px",
+    objectFit: "cover",
+    borderRadius: "12px",
+    display: "block",
 };
