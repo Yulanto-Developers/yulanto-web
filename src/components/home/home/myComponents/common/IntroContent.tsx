@@ -24,9 +24,8 @@ function IntroContent({ leftTitle, rightTitle1, rightTitle2, description, css }:
                             <span className="text-blue-about">{rightTitle1} {' '}</span>{rightTitle2}
                         </h4>
 
-                        <p className="text-figtree text-dark mt-2 font-paragraph-cls">
-                            {description}
-
+                        <p className="text-figtree text-dark mt-2 font-paragraph-cls" dangerouslySetInnerHTML={{ __html: description }}>
+                           
                         </p>
                     </div>
                 </div>

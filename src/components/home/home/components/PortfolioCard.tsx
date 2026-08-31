@@ -58,20 +58,19 @@ const PortfolioCard = ({
                                 {/* OUR MANTRA */}
                                 {title === "Our Success Mantra" && Array.isArray(portFolio) && (
                                     <ul style={{ listStyleType: "none", padding: 0 }}>
-                                        <span className="text-tenor text-white font-bold-cls text-start" style={{ fontSize: '20px' }}>
+                                        <span className="text-tenor text-white font-bold-cls py-2 text-start" style={{ fontSize: '20px' }}>
                                             Benefits of Choosing Yulanto Web Creations
                                         </span>
                                         {portFolio.map((item, idx) => {
                                             const chosenIcon = typeof item.icon === "string" ? iconMap[item.icon] : item.icon;
                                             return (
-                                                <li key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "12px", textAlign: 'left' }} className="text-figtree font-paragraph-cls">
+                                                <li key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "12px", textAlign: 'left',marginTop:'10px' }} className="text-figtree font-paragraph-cls">
                                                     {chosenIcon && (
                                                         <FontAwesomeIcon icon={chosenIcon} style={{ width: "20px", height: "20px", marginTop: "3px", flexShrink: 0, color: "#53AE7D" }} />
                                                     )}
                                                     <span className="text-white text-figtree fs-6 d-flex align-items-start">
-                                                        <span className="text-nowrap text-bold-cls">{item.key}</span>
-                                                        <span className="mx-2">:</span>
-                                                        <span>{item.text}</span>
+                                                    
+                                                        <span dangerouslySetInnerHTML={{ __html: item.text }}></span>
                                                     </span>
                                                 </li>
                                             );
