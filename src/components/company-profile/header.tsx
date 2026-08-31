@@ -31,7 +31,7 @@ export default function HeroSection04() {
     ];
 
     return (
-        <section 
+        <section
             className="px-about-6-area pt-50 pb-80 pb-lg-110"
             style={{ overflow: "hidden" }}
         >
@@ -88,41 +88,24 @@ export default function HeroSection04() {
                             <div className="col-lg-5" data-aos="fade-left" data-aos-delay="300">
                                 <div
                                     style={{
-                                        display: "flex",
-                                        alignItems: "center",
-                                        backgroundColor: "#E5E7EB",
+                                        width: "100%",
+                                        height: "220px",
                                         borderRadius: "12px",
                                         overflow: "hidden",
-                                        maxHeight: "220px",
-                                        width: "100%"
+                                        backgroundColor: "#E5E7EB",
                                     }}
                                 >
                                     <img
                                         src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop"
                                         alt="Designer portrait"
                                         style={{
-                                            height: "220px",
                                             width: "100%",
-                                            maxWidth: "220px",
+                                            height: "100%",
                                             objectFit: "cover",
-                                            filter: "grayscale(100%)"
+                                            filter: "grayscale(100%)",
+                                            display: "block"
                                         }}
                                     />
-                                    <div
-                                        style={{
-                                            padding: "12px",
-                                            writingMode: "vertical-rl",
-                                            transform: "rotate(180deg)",
-                                            fontSize: "11px",
-                                            fontWeight: 600,
-                                            letterSpacing: "2px",
-                                            color: "#4B5563",
-                                            flexGrow: 1,
-                                            textAlign: "center"
-                                        }}
-                                    >
-                                        BASED IN BOKARO STEEL CITY
-                                    </div>
                                 </div>
                             </div>
                         </div>
