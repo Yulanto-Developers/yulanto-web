@@ -648,7 +648,7 @@ function Startupwebsitedesign() {
             /> */}
             <PhotoGallery images={startupGalleryImages} />
 
-            <div className='container my-5' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
+            <div className='container mt-5' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
                 <div className='row align-items-center'>
                     <div className="col-xl-12">
                         <div className="px-project-title-box">
@@ -688,17 +688,17 @@ function Startupwebsitedesign() {
                     </div>
                 </div>
             </div>
-            <div  data-aos-delay={400} data-aos-once={true} style={{ backgroundColor: '#053456', margin: '100px 0px 100px 0px !important' }}>
-                <div className='container my-5' >
+            <div  data-aos-delay={400} data-aos-once={true} style={{ backgroundColor: 'rgb(245 245 245)', }}>
+                <div className='container' >
                     <div className='row align-items-center pt-100 pb-100'>
 
 
                         <div className='col-12'>
-                            <span className="tp-section-subtitle text-black blink-ball text-white">
+                            <span className="tp-section-subtitle text-black blink-ball">
                                 Startup Web Design Services
                             </span>
-                            <h4 className="px-about-title mb-20 text-white">
-                                <span className="text-white">Special Focus on</span> Startup Web Designing
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">Special Focus on</span> Startup Web Designing
                             </h4>
                         </div>
                         <div className='col-md-4'>
@@ -706,7 +706,7 @@ function Startupwebsitedesign() {
                             <img src={img1.src} alt='img' className='img-border-cls' />
                         </div>
                         <div className='col-md-8'>
-                            <p className='text-figtree text-white '>
+                            <p className='text-figtree  '>
                                 Our experienced web designers in Chennai specialize in creating innovative, attractive, responsive, and user-friendly websites for startups. We combine creative design, intuitive navigation, mobile responsiveness, SEO-friendly development, and conversion-focused layouts to help new businesses establish a strong digital presence.
 
                                 Whether you are launching a new product, introducing a service, or building a completely new brand, our team develops website solutions aligned with your business objectives and target audience. From a startup idea to a professional online presence, we design websites that help your business move forward.
@@ -719,17 +719,18 @@ function Startupwebsitedesign() {
                     </div>
                 </div>
             </div>
-            <div className='container my-5' data-aos='fade-right' data-aos-delay={400} data-aos-once={true}>
+            <div style={{ backgroundColor: '#053456', margin: '100px 0px  !important' }}>
+   <div className='container py-5' data-aos='fade-right' data-aos-delay={400} data-aos-once={true} >
 
 
                 <div className='row'>
                     <div className="col-xl-12">
                         <div className="px-project-title-box">
-                            <span className="tp-section-subtitle text-black blink-ball">
+                            <span className="tp-section-subtitle text-white blink-ball">
                                 Start Your Design
                             </span>
-                            <h4 className="px-about-title mb-20">
-                                <span className="text-blue-about">Enhance Your Startup </span>Growth with a Cutting-Edge Website
+                            <h4 className="px-about-title mb-20 text-white">
+                                <span className="">Enhance Your Startup </span>Growth with a Cutting-Edge Website
                             </h4>
 
 
@@ -738,11 +739,11 @@ function Startupwebsitedesign() {
 
 
                     <div className='col-12 d-flex flex-column align-items-start mb-4'>
-                        <p className='text-figtree'>
+                        <p className='text-figtree text-white'>
                             Choosing the right web design agency in Chennai can make a significant difference to your startup's online growth. Every business has a unique identity, target audience, and business objective. Therefore, we create customized website designs rather than relying on one-size-fits-all solutions.
                         </p>
 
-                        <p className='text-figtree text-dark mt-2 mb-3' style={{ fontSize: '1.05rem' }}>
+                        <p className='text-figtree text-white mt-2 mb-3' style={{ fontSize: '1.05rem' }}>
                             Our startup website design services can support businesses across a wide range of industries, including:
                         </p>
                     </div>
@@ -764,11 +765,13 @@ function Startupwebsitedesign() {
                         industries={industries}
                     />
                     <div className='mt-50'>
-                        <p>As a professional Chennai design company, we focus on creating websites that are visually appealing while also supporting usability, search engine visibility, and business growth.</p>
+                        <p className='text-white'>As a professional Chennai design company, we focus on creating websites that are visually appealing while also supporting usability, search engine visibility, and business growth.</p>
                     </div>
 
                 </div>
             </div>
+            </div>
+         
 
             <div className='container pt-50 mb-100' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
                 <div className='row align-items-center'>

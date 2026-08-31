@@ -51,7 +51,7 @@ export default function IndustryGallery({
             setActiveIndex((currentIndex) => {
                 return (currentIndex + 1) % industries.length;
             });
-        }, 6000);
+        }, 3000);
 
         return () => {
             clearTimeout(timer);

@@ -18,7 +18,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Comparison",
   },
-
   {
     id: 2,
     question: "What are the advantages of a dynamic website?",
@@ -27,7 +26,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Benefits",
   },
-
   {
     id: 3,
     question: "What types of websites can use dynamic functionality?",
@@ -51,7 +49,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Use Cases",
   },
-
   {
     id: 4,
     question: "How is content managed on a dynamic website?",
@@ -61,7 +58,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "CMS",
   },
-
   {
     id: 5,
     question: "Do you provide post-development maintenance and support?",
@@ -80,7 +76,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Pricing",
   },
-
   {
     id: 7,
     question:
@@ -91,7 +86,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Web Development",
   },
-  //*********************** */
   {
     id: 8,
     question: "What is logo design and why is it important?",
@@ -100,7 +94,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Logo Design",
   },
-
   {
     id: 9,
     question: "How much does logo design in Chennai cost?",
@@ -109,7 +102,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Pricing",
   },
-
   {
     id: 10,
     question: "What information should I provide to a logo designer?",
@@ -118,7 +110,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Requirements",
   },
-
   {
     id: 11,
     question: "What file formats will I receive?",
@@ -127,7 +118,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "File Formats",
   },
-
   {
     id: 12,
     question: "Can I request changes to the logo?",
@@ -136,7 +126,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Revisions",
   },
-
   {
     id: 13,
     question: "Can I use the logo on my website and social media?",
@@ -145,7 +134,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Usage",
   },
-
   {
     id: 14,
     question: "Can I trademark my logo?",
@@ -154,7 +142,6 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Trademark",
   },
-
   {
     id: 15,
     question: "What if I already have a logo but want to improve it?",
@@ -163,6 +150,7 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Logo Redesign",
   },
+<<<<<<< Updated upstream
   //*********************** */
   // Custom Website Development FAQs
   //*********************** */
@@ -232,6 +220,82 @@ const faqa1Data: FAQItem[] = [
       "Yes. We provide ongoing website maintenance and support services, including content updates, technical assistance, security updates, backups, performance improvements, and other website management requirements.",
     ],
     meta: "Maintenance",
+=======
+  {
+    id: 16,
+    question: "When should I consider redesigning my website?",
+    answer: [
+      "Consider a redesign if your website has an outdated design, poor mobile experience, slow performance, complicated navigation, low engagement, weak conversion rates, or no longer represents your current brand and services.",
+    ],
+    meta: "Redesign Trigger",
+  },
+  {
+    id: 17,
+    question: "How much does website redesign cost in Chennai?",
+    answer: [
+      "The cost depends on the size of your website, number of pages, technology, design requirements, functionality, integrations, content requirements, and the extent of the redesign.",
+      "A simple website revamp will generally require less work than a complete website transformation.",
+    ],
+    meta: "Pricing",
+  },
+  {
+    id: 18,
+    question: "How long does a website redesign take?",
+    answer: [
+      "The timeline depends on the website's size and project requirements.",
+      "A standard redesign can typically take around 2 to 4 weeks, while larger websites with complex functionality may require additional time.",
+    ],
+    meta: "Timeline",
+  },
+  {
+    id: 19,
+    question: "Will my existing SEO rankings be affected by a redesign?",
+    answer: [
+      "A poorly planned redesign can affect SEO. We therefore consider existing URLs, content, metadata, internal links, redirects, headings, and other important SEO elements during the redesign process to minimize unnecessary ranking risks.",
+    ],
+    meta: "SEO Risk",
+  },
+  {
+    id: 20,
+    question: "Can you redesign my existing WordPress website?",
+    answer: [
+      "Yes. We can redesign existing WordPress websites while retaining useful content, functionality, and integrations where appropriate.",
+      "We can also recommend rebuilding specific sections when the existing structure limits performance or scalability.",
+    ],
+    meta: "WordPress",
+  },
+  {
+    id: 21,
+    question: "Can a website redesign improve leads and sales?",
+    answer: [
+      "Yes. A strategic redesign can improve navigation, user experience, content presentation, calls-to-action, mobile usability, and conversion paths, which can help create better opportunities for generating enquiries and leads.",
+    ],
+    meta: "Conversions",
+  },
+  {
+    id: 22,
+    question: "Do you provide AI website redesign services?",
+    answer: [
+      "Yes. Our AI website redesign in Chennai approach can incorporate AI-assisted analysis, content optimization, user-experience insights, and conversion-focused strategies while maintaining your brand identity and business objectives.",
+    ],
+    meta: "AI Redesign",
+  },
+  {
+    id: 23,
+    question: "Do you provide website redesign services for small businesses?",
+    answer: [
+      "Yes. Our small business website redesign in Chennai solutions are designed to provide professional, responsive, SEO-friendly, and conversion-focused websites suitable for growing businesses.",
+    ],
+    meta: "Small Business",
+  },
+  {
+    id: 24,
+    question: "Do you offer website redesign near me?",
+    answer: [
+      "Yes. If you are searching for website redesign near me, you can connect with our Chennai-based team to discuss your existing website, redesign requirements, and business objectives.",
+    ],
+    meta: "Local Services",
+>>>>>>> Stashed changes
   },
 ];
 

@@ -28,7 +28,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         image: "/assets/img/sample/core.jpg",
         // image: "/assets/img/project/project-2.jpg",
         secImage: ['/assets/img/sample/s3.webp'],
-        categories: ["Web Design", "Corporate Website", "Engineering Website", "Responsive Design","UI/UX Design"],
+        categories: ["Web Design", "Corporate Website", "Engineering Website", "Responsive Design", "UI/UX Design"],
         client: "Creative Market",
         role: "UI/UX Design",
         duration: "18 February 2026",
@@ -115,29 +115,29 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         portFolio: [
             {
                 icon: 'faPalette', // Fits "Unique designs"
-                key: 'Custom Modern Website',
-                text: "We create unique, business-focused website design in Chennai after conducting in-depth research on your industry, competitors, and target audience. Our website Designers in Chennai are developed using the latest technologies, ensuring speed, security, and scalability."
+                key: '',
+                text: "<b>Custom Modern Website</b> : We create unique, business-focused website design in Chennai after conducting in-depth research on your industry, competitors, and target audience. Our website Designers in Chennai are developed using the latest technologies, ensuring speed, security, and scalability."
             },
 
             {
                 icon: 'faShieldHalved', // Fits "safety advantages / SSL certificate"
-                key: "Secure & Reliable Websites",
-                text: "Every website includes SSL integration, clean coding standards, regular updates, and performance optimization for a safe browsing experience."
+                key: "",
+                text: "<b>Secure & Reliable Websites</b> : Every website includes SSL integration, clean coding standards, regular updates, and performance optimization for a safe browsing experience."
             },
             {
                 icon: 'faChartLine', // Fits "SEO expertise / dynamic SEO-optimized website"
-                key: "SEO-Ready Development",
-                text: "As an experienced Web Design and Development Company in Chennai, we build SEO-friendly websites with optimized structure, fast loading speeds, and mobile responsiveness to improve your search engine rankings."
+                key: "",
+                text: "<b>SEO-Ready Development</b> : As an experienced Web Design and Development Company in Chennai, we build SEO-friendly websites with optimized structure, fast loading speeds, and mobile responsiveness to improve your search engine rankings."
             },
             {
                 icon: 'faWrench', // Fits "Web maintenance and support services"
-                key: "Ongoing Website Maintenance",
-                text: "We provide continuous website maintenance, updates, backups, security monitoring, and technical support to keep your website running smoothly."
+                key: "",
+                text: "<b>Ongoing Website Maintenance</b>: We provide continuous website maintenance, updates, backups, security monitoring, and technical support to keep your website running smoothly."
             },
             {
                 icon: 'faLaptopMobile', // Fits "responsive websites / various platforms and devices"
-                key: "Results-Driven Approach",
-                text: "Our dedicated web designers and developers in Chennai create visually appealing, high-converting websites that strengthen your online presence, generate quality leads, and support long-term business growth."
+                key: "",
+                text: "<b>Results-Driven Approach</b>: Our dedicated web designers and developers in Chennai create visually appealing, high-converting websites that strengthen your online presence, generate quality leads, and support long-term business growth."
             },
         ]
     },

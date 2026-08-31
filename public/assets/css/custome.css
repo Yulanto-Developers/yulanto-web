@@ -1820,13 +1820,15 @@ input[name="name"].has-value+.name-next-btn {
         transform: translateY(0);
     }
 }
-.pt-sm-120{
+
+.pt-sm-120 {
     padding-top: 20px;
 }
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
 
-    .pt-sm-120{
+    .pt-sm-120 {
         padding-top: 80px;
     }
 
@@ -2343,6 +2345,267 @@ input[name="name"].has-value+.name-next-btn {
     }
 }
 
-.pointer-event{
+.pointer-event {
     pointer-events: none;
+}
+
+
+
+/* =========================================
+   AI REDESIGN BENEFITS
+========================================= */
+
+.ai-redesign-title {
+    color: #053456;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.ai-redesign-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px 18px;
+}
+
+.ai-redesign-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 62px;
+
+    padding: 10px 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e6ebef;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 15px rgba(5, 52, 86, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.ai-redesign-item:hover {
+    transform: translateY(-3px);
+
+    border-color: #053456;
+
+    box-shadow:
+        0 8px 25px rgba(5, 52, 86, 0.10);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.ai-redesign-icon {
+    flex-shrink: 0;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #053456;
+
+    color: #ffffff;
+
+    font-size: 16px;
+}
+
+.ai-redesign-item span {
+    color: #333333;
+
+    font-family: "Figtree", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .ai-redesign-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .ai-redesign-title {
+        font-size: 18px;
+    }
+
+    .ai-redesign-list {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .ai-redesign-item {
+        min-height: 58px;
+
+        padding: 9px 12px;
+    }
+
+    .ai-redesign-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 14px;
+    }
+
+    .ai-redesign-item span {
+        font-size: 14px;
+    }
+
+}
+
+
+
+/* =========================================
+   REDESIGN BENEFITS SLIDER
+========================================= */
+
+.redesign-benefits-slider {
+    position: relative;
+    width: 100%;
+}
+
+.redesign-benefits-swiper {
+    width: 100%;
+    padding: 10px 5px 60px;
+}
+
+.redesign-benefits-swiper .swiper-slide {
+    height: auto;
+    display: flex;
+}
+
+.redesign-benefits-swiper .swiper-slide > * {
+    width: 100%;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.redesign-benefits-swiper
+.swiper-pagination {
+    bottom: 10px;
+}
+
+.redesign-benefits-swiper
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+
+    opacity: 0.4;
+
+    transition:
+        width 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.redesign-benefits-swiper
+.swiper-pagination-bullet-active {
+    width: 25px;
+
+    border-radius: 10px;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+.swiper-button-prev,.swiper-button-next{
+    display: hidden;
+}
+
+
+.redesign-benefits-swiper
+.swiper-button-prev:hover,
+.redesign-benefits-swiper
+.swiper-button-next:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.redesign-benefits-swiper
+.swiper-button-prev::after,
+.redesign-benefits-swiper
+.swiper-button-next::after {
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .redesign-benefits-swiper {
+        padding-bottom: 55px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .redesign-benefits-swiper {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .redesign-benefits-swiper
+    .swiper-button-prev,
+    .redesign-benefits-swiper
+    .swiper-button-next {
+        width: 36px;
+        height: 36px;
+    }
+
+    .redesign-benefits-swiper
+    .swiper-button-prev::after,
+    .redesign-benefits-swiper
+    .swiper-button-next::after {
+        font-size: 13px;
+    }
+
 }
