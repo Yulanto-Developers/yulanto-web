@@ -163,6 +163,76 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Logo Redesign",
   },
+  //*********************** */
+  // Custom Website Development FAQs
+  //*********************** */
+
+  {
+    id: 16,
+    question:
+      "Are custom websites better than generic websites for businesses?",
+    answer: [
+      "Custom websites can provide greater flexibility and control over design, functionality, branding, and user experience. Unlike generic websites that may look similar to many others, a customized website can be developed specifically around your business requirements and target audience.",
+    ],
+    meta: "Custom Websites",
+  },
+
+  {
+    id: 17,
+    question: "How long does it take to develop a custom website?",
+    answer: [
+      "The development timeline depends on the website's size, number of pages, design requirements, functionality, integrations, content, and technology.",
+      "A typical custom business website may take around 4 to 6 weeks, while larger projects may require additional time.",
+    ],
+    meta: "Development Timeline",
+  },
+
+  {
+    id: 18,
+    question: "Does custom website development cost more?",
+    answer: [
+      "Custom website development can cost more than using a basic template because it involves customized design, development, functionality, testing, and technical expertise.",
+      "However, the investment provides greater flexibility and allows the website to be built around your specific business requirements.",
+    ],
+    meta: "Pricing",
+  },
+
+  {
+    id: 19,
+    question: "Is custom website development good for SEO?",
+    answer: [
+      "Yes. A properly developed custom website can provide a strong technical foundation for SEO.",
+      "Clean structure, responsive design, page speed, proper heading hierarchy, metadata, mobile usability, and SEO-friendly content organization can all support better search-engine visibility.",
+    ],
+    meta: "SEO",
+  },
+
+  {
+    id: 20,
+    question: "Can you integrate third-party tools into a custom website?",
+    answer: [
+      "Yes. Depending on your requirements, we can integrate payment gateways, CRM systems, APIs, enquiry management tools, analytics platforms, email services, WhatsApp solutions, and other third-party applications.",
+    ],
+    meta: "Integrations",
+  },
+
+  {
+    id: 21,
+    question: "Can the website be upgraded in the future?",
+    answer: [
+      "Yes. One of the major advantages of custom website development is scalability. New pages, features, integrations, business modules, and functionality can be added as your business requirements evolve.",
+    ],
+    meta: "Scalability",
+  },
+
+  {
+    id: 22,
+    question: "Do you provide website maintenance after development?",
+    answer: [
+      "Yes. We provide ongoing website maintenance and support services, including content updates, technical assistance, security updates, backups, performance improvements, and other website management requirements.",
+    ],
+    meta: "Maintenance",
+  },
 ];
 
 export default faqa1Data;

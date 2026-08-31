@@ -6,6 +6,12 @@ export interface FunFact {
   delay: string;
 }
 
+export interface DyanmicTitle{
+	titleFirst?:string;
+	titleHighlight?:string;
+	titleSecond?:string;
+}
+
 const FUNFACTS = [
 	{
 		id: 1,
