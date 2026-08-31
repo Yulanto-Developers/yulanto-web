@@ -7,7 +7,8 @@ export interface SafariTabItem {
     title1: string;
     title2: string;
     description: string;
-    image: string;
+    points: string[];
+    image?: string;
 }
 
 interface SafariContentTabsProps {
@@ -105,11 +106,10 @@ export default function SafariContentTabs({
                         <button
                             key={index}
                             type="button"
-                            className={`safari-tab ${
-                                activeTab === index
-                                    ? "active"
-                                    : ""
-                            }`}
+                            className={`safari-tab ${activeTab === index
+                                ? "active"
+                                : ""
+                                }`}
                             onClick={() =>
                                 handleTabChange(index)
                             }
@@ -121,8 +121,8 @@ export default function SafariContentTabs({
                             </span>
 
                             {/* Tab Title */}
-                            <span className="tab-title">
-                                {item.title1+" "+item.title2}
+                            <span className="tab-title text-tenor">
+                                {item.title1 + " " + item.title2}
                             </span>
 
                             {/* Close */}
@@ -161,44 +161,56 @@ export default function SafariContentTabs({
 
 
                 {/* =========================
-                    BROWSER CONTENT
-                ========================= */}
+    BROWSER CONTENT
+========================= */}
 
                 <div className="safari-content">
 
-                    {/* IMAGE */}
-                    <div
-                        key={`image-${activeTab}`}
-                        className="safari-image-wrapper"
-                    >
-                        <img
-                            src={activeItem.image}
-                            alt={activeItem.title1}
-                            className="safari-image"
-                        />
-                    </div>
-
-
-                    {/* TEXT */}
+                    {/* CONTENT */}
                     <div
                         key={`text-${activeTab}`}
-                        className="safari-text"
+                        className="safari-text safari-text-full"
                     >
 
                         <span className="safari-number">
                             {String(activeTab + 1).padStart(2, "0")}
                         </span>
 
-                        {/* <h2 className="text-tenor">
-                            {activeItem.title}
-                        </h2> */}
-                         <h4 className="px-about-title mb-20">
-                                <span className="text-blue-about">{activeItem.title1} </span> {activeItem.title2}
-                            </h4>
+                        <h4 className="px-about-title mb-20">
+                            <span className="text-blue-about">
+                                {activeItem.title1}{" "}
+                            </span>
+
+                            {activeItem.title2}
+                        </h4>
 
                         <p>
                             {activeItem.description}
                         </p>
+
+                        {/* POINTS */}
+                        <div className="safari-points">
+
+                            {activeItem.points.map(
+                                (point, index) => (
+                                    <div
+                                        className="safari-point"
+                                        key={index}
+                                    >
+
+                                        <span className="safari-point-number">
+                                            {String(index + 1).padStart(2, "0")}
+                                        </span>
+
+                                        <span className="safari-point-text">
+                                            {point}
+                                        </span>
+
+                                    </div>
+                                )
+                            )}
+
+                        </div>
 
                     </div>
 
@@ -212,7 +224,7 @@ export default function SafariContentTabs({
                 <div className="safari-status">
 
                     <span className="text-figtree">
-                        {activeItem.title1+" "+activeItem.title2}
+                        {activeItem.title1 + " " + activeItem.title2}
                     </span>
 
                     <span className="text-figtree">

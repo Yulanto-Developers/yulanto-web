@@ -87,7 +87,7 @@ function CorporateApproachGrid({
                                 {/* CARD CONTENT */}
                                 <div className="approach-card-content">
                                     <span className="approach-category text-tenor">
-                                        {item.category}
+                                        {item.mainCategory}
                                     </span>
 
                                     <h3 className="text-tenor">

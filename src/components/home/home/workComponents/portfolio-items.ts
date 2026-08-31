@@ -68,7 +68,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web1.src,
     category: "website",
     date: "Nov, 2024",
-    description: "Website, UXdesign, UIbestpractices, ",
+    description: "Website, UX design, UI best practices, ",
   },
   {
     id: "web-2",
@@ -76,7 +76,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web2.src,
     category: "website",
     date: "Aug, 2024",
-    description: "Responsivewebsite, techtrends, webdesign ",
+    description: "Responsive website, tech trends, web design ",
   },
   {
     id: "web-3",
@@ -84,7 +84,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web3.src,
     category: "website",
     date: "Oct, 2020",
-    description: "OnlinePresence, WebDesignTips, UserExperience",
+    description: "Online Presence, Web Design Tips, User Experience",
   },
   {
     id: "web-4",
@@ -92,7 +92,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web4.src,
     category: "website",
     date: "Dec, 2021",
-    description: "Webapplication, Techinnovation, Userinterface ",
+    description: "Web application, Tech innovation, User interface ",
   },
   {
     id: "web-5",
@@ -100,7 +100,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web5.src,
     category: "website",
     date: "Sep, 2023",
-    description: "ResponsiveWebDesign, WebsiteInspiratio, WebDesign ",
+    description: "Responsive Web Design, Website Inspiration, Web Design ",
   },
   {
     id: "web-6",
@@ -108,7 +108,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web6.src,
     category: "website",
     date: "May, 2022",
-    description: "OnlinePresence, WebDesignTips, UserExperience",
+    description: "Online Presence, Web Design Tips, User Experience",
   },
   {
     id: "web-7",
@@ -116,7 +116,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web7.src,
     category: "website",
     date: "Mar, 2022",
-    description: "WebsiteShowcase, SEO, OnlinePresence",
+    description: "Website Showcase, SEO, Online Presence",
   },
   {
     id: "web-8",
@@ -124,7 +124,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web8.src,
     category: "website",
     date: "Jan, 2024",
-    description: "ResponsiveWebDesign, WebsiteInspiratio, WebDesign ",
+    description: "Responsive Web Design, Website Inspiration, Web Design ",
   },
   {
     id: "web-9",
@@ -132,7 +132,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web9.src,
     category: "website",
     date: "Sep, 2021",
-    description: "OnlinePresence, WebDesignTips, UserExperience",
+    description: "Online Presence, Web Design Tips, User Experience",
   },
   {
     id: "web-10",
@@ -140,7 +140,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web10.src,
     category: "website",
     date: "Aug, 2023",
-    description: "OnlinePresence, WebDesignTips, UserExperience",
+    description: "Online Presence, Web Design Tips, User Experience",
   },
   {
     id: "web-11",
@@ -148,7 +148,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web11.src,
     category: "website",
     date: "May, 2020",
-    description: "WebDesign, UIUXX, DigitalTransformation",
+    description: "Web Design, UI UX, Digital Transformation",
   },
   {
     id: "web-12",
@@ -156,7 +156,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web12.src,
     category: "website",
     date: "Aug, 2023",
-    description: "ResponsiveWebDesign, WebsiteInspiratio, WebDesign ",
+    description: "Responsive Web Design, Website Inspiration, Web Design ",
   },
 
 
@@ -167,7 +167,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo1.src,
     category: "logo",
     date: "Feb, 2025",
-    description: "LogoDesign, BrandIdentity, BusinessLogo ",
+    description: "Logo Design, Brand Identity, Business Logo ",
   },
   {
     id: "logo-2",
@@ -175,7 +175,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo2.src,
     category: "logo",
     date: "Jul, 2024",
-    description: "CreativeLogo, BrandIdentity, CustomLogo",
+    description: "Creative Logo, Brand Identity, Custom Logo",
   },
   {
     id: "logo-3",
@@ -183,7 +183,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo3.src,
     category: "logo",
     date: "Aug, 2024",
-    description: "UniqueLogo, LogoTrends, LogoArt",
+    description: "Unique Logo, Logo Trends, Logo Art",
   },
   {
     id: "logo-4",
@@ -191,7 +191,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo4.src,
     category: "logo",
     date: "Sep, 2024",
-    description: "ModernLogo, VisualIdentity, LogoEvolution",
+    description: "Modern Logo, Visual Identity, Logo Evolution",
   },
   {
     id: "logo-5",
@@ -199,7 +199,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo5.src,
     category: "logo",
     date: "Oct, 2022",
-    description: "BrandIdentity, UniqueLogo, LogoShowcase",
+    description: "Brand Identity, Unique Logo, Logo Showcase",
   },
   {
     id: "logo-6",
@@ -207,7 +207,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo6.src,
     category: "logo",
     date: "Feb, 2024",
-    description: "LogoDesign, BrandIdentity, CreativeLogo",
+    description: "Logo Design, Brand Identity, Creative Logo",
   },
   {
     id: "logo-7",
@@ -215,7 +215,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo7.src,
     category: "logo",
     date: "Jan, 2024",
-    description: "CustomLogo, GraphicDesign, BusinessLogo",
+    description: "Custom Logo, Graphic Design, Business Logo",
   },
   {
     id: "logo-8",
@@ -223,7 +223,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo8.src,
     category: "logo",
     date: "Mar, 2024",
-    description: "LogoEvolution, VisualIdentity, ModernLogo",
+    description: "Logo Evolution, Visual Identity, Modern Logo",
   },
   {
     id: "logo-9",
@@ -231,7 +231,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo9.src,
     category: "logo",
     date: "Apr, 2022",
-    description: "LogoInspiration, LogoMaker, UniqueLogo",
+    description: "Logo Inspiration, Logo Maker, Unique Logo",
   },
   {
     id: "logo-10",
@@ -239,7 +239,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo10.src,
     category: "logo",
     date: "Mar, 2024",
-    description: "LogoCreation, LogoAnimation, LogoLove",
+    description: "Logo Creation, Logo Animation, Logo Love",
   },
   {
     id: "logo-11",
@@ -247,7 +247,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo11.src,
     category: "logo",
     date: "Feb, 2023",
-    description: "LogoTrends, BrandLogo, LogoShowcase",
+    description: "Logo Trends, Brand Logo, Logo Showcase",
   },
   {
     id: "logo-12",
@@ -255,7 +255,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: logo12.src,
     category: "logo",
     date: "Oct, 2023",
-    description: "LogoArt, LogoDevelopment, LogoDesign",
+    description: "Logo Art, Logo Development, Logo Design",
   },
   // brochure category
   {
@@ -264,7 +264,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro1.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "BrochureDesign, PrintBrochure, MarketingMaterials",
+    description: "Brochure Design, Print Brochure, Marketing Materials",
   },
   {
     id: "bro-2",
@@ -272,7 +272,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro2.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "BrochureMarketing, BusinessBrochure, CreativeBrochure",
+    description: "Brochure Marketing, Business Brochure, Creative Brochure",
   },
   {
     id: "bro-3",
@@ -280,7 +280,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro3.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "BrochurePrinting, DigitalBrochure, CustomBrochure",
+    description: "Brochure Printing, Digital Brochure, Custom Brochure",
   },
   {
     id: "bro-4",
@@ -288,7 +288,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro4.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "BrochureInspiration, BrochureShowcase, Advertising",
+    description: "Brochure Inspiration, Brochure Showcase, Advertising",
   },
   {
     id: "bro-5",
@@ -296,7 +296,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro5.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "MarketingStrategy, BusinessBranding, VisualMarketing",
+    description: "Marketing Strategy, Business Branding, Visual Marketing",
   },
   {
     id: "bro-6",
@@ -304,7 +304,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro6.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "DesignShowcase, BrochureTips, Brochures",
+    description: "Design Showcase, Brochure Tips, Brochures",
   },
   {
     id: "bro-7",
@@ -312,7 +312,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro7.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "GraphicDesign, MarketingMaterials, PromotionalBrochure",
+    description: "Graphic Design, Marketing Materials, Promotional Brochure",
   },
   {
     id: "bro-8",
@@ -320,7 +320,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro8.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "PrintBrochure, MarketingStrategy, DesignShowcase",
+    description: "Print Brochure, Marketing Strategy, Design Showcase",
   },
   {
     id: "bro-9",
@@ -328,7 +328,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro9.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "BusinessBrochure, BrochurePrinting, CreativeBrochure",
+    description: "Business Brochure, Brochure Printing, Creative Brochure",
   },
   {
     id: "bro-10",
@@ -336,7 +336,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro10.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "DigitalBrochure, BrochureInspiration, CustomBrochure",
+    description: "Digital Brochure, Brochure Inspiration, Custom Brochure",
   },
   {
     id: "bro-11",
@@ -344,7 +344,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro11.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "DigitalBrochure, PromotionalBrochure, VisualMarketing",
+    description: "Digital Brochure, Promotional Brochure, Visual Marketing",
   },
   {
     id: "bro-12",
@@ -352,7 +352,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: bro12.src,
     category: "brochure",
     date: "Oct, 2023",
-    description: "BrochureDesign, Advertising, BusinessBranding",
+    description: "Brochure Design, Advertising, Business Branding",
   },
   // business
   {
@@ -361,7 +361,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business1.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "BusinessCard, Networking, Branding",
+    description: "Business Card, Networking, Branding",
   },
   {
     id: "business-2",
@@ -369,7 +369,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business2.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "DesignYourCard, MarketingTools, EntrepreneurLife",
+    description: "Design Your Card, Marketing Tools, Entrepreneur Life",
   },
   {
     id: "business-3",
@@ -377,7 +377,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business3.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "SmallBusiness, CardDesign, CreativeBusinessCards",
+    description: "Small Business, Card Design, Creative Business Cards",
   },
   {
     id: "business-4",
@@ -385,7 +385,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business4.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "DigitalIdentity, BusinessNetworking, ProfessionalNetworking",
+    description: "Digital Identity, Business Networking, Professional Networking",
   },
   {
     id: "business-5",
@@ -393,7 +393,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business5.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "BusinessIdeas, CardPrinting, VisualIdentity",
+    description: "Business Ideas, Card Printing, Visual Identity",
   },
   {
     id: "business-6",
@@ -401,7 +401,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business6.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "EntrepreneurTips, MarketingStrategy, BusinessGrowth",
+    description: "Entrepreneur Tips, Marketing Strategy, Business Growth",
   },
   {
     id: "business-7",
@@ -409,7 +409,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business7.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "FirstImpression, Branding, CardDesign",
+    description: "First Impression, Branding, Card Design",
   },
   {
     id: "business-8",
@@ -417,7 +417,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business8.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "Networking, VisualIdentity, BusinessGrowth",
+    description: "Networking, Visual Identity, Business Growth",
   },
   {
     id: "business-9",
@@ -425,7 +425,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business9.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "CreativeBusinessCards, MarketingTools, SmallBusiness",
+    description: "Creative Business Cards, Marketing Tools, Small Business",
   },
   {
     id: "business-10",
@@ -433,7 +433,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business10.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "ProfessionalNetworking, DigitalIdentity, Branding",
+    description: "Professional Networking, Digital Identity, Branding",
   },
   {
     id: "business-11",
@@ -441,7 +441,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business11.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "EntrepreneurLife, BusinessIdeas, MarketingStrategy",
+    description: "Entrepreneur Life, Business Ideas, Marketing Strategy",
   },
   {
     id: "business-12",
@@ -449,7 +449,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: business12.src,
     category: "business-card",
     date: "Oct, 2023",
-    description: "CardPrinting, FirstImpression, EntrepreneurTips",
+    description: "Card Printing, First Impression, Entrepreneur Tips",
   },
   // flyers
   {
@@ -458,7 +458,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers1.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "Marketing, PrintMarketing, BusinessPromotion",
+    description: "Marketing, Print Marketing, Business Promotion",
   },
   {
     id: "flyer-2",
@@ -466,7 +466,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers2.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "PromotionalMaterials, CreativeDesign, Advertising",
+    description: "Promotional Materials, Creative Design, Advertising",
   },
   {
     id: "flyer-3",
@@ -474,7 +474,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers3.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "EventMarketing, SmallBusiness, BoostYourBrand",
+    description: "Event Marketing, Small Business, Boost Your Brand",
   },
   {
     id: "flyer-4",
@@ -482,7 +482,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers4.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "GraphicDesign, FlyerDesign, DigitalMarketing",
+    description: "Graphic Design, Flyer Design, Digital Marketing",
   },
   {
     id: "flyer-5",
@@ -490,7 +490,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers5.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "LocalBusiness, ReachYourAudience, SocialMediaMarketing",
+    description: "Local Business, Reach Your Audience, Social Media Marketing",
   },
   {
     id: "flyer-6",
@@ -498,7 +498,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers6.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "ContentCreation, VisualCommunication, Marketing",
+    description: "Content Creation, Visual Communication, Marketing",
   },
   {
     id: "flyer-7",
@@ -506,7 +506,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers7.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "PrintMarketing, PromotionalMaterials, GraphicDesign",
+    description: "Print Marketing, Promotional Materials, Graphic Design",
   },
   {
     id: "flyer-8",
@@ -514,7 +514,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers8.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "Advertising, EventMarketing, CreativeDesign",
+    description: "Advertising, Event Marketing, Creative Design",
   },
   {
     id: "flyer-9",
@@ -522,7 +522,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers9.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "SmallBusiness, DigitalMarketing, ReachYourAudience",
+    description: "Small Business, Digital Marketing, Reach Your Audience",
   },
   {
     id: "flyer-10",
@@ -530,7 +530,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers10.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "BoostYourBrand, FlyerDesign, LocalBusiness",
+    description: "Boost Your Brand, Flyer Design, Local Business",
   },
   {
     id: "flyer-11",
@@ -538,7 +538,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers11.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "SocialMediaMarketing, ContentCreation, BusinessPromotion",
+    description: "Social Media Marketing, Content Creation, Business Promotion",
   },
   {
     id: "flyer-12",
@@ -546,6 +546,6 @@ export const portfolioItems: PortfolioItem[] = [
     image: flyers12.src,
     category: "flyers",
     date: "Oct, 2023",
-    description: "VisualCommunication, Marketing, PromotionalMaterials",
+    description: "Visual Communication, Marketing, Promotional Materials",
   },
 ];

@@ -109,11 +109,11 @@
 
     border: 1px solid transparent;
 
-    background: transparent;
+    background: #f5f5f5de;
 
     border-radius: 12px;
 
-    color: #475569;
+    color: #053456;
 
     text-align: left;
 
@@ -157,7 +157,7 @@
 
     background: #f1f5f9;
 
-    color: #64748b;
+    color: #053456;
 
     font-size: 16px;
 
@@ -184,14 +184,14 @@
 
 .industry-item-arrow {
     opacity: 0;
-
+    color: #053456 !important;
     font-size: 18px;
-
     transform: translateX(-5px);
-
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
+    transition:        opacity 0.3s ease,        transform 0.3s ease;
+    -webkit-transition:        opacity 0.3s ease,        transform 0.3s ease;
+    -moz-transition:        opacity 0.3s ease,        transform 0.3s ease;
+    -ms-transition:        opacity 0.3s ease,        transform 0.3s ease;
+    -o-transition:        opacity 0.3s ease,        transform 0.3s ease;
 }
 
 
@@ -426,7 +426,7 @@
 
     font-weight: 600;
 
-    color: #111827;
+    color: #fff;
 }
 
 .industry-center-info p {

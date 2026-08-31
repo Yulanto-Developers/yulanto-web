@@ -429,7 +429,7 @@
 
     display: grid;
 
-    grid-template-columns: 1.15fr 0.85fr;
+    /* grid-template-columns: 1.15fr 0.85fr; */
 
     background: #ffffff;
 }
@@ -473,7 +473,7 @@
 ========================================================= */
 
 .safari-text {
-    padding: 70px 50px;
+    padding: 50px 50px;
 
     display: flex;
 
@@ -745,4 +745,169 @@
 
         line-height: 1.7;
     }
+}
+
+/* =========================================
+   FULL WIDTH SAFARI CONTENT
+========================================= */
+
+.safari-text-full {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   POINTS CONTAINER
+========================================= */
+
+.safari-points {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px 20px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   SINGLE POINT
+========================================= */
+
+.safari-point {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    border: 1px solid #e5e9ed;
+
+    border-radius: 8px;
+
+    background: #fafafa;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.safari-point:hover {
+    transform: translateY(-3px);
+
+    border-color: #053456;
+
+    box-shadow:
+        0 8px 25px rgba(5, 52, 86, 0.08);
+}
+
+
+/* =========================================
+   POINT NUMBER
+========================================= */
+
+.safari-point-number {
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #053456;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    font-family: "Figtree", sans-serif;
+}
+
+
+/* =========================================
+   POINT TEXT
+========================================= */
+
+.safari-point-text {
+    color: #333;
+
+    font-family: "Figtree", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    padding-top: 5px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.safari-text-full > p {
+    max-width: 950px;
+
+    line-height: 1.7;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .safari-points {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .safari-points {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-top: 20px;
+    }
+
+    .safari-point {
+        padding: 12px;
+    }
+
+    .safari-point-number {
+        width: 28px;
+        height: 28px;
+
+        font-size: 10px;
+    }
+
+    .safari-point-text {
+        font-size: 13px;
+    }
+
 }
