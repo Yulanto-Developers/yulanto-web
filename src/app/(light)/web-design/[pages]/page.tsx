@@ -15,12 +15,12 @@ export default async function Page({
     return (
         <>
 
-            {pages === "startup-webiste-design" && (
+            {pages === "startup-website-design" && (
                 <>
                     <Startupwebsitedesgin />
                 </>
             )}
-            {pages === "corporate-webiste-desgin" && (
+            {pages === "corporate-website-design" && (
                 <>
                     <Corporatewebistedesgin />
                 </>
