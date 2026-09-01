@@ -18,7 +18,7 @@ import {
   Building,
 } from "lucide-react";
 
-interface IconProps {
+export interface IconProps {
   id: number;
   name: string;
   icon: React.ElementType;
@@ -42,30 +42,16 @@ const FloatingIcon = ({
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const springX = useSpring(x, {
-    stiffness: 250,
-    damping: 22,
-  });
-
-  const springY = useSpring(y, {
-    stiffness: 250,
-    damping: 22,
-  });
+  const springX = useSpring(x, { stiffness: 250, damping: 22 });
+  const springY = useSpring(y, { stiffness: 250, damping: 22 });
 
   React.useEffect(() => {
     const handleMouseMove = () => {
       if (ref.current) {
         const rect = ref.current.getBoundingClientRect();
-
         const distance = Math.sqrt(
-          Math.pow(
-            mouseX.current - (rect.left + rect.width / 2),
-            2
-          ) +
-            Math.pow(
-              mouseY.current - (rect.top + rect.height / 2),
-              2
-            )
+          Math.pow(mouseX.current - (rect.left + rect.width / 2), 2) +
+            Math.pow(mouseY.current - (rect.top + rect.height / 2), 2)
         );
 
         if (distance < 160) {
@@ -75,7 +61,6 @@ const FloatingIcon = ({
           );
 
           const force = (1 - distance / 160) * 55;
-
           x.set(-Math.cos(angle) * force);
           y.set(-Math.sin(angle) * force);
         } else {
@@ -86,10 +71,7 @@ const FloatingIcon = ({
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [x, y, mouseX, mouseY]);
 
   const IconComponent = iconData.icon;
@@ -105,14 +87,8 @@ const FloatingIcon = ({
         y: springY,
         ...iconData.position,
       }}
-      initial={{
-        opacity: 0,
-        scale: 0.6,
-      }}
-      animate={{
-        opacity: 1,
-        scale: 1,
-      }}
+      initial={{ opacity: 0, scale: 0.6 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{
         delay: index * 0.05,
         duration: 0.5,
@@ -135,9 +111,7 @@ const FloatingIcon = ({
             : "1px solid rgba(105, 180, 129, 0.4)",
           transition: "all 0.3s ease",
         }}
-        animate={{
-          y: [0, -8, 0],
-        }}
+        animate={{ y: [0, -8, 0] }}
         transition={{
           duration: 3 + (index % 3),
           repeat: Infinity,
@@ -154,7 +128,6 @@ const FloatingIcon = ({
             transition: "color 0.3s ease",
           }}
         />
-
         <span
           style={{
             fontSize: "13px",
@@ -171,98 +144,29 @@ const FloatingIcon = ({
   );
 };
 
-const defaultIndustries: IconProps[] = [
-  {
-    id: 1,
-    name: "Real Estate",
-    icon: Building2,
-    position: { top: "10%", left: "5%" },
-  },
-  {
-    id: 2,
-    name: "Construction",
-    icon: HardHat,
-    position: { top: "8%", right: "8%" },
-  },
-  {
-    id: 3,
-    name: "Interior Design",
-    icon: Sofa,
-    position: { top: "22%", left: "18%" },
-  },
-  {
-    id: 4,
-    name: "Architecture",
-    icon: Ruler,
-    position: { top: "20%", right: "18%" },
-  },
-  {
-    id: 5,
-    name: "Industrial",
-    icon: Factory,
-    position: { top: "42%", left: "4%" },
-  },
-  {
-    id: 6,
-    name: "Healthcare",
-    icon: HeartPulse,
-    position: { top: "40%", right: "5%" },
-  },
-  {
-    id: 7,
-    name: "Education",
-    icon: GraduationCap,
-    position: { bottom: "35%", left: "12%" },
-  },
-  {
-    id: 8,
-    name: "E-commerce",
-    icon: ShoppingCart,
-    position: { bottom: "36%", right: "12%" },
-  },
-  {
-    id: 9,
-    name: "Hospitality",
-    icon: Hotel,
-    position: { bottom: "18%", left: "5%" },
-  },
-  {
-    id: 10,
-    name: "Professional Services",
-    icon: BriefcaseBusiness,
-    position: { bottom: "18%", right: "6%" },
-  },
-  {
-    id: 11,
-    name: "Startups",
-    icon: Rocket,
-    position: { bottom: "8%", left: "22%" },
-  },
-  {
-    id: 12,
-    name: "SMEs",
-    icon: Store,
-    position: { bottom: "8%", right: "22%" },
-  },
-  {
-    id: 13,
-    name: "Corporate Businesses",
-    icon: Building,
-    position: { top: "6%", left: "42%" },
-  },
+export const defaultIndustries: IconProps[] = [
+  { id: 1, name: "Real Estate", icon: Building2, position: { top: "10%", left: "5%" } },
+  { id: 2, name: "Construction", icon: HardHat, position: { top: "8%", right: "8%" } },
+  { id: 3, name: "Interior Design", icon: Sofa, position: { top: "22%", left: "18%" } },
+  { id: 4, name: "Architecture", icon: Ruler, position: { top: "20%", right: "18%" } },
+  { id: 5, name: "Industrial", icon: Factory, position: { top: "42%", left: "4%" } },
+  { id: 6, name: "Healthcare", icon: HeartPulse, position: { top: "40%", right: "5%" } },
+  { id: 7, name: "Education", icon: GraduationCap, position: { bottom: "35%", left: "12%" } },
+  { id: 8, name: "E-commerce", icon: ShoppingCart, position: { bottom: "36%", right: "12%" } },
+  { id: 9, name: "Hospitality", icon: Hotel, position: { bottom: "18%", left: "5%" } },
+  { id: 10, name: "Professional Services", icon: BriefcaseBusiness, position: { bottom: "18%", right: "6%" } },
+  { id: 11, name: "Startups", icon: Rocket, position: { bottom: "8%", left: "22%" } },
+  { id: 12, name: "SMEs", icon: Store, position: { bottom: "8%", right: "22%" } },
+  { id: 13, name: "Corporate Businesses", icon: Building, position: { top: "6%", left: "42%" } },
 ];
 
-export interface IndustryHeroProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface IndustryHeroProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
   subtitle?: string;
   industries?: IconProps[];
 }
 
-export const IndustryHero = React.forwardRef<
-  HTMLDivElement,
-  IndustryHeroProps
->(
+export const IndustryCloud = React.forwardRef<HTMLDivElement, IndustryHeroProps>(
   (
     {
       style,
@@ -276,9 +180,7 @@ export const IndustryHero = React.forwardRef<
     const mouseX = React.useRef(0);
     const mouseY = React.useRef(0);
 
-    const handleMouseMove = (
-      event: React.MouseEvent<HTMLDivElement>
-    ) => {
+    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
       mouseX.current = event.clientX;
       mouseY.current = event.clientY;
     };
@@ -303,7 +205,6 @@ export const IndustryHero = React.forwardRef<
         }}
         {...props}
       >
-        {/* Ambient Radial Background Glow */}
         <div
           style={{
             position: "absolute",
@@ -319,7 +220,6 @@ export const IndustryHero = React.forwardRef<
           }}
         />
 
-        {/* Floating Sector Badges */}
         <div
           style={{
             position: "absolute",
@@ -345,7 +245,6 @@ export const IndustryHero = React.forwardRef<
           ))}
         </div>
 
-        {/* Foreground Content */}
         <div
           style={{
             position: "relative",
@@ -359,21 +258,12 @@ export const IndustryHero = React.forwardRef<
             gap: "20px",
           }}
         >
-          {/* Title */}
-          <h1 className="px-about-title mb-20">
-            {title}
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-figtree text-black">
-            {subtitle}
-          </p>
+          <h1 className="px-about-title mb-20">{title}</h1>
+          <p className="text-figtree text-black">{subtitle}</p>
         </div>
       </section>
     );
   }
 );
 
-IndustryHero.displayName = "IndustryHero";
-
-export const IndustryCloud = IndustryHero;
+IndustryCloud.displayName = "IndustryCloud";

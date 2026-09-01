@@ -16,8 +16,8 @@ export default function Page() {
       <Breadcrumbdata />
       <Header />
       <Second
-        primaryImage="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-        secondaryImage="https://images.unsplash.com/photo-1550585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
+        primaryImage="assets/img/company-profile/third-img-1.jpg"
+        secondaryImage="assets/img/company-profile/third-img-2.jpg"
         animation="subtle"
       />
       <BrochureNeeds />

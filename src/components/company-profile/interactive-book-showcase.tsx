@@ -18,31 +18,31 @@ const bookSteps: StepData[] = [
     title: "Understand Your Requirement",
     description:
       "We begin by understanding your business, target audience, objectives, content, and design expectations.",
-    spreadImage: "assets/img/logodesign/Logo-1.jpg",
+    spreadImage: "assets/img/company-profile/book-design-1.jpg",
   },
   {
     title: "Content & Brand Review",
     description:
       "We review your content, logo, brand guidelines, images, colors, and other materials required for the design.",
-    spreadImage: "assets/img/logodesign/Logo-2.jpg",
+    spreadImage: "assets/img/company-profile/book-design-2.jpg",
   },
   {
     title: "Design Concept",
     description:
       "Our designers develop a creative concept and layout that reflects your brand and communicates your message effectively.",
-    spreadImage: "assets/img/logodesign/Logo-3.jpg",
+    spreadImage: "assets/img/company-profile/book-design-3.jpg",
   },
   {
     title: "Review & Revisions",
     description:
       "We share the design for your feedback and make the required revisions to refine the final output.",
-    spreadImage: "assets/img/logodesign/Logo-4.jpg",
+    spreadImage: "assets/img/company-profile/book-design-4.jpg",
   },
   {
     title: "Final Artwork",
     description:
       "After approval, we prepare the final files in suitable formats for digital use or professional printing.",
-    spreadImage: "assets/img/logodesign/Logo-5.jpg",
+    spreadImage: "assets/img/company-profile/book-design-5.jpg",
   },
 ];
 

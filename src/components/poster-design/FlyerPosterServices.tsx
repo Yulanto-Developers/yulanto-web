@@ -14,7 +14,7 @@ const servicesList: ServiceItem[] = [
   { title: "Product Flyer Design", iconClass: "fa-solid fa-box-open" },
   { title: "Event Flyer Design", iconClass: "fa-solid fa-calendar-check" },
   { title: "Festival & Offer Flyers", iconClass: "fa-solid fa-tags" },
-  { title: "Real Estate Flyer Design", iconClass: "fa-solid fa-house-circle-check" },
+  { title: "Real Estate Flyer Design", iconClass: "fa-solid fa-city"},
   { title: "Digital Flyer Design", iconClass: "fa-solid fa-laptop" },
   { title: "Social Media Flyer Design", iconClass: "fa-solid fa-share-nodes" },
   { title: "Advertising Poster Design", iconClass: "fa-solid fa-bullhorn" },
@@ -30,21 +30,21 @@ export default function FlyerPosterServices() {
     <div className="flyer-poster-wrapper">
 
       {/* SECTION 1: Left Content | Right Image */}
-      <section className="px-about-6-area pt-50 pb-50">
+      <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
         <div className="container container-1550">
           <div className="row g-5 align-items-center">
 
             {/* Left Side Content */}
-            <div className="col-12 col-lg-7">
+            <div className="col-12 col-lg-7" data-aos="fade-up">
               <div className="px-project-title-box">
-                <span className="tp-section-subtitle blink-ball mb-2 d-inline-block">
-                  Our Flyer & Poster Design Services
+                <span className="tp-section-subtitle text-black blink-ball">
+                  Our Flyer &amp; Poster Design Services
                 </span>
                 <h4 className="px-about-title mb-20">
                   <span className="text-blue-about">Creative Flyer Design </span>
                   for Powerful Promotions
                 </h4>
-                <p className="text-figtree mt-2 font-paragraph-cls">
+                <p className="text-figtree mt-2 ">
                   A well-designed flyer can communicate your offer quickly and effectively. Our flyer designers in Chennai create customized designs for digital promotions, print campaigns, product launches, business offers, events, and marketing campaigns.
                   <br /><br />
                   From simple promotional flyers to premium corporate designs, we make sure your flyer reflects your brand identity and communicates your message clearly.
@@ -53,7 +53,7 @@ export default function FlyerPosterServices() {
             </div>
 
             {/* Right Side Image */}
-            <div className="col-12 col-lg-5">
+            <div className="col-12 col-lg-5" data-aos="fade-up" data-aos-delay="100">
               <div className="position-relative">
                 <div
                   className="position-absolute w-100 h-100 rounded-4"
@@ -85,7 +85,8 @@ export default function FlyerPosterServices() {
                       border: "1px solid #53ae7d",
                     }}
                   >
-                    <h6 className="mb-0 fw-bold" style={{ color: "#053456" }}>
+                    <h6 className="mb-0 fw-bold" style={{ color: "#053456",fontFamily: "Figtree, Figtree Fallback",
+ }}>
                       <i className="fa-solid fa-circle-check me-2" style={{ color: "#53ae7d" }}></i>
                       Promotional Print Ready
                     </h6>
@@ -99,7 +100,7 @@ export default function FlyerPosterServices() {
       </section>
 
       {/* SECTION 2: Left Image | Right Content & Services Tiles */}
-      <section className="px-about-6-area pb-80 pb-lg-110" style={{
+      <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{
         backgroundColor: "#ffffff",
       
       }}>
@@ -124,7 +125,7 @@ export default function FlyerPosterServices() {
           <div className="row g-5 align-items-center">
 
             {/* Left Side Image */}
-            <div className="col-12 col-lg-5 order-2 order-lg-1">
+            <div className="col-12 col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
               <div className="position-relative">
                 <div
                   className="position-absolute w-100 h-100 rounded-4"
@@ -156,8 +157,8 @@ export default function FlyerPosterServices() {
                       border: "1px solid #53ae7d",
                     }}
                   >
-                    <h6 className="mb-0 fw-bold" style={{ color: "#053456" }}>
-                      <i className="fa-solid fa-circle-check me-2" style={{ color: "#53ae7d" }}></i>
+                    <h6 className="mb-0 fw-bold" style={{ color: "#053456", fontFamily: "Figtree, Figtree Fallback",  }}>
+                      <i className="fa-solid fa-circle-check me-2" style={{ color: "#53ae7d", }}></i>
                       High-Impact Posters
                     </h6>
                   </div>
@@ -173,7 +174,7 @@ export default function FlyerPosterServices() {
               {/* Service Tiles Grid */}
               <div className="row g-3">
                 {servicesList.map((service, index) => (
-                  <div key={index} className="col-12 col-md-6">
+                  <div key={index} className="col-12 col-md-6" data-aos="fade-up" data-aos-delay={index * 50}>
                     <div
                       className="p-3 rounded-3 d-flex align-items-center gap-3 h-100"
                       style={{
@@ -200,12 +201,15 @@ export default function FlyerPosterServices() {
                           height: "36px",
                           backgroundColor: "rgba(83, 174, 125, 0.15)",
                           color: "#53ae7d",
-                          fontSize: "0.95rem",
+                          fontSize: "15px!important",
+                          fontFamily: "Figtree, Figtree Fallback",
+
                         }}
                       >
                         <i className={service.iconClass}></i>
                       </div>
-                      <span className="fw-semibold" style={{ color: "#053456", fontSize: "0.95rem" }}>
+                      <span className="fw-semibold" style={{ color: "#053456", fontSize: "15px!important",fontFamily: "Figtree, Figtree Fallback",
+ }}>
                         {service.title}
                       </span>
                     </div>

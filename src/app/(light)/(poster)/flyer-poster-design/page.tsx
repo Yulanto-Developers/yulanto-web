@@ -1,7 +1,9 @@
 import Breadcrumbdata from "@/components/breadcrum/sections/breadcrumbdata";
 import Head from "@/components/poster-design/header";
 import PackagingServices from "@/components/poster-design/FlyerPosterServices";
-
+import Whychoose from "@/components/poster-design/WhyChooseFlyerPoster";
+import Poster from "@/components/poster-design/postdesign";
+import CTA from "@/components/poster-design/Cta";
 const heroImages = [
     "/assets/img/careers/banner/img-careers-1.jpg",
     "/assets/img/careers/banner/img-careers-2.jpg",
@@ -28,6 +30,10 @@ As a creative graphic design company in Chennai, we design flyers and posters th
                 images={heroImages}
             />
             <PackagingServices />
+           
+            <Whychoose />
+            <Poster />
+            <CTA />
         </main>
     );
 }

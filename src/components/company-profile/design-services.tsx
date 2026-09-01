@@ -116,7 +116,7 @@ export default function Hero() {
                                 <div className="col-lg-4 mb-30" data-aos="fade-left">
                                     <div style={imageContainerStyle}>
                                         <img
-                                            src="/assets/img/services/graphic-design.jpg" // Replace with your image path
+                                            src="/assets/img/company-profile/Creative-Visual.jpg" // Replace with your image path
                                             alt="Graphic Design Services"
                                             style={imageStyle}
                                         />

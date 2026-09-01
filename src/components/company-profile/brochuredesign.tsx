@@ -36,7 +36,7 @@ export const GraphicDesignSection = React.forwardRef<HTMLElement, GraphicDesignS
       sec1Title2 = "for Every Stage of Business",
       sec1Description = "Whether you are launching a new company, introducing a product, expanding your services, or strengthening your corporate identity, professionally designed marketing materials can help you communicate your business more effectively.",
       sec1SubDescription = "Our brochure designers in Chennai create designs suitable for both digital distribution and professional printing. We focus on presenting your information in a structured and visually engaging format that supports your sales and marketing efforts.",
-      image1 = "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200&auto=format&fit=crop",
+      image1 = "assets/img/company-profile/Professional-Marketing.jpg",
 
       // Default Section 2 Content
       sec2Title = "Choose a Creative Graphic ",
@@ -45,7 +45,7 @@ export const GraphicDesignSection = React.forwardRef<HTMLElement, GraphicDesignS
       sec2Description = "Your brochure, flyer, presentation, or marketing creative is often one of the first visual interactions customers have with your business. A professional design can help create credibility, communicate your value, and make your brand more memorable.",
       sec2SubDescription = "If you are looking for the best graphic design company in Chennai for professional and customized marketing designs, Yulanto Web Creations can help transform your ideas into effective visual communication.",
       ctaNote = "Need a professional brochure or graphic design for your business? Get in touch with our creative team today.",
-      image2 = "https://images.unsplash.com/photo-1542744094-3a31b272c490?q=80&w=1200&auto=format&fit=crop",
+      image2 = "assets/img/company-profile/Choose-a-Creative-Graphic.jpg",
       ...props
     },
     ref

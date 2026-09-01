@@ -25,9 +25,9 @@ export default function HeroSection04() {
     }, []);
 
     const portfolioImages = [
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+        "assets/img/company-profile/second-img-1.jpg",
+        "assets/img/company-profile/second-img-2.jpg",
+        "assets/img/company-profile/second-img-3.jpg"
     ];
 
     return (
@@ -96,7 +96,7 @@ export default function HeroSection04() {
                                     }}
                                 >
                                     <img
-                                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop"
+                                        src="assets/img/company-profile/first-img.jpg"
                                         alt="Designer portrait"
                                         style={{
                                             width: "100%",

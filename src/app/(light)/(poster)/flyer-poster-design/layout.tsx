@@ -6,8 +6,10 @@ import FloatingActionsWrapper from "@/components/home/home/components/FloatingIc
 import { QuoteProvider } from "@/components/home/home/myComponents/Content/QuoteContext";
 import QuoteModal from "@/components/home/home/myComponents/Pop";
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
+
 import "@/assets/css/style.css";
 import "@/assets/css/custome.css";
+// DesignStudioLayout component
 export default function DesignStudioLayout({
   children,
 }: {
@@ -18,16 +20,16 @@ export default function DesignStudioLayout({
       <ClientProviders>
         <PersonalPortfolioHeader />
 
-        <div id="smooth-wrapper" style={{ backgroundColor: "#f5f5f5" }}>
-          <div id="smooth-content">
+        <div 
+          id="smooth-wrapper" 
+          style={{ backgroundColor: "#f5f5f5", overflowX: "hidden", width: "100%" }}
+        >
+          <div id="smooth-content" style={{ overflowX: "hidden", width: "100%" }}>
             {children}
-
-
             <MainFooter />
           </div>
         </div>
 
-        {/* Renders perfectly outside the scroll wrapper track */}
         <FloatingActionsWrapper />
         <QuoteModal />
         <FloatingQuoteButton />
