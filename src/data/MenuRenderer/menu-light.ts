@@ -62,7 +62,7 @@ export const lightMenu: MenuItem[] = [
           { label: "Logo Design & Branding", href: "/logo-design&branding" },
           { label: "Brochure & Company Profile Design", href: "/company-profile-design" },
           { label: "Flyer & Poster Design", href: "/flyer-poster-design" },
-          { label: "Packaging Design", href: "/" },
+          { label: "Packaging Design", href: "/Packaging-Design" },
           { label: "Social Media Creative Design", href: "/" },
 
         ]

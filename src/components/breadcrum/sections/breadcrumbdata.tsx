@@ -162,6 +162,13 @@ const data = [
     currentPage: "Flyer & Poster Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+   {
+    path: "/Packaging-Design",
+    title: " Packaging Design",
+    
+    currentPage: " Packaging Design",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
                       
 ];
 
