@@ -723,12 +723,12 @@
 
     &-title {
         font-weight: 600;
-        font-size: 100px;
-        line-height: .8;
+        font-size: 38px;
+        line-height: 1;
         letter-spacing: -0.01em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         color: var(--tp-common-px-black);
-        font-family: var(--tp-ff-thunder);
+        font-family: var(--font-tenor);
 
         @media #{$lg} {
             font-size: 80px;

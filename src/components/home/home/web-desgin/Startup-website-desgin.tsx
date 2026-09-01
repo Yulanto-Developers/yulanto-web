@@ -102,7 +102,7 @@ function Startupwebsitedesign() {
 
             characterIndex += 1
             setTypedConsultationText(consultationText.slice(0, characterIndex))
-        }, 8)
+        }, 13)
 
         return () => window.clearInterval(typingTimer)
     }, [])

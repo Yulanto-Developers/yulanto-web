@@ -19,10 +19,10 @@
 .image-gallery-box {
     position: relative;
 
-    width: min(600px, 80vw);
+    width: min(800px, 80vw);
     height: min(600px, 80vw);
 
-    max-width: 250px;
+    max-width: 650px;
     max-height: 250px;
 
     overflow: hidden;
@@ -130,7 +130,7 @@
 .gallery-arrow {
     position: absolute;
 
-    top: 35%;
+    top: 90%;
 
     z-index: 101;
 
@@ -169,7 +169,8 @@
 .gallery-arrow:hover {
     transform: translateY(-50%) scale(1.1);
 
-    background: #fff;
+    background: #053456;
+    color: aliceblue;
 
     border-color: rgba(255, 255, 255, 0.4);
 
