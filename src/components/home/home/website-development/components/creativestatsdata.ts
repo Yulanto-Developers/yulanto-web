@@ -68,6 +68,34 @@ const FUNFACTS = [
 		suffix: "%",
 		label: "Client Satisfaction",
 		delay: ".8",
+	},,
+	{
+		id: 9,
+		value: 45,
+		suffix: "+",
+		label: "Custom Websites",
+		delay: ".3",
+	},
+	{
+		id: 10,
+		value: 40,
+		suffix: "+",
+		label: "Active Clients",
+		delay: ".5",
+	},
+	{
+		id: 11,
+		value: 40,
+		suffix: "+",
+		label: "Chennai Clients",
+		delay: ".7",
+	},
+	{
+		id: 12,
+		value: 100,
+		suffix: "%",
+		label: "Client Satisfaction",
+		delay: ".8",
 	},
 ];
 

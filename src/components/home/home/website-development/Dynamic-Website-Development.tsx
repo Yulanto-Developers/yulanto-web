@@ -24,7 +24,14 @@ function DynamicWebsiteDevelopment() {
             <Advantages items={advantagesData.slice(0, 4)} />
             {/* <DynamicWebsiteSolutions /> */}
             <ProcessSection />
-            <WhyUsA1 />
+            <WhyUsA1
+                num1={0}
+                num2={12}
+                titlefirst="Why Choose Us for"
+                titlesecond="Web Development in Chennai?"
+                description="Choosing the right development partner is important for building a website that delivers long-term value. At Yulanto Web Creations, we focus on creating websites that combine attractive design, functionality, usability, and business objectives."
+                footerText="Whether you are a startup, small business, established company, or growing enterprise, our web developers in Chennai can help transform your ideas into a functional and professional website."
+            />
             <FAQA1 num1={0} num2={7}
                 highlightedText="Frequently Asked Questions"
                 titleSuffix="" />

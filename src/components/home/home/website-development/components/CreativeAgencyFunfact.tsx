@@ -9,7 +9,7 @@ interface staticDT extends DyanmicTitle {
 	className?: string;
 }
 
-const CreativeAgencyFunfact = ({ num1, num2, titleFirst, titleHighlight, titleSecond,className }: staticDT) => {
+const CreativeAgencyFunfact = ({ num1, num2, titleFirst, titleHighlight, titleSecond, className }: staticDT) => {
 
 	const data = creativestats.slice(num1, num2);
 
@@ -32,16 +32,16 @@ const CreativeAgencyFunfact = ({ num1, num2, titleFirst, titleHighlight, titleSe
 				<div className="container container-1330 mt-3">
 					<div className="row">
 						{data.map((item) => (
-							<div className="col-lg-3 col-md-4" key={item.id}>
+							<div className="col-lg-3 col-md-4" key={item?.id}>
 								<div
 									className="ar-funfact-item text-center mb-45 tp_fade_anim"
-									data-delay={item.delay}
+									data-delay={item?.delay}
 								>
 									<h4>
-										<AnimatedCounterTwo min={0} max={item.value} />
-										{item.suffix}
+										<AnimatedCounterTwo min={0} max={item?.value || 0} />
+										{item?.suffix}
 									</h4>
-									<span>{item.label}</span>
+									<span>{item?.label}</span>
 								</div>
 							</div>
 						))}
