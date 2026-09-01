@@ -1,5 +1,5 @@
 import BreadcurmbData from "@/components/breadcrum/sections/breadcrumbdata";
-import {DynamicWebsiteDevelopment,CustomWebsiteDevelopment } from "@/components/home/home/website-development/index";
+import {DynamicWebsiteDevelopment,CustomWebsiteDevelopment,PHPWebsiteDevelopment } from "@/components/home/home/website-development/index";
 
 export default async function Page({
     params,
@@ -21,6 +21,11 @@ export default async function Page({
             {pages === "custom-website-development" && (
                 <>
                 <CustomWebsiteDevelopment />
+                </>
+            )}
+            {pages === "php-website-development" && (
+                <>
+                <PHPWebsiteDevelopment />
                 </>
             )}
         </>

@@ -5,10 +5,10 @@ import React from 'react';
 import '@/assets/css/textAnimations.css';
 
 interface SectionTitleProps {
-    subtitle: string;
+    subtitle?: string;
     titleFirst: string;
     titleSecond: string;
-    description: string;
+    description?: string;
     className?: string;
     animated?: boolean;
     animationType?: 'fade-up' | 'fade-in' | 'slide-left' | 'slide-right' | 'scale-in' | 'text-reveal' | 'text-reveal-lines';
@@ -72,14 +72,16 @@ const SectionTitle = ({
                                     <span> {titleSecond} </span>
                                 </h4>
 
-                                <p 
-                                    className="mt-3"
-                                    data-aos={animated ? animationType : undefined}
-                                    data-aos-delay={delayMs + 200}
-                                    dangerouslySetInnerHTML={{
-                                        __html: description,
-                                    }}
-                                />
+                                {description && (
+                                    <p 
+                                        className="mt-3"
+                                        data-aos={animated ? animationType : undefined}
+                                        data-aos-delay={delayMs + 200}
+                                        dangerouslySetInnerHTML={{
+                                            __html: description,
+                                        }}
+                                    />
+                                )}
                             </div>
                         </div>
                     </div>
