@@ -83,6 +83,7 @@ import { SiCodeigniter, SiWoocommerce, SiMysql } from "react-icons/si";
 import AnimatedFeatureGrid from "../myComponents/common/AnimatedFeatureGrid";
 import CorporateApproachGrid from "../myComponents/common/CorporateApproachGrid";
 import { useAOS } from "@/components/hooks/useAOS";
+import CreativeAgencyCapsule from "../myComponents/common/CreativeAgencyCapsule";
 
 interface WhyChooseUsProps {
   featuresList?: string[];
@@ -547,7 +548,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               </div>
             </div>
 
-            <div className="col-12">
+            {/* <div className="col-12">
               <div className="technologies-wrapper">
                 <h4 className="text-center mt-3 text-tenor fw-bold">
                   Our <span className="text-blue-about">Technologies</span>
@@ -581,7 +582,8 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
                   })}
                 </div>
               </div>
-            </div>
+            </div> */}
+            <CreativeAgencyCapsule />
           </div>
         </div>
       </div>
