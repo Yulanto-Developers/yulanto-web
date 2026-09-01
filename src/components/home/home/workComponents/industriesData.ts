@@ -120,7 +120,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'media',
-    label: 'Media & Ads',
+    label: 'Media & Ad',
     icon: Tv,
     image: true,
     industryImg: '/assets/img/industry/Media.jpg',
@@ -1560,8 +1560,8 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     bannerImg: '/assets/img/all-works/head-img/events-and-sport.jpg',
     projects: [
       {
-        id: 'johoreventrental.com.my',
-        name: 'johoreventrental.com.my',
+        id: 'Johor Event Rental',
+        name: 'Johor Event Rental',
         logo: 'assets/img/all-works/2026/jer.png',
         location: 'Toronto',
         url: 'https://johoreventrental.com.my',
