@@ -288,8 +288,7 @@ const DynamicWebsiteSolutions = ({
         <div className="container">
 
           <SectionTitle
-            subtitle=""
-            titleFirst="Why Businesses "
+            titleFirst="Why Businesses"
             titleSecond="Choose Us"
             description=""
             className="mb-0 pb-0 dyncardtitle"

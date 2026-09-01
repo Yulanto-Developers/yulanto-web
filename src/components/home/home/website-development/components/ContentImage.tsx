@@ -1,6 +1,30 @@
 import React from 'react';
 
-const ContentImage = () => {
+export interface ContentImageProps {
+  subtitle?: string;
+  titlefirst?: string;
+  titlesecond?: string;
+  paragraphs?: string[];
+  quoteText?: string;
+  quoteAccentColor?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  imagePosition?: 'left' | 'right';
+}
+
+const ContentImage: React.FC<ContentImageProps> = ({
+  subtitle,
+  titlefirst,
+  titlesecond,
+  paragraphs,
+  quoteText,
+  quoteAccentColor = '#53ae7d',
+  imageSrc,
+  imageAlt = '',
+  imagePosition = 'right',
+}) => {
+  const isImageLeft = imagePosition === 'left';
+
   return (
     <>
       {/* Internal CSS for Blockquote */}
@@ -10,7 +34,7 @@ const ContentImage = () => {
           margin-top: 1.5rem;
           padding: 1.25rem 1.5rem;
           padding-left: 1.75rem;
-          border-left: 4px solid #53ae7d;
+          border-left: 4px solid ${quoteAccentColor};
           background-color: rgba(83, 174, 125, 0.08);
           border-top-right-radius: 12px;
           border-bottom-right-radius: 12px;
@@ -39,7 +63,7 @@ const ContentImage = () => {
         }
 
         .custom-quote-mark {
-          color: #53ae7d;
+          color: ${quoteAccentColor};
           font-family: Georgia, serif;
           font-size: 2.25rem;
           line-height: 1;
@@ -53,81 +77,95 @@ const ContentImage = () => {
 
       <div className="container py-4">
         <div className="row align-items-center g-4">
-          {/* Content Column */}
-          <div className="col-12 col-lg-7">
+          {/* Optional Image Column (Left Side) */}
+          {imageSrc && isImageLeft && (
+            <div className="col-12 col-lg-5">
+              <div>
+                <img
+                  src={imageSrc}
+                  alt={imageAlt}
+                  className="w-full h-auto rounded-lg shadow-md object-cover"
+                  data-aos="zoom-in"
+                  data-aos-delay="400"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Main Content Column */}
+          <div className={imageSrc ? 'col-12 col-lg-7' : 'col-12'}>
             <div className="space-y-4">
-              <span
-                className="tp-section-subtitle text-black blink-ball"
-                data-aos="fade-down"
-                data-aos-delay="300"
-              >
-                Build a Website That Works for Your Business
-              </span>
+              {subtitle && (
+                <span
+                  className="tp-section-subtitle text-black blink-ball"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                >
+                  {subtitle}
+                </span>
+              )}
 
               <div className="px-project-title-box">
-                <h4
-                  className="px-about-title mb-20"
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                >
-                  Choose a <span className="text-blue-about">Professional Website Development Company in Chennai</span>
-                </h4>
+                {(titlefirst || titlesecond) && (
+                  <h4
+                    className="px-about-title mb-20"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
+                    {titlefirst} {titlefirst && titlesecond ? ' ' : ''}
+                    {titlesecond && (
+                      <span className="text-blue-about">{titlesecond}</span>
+                    )}
+                  </h4>
+                )}
 
-                <p
-                  className="text-figtree text-black mt-2"
-                  data-aos="fade-up"
-                  data-aos-delay="500"
-                >
-                  Your website is more than an online brochure—it is an important part of your brand, marketing, customer communication, and business growth.
-                </p>
-
-                <p
-                  className="text-figtree text-black mt-2"
-                  data-aos="fade-up"
-                  data-aos-delay="600"
-                >
-                  Partner with a professional website development company in Chennai to build a website that combines attractive design, reliable technology, strong performance, security, responsive usability, and SEO-friendly development.
-                </p>
-
-                <p
-                  className="text-figtree text-black mt-2"
-                  data-aos="fade-up"
-                  data-aos-delay="700"
-                >
-                  Whether you are launching a new business website, upgrading an existing website, or developing a completely customized web solution, our experienced website developers in Chennai can help turn your ideas into a professional digital experience.
-                </p>
-
-                {/* Custom Blockquote using the Internal CSS Classes */}
-                <blockquote
-                  className="custom-blockquote"
-                  data-aos="fade-up"
-                  data-aos-delay="800"
-                >
-                  <div className="custom-blockquote-content">
-                    <span className="custom-quote-mark">“</span>
-                    <p className="custom-blockquote-text">
-                      Looking for website development in Chennai? Let us create a secure, customized, and business-focused website designed for your growth.
+                {/* Dynamic Paragraphs */}
+                {paragraphs &&
+                  paragraphs.map((pText, index) => (
+                    <p
+                      key={index}
+                      className="text-figtree text-black mt-2"
+                      data-aos="fade-up"
+                      data-aos-delay={500 + index * 100}
+                    >
+                      {pText}
                     </p>
-                    <span className="custom-quote-mark end">”</span>
-                  </div>
-                </blockquote>
+                  ))}
 
+                {/* Optional Custom Blockquote */}
+                {quoteText && (
+                  <blockquote
+                    className="custom-blockquote"
+                    data-aos="fade-up"
+                    data-aos-delay={
+                      500 + (paragraphs ? paragraphs.length * 100 : 0)
+                    }
+                  >
+                    <div className="custom-blockquote-content">
+                      <span className="custom-quote-mark">“</span>
+                      <p className="custom-blockquote-text">{quoteText}</p>
+                      <span className="custom-quote-mark end">”</span>
+                    </div>
+                  </blockquote>
+                )}
               </div>
             </div>
           </div>
 
-          {/* Image Column */}
-          <div className="col-12 col-lg-5">
-            <div>
-              <img
-                src="https://via.placeholder.com/600x400"
-                alt="Website Development Company in Chennai"
-                className="w-full h-auto rounded-lg shadow-md object-cover"
-                data-aos="zoom-in"
-                data-aos-delay="400"
-              />
+          {/* Optional Image Column (Right Side - Default) */}
+          {imageSrc && !isImageLeft && (
+            <div className="col-12 col-lg-5">
+              <div>
+                <img
+                  src={imageSrc}
+                  alt={imageAlt}
+                  className="w-full h-auto rounded-lg shadow-md object-cover"
+                  data-aos="zoom-in"
+                  data-aos-delay="400"
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </>
