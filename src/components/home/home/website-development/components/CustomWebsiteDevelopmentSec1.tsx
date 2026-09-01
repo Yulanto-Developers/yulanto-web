@@ -323,7 +323,7 @@ const CustomWebsiteDevelopmentSec1 = () => {
                             </div>
                         </div>
                     </div>
-                  
+
                 </div>
             </div>
 
@@ -333,6 +333,9 @@ const CustomWebsiteDevelopmentSec1 = () => {
                         <div
                             className={`overlap-gallery-item item-${index + 1}`}
                             key={index}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100}
+                            data-aos-duration="800"
                         >
                             <img src={image} alt={`Gallery ${index + 1}`} />
                         </div>
@@ -341,25 +344,25 @@ const CustomWebsiteDevelopmentSec1 = () => {
             </section>
 
             <div className="container">
-                  <div className="row align-items-center">
-                        <div className="col-lg-12 mb-4 mb-lg-0">
+                <div className="row align-items-center">
+                    <div className="col-lg-12 mb-4 mb-lg-0">
 
-                            <p
-                                className="mt-2"
-                                data-aos="text-reveal-lines"
-                                data-aos-delay="200"
-                            >
-                                As an experienced web site development company in Chennai, we combine creative design, modern technologies, intuitive navigation, and search-engine-friendly development to deliver websites that provide an engaging experience across desktops, tablets, and mobile devices.
-                            </p>
-                            <p
-                                className="mt-2"
-                                data-aos="text-reveal-lines"
-                                data-aos-delay="200"
-                            >
-                                Our team of professional website developers in Chennai develops websites from the ground up based on your business requirements rather than relying entirely on generic templates. From corporate websites and business portals to customized web applications and eCommerce platforms, we create digital solutions tailored to your goals.
-                            </p>
-                        </div>
+                        <p
+                            className="mt-2"
+                            data-aos="text-reveal-lines"
+                            data-aos-delay="200"
+                        >
+                            As an experienced web site development company in Chennai, we combine creative design, modern technologies, intuitive navigation, and search-engine-friendly development to deliver websites that provide an engaging experience across desktops, tablets, and mobile devices.
+                        </p>
+                        <p
+                            className="mt-2"
+                            data-aos="text-reveal-lines"
+                            data-aos-delay="200"
+                        >
+                            Our team of professional website developers in Chennai develops websites from the ground up based on your business requirements rather than relying entirely on generic templates. From corporate websites and business portals to customized web applications and eCommerce platforms, we create digital solutions tailored to your goals.
+                        </p>
                     </div>
+                </div>
             </div>
 
             <CreativeAgencyFunfact num1={4} num2={8} titleFirst="Custom " titleHighlight="Website" titleSecond="" />
