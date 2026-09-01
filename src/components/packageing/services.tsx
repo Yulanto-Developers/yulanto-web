@@ -121,8 +121,8 @@ export function PackagingServicesSection() {
                 position: "sticky",
                 top: "100px",
                 height: "450px",
-                border: "2px solid #53ae7d",
-                backgroundColor: "#053456",
+              
+              
               }}
             >
               {/* Dynamic Image Display */}
@@ -179,9 +179,7 @@ export function PackagingServicesSection() {
                           : isHovered 
                           ? "rgba(83, 174, 125, 0.1)" 
                           : "#ffffff",
-                        border: isActive 
-                          ? "1px solid #053456" 
-                          : "1px solid #53ae7d",
+                       
                         cursor: "pointer",
                         transition: "all 0.2s ease-in-out",
                         transform: isHovered ? "translateY(-2px)" : "translateY(0px)"

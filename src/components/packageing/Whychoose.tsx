@@ -86,7 +86,7 @@ export function PackagingFeaturesSection() {
         className="rounded-3 overflow-hidden mb-3"
         style={{
           height: "190px",
-          backgroundColor: "#f4efe4",
+          backgroundColor: "#fff",
           position: "relative",
         }}
       >
@@ -105,8 +105,8 @@ export function PackagingFeaturesSection() {
       <div
         className="p-3 rounded-3 flex-grow-1 d-flex gap-3 align-items-start"
         style={{
-          backgroundColor: "#f7f3ea",
-          border: "1px solid #ebe4d6",
+          backgroundColor: "#f5f5f5",
+          border: "1px solid #f5f5f5",
         }}
       >
         {/* Circle Icon Badge */}

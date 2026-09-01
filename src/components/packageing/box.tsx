@@ -35,11 +35,7 @@ export function CreativePackagingSection({
                     {/* Left Column: Text Content */}
                     <div className="col-12 col-lg-6" data-aos="fade-right" data-aos-delay="100">
                         <div className="px-project-title-box pe-lg-4">
-                            <span
-                                className="tp-section-subtitle text-black blink-ball"
-                            >
-                                Packaging Design Company in Chennai
-                            </span>
+                            
                             <h4 className="px-about-title mb-20">
                                 <span className="text-blue-about"> Creative Packaging Design </span>
                                 for Stronger Brands
