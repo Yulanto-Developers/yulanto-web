@@ -122,17 +122,17 @@ const data = [
     currentPage: "Custom Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-<<<<<<< Updated upstream
-   {
+
+  {
     path: "/website-development/php-website-development",
     title: "PHP Website Development",
     currentPage: "PHP Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-   {
-=======
+
+
   {
->>>>>>> Stashed changes
+
     path: "/web-design/corporate-website-design",
     title: " Corporate Website Design",
     currentPage: " Corporate Website Design ",
@@ -178,18 +178,16 @@ const data = [
     currentPage: "Flyer & Poster Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-<<<<<<< Updated upstream
-   {
+
+  {
     path: "/Packaging-Design",
     title: " Packaging Design",
-    
+
     currentPage: " Packaging Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-                      
-=======
 
->>>>>>> Stashed changes
+
 ];
 
 export default function BreadcurmbData() {
