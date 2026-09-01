@@ -2,10 +2,12 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useQuoteModal } from "../myComponents/Content/QuoteContext";
 import BreadcrumbData from "@/components/breadcrum/sections/breadcrumbdata";
 import IntroContent from "../myComponents/common/IntroContent";
 import img from "@/assets/img/sample/Harithams.jpg";
-import img1 from "@/assets/img/website/corporate/demo-0.1.jpg";
+import f1 from "@/assets/img/website/corporate/image-@.jpg";
+import img1 from "@/assets/img/website/corporate/demo-0.jpg";
 import img2 from "@/assets/img/website/corporate/demo-0.jpg";
 import "./common.css";
 import "./icon-design.css";
@@ -15,6 +17,19 @@ import a3 from "@/assets/img/website/corporate/Professional.jpg";
 import a4 from "@/assets/img/website/corporate/Content.jpg";
 import a5 from "@/assets/img/website/corporate/Security.jpg";
 import a6 from "@/assets/img/website/corporate/SEO.jpg";
+import bc from "@/assets/img/website/corporate/bc.jpg";
+import br from "@/assets/img/website/corporate/br.jpg";
+import bl from "@/assets/img/website/corporate/bl.jpg";
+import img1_1 from "@/assets/img/website/corporate/1.1.jpg";
+import img1_2 from "@/assets/img/website/corporate/1.2.jpg";
+import img2_1 from "@/assets/img/website/corporate/2.1.jpg";
+import img2_2 from "@/assets/img/website/corporate/2.2.jpg";
+import img3_1 from "@/assets/img/website/corporate/3.1.jpg";
+import img3_2 from "@/assets/img/website/corporate/3.2.jpg";
+import img4_1 from "@/assets/img/website/corporate/4.1.jpg";
+import img4_2 from "@/assets/img/website/corporate/4.2.jpg";
+// import img2_2 from "@/assets/img/website/corporate/2.2.jpg";
+
 
 import {
   FaShieldHalved,
@@ -74,6 +89,7 @@ interface WhyChooseUsProps {
 }
 
 function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
+  const { openModal } = useQuoteModal();
   const stats = [
     { value: "50+", label: "Corporate Websites" },
     { value: "200+", label: "Active Clients" },
@@ -256,7 +272,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       title: "Discovery & Research",
       description:
         "The first stage is to understand your business requirements, target audience, competitors, industry, website objectives, and expected functionality. This information helps us establish a clear direction for the project.",
-      image: img2,
+      image: img1_1,
       size: "large" as const,
     },
     {
@@ -266,7 +282,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       title: "Planning",
       description:
         "We define the website structure, sitemap, navigation, content requirements, functionality, technology, and development approach. A clear plan helps ensure that the website remains organized and aligned with your business goals.",
-      image: img1,
+      image: img1_2,
       size: "small" as const,
     },
     {
@@ -276,7 +292,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       title: "Design",
       description:
         "Our website designers in Chennai develop the visual concept of the website, including layouts, typography, colors, images, buttons, banners, and other UI elements. The design is created to reflect your brand identity and provide a positive user experience.",
-      image: img,
+      image: img2_1,
       size: "small" as const,
     },
     {
@@ -286,7 +302,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       title: "Development",
       description:
         "Once the design is approved, our development team converts the design into a functional website using suitable web technologies. This may include front-end development, back-end development, CMS integration, database integration, forms, and other required functionality.",
-      image: img1,
+      image: img2_2,
       size: "large" as const,
     },
     {
@@ -296,7 +312,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       title: "Testing & Quality Assurance",
       description:
         "Before launching the website, we conduct functional and compatibility testing. We check responsiveness, navigation, forms, links, content display, browser compatibility, mobile compatibility, and other important website elements.",
-      image: img2,
+      image: img3_1,
       size: "large" as const,
     },
     {
@@ -306,7 +322,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       title: "Content Integration",
       description:
         "Website content such as text, images, videos, product information, service details, and other multimedia elements are organized and integrated into the website according to the approved structure.",
-      image: img,
+      image: img3_2,
       size: "small" as const,
     },
     {
@@ -316,7 +332,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       title: "Deployment",
       description:
         "After testing and client approval, the completed website is deployed to the live hosting server and made accessible to visitors.",
-      image: img1,
+      image: img4_1,
       size: "small" as const,
     },
     {
@@ -326,7 +342,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       title: "Maintenance & Updates",
       description:
         "A website requires regular maintenance to remain secure, functional, and up to date. Depending on your requirements, we provide website maintenance, content updates, technical support, software updates, security assistance, and performance monitoring.",
-      image: img2,
+      image: img4_2,
       size: "large" as const,
     },
   ];
@@ -378,17 +394,17 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
 
   const galleryImages = [
     {
-      src: img1.src,
+      src: bc.src,
       alt: "Corporate website design",
       className: "gallery-main",
     },
     {
-      src: img2.src,
+      src: bl.src,
       alt: "Corporate website development",
       className: "gallery-small gallery-small-one",
     },
     {
-      src: img.src,
+      src: br.src,
       alt: "Corporate website",
       className: "gallery-small gallery-small-two",
     },
@@ -490,7 +506,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
             <div className="col-lg-4 col-md-5 mb-4 mb-md-0">
               <div className="professional-image-wrapper">
                 <img
-                  src={img1.src}
+                  src={f1.src}
                   alt="Corporate website design"
                   className="professional-image"
                 />
@@ -1017,16 +1033,16 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
                 </p>
               </div>
 
-              <div className="col-lg-4 text-lg-end text-start">
+              <div className="col-lg-4  text-start">
                 <div className="cta-box">
                   <h4>Let’s build something great together.</h4>
                   <p>
                     Let’s create a website that represents your brand, engages
                     your customers, and supports your business growth.
                   </p>
-                  <a href="/contact" className="cta-button">
-                    Get Free Quote Today
-                  </a>
+                  <button onClick={openModal} className="cta-button">
+                    Talk to Our Experts
+                  </button>
                 </div>
               </div>
             </div>

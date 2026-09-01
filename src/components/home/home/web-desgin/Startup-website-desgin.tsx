@@ -80,6 +80,13 @@ import sc4 from '@/assets/img/website/startup/Step-by-Step-4.jpg'
 import sc5 from '@/assets/img/website/startup/Step-by-Step-5.jpg'
 import sc7 from '@/assets/img/website/startup/Step-by-Step-7.jpg'
 import sc6 from '@/assets/img/website/startup/Step-by-Step-6.jpg'
+import t1 from '@/assets/img/website/startup/top-1.jpg'
+import t2 from '@/assets/img/website/startup/top-2.jpg'
+import t3 from '@/assets/img/website/startup/top-3.jpg'
+import t4 from '@/assets/img/website/startup/top-4.jpg'
+import t5 from '@/assets/img/website/startup/top-5.jpg'
+import b2 from '@/assets/img/website/startup/bottom-2.jpg';
+import b1 from '@/assets/img/website/startup/bottom-1.jpg';
 
 function Startupwebsitedesign() {
     const consultationText = " Let's build your website and create your online success story."
@@ -509,7 +516,7 @@ function Startupwebsitedesign() {
     const startupGalleryImages = [
         {
             id: 1,
-            src: img.src,
+            src: t1.src,
             alt: "Startup website design",
             x: -320,
             y: 15,
@@ -519,7 +526,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 2,
-            src: img.src,
+            src: t2.src,
             alt: "Business website design",
             x: -160,
             y: 32,
@@ -529,7 +536,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 3,
-            src: img.src,
+            src: t3.src,
             alt: "Modern website design",
             x: 0,
             y: 8,
@@ -539,7 +546,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 4,
-            src: img.src,
+            src: t4.src,
             alt: "Corporate website design",
             x: 160,
             y: 22,
@@ -549,7 +556,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 5,
-            src: img.src,
+            src: t5.src,
             alt: "Startup web design",
             x: 320,
             y: 44,
@@ -688,7 +695,7 @@ function Startupwebsitedesign() {
                     </div>
                 </div>
             </div>
-            <div  data-aos-delay={400} data-aos-once={true} style={{ backgroundColor: 'rgb(245 245 245)', }}>
+            <div data-aos-delay={400} data-aos-once={true} style={{ backgroundColor: 'rgb(245 245 245)', }}>
                 <div className='container' >
                     <div className='row align-items-center pt-100 pb-100'>
 
@@ -720,36 +727,36 @@ function Startupwebsitedesign() {
                 </div>
             </div>
             <div style={{ backgroundColor: '#053456', margin: '100px 0px  !important' }}>
-   <div className='container py-5' data-aos='fade-right' data-aos-delay={400} data-aos-once={true} >
+                <div className='container py-5' data-aos='fade-right' data-aos-delay={400} data-aos-once={true} >
 
 
-                <div className='row'>
-                    <div className="col-xl-12">
-                        <div className="px-project-title-box">
-                            <span className="tp-section-subtitle text-white blink-ball">
-                                Start Your Design
-                            </span>
-                            <h4 className="px-about-title mb-20 text-white">
-                                <span className="">Enhance Your Startup </span>Growth with a Cutting-Edge Website
-                            </h4>
+                    <div className='row'>
+                        <div className="col-xl-12">
+                            <div className="px-project-title-box">
+                                <span className="tp-section-subtitle text-white blink-ball">
+                                    Start Your Design
+                                </span>
+                                <h4 className="px-about-title mb-20 text-white">
+                                    <span className="">Enhance Your Startup </span>Growth with a Cutting-Edge Website
+                                </h4>
 
 
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div className='col-12 d-flex flex-column align-items-start mb-4'>
-                        <p className='text-figtree text-white'>
-                            Choosing the right web design agency in Chennai can make a significant difference to your startup's online growth. Every business has a unique identity, target audience, and business objective. Therefore, we create customized website designs rather than relying on one-size-fits-all solutions.
-                        </p>
+                        <div className='col-12 d-flex flex-column align-items-start mb-4'>
+                            <p className='text-figtree text-white'>
+                                Choosing the right web design agency in Chennai can make a significant difference to your startup's online growth. Every business has a unique identity, target audience, and business objective. Therefore, we create customized website designs rather than relying on one-size-fits-all solutions.
+                            </p>
 
-                        <p className='text-figtree text-white mt-2 mb-3' style={{ fontSize: '1.05rem' }}>
-                            Our startup website design services can support businesses across a wide range of industries, including:
-                        </p>
-                    </div>
+                            <p className='text-figtree text-white mt-2 mb-3' style={{ fontSize: '1.05rem' }}>
+                                Our startup website design services can support businesses across a wide range of industries, including:
+                            </p>
+                        </div>
 
-                    {/* Industry Cards Grid */}
-                    {/* <div className='row g-3'>
+                        {/* Industry Cards Grid */}
+                        {/* <div className='row g-3'>
                         {industries.map((item, index) => (
                             <div key={index} className='col-12 col-sm-6 col-md-4 col-lg-3'>
                                 <div className='industry-card'>
@@ -761,17 +768,17 @@ function Startupwebsitedesign() {
                             </div>
                         ))}
                     </div> */}
-                    <IndustryGallery
-                        industries={industries}
-                    />
-                    <div className='mt-50'>
-                        <p className='text-white'>As a professional Chennai design company, we focus on creating websites that are visually appealing while also supporting usability, search engine visibility, and business growth.</p>
-                    </div>
+                        <IndustryGallery
+                            industries={industries}
+                        />
+                        <div className='mt-50'>
+                            <p className='text-white'>As a professional Chennai design company, we focus on creating websites that are visually appealing while also supporting usability, search engine visibility, and business growth.</p>
+                        </div>
 
+                    </div>
                 </div>
             </div>
-            </div>
-         
+
 
             <div className='container pt-50 mb-100' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
                 <div className='row align-items-center'>
@@ -1172,7 +1179,7 @@ function Startupwebsitedesign() {
                         </div>
                         <div className='col-md-4'>
 
-                            <img src={img1.src} alt='img' className='img-border-cls' />
+                            <img src={b1.src} alt='img' className='img-border-cls' />
                         </div>
                         <div className='col-md-8'>
                             <p className='text-figtree text-white '>
@@ -1212,7 +1219,7 @@ function Startupwebsitedesign() {
 
                         <div className='col-md-4'>
 
-                            <img src={img1.src} alt='img' className='img-border-cls' />
+                            <img src={b2.src} alt='img' className='img-border-cls' />
                         </div>
 
 
