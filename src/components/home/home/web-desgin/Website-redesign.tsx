@@ -1375,7 +1375,7 @@ function Websiteredesign() {
                 data-aos-delay={400}
                 data-aos-once={true}>
 
-                <div className="why-yulanto-section">
+                <div className="container">
 
                     <div className="why-yulanto-header">
 

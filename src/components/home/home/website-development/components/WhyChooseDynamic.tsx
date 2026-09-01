@@ -6,10 +6,10 @@ import '@/components/home/home/aboutcomponents/ourStory.css';
 import '@/assets/css/textAnimations.css';
 
 // Replace image imports with your actual asset paths
-import image1 from '@/assets/images/ourstory/image-1.jpg';
-import image2 from '@/assets/images/ourstory/image-2.jpg';
-import image3 from '@/assets/images/ourstory/vector-1.png';
-import image4 from '@/assets/images/ourstory/vector-2.png';
+import image1 from '@/assets/images/website-development/dynamic-website-development/image-1.jpg';
+import image2 from '@/assets/images/website-development/dynamic-website-development/image-2.jpg';
+import image3 from '@/assets/images/website-development/dynamic-website-development/image-3.jpg';
+import image4 from '@/assets/images/website-development/dynamic-website-development/image-4.jpg';
 
 const dynamicImages = [image1, image2, image3, image4];
 

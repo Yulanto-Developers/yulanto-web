@@ -28,8 +28,8 @@ export const lightMenu: MenuItem[] = [
         label: "Website Design",
         href: "#",
         subLinks: [
-          { label: "Startup Website Design", href: "/web-design/startup-webiste-design" },
-          { label: "Corporate Website Design", href: "/web-design/corporate-webiste-desgin" },
+          { label: "Startup Website Design", href: "/web-design/startup-website-design" },
+          { label: "Corporate Website Design", href: "/web-design/corporate-website-design" },
           { label: "Website Redesign", href: "/web-design/website-redesign" },
           { label: "Landing Page Design", href: "/" },
           { label: "UI/UX Design", href: "/" },

@@ -99,7 +99,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/web-design/startup-webiste-design",
+    path: "/web-design/startup-website-design",
     title: "Startup Webiste Desgin",
     currentPage: "Startup Webiste Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
@@ -123,7 +123,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
    {
-    path: "/web-design/corporate-webiste-desgin",
+    path: "/web-design/corporate-website-design",
     title: " Corporate Website Design",
     currentPage: " Corporate Website Design ",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
