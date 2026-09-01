@@ -1,0 +1,461 @@
+/* =========================================================
+   SCROLL PROCESS SECTION
+========================================================= */
+
+.scroll-process-section {
+    width: 100%;
+    position: relative;
+
+    background: #053456;
+
+    overflow: visible;
+
+    padding: 0 0 100px;
+}
+
+
+/* =========================================================
+   MAIN TWO COLUMN LAYOUT
+========================================================= */
+
+.scroll-process-container {
+    width: 100%;
+    max-width: 1320px;
+
+    margin: 0 auto;
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns: 55% 45%;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.scroll-process-cards {
+    width: 100%;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   EACH CARD WRAPPER
+========================================================= */
+
+.scroll-process-card-wrapper {
+    width: 100%;
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: sticky;
+
+    top: 0;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.scroll-process-card {
+    width: 100%;
+    max-width: 560px;
+
+    height: 420px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35);
+
+    /* border: 1px solid rgba(255, 255, 255, 0.15); */
+
+    display: flex;
+    align-items: flex-end;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* =========================================================
+   CARD ROTATION
+========================================================= */
+
+.scroll-process-card.rotate-3 {
+    transform: rotate(2deg);
+}
+
+.scroll-process-card.-rotate-2 {
+    transform: rotate(-2deg);
+}
+
+.scroll-process-card.rotate-2 {
+    transform: rotate(1.5deg);
+}
+
+.scroll-process-card.-rotate-3 {
+    transform: rotate(-1.5deg);
+}
+
+.scroll-process-card.rotate-0 {
+    transform: rotate(0deg);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.scroll-process-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.65) 40%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+}
+
+
+/* =========================================================
+   CONTENT OVER IMAGE
+========================================================= */
+
+.scroll-process-card-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 40px;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   STEP
+========================================================= */
+
+.scroll-process-step {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #53AE7D;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.scroll-process-card-content h3 {
+    margin: 0 0 15px;
+
+    color: #fff;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.scroll-process-card-content p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.scroll-process-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+
+    background: #fff;
+
+    color: #053456;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.scroll-process-link:hover {
+    background: #8ecaff;
+
+    color: #053456;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.scroll-process-heading {
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+}
+
+
+/* =========================================================
+   RIGHT HEADING CONTENT
+========================================================= */
+
+.scroll-process-heading-inner {
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.scroll-process-small-title {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #53AE7D;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RIGHT HEADING
+========================================================= */
+
+.scroll-process-heading h2 {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 54px;
+
+    line-height: 1.12;
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+}
+
+.scroll-process-heading h2 span {
+    color: #53AE7D;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .scroll-process-container {
+        grid-template-columns: 1fr;
+
+        padding: 0 20px;
+    }
+
+
+    /* RIGHT HEADING FIRST */
+
+    .scroll-process-heading {
+        position: relative;
+
+        top: auto;
+
+        height: auto;
+
+        padding: 70px 20px 40px;
+
+        text-align: center;
+    }
+
+
+    .scroll-process-heading-inner {
+        max-width: 700px;
+    }
+
+
+    .scroll-process-heading h2 {
+        font-size: 42px;
+    }
+
+
+    /* CARDS */
+
+    .scroll-process-card-wrapper {
+        height: auto;
+
+        min-height: 550px;
+
+        position: relative;
+
+        top: auto;
+
+        padding: 30px 10px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .scroll-process-card {
+        max-width: 650px;
+
+        height: 420px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .scroll-process-section {
+        padding-bottom: 60px;
+    }
+
+
+    .scroll-process-container {
+        padding: 0 15px;
+    }
+
+
+    .scroll-process-heading {
+        padding: 50px 10px 30px;
+    }
+
+
+    .scroll-process-heading h2 {
+        font-size: 32px;
+    }
+
+
+    .scroll-process-small-title {
+        font-size: 12px;
+    }
+
+
+    .scroll-process-card-wrapper {
+        min-height: 500px;
+
+        padding: 20px 5px;
+    }
+
+
+    .scroll-process-card {
+        height: 360px;
+
+        border-radius: 16px;
+
+        transform: none !important;
+    }
+
+
+    .scroll-process-card-content {
+        padding: 25px;
+    }
+
+
+    .scroll-process-card-content h3 {
+        font-size: 25px;
+    }
+
+
+    .scroll-process-card-content p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+}

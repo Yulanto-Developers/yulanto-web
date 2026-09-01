@@ -84,8 +84,7 @@
         transform 0.35s ease;
 }
 
-.website-benefit-card:hover
-.website-benefit-number {
+.website-benefit-card:hover .website-benefit-number {
     color: rgba(5, 52, 86, 0.14);
 
     transform: scale(1.08);
@@ -122,8 +121,7 @@
         border-radius 0.35s ease;
 }
 
-.website-benefit-card:hover
-.website-benefit-icon {
+.website-benefit-card:hover .website-benefit-icon {
     transform: rotate(-5deg) scale(1.08);
 
     border-radius: 16px;
@@ -185,8 +183,7 @@
         opacity 0.35s ease;
 }
 
-.website-benefit-card:hover
-.website-benefit-arrow {
+.website-benefit-card:hover .website-benefit-arrow {
     transform: translateX(7px);
 
     opacity: 1;
@@ -295,7 +292,7 @@
 
 }
 
-.req-btn{
+.req-btn {
     background-color: #fff;
     color: #053456;
     padding: 12px;
@@ -697,6 +694,634 @@
 
     .why-yulanto-text {
         font-size: 13px;
+    }
+
+}
+
+/* landingl pge css */
+
+.landing-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.landing-list-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.landing-list-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f0f5ff;
+    color: #053456;
+    font-size: 17px;
+}
+
+.landing-list-item span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+    line-height: 1.4;
+}
+
+/* Ensure gallery container stays within its 5-column grid bounds */
+.corporate-gallery {
+    position: relative;
+    width: 100%;
+}
+
+/* Ensure absolute positioned floating cards stay constrained */
+.corporate-gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.welcome-benefits-title {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 40px 0 25px;
+    background: #053456;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.welcome-benefit-card {
+    position: relative;
+    height: 180px;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.welcome-benefit-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #053456;
+    transition: width 0.4s ease;
+}
+
+.welcome-benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.welcome-benefit-card:hover::before {
+    width: 100%;
+}
+
+.welcome-benefit-number {
+    margin-bottom: 15px;
+    color: #053456;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.welcome-benefit-card h3 {
+    margin: 0;
+    color: #053456;
+    font-size: 21px;
+    line-height: 1.35;
+    font-weight: 600;
+}
+
+@media (max-width: 575px) {
+    .welcome-benefit-card {
+        height: 150px;
+        padding: 25px;
+    }
+
+    .welcome-benefit-card h3 {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================
+   LANDING UI FEATURES
+========================================= */
+
+.landing-ui-feature-card {
+    position: relative;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 28px;
+
+    background: #053456;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* =========================================
+   BACKGROUND IMAGE
+========================================= */
+
+.landing-ui-feature-bg {
+    position: absolute;
+
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: transform 0.7s ease;
+}
+
+.landing-ui-feature-card:hover .landing-ui-feature-bg {
+    transform: scale(1.1);
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.landing-ui-feature-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.70) 45%,
+            rgba(0, 0, 0, 0.30) 100%);
+
+    transition: opacity 0.4s ease;
+}
+
+.landing-ui-feature-card:hover .landing-ui-feature-overlay {
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.landing-ui-feature-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   TOP
+========================================= */
+
+.landing-ui-feature-top {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.landing-ui-feature-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(5, 52, 86, 0.92);
+
+    color: #fff;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.landing-ui-feature-card:hover .landing-ui-feature-icon {
+    background: #0b6ca8;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.landing-ui-feature-number {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.landing-ui-feature-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.landing-ui-feature-content h3 {
+    margin: 0 0 12px;
+
+    color: #fff;
+
+    font-size: 23px;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.landing-ui-feature-card:hover .landing-ui-feature-content h3 {
+    color: #8ecaff;
+}
+
+
+.landing-ui-feature-content p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .landing-ui-feature-card {
+        height: 330px;
+
+        padding: 25px;
+    }
+
+    .landing-ui-feature-content h3 {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+    .landing-ui-feature-card {
+        height: 320px;
+
+        padding: 24px;
+
+        border-radius: 15px;
+    }
+
+    .landing-ui-feature-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 20px;
+    }
+
+    .landing-ui-feature-content h3 {
+        font-size: 20px;
+    }
+
+    .landing-ui-feature-content p {
+        font-size: 14px;
+    }
+
+}
+
+
+
+.landing-page-benefit-card {
+    position: relative;
+    height: 190px;
+    padding: 28px;
+    background: #053456;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #164b6d;
+    transition: all 0.4s ease;
+}
+
+.landing-page-benefit-card::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    top: 0;
+    left: 0;
+    background: #53ae7d;
+    transition: width 0.4s ease;
+}
+
+.landing-page-benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(5, 52, 86, 0.25);
+}
+
+.landing-page-benefit-card:hover::before {
+    width: 100%;
+}
+
+.landing-page-benefit-number {
+    margin-bottom: 15px;
+    color: #53ae7d;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.landing-page-benefit-card h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.landing-page-benefit-arrow {
+    position: absolute;
+    right: 22px;
+    bottom: 15px;
+    color: #53ae7d;
+    font-size: 24px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.landing-page-benefit-card:hover .landing-page-benefit-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 575px) {
+    .landing-page-benefit-card {
+        height: 160px;
+        padding: 24px;
+    }
+
+    .landing-page-benefit-card h3 {
+        font-size: 17px;
+    }
+}
+
+.sales-pitch-card {
+    position: relative;
+    height: 250px;
+    padding: 35px 30px;
+    background: #053456;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.sales-pitch-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(5, 52, 86, 0.2);
+}
+
+.sales-pitch-number {
+    margin-bottom: 25px;
+    color: #53ae7d;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.sales-pitch-card h3 {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.sales-pitch-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* CTA */
+.landing-cta-section {
+    padding: 90px 0;
+    background: #053456;
+}
+
+.landing-cta-image {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.landing-cta-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.landing-cta-image:hover img {
+    transform: scale(1.05);
+}
+
+.landing-cta-content {
+    padding-left: 30px;
+}
+
+.landing-cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.landing-cta-content h3 {
+    margin: 30px 0;
+    color: #fff;
+    font-size: 26px;
+    line-height: 1.4;
+}
+
+
+/* Landing List */
+
+.landing-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 55px;
+    padding: 10px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    transition: all 0.3s ease;
+}
+
+.landing-list-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-3px);
+}
+
+.landing-list-icon {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff;
+    color: #053456;
+
+    font-size: 15px;
+}
+
+.landing-list-item span {
+ 
+    font-size: 14px;
+}
+
+
+/* Button */
+
+.landing-cta-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #53ae7d;
+    color: #fff;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.landing-cta-button:hover {
+    background: #fff;
+    color: #053456;
+    transform: translateY(-3px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 991px) {
+
+    .landing-cta-image {
+        height: 400px;
+    }
+
+    .landing-cta-content {
+        padding-left: 0;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    .landing-cta-section {
+        padding: 60px 0;
+    }
+
+    .landing-cta-image {
+        height: 320px;
+    }
+
+    .landing-cta-content h3 {
+        font-size: 22px;
     }
 
 }
