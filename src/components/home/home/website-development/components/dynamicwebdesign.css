@@ -279,7 +279,8 @@
 }
 
 /* Light overlay for non-featured cards */
-.cardsixdesg1-mosaic-card:not(.cardsixdesg1-featured-card) .cardsixdesg1-card-overlay {
+.cardsixdesg1-mosaic-card:not(.cardsixdesg1-featured-card)
+  .cardsixdesg1-card-overlay {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.92) 0%,
@@ -328,7 +329,8 @@
   color: #053456;
 }
 
-.cardsixdesg1-featured-card.cardsixdesg1-accent-primary .cardsixdesg1-icon-glow {
+.cardsixdesg1-featured-card.cardsixdesg1-accent-primary
+  .cardsixdesg1-icon-glow {
   background-color: rgba(83, 174, 125, 0.25);
   color: #53ae7d;
   backdrop-filter: blur(10px);
@@ -338,9 +340,6 @@
   background-color: rgba(83, 174, 125, 0.12);
   color: #53ae7d;
 }
-
-
-
 
 /* Card Header Components */
 .cardsixdesg1-card-topbar {
@@ -416,11 +415,11 @@
     min-height: 250px;
     padding: 1.75rem;
   }
-  
+
   .cardsixdesg1-card-title {
     font-size: 1.1rem;
   }
-  
+
   .cardsixdesg1-card-desc {
     font-size: 0.875rem;
   }
@@ -428,6 +427,12 @@
 
 /*  */
 
+.akone {
+  padding-top: 40px !important;
+  padding-bottom: 20px !important;
+}
 
+.aktwo{
+   padding-top: 20px !important;
+}
 /*  */
-

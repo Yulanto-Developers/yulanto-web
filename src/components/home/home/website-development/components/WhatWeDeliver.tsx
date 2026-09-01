@@ -1,29 +1,30 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useAOS } from '@/components/hooks/useAOS';
 
 interface ServiceItem {
   title: string;
-  iconClass: string;
+  imageUrl: string;
 }
 
 const servicesData: ServiceItem[] = [
-  { title: "Custom corporate websites", iconClass: "fa-solid fa-building" },
-  { title: "Business websites", iconClass: "fa-solid fa-chart-line" },
-  { title: "WordPress website development", iconClass: "fa-brands fa-wordpress" },
-  { title: "eCommerce website development", iconClass: "fa-solid fa-cart-shopping" },
-  { title: "WooCommerce development", iconClass: "fa-brands fa-woocommerce" },
-  { title: "Custom PHP development", iconClass: "fa-brands fa-php" },
-  { title: "Laravel website development", iconClass: "fa-brands fa-laravel" },
-  { title: "CodeIgniter development", iconClass: "fa-solid fa-fire" },
-  { title: "Landing page development", iconClass: "fa-solid fa-laptop-code" },
-  { title: "Website redesign & redevelopment", iconClass: "fa-solid fa-rotate" },
-  { title: "Custom web applications", iconClass: "fa-solid fa-cubes" },
-  { title: "API & third-party integrations", iconClass: "fa-solid fa-network-wired" },
-  { title: "Payment gateway integration", iconClass: "fa-solid fa-credit-card" },
-  { title: "SEO-friendly website development", iconClass: "fa-solid fa-magnifying-glass" },
-  { title: "Website maintenance & support", iconClass: "fa-solid fa-headset" }
+  { title: "Custom corporate websites", imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=120&q=80" },
+  { title: "Business websites", imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=120&q=80" },
+  { title: "WordPress website development", imageUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=120&q=80" },
+  { title: "eCommerce website development", imageUrl: "https://images.unsplash.com/photo-1556742049-0a679246c7a6?auto=format&fit=crop&w=120&q=80" },
+  { title: "WooCommerce development", imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=120&q=80" },
+  { title: "Custom PHP development", imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=120&q=80" },
+  { title: "Laravel website development", imageUrl: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=120&q=80" },
+  { title: "CodeIgniter development", imageUrl: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=120&q=80" },
+  { title: "Landing page development", imageUrl: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=120&q=80" },
+  { title: "Website redesign & redevelopment", imageUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=120&q=80" },
+  { title: "Custom web applications", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=120&q=80" },
+  { title: "API & third-party integrations", imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=120&q=80" },
+  { title: "Payment gateway integration", imageUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=120&q=80" },
+  { title: "SEO-friendly website development", imageUrl: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=120&q=80" },
+  { title: "Website maintenance & support", imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=120&q=80" }
 ];
 
 export default function ServicesGrid() {
@@ -43,7 +44,7 @@ export default function ServicesGrid() {
             Tailor-Made Website Development for Every Business
           </span>
           <h4
-            className="px-about-title text-tenor"
+            className="px-about-title"
             data-aos="text-reveal"
             data-aos-delay="100"
           >
@@ -58,17 +59,23 @@ export default function ServicesGrid() {
           </p>
         </div>
 
-        {/* 6-Column Grid Items Wrapper */}
+        {/* 5-Column Grid Wrapper */}
         <div className="srv-grid-container">
           {servicesData.map((item, index) => (
             <div
               key={index}
               className="srv-grid-item"
               data-aos="fade-up"
-              data-aos-delay={(index % 6) * 50 + 100}
+              data-aos-delay={(index % 5) * 50 + 100}
             >
               <div className="srv-icon-box">
-                <i className={`${item.iconClass} srv-icon`} aria-hidden="true"></i>
+                <Image 
+                  src={item.imageUrl} 
+                  alt={item.title} 
+                  width={44} 
+                  height={44} 
+                  className="srv-img-icon"
+                />
               </div>
               <h4 className="srv-item-title">{item.title}</h4>
               <div className="srv-line-divider"></div>
@@ -80,7 +87,7 @@ export default function ServicesGrid() {
       <style jsx>{`
         .srv-grid-wrapper {
           width: 100%;
-          padding: 40px 0;
+          padding: 10px 0 40px;
           background-color: #ffffff;
         }
 
@@ -88,9 +95,10 @@ export default function ServicesGrid() {
           margin-bottom: 50px;
         }
 
+        /* 5 Column Grid Layout */
         .srv-grid-container {
           display: grid;
-          grid-template-columns: repeat(6, 1fr);
+          grid-template-columns: repeat(5, 1fr);
           gap: 36px 24px;
           width: 100%;
         }
@@ -113,19 +121,21 @@ export default function ServicesGrid() {
           margin-bottom: 12px;
         }
 
-        .srv-icon {
-          font-size: 32px;
-          color: #053456;
-          transition: color 0.3s ease, transform 0.3s ease;
+        .srv-img-icon {
+          width: 44px;
+          height: 44px;
+          object-fit: cover;
+          border-radius: 8px;
+          transition: transform 0.3s ease, filter 0.3s ease;
         }
 
-        .srv-grid-item:hover .srv-icon {
-          color: #53ae7d;
-          transform: scale(1.08);
+        .srv-grid-item:hover .srv-img-icon {
+          transform: scale(1.1);
         }
 
+        /* Black Item Title */
         .srv-item-title {
-          color: #053456;
+          color: #000000;
           font-size: 15px;
           font-weight: 600;
           margin: 0 0 12px 0;
@@ -133,6 +143,11 @@ export default function ServicesGrid() {
           min-height: 42px;
           display: flex;
           align-items: flex-end;
+          transition: color 0.3s ease;
+        }
+
+        .srv-grid-item:hover .srv-item-title {
+          color: #53ae7d;
         }
 
         .srv-line-divider {
@@ -159,6 +174,7 @@ export default function ServicesGrid() {
           background-color: #53ae7d;
         }
 
+        /* Responsiveness */
         @media (max-width: 1200px) {
           .srv-grid-container {
             grid-template-columns: repeat(3, 1fr);

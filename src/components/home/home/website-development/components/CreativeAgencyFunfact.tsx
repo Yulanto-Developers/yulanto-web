@@ -6,9 +6,10 @@ import creativestats, { DyanmicTitle } from "./creativestatsdata"
 interface staticDT extends DyanmicTitle {
 	num1: number;
 	num2: number;
+	className?: string;
 }
 
-const CreativeAgencyFunfact = ({ num1, num2, titleFirst, titleHighlight, titleSecond, }: staticDT) => {
+const CreativeAgencyFunfact = ({ num1, num2, titleFirst, titleHighlight, titleSecond,className }: staticDT) => {
 
 	const data = creativestats.slice(num1, num2);
 
@@ -20,7 +21,7 @@ const CreativeAgencyFunfact = ({ num1, num2, titleFirst, titleHighlight, titleSe
 		<>
 			{/* style={{ backgroundImage: `url(${funfactStyles.sectionBackgroundShape})`, paddingTop: "20px" }} */}
 			<div
-				className="ar-funfact-area ar-funfact-bg">
+				className={`ar-funfact-area ar-funfact-bg ${className || " "}`}>
 				<h4
 					className="px-about-title mb-30 text-center"
 					data-aos="fade-down"

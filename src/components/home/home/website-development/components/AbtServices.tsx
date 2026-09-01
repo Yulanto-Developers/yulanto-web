@@ -4,17 +4,15 @@ import React, { useEffect } from 'react';
 import { useAOS } from '@/components/hooks/useAOS';
 import '@/components/home/home/aboutcomponents/ourStory.css';
 import '@/assets/css/textAnimations.css';
-import image1 from "@/assets/images/ourstory/image-1.jpg";
-import image4 from "@/assets/images/ourstory/vector-2.png";
 import CreativeAgencyFunfact from './CreativeAgencyFunfact';
 
 
 const galleryImages = [
-    "/assets/images/ourstory/image-1.jpg",
-    "/assets/images/ourstory/image-1.jpg",
-    "/assets/images/ourstory/image-1.jpg",
-    "/assets/images/ourstory/image-1.jpg",
-    "/assets/images/ourstory/image-1.jpg",
+    "/assets/images/website-development/dynamic-website-development/top-1.jpg",
+    "/assets/images/website-development/dynamic-website-development/top-2.jpg",
+    "/assets/images/website-development/dynamic-website-development/top-3.jpg",
+    "/assets/images/website-development/dynamic-website-development/top-4.jpg",
+    "/assets/images/website-development/dynamic-website-development/top-5.jpg",
 ];
 
 const AbtServices = () => {
@@ -297,7 +295,8 @@ const AbtServices = () => {
                         <div className="col-xl-3">
                             <span
                                 className="tp-section-subtitle text-black blink-ball mt-40"
-                                style={{ lineHeight: "25px" }}
+                                style={{ lineHeight: "25px" }} data-aos="text-reveal"
+                                data-aos-delay="100"
                             >
                                 Web Development <br />
                                 Company in Chennai
@@ -333,6 +332,9 @@ const AbtServices = () => {
                         <div
                             className={`overlap-gallery-item item-${index + 1}`}
                             key={index}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100}
+                            data-aos-duration="800"
                         >
                             <img src={image} alt={`Gallery ${index + 1}`} />
                         </div>
@@ -340,7 +342,7 @@ const AbtServices = () => {
                 </div>
             </section>
 
-            <div className="continer">
+            <div className="container">
                 <p
                     className="mt-2"
                     data-aos="text-reveal-lines"
@@ -360,7 +362,7 @@ const AbtServices = () => {
             <section className="about-blue-section">
                 <div className="container-fuild">
                     <div className="row align-items-center">
-                        <div className="col-lg-4 mb-4 mb-lg-0">
+                        {/* <div className="col-lg-4 mb-4 mb-lg-0">
                             <div
                                 className="about-img-wrap"
                                 data-aos="image-zoom"
@@ -374,9 +376,9 @@ const AbtServices = () => {
 
                                 />
                             </div>
-                        </div>
+                        </div> */}
 
-                        <div className="col-lg-8">
+                        <div className="col-lg-12">
                             <div className="about-content-side">
                                 <span className="tp-section-subtitle text-white blink-ball">
                                     We Are a Creative Web Development Agency

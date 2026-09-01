@@ -77,7 +77,7 @@ const defaultFeatures: FeatureItem[] = [
         title: "Responsive Development",
         subtitle:
             "Your customers access your site from smartphones, tablets, and desktops. We ensure smooth adaptation and flawless user experiences across all screen sizes.",
-        colClass: "col-lg-6 col-md-6",
+        colClass: "col-lg-8 col-md-12",
         imageUrl: "/images/responsive-bg.jpg",
         imageAlt: "Responsive development",
     },
@@ -88,7 +88,7 @@ const defaultFeatures: FeatureItem[] = [
         title: "Secure & Scalable Websites",
         subtitle:
             "Security and scalability are paramount for long-term growth. We follow enterprise-grade development practices that scale effortlessly alongside your expanding business.",
-        colClass: "col-lg-6 col-md-6",
+        colClass: "col-lg-4 col-md-6",
         imageUrl: "/images/security-bg.jpg",
         imageAlt: "Secure and scalable websites",
     },
