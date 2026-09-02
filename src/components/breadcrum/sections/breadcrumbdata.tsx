@@ -175,6 +175,13 @@ const data = [
     currentPage: " Packaging Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+   {
+    path: "/Social-Media-Creative-Design",
+    title: "Social Media Creative Design",
+    
+    currentPage: "Social Media Creative Design",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
                       
 ];
 

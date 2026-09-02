@@ -2609,3 +2609,9 @@ input[name="name"].has-value+.name-next-btn {
     }
 
 }
+.font-p{
+    font-family: 'Figtree', sans-serif;
+}
+.font-title{
+    font-family: 'Tenor Sans', sans-serif;
+}
