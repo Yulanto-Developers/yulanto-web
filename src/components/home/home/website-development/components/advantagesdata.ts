@@ -39,6 +39,7 @@ const advantagesData = [
       "Our web development services in Chennai are designed to provide flexible solutions that can support your long-term digital growth.",
     ],
   },
+
 ];
 
 export default advantagesData;

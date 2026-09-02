@@ -265,5 +265,5 @@ export const Floatstyle = React.forwardRef<HTMLDivElement, IndustryHeroProps>(
     );
   }
 );
- 
-// IndustryCloud.displayName = "F"; 
+
+Floatstyle.displayName = "Floatstyle";

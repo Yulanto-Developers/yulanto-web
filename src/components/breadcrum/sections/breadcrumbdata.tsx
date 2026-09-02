@@ -130,6 +130,12 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
 
+  {
+    path: "/website-development/react-website-development",
+    title: "React Website Development",
+    currentPage: "React Website Development",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
 
   {
 

@@ -25,11 +25,11 @@ Our team of professional website developers in Chennai develops websites from th
 
 // Dynamic Data Definition
 const seoSlides: CoverflowSlide[] = [
-    { src: "/assets/img/offpage/top-1.jpg", alt: "Off-Page Link Building Strategy" },
-    { src: "/assets/img/offpage/top-2.jpg", alt: "Local Citation & Directory Submission" },
-    { src: "/assets/img/offpage/top-3.jpg", alt: "Content Marketing & Guest Posting" },
-    { src: "/assets/img/offpage/top-4.jpg", alt: "Brand Mention & Authority Building" },
-    { src: "/assets/img/offpage/top-5.jpg", alt: "Social Signals & Digital PR" },
+    { src: "/assets/images/website-development/custom-website-development/top-1.jpg", alt: "Off-Page Link Building Strategy" },
+    { src: "/assets/images/website-development/custom-website-development/top-2.jpg", alt: "Local Citation & Directory Submission" },
+    { src: "/assets/images/website-development/custom-website-development/top-3.jpg", alt: "Content Marketing & Guest Posting" },
+    { src: "/assets/images/website-development/custom-website-development/top-4.jpg", alt: "Brand Mention & Authority Building" },
+    { src: "/assets/images/website-development/custom-website-development/top-5.jpg", alt: "Social Signals & Digital PR" },
 ];
 function CustomWebsiteDdevelopment() {
     // Use the AOS hook
@@ -69,7 +69,7 @@ function CustomWebsiteDdevelopment() {
                 ]}
                 quoteText="Looking for website development in Chennai? Let us create a secure, customized, and business-focused website designed for your growth."
                 quoteAccentColor="#053456"
-                imageSrc="/assets/images/ourstory/image-1.jpg"
+                imageSrc="/assets/images/website-development/custom-website-development/last-img.jpg"
                 imageAlt="Website Development Company in Chennai"
             />
         </div>

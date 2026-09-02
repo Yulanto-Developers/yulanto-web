@@ -385,6 +385,7 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Redesign Services",
   },
+  
 ];
 
 export default faqa1Data;

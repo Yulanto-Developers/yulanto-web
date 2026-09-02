@@ -281,11 +281,7 @@
 /* Light overlay for non-featured cards */
 .cardsixdesg1-mosaic-card:not(.cardsixdesg1-featured-card)
   .cardsixdesg1-card-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.92) 0%,
-    rgba(248, 250, 252, 0.88) 100%
-  );
+  background: linear-gradient(135deg, #1987549e 0%, #f8fafce0 100%);
 }
 
 /* Content on top of background */
@@ -326,7 +322,7 @@
 /* Accent Variations for Icons & Dots */
 .cardsixdesg1-accent-primary .cardsixdesg1-icon-glow {
   background-color: rgba(5, 52, 86, 0.08);
-  color: #053456;
+  color: #fff;
 }
 
 .cardsixdesg1-featured-card.cardsixdesg1-accent-primary
@@ -338,7 +334,7 @@
 
 .cardsixdesg1-accent-secondary .cardsixdesg1-icon-glow {
   background-color: rgba(83, 174, 125, 0.12);
-  color: #53ae7d;
+  color: #fff;
 }
 
 /* Card Header Components */
@@ -399,14 +395,14 @@
 }
 
 .cardsixdesg1-card-desc {
-  font-size: 0.925rem;
-  color: #475569;
+  font-size: 15px !important;
+  color: #000000;
   line-height: 1.65;
   margin: 0;
 }
 
 .cardsixdesg1-featured-card .cardsixdesg1-card-desc {
-  color: #cbd5e1;
+  color: #fff !important;
 }
 
 /* Responsive Adjustments */
@@ -421,7 +417,7 @@
   }
 
   .cardsixdesg1-card-desc {
-    font-size: 0.875rem;
+    font-size: 15px !important;
   }
 }
 
