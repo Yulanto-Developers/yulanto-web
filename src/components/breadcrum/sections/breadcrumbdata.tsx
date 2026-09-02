@@ -151,6 +151,12 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
+    path: "/web-design/ui-ux-desgin",
+    title: " UI/UX Design",
+    currentPage: "UI/UX Design",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+  {
     path: "/logo-design&branding",
     title: " Logo Design & branding",
 

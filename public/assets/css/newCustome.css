@@ -1293,6 +1293,10 @@
     background: #fff;
     color: #053456;
     transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
 }
 
 
@@ -1324,4 +1328,27 @@
         font-size: 22px;
     }
 
+}
+
+
+/* lottie csss */
+
+.top-banner-animation {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.top-banner-animation > div {
+    width: 100%;
+    height: 100%;
+}
+
+.top-banner-animation svg {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
