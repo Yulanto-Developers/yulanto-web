@@ -30,25 +30,26 @@ const DualDirectionSlider = () => {
   return (
     <section className="dual-slider-section">
       <div className="container-fluid px-0">
-
         <h2 className="px-about-title mb-2 text-center">
-          <span className="text-blue-about">React Website Design</span>
-          for Different Businesses
+          <span className="text-blue-about">React Website Design</span> for Different Businesses
         </h2>
-        <p className="text-figtree text-black mt-2 mb-4 text-center">Our React website solutions can be customized for a wide range of industries and business requirements, including</p>
+        <p className="text-figtree text-black mt-2 mb-4 text-center">
+          Our React website solutions can be customized for a wide range of industries and business requirements, including
+        </p>
 
         {/* Row 1: Right to Left */}
         <div className="slider-row slider-row-left">
           <div className="slider-track">
-            {/* Duplicated array for an infinite loop */}
             {[...rowOneItems, ...rowOneItems].map((item, index) => (
               <div key={`row1-${item.id}-${index}`} className="slider-card">
-                <div className="card-image-wrapper">
+                <div className="card-image-wrapper" style={{ position: "relative", width: "100%", height: "100%" }}>
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 768px) 240px, 320px"
+                    sizes="(max-width: 768px) 250px, 320px"
+                    priority={index < 3}
+                    style={{ objectFit: "cover" }}
                   />
                   <div className="card-overlay" />
                 </div>
@@ -63,15 +64,16 @@ const DualDirectionSlider = () => {
         {/* Row 2: Left to Right */}
         <div className="slider-row slider-row-right">
           <div className="slider-track">
-            {/* Duplicated array for an infinite loop */}
             {[...rowTwoItems, ...rowTwoItems].map((item, index) => (
               <div key={`row2-${item.id}-${index}`} className="slider-card">
-                <div className="card-image-wrapper">
+                <div className="card-image-wrapper" style={{ position: "relative", width: "100%", height: "100%" }}>
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 768px) 240px, 320px"
+                    sizes="(max-width: 768px) 250px, 320px"
+                    priority={index < 3}
+                    style={{ objectFit: "cover" }}
                   />
                   <div className="card-overlay" />
                 </div>
@@ -82,7 +84,6 @@ const DualDirectionSlider = () => {
             ))}
           </div>
         </div>
-
       </div>
 
       <style jsx>{`
@@ -107,19 +108,17 @@ const DualDirectionSlider = () => {
           display: flex;
           gap: 20px;
           width: max-content;
+          will-change: transform;
         }
 
-        /* Continuous Left to Right Scrolling (Right-to-Left visually moving track) */
         .slider-row-left .slider-track {
-          animation: scrollLeft 30s linear infinite;
+          animation: scrollLeft 35s linear infinite;
         }
 
-        /* Continuous Right to Left Scrolling (Left-to-Right visually moving track) */
         .slider-row-right .slider-track {
-          animation: scrollRight 30s linear infinite;
+          animation: scrollRight 35s linear infinite;
         }
 
-        /* Pause auto-scroll on mouse hover */
         .slider-row:hover .slider-track {
           animation-play-state: paused;
         }
@@ -142,36 +141,26 @@ const DualDirectionSlider = () => {
           box-shadow: 0 16px 32px rgba(5, 52, 86, 0.18);
         }
 
-        /* Image Wrapper */
-        .card-image-wrapper {
-          position: absolute;
-          inset: 0;
-        }
-
-        .card-image-wrapper :global(img) {
-          object-fit: cover;
-          transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-
-        .slider-card:hover .card-image-wrapper :global(img) {
-          transform: scale(1.08);
-        }
-
         /* Contrast Overlay */
         .card-overlay {
           position: absolute;
           inset: 0;
-         background: linear-gradient(rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.25) 40%, rgba(0, 0, 0, 0.65) 100%);
+          background: linear-gradient(
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.25) 40%,
+            rgba(0, 0, 0, 0.65) 100%
+          );
           transition: background 0.3s ease;
+          z-index: 1;
         }
 
         .slider-card:hover .card-overlay {
-         background: linear-gradient(
-           to top,
-           rgba(0, 0, 0, 0.95) 0%,
-           rgba(0, 0, 0, 0.5) 60%,
-           rgba(0, 0, 0, 0.15) 100%
-         );
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.5) 60%,
+            rgba(0, 0, 0, 0.15) 100%
+          );
         }
 
         /* Text Content */
@@ -199,13 +188,13 @@ const DualDirectionSlider = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-50% - 10px));
+            transform: translateX(-50%);
           }
         }
 
         @keyframes scrollRight {
           0% {
-            transform: translateX(calc(-50% - 10px));
+            transform: translateX(-50%);
           }
           100% {
             transform: translateX(0);
