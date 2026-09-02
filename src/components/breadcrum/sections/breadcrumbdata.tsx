@@ -189,9 +189,9 @@ const data = [
 
    {
     path: "/Social-Media-Creative-Design",
-    title: "Social Media Creative Design",
+    title: "Social Media Creative Designs",
     
-    currentPage: "Social Media Creative Design",
+    currentPage: "Social Media Creative Designs",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
                       
