@@ -104,77 +104,89 @@ const data = [
     currentPage: "Startup Webiste Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-     {
+  {
     path: "/media_marketing",
     title: " Social Media Marketing",
     currentPage: " Social Media Marketing",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
-  }, 
-   {
+  },
+  {
     path: "/website-development/dynamic-website-development",
     title: "Dynamic Website Development",
     currentPage: "Dynamic Website Development ",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-   {
+  {
     path: "/website-development/custom-website-development",
     title: "Custom Website Development",
     currentPage: "Custom Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-   {
+
+  {
     path: "/website-development/php-website-development",
     title: "PHP Website Development",
     currentPage: "PHP Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-   {
+
+
+  {
+
     path: "/web-design/corporate-website-design",
     title: " Corporate Website Design",
     currentPage: " Corporate Website Design ",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-   {
+  {
+    path: "/web-design/landing-page-desgin",
+    title: "Landing Page Design",
+    currentPage: "Landing Page Design",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+  {
     path: "/web-design/website-redesign",
     title: " Website Redesign",
     currentPage: "Website Redesign ",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-   {
+  {
     path: "/logo-design&branding",
     title: " Logo Design & branding",
-    
+
     currentPage: "Logo Design & branding",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-     {
+  {
     path: "/company-profile-design",
     title: "Brochure & Company Profile Design",
-    
+
     currentPage: "Logo Design & branding",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-   {
+  {
     path: "/company-profile-design",
     title: "Brochure & Company Profile Design",
-    
+
     currentPage: "Logo Design & branding",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-   {
+  {
     path: "/flyer-poster-design",
     title: "Flyer & Poster Design",
-    
+
     currentPage: "Flyer & Poster Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-   {
+
+  {
     path: "/Packaging-Design",
     title: " Packaging Design",
-    
+
     currentPage: " Packaging Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+
    {
     path: "/Social-Media-Creative-Design",
     title: "Social Media Creative Design",
@@ -183,6 +195,8 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
                       
+
+
 ];
 
 export default function BreadcurmbData() {

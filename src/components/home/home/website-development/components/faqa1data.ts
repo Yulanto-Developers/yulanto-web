@@ -297,6 +297,94 @@ const faqa1Data: FAQItem[] = [
     meta: "Local Services",
 
   },
+  {
+    id: 32,
+    question: "Do you offer website redesign near me?",
+    answer: [
+      "Yes. If you are searching for website redesign near me, you can connect with our Chennai-based team to discuss your existing website, redesign requirements, and business objectives.",
+    ],
+    meta: "Local Services",
+  },
+  {
+    id: 33,
+    question: "What is a landing page?",
+    answer: [
+      "A landing page is a dedicated webpage created for a specific marketing, advertising or business objective. It usually focuses on one primary action, such as generating leads, getting enquiries, selling a product or encouraging registrations.",
+    ],
+    meta: "General Info",
+  },
+  {
+    id: 34,
+    question: "Why does my business need a landing page?",
+    answer: [
+      "A landing page gives your visitors a focused experience without unnecessary distractions. It can be particularly useful for advertising campaigns, lead generation, product promotions and special offers.",
+    ],
+    meta: "Business Value",
+  },
+  {
+    id: 35,
+    question: "What does your landing page design service include?",
+    answer: [
+      "Our service can include landing page planning, UI design, responsive design, content structure, CTA placement, enquiry forms, visual elements and development based on your requirements.",
+    ],
+    meta: "Services",
+  },
+  {
+    id: 36,
+    question: "Can you design landing pages for Google Ads?",
+    answer: [
+      "Yes. We can create campaign-focused landing pages designed around your advertising message, target audience and conversion objective.",
+    ],
+    meta: "Paid Campaigns",
+  },
+  {
+    id: 37,
+    question: "Will the landing page work on mobile devices?",
+    answer: [
+      "Yes. Our landing pages are designed with responsive layouts so visitors can access and interact with them across smartphones, tablets and desktop devices.",
+    ],
+    meta: "Responsiveness",
+  },
+  {
+    id: 38,
+    question: "Can you create a landing page for lead generation?",
+    answer: [
+      "Yes. We can design lead-generation landing pages with strategically positioned enquiry forms, contact details, benefits, testimonials and clear calls-to-action.",
+    ],
+    meta: "Lead Gen",
+  },
+  {
+    id: 39,
+    question: "Do you provide custom landing page UI design?",
+    answer: [
+      "Yes. We create customized landing page UI based on your brand identity, audience and business requirements rather than relying solely on generic templates.",
+    ],
+    meta: "UI Design",
+  },
+  {
+    id: 40,
+    question: "How long does it take to design a landing page?",
+    answer: [
+      "The timeline depends on the page complexity, number of sections, content availability, design requirements and development scope. A simple landing page can generally be completed faster than a highly customized campaign page.",
+    ],
+    meta: "Timeline",
+  },
+  {
+    id: 41,
+    question: "Can I use the landing page for social media campaigns?",
+    answer: [
+      "Yes. Landing pages can be created specifically for traffic coming from platforms such as Facebook, Instagram, LinkedIn and other digital marketing channels.",
+    ],
+    meta: "Social Media",
+  },
+  {
+    id: 42,
+    question: "Can you redesign my existing landing page?",
+    answer: [
+      "Yes. If your existing landing page has an outdated design, poor mobile experience or low engagement, we can redesign it with a modern UI and improved user experience.",
+    ],
+    meta: "Redesign Services",
+  },
 ];
 
 export default faqa1Data;

@@ -1,5 +1,6 @@
 import BreadcurmbData from "@/components/breadcrum/sections/breadcrumbdata";
 import Corporatewebistedesgin from "@/components/home/home/web-desgin/Corporate-webiste-desgin";
+import Landingpagedesgin from "@/components/home/home/web-desgin/landing-page-desgin";
 import Startupwebsitedesgin from "@/components/home/home/web-desgin/Startup-website-desgin";
 import Websiteredesign from "@/components/home/home/web-desgin/Website-redesign";
 
@@ -28,6 +29,11 @@ export default async function Page({
             {pages === "website-redesign" && (
                 <>
                     <Websiteredesign />
+                </>
+            )}
+            {pages === "landing-page-desgin" && (
+                <>
+                    <Landingpagedesgin />
                 </>
             )}
         </>
