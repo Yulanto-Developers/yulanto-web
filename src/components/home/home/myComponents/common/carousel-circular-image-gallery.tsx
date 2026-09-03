@@ -58,8 +58,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
             return;
         }
 
-        const gsapScript =
-            document.createElement('script');
+        const gsapScript = document.createElement('script');
 
         gsapScript.src =
             'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js';
@@ -322,8 +321,14 @@ function GalleryImage({
 
     const duration = 0.4;
 
-    const width = 400;
-    const height = 400;
+    /*
+        IMPORTANT:
+        Original image ratio = 800 x 320
+    */
+
+    const width = 800;
+    const height = 320;
+
     const scale = 700;
 
     const bigSize =
@@ -340,9 +345,11 @@ function GalleryImage({
     const getPosSmall = () => ({
         cx:
             width / 2 -
-            (total *
-                (circleRadius * 2 + gap) -
-                gap) /
+            (
+                total *
+                    (circleRadius * 2 + gap) -
+                gap
+            ) /
                 2 +
             id *
                 (circleRadius * 2 + gap),
@@ -355,9 +362,11 @@ function GalleryImage({
     const getPosSmallAbove = () => ({
         cx:
             width / 2 -
-            (total *
-                (circleRadius * 2 + gap) -
-                gap) /
+            (
+                total *
+                    (circleRadius * 2 + gap) -
+                gap
+            ) /
                 2 +
             id *
                 (circleRadius * 2 + gap),
@@ -374,22 +383,14 @@ function GalleryImage({
     });
 
     const getPosEnd = () => ({
-        cx:
-            width / 2 -
-            bigSize,
-
+        cx: width / 2 - bigSize,
         cy: height / 2,
-
         r: bigSize,
     });
 
     const getPosStart = () => ({
-        cx:
-            width / 2 +
-            bigSize,
-
+        cx: width / 2 + bigSize,
         cy: height / 2,
-
         r: bigSize,
     });
 
@@ -398,7 +399,6 @@ function GalleryImage({
     ========================================= */
 
     useEffect(() => {
-
         const gsap = window.gsap;
 
         if (!gsap || !clip.current) {
@@ -437,10 +437,8 @@ function GalleryImage({
                     {
                         ...defaults,
                         ...getPosCenter(),
-                        duration:
-                            upDuration,
-                        ease:
-                            'power3.inOut',
+                        duration: upDuration,
+                        ease: 'power3.inOut',
                     }
                 )
                 .to(
@@ -448,10 +446,8 @@ function GalleryImage({
                     {
                         ...defaults,
                         ...getPosEnd(),
-                        duration:
-                            flipDuration,
-                        ease:
-                            'power4.in',
+                        duration: flipDuration,
+                        ease: 'power4.in',
                         onComplete: () =>
                             onInPlace(id),
                     }
@@ -476,10 +472,8 @@ function GalleryImage({
                         ...defaults,
                         ...getPosCenter(),
                         delay,
-                        duration:
-                            flipDuration,
-                        ease:
-                            'power4.out',
+                        duration: flipDuration,
+                        ease: 'power4.out',
                     }
                 )
                 .to(
@@ -493,10 +487,8 @@ function GalleryImage({
                             ],
                             curviness: 1,
                         },
-                        duration:
-                            bounceDuration,
-                        ease:
-                            'bounce.out',
+                        duration: bounceDuration,
+                        ease: 'bounce.out',
                     }
                 );
         }
@@ -574,14 +566,16 @@ function Tabs({
     const gap = 10;
     const circleRadius = 7;
 
-    const width = 400;
-    const height = 400;
+    const width = 800;
+    const height = 320;
 
     const getPosX = (i: number) =>
         width / 2 -
-        (images.length *
-            (circleRadius * 2 + gap) -
-            gap) /
+        (
+            images.length *
+                (circleRadius * 2 + gap) -
+            gap
+        ) /
             2 +
         i *
             (circleRadius * 2 + gap);

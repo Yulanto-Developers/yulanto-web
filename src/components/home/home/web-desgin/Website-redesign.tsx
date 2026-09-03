@@ -48,6 +48,25 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { FAQA1 } from '../website-development/components'
+import img0 from '@/assets/img/website/redesgin/image-@.jpg';
+import top1 from '@/assets/img/website/redesgin/top-1.jpg';
+import top2 from '@/assets/img/website/redesgin/top-2.jpg';
+import top3 from '@/assets/img/website/redesgin/top-3.jpg';
+import top4 from '@/assets/img/website/redesgin/top-4.jpg';
+import s1 from '@/assets/img/website/redesgin/Strategy-1.jpg';
+import s2 from '@/assets/img/website/redesgin/Strategy-2.jpg';
+import s3 from '@/assets/img/website/redesgin/Strategy-Driven-3.jpg';
+import s4 from '@/assets/img/website/redesgin/Strategy-Driven-4.jpg';
+import s5 from '@/assets/img/website/redesgin/Strategy-Driven-5.jpg';
+import s6 from '@/assets/img/website/redesgin/Strategy-Driven-6.jpg';
+import s7 from '@/assets/img/website/redesgin/Strategy-Driven-7.jpg';
+import sl1 from '@/assets/img/website/redesgin/Industrial-Companies-0.jpg';
+import sl2 from '@/assets/img/website/redesgin/interiors-design-companies-0.jpg';
+import sl3 from '@/assets/img/website/redesgin/Real-Estate-Companies-0.jpg';
+import sl4 from '@/assets/img/website/redesgin/Travel-Companies-0.jpg';
+import wl1 from '@/assets/img/website/redesgin/Looking-for-Website-1.jpg';
+import wl2 from '@/assets/img/website/redesgin/Looking-for-Website-left.jpg';
+import wl3 from '@/assets/img/website/redesgin/Looking-for-Website-right.jpg';
 
 function Websiteredesign() {
 
@@ -117,7 +136,7 @@ function Websiteredesign() {
             title: "01. Website Audit",
             description:
                 "We evaluate your current website, including design, content, navigation, responsiveness, performance, SEO structure, and overall user experience.",
-            image: img.src,
+            image: s1.src,
             icon: (
                 /* Search / Audit Icon */
                 <svg
@@ -140,7 +159,7 @@ function Websiteredesign() {
             title: "02. Redesign Strategy",
             description:
                 "We identify improvement areas and develop a redesign strategy based on your business objectives, target audience, competitors, and existing website performance.",
-            image: img.src,
+            image: s2.src,
             icon: (
                 /* Strategy / Target Icon */
                 <svg
@@ -164,7 +183,7 @@ function Websiteredesign() {
             title: "03. UI/UX Design",
             description:
                 "Our designers create modern page layouts that improve visual appeal, usability, readability, and user engagement.",
-            image: img.src,
+            image: s3.src,
             icon: (
                 /* Layout / Palette / Design Icon */
                 <svg
@@ -188,7 +207,7 @@ function Websiteredesign() {
             title: "04. Responsive Development",
             description:
                 "The redesigned website is developed to provide a consistent experience across desktops, tablets, and mobile devices.",
-            image: img.src,
+            image: s4.src,
             icon: (
                 /* Desktop / Mobile Devices Icon */
                 <svg
@@ -212,7 +231,7 @@ function Websiteredesign() {
             title: "05. SEO-Friendly Implementation",
             description:
                 "We maintain important SEO elements while improving page structure, headings, content organization, internal linking, and technical foundations.",
-            image: img.src,
+            image: s5.src,
             icon: (
                 /* Search Check / SEO Icon */
                 <svg
@@ -236,7 +255,7 @@ function Websiteredesign() {
             title: "06. Testing & Optimization",
             description:
                 "Before launch, we test the redesigned website for responsiveness, functionality, usability, speed, forms, links, and major browsers.",
-            image: img.src,
+            image: s6.src,
             icon: (
                 /* Checklist / Testing Icon */
                 <svg
@@ -260,7 +279,7 @@ function Websiteredesign() {
             title: "07. Launch & Support",
             description:
                 "After final approval, we publish the redesigned website and provide ongoing support to help you maintain and improve your online presence.",
-            image: img.src,
+            image: s7.src,
             icon: (
                 /* Rocket / Launch Icon */
                 <svg
@@ -331,101 +350,98 @@ function Websiteredesign() {
         {
             title: "Real Estate Companies",
             icon: "fa-pen-ruler",
-            bgImage: img
+            bgImage: sl3
         },
-        {
-            title: "Builders & Architects",
-            icon: "fa-puzzle-piece",
-            bgImage: img
-        },
-        {
-            title: "Responsive Design",
-            icon: "fa-mobile-screen-button",
-            bgImage: img
-        },
+        // {
+        //     title: "Builders & Architects",
+        //     icon: "fa-puzzle-piece",
+        //     bgImage: img
+        // },
+        // {
+        //     title: "Responsive Design",
+        //     icon: "fa-mobile-screen-button",
+        //     bgImage: img
+        // },
         {
             title: "Interior Design Companies",
             icon: "fa-gauge-high",
-            bgImage: img
+            bgImage: sl2
         },
-        {
-            title: "Manufacturing Businesses",
-            icon: "fa-gauge-high",
-            bgImage: img
-        },
+        // {
+        //     title: "Manufacturing Businesses",
+        //     icon: "fa-gauge-high",
+        //     bgImage: img
+        // },
         {
             title: "Industrial Companies",
             icon: "fa-gauge-high",
-            bgImage: img
+            bgImage: sl1
         },
-        {
-            title: "Educational Institutions",
-            icon: "fa-gauge-high",
-            bgImage: img
-        },
-        {
-            title: "Healthcare Businesses",
-            icon: "fa-gauge-high",
-            bgImage: img
-        },
-        {
-            title: "Hospitality Businesses",
-            icon: "fa-gauge-high",
-            bgImage: img
-        },
+        // {
+        //     title: "Educational Institutions",
+        //     icon: "fa-gauge-high",
+        //     bgImage: img
+        // },
+        // {
+        //     title: "Healthcare Businesses",
+        //     icon: "fa-gauge-high",
+        //     bgImage: img
+        // },
+        // {
+        //     title: "Hospitality Businesses",
+        //     icon: "fa-gauge-high",
+        //     bgImage: img
+        // },
         {
             title: "Travel Companies",
             icon: "fa-gauge-high",
-            bgImage: img
+            bgImage: sl4
         },
-        {
-            title: "Professional Services",
-            icon: "fa-gauge-high",
-            bgImage: img
-        },
-        {
-            title: "Startups",
-            icon: "fa-gauge-high",
-            bgImage: img
-        },
-        {
-            title: "E-commerce Businesses",
-            icon: "fa-gauge-high",
-            bgImage: img
-        },
-        {
-            title: "Small Businesses",
-            icon: "fa-gauge-high",
-            bgImage: img
-        },
-        {
-            title: "Corporate Companies",
-            icon: "fa-gauge-high",
-            bgImage: img
-        },
+        // {
+        //     title: "Professional Services",
+        //     icon: "fa-gauge-high",
+        //     bgImage: img
+        // },
+        // {
+        //     title: "Startups",
+        //     icon: "fa-gauge-high",
+        //     bgImage: img
+        // },
+        // {
+        //     title: "E-commerce Businesses",
+        //     icon: "fa-gauge-high",
+        //     bgImage: img
+        // },
+        // {
+        //     title: "Small Businesses",
+        //     icon: "fa-gauge-high",
+        //     bgImage: img
+        // },
+        // {
+        //     title: "Corporate Companies",
+        //     icon: "fa-gauge-high",
+        //     bgImage: img
+        // },
     ];
 
     const galleryImages = [
         {
             title: 'Website Design',
-            url: img.src,
+            url: top1.src,
         },
         {
             title: 'Web Development',
-            url: img.src,
+            url: top2.src,
         },
         {
             title: 'UI UX Design',
-            url: img.src,
+            url: top3.src,
         },
         {
             title: 'Responsive Design',
-            url: img.src,
+            url: top4.src,
         },
-        {
-            title: 'SEO Optimization',
-            url: img.src,
-        },
+
     ];
 
 
@@ -538,17 +554,17 @@ function Websiteredesign() {
 
     const NewgalleryImages = [
         {
-            src: img.src,
+            src: wl1.src,
             alt: "Corporate website design",
             className: "gallery-main",
         },
         {
-            src: img.src,
+            src: wl2.src,
             alt: "Corporate website development",
             className: "gallery-small gallery-small-one",
         },
         {
-            src: img.src,
+            src: wl3.src,
             alt: "Corporate website",
             className: "gallery-small gallery-small-two",
         },
@@ -755,7 +771,7 @@ function Websiteredesign() {
                         <div className='col-md-4'>
 
                             <img
-                                src={img.src}
+                                src={img0.src}
                                 alt='img'
                                 className='img-border-cls'
                             />
@@ -1169,33 +1185,7 @@ function Websiteredesign() {
                                 </div>
 
 
-                                {/* =====================================
-                        PAGINATION
-                    ===================================== */}
 
-                                {/* <div className="round-swiper-pagination">
-
-                                    {quotationBenefits.map((_, index) => (
-
-                                        <button
-                                            key={index}
-                                            type="button"
-                                            className={
-                                                index === activeRoundIndex
-                                                    ? "active"
-                                                    : ""
-                                            }
-                                            onClick={() =>
-                                                setActiveRoundIndex(index)
-                                            }
-                                            aria-label={
-                                                `Go to slide ${index + 1}`
-                                            }
-                                        />
-
-                                    ))}
-
-                                </div> */}
 
                             </div>
 
@@ -1297,69 +1287,69 @@ function Websiteredesign() {
                     data-aos-delay={400}
                     data-aos-once={true}> */}
 
-                    <div className="website-approach-grid">
+                <div className="website-approach-grid">
 
-                        {[
-                            {
-                                number: "01",
-                                title: "Research",
-                                text: "Understanding your business, audience, competitors, and existing website.",
-                            },
-                            {
-                                number: "02",
-                                title: "Strategy",
-                                text: "Defining the redesign goals and prioritizing improvements.",
-                            },
-                            {
-                                number: "03",
-                                title: "Design",
-                                text: "Creating modern UI/UX layouts aligned with your brand.",
-                            },
-                            {
-                                number: "04",
-                                title: "Development",
-                                text: "Building responsive and functional website experiences.",
-                            },
-                            {
-                                number: "05",
-                                title: "Optimization",
-                                text: "Improving usability, performance, SEO structure, and conversion opportunities.",
-                            },
-                            {
-                                number: "06",
-                                title: "Testing",
-                                text: "Checking the redesigned website across devices and browsers before launch.",
-                            },
-                        ].map((item) => (
+                    {[
+                        {
+                            number: "01",
+                            title: "Research",
+                            text: "Understanding your business, audience, competitors, and existing website.",
+                        },
+                        {
+                            number: "02",
+                            title: "Strategy",
+                            text: "Defining the redesign goals and prioritizing improvements.",
+                        },
+                        {
+                            number: "03",
+                            title: "Design",
+                            text: "Creating modern UI/UX layouts aligned with your brand.",
+                        },
+                        {
+                            number: "04",
+                            title: "Development",
+                            text: "Building responsive and functional website experiences.",
+                        },
+                        {
+                            number: "05",
+                            title: "Optimization",
+                            text: "Improving usability, performance, SEO structure, and conversion opportunities.",
+                        },
+                        {
+                            number: "06",
+                            title: "Testing",
+                            text: "Checking the redesigned website across devices and browsers before launch.",
+                        },
+                    ].map((item) => (
 
-                            <div
-                                className="website-approach-card"
-                                key={item.number}
-                            >
+                        <div
+                            className="website-approach-card"
+                            key={item.number}
+                        >
 
-                                <div className="approach-card-top">
+                            <div className="approach-card-top">
 
-                                    <span className="approach-number">
-                                        {item.number}
-                                    </span>
+                                <span className="approach-number">
+                                    {item.number}
+                                </span>
 
-                                    <span className="approach-line"></span>
-
-                                </div>
-
-                                <h5>
-                                    {item.title}
-                                </h5>
-
-                                <p>
-                                    {item.text}
-                                </p>
+                                <span className="approach-line"></span>
 
                             </div>
 
-                        ))}
+                            <h5>
+                                {item.title}
+                            </h5>
 
-                    </div>
+                            <p>
+                                {item.text}
+                            </p>
+
+                        </div>
+
+                    ))}
+
+                </div>
                 {/* </div> */}
 
 
