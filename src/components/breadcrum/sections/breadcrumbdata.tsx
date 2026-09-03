@@ -211,7 +211,7 @@ const data = [
     currentPage: "Social Media Creative Designs",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-<<<<<<< Updated upstream
+
   
    {
     path: "/WordPress-Development",
@@ -228,7 +228,7 @@ const data = [
     currentPage: "WooCommerce Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },         
-=======
+
    {
     path: "/custome-ecommerce-development",
     title: "Custome Ecommerce Development",
@@ -237,7 +237,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
                       
->>>>>>> Stashed changes
+
 
 
 ];
