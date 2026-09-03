@@ -29,7 +29,7 @@ export default function PhpFeaturesSection() {
       description:
         'Create websites that work seamlessly across desktops, tablets, and smartphones.',
       image:
-        'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80',
+        '/assets/images/website-development/php-website-development/key-features-1.jpg',
       icon: Smartphone,
     },
     {
@@ -38,7 +38,7 @@ export default function PhpFeaturesSection() {
       description:
         'Build complete web solutions with robust frontend interfaces and efficient backend functionality.',
       image:
-        'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80',
+        '/assets/images/website-development/php-website-development/key-features-2.jpg',
       icon: Layers,
     },
     {
@@ -47,7 +47,7 @@ export default function PhpFeaturesSection() {
       description:
         'Develop features and modules according to your specific business processes.',
       image:
-        'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=600&q=80',
+        '/assets/images/website-development/php-website-development/key-features-3.jpg',
       icon: Sliders,
     },
     {
@@ -56,7 +56,7 @@ export default function PhpFeaturesSection() {
       description:
         'Connect your website with MySQL and other database solutions for efficient data management.',
       image:
-        'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=600&q=80',
+        '/assets/images/website-development/php-website-development/key-features-4.jpg',
       icon: Database,
     },
     {
@@ -65,7 +65,7 @@ export default function PhpFeaturesSection() {
       description:
         'Integrate payment gateways, CRM systems, marketing tools, external APIs, and other business applications.',
       image:
-        'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80',
+        '/assets/images/website-development/php-website-development/key-features-5.jpg',
       icon: Share2,
     },
     {
@@ -74,7 +74,7 @@ export default function PhpFeaturesSection() {
       description:
         'Follow appropriate coding and security practices to protect your website and customer data.',
       image:
-        'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80',
+        '/assets/images/website-development/php-website-development/key-features-6.jpg',
       icon: ShieldCheck,
     },
     {
@@ -83,7 +83,7 @@ export default function PhpFeaturesSection() {
       description:
         'Develop applications that can evolve with your business and accommodate future requirements.',
       image:
-        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80',
+        '/assets/images/website-development/php-website-development/key-features-7.jpg',
       icon: TrendingUp,
     },
     {
@@ -92,7 +92,7 @@ export default function PhpFeaturesSection() {
       description:
         'Optimize code, database queries, images, and other website components to improve overall performance.',
       image:
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80',
+        '/assets/images/website-development/php-website-development/key-features-8.jpg',
       icon: Zap,
     },
   ];

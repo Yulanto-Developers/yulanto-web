@@ -42,7 +42,7 @@ export const lightMenu: MenuItem[] = [
           { label: "Custom Website Development", href: "/website-development/custom-website-development" },
           { label: "PHP Website Development", href: "/website-development/php-website-development" },
           { label: "React Website Development", href: "/website-development/react-website-development" },
-          { label: "API Integration", href: "/" },
+          { label: "API Integration", href: "/website-development/api-integration" },
         ]
       },
       {

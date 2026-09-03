@@ -295,7 +295,6 @@ const faqa1Data: FAQItem[] = [
       "Yes. If you are searching for website redesign near me, you can connect with our Chennai-based team to discuss your existing website, redesign requirements, and business objectives.",
     ],
     meta: "Local Services",
-
   },
   {
     id: 32,
@@ -385,7 +384,50 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "Redesign Services",
   },
-  
+  {
+    id: 43,
+    question: "What is API Integration?",
+    answer: [
+      "API integration connects two or more software applications or platforms so they can exchange information and work together automatically.",
+    ],
+    meta: "API Integration",
+  },
+
+  {
+    id: 44,
+    question: "What types of APIs can you integrate?",
+    answer: [
+      "We can integrate payment, SMS, WhatsApp, CRM, chat, shipping, accounting, booking, marketing, and other third-party APIs based on your technical and business requirements.",
+    ],
+    meta: "API Services",
+  },
+
+  {
+    id: 45,
+    question: "Can you integrate APIs into an existing website?",
+    answer: [
+      "Yes. We can integrate APIs into existing websites, WordPress websites, eCommerce platforms, PHP applications, and custom web applications.",
+    ],
+    meta: "Website Integration",
+  },
+
+  {
+    id: 46,
+    question: "Can API integration automate business processes?",
+    answer: [
+      "Yes. API integration can automate tasks such as lead capture, payment processing, customer notifications, CRM updates, order processing, and data synchronization.",
+    ],
+    meta: "Automation",
+  },
+
+    {
+    id: 47,
+    question: "Connect. Automate. Grow.",
+    answer: [
+      "Transform disconnected systems into a connected business platform with professional API Integration Services in Chennai. Get in touch with our team to discuss your API requirements and build a solution that works seamlessly with your existing technology",
+    ],
+    meta: "Automation",
+  },
 ];
 
 export default faqa1Data;
