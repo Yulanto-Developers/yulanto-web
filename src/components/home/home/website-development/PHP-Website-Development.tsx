@@ -43,7 +43,7 @@ function CustomWebsiteDdevelopment() {
                             ]}
                             quoteText="Looking for a PHP website development company in Chennai? Let's build your next web project with the right technology, strategy, and development expertise."
                             quoteAccentColor="#053456"
-                            imageSrc="/assets/images/ourstory/image-1.jpg"
+                            imageSrc="/assets/images/website-development/php-website-development/bottom-img.jpg"
                             imageAlt="Website Development Company in Chennai"
                         />
         </div>

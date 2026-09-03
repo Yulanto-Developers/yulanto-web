@@ -316,7 +316,7 @@ export default function AboutPhpLaravelSection() {
                                 preserveAspectRatio="xMidYMid slice"
                                 width="100%"
                                 height="100%"
-                                xlinkHref="/assets/img/php-laravel/hero-image.jpg"
+                                xlinkHref="/assets/images/website-development/php-website-development/one.jpg"
                             />
                         </svg>
                     </TimelineContent>

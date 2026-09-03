@@ -122,7 +122,7 @@ function ReactWebsiteDevelopment() {
             <FeatureSliderOne/>
             <DualDirectionSlider/>
             <ProcessOne />
-             <ThreeColumnFeature />
+            <ThreeColumnFeature />
             <CtaOne />
              
         </div>

@@ -136,7 +136,12 @@ const data = [
     currentPage: "React Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-
+  {
+    path: "/website-development/api-integration",
+    title: "API Integration",
+    currentPage: "API Integration",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
   {
 
     path: "/web-design/corporate-website-design",
