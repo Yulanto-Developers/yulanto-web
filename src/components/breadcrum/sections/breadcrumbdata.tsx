@@ -214,7 +214,14 @@ const data = [
     currentPage: "WordPress Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-                      
+    {
+    path: "/WooCommerce-Development",
+ 
+    title: "WooCommerce Development",
+    
+    currentPage: "WooCommerce Development",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },         
 
 
 ];
