@@ -49,7 +49,7 @@ export const lightMenu: MenuItem[] = [
         label: "CMS & E-commerce", href: "/",
         sublabel: 'CMS & E-commerce Development',
         subLinks: [
-          { label: "WordPress Development", href: "/" },
+          { label: "WordPress Development", href: "/WordPress-Development" },
           { label: "WooCommerce Development", href: "/" },
           { label: "Shopify E-commerce Development", href: "/" },
           { label: "Portal Web Development", href: "/" },

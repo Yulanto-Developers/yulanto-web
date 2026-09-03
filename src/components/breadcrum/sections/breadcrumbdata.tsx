@@ -194,6 +194,14 @@ const data = [
     currentPage: "Social Media Creative Designs",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+  
+   {
+    path: "/WordPress-Development",
+    title: "WordPress Development",
+    
+    currentPage: "WordPress Development",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
                       
 
 
