@@ -1,11 +1,22 @@
-import t1 from '@/assets/img/website/startup/top-1.jpg'
-import t2 from '@/assets/img/website/startup/top-2.jpg'
-import t3 from '@/assets/img/website/startup/top-3.jpg'
-import t4 from '@/assets/img/website/startup/top-4.jpg'
-import t5 from '@/assets/img/website/startup/top-5.jpg'
-import bc from "@/assets/img/website/corporate/bc.jpg";
-import br from "@/assets/img/website/corporate/br.jpg";
-import bl from "@/assets/img/website/corporate/bl.jpg";
+import t1 from '@/assets/img/website/landing/top-1.jpg'
+import t2 from '@/assets/img/website/landing/top-2.jpg'
+import t3 from '@/assets/img/website/landing/top-3.jpg'
+import t4 from '@/assets/img/website/landing/top-4.jpg'
+import t5 from '@/assets/img/website/landing/top-5.jpg'
+import bc from "@/assets/img/website/landing/Get-a-Professional-1.jpg";
+import br from "@/assets/img/website/landing/Get-a-Professional-left.jpg";
+import bl from "@/assets/img/website/landing/Get-a-Professional-right.jpg";
+import p1 from "@/assets/img/website/landing/Our-Approach-1.jpg";
+import p2 from "@/assets/img/website/landing/Our-Approach-2.jpg";
+import p3 from "@/assets/img/website/landing/Our-Approach-3.jpg";
+import p4 from "@/assets/img/website/landing/Our-Approach-4.jpg";
+import p5 from "@/assets/img/website/landing/Our-Approach-5.jpg";
+import l1 from "@/assets/img/website/landing/Landing-Page-1.jpg";
+import l2 from "@/assets/img/website/landing/Landing-Page-2.jpg";
+import l3 from "@/assets/img/website/landing/Landing-Page-3.jpg";
+import l4 from "@/assets/img/website/landing/Landing-Page-4.jpg";
+import l5 from "@/assets/img/website/landing/Landing-Page-5.jpg";
+import l6 from "@/assets/img/website/landing/Landing-Page-6.jpg";
 import {
     FaGoogle,
     FaFacebookF,
@@ -144,7 +155,7 @@ export const processCards: ProcessCardData[] = [
         description:
             'We understand your business, target audience, campaign objective and competitors before planning the page structure.',
         bgImage:
-            t1.src,
+            p1.src,
         rotation: 'rotate-3',
     },
     {
@@ -152,7 +163,7 @@ export const processCards: ProcessCardData[] = [
         description:
             'Our designers create a clean and professional landing page UI that matches your brand identity.',
         bgImage:
-            t2.src,
+            p2.src,
         rotation: '-rotate-2',
     },
     {
@@ -160,7 +171,7 @@ export const processCards: ProcessCardData[] = [
         description:
             'We strategically place headlines, benefits, visuals, testimonials, forms and CTAs to encourage visitors to take action.',
         bgImage:
-            t3.src,
+            p3.src,
         rotation: 'rotate-2',
     },
     {
@@ -168,7 +179,7 @@ export const processCards: ProcessCardData[] = [
         description:
             'Your landing page is designed to provide a smooth experience across desktops, tablets and smartphones.',
         bgImage:
-            t4.src,
+            p4.src,
         rotation: '-rotate-3',
     },
     {
@@ -176,7 +187,7 @@ export const processCards: ProcessCardData[] = [
         description:
             'We focus on a clean interface, easy navigation and an engaging experience that helps reduce distractions.',
         bgImage:
-            t5.src,
+            p5.src,
         rotation: 'rotate-0',
     },
 ];
@@ -229,37 +240,37 @@ export const landingUiFeatures: UiFeature[] = [
         icon: Type,
         title: "Clear & Powerful Headlines",
         description: "We create attention-grabbing headlines that immediately communicate your core offer and value proposition.",
-        bgImage: t4.src
+        bgImage: l1.src
     },
     {
         icon: ImageIcon,
         title: "Engaging Visuals",
         description: "Relevant images, graphics, icons and videos help communicate your message and keep visitors interested.",
-        bgImage: t4.src
+        bgImage: l2.src
     },
     {
         icon: MousePointerClick,
         title: "Strong Call-to-Action",
         description: "Strategically positioned CTA buttons guide visitors toward actions such as Get a Quote, Contact Us, or Book Now.",
-        bgImage: t4.src
+        bgImage: l3.src
     },
     {
         icon: Layout,
         title: "Clean Layout",
         description: "We eliminate unnecessary distractions and create a focused page experience.",
-        bgImage: t4.src
+        bgImage: l4.src
     },
     {
         icon: ShieldCheck,
         title: "Trust-Building Elements",
         description: "Testimonials, reviews, certifications, client logos and trust badges can be incorporated to improve credibility.",
-        bgImage: t4.src
+        bgImage: l5.src
     },
     {
         icon: Smartphone,
         title: "Mobile Responsive Design",
         description: "Your landing page will adapt smoothly to smartphones, tablets and desktops.",
-        bgImage: t4.src
+        bgImage: l6.src
     }
 ];
 
