@@ -130,6 +130,12 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
 
+  {
+    path: "/website-development/react-website-development",
+    title: "React Website Development",
+    currentPage: "React Website Development",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
 
   {
 
@@ -148,6 +154,12 @@ const data = [
     path: "/web-design/website-redesign",
     title: " Website Redesign",
     currentPage: "Website Redesign ",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+  {
+    path: "/web-design/ui-ux-desgin",
+    title: " UI/UX Design",
+    currentPage: "UI/UX Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {

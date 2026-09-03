@@ -29,7 +29,7 @@ const defaultFeatures: FeatureItem[] = [
             "Create a memorable online identity with a website designed specifically for your business. Our team develops layouts, visual elements, typography, and branding components that communicate your company's personality and help differentiate your brand from competitors.",
         colClass: "col-lg-8 col-md-12",
         isFeatured: true,
-        imageUrl: "/assets/images/ourstory/image-1.jpg",
+        imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-1.jpg",
         imageAlt: "Bespoke branding design",
     },
     // Compact Side Feature Block
@@ -41,7 +41,7 @@ const defaultFeatures: FeatureItem[] = [
         subtitle:
             "We create customized landing pages designed around your marketing objectives, structured around your target audience to maximize conversion rates.",
         colClass: "col-lg-4 col-md-6",
-        imageUrl: "/assets/images/ourstory/image-1.jpg",
+        imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-2.jpg",
         imageAlt: "Landing page design",
     },
     // Compact Feature Block
@@ -53,7 +53,7 @@ const defaultFeatures: FeatureItem[] = [
         subtitle:
             "From enquiry forms, APIs, and customer portals to payment gateways and eCommerce, built around your business needs.",
         colClass: "col-lg-4 col-md-6",
-        imageUrl: "/assets/images/ourstory/image-1.jpg",
+        imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-3.jpg",
         imageAlt: "Custom functionality",
     },
     // Large Featured SEO Block
@@ -66,7 +66,7 @@ const defaultFeatures: FeatureItem[] = [
             "A professionally developed website should also be search-engine friendly. We build websites with SEO-friendly structures, optimized page elements, clean code, responsive layouts, proper heading structures, metadata, and content organization to support your search visibility. Our website development in Chennai focuses on combining technical performance with SEO best practices from day one.",
         colClass: "col-lg-8 col-md-12",
         isFeatured: true,
-        imageUrl: "/images/seo-bg.jpg",
+        imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-4.jpg",
         imageAlt: "SEO optimization",
     },
     // Split Equal Bottom Row Blocks
@@ -78,18 +78,18 @@ const defaultFeatures: FeatureItem[] = [
         subtitle:
             "Your customers access your site from smartphones, tablets, and desktops. We ensure smooth adaptation and flawless user experiences across all screen sizes.",
         colClass: "col-lg-8 col-md-12",
-        imageUrl: "/images/responsive-bg.jpg",
+        imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-5.jpg",
         imageAlt: "Responsive development",
     },
     {
         id: "06",
-        iconClass: "fa-solid fa-shield-halved",
+        iconClass: "fas fa-shield-alt",
         accentClass: "cardsixdesg1-accent-secondary",
         title: "Secure & Scalable Websites",
         subtitle:
             "Security and scalability are paramount for long-term growth. We follow enterprise-grade development practices that scale effortlessly alongside your expanding business.",
         colClass: "col-lg-4 col-md-6",
-        imageUrl: "/images/security-bg.jpg",
+        imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-6.jpg",
         imageAlt: "Secure and scalable websites",
     },
 ];

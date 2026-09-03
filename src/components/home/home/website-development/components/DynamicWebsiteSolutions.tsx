@@ -19,7 +19,8 @@ import {
 const CARD_DATA = [
   {
     id: "creative-customized-designs",
-    image: "/assets/images/webdev/image-1.jpg",
+    image:
+      "/assets/images/website-development/custom-website-development/why-business-1.jpg",
     icon: FiPenTool,
     title: "Creative & Customized Designs",
     text: "We create unique website experiences instead of depending entirely on generic templates.",
@@ -27,7 +28,8 @@ const CARD_DATA = [
   },
   {
     id: "business-focused-development",
-    image: "/assets/images/webdev/image-2.jpg",
+    image:
+      "/assets/images/website-development/custom-website-development/why-business-2.jpg",
     icon: FiTarget,
     title: "Business-Focused Development",
     text: "Every website is planned around your business goals, customers, services, and industry.",
@@ -35,7 +37,8 @@ const CARD_DATA = [
   },
   {
     id: "seo-friendly-structure",
-    image: "/assets/images/webdev/image-3.jpg",
+    image:
+      "/assets/images/website-development/custom-website-development/why-business-3.jpg",
     icon: FiSearch,
     title: "SEO-Friendly Structure",
     text: "We follow search-engine-friendly development practices to create a strong technical foundation for SEO.",
@@ -43,7 +46,8 @@ const CARD_DATA = [
   },
   {
     id: "responsive-performance",
-    image: "/assets/images/webdev/image-4.jpg",
+    image:
+      "/assets/images/website-development/custom-website-development/why-business-4.jpg",
     icon: FiSmartphone,
     title: "Responsive & High-Performance Websites",
     text: "Our websites are developed to provide a smooth experience across different devices and screen sizes.",
@@ -51,7 +55,8 @@ const CARD_DATA = [
   },
   {
     id: "secure-development",
-    image: "/assets/images/webdev/image-5.jpg",
+    image:
+      "/assets/images/website-development/custom-website-development/why-business-5.jpg",
     icon: FiShield,
     title: "Secure Development",
     text: "We prioritize security, reliable functionality, and maintainable code during the development process.",
@@ -59,7 +64,8 @@ const CARD_DATA = [
   },
   {
     id: "timely-project-delivery",
-    image: "/assets/images/webdev/image-6.jpg",
+    image:
+      "/assets/images/website-development/custom-website-development/why-business-6.jpg",
     icon: FiClock,
     title: "Timely Project Delivery",
     text: "We follow a structured development workflow to keep the project on track and meet agreed timelines.",
@@ -67,7 +73,8 @@ const CARD_DATA = [
   },
   {
     id: "scalable-solutions",
-    image: "/assets/images/webdev/image-7.jpg",
+    image:
+      "/assets/images/website-development/custom-website-development/why-business-7.jpg",
     icon: FiTrendingUp,
     title: "Scalable Solutions",
     text: "Our custom development approach allows your website to accommodate additional features as your business grows.",
@@ -75,7 +82,8 @@ const CARD_DATA = [
   },
   {
     id: "budget-friendly-solutions",
-    image: "/assets/images/webdev/image-8.jpg",
+    image:
+      "/assets/images/website-development/custom-website-development/why-business-8.jpg",
     icon: FiDollarSign,
     title: "Budget-Friendly Solutions",
     text: "We recommend suitable technologies and features based on your requirements and budget rather than adding unnecessary complexity.",
@@ -109,10 +117,17 @@ const WebDevCard = ({
       data-aos="fade-up"
       data-aos-delay={aosDelay || "0"}
       data-aos-duration="1000"
-      style={{
-        backgroundImage: `url(${image})`,
-      }}
     >
+      {/* Background Image Container */}
+      <div
+        className="web-dev-card-bg"
+        style={{ backgroundImage: `url(${image})` }}
+      />
+
+      {/* #53ae7d Tint Overlay */}
+      <div className="web-dev-card-overlay" />
+
+      {/* Foreground Content */}
       <div className="web-dev-card-content">
         <div className="web-dev-card-header">
           <h3 className="web-dev-card-title">{title}</h3>
@@ -122,7 +137,9 @@ const WebDevCard = ({
           </div>
         </div>
 
-        <p className="web-dev-card-text">{text}</p>
+        <div className="web-dev-card-text-wrapper">
+          <p className="web-dev-card-text">{text}</p>
+        </div>
       </div>
     </div>
   );
@@ -151,34 +168,65 @@ const DynamicWebsiteSolutions = ({
             .web-dev-img-card {
               position: relative;
               border-radius: 24px;
-              background-size: cover;
-              background-position: center;
-              background-repeat: no-repeat;
               aspect-ratio: 4 / 5;
               max-height: 480px;
               width: 100%;
               margin: 0 auto 30px auto;
-              transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
+              transition: transform 0.35s ease, box-shadow 0.35s ease;
               overflow: hidden;
               display: flex;
               align-items: flex-end;
               padding: 16px;
+              cursor: pointer;
             }
 
+            /* Separate Image Layer for Blur Scaling */
+            .web-dev-card-bg {
+              position: absolute;
+              inset: 0;
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              transition: transform 0.5s ease, filter 0.5s ease;
+              z-index: 1;
+            }
+
+            /*  Slightly Tinted Gradient Overlay */
+            .web-dev-card-overlay {
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgb(255 255 255 / 0%) 35%, rgb(255 255 255 / 0%) 58%);
+              z-index: 2;
+              transition: opacity 0.35s ease;
+            }
+
+            /* Card Lift & Shadow on Hover */
             .web-dev-img-card:hover {
               transform: translateY(-8px);
-              box-shadow: 0 10px 30px rgba(5, 52, 86, 0.2);
+              box-shadow: 0 14px 35px rgba(5, 52, 86, 0.25);
+            }
+
+            /* Blur & Zoom Background Image on Hover */
+            .web-dev-img-card:hover .web-dev-card-bg {
+              filter: blur(5px);
+              transform: scale(1.08);
             }
 
             .web-dev-card-content {
-              background-color: #ffffff;
+              background-color: transparent;
               border-radius: 16px;
-              padding: 20px;
+              padding: 16px;
               width: 100%;
               position: relative;
-              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+              z-index: 3;
+              transition: background-color 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+            }
+
+            /* Solid Background Box on Hover for Text Contrast */
+            .web-dev-img-card:hover .web-dev-card-content {
+              background-color: #ffffff;
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+              padding: 20px;
             }
 
             .web-dev-card-header {
@@ -186,19 +234,23 @@ const DynamicWebsiteSolutions = ({
               align-items: center;
               justify-content: space-between;
               gap: 12px;
-              margin-bottom: 12px;
             }
 
             .web-dev-card-title {
-              color: #053456;
+              color: #000000;
               font-weight: 700;
               font-size: 18px;
               line-height: 1.3;
               margin: 0;
+              transition: color 0.35s ease;
+            }
+
+            .web-dev-img-card:hover .web-dev-card-title {
+              color: #053456;
             }
 
             .web-dev-card-icon-box {
-              background-color: #053456;
+              background-color: #53ae7d;
               color: #ffffff;
               width: 38px;
               height: 38px;
@@ -207,19 +259,29 @@ const DynamicWebsiteSolutions = ({
               display: flex;
               align-items: center;
               justify-content: center;
-              transition:
-                background-color 0.3s ease,
-                transform 0.3s ease;
+              transition: background-color 0.35s ease, transform 0.35s ease;
             }
 
-            .web-dev-img-card:hover
-              .web-dev-card-icon-box {
-              background-color: #53ae7d;
-              transform: rotate(8deg);
+            .web-dev-img-card:hover .web-dev-card-icon-box {
+              background-color: #053456;
+              transform: rotate(10deg);
             }
 
             .web-dev-card-icon {
               font-size: 18px;
+            }
+
+            /* Animated Collapsible Text Box */
+            .web-dev-card-text-wrapper {
+              display: grid;
+              grid-template-rows: 0fr;
+              transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1), margin-top 0.35s ease;
+              margin-top: 0;
+            }
+
+            .web-dev-img-card:hover .web-dev-card-text-wrapper {
+              grid-template-rows: 1fr;
+              margin-top: 12px;
             }
 
             .web-dev-card-text {
@@ -227,6 +289,15 @@ const DynamicWebsiteSolutions = ({
               line-height: 1.5;
               margin-bottom: 0;
               color: #4b5563;
+              overflow: hidden;
+              opacity: 0;
+              transform: translateY(10px);
+              transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
+            }
+
+            .web-dev-img-card:hover .web-dev-card-text {
+              opacity: 1;
+              transform: translateY(0);
             }
 
             .dyncardtitle .px-section-subtitle {
@@ -268,10 +339,6 @@ const DynamicWebsiteSolutions = ({
                 max-height: 420px;
               }
 
-              .web-dev-card-content {
-                padding: 18px;
-              }
-
               .web-dev-card-title {
                 font-size: 17px;
               }
@@ -286,7 +353,6 @@ const DynamicWebsiteSolutions = ({
 
       <section className="web-dev-solutions-section">
         <div className="container">
-
           <SectionTitle
             titleFirst="Why Businesses"
             titleSecond="Choose Us"
@@ -313,7 +379,6 @@ const DynamicWebsiteSolutions = ({
               </div>
             ))}
           </div>
-
         </div>
       </section>
     </>

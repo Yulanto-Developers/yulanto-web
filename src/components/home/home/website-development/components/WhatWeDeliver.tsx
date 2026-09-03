@@ -10,21 +10,81 @@ interface ServiceItem {
 }
 
 const servicesData: ServiceItem[] = [
-  { title: "Custom corporate websites", imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=120&q=80" },
-  { title: "Business websites", imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=120&q=80" },
-  { title: "WordPress website development", imageUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=120&q=80" },
-  { title: "eCommerce website development", imageUrl: "https://images.unsplash.com/photo-1556742049-0a679246c7a6?auto=format&fit=crop&w=120&q=80" },
-  { title: "WooCommerce development", imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=120&q=80" },
-  { title: "Custom PHP development", imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=120&q=80" },
-  { title: "Laravel website development", imageUrl: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=120&q=80" },
-  { title: "CodeIgniter development", imageUrl: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=120&q=80" },
-  { title: "Landing page development", imageUrl: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=120&q=80" },
-  { title: "Website redesign & redevelopment", imageUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=120&q=80" },
-  { title: "Custom web applications", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=120&q=80" },
-  { title: "API & third-party integrations", imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=120&q=80" },
-  { title: "Payment gateway integration", imageUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=120&q=80" },
-  { title: "SEO-friendly website development", imageUrl: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=120&q=80" },
-  { title: "Website maintenance & support", imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=120&q=80" }
+  {
+    title: "Custom corporate websites",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-1.png",
+  },
+  {
+    title: "Business websites",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-2.png",
+  },
+  {
+    title: "WordPress website development",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-3.png",
+  },
+  {
+    title: "eCommerce website development",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-4.png",
+  },
+  {
+    title: "WooCommerce development",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-5.png",
+  },
+  {
+    title: "Custom PHP development",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-6.png",
+  },
+  {
+    title: "Laravel website development",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-7.png",
+  },
+  {
+    title: "CodeIgniter development",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-8.png",
+  },
+  {
+    title: "Landing page development",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-9.png",
+  },
+  {
+    title: "Website redesign & redevelopment",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-10.png",
+  },
+  {
+    title: "Custom web applications",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-11.png",
+  },
+  {
+    title: "API & third-party integrations",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-12.png",
+  },
+  {
+    title: "Payment gateway integration",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-13.png",
+  },
+  {
+    title: "SEO-friendly website development",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-14.png",
+  },
+  {
+    title: "Website maintenance & support",
+    imageUrl:
+      "/assets/images/website-development/custom-website-development/Professional-Website-15.png",
+  },
 ];
 
 export default function ServicesGrid() {
