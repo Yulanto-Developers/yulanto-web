@@ -204,39 +204,45 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
 
-   {
+  {
     path: "/Social-Media-Creative-Design",
     title: "Social Media Creative Designs",
-    
+
     currentPage: "Social Media Creative Designs",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
 
-  
-   {
+
+  {
     path: "/WordPress-Development",
     title: "WordPress Development",
-    
+
     currentPage: "WordPress Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-    {
+  {
     path: "/WooCommerce-Development",
- 
+
     title: "WooCommerce Development",
-    
+
     currentPage: "WooCommerce Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
-  },         
+  },
 
-   {
+  {
     path: "/custome-ecommerce-development",
     title: "Custome Ecommerce Development",
-    
+
     currentPage: "Custome Ecommerce Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-                      
+  {
+    path: "/portal-web-development",
+    title: "Portal Web Development",
+    currentPage: "Portal Web Development",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+
 
 
 
