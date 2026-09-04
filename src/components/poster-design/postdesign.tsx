@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 interface FeatureItem {
   id: number;
@@ -17,7 +17,7 @@ const featuresList: FeatureItem[] = [
     description:
       "We develop designs that are visually appealing while keeping your business objectives in focus.",
     icon: "fa-solid fa-lightbulb",
-    image: "/assets/img/flyer/creative-concepts.jpg",
+    image: "/assets/img/flyerposter/Flyers-&-Posters-1.jpg",
   },
   {
     id: 1,
@@ -25,7 +25,7 @@ const featuresList: FeatureItem[] = [
     description:
       "Your logo, brand colors, typography, images, and messaging are incorporated consistently across every design.",
     icon: "fa-solid fa-palette",
-    image: "/assets/img/flyer/brand-focused.jpg",
+    image: "/assets/img/flyerposter/Flyers-&-Posters-2.jpg",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const featuresList: FeatureItem[] = [
     description:
       "We organize content strategically so your audience can understand your message quickly.",
     icon: "fa-solid fa-bullhorn",
-    image: "/assets/img/flyer/effective-comm.jpg",
+    image: "/assets/img/flyerposter/Flyers-&-Posters-3.jpg",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const featuresList: FeatureItem[] = [
     description:
       "Our designs are created with attention to layout, typography, imagery, spacing, and visual hierarchy.",
     icon: "fa-solid fa-award",
-    image: "/assets/img/flyer/pro-quality.jpg",
+    image: "/assets/img/flyerposter/Flyers-&-Posters-3.jpg",
   },
   {
     id: 4,
@@ -49,41 +49,19 @@ const featuresList: FeatureItem[] = [
     description:
       "Get designs optimized for printing, websites, social media, WhatsApp, email campaigns, and other digital platforms.",
     icon: "fa-solid fa-layer-group",
-    image: "/assets/img/flyer/print-digital.jpg",
+    image: "/assets/img/flyerposter/Flyers-&-Posters-1.jpg",
   },
 ];
 
 export default function WhyChooseFlyerPoster() {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (isHovered) return;
-
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % featuresList.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [isHovered]);
-
-  const activeFeature = featuresList[activeIndex];
-
   return (
-    <section className="px-about-6-area pt-80 pb-80  "  style={{     backgroundColor: "#ffffff",}}>    
-     
-      
- 
-
+    <section className="px-about-6-area pt-80 pb-80  " style={{ backgroundColor: "#ffffff" }}>
       <div className="container container-1550">
         <div className="row align-items-center g-5">
           {/* Left Side: Image Layout */}
           <div className="col-12 col-lg-6" data-aos="fade-right">
-            <div
-              className="row align-items-center g-3"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
+            <div className="row align-items-center g-3">
+              {/* Left Large Image */}
               <div className="col-6">
                 <div
                   className="overflow-hidden shadow-sm"
@@ -93,22 +71,23 @@ export default function WhyChooseFlyerPoster() {
                   }}
                 >
                   <img
-                    key={`left-${activeFeature.id}`}
-                    src={activeFeature.image}
-                    alt={activeFeature.title}
+                    src={featuresList[0].image}
+                    alt={featuresList[0].title}
                     style={{
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
-                      filter: "grayscale(100%)",
+                   
                       transition: "all 0.5s ease",
                     }}
                   />
                 </div>
               </div>
 
+              {/* Right Stacked Images */}
               <div className="col-6">
                 <div className="d-flex flex-column gap-3">
+                  {/* Top Image */}
                   <div
                     className="overflow-hidden shadow-sm"
                     style={{
@@ -117,19 +96,18 @@ export default function WhyChooseFlyerPoster() {
                     }}
                   >
                     <img
-                      key={`top-${activeFeature.id}`}
-                      src={activeFeature.image}
-                      alt={activeFeature.title}
+                      src={featuresList[1].image}
+                      alt={featuresList[1].title}
                       style={{
                         width: "100%",
                         height: "100%",
                         objectFit: "cover",
-                        filter: "grayscale(100%)",
                         transition: "all 0.5s ease",
                       }}
                     />
                   </div>
 
+                  {/* Bottom Image */}
                   <div
                     className="overflow-hidden shadow-sm"
                     style={{
@@ -138,14 +116,12 @@ export default function WhyChooseFlyerPoster() {
                     }}
                   >
                     <img
-                      key={`bot-${activeFeature.id}`}
-                      src={activeFeature.image}
-                      alt={activeFeature.title}
+                      src={featuresList[2].image}
+                      alt={featuresList[2].title}
                       style={{
                         width: "100%",
                         height: "100%",
                         objectFit: "cover",
-                        filter: "grayscale(100%)",
                         transition: "all 0.5s ease",
                       }}
                     />
@@ -158,25 +134,16 @@ export default function WhyChooseFlyerPoster() {
           {/* Right Side: Text Content */}
           <div className="col-12 col-lg-6" data-aos="fade-left">
             <div className="px-project-title-box">
-              <h4
-                className="px-about-title mb-20"
-               
-              >
-                  <span className="text-blue-about">Flyers & Posters That </span>
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">Flyers & Posters That </span>
                 Support Your Marketing Goals
               </h4>
-              <p
-                className="text-figtree text-black mb-3"
-               
-              >
+              <p className="text-figtree text-black mb-3">
                 Whether you are launching a new product, announcing a special
                 offer, promoting an event, or building brand awareness, the right
                 visual communication can make a significant difference.
               </p>
-              <p
-                className="text-figtree text-black mb-0"
-              
-              >
+              <p className="text-figtree text-black mb-0">
                 Our flyer and poster design company in Chennai helps businesses
                 create attractive marketing materials that grab attention,
                 communicate value, and strengthen brand visibility.

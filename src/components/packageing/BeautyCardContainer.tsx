@@ -9,10 +9,10 @@ export interface BeautyCardContainerProps {
 
 export const BeautyCardContainer: React.FC<BeautyCardContainerProps> = ({
   images = [
-    "https://loremflickr.com/320/240/paris?random=1",
-    "https://loremflickr.com/320/240/brazil,rio?random=2",
-    "https://loremflickr.com/320/240/museum?random=3",
-    "https://loremflickr.com/320/240/nature?random=4",
+    "assets/img/package/envelope-1.jpg",
+    "assets/img/package/envelope-2.jpg",
+    "assets/img/package/envelope-3.jpg",
+    "assets/img/package/envelope-4.jpg",
   ],
   className = "",
 }) => {
@@ -112,6 +112,7 @@ export const BeautyCardContainer: React.FC<BeautyCardContainerProps> = ({
               width: "100%",
               maxWidth: isVisible ? `${(images.length + 1) * 210 + 60}px` : "320px",
               height: "320px",
+          
               margin: "0 left",
               transition: "max-width 0.8s cubic-bezier(0.25, 1, 0.5, 1)",
             }}

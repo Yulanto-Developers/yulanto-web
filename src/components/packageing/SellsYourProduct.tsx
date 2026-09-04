@@ -22,8 +22,7 @@ export function SingleImagePackagingSection() {
           border-radius: 20px;
           overflow: hidden;
           box-shadow: 0 15px 35px rgba(5, 52, 86, 0.08);
-          height: 100%;
-          min-height: 480px;
+       
           transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
@@ -112,7 +111,7 @@ export function SingleImagePackagingSection() {
           <div className="col-12 col-lg-6">
             <div className="single-image-wrapper">
               <img 
-                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1000&auto=format&fit=crop" 
+                src="assets/img/package/last-img.jpg" 
                 alt="Package Design Showcase" 
               />
             </div>

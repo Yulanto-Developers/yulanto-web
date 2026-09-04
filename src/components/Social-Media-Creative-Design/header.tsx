@@ -21,11 +21,11 @@ interface SocialMediaHeroProps {
 }
 
 const defaultImages: ImageCard[] = [
-  { image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=500&auto=format&fit=crop&q=80", alt: "Top Left Post" },
-  { image: "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=500&auto=format&fit=crop&q=80", alt: "Bottom Left Post" },
-  { image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&auto=format&fit=crop&q=80", alt: "Phone Mockup Center" },
-  { image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&auto=format&fit=crop&q=80", alt: "Top Right Post" },
-  { image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=500&auto=format&fit=crop&q=80", alt: "Bottom Right Post" },
+  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-1.jpg", alt: "Top Left Post" },
+  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-2.jpg", alt: "Bottom Left Post" },
+  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-3.jpg", alt: "Phone Mockup Center" },
+  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-4.jpg", alt: "Top Right Post" },
+  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-5.jpg", alt: "Bottom Right Post" },
 ];
 
 export function PulseFitHero({

@@ -67,7 +67,7 @@ export function BuildPresenceSection() {
             <div className="col-lg-5 text-center" data-aos="fade-left" data-aos-delay="200">
               <div className="position-relative d-inline-block">
                 <img
-                  src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&auto=format&fit=crop&q=80"
+                  src="assets/img/SocialMediaCreativeDesigns/last.jpg"
                   alt="Build Social Media Presence"
                   className="img-fluid rounded-4 shadow"
                   style={{

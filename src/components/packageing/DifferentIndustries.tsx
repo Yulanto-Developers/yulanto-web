@@ -8,9 +8,9 @@ interface IndustryNode {
 }
 
 const centerImages = [
-  "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=400&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=400&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=400&auto=format&fit=crop",
+  "assets/img/package/circle-1.jpg",
+  "assets/img/package/circle-2.jpg",
+  "assets/img/package/circle-3.jpg",
 ];
 
 const industriesData: IndustryNode[] = [
@@ -109,7 +109,7 @@ export function RotatingIndustriesSection() {
               style={{ height: "380px" }}
             >
               <img 
-                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=800&auto=format&fit=crop" 
+                src="assets/img/package/Packaging-Design-for-Different-Industries.jpg" 
                 alt="Packaging Design Industries" 
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -121,7 +121,7 @@ export function RotatingIndustriesSection() {
                   fontFamily: "Figtree, Figtree Fallback"
                 }}
               >
-                <span className="fw-bold text-uppercase d-block mb-1" style={{ color: "#53ae7d", fontSize: "12px", letterSpacing: "1px" }}>
+                <span className="fw-bold text-uppercase d-block mb-1" style={{ color: "#fff", fontSize: "12px", letterSpacing: "1px" }}>
                   Tailored Solutions
                 </span>
                 <h5 className="m-0 text-white" style={{ fontSize: "18px" }}>

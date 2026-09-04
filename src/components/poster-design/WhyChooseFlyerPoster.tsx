@@ -17,7 +17,7 @@ const featuresList: FeatureItem[] = [
     description:
       "We develop designs that are visually appealing while keeping your business objectives in focus.",
     icon: "fa-solid fa-lightbulb",
-    image: "/assets/img/flyer/creative-concepts.jpg",
+    image: "/assets/img/flyerposter/Why-Choose-Our-Flyer-1.jpg",
   },
   {
     id: 1,
@@ -25,7 +25,7 @@ const featuresList: FeatureItem[] = [
     description:
       "Your logo, brand colors, typography, images, and messaging are incorporated consistently across every design.",
     icon: "fa-solid fa-palette",
-    image: "/assets/img/flyer/brand-focused.jpg",
+    image: "/assets/img/flyerposter/Why-Choose-Our-Flyer-2.jpg",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const featuresList: FeatureItem[] = [
     description:
       "We organize content strategically so your audience can understand your message quickly.",
     icon: "fa-solid fa-bullhorn",
-    image: "/assets/img/flyer/effective-comm.jpg",
+    image: "/assets/img/flyerposter/Why-Choose-Our-Flyer-3.jpg",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const featuresList: FeatureItem[] = [
     description:
       "Our designs are created with attention to layout, typography, imagery, spacing, and visual hierarchy.",
     icon: "fa-solid fa-award",
-    image: "/assets/img/flyer/pro-quality.jpg",
+    image: "/assets/img/flyerposter/Why-Choose-Our-Flyer-4.jpg",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const featuresList: FeatureItem[] = [
     description:
       "Get designs optimized for printing, websites, social media, WhatsApp, email campaigns, and other digital platforms.",
     icon: "fa-solid fa-layer-group",
-    image: "/assets/img/flyer/print-digital.jpg",
+    image: "/assets/img/flyerposter/Why-Choose-Our-Flyer-5.jpg",
   },
 ];
 

@@ -12,7 +12,7 @@ interface CreativePackagingSectionProps {
 
 export function CreativePackagingSection({
     className = "",
-    imageSrc = "/assets/img/packaging/packaging-design.jpg", // Replace with your image path
+    imageSrc = "/assets/img/package/Creative-Packaging-Design.jpg", // Replace with your image path
     imageAlt = "Creative Packaging Design Showcase",
 }: CreativePackagingSectionProps) {
 

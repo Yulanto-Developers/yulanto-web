@@ -11,21 +11,21 @@ interface ServiceItem {
 }
 
 const servicesList: ServiceItem[] = [
-  { icon: "/assets/icons/instagram.png", title: "Instagram", subtitle: "Posts & Creatives" },
-  { icon: "/assets/icons/facebook.png", title: "Facebook", subtitle: "Post Designs" },
-  { icon: "/assets/icons/linkedin.png", title: "LinkedIn", subtitle: "Creative Designs" },
-  { icon: "/assets/icons/instagram.png", title: "Instagram", subtitle: "Stories" },
-  { icon: "/assets/icons/facebook.png", title: "Facebook", subtitle: "Stories" },
-  { icon: "/assets/icons/megaphone.png", title: "Promotional", subtitle: "Campaign Creatives" },
-  { icon: "/assets/icons/package.png", title: "Product & Service", subtitle: "Promotions" },
-  { icon: "/assets/icons/gift.png", title: "Festival &", subtitle: "Seasonal Creatives" },
-  { icon: "/assets/icons/tag.png", title: "Offer & Discount", subtitle: "Posts" },
-  { icon: "/assets/icons/briefcase.png", title: "Corporate Social", subtitle: "Media Designs" },
-  { icon: "/assets/icons/calendar.png", title: "Event & Announcement", subtitle: "Creatives" },
-  { icon: "/assets/icons/target.png", title: "Brand Awareness", subtitle: "Posts" },
-  { icon: "/assets/icons/chart.png", title: "Infographics &", subtitle: "Informative Posts" },
-  { icon: "/assets/icons/chat.png", title: "Quote & Engagement", subtitle: "Posts" },
-  { icon: "/assets/icons/ad.png", title: "Social Media Ad", subtitle: "Creatives" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-1.png", title: "Instagram", subtitle: "Posts & Creatives" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-2.png", title: "Facebook", subtitle: "Post Designs" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-3.png", title: "LinkedIn", subtitle: "Creative Designs" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-4.png", title: "Instagram", subtitle: "Stories" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-5.png", title: "Facebook", subtitle: "Stories" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-6.png", title: "Promotional", subtitle: "Campaign Creatives" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-7.png", title: "Product & Service", subtitle: "Promotions" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-8.png", title: "Festival &", subtitle: "Seasonal Creatives" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-9.png", title: "Offer & Discount", subtitle: "Posts" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-10.png", title: "Corporate Social", subtitle: "Media Designs" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-11.png", title: "Event & Announcement", subtitle: "Creatives" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-12.png", title: "Brand Awareness", subtitle: "Posts" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-13.png", title: "Infographics &", subtitle: "Informative Posts" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-14.png", title: "Quote & Engagement", subtitle: "Posts" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-15.png", title: "Social Media Ad", subtitle: "Creatives" },
 ];
 
 export function SocialMediaServicesSection() {
@@ -45,8 +45,8 @@ export function SocialMediaServicesSection() {
         {/* Header Block */}
         <div className="text-center mb-5" data-aos="fade-up">
           <h4 className="px-about-title mb-20 text-center">
-            <span className="text-blue-about">Our social media creative design</span>
-           services are suitable for:
+            <span className="text-blue-about">Our social media creative design</span>   services are suitable for
+            
           </h4>
         </div>
 
@@ -67,9 +67,9 @@ export function SocialMediaServicesSection() {
                 <div 
                   className="rounded-circle d-flex align-items-center justify-content-center mb-3"
                   style={{
-                    width: "60px",
-                    height: "60px",
-                    backgroundColor: "#f8f9fa",
+                    width: "90px",
+                    height: "90px",
+                    backgroundColor: "#ffff",
                     boxShadow: "inset 0 0 10px rgba(0,0,0,0.03)"
                   }}
                 >

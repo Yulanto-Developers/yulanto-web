@@ -16,35 +16,35 @@ const featuresData: FeatureCardProps[] = [
     description: "We create packaging that reflects your brand identity and helps customers instantly recognize your products.",
     badgeColor: "#53ae7d", // Forest Green
     iconClass: "fa-solid fa-copyright",
-    imageUrl: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&auto=format&fit=crop",
+    imageUrl: "assets/img/package/Why-Choose-Our-Packaging-1.jpg",
   },
   {
     title: "Creative & Modern Concepts",
     description: "Our designers develop fresh concepts based on current design trends while keeping your brand unique.",
     badgeColor: "#053456", // Warm Amber
     iconClass: "fa-solid fa-lightbulb",
-    imageUrl: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=600&auto=format&fit=crop",
+    imageUrl: "assets/img/package/Why-Choose-Our-Packaging-2.jpg",
   },
   {
     title: "Customer-Centric Approach",
     description: "We design with your target customers in mind, ensuring that the packaging communicates your product benefits effectively.",
     badgeColor: "#53ae7d", // Deep Blue
     iconClass: "fa-solid fa-users",
-    imageUrl: "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=600&auto=format&fit=crop",
+    imageUrl: "assets/img/package/Why-Choose-Our-Packaging-3.jpg",
   },
   {
     title: "Print-Ready Artwork",
     description: "Our packaging designs are prepared with production requirements in mind, making them suitable for professional printing.",
     badgeColor: "#053456", // Purple
     iconClass: "fa-solid fa-print",
-    imageUrl: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?q=80&w=600&auto=format&fit=crop",
+    imageUrl: "assets/img/package/Why-Choose-Our-Packaging-4.jpg",
   },
   {
     title: "Multiple Packaging Formats",
     description: "Whether you need a box, bottle label, pouch, carton, sticker, or retail package, we can create designs for different product formats.",
     badgeColor: "#53ae7d", // Custom Brand Green
     iconClass: "fa-solid fa-boxes-stacked",
-    imageUrl: "https://images.unsplash.com/photo-1608248597263-0057e57b4524?q=80&w=600&auto=format&fit=crop",
+    imageUrl: "assets/img/package/Why-Choose-Our-Packaging-5.jpg",
   },
 ];
 

@@ -52,19 +52,19 @@ const industriesList: IndustryItem[] = [
 
 const creativeCards: CreativeCard[] = [
   {
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&auto=format&fit=crop&q=80",
+    image: "assets/img/SocialMediaCreativeDesigns/Social-Media-Creatives-1.jpg",
     alt: "Healthcare Creative",
   },
   {
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&auto=format&fit=crop&q=80",
+    image: "assets/img/SocialMediaCreativeDesigns/Social-Media-Creatives-2.jpg",
     alt: "Real Estate Creative",
   },
   {
-    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=500&auto=format&fit=crop&q=80",
+    image: "assets/img/SocialMediaCreativeDesigns/Social-Media-Creatives-3.jpg",
     alt: "Festival Creative",
   },
   {
-    image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&auto=format&fit=crop&q=80",
+    image: "assets/img/SocialMediaCreativeDesigns/Social-Media-Creatives-4.jpg",
     alt: "Fitness Creative",
   },
 ];

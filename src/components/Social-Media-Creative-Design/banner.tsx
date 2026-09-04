@@ -13,63 +13,63 @@ interface OrbitItem {
 const SERVICE_ITEMS: OrbitItem[] = [
   {
     title: "Instagram Posts & Creatives",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg",
+    icon: "https://api.iconify.design/mdi:instagram.svg?color=%23E4405F",
   },
   {
     title: "Facebook Post Designs",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+    icon: "https://api.iconify.design/mdi:facebook.svg?color=%231877F2",
   },
   {
     title: "LinkedIn Creative Designs",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
+    icon: "https://api.iconify.design/mdi:linkedin.svg?color=%230A66C2",
   },
   {
     title: "Instagram Stories",
-    icon: "https://api.iconify.design/ri:instagram-line.svg?color=%23e4405f",
+    icon: "https://api.iconify.design/ri:instagram-line.svg?color=%23E4405F",
   },
   {
     title: "Facebook Stories",
-    icon: "https://api.iconify.design/ri:facebook-circle-fill.svg?color=%231877f2",
+    icon: "https://api.iconify.design/ri:facebook-circle-fill.svg?color=%231877F2",
   },
   {
     title: "Promotional Campaign Creatives",
-    icon: "https://api.iconify.design/fluent-emoji-flat:bullhorn.svg",
+    icon: "https://api.iconify.design/mdi:bullhorn.svg?color=%23FF9800",
   },
-  {
-    title: "Product & Service Promotions",
-    icon: "https://api.iconify.design/fluent-emoji-flat:shopping-bags.svg",
-  },
+ {
+  title: "Product & Service Promotions",
+  icon: "https://api.iconify.design/mdi:package-variant-closed.svg?color=%23FF9800",
+},
   {
     title: "Festival & Seasonal Creatives",
-    icon: "https://api.iconify.design/fluent-emoji-flat:sparkles.svg",
+    icon: "https://api.iconify.design/mdi:sparkles.svg?color=%23FFC107",
   },
   {
     title: "Offer & Discount Posts",
-    icon: "https://api.iconify.design/fluent-emoji-flat:label.svg",
+    icon: "https://api.iconify.design/mdi:tag.svg?color=%23E91E63",
   },
   {
     title: "Corporate Social Media Designs",
-    icon: "https://api.iconify.design/fluent-emoji-flat:briefcase.svg",
+    icon: "https://api.iconify.design/mdi:briefcase.svg?color=%236D4C41",
   },
   {
     title: "Event & Announcement Creatives",
-    icon: "https://api.iconify.design/fluent-emoji-flat:calendar.svg",
+    icon: "https://api.iconify.design/mdi:calendar.svg?color=%237E57C2",
   },
   {
     title: "Brand Awareness Posts",
-    icon: "https://api.iconify.design/fluent-emoji-flat:rocket.svg",
+    icon: "https://api.iconify.design/mdi:rocket-launch.svg?color=%23FF5722",
   },
   {
     title: "Infographics & Informative Posts",
-    icon: "https://api.iconify.design/fluent-emoji-flat:bar-chart.svg",
+    icon: "https://api.iconify.design/mdi:chart-bar.svg?color=%23009688",
   },
   {
     title: "Quote & Engagement Posts",
-    icon: "https://api.iconify.design/fluent-emoji-flat:speech-balloon.svg",
+    icon: "https://api.iconify.design/mdi:message-text.svg?color=%2303A9F4",
   },
   {
     title: "Social Media Ads",
-    icon: "https://api.iconify.design/fluent-emoji-flat:target.svg",
+    icon: "https://api.iconify.design/mdi:bullseye-arrow.svg?color=%23F44336",
   },
 ];
 

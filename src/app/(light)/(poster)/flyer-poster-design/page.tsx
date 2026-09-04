@@ -5,14 +5,14 @@ import Whychoose from "@/components/poster-design/WhyChooseFlyerPoster";
 import Poster from "@/components/poster-design/postdesign";
 import CTA from "@/components/poster-design/Cta";
 const heroImages = [
-    "/assets/img/careers/banner/img-careers-1.jpg",
-    "/assets/img/careers/banner/img-careers-2.jpg",
-    "/assets/img/careers/banner/img-careers-3.jpg",
-    "/assets/img/careers/banner/img-careers-4.jpg",
-    "/assets/img/careers/banner/img-careers-5.jpg",
-    "/assets/img/careers/banner/img-careers-6.jpg",
-    "/assets/img/careers/banner/img-careers-7.jpg",
-    "/assets/img/careers/banner/img-careers-8.jpg",
+    "/assets/img/flyerposter/top-1.jpg",
+    "/assets/img/flyerposter/top-2.jpg",
+    "/assets/img/flyerposter/top-3.jpg",
+    "/assets/img/flyerposter/top-4.jpg",
+    "/assets/img/flyerposter/top-5.jpg",
+    "/assets/img/flyerposter/top-6.jpg",
+    "/assets/img/flyerposter/top-7.jpg",
+    
 ];
 
 export default function Page() {

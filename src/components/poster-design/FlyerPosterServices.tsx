@@ -69,7 +69,7 @@ export default function FlyerPosterServices() {
                   style={{ zIndex: 1, height: "380px" }}
                 >
                   <img
-                    src="/assets/img/logodesign/Logo-1.jpg"
+                    src="/assets/img/flyerposter/Creative-Flyer-Design.jpg"
                     alt="Creative Flyer Design Showcase"
                     style={{
                       width: "100%",
@@ -141,7 +141,7 @@ export default function FlyerPosterServices() {
                   style={{ zIndex: 1, height: "550px" }}
                 >
                   <img
-                    src="/assets/img/logodesign/Logo-2.jpg"
+                    src="/assets/img/flyerposter/Professional-Poster.jpg"
                     alt="Professional Poster Design Showcase"
                     style={{
                       width: "100%",
