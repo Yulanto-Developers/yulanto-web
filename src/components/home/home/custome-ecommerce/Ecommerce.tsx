@@ -1,9 +1,17 @@
+'use client'
 import React from 'react'
 import IntroContent from '../myComponents/common/IntroContent'
-import { ecommerceDesignCards, ecommerceHomepageCards, ecommerceUserExperienceCards, productPageFeatures } from './ecommerceData/shareData'
+import { ecommerceDesignCards, ecommerceHomepageCards, ecommerceUserExperienceCards, productPageFeatures, industryData, ecommerceProcessData } from './ecommerceData/shareData'
 import t1 from '@/assets/img/website/corporate/Branding.jpg';
+import IndustrySection from '../myComponents/common/IndustrySection';
+import { useQuoteModal } from '../myComponents/Content/QuoteContext';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
 
 function Ecommerce() {
+    const { openModal } = useQuoteModal();
     return (
         <div>
             <IntroContent
@@ -1543,7 +1551,7 @@ function Ecommerce() {
                                 </div>
 
                                 <p className="text-figtree product-page-bottom-text">
-                                    Our <strong style={{color:'#053456'}}>design for ecommerce websites</strong> keeps
+                                    Our <strong style={{ color: '#053456' }}>design for ecommerce websites</strong> keeps
                                     product information organized so customers can make
                                     purchase decisions with confidence.
                                 </p>
@@ -1556,130 +1564,1759 @@ function Ecommerce() {
 
                 </div>
             </div>
-             <div
-    data-aos="fade-up"
-    data-aos-delay={400}
-    data-aos-once={true}
-    className="responsive-ecommerce-section"
->
-    <div className="container">
+            <div
+                data-aos="fade-up"
+                data-aos-delay={400}
+                data-aos-once={true}
+                className="responsive-ecommerce-section"
+            >
+                <div className="container">
 
-        <div className="row align-items-center">
+                    <div className="row align-items-center">
 
-            {/* LEFT CONTENT */}
-            <div className="col-lg-6">
+                        {/* LEFT CONTENT */}
+                        <div className="col-lg-6">
 
-                <span className="tp-section-subtitle text-black blink-ball">
-                    Responsive Shopping Experience
-                </span>
+                            <span className="tp-section-subtitle text-black blink-ball">
+                                Responsive Shopping Experience
+                            </span>
 
-                <h4 className="px-about-title">
-                    <span className="text-blue-about">
-                        Responsive E-commerce Website{" "}
-                    </span>
-                    Design
-                </h4>
+                            <h4 className="px-about-title">
+                                <span className="text-blue-about">
+                                    Responsive E-commerce Website{" "}
+                                </span>
+                                Design
+                            </h4>
 
-                <p className="text-figtree">
-                    Customers shop from desktops, laptops, tablets, and
-                    smartphones. That's why responsive design is an essential
-                    part of modern <strong>ecom website design</strong>.
-                </p>
+                            <p className="text-figtree">
+                                Customers shop from desktops, laptops, tablets, and
+                                smartphones. That's why responsive design is an essential
+                                part of modern <strong>ecom website design</strong>.
+                            </p>
 
-                <p className="text-figtree">
-                    We develop ecommerce websites that adapt to different
-                    screen sizes while maintaining usability, visual
-                    consistency, and easy navigation.
-                </p>
+                            <p className="text-figtree">
+                                We develop ecommerce websites that adapt to different
+                                screen sizes while maintaining usability, visual
+                                consistency, and easy navigation.
+                            </p>
 
-                <p className="text-figtree">
-                    Whether your customers visit your store from a mobile phone
-                    or desktop computer, we make sure your
-                    <strong> website and ecommerce design</strong> provide a
-                    consistent shopping experience.
-                </p>
+                            <p className="text-figtree">
+                                Whether your customers visit your store from a mobile phone
+                                or desktop computer, we make sure your
+                                <strong> website and ecommerce design</strong> provide a
+                                consistent shopping experience.
+                            </p>
 
-            </div>
+                        </div>
 
-            {/* RIGHT RESPONSIVE VISUAL */}
-            <div className="col-lg-6">
+                        {/* RIGHT RESPONSIVE VISUAL */}
+                        <div className="col-lg-6">
 
-                <div className="responsive-devices">
+                            <div className="responsive-devices">
 
-                    <div className="responsive-desktop">
-                        <div className="device-browser">
-                            <div className="browser-top">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                                <div className="responsive-desktop">
+                                    <div className="device-browser">
+                                        <div className="browser-top">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
 
-                            <div className="device-screen">
-                                <div className="screen-header"></div>
+                                        <div className="device-screen">
+                                            <div className="screen-header"></div>
 
-                                <div className="screen-hero">
-                                    <div></div>
-                                    <span></span>
+                                            <div className="screen-hero">
+                                                <div></div>
+                                                <span></span>
+                                            </div>
+
+                                            <div className="screen-products">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div className="screen-products">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                                <div className="responsive-tablet">
+                                    <div className="tablet-screen">
+
+                                        <div className="tablet-header"></div>
+
+                                        <div className="tablet-hero">
+                                            <span></span>
+                                        </div>
+
+                                        <div className="tablet-products">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+
+                                    </div>
                                 </div>
+
+                                <div className="responsive-mobile">
+                                    <div className="mobile-speaker"></div>
+
+                                    <div className="mobile-screen">
+
+                                        <div className="mobile-header"></div>
+
+                                        <div className="mobile-hero">
+                                            <span></span>
+                                        </div>
+
+                                        <div className="mobile-product">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+
+                                        <div className="mobile-button"></div>
+
+                                    </div>
+                                </div>
+
+                                <div className="responsive-circle responsive-circle-one"></div>
+                                <div className="responsive-circle responsive-circle-two"></div>
+
                             </div>
-                        </div>
-                    </div>
-
-                    <div className="responsive-tablet">
-                        <div className="tablet-screen">
-
-                            <div className="tablet-header"></div>
-
-                            <div className="tablet-hero">
-                                <span></span>
-                            </div>
-
-                            <div className="tablet-products">
-                                <span></span>
-                                <span></span>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div className="responsive-mobile">
-                        <div className="mobile-speaker"></div>
-
-                        <div className="mobile-screen">
-
-                            <div className="mobile-header"></div>
-
-                            <div className="mobile-hero">
-                                <span></span>
-                            </div>
-
-                            <div className="mobile-product">
-                                <span></span>
-                                <span></span>
-                            </div>
-
-                            <div className="mobile-button"></div>
 
                         </div>
-                    </div>
 
-                    <div className="responsive-circle responsive-circle-one"></div>
-                    <div className="responsive-circle responsive-circle-two"></div>
+                    </div>
 
                 </div>
-
             </div>
+            <div
+                data-aos="fade-up"
+                data-aos-delay={400}
+                data-aos-once={true}
+                className="responsive-ecommerce-section"
+            >
+                <div className="container">
+                    <div className="row align-items-center">
 
-        </div>
+                        <div className="col-12">
+                            <span className="tp-section-subtitle text-black blink-ball">
+                                Tailored E-commerce Development
+                            </span>
 
-    </div>
-</div>
+                            <h4 className="px-about-title">
+                                <span className="text-blue-about">
+                                    Custom E-commerce Development{" "}
+                                </span>
+                                for Different Industries
+                            </h4>
+                        </div>
+
+                        <div className="col-md-12">
+                            <p className="text-figtree">
+                                Our ecommerce website development solutions can be customized for businesses across different industries.
+                            </p>
+                            <p>We can develop online stores for: </p>
+                        </div>
+
+
+                    </div>
+
+                    <IndustrySection data={industryData} />
+
+                </div>
+            </div>
+            <div
+                data-aos="fade-up"
+                data-aos-delay={400}
+                data-aos-once={true}
+                className="responsive-ecommerce-section ecommerce-chennai-section"
+            >
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-md-12">
+                            <span className="tp-section-subtitle text-black blink-ball">
+                                Powerful E-commerce Solutions for Your Business
+                            </span>
+
+                            <h4 className="px-about-title">
+                                <span className="text-blue-about">
+                                    E-commerce Website Design{" "}
+                                </span>
+                                and Development in Chennai
+                            </h4>
+                        </div>
+                        {/* LEFT - E-COMMERCE SVG */}
+                        <div className="col-lg-6">
+                            <div className="ecommerce-chennai-visual">
+
+                                <svg
+                                    className="ecommerce-chennai-svg"
+                                    viewBox="0 0 600 520"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+
+                                    {/* Background */}
+                                    <ellipse
+                                        cx="300"
+                                        cy="270"
+                                        rx="245"
+                                        ry="190"
+                                        fill="#EDF6FA"
+                                    />
+
+                                    <circle
+                                        cx="105"
+                                        cy="105"
+                                        r="38"
+                                        fill="#E5F3F7"
+                                        className="eco-float"
+                                    />
+
+                                    <circle
+                                        cx="500"
+                                        cy="125"
+                                        r="28"
+                                        fill="#E5F3F7"
+                                        className="eco-float-delay"
+                                    />
+
+                                    {/* YULANTO BRAND */}
+                                    <g className="eco-brand">
+                                        <text
+                                            x="62"
+                                            y="72"
+                                            fill="#053456"
+                                            fontSize="28"
+                                            fontWeight="700"
+                                            className='text-tenor'
+                                        >
+                                            Yulanto
+                                        </text>
+
+                                        <text
+                                            x="65"
+                                            y="91"
+                                            fill="#53ae7d"
+                                            fontSize="9"
+                                            fontWeight="600"
+                                            letterSpacing="3"
+                                            className='text-tenor'
+                                        >
+                                            WEB CREATIONS
+                                        </text>
+                                    </g>
+
+                                    {/* CHENNAI LOCATION */}
+                                    <g className="eco-location">
+
+                                        <path
+                                            d="M475 65C475 48 489 35 506 35C523 35 537 48 537 65C537 88 506 112 506 112C506 112 475 88 475 65Z"
+                                            fill="#53ae7d"
+                                        />
+
+                                        <circle
+                                            cx="506"
+                                            cy="64"
+                                            r="10"
+                                            fill="white"
+                                        />
+
+                                        <text
+                                            x="430"
+                                            y="135"
+                                            fill="#053456"
+                                            fontSize="15"
+                                            fontWeight="600"
+                                            className='text-tenor'
+                                        >
+                                            Chennai
+                                        </text>
+
+                                        <path
+                                            d="M425 143C455 151 485 148 515 137"
+                                            stroke="#53ae7d"
+                                            strokeWidth="3"
+                                            fill="none"
+                                        />
+
+                                    </g>
+
+                                    {/* CHENNAI BUILDING */}
+                                    <g className="eco-building">
+
+                                        <path
+                                            d="M75 225L135 170L195 225V315H75V225Z"
+                                            fill="#D9EDF4"
+                                            stroke="#053456"
+                                            strokeWidth="4"
+                                        />
+
+                                        <path
+                                            d="M55 225L135 155L215 225"
+                                            stroke="#053456"
+                                            strokeWidth="5"
+                                            fill="none"
+                                        />
+
+                                        <path
+                                            d="M112 315V250H158V315"
+                                            fill="#53ae7d"
+                                            stroke="#053456"
+                                            strokeWidth="4"
+                                        />
+
+                                        <rect
+                                            x="88"
+                                            y="235"
+                                            width="20"
+                                            height="25"
+                                            rx="3"
+                                            fill="#053456"
+                                        />
+
+                                        <rect
+                                            x="163"
+                                            y="235"
+                                            width="20"
+                                            height="25"
+                                            rx="3"
+                                            fill="#053456"
+                                        />
+
+                                    </g>
+
+                                    {/* MAIN LAPTOP */}
+                                    <g className="eco-laptop">
+
+                                        {/* Laptop screen */}
+                                        <rect
+                                            x="155"
+                                            y="150"
+                                            width="315"
+                                            height="225"
+                                            rx="18"
+                                            fill="#053456"
+                                        />
+
+                                        {/* Screen */}
+                                        <rect
+                                            x="170"
+                                            y="165"
+                                            width="285"
+                                            height="190"
+                                            rx="8"
+                                            fill="white"
+                                        />
+
+                                        {/* Browser top */}
+                                        <circle
+                                            cx="187"
+                                            cy="181"
+                                            r="5"
+                                            fill="#53ae7d"
+                                        />
+
+                                        <circle
+                                            cx="203"
+                                            cy="181"
+                                            r="5"
+                                            fill="#D8E9EF"
+                                        />
+
+                                        <circle
+                                            cx="219"
+                                            cy="181"
+                                            r="5"
+                                            fill="#D8E9EF"
+                                        />
+
+                                        {/* Store Header */}
+                                        <rect
+                                            x="188"
+                                            y="202"
+                                            width="245"
+                                            height="32"
+                                            rx="6"
+                                            fill="#EDF6FA"
+                                        />
+
+                                        <text
+                                            x="202"
+                                            y="223"
+                                            fill="#053456"
+                                            fontSize="11"
+                                            fontWeight="700"
+                                            className='text-figtree'
+                                        >
+                                            YULANTO
+                                        </text>
+
+                                        {/* Search */}
+                                        <rect
+                                            x="320"
+                                            y="210"
+                                            width="95"
+                                            height="15"
+                                            rx="7"
+                                            fill="white"
+                                            stroke="#D8E9EF"
+                                            strokeWidth="2"
+                                        />
+
+                                        {/* Product Image */}
+                                        <rect
+                                            x="190"
+                                            y="248"
+                                            width="110"
+                                            height="85"
+                                            rx="8"
+                                            fill="#EDF6FA"
+                                        />
+
+                                        {/* Product Shoe */}
+                                        <path
+                                            d="M205 295C225 290 232 263 248 258L270 270L285 292L300 301V315H210C200 312 198 303 205 295Z"
+                                            fill="#053456"
+                                        />
+
+                                        <path
+                                            d="M245 280L270 291"
+                                            stroke="#53ae7d"
+                                            strokeWidth="7"
+                                            strokeLinecap="round"
+                                        />
+
+                                        <path
+                                            d="M211 315H301"
+                                            stroke="#53ae7d"
+                                            strokeWidth="5"
+                                            strokeLinecap="round"
+                                        />
+
+                                        {/* Product details */}
+                                        <rect
+                                            x="320"
+                                            y="250"
+                                            width="85"
+                                            height="9"
+                                            rx="4"
+                                            fill="#053456"
+                                        />
+
+                                        <rect
+                                            x="320"
+                                            y="269"
+                                            width="65"
+                                            height="7"
+                                            rx="4"
+                                            fill="#CFE4EC"
+                                        />
+
+                                        <rect
+                                            x="320"
+                                            y="284"
+                                            width="50"
+                                            height="7"
+                                            rx="4"
+                                            fill="#CFE4EC"
+                                        />
+
+                                        {/* Stars */}
+                                        <text
+                                            x="320"
+                                            y="310"
+                                            fill="#53ae7d"
+                                            fontSize="15"
+                                            fontFamily="Arial, sans-serif"
+                                        >
+                                            ★ ★ ★ ★ ★
+                                        </text>
+
+                                        {/* Price */}
+                                        <text
+                                            x="320"
+                                            y="330"
+                                            fill="#053456"
+                                            fontSize="13"
+                                            fontWeight="700"
+                                            className='text-figtree'
+                                        >
+                                            ₹2,499
+                                        </text>
+
+                                        {/* Laptop base */}
+                                        <path
+                                            d="M125 375H485L455 400H155L125 375Z"
+                                            fill="#053456"
+                                        />
+
+                                        <path
+                                            d="M155 400H455"
+                                            stroke="#53ae7d"
+                                            strokeWidth="6"
+                                            strokeLinecap="round"
+                                        />
+
+                                    </g>
+
+                                    {/* CART ICON */}
+                                    <g className="eco-cart">
+
+                                        <circle
+                                            cx="485"
+                                            cy="225"
+                                            r="42"
+                                            fill="white"
+                                            stroke="#E0EEF3"
+                                            strokeWidth="5"
+                                        />
+
+                                        <path
+                                            d="M465 210H475L482 240H510L518 218H480"
+                                            stroke="#053456"
+                                            strokeWidth="6"
+                                            fill="none"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+
+                                        <circle
+                                            cx="486"
+                                            cy="249"
+                                            r="5"
+                                            fill="#53ae7d"
+                                        />
+
+                                        <circle
+                                            cx="507"
+                                            cy="249"
+                                            r="5"
+                                            fill="#53ae7d"
+                                        />
+
+                                        <circle
+                                            cx="515"
+                                            cy="201"
+                                            r="14"
+                                            fill="#53ae7d"
+                                        />
+
+                                        <text
+                                            x="511"
+                                            y="206"
+                                            fill="white"
+                                            fontSize="11"
+                                            fontWeight="700"
+                                            className='text-figtree'
+                                        >
+                                            3
+                                        </text>
+
+                                    </g>
+
+                                    {/* PAYMENT CARD */}
+                                    <g className="eco-payment">
+
+                                        <rect
+                                            x="55"
+                                            y="335"
+                                            width="125"
+                                            height="72"
+                                            rx="12"
+                                            fill="white"
+                                            stroke="#053456"
+                                            strokeWidth="4"
+                                        />
+
+                                        <rect
+                                            x="72"
+                                            y="352"
+                                            width="90"
+                                            height="10"
+                                            rx="5"
+                                            fill="#053456"
+                                        />
+
+                                        <rect
+                                            x="72"
+                                            y="372"
+                                            width="55"
+                                            height="7"
+                                            rx="4"
+                                            fill="#D4E7EE"
+                                        />
+
+                                        <circle
+                                            cx="145"
+                                            cy="378"
+                                            r="10"
+                                            fill="#53ae7d"
+                                        />
+
+                                    </g>
+
+                                    {/* UI/UX CARD */}
+                                    <g className="eco-service-card">
+
+                                        <rect
+                                            x="405"
+                                            y="330"
+                                            width="135"
+                                            height="75"
+                                            rx="12"
+                                            fill="white"
+                                            stroke="#E1EDF2"
+                                            strokeWidth="3"
+                                        />
+
+                                        <circle
+                                            cx="432"
+                                            cy="356"
+                                            r="14"
+                                            fill="#EDF6FA"
+                                        />
+
+                                        <path
+                                            d="M425 357L431 363L441 349"
+                                            stroke="#53ae7d"
+                                            strokeWidth="4"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+
+                                        <text
+                                            x="454"
+                                            y="355"
+                                            fill="#053456"
+                                            fontSize="11"
+                                            fontWeight="700"
+                                            className='text-tenor'
+                                        >
+                                            UI/UX Design
+                                        </text>
+
+                                        <text
+                                            x="454"
+                                            y="372"
+                                            fill="#71828B"
+                                            fontSize="9"
+                                            className='text-tenor'
+                                        >
+                                            User-focused
+                                        </text>
+
+                                    </g>
+
+                                    {/* DELIVERY BOXES */}
+                                    <g className="eco-boxes">
+
+                                        <rect
+                                            x="405"
+                                            y="405"
+                                            width="80"
+                                            height="65"
+                                            rx="6"
+                                            fill="#53ae7d"
+                                            stroke="#053456"
+                                            strokeWidth="4"
+                                        />
+
+                                        <path
+                                            d="M405 420H485"
+                                            stroke="#053456"
+                                            strokeWidth="4"
+                                        />
+
+                                        <path
+                                            d="M445 405V470"
+                                            stroke="#053456"
+                                            strokeWidth="4"
+                                        />
+
+                                        <text
+                                            x="417"
+                                            y="447"
+                                            fill="white"
+                                            fontSize="10"
+                                            fontWeight="700"
+                                            fontFamily="Arial, sans-serif"
+                                        >
+                                            Yulanto
+                                        </text>
+
+                                        <rect
+                                            x="475"
+                                            y="430"
+                                            width="55"
+                                            height="40"
+                                            rx="5"
+                                            fill="#053456"
+                                        />
+
+                                    </g>
+
+                                    {/* GROWTH ARROW */}
+                                    <g className="eco-growth">
+
+                                        <path
+                                            d="M85 455C125 420 150 430 175 400C195 375 210 355 235 340"
+                                            stroke="#53ae7d"
+                                            strokeWidth="6"
+                                            fill="none"
+                                            strokeLinecap="round"
+                                        />
+
+                                        <path
+                                            d="M220 342L238 338L234 356"
+                                            stroke="#53ae7d"
+                                            strokeWidth="6"
+                                            fill="none"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+
+                                        <circle
+                                            cx="100"
+                                            cy="445"
+                                            r="7"
+                                            fill="#053456"
+                                            className="eco-pulse"
+                                        />
+
+                                    </g>
+
+                                    {/* FLOATING DOTS */}
+                                    <circle
+                                        cx="75"
+                                        cy="145"
+                                        r="6"
+                                        fill="#53ae7d"
+                                        className="eco-float"
+                                    />
+
+                                    <circle
+                                        cx="545"
+                                        cy="285"
+                                        r="7"
+                                        fill="#53ae7d"
+                                        className="eco-float-delay"
+                                    />
+
+                                    <circle
+                                        cx="115"
+                                        cy="300"
+                                        r="5"
+                                        fill="#53ae7d"
+                                        className="eco-float-delay"
+                                    />
+
+                                </svg>
+
+                            </div>
+                        </div>
+
+                        {/* RIGHT - CONTENT */}
+                        <div className="col-lg-6">
+                            <div className="ecommerce-chennai-content">
+
+
+
+                                <p className="text-figtree">
+                                    Looking for an{" "}
+
+                                    ecommerce website design company in Chennai
+
+                                    ? Yulanto Web Creations helps startups, retailers,
+                                    manufacturers, service businesses, and established brands
+                                    create professional online stores.
+                                </p>
+
+                                <p className="text-figtree">
+                                    Our local team understands the requirements of Chennai
+                                    businesses and provides end-to-end{" "}
+                                    e commerce and web design services—from
+                                    planning and UI/UX design to development, payment
+                                    integration, testing, launch, and ongoing support.
+                                </p>
+
+                                <p className="text-figtree">
+                                    Whether you're launching your first online store or
+                                    upgrading an existing ecommerce platform, we can help you
+                                    create a scalable digital storefront.
+                                </p>
+
+                                <div className="ecommerce-service-points">
+
+                                    <div className="ecommerce-point">
+                                        <span>01</span>
+                                        <div>
+                                            <strong>Custom Online Stores</strong>
+                                            <small>
+                                                Designed around your business
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <div className="ecommerce-point">
+                                        <span>02</span>
+                                        <div>
+                                            <strong>Secure Payment Integration</strong>
+                                            <small>
+                                                Smooth and reliable checkout
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <div className="ecommerce-point">
+                                        <span>03</span>
+                                        <div>
+                                            <strong>Scalable Development</strong>
+                                            <small>
+                                                Built for long-term growth
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div
+                data-aos="fade-up"
+                data-aos-delay={400}
+                data-aos-once={true}
+                className="responsive-ecommerce-section why-yulanto-section"
+            >
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-md-12">
+                            <span className="tp-section-subtitle text-black blink-ball">
+                                Why Choose Yulanto
+                            </span>
+
+                            <h4 className="px-about-title">
+                                <span className="text-blue-about">
+                                    Why Choose Yulanto
+                                </span>{" "}
+                                for Custom E-commerce Development?
+                            </h4>
+
+                            <p className="text-figtree">
+                                We combine design, development, usability, and business
+                                objectives to create ecommerce solutions that are
+                                practical and scalable.
+                            </p>
+                        </div>
+                        <div className="col-lg-7">
+                            <div className="why-yulanto-content">
+
+
+
+
+                                <div className="why-yulanto-features">
+
+                                    {/* 01 */}
+                                    <div className="why-yulanto-feature">
+
+                                        <span className="why-feature-number">
+                                            01
+                                        </span>
+
+                                        <div>
+                                            <h5 className="text-tenor">
+                                                Custom Design
+                                            </h5>
+
+                                            <p className="text-figtree">
+                                                We create unique{" "}
+                                                ecommerce site designs{" "}
+                                                based on your brand, products, audience,
+                                                and objectives.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+
+                                    {/* 02 */}
+                                    <div className="why-yulanto-feature">
+
+                                        <span className="why-feature-number">
+                                            02
+                                        </span>
+
+                                        <div>
+                                            <h5 className="text-tenor">
+                                                Mobile-First Experience
+                                            </h5>
+
+                                            <p className="text-figtree">
+                                                Your online store is designed to provide a
+                                                smooth experience across mobile, tablet,
+                                                and desktop devices.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+
+                                    {/* 03 */}
+                                    <div className="why-yulanto-feature">
+
+                                        <span className="why-feature-number">
+                                            03
+                                        </span>
+
+                                        <div>
+                                            <h5 className="text-tenor">
+                                                Conversion-Focused Layouts
+                                            </h5>
+
+                                            <p className="text-figtree">
+                                                We structure important pages and CTAs to
+                                                make the customer journey simple and
+                                                engaging.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+
+                                    {/* 04 */}
+                                    <div className="why-yulanto-feature">
+
+                                        <span className="why-feature-number">
+                                            04
+                                        </span>
+
+                                        <div>
+                                            <h5 className="text-tenor">
+                                                Scalable Development
+                                            </h5>
+
+                                            <p className="text-figtree">
+                                                Your ecommerce platform can be developed
+                                                with future growth and additional
+                                                functionality in mind.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+
+                                    {/* 05 */}
+                                    <div className="why-yulanto-feature">
+
+                                        <span className="why-feature-number">
+                                            05
+                                        </span>
+
+                                        <div>
+                                            <h5 className="text-tenor">
+                                                Payment & Shipping Integration
+                                            </h5>
+
+                                            <p className="text-figtree">
+                                                We can integrate suitable payment gateways
+                                                and shipping options based on your business
+                                                requirements.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+
+                                    {/* 06 */}
+                                    <div className="why-yulanto-feature">
+
+                                        <span className="why-feature-number">
+                                            06
+                                        </span>
+
+                                        <div>
+                                            <h5 className="text-tenor">
+                                                SEO-Friendly Structure
+                                            </h5>
+
+                                            <p className="text-figtree">
+                                                Our{" "}
+                                                ecommerce web development{" "}
+                                                approach considers search-friendly URLs,
+                                                page structures, content organization,
+                                                mobile responsiveness, and technical SEO
+                                                fundamentals.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+
+                                    {/* 07 */}
+                                    <div className="why-yulanto-feature">
+
+                                        <span className="why-feature-number">
+                                            07
+                                        </span>
+
+                                        <div>
+                                            <h5 className="text-tenor">
+                                                Ongoing Support
+                                            </h5>
+
+                                            <p className="text-figtree">
+                                                After launch, we can assist with website
+                                                maintenance, updates, improvements,
+                                                hosting, security, and further development.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div className="col-lg-5 mb-5 mb-lg-0">
+                            <div className="why-yulanto-visual">
+
+                                <svg
+                                    className="why-yulanto-svg"
+                                    viewBox="0 0 560 520"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+
+                                    {/* Background */}
+                                    <ellipse
+                                        cx="280"
+                                        cy="270"
+                                        rx="225"
+                                        ry="190"
+                                        fill="#EDF6FA"
+                                    />
+
+                                    <circle
+                                        cx="95"
+                                        cy="105"
+                                        r="35"
+                                        fill="#E3F1F5"
+                                        className="why-float"
+                                    />
+
+                                    <circle
+                                        cx="475"
+                                        cy="100"
+                                        r="28"
+                                        fill="#E3F1F5"
+                                        className="why-float-delay"
+                                    />
+
+                                    {/* YULANTO */}
+                                    <g className="why-brand">
+
+                                        <text
+                                            x="55"
+                                            y="70"
+                                            fill="#053456"
+                                            fontSize="27"
+                                            fontWeight="700"
+                                            fontFamily="Arial, sans-serif"
+                                        >
+                                            Yulanto
+                                        </text>
+
+                                        <text
+                                            x="58"
+                                            y="89"
+                                            fill="#53ae7d"
+                                            fontSize="9"
+                                            fontWeight="700"
+                                            letterSpacing="3"
+                                            fontFamily="Arial, sans-serif"
+                                        >
+                                            WEB CREATIONS
+                                        </text>
+
+                                    </g>
+
+
+                                    {/* CENTRAL WEBSITE WINDOW */}
+                                    <g className="why-screen">
+
+                                        <rect
+                                            x="105"
+                                            y="120"
+                                            width="350"
+                                            height="275"
+                                            rx="18"
+                                            fill="#053456"
+                                        />
+
+                                        {/* Browser */}
+                                        <rect
+                                            x="120"
+                                            y="135"
+                                            width="320"
+                                            height="245"
+                                            rx="9"
+                                            fill="white"
+                                        />
+
+                                        {/* Browser dots */}
+                                        <circle
+                                            cx="138"
+                                            cy="150"
+                                            r="5"
+                                            fill="#53ae7d"
+                                        />
+
+                                        <circle
+                                            cx="153"
+                                            cy="150"
+                                            r="5"
+                                            fill="#D8E8EE"
+                                        />
+
+                                        <circle
+                                            cx="168"
+                                            cy="150"
+                                            r="5"
+                                            fill="#D8E8EE"
+                                        />
+
+
+                                        {/* Header */}
+                                        <rect
+                                            x="140"
+                                            y="170"
+                                            width="280"
+                                            height="34"
+                                            rx="6"
+                                            fill="#EDF6FA"
+                                        />
+
+                                        <text
+                                            x="153"
+                                            y="192"
+                                            fill="#053456"
+                                            fontSize="12"
+                                            fontWeight="700"
+                                            fontFamily="Arial, sans-serif"
+                                        >
+                                            YULANTO
+                                        </text>
+
+                                        <rect
+                                            x="350"
+                                            y="180"
+                                            width="55"
+                                            height="12"
+                                            rx="6"
+                                            fill="#53ae7d"
+                                        />
+
+
+                                        {/* Main Product */}
+                                        <rect
+                                            x="140"
+                                            y="220"
+                                            width="125"
+                                            height="110"
+                                            rx="9"
+                                            fill="#EDF6FA"
+                                        />
+
+                                        {/* Product */}
+                                        <path
+                                            d="M155 288C172 282 180 250 198 244L222 257L240 280L258 292V307H165C153 305 149 296 155 288Z"
+                                            fill="#053456"
+                                        />
+
+                                        <path
+                                            d="M190 270L220 282"
+                                            stroke="#53ae7d"
+                                            strokeWidth="7"
+                                            strokeLinecap="round"
+                                        />
+
+                                        <path
+                                            d="M160 307H255"
+                                            stroke="#53ae7d"
+                                            strokeWidth="5"
+                                            strokeLinecap="round"
+                                        />
+
+
+                                        {/* Content Lines */}
+                                        <rect
+                                            x="285"
+                                            y="225"
+                                            width="105"
+                                            height="10"
+                                            rx="5"
+                                            fill="#053456"
+                                        />
+
+                                        <rect
+                                            x="285"
+                                            y="246"
+                                            width="80"
+                                            height="7"
+                                            rx="4"
+                                            fill="#D3E6ED"
+                                        />
+
+                                        <rect
+                                            x="285"
+                                            y="263"
+                                            width="95"
+                                            height="7"
+                                            rx="4"
+                                            fill="#D3E6ED"
+                                        />
+
+                                        {/* Stars */}
+                                        <text
+                                            x="285"
+                                            y="293"
+                                            fill="#53ae7d"
+                                            fontSize="17"
+                                            fontFamily="Arial, sans-serif"
+                                        >
+                                            ★ ★ ★ ★ ★
+                                        </text>
+
+                                        {/* CTA */}
+                                        <rect
+                                            x="285"
+                                            y="307"
+                                            width="110"
+                                            height="32"
+                                            rx="7"
+                                            fill="#53ae7d"
+                                            className="why-button"
+                                        />
+
+                                        <text
+                                            x="310"
+                                            y="328"
+                                            fill="white"
+                                            fontSize="11"
+                                            fontWeight="700"
+                                            fontFamily="Arial, sans-serif"
+                                        >
+                                            SHOP NOW
+                                        </text>
+
+                                    </g>
+
+
+                                    {/* CUSTOM DESIGN CARD */}
+                                    <g className="why-card why-card-one">
+
+                                        <rect
+                                            x="35"
+                                            y="165"
+                                            width="120"
+                                            height="75"
+                                            rx="12"
+                                            fill="white"
+                                            stroke="#DDEBF0"
+                                            strokeWidth="3"
+                                        />
+
+                                        <circle
+                                            cx="62"
+                                            cy="190"
+                                            r="15"
+                                            fill="#EDF6FA"
+                                        />
+
+                                        <path
+                                            d="M55 194L62 184L70 194"
+                                            stroke="#53ae7d"
+                                            strokeWidth="4"
+                                            fill="none"
+                                        />
+
+                                        <text
+                                            x="82"
+                                            y="190"
+                                            fill="#053456"
+                                            fontSize="10"
+                                            fontWeight="700"
+                                            fontFamily="Arial, sans-serif"
+                                        >
+                                            Custom
+                                        </text>
+
+                                        <text
+                                            x="82"
+                                            y="205"
+                                            fill="#053456"
+                                            fontSize="10"
+                                            fontWeight="700"
+                                            fontFamily="Arial, sans-serif"
+                                        >
+                                            Design
+                                        </text>
+
+                                        <circle
+                                            cx="62"
+                                            cy="218"
+                                            r="5"
+                                            fill="#53ae7d"
+                                            className="why-pulse"
+                                        />
+
+                                    </g>
+
+
+                                    {/* MOBILE CARD */}
+                                    <g className="why-card why-card-two">
+
+                                        <rect
+                                            x="410"
+                                            y="190"
+                                            width="115"
+                                            height="82"
+                                            rx="12"
+                                            fill="white"
+                                            stroke="#DDEBF0"
+                                            strokeWidth="3"
+                                        />
+
+                                        <rect
+                                            x="430"
+                                            y="205"
+                                            width="28"
+                                            height="48"
+                                            rx="5"
+                                            fill="#053456"
+                                        />
+
+                                        <rect
+                                            x="435"
+                                            y="211"
+                                            width="18"
+                                            height="31"
+                                            rx="2"
+                                            fill="#EDF6FA"
+                                        />
+
+                                        <circle
+                                            cx="444"
+                                            cy="247"
+                                            r="3"
+                                            fill="#53ae7d"
+                                        />
+
+                                        <text
+                                            x="468"
+                                            y="220"
+                                            fill="#053456"
+                                            fontSize="10"
+                                            fontWeight="700"
+                                            fontFamily="Arial, sans-serif"
+                                        >
+                                            Mobile
+                                        </text>
+
+                                        <text
+                                            x="468"
+                                            y="235"
+                                            fill="#053456"
+                                            fontSize="10"
+                                            fontWeight="700"
+                                            fontFamily="Arial, sans-serif"
+                                        >
+                                            First
+                                        </text>
+
+                                    </g>
+
+
+                                    {/* SECURITY SHIELD */}
+                                    <g className="why-security">
+
+                                        <circle
+                                            cx="95"
+                                            cy="345"
+                                            r="42"
+                                            fill="white"
+                                            stroke="#DDEBF0"
+                                            strokeWidth="4"
+                                        />
+
+                                        <path
+                                            d="M95 318L120 328V347C120 365 108 378 95 384C82 378 70 365 70 347V328L95 318Z"
+                                            fill="#53ae7d"
+                                            stroke="#053456"
+                                            strokeWidth="5"
+                                        />
+
+                                        <path
+                                            d="M82 348L91 357L108 338"
+                                            stroke="white"
+                                            strokeWidth="6"
+                                            fill="none"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+
+                                    </g>
+
+
+                                    {/* SCALABILITY GRAPH */}
+                                    <g className="why-growth">
+
+                                        <circle
+                                            cx="465"
+                                            cy="350"
+                                            r="48"
+                                            fill="white"
+                                            stroke="#DDEBF0"
+                                            strokeWidth="4"
+                                        />
+
+                                        <rect
+                                            x="438"
+                                            y="355"
+                                            width="12"
+                                            height="20"
+                                            rx="3"
+                                            fill="#053456"
+                                        />
+
+                                        <rect
+                                            x="457"
+                                            y="340"
+                                            width="12"
+                                            height="35"
+                                            rx="3"
+                                            fill="#53ae7d"
+                                        />
+
+                                        <rect
+                                            x="476"
+                                            y="322"
+                                            width="12"
+                                            height="53"
+                                            rx="3"
+                                            fill="#053456"
+                                        />
+
+                                        <path
+                                            d="M430 340C448 330 465 320 492 300"
+                                            stroke="#53ae7d"
+                                            strokeWidth="5"
+                                            fill="none"
+                                            strokeLinecap="round"
+                                        />
+
+                                        <path
+                                            d="M482 302L494 299L491 312"
+                                            stroke="#53ae7d"
+                                            strokeWidth="5"
+                                            fill="none"
+                                            strokeLinecap="round"
+                                        />
+
+                                    </g>
+
+
+                                    {/* PAYMENT CARD */}
+                                    <g className="why-payment">
+
+                                        <rect
+                                            x="180"
+                                            y="415"
+                                            width="155"
+                                            height="70"
+                                            rx="12"
+                                            fill="#053456"
+                                        />
+
+                                        <rect
+                                            x="195"
+                                            y="430"
+                                            width="75"
+                                            height="8"
+                                            rx="4"
+                                            fill="#53ae7d"
+                                        />
+
+                                        <rect
+                                            x="195"
+                                            y="447"
+                                            width="45"
+                                            height="6"
+                                            rx="3"
+                                            fill="#B8D3DE"
+                                        />
+
+                                        <circle
+                                            cx="305"
+                                            cy="453"
+                                            r="14"
+                                            fill="#53ae7d"
+                                        />
+
+                                        <path
+                                            d="M298 453L303 458L313 447"
+                                            stroke="white"
+                                            strokeWidth="4"
+                                            fill="none"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+
+                                    </g>
+
+
+                                    {/* FLOATING DOTS */}
+                                    <circle
+                                        cx="175"
+                                        cy="100"
+                                        r="7"
+                                        fill="#53ae7d"
+                                        className="why-float"
+                                    />
+
+                                    <circle
+                                        cx="385"
+                                        cy="90"
+                                        r="6"
+                                        fill="#53ae7d"
+                                        className="why-float-delay"
+                                    />
+
+                                    <circle
+                                        cx="50"
+                                        cy="300"
+                                        r="6"
+                                        fill="#53ae7d"
+                                        className="why-float"
+                                    />
+
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="ecom-process-main">
+                <div className="container">
+
+                    {/* Heading */}
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="ecom-process-heading-area">
+                                <span className="tp-section-subtitle text-black blink-ball">
+                                    From Design to Development
+                                </span>
+
+                                <h4 className="px-about-title">
+                                    <span className="text-blue-about">
+                                        From Ecommerce Website Design
+                                    </span>{" "}
+                                    to Development—Everything Under One Roof
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row align-items-start">
+
+                        {/* Left Content */}
+                        <div className="col-lg-5 mb-5 mb-lg-0">
+                            <div className="ecom-process-left">
+                                <div className="ecom-process-intro">
+                                    <p className="text-figtree">
+                                        A successful online store requires both ecommerce
+                                        and web design expertise. Our team brings together
+                                        visual design, UX planning, website development,
+                                        ecommerce functionality, and digital marketing
+                                        considerations.
+                                    </p>
+
+                                    <p className="text-figtree">
+                                        From ecommerce homepage design to product pages,
+                                        checkout, and backend management, we help create
+                                        a complete ecommerce solution for your business.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Process */}
+                        <div className="col-lg-7">
+                            <div className="ecom-process-right">
+                                <div className="ecom-process-area">
+
+                                    {/* Process Title */}
+                                    <div className="ecom-process-title">
+                                        <span className="ecom-process-title-line"></span>
+
+                                        <h5 className="text-tenor">
+                                            Our E-commerce Process
+                                        </h5>
+                                    </div>
+
+                                    {/* Swiper */}
+                                    <Swiper
+                                        className="ecom-process-slider"
+                                        modules={[Autoplay]}
+                                        slidesPerView={1}
+                                        spaceBetween={25}
+                                        loop={true}
+                                        speed={700}
+                                        autoplay={{
+                                            delay: 4000,
+                                            disableOnInteraction: false,
+                                            pauseOnMouseEnter: true,
+                                        }}
+                                    >
+                                        {ecommerceProcessData.map((process) => (
+                                            <SwiperSlide key={process.number}>
+                                                <div className="ecom-process-slide">
+
+                                                    {/* Number */}
+                                                    <div className="ecom-process-number-area">
+                                                        <span className="ecom-process-number">
+                                                            {process.number}
+                                                        </span>
+
+                                                        <span className="ecom-process-line"></span>
+                                                    </div>
+
+                                                    {/* Card */}
+                                                    <div className="ecom-process-card">
+                                                        <span className="ecom-process-step">
+                                                            STEP {process.number}
+                                                        </span>
+
+                                                        <h6 className="text-tenor">
+                                                            {process.title}
+                                                        </h6>
+
+                                                        <p className="text-figtree">
+                                                            {process.description}
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div
+                data-aos="fade-up"
+                data-aos-delay={400}
+                data-aos-once={true}
+                className="responsive-ecommerce-section ecommerce-cta-section"
+            >
+                <div className="container">
+
+                    <div className="ecommerce-cta-box">
+
+                        <div className="ecommerce-cta-content">
+
+                            <span className="tp-section-subtitle text-black blink-ball">
+                                Ready to Build Your Ecommerce Website?
+                            </span>
+
+                            <h4 className="px-about-title">
+                                <span className="text-blue-about">
+                                    Build an Ecommerce Website
+                                </span>{" "}
+                                Designed for Your Business Growth
+                            </h4>
+
+                            <p className="text-figtree">
+                                Whether you need a new online store, a complete ecommerce
+                                redesign, or a custom ecommerce platform, Yulanto Web
+                                Creations can help you turn your idea into a professional
+                                digital storefront.
+                            </p>
+
+                            <p className="text-figtree">
+                                Let's design an ecommerce website that looks professional,
+                                works smoothly, and is built to support your business
+                                growth.
+                            </p>
+
+                            <div className="ecommerce-cta-company">
+                                <strong>
+                                    Yulanto Web Creations
+                                </strong>
+
+                                <span>
+                                    Custom E-commerce Website Design & Development Company
+                                    in Chennai
+                                </span>
+                            </div>
+
+                            <div className="ecommerce-cta-action">
+
+                                <p className="text-figtree">
+                                    Get in touch with us today to discuss your ecommerce
+                                    website requirements.
+                                </p>
+
+                                <button
+                                    onClick={openModal}
+                                    className="ecommerce-cta-button"
+                                >
+                                    Get in Touch
+                                    <span>→</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        {/* DECORATIVE SIDE */}
+                        <div className="ecommerce-cta-visual">
+
+                            <div className="cta-circle cta-circle-one"></div>
+                            <div className="cta-circle cta-circle-two"></div>
+
+                            <div className="cta-store-icon">
+                                <span>Y</span>
+                            </div>
+
+                            <div className="cta-floating cta-cart">
+                                🛒
+                            </div>
+
+                            <div className="cta-floating cta-growth">
+                                ↗
+                            </div>
+
+                            <div className="cta-floating cta-check">
+                                ✓
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     )
 }

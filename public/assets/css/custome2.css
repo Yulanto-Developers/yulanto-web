@@ -1279,3 +1279,1526 @@
     }
 
 }
+
+
+/* =========================================
+   E-COMMERCE CHENNAI SECTION
+========================================= */
+
+.ecommerce-chennai-section {
+    padding: 90px 0;
+    overflow: hidden;
+}
+
+.ecommerce-chennai-visual {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ecommerce-chennai-svg {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    overflow: visible;
+}
+
+
+/* =========================================
+   SVG ANIMATIONS
+========================================= */
+
+.eco-float {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ecoFloat 3s ease-in-out infinite;
+}
+
+.eco-float-delay {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ecoFloat 3.5s ease-in-out 0.8s infinite;
+}
+
+.eco-pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ecoPulse 2s ease-in-out infinite;
+}
+
+.eco-laptop {
+    transform-origin: center;
+    animation: laptopFloat 4s ease-in-out infinite;
+}
+
+.eco-cart {
+    transform-origin: center;
+    animation: cartBounce 2.5s ease-in-out infinite;
+}
+
+.eco-payment {
+    animation: cardFloat 3s ease-in-out 0.4s infinite;
+}
+
+.eco-service-card {
+    animation: cardFloat 3.2s ease-in-out 0.8s infinite;
+}
+
+.eco-boxes {
+    animation: boxFloat 3.5s ease-in-out infinite;
+}
+
+.eco-growth {
+    animation: growthMove 3s ease-in-out infinite;
+}
+
+.eco-location {
+    animation: locationBounce 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   KEYFRAMES
+========================================= */
+
+@keyframes ecoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes ecoPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.25);
+        opacity: 0.65;
+    }
+}
+
+@keyframes laptopFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes cartBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes cardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes boxFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes growthMove {
+    0% {
+        opacity: 0.65;
+        transform: translateX(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(7px);
+    }
+
+    100% {
+        opacity: 0.65;
+        transform: translateX(0);
+    }
+}
+
+@keyframes locationBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.ecommerce-chennai-content {
+    padding-left: 35px;
+}
+
+.ecommerce-chennai-content .tp-section-subtitle {
+    margin-bottom: 18px;
+}
+
+.ecommerce-chennai-content .px-about-title {
+    margin-bottom: 25px;
+}
+
+.ecommerce-chennai-content p {
+    color: #626a70;
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.ecommerce-chennai-content strong {
+    color: #053456;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SERVICE POINTS
+========================================= */
+
+.ecommerce-service-points {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ecommerce-point {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    border: 1px solid #e2ebef;
+    border-radius: 10px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.ecommerce-point>span {
+    min-width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #EDF6FA;
+    color: #053456;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.ecommerce-point div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ecommerce-point strong {
+    color: #053456;
+    font-size: 14px;
+}
+
+.ecommerce-point small {
+    color: #7b858b;
+    font-size: 12px;
+}
+
+.ecommerce-point:hover {
+    border-color: #53ae7d;
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(5, 52, 86, 0.08);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .ecommerce-chennai-section {
+        padding: 70px 0;
+    }
+
+    .ecommerce-chennai-visual {
+        margin-bottom: 30px;
+    }
+
+    .ecommerce-chennai-svg {
+        max-width: 560px;
+    }
+
+    .ecommerce-chennai-content {
+        padding-left: 0;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+    .ecommerce-chennai-section {
+        padding: 55px 0;
+    }
+
+    .ecommerce-chennai-svg {
+        max-width: 100%;
+    }
+
+    .ecommerce-chennai-content p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .ecommerce-point {
+        padding: 12px 14px;
+    }
+
+}
+
+
+/* =========================================
+   WHY CHOOSE YULANTO
+========================================= */
+
+.why-yulanto-section {
+    padding: 0px 0px 100px 0px;
+    overflow: hidden;
+}
+
+.why-yulanto-visual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-yulanto-svg {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    overflow: visible;
+}
+
+
+/* =========================================
+   SVG ANIMATION
+========================================= */
+
+.why-float {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: whyFloat 3s ease-in-out infinite;
+}
+
+.why-float-delay {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: whyFloat 3.5s ease-in-out 0.7s infinite;
+}
+
+.why-pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: whyPulse 2s ease-in-out infinite;
+}
+
+.why-screen {
+    transform-origin: center;
+    animation: whyScreenFloat 4s ease-in-out infinite;
+}
+
+.why-card-one {
+    animation: whyCardOne 3.2s ease-in-out infinite;
+}
+
+.why-card-two {
+    animation: whyCardTwo 3.5s ease-in-out infinite;
+}
+
+.why-security {
+    animation: whySecurity 3s ease-in-out infinite;
+}
+
+.why-growth {
+    animation: whyGrowth 3.2s ease-in-out infinite;
+}
+
+.why-payment {
+    animation: whyPayment 3.5s ease-in-out infinite;
+}
+
+.why-button {
+    animation: whyButtonPulse 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   KEYFRAMES
+========================================= */
+
+@keyframes whyFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes whyPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.25);
+        opacity: 0.65;
+    }
+}
+
+@keyframes whyScreenFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes whyCardOne {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+@keyframes whyCardTwo {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+@keyframes whySecurity {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes whyGrowth {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes whyPayment {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+@keyframes whyButtonPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.82;
+    }
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.why-yulanto-content {
+    padding-left: 30px;
+}
+
+.why-yulanto-content .tp-section-subtitle {
+    margin-bottom: 18px;
+}
+
+.why-yulanto-content .px-about-title {
+    margin-bottom: 20px;
+}
+
+.why-yulanto-content>p {
+    color: #626a70;
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 30px;
+}
+
+.why-yulanto-content strong {
+    color: #053456;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.why-yulanto-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.why-yulanto-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid #e3ebef;
+    border-radius: 10px;
+    background: #fff;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.why-yulanto-feature:hover {
+    transform: translateY(-4px);
+    border-color: #53ae7d;
+    box-shadow: 0 10px 28px rgba(5, 52, 86, 0.08);
+}
+
+.why-feature-number {
+    min-width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #EDF6FA;
+    color: #053456;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.why-yulanto-feature h5 {
+    margin: 0 0 7px;
+    color: #053456;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.why-yulanto-feature p {
+    margin: 0;
+    color: #69747a;
+    font-size: 15px !important;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .why-yulanto-section {
+        padding: 70px 0;
+    }
+
+    .why-yulanto-visual {
+        margin-bottom: 35px;
+    }
+
+    .why-yulanto-svg {
+        max-width: 520px;
+    }
+
+    .why-yulanto-content {
+        padding-left: 0;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .why-yulanto-features {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    .why-yulanto-section {
+        padding: 55px 0;
+    }
+
+    .why-yulanto-svg {
+        max-width: 100%;
+    }
+
+    .why-yulanto-content>p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .why-yulanto-feature {
+        padding: 15px;
+    }
+
+    .why-yulanto-feature h5 {
+        font-size: 16px;
+    }
+
+    .why-yulanto-feature p {
+        font-size: 13px;
+    }
+
+}
+
+
+
+/* last 2 section custome ecommerce development */
+
+/* =========================================
+   E-COMMERCE PROCESS
+========================================= */
+
+.ecommerce-process-section {
+    padding: 100px 0;
+    overflow: visible;
+}
+
+.ecommerce-process-intro {
+    padding-right: 35px;
+}
+
+.ecommerce-process-intro .px-about-title {
+    margin-bottom: 25px;
+}
+
+.ecommerce-process-intro p {
+    color: #68737a;
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.ecommerce-process-intro strong {
+    color: #053456;
+}
+
+
+/* =========================================
+   PROCESS WRAPPER
+========================================= */
+
+.ecommerce-process-wrapper {
+    padding-left: 30px;
+}
+
+.ecommerce-process-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.process-heading-line {
+    width: 32px;
+    height: 3px;
+    background: #53ae7d;
+    border-radius: 3px;
+}
+
+.ecommerce-process-heading h5 {
+    margin: 0;
+    color: #053456;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PROCESS LIST
+========================================= */
+
+.ecommerce-process-list {
+    position: relative;
+}
+
+.ecommerce-process-list::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 25px;
+    width: 1px;
+    background: #dce8ed;
+}
+
+.ecommerce-process-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 12px 0;
+}
+
+.process-number {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 51px;
+    width: 51px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dce8ed;
+    border-radius: 50%;
+    background: #fff;
+    color: #053456;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.ecommerce-process-item>div {
+    flex: 1;
+    padding: 5px 18px 10px 0;
+}
+
+.ecommerce-process-item h6 {
+    margin: 0 0 5px;
+    color: #053456;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ecommerce-process-item p {
+    margin: 0;
+    color: #737d83;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.ecommerce-process-item:hover .process-number {
+    background: #053456;
+    border-color: #053456;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.ecommerce-process-item:hover h6 {
+    color: #53ae7d;
+}
+
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.ecommerce-cta-section {
+    padding: 30px 0 100px;
+}
+
+.ecommerce-cta-box {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 65px 70px;
+    border-radius: 20px;
+    background: #f5f5f5;
+}
+
+.ecommerce-cta-content {
+    position: relative;
+    z-index: 3;
+    width: 68%;
+}
+
+.ecommerce-cta-content .px-about-title {
+    margin-bottom: 20px;
+}
+
+.ecommerce-cta-content>p {
+    max-width: 780px;
+    color: #68737a;
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 15px;
+}
+
+.ecommerce-cta-company {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 25px;
+}
+
+.ecommerce-cta-company strong {
+    color: #053456;
+    font-size: 16px;
+}
+
+.ecommerce-cta-company span {
+    color: #69777e;
+    font-size: 13px;
+}
+
+.ecommerce-cta-action {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.ecommerce-cta-action p {
+    max-width: 330px;
+    margin: 0;
+    color: #626e75;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.ecommerce-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 14px 22px;
+    border-radius: 8px;
+    background: #053456;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ecommerce-cta-button span {
+    font-size: 20px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.ecommerce-cta-button:hover {
+    background: #53ae7d;
+    color: #fff;
+}
+
+.ecommerce-cta-button:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   CTA VISUAL
+========================================= */
+
+.ecommerce-cta-visual {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translateY(-50%);
+}
+
+.cta-circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.cta-circle-one {
+    width: 250px;
+    height: 250px;
+    top: 25px;
+    left: 25px;
+    border: 1px solid rgba(5, 52, 86, 0.12);
+}
+
+.cta-circle-two {
+    width: 185px;
+    height: 185px;
+    top: 57px;
+    left: 57px;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.cta-store-icon {
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background: #053456;
+    box-shadow: 0 15px 35px rgba(5, 52, 86, 0.15);
+    animation: ctaStoreFloat 4s ease-in-out infinite;
+}
+
+.cta-store-icon span {
+    color: #53ae7d;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.cta-floating {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #053456;
+    font-size: 20px;
+    box-shadow: 0 8px 25px rgba(5, 52, 86, 0.1);
+}
+
+.cta-cart {
+    top: 20px;
+    right: 20px;
+    animation: ctaFloat 3s ease-in-out infinite;
+}
+
+.cta-growth {
+    right: 10px;
+    bottom: 40px;
+    color: #53ae7d;
+    font-size: 27px;
+    animation: ctaFloat 3.5s ease-in-out 0.5s infinite;
+}
+
+.cta-check {
+    bottom: 15px;
+    left: 25px;
+    background: #53ae7d;
+    color: #fff;
+    font-weight: 700;
+    animation: ctaFloat 3s ease-in-out 1s infinite;
+}
+
+
+/* =========================================
+   CTA ANIMATION
+========================================= */
+
+@keyframes ctaStoreFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes ctaFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .ecommerce-process-section {
+        padding: 70px 0;
+    }
+
+    .ecommerce-process-intro {
+        padding-right: 0;
+    }
+
+    .ecommerce-process-wrapper {
+        padding-left: 0;
+    }
+
+    .ecommerce-cta-box {
+        padding: 50px;
+    }
+
+    .ecommerce-cta-content {
+        width: 100%;
+    }
+
+    .ecommerce-cta-visual {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+    .ecommerce-process-section {
+        padding: 55px 0;
+    }
+
+    .ecommerce-process-item {
+        gap: 14px;
+    }
+
+    .process-number {
+        flex: 0 0 42px;
+        width: 42px;
+        height: 42px;
+        font-size: 11px;
+    }
+
+    .ecommerce-process-list::before {
+        left: 20px;
+    }
+
+    .ecommerce-process-item h6 {
+        font-size: 15px;
+    }
+
+    .ecommerce-process-item p {
+        font-size: 12px;
+    }
+
+    .ecommerce-cta-section {
+        padding: 20px 0 55px;
+    }
+
+    .ecommerce-cta-box {
+        min-height: auto;
+        padding: 35px 22px;
+        border-radius: 15px;
+    }
+
+    .ecommerce-cta-action {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .ecommerce-cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+
+
+/* =========================================================
+   E-COMMERCE PROCESS SECTION
+========================================================= */
+
+.ecom-process-main {
+    position: relative;
+    width: 100%;
+    overflow: visible !important;
+    transform: none !important;
+    padding: 90px 0;
+}
+
+.ecom-process-main .container,
+.ecom-process-main .row,
+.ecom-process-main .col-lg-5,
+.ecom-process-main .col-lg-7 {
+    overflow: visible !important;
+    transform: none !important;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.ecom-process-heading-area {
+    margin-bottom: 55px;
+}
+
+.ecom-process-heading-area .tp-section-subtitle {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.ecom-process-heading-area .px-about-title {
+    /* max-width: 850px; */
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.ecom-process-left {
+    position: relative;
+    height: 100%;
+}
+
+.ecom-process-intro {
+    position: sticky;
+    top: 100px;
+    max-width: 480px;
+}
+
+.ecom-process-intro p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    color: #555;
+}
+
+.ecom-process-intro p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   RIGHT PROCESS AREA
+========================================================= */
+
+.ecom-process-right {
+    position: relative;
+    width: 100%;
+}
+
+.ecom-process-area {
+    position: relative;
+    width: 100%;
+}
+
+
+/* =========================================================
+   PROCESS TITLE
+========================================================= */
+
+.ecom-process-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.ecom-process-title-line {
+    display: block;
+    width: 38px;
+    height: 2px;
+    background: #53ae7d;
+    flex-shrink: 0;
+}
+
+.ecom-process-title h5 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SWIPER
+========================================================= */
+
+.ecom-process-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.ecom-process-slider .swiper-wrapper {
+    align-items: stretch;
+}
+
+.ecom-process-slider .swiper-slide {
+    height: auto;
+}
+
+
+/* =========================================================
+   PROCESS SLIDE
+========================================================= */
+
+.ecom-process-slide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* =========================================================
+   NUMBER + CONNECTING LINE
+========================================================= */
+
+.ecom-process-number-area {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.ecom-process-number {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #053456;
+    color: #fff;
+
+    font-family: "Tenor Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    position: relative;
+    z-index: 2;
+}
+
+.ecom-process-line {
+    display: block;
+    width: 45px;
+    height: 2px;
+    background: #53ae7d;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PROCESS CARD
+========================================================= */
+
+.ecom-process-card {
+    width: calc(100% - 50px);
+    margin-left: 50px;
+    margin-top: -1px;
+
+    padding: 32px 35px;
+
+    background: #fff;
+    border: 1px solid rgba(5, 52, 86, 0.10);
+    border-radius: 0 18px 18px 18px;
+
+    box-shadow: 0 12px 35px rgba(5, 52, 86, 0.07);
+
+    position: relative;
+}
+
+
+/* Small green accent */
+
+.ecom-process-card::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 24px;
+    width: 3px;
+    height: 45px;
+    background: #53ae7d;
+    border-radius: 0 4px 4px 0;
+}
+
+
+/* =========================================================
+   STEP LABEL
+========================================================= */
+
+.ecom-process-step {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    font-family: "Figtree", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: #53ae7d;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.ecom-process-card h6 {
+    margin: 0 0 12px;
+
+    font-size: 25px;
+    line-height: 1.3;
+    font-weight: 600;
+
+    color: #053456;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.ecom-process-card p {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.75;
+
+    color: #666;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .ecom-process-main {
+        padding: 70px 0;
+    }
+
+    .ecom-process-heading-area {
+        margin-bottom: 45px;
+    }
+
+    .ecom-process-intro {
+        position: static;
+        max-width: 100%;
+    }
+
+    .ecom-process-left {
+        margin-bottom: 45px;
+    }
+
+    .ecom-process-intro p {
+        font-size: 16px;
+    }
+
+    .ecom-process-card {
+        width: calc(100% - 45px);
+        margin-left: 45px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .ecom-process-main {
+        padding: 55px 0;
+    }
+
+    .ecom-process-heading-area {
+        margin-bottom: 35px;
+    }
+
+    .ecom-process-heading-area .px-about-title {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .ecom-process-title {
+        margin-bottom: 25px;
+    }
+
+    .ecom-process-title h5 {
+        font-size: 19px;
+    }
+
+    .ecom-process-title-line {
+        width: 28px;
+    }
+
+    .ecom-process-number {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        font-size: 16px;
+    }
+
+    .ecom-process-line {
+        width: 30px;
+    }
+
+    .ecom-process-card {
+        width: calc(100% - 35px);
+        margin-left: 35px;
+        padding: 25px 24px;
+        border-radius: 0 14px 14px 14px;
+    }
+
+    .ecom-process-card h6 {
+        font-size: 21px;
+    }
+
+    .ecom-process-card p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .ecom-process-step {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ecom-process-main {
+        padding: 45px 0;
+    }
+
+    .ecom-process-heading-area .px-about-title {
+        font-size: 26px;
+    }
+
+    .ecom-process-intro p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .ecom-process-number {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+        font-size: 14px;
+    }
+
+    .ecom-process-line {
+        width: 24px;
+    }
+
+    .ecom-process-card {
+        width: calc(100% - 28px);
+        margin-left: 28px;
+        padding: 22px 20px;
+    }
+
+    .ecom-process-card h6 {
+        font-size: 19px;
+    }
+
+    .ecom-process-card p {
+        font-size: 14px;
+    }
+}
