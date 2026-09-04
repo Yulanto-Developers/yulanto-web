@@ -51,7 +51,7 @@ export const lightMenu: MenuItem[] = [
         subLinks: [
           { label: "WordPress Development", href: "/WordPress-Development" },
           { label: "WooCommerce Development", href: "/WooCommerce-Development" },
-          { label: "Shopify E-commerce Development", href: "/" },
+          { label: "Shopify E-commerce Development", href: "/Shopify-E-commerce-Development" },
           { label: "Portal Web Development", href: "/" },
           { label: "Custom E-commerce Development", href: "/custome-ecommerce-development" },
         ]

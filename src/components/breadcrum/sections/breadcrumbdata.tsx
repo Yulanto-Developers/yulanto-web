@@ -236,7 +236,14 @@ const data = [
     currentPage: "Custome Ecommerce Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-                      
+  {
+    path: "/Shopify-E-commerce-Development",
+    title: "Shopify E-commerce Development",
+    
+    currentPage: "Shopify E-commerce Development",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+              
 
 
 
