@@ -1,0 +1,567 @@
+/* =========================================
+   INDUSTRY SECTION
+========================================= */
+
+.industry-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.industry-subtitle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #053456;
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.industry-subtitle::before,
+.industry-subtitle::after {
+    content: "";
+
+    width: 30px;
+    height: 1px;
+
+    background: #053456;
+}
+
+
+.industry-heading {
+    max-width: 900px;
+
+    margin: 0 auto 20px;
+
+    color: #053456;
+
+    font-size: clamp(38px, 4vw, 58px);
+    font-weight: 500;
+
+    line-height: 1.08;
+}
+
+
+.industry-description {
+    max-width: 850px;
+
+    margin: 0 auto 8px;
+
+    color: #626a70;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   THREE COLUMN AREA
+========================================= */
+
+.industry-main-row {
+    margin-top: 65px;
+}
+
+
+/* =========================================
+   SVG COLUMN
+========================================= */
+
+.industry-visual {
+    width: 100%;
+    min-height: 520px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.industry-svg {
+    width: 100%;
+    max-width: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.industry-svg svg {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+.industry-svg-changing {
+    opacity: 0;
+
+    transform: translateX(-45px);
+}
+
+
+/* =========================================
+   ACTIVE INDUSTRY TITLE
+========================================= */
+
+.industry-current-title {
+    margin: 12px 0 0;
+
+    color: #053456;
+
+    font-size: 23px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   COUNTER
+========================================= */
+
+.industry-counter {
+    width: 75%;
+    max-width: 320px;
+
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: #053456;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.industry-counter-line {
+    position: relative;
+
+    flex: 1;
+
+    height: 2px;
+
+    background: #dce4e9;
+
+    overflow: hidden;
+}
+
+
+.industry-counter-line span {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 100%;
+
+    background: #053456;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================
+   INDUSTRY LIST
+========================================= */
+
+.industry-list {
+    width: 100%;
+}
+
+
+.industry-item {
+    width: 100%;
+    min-height: 64px;
+
+    padding: 8px 16px;
+
+    display: grid;
+    grid-template-columns: 35px 1fr 25px;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #e2e8ec;
+    border-radius: 10px;
+
+    background: #fff;
+
+    color: #053456;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.industry-item:hover {
+    border-color: #053456;
+
+    transform: translateX(4px);
+
+    box-shadow: 0 8px 25px rgba(5, 52, 86, 0.08);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.industry-number {
+    color: #9aa6ad;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INDUSTRY NAME
+========================================= */
+
+.industry-name {
+    color: #26343c;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    line-height: 1.3;
+
+    transition: color 0.3s ease;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.industry-arrow {
+    color: #8b969d;
+
+    font-size: 20px;
+
+    opacity: 0;
+
+    transform: translateX(-8px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.industry-item:hover .industry-arrow {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   ACTIVE
+========================================= */
+
+.industry-item.active {
+    background: #053456;
+
+    border-color: #053456;
+
+    box-shadow: 0 12px 30px rgba(5, 52, 86, 0.16);
+
+    transform: translateX(4px);
+}
+
+
+.industry-item.active .industry-number {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+.industry-item.active .industry-name {
+    color: #fff;
+
+    font-weight: 600;
+}
+
+
+.industry-item.active .industry-arrow {
+    color: #fff;
+
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+    .industry-section {
+        padding: 80px 0;
+    }
+
+    .industry-main-row {
+        margin-top: 50px;
+    }
+
+    .industry-visual {
+        min-height: 450px;
+    }
+
+    .industry-svg {
+        max-width: 360px;
+    }
+
+    .industry-item {
+        min-height: 60px;
+
+        padding: 8px 12px;
+    }
+
+    .industry-name {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE / TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .industry-section {
+        padding: 70px 0;
+    }
+
+    .industry-heading {
+        font-size: 42px;
+    }
+
+    .industry-main-row {
+        margin-top: 40px;
+    }
+
+    .industry-visual {
+        min-height: auto;
+
+        margin-bottom: 45px;
+    }
+
+    .industry-svg {
+        max-width: 380px;
+    }
+
+    .industry-list {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+    .industry-section {
+        padding: 55px 0;
+    }
+
+    .industry-subtitle {
+        font-size: 11px;
+        letter-spacing: 1.8px;
+    }
+
+    .industry-subtitle::before,
+    .industry-subtitle::after {
+        width: 20px;
+    }
+
+    .industry-heading {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .industry-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .industry-main-row {
+        margin-top: 35px;
+    }
+
+    .industry-svg {
+        max-width: 300px;
+    }
+
+    .industry-current-title {
+        font-size: 21px;
+    }
+
+    .industry-counter {
+        width: 80%;
+    }
+
+    .industry-item {
+        min-height: 58px;
+
+        grid-template-columns: 32px 1fr 20px;
+
+        padding: 7px 11px;
+
+        border-radius: 8px;
+    }
+
+    .industry-name {
+        font-size: 14px;
+    }
+
+    .industry-arrow {
+        font-size: 18px;
+    }
+
+}
+
+
+/* =========================================
+   SVG ANIMATION KEYFRAMES & COLORS
+========================================= */
+
+:root {
+    --brand-primary: #053456;
+    --brand-secondary: #53ae7d;
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.12;
+    }
+
+    50% {
+        transform: scale(1.04);
+        opacity: 0.22;
+    }
+}
+
+@keyframes pulseGlowSecondary {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.15;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.35;
+    }
+}
+
+@keyframes floatY {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes rotateSlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dashOffset {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 24;
+    }
+}
+
+/* Base icon styles */
+.industry-svg-icon {
+    width: 120px;
+    height: 120px;
+    overflow: visible;
+}
+
+.icon-bg-pulse {
+    transform-origin: center;
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.icon-bg-secondary-pulse {
+    transform-origin: center;
+    animation: pulseGlowSecondary 4s ease-in-out infinite;
+}
+
+.icon-float {
+    animation: floatY 3s ease-in-out infinite;
+}
+
+.icon-rotate {
+    transform-origin: 60px 60px;
+    animation: rotateSlow 20s linear infinite;
+}
+
+.icon-dash {
+    stroke-dasharray: 6 6;
+    animation: dashOffset 4s linear infinite;
+}
