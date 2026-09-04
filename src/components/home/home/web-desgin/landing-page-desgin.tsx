@@ -475,11 +475,11 @@ function Landingpagedesgin() {
 
                             <div className="landing-cta-content">
 
-                                <span className="tp-section-subtitle blink-ball">
+                                <span className="tp-section-subtitle blink-ball text-white">
                                     Get a Professional Landing Page Designed in Chennai
                                 </span>
 
-                                <h4 className="px-about-title mb-20 text-tenor">
+                                <h4 className="px-about-title mb-20 text-tenor text-white">
                                     <span className="text-blue-about text-white">
                                         Get a Professional Landing Page{" "}
                                     </span>

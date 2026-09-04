@@ -53,7 +53,7 @@ export const lightMenu: MenuItem[] = [
           { label: "WooCommerce Development", href: "/WooCommerce-Development" },
           { label: "Shopify E-commerce Development", href: "/" },
           { label: "Portal Web Development", href: "/" },
-          { label: "Custom E-commerce Development", href: "/" },
+          { label: "Custom E-commerce Development", href: "/custome-ecommerce-development" },
         ]
       },
       {
