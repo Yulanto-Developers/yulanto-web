@@ -3,9 +3,9 @@
 import React from "react";
 import Image from "next/image";
 
-import image1 from "@/assets/images/webdev/image-1.jpg";
-import image2 from "@/assets/images/webdev/image-2.jpg";
-import image3 from "@/assets/images/webdev/image-3.jpg";
+import image1 from "@/assets/images/website-development/React-website/Creative-Website-Design.jpg";
+import image2 from "@/assets/images/website-development/React-website/Creative-Website-Design-right.jpg";
+import image3 from "@/assets/images/website-development/React-website/Creative-Website-Design-left.jpg";
 
 const CreativeReactSection = () => {
     return (

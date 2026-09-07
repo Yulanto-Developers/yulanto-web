@@ -31,12 +31,14 @@ import {
 } from 'lucide-react';
 
 // Replace image imports with your actual asset paths
-import image1 from '@/assets/images/website-development/dynamic-website-development/image-1.jpg';
-import image2 from '@/assets/images/website-development/dynamic-website-development/image-2.jpg';
-import image3 from '@/assets/images/website-development/dynamic-website-development/image-3.jpg';
-import image4 from '@/assets/images/website-development/dynamic-website-development/image-4.jpg';
+import image1 from '@/assets/images/website-development/API-Integration/Any-Third-Party-API-Integration.jpg';
+import image2 from '@/assets/images/website-development/API-Integration/Chat-API-Integration.jpg';
+import image3 from '@/assets/images/website-development/API-Integration/Payment-Gateway-Integration.jpg';
+import image4 from '@/assets/images/website-development/API-Integration/SMS-Gateway-Integration.jpg';
+import image5 from '@/assets/images/website-development/API-Integration/WhatsApp-Gateway-Integration.jpg';
+import image6 from '@/assets/images/website-development/API-Integration/Zoho-CRM-Integration.jpg';
 
-const dynamicImages = [image1, image2, image3, image4];
+const dynamicImages = [image1, image2, image3, image4, image5, image6];
 
 const PaymentGatewayIntegration = () => {
     useAOS();

@@ -18,26 +18,27 @@ const seoBottomText = `Our API integration services enable your website or appli
 // Dynamic Data Definition
 const seoSlides: CoverflowSlide[] = [
   {
-    src: "/assets/images/website-development/custom-website-development/top-1.jpg",
-    alt: "Off-Page Link Building Strategy",
+    src: "/assets/images/website-development/API-Integration/top-1.jpg",
+    alt: "API Integration Services",
   },
   {
-    src: "/assets/images/website-development/custom-website-development/top-2.jpg",
-    alt: "Local Citation & Directory Submission",
+    src: "/assets/images/website-development/API-Integration/top-2.jpg",
+    alt: "API Integration Solutions",
   },
   {
-    src: "/assets/images/website-development/custom-website-development/top-3.jpg",
-    alt: "Content Marketing & Guest Posting",
+    src: "/assets/images/website-development/API-Integration/top-3.jpg",
+    alt: "Third Party API Integration",
   },
   {
-    src: "/assets/images/website-development/custom-website-development/top-4.jpg",
-    alt: "Brand Mention & Authority Building",
+    src: "/assets/images/website-development/API-Integration/top-4.jpg",
+    alt: "Business API Integration",
   },
   {
-    src: "/assets/images/website-development/custom-website-development/top-5.jpg",
-    alt: "Social Signals & Digital PR",
+    src: "/assets/images/website-development/API-Integration/top-5.jpg",
+    alt: "Custom API Integration",
   },
 ];
+
 function ApiIntegration() {
   // Use the AOS hook
   useAOS();
