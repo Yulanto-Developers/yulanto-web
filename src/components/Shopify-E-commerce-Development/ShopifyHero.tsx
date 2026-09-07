@@ -130,8 +130,9 @@ const Floating = ({
         ref={containerRef}
         style={{
           position: "relative",
-          width: "100%",
+      
           minHeight: "250px",
+          overflow: "hidden",
           ...style,
         }}
       >
@@ -353,9 +354,7 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
         layout
         transition={transition}
       >
-        <span style={{ position: "absolute", width: "1px", height: "1px", overflow: "hidden", clip: "rect(0,0,0,0)" }}>
-          {texts[currentTextIndex]}
-        </span>
+     
 
         <AnimatePresence mode={animatePresenceMode} initial={animatePresenceInitial}>
           <motion.div
@@ -363,7 +362,6 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
             style={{
               display: "flex",
               flexWrap: "wrap",
-              width: splitBy === "lines" ? "100%" : "auto",
               flexDirection: splitBy === "lines" ? "column" : "row",
             }}
             layout
@@ -476,57 +474,48 @@ export default function ShopifyHero() {
 
         {/* Floating Parallax Images Displayed Below Content */}
         <div className="row mt-5">
-          <div className="col-12">
-            <Floating sensitivity={-0.5}>
-              <FloatingElement depth={0.5} style={{ top: "10%", left: "2%" }}>
-                <motion.img
-                  src={shopifyImages[0].url}
-                  alt={shopifyImages[0].title}
-                  style={{ ...imageStyle, width: "160px", height: "200px", transform: "rotate(-4deg)" }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                />
-              </FloatingElement>
+          <div className="col-12" style={{ overflow: "hidden" }}>
+            <Floating sensitivity={-0.5} style={{ minHeight: "260px", overflow: "hidden" }}>
+             
 
-              <FloatingElement depth={1} style={{ top: "5%", left: "22%" }}>
+              <FloatingElement depth={1} style={{ top: "5%", left: "20%" }}>
                 <motion.img
                   src={shopifyImages[1].url}
                   alt={shopifyImages[1].title}
-                  style={{ ...imageStyle, width: "200px", height: "200px", transform: "rotate(-12deg)" }}
+                  style={{ ...imageStyle, width: "170px", height: "180px", transform: "rotate(-12deg)" }}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
                 />
               </FloatingElement>
 
-              <FloatingElement depth={3} style={{ top: "15%", left: "42%" }}>
+              <FloatingElement depth={3} style={{ top: "15%", left: "40%" }}>
                 <motion.img
                   src={shopifyImages[2].url}
                   alt={shopifyImages[2].title}
-                  style={{ ...imageStyle, width: "210px", height: "200px", transform: "rotate(-6deg)" }}
+                  style={{ ...imageStyle, width: "180px", height: "180px", transform: "rotate(-6deg)" }}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.7 }}
                 />
               </FloatingElement>
 
-              <FloatingElement depth={2} style={{ top: "5%", left: "64%" }}>
+              <FloatingElement depth={2} style={{ top: "5%", left: "60%" }}>
                 <motion.img
                   src={shopifyImages[3].url}
                   alt={shopifyImages[3].title}
-                  style={{ ...imageStyle, width: "190px", height: "200px", transform: "rotate(8deg)" }}
+                  style={{ ...imageStyle, width: "170px", height: "180px", transform: "rotate(8deg)" }}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.9 }}
                 />
               </FloatingElement>
 
-              <FloatingElement depth={1.5} style={{ top: "10%", left: "82%" }}>
+              <FloatingElement depth={1.5} style={{ top: "10%", left: "78%" }}>
                 <motion.img
                   src={shopifyImages[4].url}
                   alt={shopifyImages[4].title}
-                  style={{ ...imageStyle, width: "180px", height: "200px", transform: "rotate(12deg)" }}
+                  style={{ ...imageStyle, width: "160px", height: "180px", transform: "rotate(12deg)" }}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.1 }}
@@ -535,7 +524,7 @@ export default function ShopifyHero() {
             </Floating>
           </div>
         </div>
-        <p  className="text-figtree text-black mt-2">From Shopify store setup and theme customization to custom development, third-party integrations, payment gateways, and ongoing maintenance, our experienced Shopify developers provide end-to-end solutions tailored to your business requirements.</p>
+        <p className="text-figtree text-black mt-2">From Shopify store setup and theme customization to custom development, third-party integrations, payment gateways, and ongoing maintenance, our experienced Shopify developers provide end-to-end solutions tailored to your business requirements.</p>
       </div>
     </section>
   )
