@@ -16,9 +16,17 @@ import { } from "@/data/testimonial-data";
 import Testimonial from "@/components/home/modern-agency/sections/ModernAgencyTestimonial";
 import { DesignStudioHero, Marquee, Abouthome, Portfolio, Gallery, Projects, Mantra, OurPartner, Services, ClientTestimonial } from "@/components/home/home/myComponents";
 
-export const metadata: Metadata = {
-  title: "Yulanto - Home",
-};
+// export const metadata: Metadata = {
+//   title: "Yulanto - Home",
+// };
+import { generateSeo } from "@/lib/seo";
+
+export const metadata = generateSeo({
+  title: "Web Design & Development Company in Chennai | Yulanto",
+  description:
+    "Yulanto Web Creations offers professional website design, web development, eCommerce and digital solutions in Chennai.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+});
 const page = () => {
   return (
     <main>

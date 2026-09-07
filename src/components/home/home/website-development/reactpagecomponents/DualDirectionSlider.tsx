@@ -4,26 +4,31 @@ import React from "react";
 import Image from "next/image";
 
 // Replace these imports with your actual image paths
-import image1 from "@/assets/images/ourstory/image-1.jpg";
-import image2 from "@/assets/images/ourstory/image-2.jpg";
-import image3 from "@/assets/images/ourstory/vector-1.png";
-import image4 from "@/assets/images/ourstory/vector-2.png";
-import image5 from "@/assets/images/ourstory/image-1.jpg";
+import image1 from "@/assets/images/website-development/React-website/@Corporate-&-Business-Websites.jpg";
+import image2 from "@/assets/images/website-development/React-website/@Startups-&-New-Businesses.jpg";
+import image3 from "@/assets/images/website-development/React-website/@Real-Estate-Companies.jpg";
+import image4 from "@/assets/images/website-development/React-website/@Construction & Infrastructure.jpg";
+import image5 from "@/assets/images/website-development/React-website/@Manufacturing-&-Industrial-Businesses.jpg";
+import image6 from "@/assets/images/website-development/React-website/@Educational-Institutions.jpg";
+import image7 from "@/assets/images/website-development/React-website/@Professional-Services.jpg";
+import image8 from "@/assets/images/website-development/React-website/@Healthcare-&-Service-Businesses.jpg";
+import image9 from "@/assets/images/website-development/React-website/@E-commerce-&-Online-Businesses.jpg";
+import image10 from "@/assets/images/website-development/React-website/@Custom-Web-Applications.jpg";
 
 const rowOneItems = [
-  { id: 1, title: "Corporate & Business Websites", image: image1 },
-  { id: 2, title: "Startups & New Businesses", image: image2 },
-  { id: 3, title: "Real Estate Companies", image: image3 },
-  { id: 4, title: "Construction & Infrastructure", image: image4 },
-  { id: 5, title: "Manufacturing & Industrial Businesses", image: image5 },
+    { id: 1, title: "Corporate & Business Websites", image: image1 },
+    { id: 2, title: "Startups & New Businesses", image: image2 },
+    { id: 3, title: "Real Estate Companies", image: image3 },
+    { id: 4, title: "Construction & Infrastructure", image: image4 },
+    { id: 5, title: "Manufacturing & Industrial Businesses", image: image5 },
 ];
 
 const rowTwoItems = [
-  { id: 6, title: "Educational Institutions", image: image1 },
-  { id: 7, title: "Professional Services", image: image2 },
-  { id: 8, title: "Healthcare & Service Businesses", image: image3 },
-  { id: 9, title: "E-commerce & Online Businesses", image: image4 },
-  { id: 10, title: "Custom Web Applications", image: image5 },
+    { id: 6, title: "Educational Institutions", image: image6 },
+    { id: 7, title: "Professional Services", image: image7 },
+    { id: 8, title: "Healthcare & Service Businesses", image: image8 },
+    { id: 9, title: "E-commerce & Online Businesses", image: image9 },
+    { id: 10, title: "Custom Web Applications", image: image10 },
 ];
 
 const DualDirectionSlider = () => {

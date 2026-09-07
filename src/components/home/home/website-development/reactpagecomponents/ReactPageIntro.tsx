@@ -1,27 +1,39 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import Image, { type StaticImageData } from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../../../../seo/HeroCollage.css';
+import img1 from '@/assets/images/website-development/React-website/top-img-1.jpg';
+import img2 from '@/assets/images/website-development/React-website/top-img-2.jpg';
+import img3 from '@/assets/images/website-development/React-website/top-img-3.jpg';
+import img4 from '@/assets/images/website-development/React-website/top-img-4.jpg';
+import img5 from '@/assets/images/website-development/React-website/top-img-5.jpg';
+import img6 from '@/assets/images/website-development/React-website/top-img-6.jpg';
+import img7 from '@/assets/images/website-development/React-website/top-img-7.jpg';
 
 export interface HeroCollageProps extends React.HTMLAttributes<HTMLDivElement> {
     title?: string;
     subtitle?: string;
     stats?: { value: string; label: string }[];
-    images?: string[];
+    images?: Array<string | StaticImageData>;
 }
 
-// Sample placeholder images structured to mirror your reference image
-const INTERNAL_IMAGES = [
-    "assets/img/seo/top/top-img-4.jpg",
-    "assets/img/seo/top/top-img-2.jpg",
-    "assets/img/seo/top/top-img-3.jpg",
-    "assets/img/seo/top/top-img-6.jpg",
-    "assets/img/seo/top/top-img-7.jpg",
-    "assets/img/seo/top/top-img-5.jpg",
-    "assets/img/seo/top/top-img-1.jpg",
+const INTERNAL_IMAGES: Array<string | StaticImageData> = [
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
 ];
+
+const resolveImageSrc = (image?: string | StaticImageData) => {
+    if (!image) return '';
+    return typeof image === 'string' ? image : image.src;
+};
 
 const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
     ({ className = '', images = [], stats = [], ...props }, ref) => {
@@ -42,7 +54,6 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                 {...props}
             >
                 <div className="container container-1550">
-                    {/* Section Header */}
                     <div className="row align-items-center mb-5" data-aos="fade-up">
                         <div className="col-xl-3">
                             <span className="tp-section-subtitle text-black blink-ball">
@@ -53,8 +64,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                         <div className="col-xl-9">
                             <div className="px-project-title-box">
                                 <h4 className="px-about-title mb-20">
-                                    <span className="text-blue-about">Build Modern, Fast & Scalable 
-                                    </span> <br />
+                                    <span className="text-blue-about">Build Modern, Fast & Scalable </span> <br />
                                     Increase Traffic, Rankings & Leads
                                 </h4>
                                 <p className="text-figtree text-black mt-2">
@@ -64,70 +74,76 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                         </div>
                     </div>
 
-                    {/* Image Collage Layout Matching Reference Image */}
                     <div className="hero-collage-wrapper position-relative my-5" data-aos="zoom-in" data-aos-delay="200">
                         <div className="hero-collage-container position-relative mx-auto">
-                            {/* Center Main Card */}
                             {activeImages[0] && (
-                                <img
-                                    src={activeImages[0]}
+                                <Image
+                                    src={resolveImageSrc(activeImages[0])}
                                     alt="Main feature"
                                     className="collage-img img-center animate-float-up"
                                     style={{ animationDelay: '0s' }}
+                                    width={800}
+                                    height={600}
                                 />
                             )}
-                            {/* Front Left Tall Card */}
                             {activeImages[1] && (
-                                <img
-                                    src={activeImages[1]}
+                                <Image
+                                    src={resolveImageSrc(activeImages[1])}
                                     alt="Feature 2"
                                     className="collage-img img-top-left animate-float-up"
                                     style={{ animationDelay: '-1.2s' }}
+                                    width={800}
+                                    height={600}
                                 />
                             )}
-                            {/* Top Left Small Card */}
                             {activeImages[2] && (
-                                <img
-                                    src={activeImages[2]}
+                                <Image
+                                    src={resolveImageSrc(activeImages[2])}
                                     alt="Feature 3"
                                     className="collage-img img-bottom-left animate-float-up"
                                     style={{ animationDelay: '-2.5s' }}
+                                    width={800}
+                                    height={600}
                                 />
                             )}
-                            {/* Top Right Card */}
                             {activeImages[3] && (
-                                <img
-                                    src={activeImages[3]}
+                                <Image
+                                    src={resolveImageSrc(activeImages[3])}
                                     alt="Feature 4"
                                     className="collage-img img-top-right animate-float-up"
                                     style={{ animationDelay: '-3.5s' }}
+                                    width={800}
+                                    height={600}
                                 />
                             )}
-                            {/* Far Right Card */}
                             {activeImages[4] && (
-                                <img
-                                    src={activeImages[4]}
+                                <Image
+                                    src={resolveImageSrc(activeImages[4])}
                                     alt="Feature 5"
                                     className="collage-img img-far-right animate-float-up"
                                     style={{ animationDelay: '-4.8s' }}
+                                    width={800}
+                                    height={600}
                                 />
                             )}
-                            {/* Bottom Right Horizontal Card */}
                             {activeImages[5] && (
-                                <img
-                                    src={activeImages[5]}
+                                <Image
+                                    src={resolveImageSrc(activeImages[5])}
                                     alt="Feature 6"
                                     className="collage-img img-bottom-right animate-float-up"
                                     style={{ animationDelay: '-5.2s' }}
+                                    width={800}
+                                    height={600}
                                 />
                             )}
-                            {/* Far Left Card */}
                             {activeImages[6] && (
-                                <img
-                                    src={activeImages[6]}
+                                <Image
+                                    src={resolveImageSrc(activeImages[6])}
                                     alt="Feature 7"
                                     className="collage-img img-far-left animate-float-up"
                                     style={{ animationDelay: '-6s' }}
+                                    width={800}
+                                    height={600}
                                 />
                             )}
                         </div>
@@ -135,9 +151,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                     <p className="text-figtree text-black mt-80">
                         As experienced website builders in Chennai, we combine creative UI/UX design with powerful front-end development to create websites that are visually appealing, easy to navigate, and built for long-term growth
                     </p>
-
                 </div>
-
             </section>
         );
     }

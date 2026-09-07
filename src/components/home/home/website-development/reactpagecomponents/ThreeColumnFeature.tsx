@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 
 // Replace these with your actual image paths
-import centerFeatureImage from "@/assets/images/ourstory/image-1.jpg";
+import centerFeatureImage from "@/assets/images/website-development/React-website/last-img.jpg";
 
 const ThreeColumnFeature = () => {
   return (

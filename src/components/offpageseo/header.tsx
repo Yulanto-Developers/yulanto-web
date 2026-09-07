@@ -1,14 +1,14 @@
 "use client";
- 
+
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
- 
+
 export interface CoverflowSlide {
   src: string;
   alt: string;
 }
- 
+
 export interface CoverflowCarouselProps {
   subtitle?: string;
   titlePrefix?: string;
@@ -29,7 +29,7 @@ export interface CoverflowCarouselProps {
   label?: string;
   className?: string; // add this
 }
- 
+
 const DEFAULT_SLIDES: CoverflowSlide[] = [
   { src: "assets/img/offpage/top-1.jpg", alt: "SEO Strategy 1" },
   { src: "assets/img/offpage/top-2.jpg", alt: "SEO Strategy 2" },
@@ -37,10 +37,10 @@ const DEFAULT_SLIDES: CoverflowSlide[] = [
   { src: "assets/img/offpage/top-4.jpg", alt: "SEO Strategy 4" },
   { src: "assets/img/offpage/top-5.jpg", alt: "SEO Strategy 5" },
 ];
- 
+
 const useIsoLayoutEffect =
   typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
- 
+
 export default function SeoCoverflowSection({
   subtitle = "Off-Page SEO in Chennai",
   titlePrefix = "Build Authority, Rankings & ",
@@ -59,57 +59,63 @@ export default function SeoCoverflowSection({
   loop = true,
   autoScrollSpeed = 1000,
   label = "Cover carousel",
- className,
+  className,
 }: CoverflowCarouselProps) {
   const count = slides.length;
- 
+
   const frameRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const posRef = useRef(0);
   const targetRef = useRef(0);
   const widthRef = useRef(0);
   const rafRef = useRef<number | null>(null);
-  const dragRef = useRef<{ id: number; x: number; pos: number; v: number; t: number } | null>(null);
+  const dragRef = useRef<{
+    id: number;
+    x: number;
+    pos: number;
+    v: number;
+    t: number;
+  } | null>(null);
   const [isHovered, setIsHovered] = useState(false);
- 
+
   useEffect(() => {
     AOS.init({ duration: 800, once: true, easing: "ease-out-cubic" });
   }, []);
- 
+
   const paint = useCallback(() => {
     const width = widthRef.current;
     if (!width || count === 0) return;
     const pitch = width * (1 + gap);
     const pos = posRef.current;
- 
+
     cardRefs.current.forEach((card, index) => {
       if (!card) return;
- 
+
       let offset = index - pos;
       if (loop) {
         offset = ((offset % count) + count) % count;
         if (offset > count / 2) offset -= count;
       }
- 
+
       const distance = Math.abs(offset);
       const ramp = Math.pow(distance, falloff);
       const tilt = Math.min(rotate * ramp, 82) * Math.sign(offset);
- 
+
       card.style.transform =
         `translateX(calc(-50% + ${offset * pitch}px)) ` +
         `translateZ(${-depth * width * ramp}px) rotateY(${-tilt}deg)`;
- 
+
       const edge = loop ? Math.min(1, Math.max(0, count / 2 - distance)) : 1;
       card.style.opacity = String(Math.max(0, 1 - fade * distance) * edge);
       card.style.zIndex = String(100 - Math.round(distance));
     });
   }, [count, depth, fade, falloff, gap, loop, rotate]);
- 
+
   const settle = useCallback(
     (target: number) => {
       if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
       targetRef.current = target;
- 
+
       const step = () => {
         const remaining = target - posRef.current;
         if (Math.abs(remaining) < 0.0004) {
@@ -124,30 +130,30 @@ export default function SeoCoverflowSection({
       };
       rafRef.current = requestAnimationFrame(step);
     },
-    [paint]
+    [paint],
   );
- 
+
   const clamp = useCallback(
     (pos: number) => (loop ? pos : Math.max(0, Math.min(count - 1, pos))),
-    [count, loop]
+    [count, loop],
   );
- 
+
   const nudge = useCallback(
     (by: number) => settle(clamp(Math.round(targetRef.current) + by)),
-    [clamp, settle]
+    [clamp, settle],
   );
- 
+
   // Auto-scroll effect
   useEffect(() => {
     if (isHovered || count === 0) return;
- 
+
     const interval = setInterval(() => {
       nudge(1);
     }, autoScrollSpeed);
- 
+
     return () => clearInterval(interval);
   }, [isHovered, nudge, autoScrollSpeed, count]);
- 
+
   const measure = useCallback(() => {
     const card = cardRefs.current[0];
     if (card) {
@@ -155,17 +161,17 @@ export default function SeoCoverflowSection({
       paint();
     }
   }, [paint]);
- 
+
   useIsoLayoutEffect(() => {
     const frame = frameRef.current;
     if (!frame) return;
- 
+
     measure();
     const observer = new ResizeObserver(measure);
     observer.observe(frame);
     return () => observer.disconnect();
   }, [measure]);
- 
+
   const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
     if (rafRef.current !== null) {
       cancelAnimationFrame(rafRef.current);
@@ -173,25 +179,31 @@ export default function SeoCoverflowSection({
     }
     event.currentTarget.setPointerCapture(event.pointerId);
     targetRef.current = posRef.current;
-    dragRef.current = { id: event.pointerId, x: event.clientX, pos: posRef.current, v: 0, t: performance.now() };
+    dragRef.current = {
+      id: event.pointerId,
+      x: event.clientX,
+      pos: posRef.current,
+      v: 0,
+      t: performance.now(),
+    };
   };
- 
+
   const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
     const drag = dragRef.current;
     if (!drag || drag.id !== event.pointerId) return;
- 
+
     const pitch = widthRef.current * (1 + gap);
     if (!pitch) return;
- 
+
     const now = performance.now();
     const previous = posRef.current;
     posRef.current = clamp(drag.pos - (event.clientX - drag.x) / pitch);
     drag.v = ((posRef.current - previous) / Math.max(now - drag.t, 1)) * 1000;
     drag.t = now;
- 
+
     paint();
   };
- 
+
   const endDrag = (event: React.PointerEvent<HTMLDivElement>) => {
     const drag = dragRef.current;
     if (!drag || drag.id !== event.pointerId) return;
@@ -199,9 +211,11 @@ export default function SeoCoverflowSection({
     const carried = Math.max(-2, Math.min(2, drag.v * 0.18));
     settle(clamp(Math.round(posRef.current + carried)));
   };
- 
+
   return (
-    <section className={`px-about-6-area pt-50 pb-80 pb-lg-110 ${className || ''}`}>
+    <section
+      className={`px-about-6-area pt-50 pb-80 pb-lg-110 ${className || ""}`}
+    >
       <div className="container container-1550">
         {/* Header / Title Block */}
         <div className="row align-items-center mb-5" data-aos="fade-up">
@@ -215,26 +229,32 @@ export default function SeoCoverflowSection({
           <div className={subtitle ? "col-xl-9" : "col-xl-12"}>
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
-                {titlePrefix && <span className="text-blue-about">{titlePrefix}</span>}
-                {titleHighlight && <span className="text-blue-about">{titleHighlight} </span>}
+                {titlePrefix && (
+                  <span className="text-blue-about">{titlePrefix}</span>
+                )}
+                {titleHighlight && (
+                  <span className="text-blue-about">{titleHighlight} </span>
+                )}
                 {titleSuffix}
               </h4>
               {topDescription && (
-                <p className="text-figtree text-black mt-2">
-                  {topDescription}
-                </p>
+                <p className="text-figtree text-black mt-2">{topDescription}</p>
               )}
             </div>
           </div>
         </div>
- 
+
         {/* Coverflow Carousel */}
         <div
           data-aos="fade-up"
           data-aos-delay="200"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          style={{ width: "100%", position: "relative", ["--cf-card" as string]: cardWidth }}
+          style={{
+            width: "100%",
+            position: "relative",
+            ["--cf-card" as string]: cardWidth,
+          }}
           role="region"
           aria-label={label}
         >
@@ -256,11 +276,20 @@ export default function SeoCoverflowSection({
                 touchAction: "pan-y",
               }}
             >
-              <div style={{ position: "relative", userSelect: "none", height: "var(--cf-card)", transformStyle: "preserve-3d" }}>
+              <div
+                style={{
+                  position: "relative",
+                  userSelect: "none",
+                  height: "var(--cf-card)",
+                  transformStyle: "preserve-3d",
+                }}
+              >
                 {slides.map((slide, index) => (
                   <div
                     key={index}
-                    ref={(node) => { cardRefs.current[index] = node; }}
+                    ref={(node) => {
+                      cardRefs.current[index] = node;
+                    }}
                     style={{
                       position: "absolute",
                       left: "50%",
@@ -279,7 +308,14 @@ export default function SeoCoverflowSection({
                       alt={slide.alt}
                       onLoad={measure}
                       draggable={false}
-                      style={{ height: "100%", width: "100%", objectFit: "cover", display: "block" }}
+                      width={800}
+                      height={800}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
                     />
                   </div>
                 ))}
@@ -287,7 +323,7 @@ export default function SeoCoverflowSection({
             </div>
           </div>
         </div>
- 
+
         {/* Bottom Description Paragraph */}
         {bottomDescription && (
           <p className="text-figtree text-black mt-2 font-paragraph-cls">
@@ -298,4 +334,3 @@ export default function SeoCoverflowSection({
     </section>
   );
 }
- 
