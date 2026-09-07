@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     Compass,
     Smartphone,
@@ -8,10 +8,11 @@ import {
     CreditCard,
     Search
 } from 'lucide-react';
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-AOS.init();
+
 
 interface HighlightItem {
     id: number;
@@ -82,13 +83,19 @@ const highlightsData: HighlightItem[] = [
         floatAnimation: 'floatSlow 4.8s ease-in-out infinite 0.7s'
     },
 ];
-
 export const ShopifyHighlights: React.FC = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    }, []);
+
     return (
         <section
             className="px-about-6-area pt-50 pb-80 pb-lg-110"
             style={{
-
                 overflow: 'hidden',
                 backgroundColor: "#ffffff",
             }}

@@ -422,7 +422,7 @@ TextRotate.displayName = "TextRotate"
 
 const shopifyImages = [
   {
-    url: "https://images.unsplash.com/photo-1556742049-0a670f4a4591?auto=format&fit=crop&w=800&q=80",
+    url: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80",
     title: "E-commerce checkout experience",
   },
   {
