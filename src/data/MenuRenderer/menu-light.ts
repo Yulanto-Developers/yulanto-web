@@ -43,6 +43,7 @@ export const lightMenu: MenuItem[] = [
           { label: "PHP Website Development", href: "/website-development/php-website-development" },
           { label: "React Website Development", href: "/website-development/react-website-development" },
           { label: "API Integration", href: "/website-development/api-integration" },
+          {label: "AI Assisted Website Development", href: "/AI-assisted-website" }
         ]
       },
       {

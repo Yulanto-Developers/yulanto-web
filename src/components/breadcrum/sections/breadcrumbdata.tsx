@@ -243,6 +243,13 @@ const data = [
     currentPage: "Shopify E-commerce Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+   {
+    path: "/AI-assisted-website",
+    title: "AI Assisted Website",
+    
+    currentPage: "AI Assisted Website",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
               
 
 
