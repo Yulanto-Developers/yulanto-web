@@ -86,7 +86,8 @@ export const ShopifyKeyFeatures: React.FC = () => {
       className="px-about-6-area pt-50 pb-80 pb-lg-110"
       style={{
         overflow: 'hidden',
-        background: 'transparent'
+        background: '#fff'
+
       }}
     >
       {/* Keyframe animation for float and Polaroid hover effect */}
@@ -151,7 +152,7 @@ export const ShopifyKeyFeatures: React.FC = () => {
                   '--card-rotate': item.rotation,
                   animation: item.floatAnimation,
                   transform: `rotate(${item.rotation})`,
-                  backgroundColor: '#ffffff',
+                  backgroundColor: '#f1f1f1',
                   borderRadius: '12px',
                   padding: '16px 16px 24px 16px',
                   boxShadow: '0 12px 30px rgba(0, 0, 0, 0.18)',

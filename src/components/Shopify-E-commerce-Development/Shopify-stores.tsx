@@ -47,7 +47,7 @@ export const ShopifyIndustriesSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ background: 'transparent' }}>
+    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ background: '#fff' }}>
       <style>{`
         .pill-tab-btn {
           transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -110,8 +110,8 @@ export const ShopifyIndustriesSection: React.FC = () => {
                       padding: '12px 24px',
                       borderRadius: '16px',
                       border: 'none',
-                      backgroundColor: isActive ? '#ffffff' : 'transparent',
-                      color: isActive ? '#0f172a' : '#64748b',
+                      backgroundColor: isActive ? '#ffffff' : '#f5f5f5',
+                      color: isActive ? '#53ae7d' : '#053456',
                       fontWeight: isActive || isHovered ? 700 : 500,
                       fontSize: '15px',
                       fontFamily: '"Tenor Sans", sans-serif',

@@ -69,7 +69,7 @@ export const ShopifyFAQSection: React.FC = () => {
   };
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ background: 'transparent' }}>
+    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ background: '#fff' }}>
       <style>{`
         .faq-accordion-card {
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -85,30 +85,13 @@ export const ShopifyFAQSection: React.FC = () => {
         {/* Modern Section Header */}
         <div className="row justify-content-center mb-50" data-aos="fade-up">
           <div className="col-xl-8 text-center">
-            <div 
-              style={{ 
-                display: 'inline-flex', 
-                alignItems: 'center', 
-                gap: '8px', 
-                backgroundColor: '#f1f5f9', 
-                padding: '6px 16px', 
-                borderRadius: '20px', 
-                marginBottom: '16px' 
-              }}
-            >
-              <HelpCircle size={16} color="#053456" />
-              <span style={{ fontSize: '14px', fontWeight: 600, color: '#053456', fontFamily: '"Tenor Sans", sans-serif' }}>
-                Got Questions?
-              </span>
-            </div>
+           
 
             <h4 className="px-about-title mb-20">
-              <span className="text-blue-about" style={{ color: '#053456' }}>Frequently Asked </span> Questions
+              <span className="text-blue-about" >Frequently Asked </span> Questions
             </h4>
             
-            <p className="text-figtree text-black" style={{ color: '#475569', lineHeight: '1.7', fontSize: '16px' }}>
-              Everything you need to know about our Shopify development services, processes, pricing, and platform capabilities.
-            </p>
+          
           </div>
         </div>
 
