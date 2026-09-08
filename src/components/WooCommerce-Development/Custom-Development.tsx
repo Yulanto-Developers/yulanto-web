@@ -48,7 +48,7 @@ export default function WooCommerceSection(): JSX.Element {
           <div className="col-lg-6" data-aos="fade-right">
             <div className="about-image-wrap text-center mb-4 mb-lg-0">
               <img
-                src="/assets/img/woocommerce/woocommerce-development-services.png"
+                src="/assets/img/WooCommerce-Development/Flexible-Features-Built-1.png"
                 alt="WooCommerce Custom Development"
                 className="img-fluid"
                 style={{ maxWidth: '100%', height: 'auto' }}

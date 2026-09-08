@@ -32,7 +32,7 @@ style={{
               }}
             >
               <img
-                src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRAKZ4LLeFY8djT-MjbJOR5uE-XwwPdX2kXXRFxdVXJvJ3LNql4IIk8-xov7xOWoZOdgWaK51GPDMPgMec"
+                src="/assets/img/WordPress-Development/Last-img.jpg"
                 alt="WordPress Development Workspace in Chennai"
                 style={{
                   width: "100%",

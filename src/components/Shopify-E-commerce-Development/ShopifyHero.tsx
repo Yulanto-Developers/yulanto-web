@@ -420,19 +420,19 @@ TextRotate.displayName = "TextRotate"
 
 const shopifyImages = [
   {
-    url: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80",
+    url: "assets/img/Shopify E-commerce Development/top-1.jpg",
     title: "E-commerce checkout experience",
   },
   {
-    url: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80",
+    url: "assets/img/Shopify E-commerce Development/top-2.jpg",
     title: "Online Store Display",
   },
   {
-    url: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+    url: "assets/img/Shopify E-commerce Development/top-3.jpg",
     title: "Modern Product Showcase",
   },
   {
-    url: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80",
+    url: "assets/img/Shopify E-commerce Development/top-4.jpg",
     title: "Online Shopping App",
   },
   {

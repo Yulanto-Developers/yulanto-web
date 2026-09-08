@@ -37,7 +37,7 @@ export const ShopifyExperience: React.FC = () => {
               }}
             >
               <Image
-                src="/images/shopify-development-banner.jpg"
+                src="/assets/img/Shopify E-commerce Development/Last-img.jpg"
                 alt="Shopify Store Maintenance & Support"
                 fill
                 priority

@@ -5,16 +5,16 @@ import { motion, useAnimationFrame, useMotionValue, useTransform } from "framer-
 
 // High-quality graphic design stock images
 const graphicDesignImages = [
-  "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1542744094-3a31b272c490?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=800&auto=format&fit=crop",
+  "assets/img/WooCommerce-Development/top-1.jpg",
+  "assets/img/WooCommerce-Development/top-2.jpg",
+  "assets/img/WooCommerce-Development/top-3.jpg",
+  "assets/img/WooCommerce-Development/top-4.jpg",
+  "assets/img/WooCommerce-Development/top-5.jpg",
+  "assets/img/WooCommerce-Development/top-6.jpg",
+  "assets/img/WooCommerce-Development/top-7.jpg",
+  "assets/img/WooCommerce-Development/top-8.jpg",
+  "assets/img/WooCommerce-Development/top-9.jpg",
+  "assets/img/WooCommerce-Development/top-10.jpg",
 ];
 
 const Auto3DCarousel = memo(() => {

@@ -19,7 +19,7 @@ const shopifyFeaturesData: FeatureItem[] = [
     id: 1,
     title: 'User-Friendly Store Management',
     desc: 'Shopify offers an intuitive interface that allows business owners to manage products, collections, orders, customers, and other essential store functions.',
-    imageSrc: '/images/shopify-development-banner.jpg',
+    imageSrc: '/assets/img/Shopify E-commerce Development/Key-Shopify-Features-1.jpg',
     rotation: '-4deg',
     floatAnimation: 'floatSlow 4s ease-in-out infinite'
   },
@@ -27,7 +27,7 @@ const shopifyFeaturesData: FeatureItem[] = [
     id: 2,
     title: 'Inventory Management',
     desc: 'Track products, stock levels, variants, and collections efficiently while keeping your ecommerce catalog organized.',
-    imageSrc: '/images/shopify-development-banner.jpg',
+    imageSrc: '/assets/img/Shopify E-commerce Development/Key-Shopify-Features-2.jpg',
     rotation: '3deg',
     floatAnimation: 'floatSlow 5s ease-in-out infinite 0.5s'
   },
@@ -35,7 +35,7 @@ const shopifyFeaturesData: FeatureItem[] = [
     id: 3,
     title: 'Order Management',
     desc: 'Manage customer orders, payment status, fulfillment, shipping, and notifications from a centralized platform.',
-    imageSrc: '/images/shopify-development-banner.jpg',
+    imageSrc: '/assets/img/Shopify E-commerce Development/Key-Shopify-Features-3.jpg',
     rotation: '-3deg',
     floatAnimation: 'floatSlow 4.5s ease-in-out infinite 1s'
   },
@@ -43,7 +43,7 @@ const shopifyFeaturesData: FeatureItem[] = [
     id: 4,
     title: 'SEO-Friendly Features',
     desc: 'Shopify provides features that support ecommerce SEO, including customizable page titles, meta descriptions, URLs, image optimization, and sitemap generation.',
-    imageSrc: '/images/shopify-development-banner.jpg',
+    imageSrc: '/assets/img/Shopify E-commerce Development/Key-Shopify-Features-4.jpg',
     rotation: '4deg',
     floatAnimation: 'floatSlow 4.2s ease-in-out infinite 0.2s'
   },
@@ -51,7 +51,7 @@ const shopifyFeaturesData: FeatureItem[] = [
     id: 5,
     title: 'Multiple Payment Options',
     desc: 'Integrate suitable payment gateways and payment solutions based on your business location, target customers, and ecommerce requirements.',
-    imageSrc: '/images/shopify-development-banner.jpg',
+    imageSrc: '/assets/img/Shopify E-commerce Development/Key-Shopify-Features-5.jpg',
     rotation: '-2deg',
     floatAnimation: 'floatSlow 4.8s ease-in-out infinite 0.7s'
   },
@@ -59,7 +59,7 @@ const shopifyFeaturesData: FeatureItem[] = [
     id: 6,
     title: 'Mobile-Friendly Shopping',
     desc: 'Provide customers with a smooth shopping experience across mobile devices, tablets, and desktops.',
-    imageSrc: '/images/shopify-development-banner.jpg',
+    imageSrc: '/assets/img/Shopify E-commerce Development/Key-Shopify-Features-6.jpg',
     rotation: '3deg',
     floatAnimation: 'floatSlow 4.4s ease-in-out infinite 0.4s'
   },
@@ -67,7 +67,7 @@ const shopifyFeaturesData: FeatureItem[] = [
     id: 7,
     title: 'Scalable Ecommerce Platform',
     desc: 'Shopify can support businesses from startups and small businesses to growing ecommerce brands and larger online stores.',
-    imageSrc: '/images/shopify-development-banner.jpg',
+    imageSrc: '/assets/img/Shopify E-commerce Development/Key-Shopify-Features-7.jpg',
     rotation: '-3deg',
     floatAnimation: 'floatSlow 4.6s ease-in-out infinite 0.9s'
   }
