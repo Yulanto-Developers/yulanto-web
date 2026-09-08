@@ -24,10 +24,23 @@ export default function WorkflowSection() {
   return (
     <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
       <div className="container container-1550">
-        <h4 className="px-about-title mb-20 text-center">
-          <span className="text-blue-about">Work flow </span>
-        
-        </h4>
+       
+    <div className="row align-items-center" data-aos="fade-up">
+                    <div className="col-xl-3">
+                        <span className="tp-section-subtitle text-black blink-ball">
+                         AI website vs traditional website
+                        </span>
+                    </div>
+
+                    <div className="col-xl-9">
+                        <div className="px-project-title-box">
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">What's Different About an </span> AI-Assisted Website?
+                            </h4>
+                           
+                        </div>
+                    </div>
+                </div>
 
         <div className="workflow-grid">
           {/* Traditional Workflow Column */}

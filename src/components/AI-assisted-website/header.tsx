@@ -2,7 +2,6 @@
 
 import React, { useRef, useEffect } from "react";
 
-// --- High-Detail Canvas Animated Robot & Workstation Scene ---
 const FuturisticRobotCanvas: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -14,7 +13,7 @@ const FuturisticRobotCanvas: React.FC = () => {
 
     let animationFrameId: number;
     let width = (canvas.width = canvas.parentElement?.clientWidth || 1000);
-    let height = (canvas.height = canvas.parentElement?.clientHeight || 650);
+    let height = (canvas.height = canvas.parentElement?.clientHeight || 500);
 
     const handleResize = () => {
       if (!canvas || !canvas.parentElement) return;
@@ -27,267 +26,353 @@ const FuturisticRobotCanvas: React.FC = () => {
     let time = 0;
 
     const render = () => {
-      time += 0.03;
+      time += 0.025;
       ctx.clearRect(0, 0, width, height);
 
-      // Positioning anchors
-      const centerY = height / 2 + 20;
+      const baseFloorY = height * 0.88;
 
-      // Robot Position (Right Side)
-      const robotX = width * 0.60;
+      // --- 1. WORKSTATION & LAPTOP SETUP ---
+      const deskX = width * 0.42;
+      const deskW = width * 0.54;
+      const deskY = baseFloorY - 110;
 
-      // Workstation System brought closer to robot for realistic reach
-      const systemX = width * 0.44;
+      // Desk Surface Shadow & Board
+      ctx.fillStyle = "rgba(15, 23, 42, 0.08)";
+      ctx.fillRect(deskX - 10, deskY + 12, deskW + 20, 15);
 
-      // 1. Sleek Desk Surface
-      const deskGrad = ctx.createLinearGradient(
-        systemX - 200,
-        centerY + 100,
-        robotX + 150,
-        centerY + 100
-      );
-      deskGrad.addColorStop(0, "rgba(30, 41, 59, 0.4)");
-      deskGrad.addColorStop(0.5, "rgba(51, 65, 85, 0.9)");
-      deskGrad.addColorStop(1, "rgba(30, 41, 59, 0.4)");
-
-      ctx.fillStyle = deskGrad;
-      ctx.beginPath();
-      ctx.ellipse(
-        (systemX + robotX) / 2,
-        centerY + 105,
-        380,
-        35,
-        0,
-        0,
-        Math.PI * 2
-      );
-      ctx.fill();
-      ctx.strokeStyle = "rgba(56, 189, 248, 0.5)";
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
+      ctx.fillStyle = "#e2e8f0";
+      ctx.fillRect(deskX, deskY, deskW, 12);
+      ctx.fillStyle = "#cbd5e1";
+      ctx.fillRect(deskX, deskY + 9, deskW, 3);
 
       // Desk Legs
-      ctx.strokeStyle = "rgba(71, 85, 105, 0.8)";
-      ctx.lineWidth = 6;
-      ctx.beginPath();
-      ctx.moveTo(systemX - 180, centerY + 115);
-      ctx.lineTo(systemX - 180, centerY + 280);
-      ctx.moveTo(robotX + 100, centerY + 115);
-      ctx.lineTo(robotX + 100, centerY + 280);
-      ctx.stroke();
+      ctx.fillStyle = "#64748b";
+      ctx.fillRect(deskX + 25, deskY + 12, 10, 98);
+      ctx.fillRect(deskX + deskW - 35, deskY + 12, 10, 98);
 
-      // 2. ERGONOMIC CHAIR
-      const chairX = robotX;
-      const chairY = centerY + 10;
+      // Laptop Details
+      const laptopX = deskX + 95;
+      const laptopY = deskY - 2;
 
-      // Chair Base & Wheels
-      ctx.strokeStyle = "#334155";
-      ctx.lineWidth = 5;
-      ctx.beginPath();
-      ctx.moveTo(chairX - 45, chairY + 220);
-      ctx.lineTo(chairX + 45, chairY + 220);
-      ctx.moveTo(chairX, chairY + 120);
-      ctx.lineTo(chairX, chairY + 220);
-      ctx.stroke();
-
-      // Chair Wheels
-      ctx.fillStyle = "#1e293b";
-      ctx.beginPath();
-      ctx.arc(chairX - 45, chairY + 225, 7, 0, Math.PI * 2);
-      ctx.arc(chairX + 45, chairY + 225, 7, 0, Math.PI * 2);
-      ctx.arc(chairX, chairY + 225, 7, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Chair Seat Cushion
-      ctx.fillStyle = "#1e293b";
-      ctx.beginPath();
-      ctx.roundRect(chairX - 55, chairY + 95, 110, 25, 8);
-      ctx.fill();
-      ctx.strokeStyle = "#38bdf8";
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
-
-      // Chair Backrest
-      ctx.fillStyle = "#0f172a";
-      ctx.beginPath();
-      ctx.roundRect(chairX + 35, chairY - 110, 24, 210, 12);
-      ctx.fill();
-      ctx.strokeStyle = "#38bdf8";
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
-
-      // 3. SYSTEM / MONITOR SETUP
-      const monWidth = 340;
-      const monHeight = 200;
-      const monX = systemX - monWidth / 2;
-      const monY = centerY - 140;
-
-      // Monitor Stand
-      ctx.fillStyle = "#475569";
-      ctx.fillRect(systemX - 12, monY + monHeight, 24, 45);
-      ctx.beginPath();
-      ctx.ellipse(systemX, monY + monHeight + 45, 50, 10, 0, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Holographic Monitor Screen Body
-      ctx.shadowColor = "#38bdf8";
-      ctx.shadowBlur = 15;
-      ctx.fillStyle = "rgba(15, 23, 42, 0.95)";
-      ctx.beginPath();
-      ctx.roundRect(monX, monY, monWidth, monHeight, 14);
-      ctx.fill();
-      ctx.strokeStyle = "rgba(56, 189, 248, 0.8)";
-      ctx.lineWidth = 2;
-      ctx.stroke();
-      ctx.shadowBlur = 0;
-
-      // Monitor Top Bar
-      ctx.fillStyle = "rgba(56, 189, 248, 0.15)";
-      ctx.fillRect(monX + 15, monY + 15, monWidth - 30, 24);
-
-      // Screen Code Lines
-      for (let l = 0; l < 8; l++) {
-        ctx.fillStyle =
-          l % 2 === 0 ? "rgba(56, 189, 248, 0.8)" : "rgba(168, 85, 247, 0.8)";
-        ctx.fillRect(
-          monX + 20,
-          monY + 50 + l * 16,
-          (monWidth - 60) * (0.4 + (l % 4) * 0.15),
-          8
-        );
-      }
-
-      // Keyboard (Placed close to robot)
-      const kbX = systemX - 20;
-      const kbY = centerY + 75;
-      ctx.fillStyle = "#0f172a";
-      ctx.beginPath();
-      ctx.roundRect(kbX - 80, kbY, 180, 24, 6);
-      ctx.fill();
-      ctx.strokeStyle = "#38bdf8";
-      ctx.lineWidth = 1;
-      ctx.stroke();
-
-      // Keyboard Keys with typing animation
-      const keysGlow = Math.sin(time * 12) * 0.5 + 0.5;
-      for (let r = 0; r < 2; r++) {
-        for (let k = 0; k < 11; k++) {
-          const keyActive = (k + r) % 3 === Math.floor(time * 6) % 3;
-          ctx.fillStyle = keyActive
-            ? `rgba(56, 189, 248, ${0.4 + keysGlow * 0.6})`
-            : "#1e293b";
-          ctx.fillRect(kbX - 72 + k * 14, kbY + 4 + r * 9, 10, 6);
-        }
-      }
-
-      // 4. HUMANOID AI ROBOT (Humanlike Proportions & Curved Jointed Arms)
-      const torsoX = chairX - 10;
-      const torsoY = centerY - 20;
-
-      // Seated Legs
-      ctx.strokeStyle = "#cbd5e1";
-      ctx.lineWidth = 18;
-      ctx.lineCap = "round";
-      ctx.beginPath();
-      ctx.moveTo(torsoX, torsoY + 70);
-      ctx.lineTo(torsoX - 55, torsoY + 80);
-      ctx.lineTo(torsoX - 55, torsoY + 160);
-      ctx.stroke();
-
-      // Torso Shell
-      ctx.fillStyle = "#f8fafc";
-      ctx.shadowColor = "rgba(0,0,0,0.3)";
-      ctx.shadowBlur = 10;
-      ctx.beginPath();
-      ctx.roundRect(torsoX - 35, torsoY - 80, 70, 130, [20, 20, 10, 10]);
-      ctx.fill();
-      ctx.shadowBlur = 0;
-
-      // Chest Arc Reactor
-      ctx.fillStyle = "#0f172a";
-      ctx.beginPath();
-      ctx.arc(torsoX - 10, torsoY - 35, 14, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.fillStyle = `rgba(56, 189, 248, ${0.7 + Math.sin(time * 5) * 0.3})`;
-      ctx.beginPath();
-      ctx.arc(torsoX - 10, torsoY - 35, 8, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Neck
       ctx.fillStyle = "#334155";
-      ctx.fillRect(torsoX - 12, torsoY - 102, 16, 24);
+      ctx.fillRect(laptopX - 40, laptopY - 4, 80, 6); // Keyboard base
 
-      // Head
-      const headX = torsoX - 12;
-      const headY = torsoY - 125;
-
-      ctx.fillStyle = "#ffffff";
+      // Laptop Screen Shell
+      ctx.fillStyle = "#0f172a";
       ctx.beginPath();
-      ctx.ellipse(headX, headY, 28, 24, -0.1, 0, Math.PI * 2);
+      ctx.moveTo(laptopX - 35, laptopY - 4);
+      ctx.lineTo(laptopX - 30, laptopY - 55);
+      ctx.lineTo(laptopX + 30, laptopY - 55);
+      ctx.lineTo(laptopX + 35, laptopY - 4);
+      ctx.closePath();
       ctx.fill();
 
-      // Visor
-      ctx.fillStyle = "#090d16";
-      ctx.beginPath();
-      ctx.ellipse(headX - 10, headY, 18, 14, -0.1, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Visor Eye Glow
+      // Screen Display Glow & Lines
+      ctx.fillStyle = "#1e293b";
+      ctx.fillRect(laptopX - 27, laptopY - 50, 54, 42);
+      ctx.fillStyle = "#38bdf8";
       ctx.shadowColor = "#38bdf8";
-      ctx.shadowBlur = 10;
+      ctx.shadowBlur = 8;
+      ctx.fillRect(laptopX - 22, laptopY - 44, 25, 4);
+      ctx.fillRect(laptopX - 22, laptopY - 36, 40, 3);
+      ctx.fillRect(laptopX - 22, laptopY - 30, 32, 3);
+      ctx.fillStyle = "#818cf8";
+      ctx.fillRect(laptopX - 22, laptopY - 22, 20, 3);
+      ctx.shadowBlur = 0;
+
+      // --- 2. HUMAN DEVELOPER / USER ---
+      const humanX = deskX + 230;
+      const humanY = deskY + 10;
+
+      // Office Chair
+      ctx.fillStyle = "#1e293b";
+      ctx.beginPath();
+      ctx.roundRect(humanX + 25, humanY - 120, 48, 160, 14);
+      ctx.fill();
+      ctx.fillRect(humanX - 35, humanY + 20, 95, 14);
+      ctx.fillStyle = "#475569";
+      ctx.fillRect(humanX + 5, humanY + 34, 12, 60);
+
+      // Developer Body
+      ctx.fillStyle = "#1d4ed8"; // Royal Blue Sweater
+      ctx.beginPath();
+      ctx.roundRect(humanX - 18, humanY - 65, 48, 85, [18, 18, 0, 0]);
+      ctx.fill();
+
+      // Neck & Head
+      ctx.fillStyle = "#fbcfe8";
+      ctx.fillRect(humanX + 2, humanY - 78, 14, 16);
+      ctx.beginPath();
+      ctx.arc(humanX + 9, humanY - 88, 18, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Hair
+      ctx.fillStyle = "#0f172a";
+      ctx.beginPath();
+      ctx.arc(humanX + 11, humanY - 94, 19, Math.PI * 0.75, Math.PI * 2.15);
+      ctx.fill();
+
+      // Headphones Detail
       ctx.fillStyle = "#38bdf8";
       ctx.beginPath();
-      ctx.arc(headX - 16, headY, 4, 0, Math.PI * 2);
+      ctx.arc(humanX + 9, humanY - 88, 6, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Arm Operating Laptop
+      ctx.strokeStyle = "#1d4ed8";
+      ctx.lineWidth = 14;
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.moveTo(humanX - 8, humanY - 45);
+      ctx.lineTo(humanX - 45, humanY - 22);
+      ctx.stroke();
+
+      ctx.strokeStyle = "#fbcfe8";
+      ctx.lineWidth = 10;
+      ctx.beginPath();
+      ctx.moveTo(humanX - 45, humanY - 22);
+      ctx.lineTo(laptopX + 22, laptopY - 8);
+      ctx.stroke();
+
+      // --- 3. HIGH-DETAIL STANDING AI ROBOT ---
+      const robotX = width * 0.22;
+      const robotY = baseFloorY - 10;
+      const floatY = Math.sin(time * 2.5) * 5;
+
+      // Feet & Base
+      ctx.fillStyle = "#334155";
+      ctx.beginPath();
+      ctx.ellipse(robotX - 25, robotY, 18, 6, 0, 0, Math.PI * 2);
+      ctx.ellipse(robotX + 25, robotY, 18, 6, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Legs (Armor Plated)
+      ctx.strokeStyle = "#e2e8f0";
+      ctx.lineWidth = 20;
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.moveTo(robotX - 22, robotY - 100);
+      ctx.lineTo(robotX - 25, robotY - 5);
+      ctx.moveTo(robotX + 22, robotY - 100);
+      ctx.lineTo(robotX + 25, robotY - 5);
+      ctx.stroke();
+
+      // Knee Joint Accents
+      ctx.fillStyle = "#0284c7";
+      ctx.beginPath();
+      ctx.arc(robotX - 23, robotY - 50, 9, 0, Math.PI * 2);
+      ctx.arc(robotX + 23, robotY - 50, 9, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Pelvis Plate
+      ctx.fillStyle = "#94a3b8";
+      ctx.beginPath();
+      ctx.roundRect(robotX - 38, robotY - 130 + floatY, 76, 38, 12);
+      ctx.fill();
+
+      // Waist Segmented Cables
+      ctx.strokeStyle = "#334155";
+      ctx.lineWidth = 4;
+      for (let c = -20; c <= 20; c += 10) {
+        ctx.beginPath();
+        ctx.moveTo(robotX + c, robotY - 130 + floatY);
+        ctx.lineTo(robotX + c, robotY - 150 + floatY);
+        ctx.stroke();
+      }
+
+      // Main Torso Shell (White Armor)
+      ctx.fillStyle = "#f8fafc";
+      ctx.shadowColor = "rgba(56, 189, 248, 0.25)";
+      ctx.shadowBlur = 18;
+      ctx.beginPath();
+      ctx.roundRect(robotX - 48, robotY - 240 + floatY, 96, 115, 22);
       ctx.fill();
       ctx.shadowBlur = 0;
 
-      // Shoulder Joint
-      const shoulderX = torsoX - 22;
-      const shoulderY = torsoY - 60;
-      ctx.fillStyle = "#94a3b8";
+      // Outer Torso Blue Panel Trim
+      ctx.strokeStyle = "#0284c7";
+      ctx.lineWidth = 2.5;
+      ctx.strokeRect(robotX - 42, robotY - 234 + floatY, 84, 103);
+
+      // Chest Integrated Display Screen
+      const chestX = robotX - 34;
+      const chestY = robotY - 222 + floatY;
+      ctx.fillStyle = "#090d16";
       ctx.beginPath();
-      ctx.arc(shoulderX, shoulderY, 9, 0, Math.PI * 2);
+      ctx.roundRect(chestX, chestY, 68, 52, 10);
+      ctx.fill();
+      ctx.strokeStyle = "#38bdf8";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      // Chest Screen HUD Visuals
+      ctx.fillStyle = "rgba(56, 189, 248, 0.15)";
+      ctx.fillRect(chestX + 5, chestY + 5, 58, 42);
+
+      // Animated Diagnostic Signal Lines
+      for (let i = 0; i < 3; i++) {
+        ctx.fillStyle = i % 2 === 0 ? "#38bdf8" : "#a855f7";
+        ctx.fillRect(
+          chestX + 8,
+          chestY + 12 + i * 11,
+          22 + Math.sin(time * 5 + i) * 16,
+          4
+        );
+      }
+      ctx.fillStyle = "#22c55e";
+      ctx.beginPath();
+      ctx.arc(chestX + 54, chestY + 20, 5, 0, Math.PI * 2);
       ctx.fill();
 
-      // --- Left Arm (Proportional Upper Arm + Forearm + Typing Motion) ---
-      const hand1X = kbX + 25 + Math.sin(time * 14) * 5;
-      const hand1Y = kbY + 8 + Math.cos(time * 14) * 2;
-      const elbow1X = torsoX - 38;
-      const elbow1Y = torsoY + 5; // Bent elbow dropping naturally
+      // Robot Neck (Segmented Mechanics)
+      ctx.fillStyle = "#1e293b";
+      ctx.fillRect(robotX - 14, robotY - 262 + floatY, 28, 24);
+      ctx.fillStyle = "#38bdf8";
+      ctx.fillRect(robotX - 10, robotY - 252 + floatY, 20, 3);
+
+      // Robot Head Structure
+      const headY = robotY - 288 + floatY;
+      ctx.fillStyle = "#ffffff";
+      ctx.beginPath();
+      ctx.ellipse(robotX, headY, 35, 30, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = "#cbd5e1";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Head Side Ear Nodes
+      ctx.fillStyle = "#0284c7";
+      ctx.beginPath();
+      ctx.arc(robotX - 35, headY, 7, 0, Math.PI * 2);
+      ctx.arc(robotX + 35, headY, 7, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Face Visor Display
+      ctx.fillStyle = "#090d16";
+      ctx.beginPath();
+      ctx.ellipse(robotX + 5, headY, 24, 18, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Expressive Visor Glowing Eyes
+      ctx.fillStyle = "#38bdf8";
+      ctx.shadowColor = "#38bdf8";
+      ctx.shadowBlur = 10;
+      ctx.beginPath();
+      ctx.ellipse(robotX - 2, headY - 2, 4.5, 7, -0.1, 0, Math.PI * 2);
+      ctx.ellipse(robotX + 12, headY - 2, 4.5, 7, 0.1, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      // Shoulder Joints
+      ctx.fillStyle = "#64748b";
+      ctx.beginPath();
+      ctx.arc(robotX - 52, robotY - 220 + floatY, 12, 0, Math.PI * 2);
+      ctx.arc(robotX + 52, robotY - 220 + floatY, 12, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Left Arm (Rests at side)
+      ctx.strokeStyle = "#e2e8f0";
+      ctx.lineWidth = 14;
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.moveTo(robotX - 52, robotY - 220 + floatY);
+      ctx.lineTo(robotX - 66, robotY - 140 + floatY);
+      ctx.lineTo(robotX - 60, robotY - 75 + floatY);
+      ctx.stroke();
+
+      // Right Arm (Presenting Hologram toward User)
+      const handX = robotX + 75 + Math.sin(time * 3) * 6;
+      const handY = robotY - 150 + floatY + Math.cos(time * 3) * 4;
 
       ctx.strokeStyle = "#e2e8f0";
-      ctx.lineWidth = 7;
-      ctx.lineCap = "round";
-      ctx.lineJoin = "round";
+      ctx.lineWidth = 14;
       ctx.beginPath();
-      ctx.moveTo(shoulderX, shoulderY);
-      ctx.lineTo(elbow1X, elbow1Y);
-      ctx.lineTo(hand1X, hand1Y);
+      ctx.moveTo(robotX + 52, robotY - 220 + floatY);
+      ctx.lineTo(robotX + 72, robotY - 175 + floatY);
+      ctx.lineTo(handX, handY);
       ctx.stroke();
 
-      // --- Right Arm (Proportional Upper Arm + Forearm + Typing Motion) ---
-      const hand2X = kbX - 25 + Math.cos(time * 12) * 5;
-      const hand2Y = kbY + 8 + Math.sin(time * 12) * 2;
-      const elbow2X = torsoX - 30;
-      const elbow2Y = torsoY + 2;
-
-      ctx.strokeStyle = "#cbd5e1";
-      ctx.lineWidth = 6;
-      ctx.lineCap = "round";
-      ctx.lineJoin = "round";
+      // Palm Emitter Lens
+      ctx.fillStyle = "#38bdf8";
+      ctx.shadowColor = "#38bdf8";
+      ctx.shadowBlur = 12;
       ctx.beginPath();
-      ctx.moveTo(shoulderX + 5, shoulderY + 5);
-      ctx.lineTo(elbow2X, elbow2Y);
-      ctx.lineTo(hand2X, hand2Y);
+      ctx.arc(handX, handY, 7, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      // --- 4. HOLOGRAPHIC PROJECTION BEAMS & DATA UI ---
+      const holoX = width * 0.48;
+      const holoY = baseFloorY - 240;
+
+      // Beam Rays projecting from Palm to Holo Screen
+      ctx.fillStyle = "rgba(56, 189, 248, 0.08)";
+      ctx.beginPath();
+      ctx.moveTo(handX, handY);
+      ctx.lineTo(holoX - 45, holoY - 40 + floatY);
+      ctx.lineTo(holoX - 45, holoY + 60 + floatY);
+      ctx.closePath();
+      ctx.fill();
+
+      // Main Glass Hologram Window
+      ctx.fillStyle = "rgba(15, 23, 42, 0.75)";
+      ctx.beginPath();
+      ctx.roundRect(holoX - 45, holoY - 40 + floatY, 140, 95, 12);
+      ctx.fill();
+      ctx.strokeStyle = "rgba(56, 189, 248, 0.7)";
+      ctx.lineWidth = 1.5;
       ctx.stroke();
 
-      // Joint Accents
-      ctx.fillStyle = "";
+      // Holo Window Header Bar
+      ctx.fillStyle = "rgba(56, 189, 248, 0.25)";
+      ctx.fillRect(holoX - 35, holoY - 30 + floatY, 120, 14);
+
+      // Holo Screen Line Chart
+      ctx.strokeStyle = "#38bdf8";
+      ctx.lineWidth = 2.5;
       ctx.beginPath();
-      ctx.arc(elbow1X, elbow1Y, 3.5, 0, Math.PI * 2);
-      ctx.arc(elbow2X, elbow2Y, 3.5, 0, Math.PI * 2);
-      ctx.arc(hand1X, hand1Y, 5, 0, Math.PI * 2);
-      ctx.arc(hand2X, hand2Y, 6, 0, Math.PI * 2);
+      ctx.moveTo(holoX - 30, holoY + 35 + floatY);
+      ctx.lineTo(holoX - 10, holoY + 12 + floatY);
+      ctx.lineTo(holoX + 10, holoY + 25 + floatY);
+      ctx.lineTo(holoX + 35, holoY - 10 + floatY);
+      ctx.lineTo(holoX + 70, holoY + 10 + floatY);
+      ctx.stroke();
+
+      // Floating Data Bubbles (Upper Right)
+      const b1Y = holoY - 95 + Math.sin(time * 3) * 6;
+      ctx.fillStyle = "rgba(59, 130, 246, 0.9)";
+      ctx.beginPath();
+      ctx.roundRect(holoX + 80, b1Y, 75, 48, 10);
+      ctx.fill();
+
+      // Cloud Graphic inside Bubble
+      ctx.fillStyle = "#ffffff";
+      ctx.beginPath();
+      ctx.arc(holoX + 105, b1Y + 24, 9, 0, Math.PI * 2);
+      ctx.arc(holoX + 118, b1Y + 20, 12, 0, Math.PI * 2);
+      ctx.arc(holoX + 130, b1Y + 25, 8, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Lower Floating Pie Chart Card
+      const b2Y = holoY + 65 + Math.cos(time * 2.5) * 5;
+      ctx.fillStyle = "rgba(14, 165, 233, 0.9)";
+      ctx.beginPath();
+      ctx.roundRect(holoX + 90, b2Y, 70, 42, 8);
+      ctx.fill();
+
+      // Pie Chart Graphic
+      ctx.fillStyle = "#ffffff";
+      ctx.beginPath();
+      ctx.moveTo(holoX + 112, b2Y + 21);
+      ctx.arc(holoX + 112, b2Y + 21, 11, 0, Math.PI * 1.3);
+      ctx.closePath();
+      ctx.fill();
+
+      ctx.fillStyle = "#38bdf8";
+      ctx.beginPath();
+      ctx.moveTo(holoX + 112, b2Y + 21);
+      ctx.arc(holoX + 112, b2Y + 21, 11, Math.PI * 1.3, Math.PI * 2);
+      ctx.closePath();
       ctx.fill();
 
       animationFrameId = requestAnimationFrame(render);
@@ -313,7 +398,6 @@ const FuturisticRobotCanvas: React.FC = () => {
   );
 };
 
-// --- Main Interactive Section ---
 export const ShopifyExperience: React.FC = () => {
   return (
     <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
@@ -347,7 +431,7 @@ export const ShopifyExperience: React.FC = () => {
             position: "sticky",
             top: "100px",
             width: "100%",
-            height: "350px",
+            height: "450px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",

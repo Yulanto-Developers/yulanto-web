@@ -231,11 +231,11 @@ export default function ProcessSection() {
                   </div>
                   <div className="step-content">
                     <h4 className="px-about-title mb-20" style={{ margin: 0 }}>
-                      <span className="text-blue-about" style={{ fontWeight: 700, fontSize: '20px ' }}>
+                      <span className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' ,fontSize:"22px"}}>
                         {step.title}
                       </span>
                     </h4>
-                    <span className="text-figtree text-black mt-2" style={{  fontSize: '14px !important' }}>
+                    <span className="text-figtree text-black mt-2" style={{  fontSize: '18px !important' }}>
                       {step.description}
                     </span>
                   </div>
@@ -262,11 +262,11 @@ export default function ProcessSection() {
                   </div>
                   <div className="step-content">
                     <h4 className="px-about-title mb-20" style={{ margin: 0 }}>
-                      <span className="text-blue-about" style={{ fontWeight: 700, fontSize: '20px' }}>
+                      <span className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"22px" }}>
                         {step.title}
                       </span>
                     </h4>
-                    <span className="text-figtree text-black mt-2" style={{ margin: '6px 0 0 0', fontSize: '14px', lineHeight: '1.5' }}>
+                    <span className="text-figtree text-black mt-2" style={{ margin: '6px 0 0 0', fontSize: '18px', lineHeight: '1.5' }}>
                       {step.description}
                     </span>
                   </div>

@@ -4,25 +4,22 @@ import React from "react";
 
 interface Tool {
   name: string;
-  iconBg: string;
-  textColor: string;
-  badge?: string;
-  initials: string;
+  iconSrc: string;
 }
 
 const toolsList: Tool[] = [
-  { name: "ChatGPT", iconBg: "linear-gradient(135deg, #10a37f, #000000)", textColor: "#ffffff", initials: "GPT" },
-  { name: "Claude", iconBg: "linear-gradient(135deg, #d97757, #b85435)", textColor: "#ffffff", initials: "AI" },
-  { name: "Gemini", iconBg: "linear-gradient(135deg, #1a73e8, #8ab4f8)", textColor: "#ffffff", initials: "G" },
-  { name: "Midjourney", iconBg: "linear-gradient(135deg, #000000, #2c2d30)", textColor: "#ffffff", initials: "MJ" },
-  { name: "Adobe Firefly", iconBg: "linear-gradient(135deg, #ff0000, #990000)", textColor: "#ffffff", initials: "FF" },
-  { name: "Figma AI", iconBg: "linear-gradient(135deg, #f24e1e, #a259ff)", textColor: "#ffffff", initials: "F" },
-  { name: "GitHub Copilot", iconBg: "linear-gradient(135deg, #2ea44f, #1b1f23)", textColor: "#ffffff", initials: "CP" },
-  { name: "Cursor", iconBg: "linear-gradient(135deg, #000000, #333333)", textColor: "#ffffff", initials: "CU" },
-  { name: "v0", iconBg: "linear-gradient(135deg, #000000, #111111)", textColor: "#ffffff", initials: "v0" },
-  { name: "Lovable", iconBg: "linear-gradient(135deg, #ff4b4b, #ff7676)", textColor: "#ffffff", initials: "LV" },
-  { name: "Framer AI", iconBg: "linear-gradient(135deg, #0055ff, #0033aa)", textColor: "#ffffff", initials: "FR" },
-  { name: "Sketch AI", iconBg: "linear-gradient(135deg, #f7b500, #f16f00)", textColor: "#ffffff", initials: "SK" },
+  { name: "ChatGPT", iconSrc: "/images/tools/chatgpt.png" },
+  { name: "Claude", iconSrc: "/images/tools/claude.png" },
+  { name: "Gemini", iconSrc: "/images/tools/gemini.png" },
+  { name: "Midjourney", iconSrc: "/images/tools/midjourney.png" },
+  { name: "Adobe Firefly", iconSrc: "/images/tools/adobe-firefly.png" },
+  { name: "Figma AI", iconSrc: "/images/tools/figma.png" },
+  { name: "GitHub Copilot", iconSrc: "/images/tools/copilot.png" },
+  { name: "Cursor", iconSrc: "/images/tools/cursor.png" },
+  { name: "v0", iconSrc: "/images/tools/v0.png" },
+  { name: "Lovable", iconSrc: "/images/tools/lovable.png" },
+  { name: "Framer AI", iconSrc: "/images/tools/framer.png" },
+  { name: "Sketch AI", iconSrc: "/images/tools/sketch.png" },
 ];
 
 const styles = `
@@ -120,10 +117,8 @@ const styles = `
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 14px;
     margin-bottom: 6px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    object-fit: contain;
   }
 
   .tool-name {
@@ -233,12 +228,11 @@ export const AIToolsIntegrations: React.FC = () => {
             {/* Top Row Cards */}
             {toolsList.slice(0, 4).map((tool) => (
               <div key={tool.name} className="tool-card">
-                <div
+                <img
+                  src={tool.iconSrc}
+                  alt={tool.name}
                   className="tool-icon"
-                  style={{ background: tool.iconBg, color: tool.textColor }}
-                >
-                  {tool.initials}
-                </div>
+                />
                 <p className="tool-name">{tool.name}</p>
               </div>
             ))}
@@ -246,12 +240,11 @@ export const AIToolsIntegrations: React.FC = () => {
             {/* Middle Left Side */}
             {toolsList.slice(4, 5).map((tool) => (
               <div key={tool.name} className="tool-card">
-                <div
+                <img
+                  src={tool.iconSrc}
+                  alt={tool.name}
                   className="tool-icon"
-                  style={{ background: tool.iconBg, color: tool.textColor }}
-                >
-                  {tool.initials}
-                </div>
+                />
                 <p className="tool-name">{tool.name}</p>
               </div>
             ))}
@@ -294,12 +287,11 @@ export const AIToolsIntegrations: React.FC = () => {
             {/* Middle Right Side */}
             {toolsList.slice(5, 6).map((tool) => (
               <div key={tool.name} className="tool-card">
-                <div
+                <img
+                  src={tool.iconSrc}
+                  alt={tool.name}
                   className="tool-icon"
-                  style={{ background: tool.iconBg, color: tool.textColor }}
-                >
-                  {tool.initials}
-                </div>
+                />
                 <p className="tool-name">{tool.name}</p>
               </div>
             ))}
@@ -307,12 +299,11 @@ export const AIToolsIntegrations: React.FC = () => {
             {/* Bottom Row Cards */}
             {toolsList.slice(6, 10).map((tool) => (
               <div key={tool.name} className="tool-card">
-                <div
+                <img
+                  src={tool.iconSrc}
+                  alt={tool.name}
                   className="tool-icon"
-                  style={{ background: tool.iconBg, color: tool.textColor }}
-                >
-                  {tool.initials}
-                </div>
+                />
                 <p className="tool-name">{tool.name}</p>
               </div>
             ))}

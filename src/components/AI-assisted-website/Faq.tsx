@@ -239,7 +239,7 @@ export const AIToolsIntegrations: React.FC = () => {
                       onClick={() => toggleFAQ(actualIndex)}
                       aria-expanded={isOpen}
                     >
-                      <h5 className=" fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"20px",color:"#053456" }}>{faq.question}</h5>
+                      <h5 className="" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"20px" }}>{faq.question}</h5>
                       <span className="faq-icon">+</span>
                     </button>
                     {isOpen && (
@@ -267,7 +267,7 @@ export const AIToolsIntegrations: React.FC = () => {
                       onClick={() => toggleFAQ(actualIndex)}
                       aria-expanded={isOpen}
                     >
-                        <h5 className="fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"20px",color:"#053456" }}>{faq.question}</h5>
+                        <h5 className="" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"20px", }}>{faq.question}</h5>
                       <span className="faq-icon">+</span>
                     </button>
                     {isOpen && (
