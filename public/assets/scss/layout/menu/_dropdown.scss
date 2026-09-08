@@ -1,25 +1,29 @@
 @use '../../utils' as *;
+
 /*----------------------------------------*/
 /*  4.1 dropdown scss
 /*----------------------------------------*/
-.tp-header{
-    &-dropdown{
-        & nav{
-            & ul{
-                & li{
+.tp-header {
+    &-dropdown {
+        & nav {
+            & ul {
+                & li {
                     position: relative;
                     list-style: none;
-                    &.p-static{
+
+                    &.p-static {
                         position: static;
                     }
-                    &.tp-menu-last{
-                        & .tp-submenu{
+
+                    &.tp-menu-last {
+                        & .tp-submenu {
                             left: auto;
                             right: 0;
                         }
                     }
-                    &.has-dropdown{
-                        & > a{
+
+                    &.has-dropdown {
+                        &>a {
                             &::after {
                                 content: "\f107";
                                 font-size: 16px;
@@ -31,13 +35,15 @@
                                 // font-family: var(--tp-ff-fontawesome);   
                             }
                         }
-                        &:hover > a {
+
+                        &:hover>a {
                             &::after {
                                 transform: rotate(-180deg);
                             }
                         }
                     }
-                    & .tp-submenu{
+
+                    & .tp-submenu {
                         position: absolute;
                         top: 115%;
                         left: 0;
@@ -54,47 +60,55 @@
                         backdrop-filter: blur(40px);
                         background: rgba(38, 37, 40, 0.9);
                         box-shadow: 0 20px 30px -8px rgba(19, 19, 22, 0.1);
-                        & li{
+
+                        & li {
                             width: 100%;
                             padding: 0 12px;
                             border-radius: 8px;
-                            & a{
+
+                            & a {
                                 position: relative;
                                 border-radius: 8px;
                                 font-weight: 500;
                                 font-size: 16px;
                                 line-height: 1;
                                 color: #bfbfc0;
-                                padding: 12px 18px;
+                                padding: 12px 18px !important;
                                 display: inline-block;
                                 letter-spacing: -0.01em;
                                 text-align: start;
                                 width: 100%;
-                                @media #{$x3l,$xxl,$xl}{
+
+                                @media #{$x3l,$xxl,$xl} {
                                     font-size: 14px;
                                 }
-                                & a.pane-link{
+
+                                & a.pane-link {
                                     padding-left: 0;
                                 }
                             }
-                            & .tp-submenu{
+
+                            & .tp-submenu {
                                 top: 0;
                                 left: 100%;
                             }
-                            &:hover{
-                                & > a{
+
+                            &:hover {
+                                &>a {
                                     background-color: #2c2b2e;
                                     color: var(--tp-common-px-white);
                                 }
                             }
                         }
-                        &.px-megamenu{
+
+                        &.px-megamenu {
                             width: 480px;
                             padding: 30px 30px;
                         }
                     }
-                    &:hover > {
-                        & .tp-submenu{
+
+                    &:hover> {
+                        & .tp-submenu {
                             visibility: visible;
                             opacity: 1;
                             transform: scale(1);
@@ -110,26 +124,30 @@
     & nav ul li .tp-submenu {
         background: rgba(255, 255, 255, 0.9);
     }
+
     & nav ul li .tp-submenu {
-        & li{
-            & a{
+        & li {
+            & a {
                 color: #636368;
             }
+
             &:hover {
-                & > a {
+                &>a {
                     background-color: #F8F8FB;
                     color: var(--tp-common-px-black);
                 }
             }
-            &.menu-item-has-children{
-                & > a{
-                    &::after{
+
+            &.menu-item-has-children {
+                &>a {
+                    &::after {
                         color: #636368;
                     }
                 }
-                &:hover{
-                    & > a{
-                        &::after{
+
+                &:hover {
+                    &>a {
+                        &::after {
                             color: var(--tp-common-px-black);
                         }
                     }
@@ -138,18 +156,21 @@
         }
     }
 }
-.px-megamenu{
-    &-style{
+
+.px-megamenu {
+    &-style {
         &.tp-header-dropdown nav ul li .tp-submenu.px-megamenu li {
             padding: 0;
         }
     }
-    &-title{
+
+    &-title {
         font-size: 20px;
         font-weight: 600;
         padding-left: 18px;
         color: var(--tp-common-px-black);
-        &-wrap{
+
+        &-wrap {
             display: block;
             padding-bottom: 10px;
             margin-bottom: 10px;
@@ -157,11 +178,13 @@
         }
     }
 }
-.dropdown-black-bg{
-    & .px-megamenu{
-        &-title{
+
+.dropdown-black-bg {
+    & .px-megamenu {
+        &-title {
             color: var(--tp-common-px-white);
-            &-wrap{
+
+            &-wrap {
                 border-color: rgba($color: #fff, $alpha: 0.1);
             }
         }

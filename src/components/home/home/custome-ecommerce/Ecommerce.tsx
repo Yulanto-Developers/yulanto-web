@@ -7,11 +7,13 @@ import IndustrySection from '../myComponents/common/IndustrySection';
 import { useQuoteModal } from '../myComponents/Content/QuoteContext';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { useAOS } from "@/components/hooks/useAOS";
 
 import "swiper/css";
 
 function Ecommerce() {
     const { openModal } = useQuoteModal();
+    useAOS();
     return (
         <div>
             <IntroContent
