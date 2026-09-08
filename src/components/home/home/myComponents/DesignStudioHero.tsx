@@ -395,56 +395,64 @@ const heroContent = [
         title: "We start by listening closely to your goals, ensuring you feel understood from day one.",
         subtitle: "Leading Web Design Company in Chennai for Business Growth.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Make an Enquiry"
+        head: "Make an Enquiry",
+        alt:"web developers in chennai"
     },
     {
         //1
         col: "col-lg-4", img: "/assets/img/banner/bd.jpg",
         title: "We start by listening closely to your goals, ensuring you feel understood from the very beginning.", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pl-80", alignCls: "justify-content-start",
-        head: "Boost"
+        head: "Boost",
+        alt:"best website developers in chennai"
     },
     {
         // 2
         col: "col-lg-4", img: "/assets/img/banner/banner-1.jpg",
         title: " ", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pr-10", alignCls: "justify-content-end",
-        head: "Design"
+        head: "Design",
+        alt:"web designers in chennai"
     },
     {
         //3
         col: "col-lg-2 he-10", img: "/assets/img/banner/hero-img-6.webp",
         title: "Every detail is noted and aligned with your vision, so nothing important is ever missed.", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.",
         spacingCls: "pl-10", alignCls: "justify-content-end",
-        head: "Increase Sales"
+        head: "Increase Sales",
+        alt:"web designers in chennai"
     },
     {
         //4
         col: "col-lg-3", img: "/assets/img/banner/hero-img-2.webp",
         title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.",
         spacingCls: "pr-10", alignCls: "justify-content-end",
-        head: "Gather Requirements"
+        head: "Gather Requirements",
+        alt:"website design company in chennai"
     },
     {
         //5
         col: "col-lg-3", img: "/assets/img/banner/hero-img-3.webp",
         title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: " Write the code"
+        head: " Write the code",
+         alt:"website design company in chennai"
     },
     {
         //6
         col: "col-lg-3", img: "/assets/img/banner/hero-img-4.webp",
         title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Custom Website creations company for Growing Businesses in Chennai",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Design the website"
+        head: "Design the website",
+        alt:"web designers near me"
     },
     {
         //7
         col: "col-lg-3", img: "/assets/img/banner/hero-img-5.webp",
         title: "Our commitment is to a long-term partnership that supports your business growth.", subtitle: "Elevate Your Business with Chennai's Best Web Design Company",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Continuous Success"
+        head: "Continuous Success",
+        alt:"website design agency"
     },
 ];
 
@@ -525,7 +533,7 @@ const Hero = () => {
                                                     <Link href="/">
                                                         <Image
                                                             src={item.img}
-                                                            alt={item.title}
+                                                            alt={item.alt}
                                                             width={0}
                                                             height={0}
                                                             unoptimized

@@ -41,7 +41,7 @@ const PortfolioCard = ({
                             height={820}
                             className="img-fluid w-100 h-100"
                             src={image}
-                            alt={title}
+                            alt="Website Designing and Development Company"
                         />
 
                         <div className="portfolio-image-description">
@@ -141,7 +141,7 @@ const PortfolioCard = ({
                             height={820}
                             className="img-fluid w-100 d-block"
                             src={image}
-                            alt={title}
+                            alt="ecommerce website developer in chennai"
                             style={{ borderRadius: "12px 12px 0 0" }}
                         />
 

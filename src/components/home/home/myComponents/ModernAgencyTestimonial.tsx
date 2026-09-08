@@ -196,7 +196,7 @@ const Testimonial = () => {
                                 <div className="text-end">
                                     <img
                                         src="/assets/img/brand/review.png"
-                                        alt="Google Rating"
+                                        alt="Yulanto Web Creation Google Review"
 
                                         className="img-fluid object-contain"
                                         style={{ width: '80%' }}

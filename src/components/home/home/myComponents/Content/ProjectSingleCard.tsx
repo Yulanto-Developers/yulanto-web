@@ -52,7 +52,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                             >
                                 <Image
                                     src={image}
-                                    alt={title}
+                                    alt="website creation company in chennai"
                                     fill
                                     sizes="(max-width: 767px) 100vw, 905px"
                                     style={{
