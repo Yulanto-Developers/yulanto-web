@@ -43,6 +43,7 @@ export const lightMenu: MenuItem[] = [
           { label: "PHP Website Development", href: "/website-development/php-website-development" },
           { label: "React Website Development", href: "/website-development/react-website-development" },
           { label: "API Integration", href: "/website-development/api-integration" },
+          {label: "AI Assisted Website Development", href: "/AI-assisted-website" }
         ]
       },
       {
@@ -51,7 +52,7 @@ export const lightMenu: MenuItem[] = [
         subLinks: [
           { label: "WordPress Development", href: "/WordPress-Development" },
           { label: "WooCommerce Development", href: "/WooCommerce-Development" },
-          { label: "Shopify E-commerce Development", href: "/" },
+          { label: "Shopify E-commerce Development", href: "/Shopify-E-commerce-Development" },         
           { label: "Portal Web Development", href: "/portal-web-development" },
           { label: "Custom E-commerce Development", href: "/custome-ecommerce-development" },
         ]

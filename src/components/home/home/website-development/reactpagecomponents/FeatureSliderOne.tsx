@@ -8,12 +8,12 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import image1 from "@/assets/images/ourstory/image-1.jpg";
-import image2 from "@/assets/images/ourstory/image-2.jpg";
-import image3 from "@/assets/images/ourstory/vector-1.png";
-import image4 from "@/assets/images/ourstory/vector-2.png";
-import image5 from "@/assets/images/ourstory/image-1.jpg";
-import image6 from "@/assets/images/ourstory/image-2.jpg";
+import image1 from "@/assets/images/website-development/React-website/Modern-&-Interactive-Websites.jpg";
+import image2 from "@/assets/images/website-development/React-website/Responsive-Across-Devices.jpg";
+import image3 from "@/assets/images/website-development/React-website/Fast-&-Optimized.jpg";
+import image4 from "@/assets/images/website-development/React-website/Scalable-Architecture.jpg";
+import image5 from "@/assets/images/website-development/React-website/SEO-Friendly-Development.jpg";
+import image6 from "@/assets/images/website-development/React-website/Business-Focused-Solutions.jpg";
 
 const features = [
   {

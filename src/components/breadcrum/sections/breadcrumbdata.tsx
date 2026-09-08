@@ -237,12 +237,29 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
+<<<<<<< HEAD
     path: "/portal-web-development",
     title: "Portal Web Development",
     currentPage: "Portal Web Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
 
+=======
+    path: "/Shopify-E-commerce-Development",
+    title: "Shopify E-commerce Development",
+    
+    currentPage: "Shopify E-commerce Development",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+   {
+    path: "/AI-assisted-website",
+    title: "AI Assisted Website",
+    
+    currentPage: "AI Assisted Website",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+              
+>>>>>>> origin/main
 
 
 
