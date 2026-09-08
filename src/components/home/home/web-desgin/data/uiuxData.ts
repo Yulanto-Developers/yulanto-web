@@ -1,18 +1,46 @@
-import bc from "@/assets/img/website/corporate/bc.jpg";
-import br from "@/assets/img/website/corporate/br.jpg";
-import bl from "@/assets/img/website/corporate/bl.jpg";
+import bc from "@/assets/img/website/ui/Creative-UI-UX-Design.jpg";
+import br from "@/assets/img/website/ui/Creative-UI-UX-Design-right.jpg";
+import bl from "@/assets/img/website/ui/Creative-UI-UX-Design-left.jpg";
 import { CoverflowSlide } from "@/components/offpageseo/header";
+
+import t1 from '@/assets/img/website/ui/top-1.jpg'
+import t2 from '@/assets/img/website/ui/top-2.jpg'
+import t3 from '@/assets/img/website/ui/top-3.jpg'
+import t4 from '@/assets/img/website/ui/top-4.jpg'
+import t5 from '@/assets/img/website/ui/top-5.jpg'
+
+import u1 from '@/assets/img/website/ui/User-Experience-Design-1.jpg'
+import u2 from '@/assets/img/website/ui/User-Experience-Design-2.jpg'
+import u3 from '@/assets/img/website/ui/User-Interface-Design-1.jpg'
+import u4 from '@/assets/img/website/ui/User-Interface-Design-2.jpg'
+import u5 from '@/assets/img/website/ui/Website-UI-UX-Design-1.jpg'
+import u6 from '@/assets/img/website/ui/Website-UI-UX-Design-2.jpg'
+import u7 from '@/assets/img/website/ui/Mobile-App-UI-UX-Design-1.jpg'
+import u8 from '@/assets/img/website/ui/Mobile-App-UI-UX-Design-2.jpg'
+import u9 from '@/assets/img/website/ui/Wireframing-&-Prototyping-1.jpg'
+import u10 from '@/assets/img/website/ui/Wireframing-&-Prototyping-1.jpg'
+import u11 from '@/assets/img/website/ui/UX-Research-&-User-Flows-1.jpg'
+import u12 from '@/assets/img/website/ui/UX-Research-&-User-Flows-2.jpg'
+import u13 from '@/assets/img/website/ui/design-systems-1.jpg'
+import u14 from '@/assets/img/website/ui/design-systems-2.jpg'
+
+import understand from '@/assets/img/website/ui/1.Understand.jpg';
+import Research from '@/assets/img/website/ui/2.Research.jpg';
+import Plan from '@/assets/img/website/ui/3.Plan.jpg';
+import Design from '@/assets/img/website/ui/4.Design.jpg';
+import Prototype from '@/assets/img/website/ui/5.Prototype.jpg';
+import Refine from '@/assets/img/website/ui/6.Refine.jpg';
 
 
 export const seoTopText = `A great digital product should be easy to understand, simple to navigate, and enjoyable to use. Our UI/UX design services in Chennai combine creative visual design with thoughtful user experiences to create websites and digital products that users love to interact with.`;
 
 export const seoBottomText = `From user research and information architecture to wireframes, prototypes, and final user interface design, we create experiences that balance usability, aesthetics, and business objectives.`;
 export const seoSlides: CoverflowSlide[] = [
-    { src: "/assets/img/offpage/top-1.jpg", alt: "Off-Page Link Building Strategy" },
-    { src: "/assets/img/offpage/top-2.jpg", alt: "Local Citation & Directory Submission" },
-    { src: "/assets/img/offpage/top-3.jpg", alt: "Content Marketing & Guest Posting" },
-    { src: "/assets/img/offpage/top-4.jpg", alt: "Brand Mention & Authority Building" },
-    { src: "/assets/img/offpage/top-5.jpg", alt: "Social Signals & Digital PR" },
+    { src: "/assets/img/website/ui/top-1.jpg", alt: "Off-Page Link Building Strategy" },
+    { src: "/assets/img/website/ui/top-2.jpg", alt: "Local Citation & Directory Submission" },
+    { src: "/assets/img/website/ui/top-3.jpg", alt: "Content Marketing & Guest Posting" },
+    { src: "/assets/img/website/ui/top-4.jpg", alt: "Brand Mention & Authority Building" },
+    { src: "/assets/img/website/ui/top-5.jpg", alt: "Social Signals & Digital PR" },
 ];
 export const galleryImages = [
     {
@@ -32,11 +60,7 @@ export const galleryImages = [
     },
 ];
 
-import t1 from '@/assets/img/website/startup/top-1.jpg'
-import t2 from '@/assets/img/website/startup/top-2.jpg'
-import t3 from '@/assets/img/website/startup/top-3.jpg'
-import t4 from '@/assets/img/website/startup/top-4.jpg'
-import t5 from '@/assets/img/website/startup/top-5.jpg'
+
 
 
 export const uiUxProcessData = [
@@ -48,7 +72,7 @@ export const uiUxProcessData = [
         annotation: "Getting to know your users ➔",
         badgeColor: "#FFF3E9",
         textColor: "#DD6B20",
-        imageSrc: [t1.src, t1.src],
+        imageSrc: [u1.src, u2.src],
     },
 
     {
@@ -59,7 +83,7 @@ export const uiUxProcessData = [
         annotation: "➔ Creating the right visual direction",
         badgeColor: "#EBF8FF",
         textColor: "#3182CE",
-        imageSrc: [t1.src, t1.src],
+        imageSrc: [u3.src, u4.src],
     },
 
     {
@@ -70,7 +94,7 @@ export const uiUxProcessData = [
         annotation: "Building experiences that connect ➔",
         badgeColor: "#F3E8FF",
         textColor: "#805AD5",
-        imageSrc: [t1.src, t1.src],
+        imageSrc: [u5.src, u6.src],
     },
 
     {
@@ -81,7 +105,7 @@ export const uiUxProcessData = [
         annotation: "➔ Designed for every screen",
         badgeColor: "#FFF5F5",
         textColor: "#E53E3E",
-        imageSrc: [t1.src, t1.src],
+        imageSrc: [u7.src, u8.src],
     },
 
     {
@@ -92,7 +116,7 @@ export const uiUxProcessData = [
         annotation: "Testing ideas before development ➔",
         badgeColor: "#F0FDF4",
         textColor: "#16A34A",
-        imageSrc: [t1.src, t1.src],
+        imageSrc: [u9.src, u10.src],
     },
 
     {
@@ -103,7 +127,7 @@ export const uiUxProcessData = [
         annotation: "➔ Understanding every user journey",
         badgeColor: "#FFF7ED",
         textColor: "#EA580C",
-        imageSrc: [t1.src, t1.src],
+        imageSrc: [u11.src, u12.src],
     },
 
     {
@@ -114,7 +138,7 @@ export const uiUxProcessData = [
         annotation: "Creating consistency at every level ➔",
         badgeColor: "#F5F3FF",
         textColor: "#7C3AED",
-        imageSrc: [t1.src, t1.src],
+        imageSrc: [u13.src, u14.src],
     },
 ];
 
@@ -127,20 +151,13 @@ import {
     FaPenRuler,
 } from "react-icons/fa6";
 
-// Keep your existing image imports here
-// import t1 from "...";
-// import t2 from "...";
-// import t3 from "...";
-// import t4 from "...";
-// import t5 from "...";
-
 export const uisteps = [
     {
         stepNumber: "01",
         title: "Understand",
         description:
             "We learn about your business, audience, objectives, competitors, and product requirements.",
-        imageSrc: t1.src,
+        imageSrc: understand.src,
         icon: FaMagnifyingGlass,
     },
 
@@ -149,7 +166,7 @@ export const uisteps = [
         title: "Research",
         description:
             "Our team studies user expectations and identifies opportunities to improve the overall experience.",
-        imageSrc: t2.src,
+        imageSrc: Research.src,
         icon: FaLightbulb,
     },
 
@@ -158,7 +175,7 @@ export const uisteps = [
         title: "Plan",
         description:
             "We develop information architecture, user flows, and wireframes to establish a strong foundation.",
-        imageSrc: t3.src,
+        imageSrc: Plan.src,
         icon: FaLayerGroup,
     },
 
@@ -167,7 +184,7 @@ export const uisteps = [
         title: "Design",
         description:
             "Our UI/UX designers transform the structure into a visually engaging and user-friendly interface.",
-        imageSrc: t4.src,
+        imageSrc: Design.src,
         icon: FaPalette,
     },
 
@@ -176,7 +193,7 @@ export const uisteps = [
         title: "Prototype",
         description:
             "Interactive prototypes help you experience the product flow before development.",
-        imageSrc: t5.src,
+        imageSrc: Prototype.src,
         icon: FaPlay,
     },
 
@@ -185,7 +202,7 @@ export const uisteps = [
         title: "Refine",
         description:
             "We review feedback, improve usability, and prepare polished designs for development.",
-        imageSrc: t5.src,
+        imageSrc: Refine.src,
         icon: FaPenRuler,
     },
 ];

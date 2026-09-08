@@ -240,7 +240,7 @@
 .split-dropdown-menu .dropdown-content-pane {
     position: absolute !important;
     top: 0 !important;
-    left: 40% !important;
+    left: 48% !important;
     /* Begins exactly where the sidebar finishes */
     width: auto !important;
     /* Explicit space allocation (680px - 260px) */
@@ -277,7 +277,7 @@
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
     color: #1a202c !important;
-    margin: 0 0 20px 0 !important;
+    /* margin: 0 0 20px 0 !important; */
     padding-bottom: 8px !important;
     position: relative !important;
     display: inline-block !important;
@@ -786,7 +786,7 @@
 
 /* CRITICAL: When hovering over an item with sublinks, EXPAND the total container width! */
 .split-dropdown-menu.tp-submenu:has(.sidebar-item:hover .dropdown-content-pane) {
-    width: 620px !important;
+    width: 700px !important;
     /* Expands smoothly to make space for the right panel */
 }
 
@@ -852,7 +852,7 @@
     /* Begins exactly where the sidebar finishes */
     width: auto !important;
     /* Explicit space allocation (680px - 260px) */
-    height: auto !important;
+    height: 350 !important;
     background: #ffffff !important;
     padding: 32px 36px !important;
     box-sizing: border-box !important;
@@ -888,7 +888,7 @@
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
     color: #1a202c !important;
-    margin: 0 0 20px 0 !important;
+    /* margin: 0 0 20px 0 !important; */
     padding-bottom: 8px !important;
     position: relative !important;
     display: inline-block !important;
@@ -2505,7 +2505,7 @@ input[name="name"].has-value+.name-next-btn {
     display: flex;
 }
 
-.redesign-benefits-swiper .swiper-slide > * {
+.redesign-benefits-swiper .swiper-slide>* {
     width: 100%;
 }
 
@@ -2514,13 +2514,11 @@ input[name="name"].has-value+.name-next-btn {
    PAGINATION
 ========================================= */
 
-.redesign-benefits-swiper
-.swiper-pagination {
+.redesign-benefits-swiper .swiper-pagination {
     bottom: 10px;
 }
 
-.redesign-benefits-swiper
-.swiper-pagination-bullet {
+.redesign-benefits-swiper .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
 
@@ -2531,8 +2529,7 @@ input[name="name"].has-value+.name-next-btn {
         opacity 0.3s ease;
 }
 
-.redesign-benefits-swiper
-.swiper-pagination-bullet-active {
+.redesign-benefits-swiper .swiper-pagination-bullet-active {
     width: 25px;
 
     border-radius: 10px;
@@ -2544,25 +2541,22 @@ input[name="name"].has-value+.name-next-btn {
 /* =========================================
    NAVIGATION
 ========================================= */
-.swiper-button-prev,.swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
     display: hidden;
 }
 
 
-.redesign-benefits-swiper
-.swiper-button-prev:hover,
-.redesign-benefits-swiper
-.swiper-button-next:hover {
+.redesign-benefits-swiper .swiper-button-prev:hover,
+.redesign-benefits-swiper .swiper-button-next:hover {
     transform: scale(1.08);
 
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.18);
 }
 
-.redesign-benefits-swiper
-.swiper-button-prev::after,
-.redesign-benefits-swiper
-.swiper-button-next::after {
+.redesign-benefits-swiper .swiper-button-prev::after,
+.redesign-benefits-swiper .swiper-button-next::after {
     font-size: 16px;
 
     font-weight: 700;
@@ -2593,25 +2587,23 @@ input[name="name"].has-value+.name-next-btn {
         padding-right: 5px;
     }
 
-    .redesign-benefits-swiper
-    .swiper-button-prev,
-    .redesign-benefits-swiper
-    .swiper-button-next {
+    .redesign-benefits-swiper .swiper-button-prev,
+    .redesign-benefits-swiper .swiper-button-next {
         width: 36px;
         height: 36px;
     }
 
-    .redesign-benefits-swiper
-    .swiper-button-prev::after,
-    .redesign-benefits-swiper
-    .swiper-button-next::after {
+    .redesign-benefits-swiper .swiper-button-prev::after,
+    .redesign-benefits-swiper .swiper-button-next::after {
         font-size: 13px;
     }
 
 }
-.font-p{
+
+.font-p {
     font-family: 'Figtree', sans-serif;
 }
-.font-title{
+
+.font-title {
     font-family: 'Tenor Sans', sans-serif;
 }

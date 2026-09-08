@@ -1,0 +1,2570 @@
+.web-portal-animation {
+    width: 100%;
+    padding: 0 0 70px;
+    overflow: hidden;
+}
+
+.portal-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Background Animation */
+
+.portal-bg-circle {
+    animation: portalBgFloat 5s ease-in-out infinite;
+}
+
+.portal-bg-circle-two {
+    animation-delay: 1.5s;
+}
+
+@keyframes portalBgFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* Dots */
+
+.portal-dot {
+    animation: portalDotFloat 3s ease-in-out infinite;
+}
+
+.portal-dot-two {
+    animation-delay: 0.8s;
+}
+
+.portal-dot-three {
+    animation-delay: 1.5s;
+}
+
+@keyframes portalDotFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateY(-15px) scale(1.2);
+        opacity: 1;
+    }
+}
+
+
+/* Laptop */
+
+.portal-laptop {
+    transform-origin: center bottom;
+    animation: portalLaptopEnter 1s ease-out both;
+}
+
+@keyframes portalLaptopEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Portal Network */
+
+.portal-network {
+    animation: portalNetworkPulse 3s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes portalNetworkPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+
+/* Feature Boxes */
+
+.portal-features {
+    animation: portalFeaturesAppear 1s 0.5s ease-out both;
+}
+
+@keyframes portalFeaturesAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* User Card */
+
+.portal-user-card {
+    animation: portalUserFloat 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes portalUserFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+
+/* Growth Card */
+
+.portal-growth-card {
+    animation: portalGrowthFloat 4.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes portalGrowthFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(9px);
+    }
+}
+
+
+/* Connection Icon */
+
+.portal-connect-icon {
+    animation: portalConnectFloat 3s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes portalConnectFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-13px) scale(1.05);
+    }
+}
+
+
+/* Notification */
+
+.portal-notification {
+    animation: portalNotificationMove 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes portalNotificationMove {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-9px);
+        opacity: 0.9;
+    }
+}
+
+
+/* Building */
+
+.portal-building {
+    animation: portalBuildingFloat 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes portalBuildingFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(2deg);
+    }
+}
+
+
+/* Globe */
+
+.portal-globe {
+    animation: portalGlobeFloat 4.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes portalGlobeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+    .web-portal-animation {
+        padding: 20px 0 50px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+    .web-portal-animation {
+        padding: 10px 0 30px;
+    }
+
+    .portal-svg {
+        width: 120%;
+        max-width: none;
+        margin-left: -10%;
+    }
+
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .portal-svg *,
+    .portal-svg {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+
+/* =========================================
+   PORTAL SERVICES SECTION
+   New class names to avoid SVG conflicts
+========================================= */
+
+.portal-services-section {
+    width: 100%;
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+.portal-services-content {
+    padding-right: 25px;
+}
+
+.portal-services-content h2 {
+    margin-bottom: 20px;
+}
+
+.portal-services-content p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.portal-services-list-title {
+    /* margin-top: 30px; */
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   SERVICES LIST
+========================================= */
+
+.portal-services-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.portal-services-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 15px;
+    border: 1px solid rgba(5, 52, 86, 0.12);
+    border-radius: 8px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.portal-services-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(5, 52, 86, 0.3);
+    box-shadow: 0 8px 25px rgba(5, 52, 86, 0.1);
+}
+
+.portal-services-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background: rgba(5, 52, 86, 0.08);
+    color: #053456;
+}
+
+.portal-services-icon svg {
+    stroke: #053456;
+}
+
+.portal-services-item span {
+    color: #053456;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+
+/* =========================================
+   RIGHT SIDE SVG
+========================================= */
+
+.portal-services-visual {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.portal-services-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================
+   NEW SVG FLOATING ANIMATIONS
+========================================= */
+
+.portal-services-user-card {
+    animation: portalServicesUserFloat 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes portalServicesUserFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+.portal-services-globe {
+    animation: portalServicesGlobeFloat 4.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes portalServicesGlobeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .portal-services-section {
+        padding: 50px 0;
+    }
+
+    .portal-services-content {
+        padding-right: 0;
+    }
+
+    .portal-services-visual {
+        padding: 40px 0 0;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .portal-services-section {
+        padding: 40px 0;
+    }
+
+    .portal-services-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .portal-services-item {
+        padding: 12px 13px;
+    }
+
+    .portal-services-item span {
+        font-size: 14px;
+    }
+
+    .portal-services-visual {
+        padding-top: 30px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .portal-services-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+
+    .portal-services-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .portal-services-item span {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .portal-services-svg *,
+    .portal-services-svg {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+
+/* =========================================
+   CLASSIFIED PORTAL SECTION
+========================================= */
+
+.classified-portal-section {
+    width: 100%;
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+.classified-portal-content {
+    padding-right: 25px;
+}
+
+.classified-portal-content h2 {
+    margin-bottom: 20px;
+}
+
+.classified-portal-content p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   FEATURE LIST
+========================================= */
+
+.classified-feature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin-top: 25px;
+}
+
+.classified-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 15px;
+    border: 1px solid rgba(5, 52, 86, 0.12);
+    border-radius: 8px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.classified-feature-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(5, 52, 86, 0.3);
+    box-shadow: 0 8px 24px rgba(5, 52, 86, 0.09);
+}
+
+.classified-feature-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background: rgba(5, 52, 86, 0.08);
+    color: #053456;
+}
+
+.classified-feature-icon i {
+    font-size: 17px;
+}
+
+.classified-feature-item span {
+    color: #053456;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   SVG
+========================================= */
+
+.classified-portal-visual {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.classified-portal-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================
+   SVG ANIMATIONS
+========================================= */
+
+.classified-browser {
+    transform-origin: center;
+    animation: classifiedBrowserEnter 1s ease-out both;
+}
+
+@keyframes classifiedBrowserEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+.classified-add-card {
+    animation: classifiedAddFloat 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes classifiedAddFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+
+.classified-location-card {
+    animation: classifiedLocationFloat 4.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes classifiedLocationFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(9px);
+    }
+}
+
+
+.classified-check-card {
+    animation: classifiedCheckFloat 3.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes classifiedCheckFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .classified-portal-section {
+        padding: 50px 0;
+    }
+
+    .classified-portal-content {
+        padding-right: 0;
+    }
+
+    .classified-portal-visual {
+        padding: 40px 0 0;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .classified-portal-section {
+        padding: 40px 0;
+    }
+
+    .classified-feature-list {
+        grid-template-columns: 1fr;
+        gap: 11px;
+    }
+
+    .classified-feature-item {
+        padding: 12px 13px;
+    }
+
+    .classified-feature-item span {
+        font-size: 14px;
+    }
+
+    .classified-portal-visual {
+        padding-top: 30px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .classified-feature-icon {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+    }
+
+    .classified-feature-icon i {
+        font-size: 16px;
+    }
+
+    .classified-feature-item span {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .classified-portal-svg *,
+    .classified-portal-svg {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+
+.directory-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.directory-track {
+    display: flex;
+    width: max-content;
+    animation: directory-scroll 35s linear infinite;
+}
+
+.directory-slider:hover .directory-track {
+    animation-play-state: paused;
+}
+
+.directory-slide {
+    width: 320px;
+    flex-shrink: 0;
+    padding: 0 10px;
+}
+
+.directory-card {
+    position: relative;
+    height: 250px;
+    padding: 32px 28px;
+    overflow: hidden;
+    border: 1px solid #e8e3d9;
+    border-radius: 20px;
+    background: #fff;
+    transition: all 0.4s ease;
+}
+
+.directory-card:hover {
+    transform: translateY(-8px);
+    border-color: #053456;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.directory-number {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: rgba(179, 151, 98, 0.08);
+    font-size: 90px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.directory-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+    border-radius: 18px;
+    background: rgba(179, 151, 98, 0.1);
+
+    transition: all 0.4s ease;
+}
+
+.directory-icon svg {
+    width: 48px;
+    height: 48px;
+    overflow: visible;
+}
+
+.directory-card:hover .directory-icon {
+    background: #053456;
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.svg-line,
+.svg-circle {
+    fill: none;
+    stroke: #053456;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.4s ease;
+}
+
+.directory-card:hover .svg-line,
+.directory-card:hover .svg-circle {
+    stroke: #fff;
+}
+
+.directory-card h3 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 230px;
+    margin: 0;
+
+    color: #222;
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 600;
+
+    transition: color 0.4s ease;
+}
+
+.directory-card:hover h3 {
+    color: #053456;
+}
+
+.directory-arrow {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e6dfd2;
+    border-radius: 50%;
+
+    color: #053456;
+    font-size: 20px;
+
+    transition: all 0.4s ease;
+}
+
+.directory-card:hover .directory-arrow {
+    background: #053456;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.svg-draw {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: svg-draw 2.5s ease-in-out infinite;
+}
+
+.svg-pin {
+    transform-origin: center;
+    animation: svg-pin 2.5s ease-in-out infinite;
+}
+
+.svg-star {
+    transform-origin: 40px 40px;
+    animation: svg-star 3s ease-in-out infinite;
+}
+
+.svg-bars {
+    stroke-dasharray: 20;
+    animation: svg-bars 2s ease-in-out infinite alternate;
+}
+
+@keyframes directory-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes svg-draw {
+    0% {
+        stroke-dashoffset: 100;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 100;
+    }
+}
+
+@keyframes svg-pin {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes svg-star {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(6deg) scale(1.06);
+    }
+}
+
+@keyframes svg-bars {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 991px) {
+    .directory-slide {
+        width: 300px;
+    }
+}
+
+@media (max-width: 575px) {
+    .directory-slide {
+        width: 280px;
+    }
+
+    .directory-card {
+        height: 230px;
+        padding: 28px 24px;
+    }
+
+    .directory-icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .directory-icon svg {
+        width: 43px;
+        height: 43px;
+    }
+
+    .directory-card h3 {
+        font-size: 18px;
+    }
+}
+
+.real-estate-features {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.real-estate-heading {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.real-estate-heading>span {
+    display: block;
+    margin-bottom: 15px;
+    color: #053456;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.real-estate-heading h2 {
+    margin: 0 0 18px;
+    color: #191919;
+    font-size: 44px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.real-estate-heading h2 strong {
+    color: #053456;
+    font-weight: 700;
+}
+
+.real-estate-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* Grid */
+
+.real-estate-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+
+/* Items */
+
+.real-estate-item {
+    position: relative;
+    min-height: 250px;
+    padding: 30px;
+    overflow: hidden;
+
+    background: #fff;
+    border: 1px solid #053456;
+    border-radius: 18px;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.real-estate-item:hover {
+    transform: translateY(-8px);
+    border-color: #053456;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Different heights for staggered look */
+
+.real-estate-item:nth-child(2),
+.real-estate-item:nth-child(6),
+.real-estate-item:nth-child(10) {
+    margin-top: 35px;
+}
+
+.real-estate-item:nth-child(3),
+.real-estate-item:nth-child(7),
+.real-estate-item:nth-child(11) {
+    margin-top: 70px;
+}
+
+
+/* Icon */
+
+.real-estate-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 40px;
+
+    border-radius: 50%;
+    background: rgba(179, 151, 98, 0.1);
+
+    transition: all 0.4s ease;
+}
+
+.real-estate-item:hover .real-estate-icon {
+    background: #053456;
+    transform: scale(1.08);
+}
+
+.real-estate-icon svg {
+    width: 45px;
+    height: 45px;
+    overflow: visible;
+}
+
+
+/* SVG */
+
+.re-svg-line,
+.re-svg-circle {
+    fill: none;
+    stroke: #053456;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition: stroke 0.4s ease;
+}
+
+.real-estate-item:hover .re-svg-line,
+.real-estate-item:hover .re-svg-circle {
+    stroke: #fff;
+}
+
+
+/* Content */
+
+.real-estate-content {
+    position: relative;
+    z-index: 2;
+}
+
+.real-estate-number {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #053456;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.real-estate-content h3 {
+    max-width: 230px;
+    margin: 0;
+
+    color: #202020;
+    font-size: 19px;
+    line-height: 1.4;
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.real-estate-item:hover h3 {
+    color: #053456;
+}
+
+
+/* Arrow */
+
+.real-estate-arrow {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e4ddcf;
+    border-radius: 50%;
+
+    color: #053456;
+    font-size: 18px;
+
+    transition: all 0.4s ease;
+}
+
+.real-estate-item:hover .real-estate-arrow {
+    background: #053456;
+    color: #fff;
+    transform: rotate(45deg);
+}
+
+
+/* SVG Drawing */
+
+.re-svg-draw {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: reDraw 2.5s ease-in-out infinite;
+}
+
+@keyframes reDraw {
+    0% {
+        stroke-dashoffset: 100;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 100;
+    }
+}
+
+
+/* Pin */
+
+.re-svg-pin {
+    transform-origin: center;
+    animation: rePin 2.5s ease-in-out infinite;
+}
+
+@keyframes rePin {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Map */
+
+.re-svg-pulse {
+    transform-origin: center;
+    animation: rePulse 2s ease-in-out infinite;
+}
+
+@keyframes rePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
+/* Star */
+
+.re-svg-star {
+    transform-origin: 40px 40px;
+    animation: reStar 3s ease-in-out infinite;
+}
+
+@keyframes reStar {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(6deg);
+    }
+}
+
+
+/* Dashboard */
+
+.re-svg-bars {
+    animation: reBars 2s ease-in-out infinite alternate;
+}
+
+@keyframes reBars {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Tablet */
+
+@media (max-width: 1199px) {
+    .real-estate-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .real-estate-item:nth-child(3),
+    .real-estate-item:nth-child(7),
+    .real-estate-item:nth-child(11) {
+        margin-top: 0;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    .real-estate-features {
+        padding: 70px 0;
+    }
+
+    .real-estate-heading h2 {
+        font-size: 32px;
+    }
+
+    .real-estate-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .real-estate-item,
+    .real-estate-item:nth-child(2),
+    .real-estate-item:nth-child(6),
+    .real-estate-item:nth-child(10) {
+        min-height: 220px;
+        margin-top: 0;
+        padding: 22px;
+    }
+
+    .real-estate-icon {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 28px;
+    }
+
+    .real-estate-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .real-estate-content h3 {
+        font-size: 16px;
+    }
+
+    .real-estate-arrow {
+        right: 15px;
+        bottom: 15px;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .real-estate-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .real-estate-item {
+        min-height: 200px;
+    }
+}
+
+
+
+
+.restaurant-portal-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+
+}
+
+
+/* Heading */
+
+.restaurant-heading {
+    max-width: 800px;
+    margin: 0 auto 65px;
+}
+
+.restaurant-heading>span {
+    display: block;
+    margin-bottom: 14px;
+
+    color: #053456;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.restaurant-heading h2 {
+    margin: 0 0 18px;
+
+    color: #191919;
+
+    font-size: 44px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.restaurant-heading h2 strong {
+    color: #053456;
+}
+
+.restaurant-heading p {
+    max-width: 650px;
+    margin: auto;
+
+    color: #777;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* App Grid */
+
+.restaurant-app-grid {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 35px 20px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* App Item */
+
+.restaurant-app-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+
+/* Circle Icon */
+
+.restaurant-app-icon {
+    position: relative;
+
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(179, 151, 98, 0.25);
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.restaurant-app-item:hover .restaurant-app-icon {
+    transform: translateY(-8px) scale(1.06);
+
+    background: #053456;
+
+    box-shadow:
+        0 18px 35px rgba(179, 151, 98, 0.25);
+}
+
+
+/* Small Outer Ring */
+
+.restaurant-app-icon::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -6px;
+
+    border: 1px dashed rgba(179, 151, 98, 0.25);
+
+    border-radius: 50%;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.restaurant-app-item:hover .restaurant-app-icon::before {
+    transform: rotate(180deg);
+
+    opacity: 0;
+}
+
+
+/* SVG */
+
+.restaurant-app-icon svg {
+    width: 48px;
+    height: 48px;
+
+    overflow: visible;
+}
+
+.restaurant-svg {
+    fill: none;
+
+    stroke: #053456;
+
+    stroke-width: 2.5;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition: stroke 0.4s ease;
+}
+
+.restaurant-app-item:hover .restaurant-svg {
+    stroke: #fff;
+}
+
+
+/* Title */
+
+.restaurant-app-title {
+    max-width: 140px;
+
+    color: #292929;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.restaurant-app-item:hover .restaurant-app-title {
+    color: #053456;
+}
+
+
+/* Number */
+
+.restaurant-app-number {
+    position: absolute;
+
+    top: -10px;
+    right: 5px;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #053456;
+
+    color: #fff;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    opacity: 0;
+
+    transform: scale(0.5);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.restaurant-app-item:hover .restaurant-app-number {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* SVG Draw */
+
+.restaurant-svg-draw {
+    stroke-dasharray: 100;
+
+    stroke-dashoffset: 100;
+
+    animation: restaurantDraw 2.5s ease-in-out infinite;
+}
+
+@keyframes restaurantDraw {
+    0% {
+        stroke-dashoffset: 100;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 100;
+    }
+}
+
+
+/* Pin */
+
+.restaurant-svg-pin {
+    transform-origin: center;
+
+    animation: restaurantPin 2.5s ease-in-out infinite;
+}
+
+@keyframes restaurantPin {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Star */
+
+.restaurant-svg-star {
+    transform-origin: 40px 40px;
+
+    animation: restaurantStar 3s ease-in-out infinite;
+}
+
+@keyframes restaurantStar {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(6deg) scale(1.08);
+    }
+}
+
+
+/* Food */
+
+.restaurant-svg-rotate {
+    transform-origin: 40px 42px;
+
+    animation: restaurantRotate 4s linear infinite;
+}
+
+@keyframes restaurantRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Dashboard */
+
+.restaurant-svg-bars {
+    animation: restaurantBars 2s ease-in-out infinite alternate;
+}
+
+@keyframes restaurantBars {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Tablet */
+
+@media (max-width: 1199px) {
+    .restaurant-app-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+
+/* Small Tablet */
+
+@media (max-width: 991px) {
+    .restaurant-heading h2 {
+        font-size: 36px;
+    }
+
+    .restaurant-app-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px 20px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 575px) {
+    .restaurant-portal-section {
+        padding: 70px 0;
+    }
+
+    .restaurant-heading {
+        margin-bottom: 45px;
+    }
+
+    .restaurant-heading h2 {
+        font-size: 30px;
+    }
+
+    .restaurant-heading p {
+        font-size: 14px;
+    }
+
+    .restaurant-app-grid {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 35px 10px;
+    }
+
+    .restaurant-app-icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .restaurant-app-icon svg {
+        width: 38px;
+        height: 38px;
+    }
+
+    .restaurant-app-title {
+        max-width: 100px;
+        font-size: 12px;
+    }
+
+    .restaurant-app-number {
+        right: 0;
+    }
+}
+
+
+/* Very Small Screens */
+
+@media (max-width: 400px) {
+    .restaurant-app-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.portal-benefits-section {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.portal-section-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #053456;
+    margin-bottom: 15px;
+}
+
+.portal-benefits-heading h2 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: #053456;
+}
+
+.portal-benefits-heading p {
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* LIST */
+
+.portal-benefits-list {
+    max-width: 1050px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.portal-benefit-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 35px;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid rgba(5, 52, 86, 0.12);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.portal-benefit-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #053456;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.4s ease;
+}
+
+.portal-benefit-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 20px 50px rgba(5, 52, 86, 0.1);
+}
+
+.portal-benefit-card:hover::before {
+    transform: scaleY(1);
+}
+
+.portal-benefit-number {
+    min-width: 55px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #053456;
+}
+
+.portal-benefit-icon {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(5, 52, 86, 0.15);
+    background: #f7f9fa;
+    transition: all 0.4s ease;
+}
+
+.portal-benefit-card:hover .portal-benefit-icon {
+    background: #053456;
+    border-color: #053456;
+    transform: rotate(-5deg);
+}
+
+.benefit-svg {
+    width: 42px;
+    height: 42px;
+    fill: none;
+    stroke: #053456;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.4s ease;
+}
+
+.portal-benefit-card:hover .benefit-svg {
+    stroke: #fff;
+}
+
+.svg-draw {
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+    animation: benefitDraw 2s ease forwards;
+}
+
+.portal-benefit-card:hover .svg-draw {
+    animation: benefitDrawHover 1.2s ease forwards;
+}
+
+.svg-dot {
+    fill: #053456;
+    animation: benefitPulse 1.8s ease-in-out infinite;
+}
+
+.portal-benefit-card:hover .svg-dot {
+    fill: #fff;
+}
+
+.svg-pulse {
+    fill: none;
+    stroke: #053456;
+    animation: benefitPulse 1.5s ease-in-out infinite;
+}
+
+.portal-benefit-card:hover .svg-pulse {
+    stroke: #fff;
+}
+
+.portal-benefit-content {
+    flex: 1;
+}
+
+.portal-benefit-content h3 {
+    color: #053456;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.portal-benefit-content p {
+    margin: 0;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.portal-benefit-arrow {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(5, 52, 86, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #053456;
+    transition: all 0.4s ease;
+}
+
+.portal-benefit-arrow span {
+    font-size: 20px;
+    transition: transform 0.4s ease;
+}
+
+.portal-benefit-card:hover .portal-benefit-arrow {
+    background: #053456;
+    color: #fff;
+}
+
+.portal-benefit-card:hover .portal-benefit-arrow span {
+    transform: translate(3px, -3px);
+}
+
+@keyframes benefitDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes benefitDrawHover {
+    from {
+        stroke-dashoffset: 150;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes benefitPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 0.65;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .portal-benefits-heading h2 {
+        font-size: 34px;
+    }
+
+    .portal-benefit-card {
+        gap: 18px;
+        padding: 25px 20px;
+        align-items: flex-start;
+    }
+
+    .portal-benefit-number {
+        min-width: 30px;
+    }
+
+    .portal-benefit-icon {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+
+    .benefit-svg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .portal-benefit-content h3 {
+        font-size: 18px;
+    }
+
+    .portal-benefit-content p {
+        font-size: 14px;
+    }
+
+    .portal-benefit-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .portal-benefit-number {
+        display: none;
+    }
+
+    .portal-benefit-card {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================
+   GROW YOUR BUSINESS
+========================================= */
+
+.portal-growth-section {
+    position: relative;
+}
+
+.portal-growth-box {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 80px;
+    background: #053456;
+    color: #fff;
+}
+
+.portal-growth-pattern {
+    position: absolute;
+    right: -80px;
+    top: -80px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+}
+
+.portal-growth-pattern span {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.portal-growth-pattern span:nth-child(1) {
+    width: 220px;
+    height: 220px;
+    right: 40px;
+    top: 40px;
+}
+
+.portal-growth-pattern span:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    right: 75px;
+    top: 75px;
+}
+
+.portal-growth-pattern span:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    right: 110px;
+    top: 110px;
+}
+
+.portal-growth-content {
+    position: relative;
+    z-index: 2;
+}
+
+.portal-growth-label {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.portal-growth-content h2 {
+    font-size: 48px;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.portal-growth-content p {
+    max-width: 720px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.portal-growth-content strong {
+    color: #fff;
+}
+
+.portal-growth-actions {
+    margin-top: 35px;
+}
+
+.portal-growth-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 20px 15px 25px;
+    color: #053456;
+    background: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.portal-growth-btn:hover {
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.growth-btn-arrow {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #053456;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.portal-growth-btn:hover .growth-btn-arrow {
+    background: #fff;
+    color: #053456;
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   RIGHT VISUAL
+========================================= */
+
+.portal-growth-visual {
+    position: relative;
+    width: 390px;
+    height: 390px;
+    margin: 0 auto;
+}
+
+.growth-circle {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.growth-circle-one {
+    width: 330px;
+    height: 330px;
+    animation: growthRotate 20s linear infinite;
+}
+
+.growth-circle-two {
+    width: 240px;
+    height: 240px;
+    animation: growthRotateReverse 15s linear infinite;
+}
+
+.growth-main-icon {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.growth-main-icon svg {
+    width: 85px;
+    height: 85px;
+    fill: none;
+    stroke: #053456;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.growth-svg-draw {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: growthDraw 2s ease forwards;
+}
+
+.growth-arrow {
+    animation: growthArrow 1.5s ease-in-out infinite;
+}
+
+.growth-floating {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #fff;
+    color: #053456;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+    animation: growthFloat 3s ease-in-out infinite;
+}
+
+.growth-floating span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.growth-floating small {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.growth-floating-one {
+    top: 15px;
+    left: 45px;
+}
+
+.growth-floating-two {
+    right: 15px;
+    top: 135px;
+    animation-delay: 0.8s;
+}
+
+.growth-floating-three {
+    bottom: 15px;
+    left: 80px;
+    animation-delay: 1.5s;
+}
+
+@keyframes growthDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes growthArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes growthFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes growthRotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes growthRotateReverse {
+    from {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+
+/* =========================================
+   CHENNAI CTA
+========================================= */
+
+.portal-contact-banner {
+   
+    padding: 55px 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    border: 1px solid rgba(5, 52, 86, 0.15);
+    background: #f7f9fa;
+}
+
+.portal-contact-content {
+    flex: 1;
+}
+
+.portal-contact-content>span {
+    display: block;
+    color: #053456;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.portal-contact-content h2 {
+    color: #053456;
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.portal-contact-content p {
+    color: #777;
+    max-width: 650px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.portal-contact-action {
+    width: 330px;
+}
+
+.portal-contact-action p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.portal-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    min-width: 210px;
+    padding: 14px 15px 14px 22px;
+    background: #053456;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.4s ease;
+}
+
+.portal-contact-btn span:last-child {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #053456;
+    transition: transform 0.4s ease;
+}
+
+.portal-contact-btn:hover {
+    background: #082d47;
+    color: #fff;
+}
+
+.portal-contact-btn:hover span:last-child {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .portal-growth-box {
+        padding: 65px 40px;
+    }
+
+    .portal-growth-content h2 {
+        font-size: 40px;
+    }
+
+    .portal-growth-visual {
+        width: 320px;
+        height: 320px;
+        margin-top: 50px;
+    }
+
+    .growth-circle-one {
+        width: 280px;
+        height: 280px;
+    }
+
+    .growth-circle-two {
+        width: 200px;
+        height: 200px;
+    }
+
+    .portal-contact-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 45px 35px;
+    }
+
+    .portal-contact-action {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .portal-growth-box {
+        padding: 50px 25px;
+    }
+
+    .portal-growth-content h2 {
+        font-size: 32px;
+    }
+
+    .portal-growth-visual {
+        width: 280px;
+        height: 280px;
+    }
+
+    .growth-circle-one {
+        width: 245px;
+        height: 245px;
+    }
+
+    .growth-circle-two {
+        width: 175px;
+        height: 175px;
+    }
+
+    .growth-main-icon {
+        width: 115px;
+        height: 115px;
+    }
+
+    .growth-main-icon svg {
+        width: 65px;
+        height: 65px;
+    }
+
+    .growth-floating {
+        width: 60px;
+        height: 60px;
+    }
+
+    .growth-floating-one {
+        top: 5px;
+        left: 20px;
+    }
+
+    .growth-floating-two {
+        right: 0;
+        top: 100px;
+    }
+
+    .growth-floating-three {
+        bottom: 5px;
+        left: 45px;
+    }
+
+    .portal-contact-banner {
+        padding: 35px 25px;
+    }
+
+    .portal-contact-content h2 {
+        font-size: 30px;
+    }
+}
