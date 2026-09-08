@@ -8,7 +8,7 @@
 .pb-60 {
   padding-bottom: 60px;
 }
-.ft-30{
+.ft-30 {
   font-size: 30px !important;
 }
 /* Team Member */
@@ -595,7 +595,6 @@
   }
 }
 
-
 /* End Team Member */
 
 /* ==========================
@@ -896,7 +895,7 @@
   visibility: visible;
   transform: translateY(0);
   /* Slower cross-fade transition */
-  transition: 
+  transition:
     opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
     visibility 0.5s ease;
@@ -929,7 +928,7 @@
   visibility: hidden;
   transform: translateY(12px);
   /* Gentle delay to sync smoothly with card expansion */
-  transition: 
+  transition:
     opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
     transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
     visibility 0.6s ease 0.1s;
@@ -1124,14 +1123,16 @@
 .vision-mission-col::before {
   background: #093254;
   background:
-    linear-gradient(#093254c9, #093254b3), url(/assets/images/patterns/pattern.png);
+    linear-gradient(#093254c9, #093254b3),
+    url(/assets/images/patterns/pattern.png);
 }
 
 /* Background gradient for Mission card */
 .clr.vision-mission-col::before {
   background: #2eb081;
   background:
-    linear-gradient(#2eb0818a, #118f61e0), url(/assets/images/patterns/pattern.png);
+    linear-gradient(#2eb0818a, #118f61e0),
+    url(/assets/images/patterns/pattern.png);
 }
 
 @media (min-width: 768px) {
@@ -1236,3 +1237,8 @@
 }
 
 /* End zig zagcards */
+.h1style {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px 0;
+}

@@ -34,9 +34,10 @@ const TextMarquee = () => {
                 <div className="row">
                     <div className="col-xl-12">
                         <div className="px-hero-2-bottom text-center p-relative px-fade-anim" data-delay=".3">
-                            <h4 className="px-hero-2-text d-flex align-items-lg-end justify-content-center">
-                                design <i className="d-xl-block"><span>©Yulanto <br /> Delivering Creative Website<br /> Design Solutions Since 2015</span></i> Agency
+                             <h4 className="px-hero-2-text d-flex align-items-lg-end justify-content-center">
+                                design <i className="d-xl-block"><span>©Yulanto <br /> Delivering Website Creation <br /> Company in Chennai Since 2015</span></i> Agency
                             </h4>
+                            <h1 className="text-tenor h1style mt-3">Best Website Designing and Development Company in Chennai</h1>
                         </div>
                     </div>
                 </div>

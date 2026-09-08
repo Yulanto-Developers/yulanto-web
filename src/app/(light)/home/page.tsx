@@ -22,10 +22,9 @@ import { DesignStudioHero, Marquee, Abouthome, Portfolio, Gallery, Projects, Man
 import { generateSeo } from "@/lib/seo";
 
 export const metadata = generateSeo({
-  title: "Web Design & Development Company in Chennai | Yulanto",
+  title: "Best Web Design and Development Company in Chennai | Yulanto Web Creations",
   description:
-    "Yulanto Web Creations offers professional website design, web development, eCommerce and digital solutions in Chennai.",
-  image: "/assets/img/sample/gallery/img- (1).jpg",
+    "Yulanto is one of the best web design and website development company in Chennai, with experienced web designers in Chennai delivering professional websites.",
 });
 const page = () => {
   return (
