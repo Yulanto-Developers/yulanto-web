@@ -1238,7 +1238,7 @@
 
 /* End zig zagcards */
 .h1style {
-  font-size: 25px;
+  font-size: 25px !important;
   font-weight: 500;
   padding: 10px 0;
 }
