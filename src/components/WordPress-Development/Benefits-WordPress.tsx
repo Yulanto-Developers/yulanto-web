@@ -41,7 +41,7 @@ export default function WordpressBenefits() {
     {
       id: 1,
       image:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600",
+        "/assets/img/WordPress-Development/Key-Benefits-1.jpg",
       mainFeatures: [
         {
           icon: Settings,
@@ -72,7 +72,7 @@ export default function WordpressBenefits() {
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600",
+        "/assets/img/WordPress-Development/Key-Benefits-2.jpg",
       mainFeatures: [
         {
           icon: DollarSign,

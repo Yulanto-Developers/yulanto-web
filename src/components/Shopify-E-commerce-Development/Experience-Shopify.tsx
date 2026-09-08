@@ -90,7 +90,7 @@ export const ShopifyExperience: React.FC = () => {
               }}
             >
               <Image
-                src="/images/shopify-development-banner.jpg"
+                src="/assets/img/Shopify E-commerce Development/top-1.jpg"
                 alt="Create an Engaging Shopping Experience with Shopify"
                 fill
                 priority

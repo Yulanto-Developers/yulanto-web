@@ -5,17 +5,17 @@ import { motion } from "motion/react";
 
 // Added leading slashes to prevent relative route breaking in Next.js/React
 const graphicDesignImages = [
-  "/assets/img/logodesign/Logo-1.jpg",
-  "/assets/img/logodesign/Logo-2.jpg",
-  "/assets/img/logodesign/Logo-3.jpg",
-  "/assets/img/logodesign/Logo-4.jpg",
-  "/assets/img/logodesign/Logo-5.jpg",
-  "/assets/img/logodesign/Logo-6.jpg",
-  "/assets/img/logodesign/Logo-7.jpg",
-  "/assets/img/logodesign/Logo-8.jpg",
-  "/assets/img/logodesign/Logo-9.jpg",
-  "/assets/img/logodesign/Logo-10.jpg",
-  "/assets/img/logodesign/Logo-11.jpg",
+  "/assets/img/WordPress-Development/top-1.jpg",
+  "/assets/img/WordPress-Development/top-2.jpg",
+  "/assets/img/WordPress-Development/top-3.jpg",
+  "/assets/img/WordPress-Development/top-4.jpg",
+  "/assets/img/WordPress-Development/top-5.jpg",
+  "/assets/img/WordPress-Development/top-6.jpg",
+  "/assets/img/WordPress-Development/top-7.jpg",
+  "/assets/img/WordPress-Development/top-8.jpg",
+  "/assets/img/WordPress-Development/top-9.jpg",
+  "/assets/img/WordPress-Development/top-10.jpg",
+  "/assets/img/WordPress-Development/top-11.jpg",
 ];
 
 export default function GraphicDesignSection() {

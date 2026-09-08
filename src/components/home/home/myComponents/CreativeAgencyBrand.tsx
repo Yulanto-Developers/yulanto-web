@@ -80,7 +80,7 @@ const CreativeAgencyBrand = () => {
                                                 width={200}
                                                 height={90}
                                                 src={img}
-                                                alt={`brand-${index + 1}`}
+                                                alt="our top web design and development Client"
                                             />
                                         </div>
                                     </SwiperSlide>

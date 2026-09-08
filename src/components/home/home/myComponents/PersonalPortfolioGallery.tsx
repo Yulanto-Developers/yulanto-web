@@ -46,7 +46,7 @@ const GalleryItem = ({ item }: GalleryItemProps) => {
                         <source src={item.src} type="video/mp4" />
                     </video>
                 ) : (
-                    <img className="img-fluid" src={item.src} alt="gallery" style={{ width: '100%', height: '100%' }} />
+                    <img className="img-fluid" src={item.src} alt="website design near me" style={{ width: '100%', height: '100%' }} />
                 )}
             </div>
         </div>
