@@ -201,33 +201,61 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         duration: "3 January 2026",
         designer: "ThemePure",
         portFolio: [
+            // {
+            //     ques: "1. Why should I invest in a professional website?",
+            //     ans1: "A professional website designers in Chennai builds brand credibility, increases online visibility, attracts more customers, and helps your business grow. At Yulanto, we create high-quality websites design that deliver real business results."
+            // },
+            // {
+            //     ques: "2. What services do you provide?",
+            //     ans1: "We offer website design and development, eCommerce websites, web applications, website maintenance, domain registration, web hosting, SEO, digital marketing, branding, and graphic design in Chennai."
+            // },
+            // {
+            //     ques: "3. How long does it take to complete a website?",
+            //     ans1: "Most website design projects are completed within the agreed timeline. The duration depends on the project's size, features, and client feedback. Any additional requirements may extend the schedule."
+            // },
+            // {
+            //     ques: "4. How can I track my project?",
+            //     ans1: "Our dedicated web designers and developers in Chennai team provides regular updates, demo links, and review sessions throughout the development process, ensuring transparency until the website goes live."
+            // },
+            // {
+            //     ques: "5. How much does a website cost?",
+            //     ans1: "Website design and web development pricing in Chennai depends on your business requirements, features, design complexity, and functionality. Contact us for a customized website design and web development quote that fits your budget."
+            // },
+            // {
+            //     ques: "6. Why is responsive web design important?",
+            //     ans1: "A responsive website automatically adapts to desktops, tablets, and mobile devices, providing a seamless user experience while improving SEO and conversion rates."
+            // },
+            // {
+            //     ques: "7. How can my website rank on Google?",
+            //     ans1: "A website ranks better with SEO-friendly design, quality content, relevant keywords, fast loading speed, mobile responsiveness, and ongoing SEO optimization. We build websites optimized for search engines and long-term growth."
+            // },
             {
-                ques: "1. Why should I invest in a professional website?",
-                ans1: "A professional website designers in Chennai builds brand credibility, increases online visibility, attracts more customers, and helps your business grow. At Yulanto, we create high-quality websites design that deliver real business results."
+                ques: "1. How much does a website cost in Chennai?",
+                ans1: "Website cost in Chennai depends on the website type, number of pages, design complexity, functionality, integrations, and technology. A basic business website generally costs less than an eCommerce website or custom web application."
             },
             {
-                ques: "2. What services do you provide?",
-                ans1: "We offer website design and development, eCommerce websites, web applications, website maintenance, domain registration, web hosting, SEO, digital marketing, branding, and graphic design in Chennai."
+                ques: "2. How do I choose the best web design company in Chennai?",
+                ans1: "The best web design company in Chennai should have proven experience, a strong portfolio, transparent pricing, technical expertise, responsive design capabilities, SEO knowledge, and reliable post-launch support. Check their previous work, understand their development process, and choose a company that understands your business goals."
             },
             {
-                ques: "3. How long does it take to complete a website?",
-                ans1: "Most website design projects are completed within the agreed timeline. The duration depends on the project's size, features, and client feedback. Any additional requirements may extend the schedule."
+                ques: "3. What should a business website include?",
+                ans1: "A business website should include clear information about the company, services or products, About Us, contact details, enquiry forms, testimonials, FAQs, and strong calls to action. It should also be mobile-friendly, fast-loading, secure, SEO-friendly, and easy to navigate."
             },
             {
-                ques: "4. How can I track my project?",
-                ans1: "Our dedicated web designers and developers in Chennai team provides regular updates, demo links, and review sessions throughout the development process, ensuring transparency until the website goes live."
+                ques: "4. How long does it take to build a website?",
+                ans1: "A business website can typically take a 1 or 2 weeks to build, depending on its number of pages, design, features, content, integrations, and revisions. eCommerce websites, web portals, and custom web applications may require more development time."
             },
             {
-                ques: "5. How much does a website cost?",
-                ans1: "Website design and web development pricing in Chennai depends on your business requirements, features, design complexity, and functionality. Contact us for a customized website design and web development quote that fits your budget."
+                ques: "5. What is the difference between web design and web development?",
+                ans1: "Web design focuses on the website's appearance, layout, user interface, and user experience, while web development focuses on its functionality, coding, database, integrations, and technical implementation. A successful website requires both professional design and reliable development."
             },
             {
-                ques: "6. Why is responsive web design important?",
-                ans1: "A responsive website automatically adapts to desktops, tablets, and mobile devices, providing a seamless user experience while improving SEO and conversion rates."
+                ques: "6. Why Is Yulanto a Trusted Web Design Company in Chennai?",
+                ans1: "Yulanto is a trusted web design company in Chennai with experience since 2015, 550+ websites delivered, a skilled team, transparent processes, and ongoing customer support. We create responsive, SEO-friendly, and business-focused websites tailored to each client's requirements."
             },
             {
-                ques: "7. How can my website rank on Google?",
-                ans1: "A website ranks better with SEO-friendly design, quality content, relevant keywords, fast loading speed, mobile responsiveness, and ongoing SEO optimization. We build websites optimized for search engines and long-term growth."
+                ques: "7. Why Is Yulanto One of the Top 10 Web Design and development Companies in Chennai?",
+                ans1: "Yulanto is one of the leading web design and development companies in Chennai, with 11+ years of experience, 550+ websites delivered, a skilled team, customized website solutions, responsive and SEO-friendly designs, and dedicated customer support."
             },
         ]
     },
