@@ -1197,8 +1197,8 @@
 .seo-friendly-section {
     width: 100%;
 
-    margin-top: 100px;
-    margin-bottom: 100px;
+    /* margin-top: 100px; */
+    margin-bottom: 50px;
 
     padding-bottom: 60px;
 
@@ -1457,9 +1457,7 @@
    HEADER
 ========================================= */
 
-.why-choose-header {
-    max-width: 1000px;
-}
+
 
 .why-choose-header p {
     margin-bottom: 12px;
