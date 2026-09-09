@@ -21,7 +21,7 @@
 }
 
 .bento-card-full-tall {
-  min-height: 800px;
+  min-height: 830px;
 }
 
 /* Centered Image Placement */
@@ -55,7 +55,16 @@
 /* Ensure center column takes full height of the adjacent two cards */
 .bento-card-full-tall {
   height: 100%;
-  min-height: 800px; /* Minimum fallback height for desktop */
+  min-height: 830px; /* Minimum fallback height for desktop */
+}
+@media (max-width: 767px) {
+  .bento-card-full-tall {
+  height: 100%;
+  min-height: 280px !important; /* Minimum fallback height for desktop */
+}
+.bento-tall-img{
+ max-height: 220px !important; 
+}
 }
 
 /* Allow center image wrapper to take all available space */

@@ -51,7 +51,8 @@ const BentoCard: React.FC<BentoCardProps> = ({
 
         {/* Text Area */}
         <div className="bento-card-text text-start mt-auto">
-          <h3 className="bento-title fw-semibold mb-2">{name}</h3>
+         <h5 className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"20px" }}>
+{name}</h5>
           <p className="bento-desc text-muted m-0">{description}</p>
         </div>
       </div>
@@ -116,7 +117,7 @@ export const BentoGrid: React.FC = () => {
   ];
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110 bento-grid-section">
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110 bento-grid-section">
       <div className="container container-1550">
         <div className="row align-items-center mb-20">
           <div className="col-xl-3">

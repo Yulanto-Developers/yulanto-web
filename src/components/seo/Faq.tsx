@@ -66,7 +66,7 @@ const keyframeStyles = `
 `;
 
 export default function Faq() {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [activeIndex, setActiveIndex] = useState<number>(-1);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [glowPos, setGlowPos] = useState<{ x: number; y: number; index: number | null }>({
     x: 0,
@@ -126,7 +126,7 @@ export default function Faq() {
       />
 
       {/* Main Content Area */}
-      <section className="px-about-6-area pt-50 pb-80 pb-lg-110"  > 
+      <section className="px-about-6-area pt-40 pb-40 pb-lg-110"  > 
        
      
         <div className="container container-1550">
@@ -264,17 +264,10 @@ export default function Faq() {
                             gap: "0.75rem",
                           }}
                         >
-                          <h2
-                            style={{
-                              fontSize: "1.25rem",
-                              fontWeight: 600,
-                              lineHeight: 1.3,
-                              margin: 0,
-                              color: "#053456",
-                            }}
-                          >
+                           <h5 className="fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"20px" }}>
+
                             {item.question}
-                          </h2>
+                          </h5>
                           {item.meta && (
                             <span
                               style={{
@@ -303,7 +296,7 @@ export default function Faq() {
                             fontSize: "0.9375rem",
                             lineHeight: 1.6,
                             color: "rgba(5, 52, 86, 0.8)",
-                            maxHeight: isOpen ? "16rem" : "0px",
+                            maxHeight: isOpen ? "1000px" : "0px",
                             opacity: isOpen ? 1 : 0,
                             transition: "max-height 400ms cubic-bezier(0.16, 1, 0.3, 1), opacity 300ms ease",
                           }}

@@ -58,8 +58,6 @@ export default function SeoServicesList() {
       data-aos-duration="600"
       style={{
         backgroundColor: "#ffffff",
-        border: "1px solid #e5e7eb",
-        fontFamily: "sans-serif",
         overflow: "hidden",
       }}
     >
@@ -81,14 +79,8 @@ export default function SeoServicesList() {
           </div>
         </div>
 
-        {/* 3 Columns Layout */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-            gap: "1.25rem",
-          }}
-        >
+        {/* Responsive Grid Layout: 1 card per row on mobile, 3 per row on desktop */}
+        <div className="row g-3">
           {seoServices.map((item, index) => {
             const IconComponent = item.icon;
             const isHovered = hoveredIndex === index;
@@ -99,50 +91,53 @@ export default function SeoServicesList() {
             const animationDelay = 100 + rowIndex * 100 + colIndex * 50;
 
             return (
-              <div
-                key={index}
-                data-aos="fade-up"
-                data-aos-delay={animationDelay}
-                data-aos-anchor-placement="top-bottom"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.85rem",
-                  padding: "1rem 1.25rem",
-                  border: isHovered ? "1px solid #53ae7d" : "1px solid #e5e7eb",
-                  borderRadius: "0.5rem",
-                  backgroundColor: isHovered ? "#f8fdfa" : "#ffffff",
-                  transform: isHovered ? "translateY(-4px)" : "translateY(0)",
-                  boxShadow: isHovered
-                    ? "0 10px 15px -3px rgba(83, 174, 125, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
-                    : "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-                  transition: "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
-                  cursor: "pointer",
-                }}
-              >
+              <div key={index} className="col-12 col-md-6 col-lg-4">
                 <div
+                  data-aos="fade-up"
+                  data-aos-delay={animationDelay}
+                  data-aos-anchor-placement="top-bottom"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
-                    transition: "transform 0.25s ease",
-                    transform: isHovered ? "scale(1.1)" : "scale(1)",
+                    gap: "0.85rem",
+                    padding: "1rem 1.25rem",
+                    border: isHovered ? "1px solid #53ae7d" : "1px solid #e5e7eb",
+                    borderRadius: "0.5rem",
+                    backgroundColor: isHovered ? "#f8fdfa" : "#ffffff",
+                    transform: isHovered ? "translateY(-4px)" : "translateY(0)",
+                    boxShadow: isHovered
+                      ? "0 10px 15px -3px rgba(83, 174, 125, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+                      : "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+                    transition: "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+                    cursor: "pointer",
                   }}
                 >
-                  <IconComponent size={22} color="#53ae7d" style={{ flexShrink: 0 }} />
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      transition: "transform 0.25s ease",
+                      transform: isHovered ? "scale(1.1)" : "scale(1)",
+                    }}
+                  >
+                    <IconComponent size={22} color="#53ae7d" style={{ flexShrink: 0 }} />
+                  </div>
+                  <span
+                    className="fw-bold"
+                    style={{
+                      fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      color: isHovered ? "#53ae7d" : "#053456",
+                      transition: "color 0.25s ease",
+                    }}
+                  >
+                    {item.name}
+                  </span>
                 </div>
-                <span
-                  style={{
-                    fontSize: "0.95rem",
-                    fontWeight: 600,
-                    color: isHovered ? "#53ae7d" : "#053456",
-                    transition: "color 0.25s ease",
-                  }}
-                >
-                  {item.name}
-                </span>
               </div>
             );
           })}

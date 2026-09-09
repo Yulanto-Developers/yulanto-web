@@ -26,14 +26,14 @@ export function HeroSection({
 
   return (
     /* Full-width section matching your requested layout classes */
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110 bg-white">
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110 bg-white">
       {/* Container wrapper matching your site standard */}
       <div className="container container-1550">
         <div
           style={{
             background: "#fff",
-            padding: "60px 20px",
-            width: "100%",
+           
+            
             display: "flex",
             flexDirection: "row-reverse",
             flexWrap: "wrap-reverse",

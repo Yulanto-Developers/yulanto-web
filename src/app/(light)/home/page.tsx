@@ -17,9 +17,7 @@ import Testimonial from "@/components/home/modern-agency/sections/ModernAgencyTe
 import { DesignStudioHero, Marquee, Abouthome, Portfolio, Gallery, Projects, Mantra, OurPartner, Services, ClientTestimonial } from "@/components/home/home/myComponents";
 import "@/assets/css/style1.css";
 
-// export const metadata: Metadata = {
-//   title: "Yulanto - Home",
-// };
+
 import { generateSeo } from "@/lib/seo";
 
 export const metadata = generateSeo({

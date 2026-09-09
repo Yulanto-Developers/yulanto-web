@@ -37,9 +37,9 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
 
     return (
       <section 
-        ref={ref} 
-        className={`px-about-6-area pt-50 pb-80 pb-lg-110 ${className}`} 
-        {...props}
+      
+        className= "px-about-6-area pt-40 pb-40 pb-lg-110"
+      
       >
         <div className="container container-1550">
           {/* Section Header */}
@@ -64,7 +64,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
           </div>
 
           {/* Image Collage Layout Matching Reference Image */}
-          <div className="hero-collage-wrapper position-relative my-5" data-aos="zoom-in" data-aos-delay="200">
+          <div className="hero-collage-wrapper position-relative my-3" data-aos="zoom-in" data-aos-delay="200">
             <div className="hero-collage-container position-relative mx-auto">
               {/* Center Main Card */}
               {activeImages[0] && (
@@ -84,24 +84,9 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                   style={{ animationDelay: '-1.2s' }}
                 />
               )}
-              {/* Top Left Small Card */}
-              {activeImages[2] && (
-                <img
-                  src={activeImages[2]}
-                  alt="Feature 3"
-                  className="collage-img img-bottom-left animate-float-up"
-                  style={{ animationDelay: '-2.5s' }}
-                />
-              )}
-              {/* Top Right Card */}
-              {activeImages[3] && (
-                <img
-                  src={activeImages[3]}
-                  alt="Feature 4"
-                  className="collage-img img-top-right animate-float-up"
-                  style={{ animationDelay: '-3.5s' }}
-                />
-              )}
+            
+             
+           
               {/* Far Right Card */}
               {activeImages[4] && (
                 <img
@@ -131,11 +116,12 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
               )}
             </div>
           </div>
-           <p className="text-figtree text-black mt-80">
+           <p className="text-figtree text-black seo-description">
             As a professional SEO agency in Chennai, we combine keyword research, technical SEO, on-page optimization, content strategy, link building, and performance analytics to create customized search engine optimization strategies aligned with your business goals.
           </p>
          
         </div>
+        
         
       </section>
     );

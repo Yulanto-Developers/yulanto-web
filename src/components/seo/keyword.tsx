@@ -250,15 +250,9 @@ const PlusCard: React.FC<{
         </div>
 
         {/* CARD CONTENT */}
-        <h3
-          style={{
-            fontSize: "20px",
-            fontWeight: 700,
-            color: isHovered ? "#53ae7d" : "#053456",
-            margin: "0 0 8px 0",
-            lineHeight: 1.3,
-            transition: "color 0.3s ease",
-          }}
+        <h3 className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',  fontSize: "20px",            color: isHovered ? "#53ae7d" : "#053456",
+ }}
+      
         >
           {title}
         </h3>
@@ -287,15 +281,14 @@ export default function RuixenBentoCards() {
 
   return (
     <section
-      className="py-5"
+      className="px-about-6-area pt-40 pb-40 pb-lg-110"
       style={{
         backgroundColor: "#ffffff",
-        border: "1px solid #e5e7eb",
-        fontFamily: "sans-serif",
+      
         overflow: "hidden",
       }}
     >
-      <div className="container container-1550 py-4">
+      <div className="container container-1550 ">
         <div className="row align-items-center mb-20">
           <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">

@@ -2607,3 +2607,15 @@ input[name="name"].has-value+.name-next-btn {
 .font-title {
     font-family: 'Tenor Sans', sans-serif;
 }
+/****************santhosh css*****************/
+.seo-description {
+    margin-top: 80px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .seo-description {
+        margin-top: 20px;
+    }
+}
+

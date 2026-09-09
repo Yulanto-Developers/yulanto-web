@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 
 const highlights = [
   "Better search visibility",
@@ -12,6 +13,8 @@ const highlights = [
 ];
 
 export default function ChooseSeoAgencySection() {
+  const { openModal } = useQuoteModal();
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -66,9 +69,33 @@ export default function ChooseSeoAgencySection() {
               <strong>best SEO agency in Chennai</strong>, or <strong>professional SEO services in Chennai</strong>, 
               we can create a customized SEO strategy tailored precisely to your business goals and target audience.
             </p>
-            <p className="text-figtree text-black mt-2">
+            <p className="text-figtree text-black mt-2 mb-4">
               We skip shortcuts and focus entirely on sustainable, search-engine-compliant practices that deliver predictable results for startups, local businesses, and enterprise brands alike.
             </p>
+
+            {/* Left Aligned CTA Button */}
+            <button
+             onClick={openModal}
+              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+              style={{
+                backgroundColor: '#053456',
+                color: '#ffffff',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                border: '1px solid #053456',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              <span>Let's Talk our Team</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
+            </button>
           </div>
 
           {/* Core Focus Cards with FontAwesome Icons */}
@@ -114,7 +141,8 @@ export default function ChooseSeoAgencySection() {
                 />
                 <span
                   style={{
-                    fontSize: "0.95rem",
+                    fontSize: "15px",
+                    fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
                     fontWeight: 600,
                     color: "#053456",
                     lineHeight: "1.4",

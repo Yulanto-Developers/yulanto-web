@@ -28,7 +28,7 @@ const SeoCard: React.FC<SeoCardProps> = ({
       data-aos-duration="800"
     >
       <div
-        className={`custom-feature-card w-100 p-2 p-xl-5 d-flex flex-column justify-content-start ${
+        className={`custom-feature-card w-100 p-4 p-xl-5 d-flex flex-column justify-content-start ${
           isDark ? "dark-variant" : ""
         }`}
       >
@@ -38,7 +38,8 @@ const SeoCard: React.FC<SeoCardProps> = ({
         </div>
 
         {/* Title */}
-        <h3 className="card-title-text mb-3">{title}</h3>
+        <h5 className="mb-3 fw-bold card-title-text" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"20px" }}>
+{title}</h5>
 
         {/* Small Accent Line */}
         <div className="card-accent-bar mb-3" />
@@ -168,7 +169,7 @@ export const SeoServices: React.FC = () => {
           <path d="m9 12 2 2 4-4" />
         </svg>
       ),
-      isDark: false,
+      isDark: true,
       delay: 500,
     },
     {
@@ -198,7 +199,7 @@ export const SeoServices: React.FC = () => {
   ];
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ backgroundColor: "#f8f9fa" }}>
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ backgroundColor: "#f8f9fa" }}>
       <div className="container container-1550">
         <div className="row align-items-center mb-20">
           <div className="col-xl-3">
