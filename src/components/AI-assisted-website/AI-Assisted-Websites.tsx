@@ -14,42 +14,42 @@ const servicesData: ServiceCard[] = [
     description:
       "Corporate and company websites designed to establish credibility and generate enquiries.",
     imageUrl:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+      "/assets/img/AI/AI-Assisted-Websites-1.jpg",
   },
   {
     title: "Landing Pages",
     description:
       "High-converting landing pages for campaigns, products and services.",
     imageUrl:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      "/assets/img/AI/AI-Assisted-Websites-2.jpg",
   },
   {
     title: "Portfolio Websites",
     description:
       "Modern websites for agencies, creatives, professionals and personal brands.",
     imageUrl:
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
+      "/assets/img/AI/AI-Assisted-Websites-3.jpg",
   },
   {
     title: "Startup Websites",
     description:
       "Fast-moving websites for startups that need to launch and iterate quickly.",
     imageUrl:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+      "/assets/img/AI/AI-Assisted-Websites-4.jpg",
   },
   {
     title: "Service Websites",
     description:
       "Conversion-focused websites for businesses offering multiple services.",
     imageUrl:
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+      "/assets/img/AI/AI-Assisted-Websites-5.jpg",
   },
   {
     title: "Campaign Websites",
     description:
       "Short-term campaign and promotional websites that need to go live quickly.",
     imageUrl:
-      "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
+      "/assets/img/AI/AI-Assisted-Websites-6.jpg",
   },
 ];
 

@@ -8,18 +8,18 @@ interface Tool {
 }
 
 const toolsList: Tool[] = [
-  { name: "ChatGPT", iconSrc: "/images/tools/chatgpt.png" },
-  { name: "Claude", iconSrc: "/images/tools/claude.png" },
-  { name: "Gemini", iconSrc: "/images/tools/gemini.png" },
-  { name: "Midjourney", iconSrc: "/images/tools/midjourney.png" },
-  { name: "Adobe Firefly", iconSrc: "/images/tools/adobe-firefly.png" },
-  { name: "Figma AI", iconSrc: "/images/tools/figma.png" },
-  { name: "GitHub Copilot", iconSrc: "/images/tools/copilot.png" },
-  { name: "Cursor", iconSrc: "/images/tools/cursor.png" },
-  { name: "v0", iconSrc: "/images/tools/v0.png" },
-  { name: "Lovable", iconSrc: "/images/tools/lovable.png" },
-  { name: "Framer AI", iconSrc: "/images/tools/framer.png" },
-  { name: "Sketch AI", iconSrc: "/images/tools/sketch.png" },
+  { name: "ChatGPT", iconSrc: "/assets/img/AI/AI-Logo/ChatGPT.png" },
+  { name: "Claude", iconSrc: "/assets/img/AI/AI-Logo/Claude.png" },
+  { name: "Gemini", iconSrc: "/assets/img/AI/AI-Logo/Gemini.png" },
+  { name: "Midjourney", iconSrc: "/assets/img/AI/AI-Logo/Midjourney.png" },
+  { name: "Adobe Firefly", iconSrc: "/assets/img/AI/AI-Logo/Adobe-Firefly.png" },
+  { name: "Figma AI", iconSrc: "/assets/img/AI/AI-Logo/Figma-AI.png" },
+  { name: "GitHub Copilot", iconSrc: "/assets/img/AI/AI-Logo/1.png" },
+  { name: "Cursor", iconSrc: "/assets/img/AI/AI-Logo/2.png" },
+  { name: "v0", iconSrc: "/assets/img/AI/AI-Logo/3.png" },
+  { name: "Lovable", iconSrc: "/assets/img/AI/AI-Logo/4.png" },
+  { name: "Framer AI", iconSrc: "/assets/img/AI/framer.png" },
+  { name: "Sketch AI", iconSrc: "/assets/img/AI/sketch.png" },
 ];
 
 const styles = `
