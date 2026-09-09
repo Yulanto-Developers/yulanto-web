@@ -13,7 +13,7 @@ export const timelineData = [
     year: "2015",
     title: "The Beginning",
     icon: FaRocket,
-    desc: "Company Launch: Established as a Private Limited company on 5th May 2015, starting with a single employee and no clients, but with a strong determination to build a trusted name in the web development industry.",
+    desc: "Company Launch: Established as a Private Limited company on May 5 2015, starting with a single employee and no clients, but with a strong determination to build a trusted name in the web development industry.",
   },
   {
     year: "2017",

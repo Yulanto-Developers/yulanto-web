@@ -22,13 +22,13 @@ const AboutUs = () => {
         <div className="services-content container">
           <div className="row align-items-center">
             <div className="col-lg-9 mb-4 mb-lg-0">
-              <h4
+              <h1
                 className="px-about-title  text-tenor"
                 data-aos="text-reveal"
                 data-aos-delay="100"
               >
                 Leading Web Design Company in <span className="text-blue-about"> Chennai Since 2015 </span>
-              </h4>
+              </h1>
 
               <p
                 className="mb-0"
@@ -89,13 +89,6 @@ const AboutUs = () => {
                   <span className="text-white">Building Digital Experiences That Matter </span>
                 </h4>
 
-                <p
-                  className="text-figtree"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  Yulanto Web Creations is a comprehensive web design company in Chennai that has been helping businesses build powerful, professional, and results-driven digital identities since 2015. What began as a passion for creativity, technology, and innovative web solutions has grown into a trusted website development company serving startups, small and medium-sized businesses, and established organizations across India and international markets. Over the years, we have built our reputation on quality, creativity, transparency, and a commitment to delivering exceptional results that help our clients achieve sustainable business growth.
-                </p>
 
                 <p
                   className="text-figtree mb-0"
