@@ -6,6 +6,7 @@ export interface WhyChooseItem {
   description: string;
   subDesc?: string;
   categories?: string[];
+  alt?:string;
 }
 
 const whychoosseData: WhyChooseItem[] = [
@@ -15,6 +16,7 @@ const whychoosseData: WhyChooseItem[] = [
     badgeText: "High Performance",
     image: "/assets/images/whychoose/quality-design.jpg",
     description: `Quality is at the heart of everything we do. Every website we create reflects our commitment to modern design, usability, performance, and attention to detail.`,
+    alt:"web design agency chennai",
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ const whychoosseData: WhyChooseItem[] = [
     badgeText: "Modern Tech",
     image: "/assets/images/whychoose/innovation-approach.jpg",
     description: `We continuously explore new ideas, technologies, and creative approaches throughout every stage of development. Our innovative mindset helps us create distinctive digital experiences.`,
+    alt:"web design agency in chennai",
   },
   {
     id: 3,
@@ -29,6 +32,7 @@ const whychoosseData: WhyChooseItem[] = [
     badgeText: "Tailored Strategy",
     image: "/assets/images/whychoose/customized-solutions.jpg",
     description: `We take the time to understand your business, objectives, and unique requirements. Our customized solutions are thoughtfully designed to deliver meaningful results.`,
+    alt:"design web design",
   },
   {
     id: 4,
@@ -36,6 +40,7 @@ const whychoosseData: WhyChooseItem[] = [
     badgeText: "Expert Developers",
     image: "/assets/images/whychoose/team.jpg",
     description: `Our team of skilled and experienced web designers and developers combines creativity, technical expertise, and industry knowledge to build professional websites.`,
+    alt:"website development company"
   },
   {
     id: 5,
@@ -43,6 +48,7 @@ const whychoosseData: WhyChooseItem[] = [
     badgeText: "Strict Deadlines",
     image: "/assets/images/whychoose/on-time-delivery.jpg",
     description: `We understand the importance of deadlines in business. Our structured approach to project management helps us maintain timelines and deliver projects efficiently.`,
+    alt:"website developers"
   },
   {
     id: 6,
@@ -50,6 +56,7 @@ const whychoosseData: WhyChooseItem[] = [
     badgeText: "24/7 Assistance",
     image: "/assets/images/whychoose/customer-support.jpg",
     description: `Our relationship with you doesn't end after your website goes live. Our dedicated technical support team is always ready to assist with maintenance and updates.`,
+    alt:"web development company"
   },
 ];
 

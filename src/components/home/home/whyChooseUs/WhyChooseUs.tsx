@@ -12,7 +12,7 @@ import {
   Sliders,
   Users,
   Clock,
-  Headphones
+  Headphones,
 } from "lucide-react";
 
 const iconMap: Record<number, ReactNode> = {
@@ -42,7 +42,9 @@ const WhyChooseA2: React.FC<WhyChooseA2Props> = ({ data = whychoosseData }) => {
           animationType="text-reveal-lines"
           delay={300}
         />
-
+        <h1 className="ft-23 mt-0 mb-2 text-center text-tenor" data-aos="text-reveal" data-aos-delay="100">
+          Website Designing Company in Chennai
+        </h1>
         <div className="row g-4 whychooseA2-row">
           {data.map((item: WhyChooseItem, index: number) => (
             <div
@@ -57,11 +59,14 @@ const WhyChooseA2: React.FC<WhyChooseA2Props> = ({ data = whychoosseData }) => {
                 {/* Image & Floating Pill Badges */}
                 <div className="whychooseA2-card-image-wrap">
                   <img
-                    src={item.image || "/assets/images/whychoose/quality-design.jpg"}
+                    src={
+                      item.image ||
+                      "/assets/images/whychoose/quality-design.jpg"
+                    }
                     alt={item.title}
                     className="whychooseA2-card-image"
                   />
-                  
+
                   <div className="whychooseA2-badges-overlay">
                     <span className="whychooseA2-badge-pill">
                       {iconMap[item.id] || <Palette />}

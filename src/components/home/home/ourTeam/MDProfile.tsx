@@ -59,7 +59,7 @@ const MDProfile = () => {
           data-aos-easing="ease-out-cubic"
           data-aos-once="true"
         >
-          <img src={MDImg2.src} alt="Aaryan Ningdhalli Profile" />
+          <img src={MDImg2.src} alt="MD Vasanthan AJ" />
         </div>
 
         {/* Right Column */}

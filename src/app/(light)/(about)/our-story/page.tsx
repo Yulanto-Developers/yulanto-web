@@ -14,15 +14,9 @@ import FAQSchema from "@/components/seo-sechama/FAQSchema";
 import { faqData } from "@/lib/faq-data";
 
 export const metadata = generateSeo({
-  title: "Leading Web Design Company in Chennai Since 2015",
+  title: "Our Story | Web Designing Company in Chennai Since 2015",
   description:
-    "Learn about Yulanto Web Creations, a web design and development company in Chennai established in 2015.",
-
-  slug: "our-story",
-
-  image: "/assets/img/sample/gallery/img- (1).jpg",
-
-  imageAlt: "Yulanto Web Creations - Web Design Company in Chennai",
+    "Yulanto Web Creations is a leading web designing and development company in Chennai since 2015, creating custom web design and SEO-friendly websites.",
 });
 
 const HomePage = () => {

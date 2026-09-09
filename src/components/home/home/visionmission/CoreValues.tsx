@@ -15,12 +15,12 @@ const CoreValues = ({ values = coreValuesData, columns = 6 }) => {
 
   const displayValues = useMemo(
     () => values.slice(0, columns),
-    [values, columns]
+    [values, columns],
   );
 
   return (
-    <section 
-      className="core-value-section" 
+    <section
+      className="core-value-section"
       id="core-values"
       data-aos="fade-up"
       data-aos-duration="1000"
@@ -37,7 +37,8 @@ const CoreValues = ({ values = coreValuesData, columns = 6 }) => {
           animationType="text-reveal-lines"
           delay={300}
         />
-
+        <h1 className="ft-23 mt-0 mb-2 text-center text-tenor" data-aos="text-reveal"
+                data-aos-delay="100">Web Design Chennai</h1>
         <div className="core-value-wrapper">
           {displayValues.map((value, index) => {
             const isActive = activeIndex === index;
@@ -57,14 +58,10 @@ const CoreValues = ({ values = coreValuesData, columns = 6 }) => {
                 <div className="core-value-overlay">
                   <div className="title-container">
                     {/* Default vertical title */}
-                    <h3 className="title-vertical">
-                      {value.title}
-                    </h3>
+                    <h3 className="title-vertical">{value.title}</h3>
 
                     {/* Expanded horizontal title */}
-                    <h3 className="title-horizontal">
-                      {value.title}
-                    </h3>
+                    <h3 className="title-horizontal">{value.title}</h3>
                   </div>
 
                   <p className="core-value-card-description">
