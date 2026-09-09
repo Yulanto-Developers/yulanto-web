@@ -89,23 +89,24 @@ import b2 from '@/assets/img/website/startup/bottom-2.jpg';
 import b1 from '@/assets/img/website/startup/bottom-1.jpg';
 
 function Startupwebsitedesign() {
-    const consultationText = " Let's build your website and create your online success story."
-    const [typedConsultationText, setTypedConsultationText] = useState('')
+    const consultationText =
+        "Let's build your website and create your online success story.";
+    // const [typedConsultationText, setTypedConsultationText] = useState('')
 
-    useEffect(() => {
-        let characterIndex = 0
-        const typingTimer = window.setInterval(() => {
-            if (characterIndex >= consultationText.length) {
-                characterIndex = 0
-                setTypedConsultationText('')
-            }
+    // useEffect(() => {
+    //     let characterIndex = 0
+    //     const typingTimer = window.setInterval(() => {
+    //         if (characterIndex >= consultationText.length) {
+    //             characterIndex = 0
+    //             setTypedConsultationText('')
+    //         }
 
-            characterIndex += 1
-            setTypedConsultationText(consultationText.slice(0, characterIndex))
-        }, 13)
+    //         characterIndex += 1
+    //         setTypedConsultationText(consultationText.slice(0, characterIndex))
+    //     }, 20)
 
-        return () => window.clearInterval(typingTimer)
-    }, [])
+    //     return () => window.clearInterval(typingTimer)
+    // }, [])
 
     const stats = [
         { value: '250+', label: 'Startup Websites' },
@@ -590,6 +591,78 @@ function Startupwebsitedesign() {
 
         
       `}</style>
+            <style>{`
+    @keyframes fadeInText {
+        from {
+            opacity: 0;
+            transform: translateY(6px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes ambientGlow {
+        0%, 100% {
+            opacity: 0.4;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.7;
+            transform: scale(1.15);
+        }
+    }
+
+    @keyframes startupTyping {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes startupTypingCursor {
+        0%, 50% {
+            opacity: 1;
+        }
+        51%, 100% {
+            opacity: 0;
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeInText 0.35s ease-out forwards;
+    }
+
+    .text-tenor-large {
+        font-size: 25px !important;
+    }
+
+    .startup-typing-wrapper {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: bottom;
+        max-width: 100%;
+    }
+
+    .startup-typing-text {
+        display: inline-block;
+        overflow: hidden;
+        width: 0;
+        white-space: nowrap;
+        animation:
+            startupTyping 4s steps(58, end) infinite;
+    }
+
+    .startup-typing-cursor {
+        display: inline-block;
+        margin-left: 2px;
+        animation: startupTypingCursor 0.8s step-end infinite;
+    }
+`}</style>
 
             <IntroContent data-aos='fade-up'
                 leftTitle={'Startup Website Design'}
@@ -726,8 +799,8 @@ function Startupwebsitedesign() {
                     </div>
                 </div>
             </div>
-            <div style={{ backgroundColor: '#053456', margin: '100px 0px  !important' }}>
-                <div className='container py-5' data-aos='fade-right' data-aos-delay={400} data-aos-once={true} >
+            <div style={{ backgroundColor: '#053456', }}>
+                <div className='container pb-100 pt-100' data-aos='fade-right' data-aos-delay={400} data-aos-once={true} >
 
 
                     <div className='row'>
@@ -780,7 +853,7 @@ function Startupwebsitedesign() {
             </div>
 
 
-            <div className='container pt-50 mb-100' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
+            <div className='container pt-100 mb-100' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
                 <div className='row align-items-center'>
 
                     <div className='col-12'>
@@ -1135,9 +1208,23 @@ function Startupwebsitedesign() {
                         <div className='py-5'>
                             <h5 className='text-tenor fw-bold' style={{ color: '#053456' }}>Looking for a Website Design Agency in Chennai?</h5>
                             <p>If you are searching for a reliable web design agency in Chennai to create your startup website, Yulanto Web Creations can help turn your business idea into a professional digital presence.
-                                From planning and UI/UX design to website development and SEO-ready implementation, our team works closely with you throughout the project. Have a startup idea?
-                                <span style={{ color: '#053456' }}> {typedConsultationText}
-                                    <span aria-hidden="true" style={{ display: 'inline-block', marginLeft: '2px', animation: 'startup-typing-cursor 0.8s step-end infinite', color: '#053456' }}>|</span></span>
+                                From planning and UI/UX design to website development and SEO-ready implementation, our team works closely with you throughout the project. Have a startup idea?{" "}
+                                <span className="startup-typing-wrapper">
+                                    <span
+                                        className="startup-typing-text"
+                                        style={{ color: '#053456' }}
+                                    >
+                                        {consultationText}
+                                    </span>
+
+                                    <span
+                                        aria-hidden="true"
+                                        className="startup-typing-cursor"
+                                        style={{ color: '#053456' }}
+                                    >
+                                        |
+                                    </span>
+                                </span>
                             </p>
 
                         </div>

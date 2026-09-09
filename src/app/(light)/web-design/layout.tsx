@@ -18,6 +18,7 @@ import 'aos/dist/aos.css';
 import AOSInit from '@/components/AOSInit/AOSInit'
 import '@/assets/css/textAnimations.css';
 import "@/assets/css/style.css";
+import { ClientProviders } from "@/providers";
 
 
 
@@ -30,29 +31,31 @@ export default function DesignStudioLayout({
         <QuoteProvider>
 
 
+            <ClientProviders>
+                <PersonalPortfolioHeader />
 
+                <div id="smooth-wrapper">
+                    <div id="smooth-content">
+                        <AOSInit />
+                        {children}
 
-            <PersonalPortfolioHeader />
+                        <MainFooter />
 
-            <div id="smooth-wrapper">
-                <div id="smooth-content">
-                    <AOSInit />
-                    {children}
-
-                    <MainFooter />
-
+                    </div>
                 </div>
-            </div>
 
-            {/* Floating actions */}
-            <FloatingActionsWrapper />
+                {/* Floating actions */}
+                <FloatingActionsWrapper />
 
-            {/* Quote modal */}
-            <QuoteModal />
+                {/* Quote modal */}
+                <QuoteModal />
 
 
-            {/* Floating quote button */}
-            <FloatingQuoteButton />
+                {/* Floating quote button */}
+                <FloatingQuoteButton />
+            </ClientProviders>
+
+
 
 
         </QuoteProvider>
