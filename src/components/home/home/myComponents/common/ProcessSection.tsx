@@ -28,7 +28,7 @@ const ProcessSection = ({
 
                 <div className="process-wrapper">
 
-                    {steps.slice(0, 6).map((step, index) => {
+                    {steps.slice(0, 7).map((step, index) => {
 
                         const isLeft = index % 2 === 0;
 

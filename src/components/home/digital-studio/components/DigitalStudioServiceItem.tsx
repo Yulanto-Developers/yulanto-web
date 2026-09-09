@@ -22,7 +22,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({
                   width={290}
                   height={202}
                   src={image}
-                  alt="service image"
+                  alt="top 10 web design company in chennai"
                 />
               </SmartLink>
             </div>

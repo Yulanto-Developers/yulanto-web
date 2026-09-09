@@ -41,7 +41,7 @@ const PortfolioCard = ({
                             height={820}
                             className="img-fluid w-100 h-100"
                             src={image}
-                            alt={title}
+                            alt="Website Designing and Development Company"
                         />
 
                         <div className="portfolio-image-description">
@@ -83,9 +83,9 @@ const PortfolioCard = ({
                                     <div>
                                         {portFolio.map((item, index) => (
                                             <div key={index} style={{ marginBottom: "15px", borderBottom: "1px solid rgba(255,255,255,.2)", paddingBottom: "10px" }}>
-                                                <div onClick={(e) => { e.preventDefault(); e.stopPropagation(); setActiveFaq(activeFaq === index ? -1 : index); }} style={{ cursor: "pointer", color: "#fff", fontWeight: 600 }} className="fs-6 text-tenor">
+                                                <h2 onClick={(e) => { e.preventDefault(); e.stopPropagation(); setActiveFaq(activeFaq === index ? -1 : index); }} style={{ cursor: "pointer", color: "#fff", fontWeight: 600 }} className="fs-6 text-tenor">
                                                     {item.ques}
-                                                </div>
+                                                </h2>
                                                 {activeFaq === index && (
                                                     <div style={{ marginTop: "10px", color: "#fff", fontSize: "18px" }}>
                                                         {Object.entries(item).filter(([key]) => key.startsWith("ans")).sort(([a], [b]) => a.localeCompare(b)).map(([key, value]) => (
@@ -141,7 +141,7 @@ const PortfolioCard = ({
                             height={820}
                             className="img-fluid w-100 d-block"
                             src={image}
-                            alt={title}
+                            alt="ecommerce website developer in chennai"
                             style={{ borderRadius: "12px 12px 0 0" }}
                         />
 
