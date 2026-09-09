@@ -167,7 +167,7 @@ export function FocusSection() {
                     <div className="row g-2 mb-3">
                       <div className="col-6">
                         <img 
-                          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80" 
+                          src="/assets/img/WordPress-Development/Professional-WordPress-1.jpg" 
                           alt="WordPress Design Media" 
                           className="img-fluid rounded border shadow-sm" 
                           style={{ height: "110px", objectFit: "cover", width: "100%" }}
@@ -175,7 +175,7 @@ export function FocusSection() {
                       </div>
                       <div className="col-6">
                         <img 
-                          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" 
+                          src="/assets/img/WordPress-Development/Professional-WordPress-2.jpg" 
                           alt="WordPress Design Team" 
                           className="img-fluid rounded border shadow-sm" 
                           style={{ height: "110px", objectFit: "cover", width: "100%" }}

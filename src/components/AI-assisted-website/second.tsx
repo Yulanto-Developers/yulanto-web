@@ -37,7 +37,7 @@ export const AIAcceleratedDesign: React.FC = () => {
               }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop"
+                src="/assets/img/AI/top-1.jpg"
                 alt="AI Doesn't Replace Great Design. It Accelerates It."
                 fill
                 priority
