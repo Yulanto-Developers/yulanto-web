@@ -6,108 +6,108 @@ import SectionTitle from "@/components/sectiontitle/SectionTitle";
 
 // Data for the cards with company values
 const cardData = [
-    {
-        badgeColor: "#F59E0B", // Amber
-        title: "Customer First",
-        description:
-            "Our customers are at the heart of everything we do. We follow a customer-first approach by understanding their goals, listening to their needs, and delivering solutions that create real business value.",
-        imageUrl:
-            "/assets/images/philosophy/Image-1.png",
-        gradient: "orange" as const,
-        aosDelay: 100,
-    },
-    {
-        badgeColor: "#4B5563", // Gray
-        title: "Humility",
-        description:
-            "We believe success should always be accompanied by humility. We remain approachable, respectful, and open to learning while maintaining positive and professional relationships with our clients and team.",
-        imageUrl:
-            "/assets/images/philosophy/Image-2.png",
-        gradient: "gray" as const,
-        aosDelay: 200,
-    },
-    {
-        badgeColor: "#EF4444", // Red
-        title: "Passion",
-        description:
-            "Our passion for design, technology, and innovation drives us to deliver high-quality work. We approach every project with dedication, creativity, and attention to detail.",
-        imageUrl:
-            "/assets/images/philosophy/Image-3.png",
-        gradient: "purple" as const,
-        aosDelay: 300,
-    },
-    {
-        badgeColor: "#10B981", // Green
-        title: "Customer Satisfaction",
-        description:
-            "Customer satisfaction is one of our highest priorities. We strive to create outstanding web and digital solutions that effectively represent our clients' brands and support their growth.",
-        imageUrl:
-            "/assets/images/philosophy/Image-4.png",
-        gradient: "green" as const,
-        aosDelay: 100,
-    },
-    {
-        badgeColor: "#8B5CF6", // Purple
-        title: "Pursuit of Excellence",
-        description:
-            "We are committed to continuous improvement and excellence in everything we do. By embracing emerging technologies, adopting innovative tools, and staying ahead of industry trends, we continuously enhance our services and deliver better results.",
-        imageUrl:
-            "/assets/images/philosophy/Image-5.png",
-        gradient: "purple" as const,
-        aosDelay: 200,
-    },
-    {
-        badgeColor: "#F59E0B", // Amber
-        title: "Honest Relationships",
-        description:
-            "We believe strong businesses are built on trust, transparency, and genuine communication. Since our inception, we have maintained an honest and open approach with our clients, building long-term relationships based on reliability, integrity, and mutual respect.",
-        imageUrl:
-            "/assets/images/philosophy/Image-6.png",
-        gradient: "orange" as const,
-        aosDelay: 300,
-    },
+  {
+    badgeColor: "#F59E0B", // Amber
+    title: "Customer First",
+    description:
+      "Our customers are at the heart of everything we do. We follow a customer-first approach by understanding their goals, listening to their needs, and delivering solutions that create real business value.",
+    imageUrl: "/assets/images/philosophy/Image-1.png",
+    gradient: "orange" as const,
+    aosDelay: 100,
+  },
+  {
+    badgeColor: "#4B5563", // Gray
+    title: "Humility",
+    description:
+      "We believe success should always be accompanied by humility. We remain approachable, respectful, and open to learning while maintaining positive and professional relationships with our clients and team.",
+    imageUrl: "/assets/images/philosophy/Image-2.png",
+    gradient: "gray" as const,
+    aosDelay: 200,
+  },
+  {
+    badgeColor: "#EF4444", // Red
+    title: "Passion",
+    description:
+      "Our passion for design, technology, and innovation drives us to deliver high-quality work. We approach every project with dedication, creativity, and attention to detail.",
+    imageUrl: "/assets/images/philosophy/Image-3.png",
+    gradient: "purple" as const,
+    aosDelay: 300,
+  },
+  {
+    badgeColor: "#10B981", // Green
+    title: "Customer Satisfaction",
+    description:
+      "Customer satisfaction is one of our highest priorities. We strive to create outstanding web and digital solutions that effectively represent our clients' brands and support their growth.",
+    imageUrl: "/assets/images/philosophy/Image-4.png",
+    gradient: "green" as const,
+    aosDelay: 100,
+  },
+  {
+    badgeColor: "#8B5CF6", // Purple
+    title: "Pursuit of Excellence",
+    description:
+      "We are committed to continuous improvement and excellence in everything we do. By embracing emerging technologies, adopting innovative tools, and staying ahead of industry trends, we continuously enhance our services and deliver better results.",
+    imageUrl: "/assets/images/philosophy/Image-5.png",
+    gradient: "purple" as const,
+    aosDelay: 200,
+  },
+  {
+    badgeColor: "#F59E0B", // Amber
+    title: "Honest Relationships",
+    description:
+      "We believe strong businesses are built on trust, transparency, and genuine communication. Since our inception, we have maintained an honest and open approach with our clients, building long-term relationships based on reliability, integrity, and mutual respect.",
+    imageUrl: "/assets/images/philosophy/Image-6.png",
+    gradient: "orange" as const,
+    aosDelay: 300,
+  },
 ];
 
 const GradientCardDemo = () => {
-    useAOS();
+  useAOS();
 
-    return (
-        <section className="philosophy-section pt-30 pb-50">
-            <div className="container">
-                {/* Section Header */}
-                <SectionTitle
-                    subtitle="Our Philosophy"
-                    titleFirst="Honesty & "
-                    titleSecond="Transparency"
-                    description="At Yulanto, honesty and transparency are at the heart of everything we do.
+  return (
+    <section className="philosophy-section pt-30 pb-50">
+      <div className="container">
+        {/* Section Header */}
+        <SectionTitle
+          subtitle="Our Philosophy"
+          titleFirst="Honesty & "
+          titleSecond="Transparency"
+          description="At Yulanto, honesty and transparency are at the heart of everything we do.
                             We believe in building strong, long-term relationships through open communication,
                             ethical practices, and complete accountability. Our commitment to integrity has
                             earned the trust and confidence of our clients, enabling us to grow together and
-                            deliver lasting value with reliability and professionalism."/>
+                            deliver lasting value with reliability and professionalism."
+        />
 
-                {/* Cards Grid */}
-                <div className="row g-4 py-3">
-                    {cardData.map((card, index) => (
-                        <div
-                            key={index}
-                            className="col-12 col-md-6 col-lg-4"
-                            data-aos="fade-up"
-                            data-aos-delay={card.aosDelay}
-                            data-aos-duration="600"
-                        >
-                            <GradientCard
-                                badgeColor={card.badgeColor}
-                                title={card.title}
-                                description={card.description}
-                                imageUrl={card.imageUrl}
-                                gradient={card.gradient}
-                            />
-                        </div>
-                    ))}
-                </div>
+
+        <h1 className="ft-23 mt-0 mb-2 text-center text-tenor" data-aos="text-reveal" data-aos-delay="100">
+          Web Designing in Chennai
+        </h1>
+
+        {/* Cards Grid */}
+        <div className="row g-4 py-3">
+          {cardData.map((card, index) => (
+            <div
+              key={index}
+              className="col-12 col-md-6 col-lg-4"
+              data-aos="fade-up"
+              data-aos-delay={card.aosDelay}
+              data-aos-duration="600"
+            >
+              <GradientCard
+                badgeColor={card.badgeColor}
+                title={card.title}
+                description={card.description}
+                imageUrl={card.imageUrl}
+                gradient={card.gradient}
+              />
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default GradientCardDemo;

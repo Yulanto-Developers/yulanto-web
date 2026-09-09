@@ -45,6 +45,11 @@ export default function TeamSlider() {
         titleFirst="Meet Our Team"
         titleSecond=""
         description="Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions. With expertise, creativity, and a commitment to excellence, we transform ideas into impactful results."/>
+
+         <h1 className="ft-23 mt-0 mb-2 text-center text-tenor" data-aos="text-reveal"
+                data-aos-delay="100">
+          Website Designers & Developers in Chennai
+        </h1>
       <div className="container pt-3">
         <Swiper
           modules={[Autoplay]}
@@ -117,7 +122,7 @@ export default function TeamSlider() {
                                     }}
                                   >
                                     {isImageUrl(skill) ? (
-                                      <img src={skill} alt="skill" />
+                                      <img src={skill} alt="skills" />
                                     ) : (
                                       <span className="skill-text">{getSkillDisplay(skill)}</span>
                                     )}
