@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-
+import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 export interface OffPageFeatureProps {
   heading?: string;
   subHeading?: string;
@@ -12,8 +12,10 @@ export interface OffPageFeatureProps {
 }
 
 export default function OffPageSeoBanner() {
+    const { openModal } = useQuoteModal();
+
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110"  style={{
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110"  style={{
         backgroundColor: "#ffffff",
       
       }}
@@ -51,6 +53,29 @@ export default function OffPageSeoBanner() {
               step toward improving your organic visibility, attracting qualified
               visitors, and building sustainable online growth.
             </p>
+                {/* Left Aligned CTA Button */}
+            <button
+             onClick={openModal}
+              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+              style={{
+                backgroundColor: '#053456',
+                color: '#ffffff',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                border: '1px solid #053456',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Boost Your Online Visibility</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+            </button>
           </motion.div>
 
           {/* Right Image Container */}

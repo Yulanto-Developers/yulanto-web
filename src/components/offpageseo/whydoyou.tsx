@@ -3,14 +3,17 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "../seo/bento-grid.css";
 
 interface BentoCardProps {
   name: string;
   description: string;
   imageUrl: string;
   colClass: string;
-  minHeight?: string;
+  cardHeightClass?: string;
   animationDelay?: number;
+  isCenterCard?: boolean; // Added optional prop for center card layout tweaks
+  customHeight?: string; // Added optional prop for custom inline height
 }
 
 const BentoCard: React.FC<BentoCardProps> = ({
@@ -18,8 +21,10 @@ const BentoCard: React.FC<BentoCardProps> = ({
   description,
   imageUrl,
   colClass,
-  minHeight = "auto",
+  cardHeightClass = "",
   animationDelay = 0,
+  isCenterCard = false,
+  customHeight,
 }) => {
   return (
     <div
@@ -29,69 +34,29 @@ const BentoCard: React.FC<BentoCardProps> = ({
       data-aos-duration="800"
     >
       <div
-        style={{
-          width: "100%",
-          position: "relative",
-          overflow: "hidden",
-          borderRadius: "1rem",
-          padding: "1.5rem",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          backgroundColor: "#fff",
-          border: "1px solid #e9ecef",
-          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.05)",
-          minHeight: minHeight,
-        }}
+        className={`bento-card-custom w-100 position-relative overflow-hidden rounded-4 p-4 d-flex flex-column justify-content-between ${cardHeightClass}`}
+        style={customHeight ? { height: customHeight } : undefined}
       >
-        {/* Centered Image Area with Fixed Inline Styles */}
+        {/* Expanded Image Area for Center Card */}
         <div
-          style={{
-            flexGrow: 1,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            margin: "1rem 0",
-         
-            overflow: "hidden",
-          }}
+          className={`bento-image-container flex-grow-1 d-flex align-items-center justify-content-center my-3 ${
+            isCenterCard ? "bento-center-card-img-wrapper" : ""
+          }`}
         >
           <img
             src={imageUrl}
             alt={name}
-            style={{
-              maxHeight: "100%",
-              maxWidth: "100%",
-              objectFit: "contain",
-              borderRadius: "0.5rem",
-              display: "block",
-              margin: "0 auto",
-            }}
+            className={`bento-center-img img-fluid rounded-3 ${
+              isCenterCard ? "bento-tall-img" : ""
+            }`}
           />
         </div>
 
         {/* Text Area */}
-        <div style={{ textAlign: "left", marginTop: "auto" }}>
-          <h3
-            style={{
-              fontSize: "1.25rem",
-              fontWeight: 600,
-              marginBottom: "0.5rem",
-              color: "#053456",
-            }}
-          >
-            {name}
-          </h3>
-          <p
-            style={{
-              fontSize: "0.925rem !important",
-              color: "#6c757d",
-              margin: 0,
-              lineHeight: 1.5,
-            }}
-          >
-            {description}
-          </p>
+        <div className="bento-card-text text-start mt-auto">
+         <h5 className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"20px" }}>
+{name}</h5>
+          <p className="bento-desc text-muted m-0">{description}</p>
         </div>
       </div>
     </div>
@@ -106,7 +71,7 @@ export const BentoGrid: React.FC = () => {
     });
   }, []);
 
-  const bentoItems = [
+   const bentoItems = [
     {
       name: "Build Website Authority",
       description:
@@ -122,7 +87,8 @@ export const BentoGrid: React.FC = () => {
         "Off-page optimization works alongside on-page and technical SEO to improve your website's overall ranking potential. Strategic link building and online brand promotion can help your important pages gain greater visibility in search results.",
       imageUrl: "assets/img/offpage/Off-Page-3.jpg",
       colClass: "col-12",
-      minHeight: "700px",
+      minHeight: "750px",
+
       delay: 200,
     },
     {
@@ -155,13 +121,12 @@ export const BentoGrid: React.FC = () => {
   ];
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110 bento-grid-section" style={{
         backgroundColor: "#ffffff",
       
       }}>
       <div className="container container-1550">
-        {/* Title Block */}
-        <div className="row align-items-center mb-5" data-aos="fade-up">
+        <div className="row align-items-center mb-20">
           <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">
               Yulanto SEO
@@ -170,33 +135,35 @@ export const BentoGrid: React.FC = () => {
 
           <div className="col-xl-9">
             <div className="px-project-title-box">
-              <h4 className="px-about-title mb-3">
-                <span className="text-blue-about">Why Do You Need </span> Off-Page SEO?
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about"> How Do We Achieve </span>{" "}
+                Maximum SEO Results?
               </h4>
-              <p className="text-figtree text-black mt-2">
-                Having a well-designed website with quality content is only the beginning. To compete effectively in search engine results, your website needs authority and recognition from other relevant and trustworthy online sources. Our SEO experts in Chennai use carefully planned off-page SEO strategies to build your website's credibility and improve its overall search engine performance.
-              </p>
             </div>
           </div>
         </div>
-
-        {/* Bento Grid layout */}
         <div className="row g-4 justify-content-center">
           {/* Column 1 */}
           <div className="col-12 col-lg-4 d-flex flex-column">
-            <BentoCard {...bentoItems[0]} />
-            <BentoCard {...bentoItems[3]} />
+            <BentoCard {...bentoItems[0]} colClass="col-12" />
+            <BentoCard {...bentoItems[3]} colClass="col-12" />
           </div>
 
-          {/* Column 2 (Center Full Height Card) */}
+          {/* Column 2 (Full Center Height with larger image) */}
           <div className="col-12 col-lg-4 d-flex flex-column">
-            <BentoCard {...bentoItems[1]} />
+            <BentoCard  
+              {...bentoItems[1]} 
+              colClass="col-12" 
+              isCenterCard={true} 
+              customHeight="780px" 
+             
+            />
           </div>
 
           {/* Column 3 */}
           <div className="col-12 col-lg-4 d-flex flex-column">
-            <BentoCard {...bentoItems[2]} />
-            <BentoCard {...bentoItems[4]} />
+            <BentoCard {...bentoItems[2]} colClass="col-12" />
+            <BentoCard {...bentoItems[4]} colClass="col-12" />
           </div>
         </div>
       </div>

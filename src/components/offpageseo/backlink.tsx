@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import {
   motion,
   useScroll,
@@ -94,7 +94,17 @@ const SERVICES_DATA: OffPageServiceItem[] = [
 ];
 
 export default function OffPageSeoParallax() {
-  // Split 8 items into exactly 2 equal rows of 4
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const firstRow = SERVICES_DATA.slice(0, 4);
   const secondRow = SERVICES_DATA.slice(4, 8);
 
@@ -131,6 +141,42 @@ export default function OffPageSeoParallax() {
     springConfig
   );
 
+  // MOBILE VIEW: Stack cards vertically one after another cleanly
+  if (isMobile) {
+    return (
+      <div
+        style={{
+          paddingTop: "2rem",
+          paddingBottom: "4rem",
+          width: "100%",
+          position: "relative",
+          backgroundColor: "#fff",
+        }}
+      >
+        <Header />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "1.5rem",
+            padding: "0 1.5rem",
+            width: "100%",
+          }}
+        >
+          {SERVICES_DATA.map((product, idx) => (
+            <ProductCard
+              key={`mobile-${idx}`}
+              product={product}
+              isMobile={true}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // DESKTOP VIEW: Parallax effect layout
   return (
     <div
       ref={ref}
@@ -215,7 +261,7 @@ export function Header() {
   return (
     <div
       style={{
-        maxWidth: "1400px",
+        maxWidth: "1230px",
         width: "100%",
         margin: "0 auto",
         padding: "0 1.5rem 3rem 1.5rem",
@@ -240,17 +286,18 @@ export function Header() {
 export function ProductCard({
   product,
   translate,
+  isMobile = false,
 }: {
   product: OffPageServiceItem;
-  translate: MotionValue<number>;
+  translate?: MotionValue<number>;
+  isMobile?: boolean;
 }) {
   return (
     <motion.div
       style={{
-        x: translate,
+        ...(isMobile ? {} : { x: translate }),
         height: "440px",
-        width: "320px",
-        minWidth: "320px",
+        width: "100%",
         maxWidth: "320px",
         flexShrink: 0,
         position: "relative",
@@ -352,6 +399,7 @@ export function ProductCard({
           <h3
             style={{
               fontSize: "1.25rem",
+              fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
               fontWeight: 700,
               lineHeight: 1.3,
               marginBottom: "0.6rem",
@@ -362,7 +410,7 @@ export function ProductCard({
           </h3>
           <p
             style={{
-              fontSize: "0.85rem !important",
+              fontSize: "15px !important",
               lineHeight: 1.6,
               color: "rgba(255, 255, 255, 0.9)",
               margin: 0,

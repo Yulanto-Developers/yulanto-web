@@ -138,6 +138,7 @@ export default function FAQSection({
                 alignItems: "center",
                 padding: "1rem 1.25rem",
                 fontSize: "1rem",
+                fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
                 fontWeight: 600,
                 color: "#053456",
                 backgroundColor: "#fff",
@@ -183,40 +184,31 @@ export default function FAQSection({
   );
 
   return (
-    <section
-      style={{
-        width: "100%",
-        maxWidth: "1230px",
-        margin: "0 auto",
-        paddingTop: "4rem",
-        paddingBottom: "4rem",
-        paddingLeft: "1rem",
-        paddingRight: "1rem",
-        overflow: "hidden",
-      }}
-    >
-      {/* Header with Fade-Down Animation */}
-      <h4 
-        className="px-about-title mb-20 text-center"
-        data-aos="fade-down"
-        data-aos-duration="900"
-        data-aos-once="true"
-      >
-        <span className="text-blue-about">Frequently Asked Questions </span> Off Page SEO
-      </h4>
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110">
+      <div className="container container-1550">
+        {/* Header with Fade-Down Animation */}
+        <h4 
+          className="px-about-title mb-20 text-center"
+          data-aos="fade-down"
+          data-aos-duration="900"
+          data-aos-once="true"
+        >
+          <span className="text-blue-about">Frequently Asked Questions </span> Off Page SEO
+        </h4>
 
-      {/* FAQs Columns with Side-by-Side Animations */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "2rem",
-          textAlign: "left",
-          marginTop: "2.5rem",
-        }}
-      >
-        {renderColumn(faqsLeft, "left", "fade-right", 200)}
-        {renderColumn(faqsRight, "right", "fade-left", 300)}
+        {/* FAQs Columns with Side-by-Side Animations */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "2rem",
+            textAlign: "left",
+            marginTop: "2.5rem",
+          }}
+        >
+          {renderColumn(faqsLeft, "left", "fade-right", 200)}
+          {renderColumn(faqsRight, "right", "fade-left", 300)}
+        </div>
       </div>
     </section>
   );
