@@ -1,6 +1,11 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, {
+    useEffect,
+    useRef,
+    useState,
+} from "react";
+
 import {
     motion,
     useMotionValueEvent,
@@ -9,56 +14,99 @@ import {
 
 import "./sticky-scroll-reveal.css";
 
+
+/* =========================================
+   TYPES
+========================================= */
+
 export interface StickyScrollItem {
     title: string;
     description: React.ReactNode;
     image: string;
 }
 
+
 interface StickyScrollRevealProps {
     content: StickyScrollItem[];
     className?: string;
 }
+
+
+/* =========================================
+   COMPONENT
+========================================= */
 
 const StickyScrollReveal = ({
     content,
     className = "",
 }: StickyScrollRevealProps) => {
 
+    /* =====================================
+       ACTIVE CARD
+    ===================================== */
+
     const [activeCard, setActiveCard] = useState(0);
 
-    /*
-     * IMPORTANT:
-     * This is the target section.
-     *
-     * We are NOT using:
-     * container: ref
-     *
-     * because we want the normal PAGE scroll.
-     */
+
+    /* =====================================
+       SECTION REF
+    ===================================== */
+
     const ref = useRef<HTMLDivElement | null>(null);
 
-    const { scrollYProgress } = useScroll({
+
+    /* =====================================
+       PRELOAD ALL IMAGES
+       
+       This prevents the image area from
+       becoming blank when changing cards.
+    ===================================== */
+
+    useEffect(() => {
+
+        if (!content.length) {
+            return;
+        }
+
+        content.forEach((item) => {
+
+            if (!item.image) {
+                return;
+            }
+
+            const image = new Image();
+
+            image.src = item.image;
+
+        });
+
+    }, [content]);
+
+
+    /* =====================================
+       SCROLL PROGRESS
+       
+       Uses normal PAGE scrolling.
+    ===================================== */
+
+    const {
+        scrollYProgress,
+    } = useScroll({
+
         target: ref,
 
-        /*
-         * Start animation when this section
-         * enters the viewport.
-         *
-         * Finish when the section reaches
-         * the top of the viewport.
-         */
         offset: [
-            "start 80%",
-            "end 20%",
+            "start start",
+            "end end",
         ],
+
     });
 
 
-    /*
-     * Change active image based on
-     * the page scroll position.
-     */
+    /* =====================================
+       UPDATE ACTIVE CARD
+    ===================================== */
+
     useMotionValueEvent(
         scrollYProgress,
         "change",
@@ -68,151 +116,202 @@ const StickyScrollReveal = ({
                 return;
             }
 
+
             const cardLength = content.length;
 
-            /*
-             * Divide the section into equal
-             * scroll areas.
-             */
+
+            /* ---------------------------------
+               Single item
+            --------------------------------- */
+
+            if (cardLength === 1) {
+
+                if (activeCard !== 0) {
+                    setActiveCard(0);
+                }
+
+                return;
+            }
+
+
+            /* ---------------------------------
+               Calculate breakpoints
+            --------------------------------- */
+
             const breakpoints = content.map(
                 (_, index) => {
-                    if (cardLength === 1) {
-                        return 0;
-                    }
 
                     return index / (cardLength - 1);
+
                 }
             );
 
 
-            /*
-             * Find the closest item.
-             */
-            const closestBreakpointIndex =
-                breakpoints.reduce(
-                    (closestIndex, breakpoint, index) => {
+            /* ---------------------------------
+               Find closest breakpoint
+            --------------------------------- */
 
-                        const currentDistance =
-                            Math.abs(
-                                latest - breakpoint
-                            );
+            let closestIndex = 0;
 
-                        const closestDistance =
-                            Math.abs(
-                                latest -
-                                breakpoints[closestIndex]
-                            );
-
-                        if (
-                            currentDistance <
-                            closestDistance
-                        ) {
-                            return index;
-                        }
-
-                        return closestIndex;
-                    },
-                    0
+            let closestDistance =
+                Math.abs(
+                    latest - breakpoints[0]
                 );
 
 
-            setActiveCard(
-                closestBreakpointIndex
-            );
+            for (
+                let index = 1;
+                index < breakpoints.length;
+                index++
+            ) {
+
+                const distance =
+                    Math.abs(
+                        latest -
+                        breakpoints[index]
+                    );
+
+
+                if (
+                    distance <
+                    closestDistance
+                ) {
+
+                    closestDistance =
+                        distance;
+
+                    closestIndex =
+                        index;
+
+                }
+
+            }
+
+
+            /* ---------------------------------
+               Only update state when required
+            --------------------------------- */
+
+            if (
+                closestIndex !== activeCard
+            ) {
+
+                setActiveCard(
+                    closestIndex
+                );
+
+            }
+
         }
     );
 
+
+    /* =====================================
+       EMPTY CONTENT
+    ===================================== */
 
     if (!content.length) {
         return null;
     }
 
 
-    const activeItem =
-        content[activeCard] || content[0];
+    /* =====================================
+       ACTIVE ITEM
+    ===================================== */
 
+    const activeItem =
+        content[activeCard] ||
+        content[0];
+
+
+    /* =====================================
+       RENDER
+    ===================================== */
 
     return (
+
         <div
             ref={ref}
             className={`startup-sticky-scroll ${className}`}
         >
 
-            {/* =====================================
+
+            {/* =================================
                 LEFT CONTENT
-            ====================================== */}
+            ================================= */}
 
             <div className="startup-sticky-scroll-content">
 
                 {content.map(
                     (item, index) => {
 
-                        const isActive =
-                            activeCard === index;
-
                         return (
+
                             <div
                                 key={`${item.title}-${index}`}
                                 className="startup-sticky-scroll-item"
                             >
 
-                                <motion.div
-                                    // animate={{
-                                    //     opacity:
-                                    //         isActive
-                                    //             ? 1
-                                    //             : 1,
-                                    // }}
+                                <div>
 
-                                    transition={{
-                                        duration: 0.3,
-                                    }}
-                                >
-
-                                    {/* Number */}
+                                    {/* =========================
+                                        NUMBER
+                                    ========================== */}
 
                                     <div className="startup-process-number">
+
                                         {String(
                                             index + 1
                                         ).padStart(2, "0")}
+
                                     </div>
 
 
-                                    {/* Title */}
+                                    {/* =========================
+                                        TITLE
+                                    ========================== */}
 
                                     <h3 className="startup-process-title text-tenor">
+
                                         {item.title}
+
                                     </h3>
 
 
-                                    {/* Description */}
+                                    {/* =========================
+                                        DESCRIPTION
+                                    ========================== */}
 
                                     <p className="startup-process-description">
+
                                         {item.description}
+
                                     </p>
 
-                                </motion.div>
+                                </div>
 
                             </div>
-                        )
+
+                        );
+
                     }
                 )}
 
             </div>
 
 
-            {/* =====================================
+            {/* =================================
                 RIGHT STICKY IMAGE
-            ====================================== */}
+            ================================= */}
 
             <div className="startup-sticky-scroll-image-wrapper">
 
                 <motion.div
-                    key={activeItem.image}
+                    className="startup-sticky-scroll-image"
 
                     initial={{
-                        opacity: 0,
-                        scale: 0.97,
+                        opacity: 1,
+                        scale: 1,
                     }}
 
                     animate={{
@@ -221,27 +320,34 @@ const StickyScrollReveal = ({
                     }}
 
                     transition={{
-                        duration: 0.35,
+                        duration: 0.3,
                         ease: "easeOut",
                     }}
-
-                    className="startup-sticky-scroll-image"
                 >
+
+                    {/* =========================
+                        IMAGE
+                    ========================== */}
 
                     <img
                         src={activeItem.image}
                         alt={activeItem.title}
+                        draggable={false}
                     />
 
 
-                    {/* Image number */}
+                    {/* =========================
+                        IMAGE NUMBER
+                    ========================== */}
 
                     <div className="startup-sticky-image-overlay">
 
                         <span>
+
                             {String(
                                 activeCard + 1
                             ).padStart(2, "0")}
+
                         </span>
 
                     </div>
@@ -251,7 +357,9 @@ const StickyScrollReveal = ({
             </div>
 
         </div>
+
     );
 };
+
 
 export default StickyScrollReveal;

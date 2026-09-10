@@ -31,31 +31,31 @@ export default function DesignStudioLayout({
         <QuoteProvider>
 
 
-            <ClientProviders>
+            {/* <ClientProviders> */}
+
                 <PersonalPortfolioHeader />
+            {/* </ClientProviders> */}
 
-                <div id="smooth-wrapper">
-                    <div id="smooth-content">
-                        <AOSInit />
-                        {children}
 
-                        <MainFooter />
+            <div id="smooth-wrapper">
+                <div id="smooth-content">
+                    <AOSInit />
+                    {children}
 
-                    </div>
+                    <MainFooter />
+
                 </div>
+            </div>
 
-                {/* Floating actions */}
-                <FloatingActionsWrapper />
+            {/* Floating actions */}
+            <FloatingActionsWrapper />
 
-                {/* Quote modal */}
-                <QuoteModal />
-
-
-                {/* Floating quote button */}
-                <FloatingQuoteButton />
-            </ClientProviders>
+            {/* Quote modal */}
+            <QuoteModal />
 
 
+            {/* Floating quote button */}
+            <FloatingQuoteButton />
 
 
         </QuoteProvider>

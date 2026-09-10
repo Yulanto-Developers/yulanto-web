@@ -22,145 +22,215 @@ export default function IndustryGallery({
     description,
     industries,
 }: IndustryGalleryProps) {
+
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const activeIndustry = industries[activeIndex];
-
-    // First 6 → left
-    const leftIndustries = industries.slice(0, 6);
-
-    // Remaining 7 → right
-    const rightIndustries = industries.slice(6, 13);
+    const activeIndustry =
+        industries[activeIndex] || industries[0];
 
 
-    /*
-    |--------------------------------------------------------------------------
-    | AUTO SWIPER
-    |--------------------------------------------------------------------------
-    | Changes the active industry every 6 seconds.
-    |
-    | If user clicks an item, this effect runs again because activeIndex
-    | changes, so the 6-second timer starts again from zero.
-    |--------------------------------------------------------------------------
-    */
+    /* =========================================
+       FIRST 7 ITEMS
+    ========================================= */
+
+    const leftIndustries =
+        industries.slice(0, 7);
+
+
+    /* =========================================
+       LAST 6 ITEMS
+    ========================================= */
+
+    const rightIndustries =
+        industries.slice(7, 13);
+
+
+    /* =========================================
+       AUTO CHANGE
+    ========================================= */
 
     useEffect(() => {
-        if (!industries.length) return;
+
+        if (!industries.length) {
+            return;
+        }
 
         const timer = setTimeout(() => {
+
             setActiveIndex((currentIndex) => {
-                return (currentIndex + 1) % industries.length;
+
+                return (
+                    (currentIndex + 1) %
+                    industries.length
+                );
+
             });
+
         }, 3000);
 
         return () => {
             clearTimeout(timer);
         };
-    }, [activeIndex, industries.length]);
+
+    }, [
+        activeIndex,
+        industries.length,
+    ]);
 
 
-    /*
-    |--------------------------------------------------------------------------
-    | CLICK HANDLER
-    |--------------------------------------------------------------------------
-    */
+    /* =========================================
+       CLICK HANDLER
+    ========================================= */
 
-    const handleIndustryClick = (index: number) => {
+    const handleIndustryClick = (
+        index: number
+    ) => {
+
         setActiveIndex(index);
+
     };
 
 
+    /* =========================================
+       RETURN
+    ========================================= */
+
     return (
+
         <section className="industry-gallery-section">
 
             <div className="container">
 
-                {/* Heading */}
+                {/* =================================
+                    TITLE
+                ================================= */}
+
                 {title && (
+
                     <div className="row mb-50">
 
                         <div className="col-12">
+
                             <h4 className="px-about-title mb-20">
                                 {title}
                             </h4>
+
                         </div>
 
                     </div>
+
                 )}
 
 
-                {/* Main Gallery */}
+                {/* =================================
+                    GALLERY
+                ================================= */}
+
                 <div className="industry-gallery">
 
-                    {/* =====================================================
-                        LEFT 6
-                    ===================================================== */}
+
+                    {/* =================================
+                        FIRST 7 BUTTONS
+                        
+                        DESKTOP = LEFT
+                        MOBILE = FIRST
+                    ================================= */}
 
                     <div className="industry-list industry-list-left">
 
-                        {leftIndustries.map((item, index) => (
+                        {leftIndustries.map(
+                            (item, index) => (
 
-                            <button
-                                key={item.id}
-                                type="button"
-                                className={`industry-item ${
-                                    activeIndex === index
-                                        ? "active"
-                                        : ""
-                                }`}
-                                onClick={() =>
-                                    handleIndustryClick(index)
-                                }
-                            >
+                                <button
+                                    key={item.id}
+                                    type="button"
+                                    className={`industry-item ${
+                                        activeIndex === index
+                                            ? "active"
+                                            : ""
+                                    }`}
+                                    onClick={() =>
+                                        handleIndustryClick(
+                                            index
+                                        )
+                                    }
+                                >
 
-                                <span className="industry-item-icon">
-                                    {item.icon}
-                                </span>
+                                    {/* ICON */}
 
-                                <span className="industry-item-name text-tenor">
-                                    {item.name}
-                                </span>
+                                    <span className="industry-item-icon">
 
-                                <span className="industry-item-arrow">
-                                    →
-                                </span>
+                                        {item.icon}
 
-                            </button>
+                                    </span>
 
-                        ))}
+
+                                    {/* NAME */}
+
+                                    <span className="industry-item-name text-tenor">
+
+                                        {item.name}
+
+                                    </span>
+
+
+                                    {/* ARROW */}
+
+                                    <span className="industry-item-arrow">
+
+                                        →
+
+                                    </span>
+
+                                </button>
+
+                            )
+                        )}
 
                     </div>
 
 
-                    {/* =====================================================
-                        CENTER
-                    ===================================================== */}
+                    {/* =================================
+                        CENTER IMAGE
+                        
+                        DESKTOP = CENTER
+                        MOBILE = BETWEEN 7 AND 6
+                    ================================= */}
 
                     <div className="industry-center">
 
                         <div className="industry-center-glow" />
 
+
                         <div className="industry-center-content">
 
-                            <div
-                                className="industry-center-image"
-                                key={activeIndustry?.id}
-                            >
+                            {/* ROUND IMAGE */}
+
+                            <div className="industry-center-image">
 
                                 {activeIndustry?.image ? (
 
                                     <Image
-                                        src={activeIndustry.image}
-                                        alt={activeIndustry.name}
+                                        src={
+                                            activeIndustry.image
+                                        }
+                                        alt={
+                                            activeIndustry.name
+                                        }
                                         fill
-                                        sizes="400px"
+                                        sizes="(max-width: 767px) 200px, 320px"
                                         className="industry-vector-image"
+                                        priority
                                     />
 
                                 ) : (
 
                                     <div className="industry-center-icon">
-                                        {activeIndustry?.icon}
+
+                                        {
+                                            activeIndustry?.icon
+                                        }
+
                                     </div>
 
                                 )}
@@ -168,10 +238,16 @@ export default function IndustryGallery({
                             </div>
 
 
+                            {/* ACTIVE NAME */}
+
                             <div className="industry-center-info">
 
                                 <h5 className="text-tenor">
-                                    {activeIndustry?.name}
+
+                                    {
+                                        activeIndustry?.name
+                                    }
+
                                 </h5>
 
                             </div>
@@ -181,49 +257,84 @@ export default function IndustryGallery({
                     </div>
 
 
-                    {/* =====================================================
-                        RIGHT 7
-                    ===================================================== */}
+                    {/* =================================
+                        LAST 6 BUTTONS
+                        
+                        DESKTOP = RIGHT
+                        MOBILE = LAST
+                    ================================= */}
 
                     <div className="industry-list industry-list-right">
 
-                        {rightIndustries.map((item, index) => {
+                        {rightIndustries.map(
+                            (item, index) => {
 
-                            const actualIndex = index + 6;
+                                /*
+                                 * IMPORTANT
+                                 *
+                                 * First 7 items:
+                                 * 0 - 6
+                                 *
+                                 * Last 6:
+                                 * 7 - 12
+                                 *
+                                 * Therefore +7.
+                                 */
 
-                            return (
+                                const actualIndex =
+                                    index + 7;
 
-                                <button
-                                    key={item.id}
-                                    type="button"
-                                    className={`industry-item ${
-                                        activeIndex === actualIndex
-                                            ? "active"
-                                            : ""
-                                    }`}
-                                    onClick={() =>
-                                        handleIndustryClick(
+
+                                return (
+
+                                    <button
+                                        key={item.id}
+                                        type="button"
+                                        className={`industry-item ${
+                                            activeIndex ===
                                             actualIndex
-                                        )
-                                    }
-                                >
+                                                ? "active"
+                                                : ""
+                                        }`}
+                                        onClick={() =>
+                                            handleIndustryClick(
+                                                actualIndex
+                                            )
+                                        }
+                                    >
 
-                                    <span className="industry-item-icon">
-                                        {item.icon}
-                                    </span>
+                                        {/* ICON */}
 
-                                    <span className="industry-item-name text-tenor">
-                                        {item.name}
-                                    </span>
+                                        <span className="industry-item-icon">
 
-                                    <span className="industry-item-arrow">
-                                        →
-                                    </span>
+                                            {item.icon}
 
-                                </button>
+                                        </span>
 
-                            );
-                        })}
+
+                                        {/* NAME */}
+
+                                        <span className="industry-item-name text-tenor">
+
+                                            {item.name}
+
+                                        </span>
+
+
+                                        {/* ARROW */}
+
+                                        <span className="industry-item-arrow">
+
+                                            →
+
+                                        </span>
+
+                                    </button>
+
+                                );
+
+                            }
+                        )}
 
                     </div>
 
@@ -232,5 +343,6 @@ export default function IndustryGallery({
             </div>
 
         </section>
+
     );
 }

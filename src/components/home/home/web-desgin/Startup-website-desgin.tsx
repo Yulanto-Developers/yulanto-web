@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react'
 import BreadcurmbData from '@/components/breadcrum/sections/breadcrumbdata'
 import IntroContent from '../myComponents/common/IntroContent'
 import StickyScrollReveal from './StickyScrollReveal'
-import img from '@/assets/img/sample/Harithams.jpg'
-import img2 from '@/assets/img/sample/Naturographers.jpg';
 import { PhotoGallery } from './gallery';
 import IndustryGallery from './IndustryGallery';
 import './industry-gallery.css';
@@ -87,10 +85,11 @@ import t4 from '@/assets/img/website/startup/top-4.jpg'
 import t5 from '@/assets/img/website/startup/top-5.jpg'
 import b2 from '@/assets/img/website/startup/bottom-2.jpg';
 import b1 from '@/assets/img/website/startup/bottom-1.jpg';
+import { useQuoteModal } from '../myComponents/Content/QuoteContext'
 
 function Startupwebsitedesign() {
-    const consultationText =
-        "Let's build your website and create your online success story.";
+    const { openModal } = useQuoteModal();
+    const consultationText = "Let's build your website and create your online success story."
     // const [typedConsultationText, setTypedConsultationText] = useState('')
 
     // useEffect(() => {
@@ -728,7 +727,7 @@ function Startupwebsitedesign() {
             /> */}
             <PhotoGallery images={startupGalleryImages} />
 
-            <div className='container mt-5' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
+            <div className='container mt-5 mb-50' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
                 <div className='row align-items-center'>
                     <div className="col-xl-12">
                         <div className="px-project-title-box">
@@ -770,7 +769,7 @@ function Startupwebsitedesign() {
             </div>
             <div data-aos-delay={400} data-aos-once={true} style={{ backgroundColor: 'rgb(245 245 245)', }}>
                 <div className='container' >
-                    <div className='row align-items-center pt-100 pb-100'>
+                    <div className='row align-items-center pt-50 pb-50'>
 
 
                         <div className='col-12'>
@@ -786,7 +785,7 @@ function Startupwebsitedesign() {
                             <img src={img1.src} alt='img' className='img-border-cls' />
                         </div>
                         <div className='col-md-8'>
-                            <p className='text-figtree  '>
+                            <p className='text-figtree pt-md-0 pt-2 '>
                                 Our experienced web designers in Chennai specialize in creating innovative, attractive, responsive, and user-friendly websites for startups. We combine creative design, intuitive navigation, mobile responsiveness, SEO-friendly development, and conversion-focused layouts to help new businesses establish a strong digital presence.
 
                                 Whether you are launching a new product, introducing a service, or building a completely new brand, our team develops website solutions aligned with your business objectives and target audience. From a startup idea to a professional online presence, we design websites that help your business move forward.
@@ -800,7 +799,7 @@ function Startupwebsitedesign() {
                 </div>
             </div>
             <div style={{ backgroundColor: '#053456', }}>
-                <div className='container pb-100 pt-100' data-aos='fade-right' data-aos-delay={400} data-aos-once={true} >
+                <div className='container pb-50 pt-50' data-aos='fade-right' data-aos-delay={400} data-aos-once={true} >
 
 
                     <div className='row'>
@@ -844,7 +843,7 @@ function Startupwebsitedesign() {
                         <IndustryGallery
                             industries={industries}
                         />
-                        <div className='mt-50'>
+                        <div className='mt-md-50 mt-20'>
                             <p className='text-white'>As a professional Chennai design company, we focus on creating websites that are visually appealing while also supporting usability, search engine visibility, and business growth.</p>
                         </div>
 
@@ -853,7 +852,7 @@ function Startupwebsitedesign() {
             </div>
 
 
-            <div className='container pt-100 mb-100' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
+            <div className='container pt-50 mb-100' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
                 <div className='row align-items-center'>
 
                     <div className='col-12'>
@@ -1084,6 +1083,9 @@ function Startupwebsitedesign() {
                                                 {paragraph.content}
                                             </p>
                                         ))}
+                                    <button onClick={openModal} className='mt-2 bg-white rounded-md py-2 px-3 text-tenor' style={{ borderRadius: '10px', color: '#053456' }}>
+                                        Talk to our Expert
+                                    </button>
 
                                 </div>
                             );
@@ -1093,12 +1095,12 @@ function Startupwebsitedesign() {
             </div>
             <div>
                 <div className='container mt-50 mb-20'>
-                    <h4 className="px-about-title mb-20">
-                        <span className="text-blue-about">
-                            Affordable Website Design {" "}
-                        </span>
+                    <h5 className=" mb-20 text-blue-about text-tenor" style={{ fontWeight: 700 }}>
+
+                        Affordable Website Design {" "}
+
                         Without Compromising Quality
-                    </h4>
+                    </h5>
                     <p>We understand that startups often operate with limited budgets. Our
                         approach combines efficient project planning, practical technology
                         selection, and streamlined development to deliver{" "}
@@ -1250,10 +1252,17 @@ function Startupwebsitedesign() {
             </div>
             <div style={{ backgroundColor: '#053456', margin: '100px 0px 100px 0px !important' }}>
                 <div className='container my-5' >
-                    <div className='row align-items-center pb-50 pt-100'>
+                    <div className='row align-items-center pb-50 pt-50'>
 
 
                         <div className='col-12' data-ao='fade-right' data-aos-delay={400} data-aos-once={true} >
+
+                        </div>
+                        <div className='col-md-4'>
+
+                            <img src={b1.src} alt='img' className='img-border-cls' />
+                        </div>
+                        <div className='col-md-8'>
                             <span className="tp-section-subtitle text-white blink-ball">
                                 Analyze and Adapt
                             </span>
@@ -1263,12 +1272,6 @@ function Startupwebsitedesign() {
                                 </span>
                                 Consultation
                             </h4>
-                        </div>
-                        <div className='col-md-4'>
-
-                            <img src={b1.src} alt='img' className='img-border-cls' />
-                        </div>
-                        <div className='col-md-8'>
                             <p className='text-figtree text-white '>
                                 Choosing the right technology and website structure is important for startup businesses. Our team explains the available technologies, features, functionalities, and digital opportunities so that you can make informed decisions.
                                 {/* <br /> */}
@@ -1280,7 +1283,7 @@ function Startupwebsitedesign() {
 
 
                     </div>
-                    <div className='row align-items-start pt-20 pb-100'>
+                    <div className='row align-items-start pt-20 pb-50'>
                         <div className='col-12' data-ao='fade-right' data-aos-delay={400} data-aos-once={true} >
                             <span className="tp-section-subtitle text-white blink-ball">
                                 We Are a Creative Web Design Agency
