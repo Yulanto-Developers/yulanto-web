@@ -460,12 +460,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               creative design, user-friendly navigation, responsive development,
               SEO-friendly structures, and reliable technology to create
               websites that support your business goals.
-              <br />
-              <br />
-              Whether you need a new corporate website, a website redesign, or a
-              customized business website, our team of experienced website
-              designers in Chennai can create a professional digital platform
-              tailored to your brand.
+
             </p>
           </div>
 
@@ -485,11 +480,17 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               </div>
             </div>
           </div>
+          <div className="col-12 mt-30">
+            <p>Whether you need a new corporate website, a website redesign, or a
+              customized business website, our team of experienced website
+              designers in Chennai can create a professional digital platform
+              tailored to your brand.</p>
+          </div>
         </div>
       </div>
 
       <div className="professional-section">
-        <div className="container py-5">
+        <div className="container">
           <div className="row align-items-center pt-50">
             <div className="col-12 mb-4">
               <span className="tp-section-subtitle text-black blink-ball">
@@ -514,7 +515,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               </div>
             </div>
 
-            <div className="col-lg-8 col-md-7">
+            <div className="col-lg-8 col-md-7 mb-5">
               <div className="professional-content">
                 <p className="text-figtree">
                   A corporate website is more than an online presence — it is a
@@ -619,20 +620,17 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
                   Our team of experienced website designers in Chennai spends
                   considerable time understanding your business, target
                   audience, competitors, and objectives before beginning the
-                  design process. This helps us create a website that is not
+                  design process.
+                  <br />
+                  <br />
+                  This helps us create a website that is not
                   only visually appealing but also easy to navigate and
                   effective in generating enquiries.
-                  <br />
-                  <br />
                   As a dedicated website creation company in Chennai, we focus
                   on developing unique websites rather than relying on generic
-                  designs. Every project is planned according to the client’s
-                  business requirements, content, branding, functionality, and
-                  future growth.
+                  designs.
                   <br />
-                  From corporate websites and business portals to customized
-                  websites, our website creator in Chennai team provides
-                  end-to-end design and development support.
+
                 </p>
               </div>
 
@@ -644,6 +642,16 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
                     </div>
                   ))}
                 </div>
+              </div>
+              <div className="col-12 mt-30">
+                <p className="text-white">
+                  Every project is planned according to the client’s
+                  business requirements, content, branding, functionality, and
+                  future growth.
+                  From corporate websites and business portals to customized
+                  websites, our website creator in Chennai team provides
+                  end-to-end design and development support.
+                </p>
               </div>
             </div>
           </div>
@@ -758,7 +766,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
 
       <div className="container mb-80">
         <div className="row justify-content-start mb-5">
-          <div className="col-lg-8">
+          <div className="col-lg-12">
             <span className="tp-section-subtitle text-black blink-ball">
               Scope of Work
             </span>
