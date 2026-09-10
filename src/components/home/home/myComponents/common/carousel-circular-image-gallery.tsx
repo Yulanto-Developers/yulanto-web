@@ -150,7 +150,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
         }
 
         autoplayTimer.current =
-            window.setInterval(next, 4500);
+            window.setInterval(next, 4500000);
 
         return () => {
             if (autoplayTimer.current) {
@@ -237,7 +237,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                 PREVIOUS BUTTON
             ===================================== */}
 
-            <button
+            {/* <button
                 type="button"
                 className="gallery-arrow gallery-prev"
                 onClick={prev}
@@ -256,13 +256,13 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                 >
                     <path d="M15 18l-6-6 6-6" />
                 </svg>
-            </button>
+            </button> */}
 
             {/* =====================================
                 NEXT BUTTON
             ===================================== */}
 
-            <button
+            {/* <button
                 type="button"
                 className="gallery-arrow gallery-next"
                 onClick={next}
@@ -281,7 +281,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                 >
                     <path d="M9 18l6-6-6-6" />
                 </svg>
-            </button>
+            </button> */}
         </div>
     );
 };

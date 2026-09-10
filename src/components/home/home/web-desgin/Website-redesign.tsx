@@ -622,7 +622,7 @@ function Websiteredesign() {
                 description={
                     'Is your website outdated, slow, difficult to navigate, or no longer delivering the results you expect? Our website redesign services in Chennai help businesses transform existing websites into modern, responsive, user-friendly, and conversion-focused digital experiences.'
                 }
-                css='mt-5'
+                css='mt-50'
             />
 
             <ImageGallery images={galleryImages} />
@@ -630,7 +630,7 @@ function Websiteredesign() {
                 WEBSITE REDESIGN INTRO
             ================================================= */}
             <div data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
-                <div className="container">
+                <div className="container mt-10 mb-100">
                     <div className="row">
                         <div className="col-12">
                             <p> At Yulanto Web Creations, we combine creative UI/UX design, modern web technologies, responsive layouts, performance optimization, and SEO-friendly structures to give your existing website a complete digital makeover.
@@ -642,7 +642,7 @@ function Websiteredesign() {
 
 
             <div data-aos='fade-down' data-aos-delay={400} data-aos-once={true}>
-                <div className='container mb-4 mt-30'>
+                <div className='container mt-100'>
 
                     <div className='row align-items-center'>
 
@@ -663,13 +663,15 @@ function Websiteredesign() {
                         </div>
 
 
-                        <div className='col-md-7'>
+                        <div className='col-md-12'>
 
                             <p className='text-figtree'>
 
                                 Your website is often the first interaction customers have with your business. An outdated design can affect credibility, user engagement, search visibility, and conversions.
 
                             </p>
+                        </div>
+                        <div className="col-md-6">
                             <div className="corporate-features">
                                 {corporate.map((item) => (
                                     <div key={item.text} className="corporate-feature">
@@ -681,14 +683,14 @@ function Websiteredesign() {
                                     </div>
                                 ))}
                             </div>
-
-
                         </div>
 
 
+                        {/* </div> */}
 
-                        <div className='col-md-5'>
 
+
+                        <div className='col-md-6'>
                             <div className='stats-glass-card'>
 
                                 <div className='stats-glow-bg' />
@@ -723,6 +725,7 @@ function Websiteredesign() {
 
                             </div>
 
+
                         </div>
 
                         <div className="col-12 mt-1">
@@ -748,10 +751,18 @@ function Websiteredesign() {
 
                 <div className='container'>
 
-                    <div className='row align-items-center pt-50'>
+                    <div className='row align-items-center pt-100'>
 
-                        <div className='col-12'>
+                        <div className='col-md-4'>
 
+                            <img
+                                src={img0.src}
+                                alt='img'
+                                className='img-border-cls'
+                            />
+
+                        </div>
+                        <div className="col-md-8">
                             <span className="tp-section-subtitle text-black blink-ball">
                                 AI Website Redesign in Chennai
                             </span>
@@ -764,20 +775,6 @@ function Websiteredesign() {
                                 AI-Powered Design Strategies
 
                             </h4>
-
-                        </div>
-
-
-                        <div className='col-md-4'>
-
-                            <img
-                                src={img0.src}
-                                alt='img'
-                                className='img-border-cls'
-                            />
-
-                        </div>
-                        <div className="col-md-8">
                             <p className="text-figtree mb-25">
                                 AI is transforming the way websites are planned, designed, and
                                 optimized. Our AI website redesign in Chennai
@@ -787,7 +784,7 @@ function Websiteredesign() {
                             </p>
 
                         </div>
-                        <div className='col-12'>
+                        <div className='col-12 mt-20'>
                             <h5 className="ai-redesign-title text-tenor">
                                 AI-assisted redesign can help with:
                             </h5>
