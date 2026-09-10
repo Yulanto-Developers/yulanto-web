@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useState, useEffect } from "react";
+
 const benefitsData = [
   {
     title: "Exceptional Brand Development",
@@ -7,7 +9,6 @@ const benefitsData = [
     author: "Brand Strategy",
     role: "Identity & Design",
     avatar: "assets/img/social/Benefits-icon-1.png",
-  
     featured: true,
   },
   {
@@ -16,7 +17,6 @@ const benefitsData = [
     author: "Audience Growth",
     role: "Community Management",
     avatar: "assets/img/social/Benefits-icon-2.png",
- 
     wide: true,
   },
   {
@@ -25,7 +25,6 @@ const benefitsData = [
     author: "Visibility Team",
     role: "Market Reach",
     avatar: "assets/img/social/Benefits-icon-3.png",
-  
   },
   {
     title: "Gain Real-Time Insights",
@@ -33,7 +32,6 @@ const benefitsData = [
     author: "Research Lead",
     role: "Consumer Analytics",
     avatar: "assets/img/social/Benefits-icon-4.png",
- 
   },
   {
     title: "Improve Your Marketing Strategy",
@@ -41,7 +39,6 @@ const benefitsData = [
     author: "Performance Ops",
     role: "Strategy Optimization",
     avatar: "assets/img/social/Benefits-icon-6.png",
-   
   },
   {
     title: "Build Customer Relationships",
@@ -49,13 +46,25 @@ const benefitsData = [
     author: "Customer Success",
     role: "Relationship Management",
     avatar: "assets/img/social/Benefits-icon-5.png",
-
   },
 ];
 
 export default function SocialMediaBenefits() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Handle responsive check to force 1-column layout cleanly on mobile screens
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <section className="px-about-6-area pt-50 pb-40 pb-lg-110" style={{ backgroundColor: "#ffff" }}>
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ backgroundColor: "#ffff" }}>
       <div className="container container-1550">
         
           {/* Title Section */}
@@ -85,20 +94,28 @@ export default function SocialMediaBenefits() {
           {benefitsData.map((item, index) => {
             const isFeatured = item.featured;
             const isWide = item.wide;
+            const isHovered = hoveredIndex === index;
 
             return (
               <div
                 key={index}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
                 style={{
                   backgroundColor: "#ffffff",
                   border: "1px solid #e2e8f0",
                   borderRadius: "1rem",
                   padding: isFeatured ? "2rem" : "1.5rem",
-                  boxShadow: "0 1px 3px rgba(0, 0, 0, 0.05)",
-                  gridColumn: isFeatured || isWide ? "span 2" : "span 1",
+                  boxShadow: isHovered 
+                    ? "0 20px 40px -15px rgba(5, 52, 86, 0.15)" 
+                    : "0 1px 3px rgba(0, 0, 0, 0.05)",
+                  gridColumn: isMobile ? "span 1" : (isFeatured || isWide ? "span 2" : "span 1"),
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
+                  transform: isHovered ? "translateY(-6px) scale(1.01)" : "translateY(0) scale(1)",
+                  transition: "all 0.35s cubic-bezier(0.16, 1, 0.3, 1)",
+                  cursor: "pointer",
                 }}
               >
                 <div style={{ margin: 0, height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>

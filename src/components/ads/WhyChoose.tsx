@@ -91,6 +91,8 @@ const VerticalCutReveal: React.FC<VerticalCutRevealProps> = ({
         flexWrap: 'wrap',
         overflow: 'hidden',
         columnGap: '0.25em',
+        fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
+        fontSize: "20px",
         rowGap: '0.1em',
       }}
     >
@@ -149,7 +151,7 @@ export default function AboutSection3() {
     section: {
       padding: '48px 16px',
       backgroundColor: '#ffffff',
-      fontFamily: 'system-ui, -apple-system, sans-serif',
+      fontFamily: '"Tenor Sans", "Tenor Sans Fallback"'
     },
     container: {
       maxWidth: '1152px',
@@ -169,6 +171,7 @@ export default function AboutSection3() {
       alignItems: 'center',
       padding: '16px 0',
       fontSize: '14px',
+      fontFamily: "Figtree, Figtree Fallback",
       borderBottom: '1px solid #e5e7eb',
     },
     statGroup: {
@@ -185,12 +188,14 @@ export default function AboutSection3() {
     },
     boldBrand: {
       color: '#053456',
+      fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
       fontWeight: 'bold',
       fontSize: '18px',
     },
     grayText: {
       color: '#4b5563',
       fontWeight: 500,
+      fontFamily: "Figtree, Figtree Fallback",
     },
     mainGrid: {
       display: 'grid',
@@ -201,7 +206,7 @@ export default function AboutSection3() {
     leftCol: {
       gridColumn: 'span 2',
     },
-    h1: {
+    h4: {
       fontSize: '36px',
       lineHeight: '1.2',
       fontWeight: 600,
@@ -215,12 +220,14 @@ export default function AboutSection3() {
     },
     blockTitle: {
       fontSize: '16px',
+      fontFamily: "Figtree, Figtree Fallback",
       fontWeight: '700',
       color: '#111827',
       marginBottom: '6px',
     },
     paragraph: {
       fontSize: '14px !important',
+      fontFamily: "Figtree, Figtree Fallback",
       lineHeight: '1.6',
       color: '#4b5563',
       textAlign: 'justify',
@@ -237,18 +244,21 @@ export default function AboutSection3() {
       color: '#053456',
       fontSize: '24px',
       fontWeight: 'bold',
+      fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
       marginBottom: '4px',
     },
     brandSub: {
       color: '#4b5563',
       fontSize: '14px',
+      fontFamily: "Figtree, Figtree Fallback",
       marginBottom: '32px',
     },
     callToActionText: {
       color: '#111827',
       fontWeight: 500,
+      fontFamily: "Figtree, Figtree Fallback",
       marginBottom: '16px',
-      fontSize: '15px',
+      fontSize: '15px !important',
     },
     btn: {
       backgroundColor: '#053456',
@@ -269,18 +279,18 @@ export default function AboutSection3() {
   };
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{
-        backgroundColor: "#ffffff ",
-      
-      }}
->
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden" style={{
+      backgroundColor: "#ffffff ",
+
+    }}
+    >
       <div className="container container-1550">
         <div style={styles.relativeWrapper}>
           {/* Header Bar / Title Section */}
           <div className="row align-items-center mb-5" data-aos="fade-up">
             <div className="col-xl-3">
               <span className="tp-section-subtitle text-black blink-ball">
-                Off-Page SEO in Chennai
+                Google Ads management company
               </span>
             </div>
             <div className="col-xl-9">
@@ -350,7 +360,7 @@ export default function AboutSection3() {
               customVariants={revealVariants}
               style={styles.statItem}
             >
-              <span style={styles.boldBrand}>30%</span>
+              <span style={styles.boldBrand}>40% - 75%</span>
               <span style={styles.grayText}>Higher ROI & Conversions</span>
             </TimelineContent>
           </div>
@@ -360,11 +370,11 @@ export default function AboutSection3() {
         <div style={styles.mainGrid}>
           {/* Left Column Content */}
           <div style={styles.leftCol}>
-            <h1 style={styles.h1}>
+            <h4 style={styles.h4}>
               <VerticalCutReveal splitBy="words" staggerDuration={0.08}>
                 Driving Growth Through High-Performance Google Ads
               </VerticalCutReveal>
-            </h1>
+            </h4>
 
             <TimelineContent
               as="div"
@@ -444,14 +454,29 @@ export default function AboutSection3() {
               animationNum={10}
               timelineRef={heroRef}
               customVariants={revealVariants}
-              style={{ marginBottom: '24px' }}
+              style={{ marginBottom: "24px" }}
             >
               <p style={styles.callToActionText}>
                 Ready to transform your brand's message into measurable results?
               </p>
+
+              {/* Image below CTA text */}
+              <img
+                src="/assets/img/googleads/img-new.jpg"
+                alt="Google Ads results"
+                style={{
+                  width: "100%",
+                  maxWidth: "500px",
+                  height: "auto",
+                  display: "block",
+                  marginTop: "24px",
+                  borderRadius: "16px",
+                  objectFit: "cover",
+                }}
+              />
             </TimelineContent>
 
-           
+
           </div>
         </div>
       </div>

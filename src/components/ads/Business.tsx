@@ -72,7 +72,7 @@ export const SeoServices: React.FC = () => {
       description:
         "Show your advertisements when customers search for products or services related to your business. Effective keyword research and search-term analysis help attract more relevant visitors to your website.",
       icon: <i className="fa-solid fa-key text-2xl"></i>,
-      isDark: true,
+      isDark: true, // Already dark
       delay: 200,
     },
     {
@@ -96,7 +96,7 @@ export const SeoServices: React.FC = () => {
       description:
         "SEO is a long-term strategy, while Google Ads can provide immediate paid visibility once campaigns are approved and launched. Using Google Ads and SEO together can create a stronger digital marketing strategy.",
       icon: <i className="fa-solid fa-bolt text-2xl"></i>,
-      isDark: false,
+      isDark: true, // Changed to true (Second card of the second row)
       delay: 500,
     },
     {
@@ -110,7 +110,7 @@ export const SeoServices: React.FC = () => {
   ];
 
   return (
-    <section className="px-about-6-area pt-80 pb-80 seo-hero-section" style={{ backgroundColor: "#f8f9fa" }}>
+    <section className="px-about-6-area pt-40 pb-40 overflow-hidden">
       <div className="container container-1550 ">
         {/* Header Section */}
         <div className="row align-items-center mb-5">

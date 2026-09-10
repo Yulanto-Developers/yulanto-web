@@ -82,18 +82,18 @@ export default function HeroSection({
   const safeImages = Array.isArray(images) && images.length >= 3 ? images : defaultImages;
 
   return (
-    <section
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110"
       style={{
         width: "100%",
-        padding: "4rem 1.5rem",
+      
         overflow: "hidden",
       }}
     >
       {/* Container wrapper for max-width constraint */}
-      <div
+      <div   className="container container-1550"
+
         style={{
-          maxWidth: "1200px",
-          width: "100%",
+         
           margin: "0 auto",
           display: "flex",
           flexDirection: "column",

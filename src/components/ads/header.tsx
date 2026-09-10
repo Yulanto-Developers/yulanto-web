@@ -52,7 +52,7 @@ export function ImageCarouselHero({
   images = DEFAULT_ONLINE_IMAGES,
 }: ImageCarouselHeroProps) {
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110  position-relative overflow-hidden">
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110 seo-hero-section">
       <div className="container container-1550">
         {/* Soft Background Accent Glows */}
         <div className="bg-blur-circle blur-top-right" />

@@ -80,11 +80,14 @@ const Feature: React.FC<FeatureProps> = ({ title, description, icon, index }) =>
   const titleTextStyles: React.CSSProperties = {
     display: 'inline-block',
     transition: 'transform 200ms',
+    fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' ,
+    fontSize:"18px",
     color: '#262626',
   };
 
   const descriptionStyles: React.CSSProperties = {
     fontSize: '14px !important',
+    fontFamily: "Figtree, Figtree Fallback",
     color: '#525252',
     maxWidth: '320px',
     position: 'relative',
@@ -93,6 +96,7 @@ const Feature: React.FC<FeatureProps> = ({ title, description, icon, index }) =>
     margin: 0,
     lineHeight: '1.5',
   };
+  
 
   return (
     <div
@@ -123,6 +127,16 @@ const Feature: React.FC<FeatureProps> = ({ title, description, icon, index }) =>
         if (text) text.style.transform = 'translateX(0)';
       }}
     >
+      <style>
+        {`
+        @media (max-width: 767px) {
+   
+    .cards-grid{
+        grid-template-columns: 1fr !important;
+    }
+}
+        `}
+      </style>
       <div className="gradient-overlay" style={gradientStyles} />
 
       <div style={iconStyles}>{icon}</div>
@@ -206,7 +220,7 @@ export const Campaign: React.FC = () => {
 
   return (
     <div style={wrapperStyles}>
-      <section className="px-about-6-area pt-80 pb-80 seo-hero-section" style={{ backgroundColor: '#ffffff' }}>
+      <section className="px-about-6-area pt-40 pb-40 overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
         <div className="container container-1550 seo-hero-container">
           {/* Title Section */}
           <div className="row align-items-center mb-5" data-aos="fade-up">
@@ -225,7 +239,7 @@ export const Campaign: React.FC = () => {
             </div>
           </div>
 
-          <div style={gridStyles}>
+          <div className="cards-grid"style={gridStyles}>
             {features.map((feature, index) => (
               <Feature
                 key={feature.title}

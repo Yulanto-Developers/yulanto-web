@@ -3,8 +3,10 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 
 export default function GoogleAdsHeroSection() {
+    const { openModal } = useQuoteModal();
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -93,6 +95,28 @@ export default function GoogleAdsHeroSection() {
             <p className="text-figtree text-black mt-2">
               Start your Google Ads campaign today and turn relevant searches into valuable business opportunities.
             </p>
+              <button
+             onClick={openModal}
+              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+              style={{
+                backgroundColor: '#053456',
+                color: '#ffffff',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                border: '1px solid #053456',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Boost Your Business</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+            </button>
           </div>
 
           {/* Right Column: Google Ads Mockup Graphics */}

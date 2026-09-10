@@ -56,7 +56,8 @@ const ProcessItem: React.FC<ProcessItemProps> = ({ title, description, icon, del
   };
 
   const titleStyles: React.CSSProperties = {
-    fontSize: '20px',
+    fontSize: '18px',
+    fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' ,
     fontWeight: '700',
     color: '#0f172a',
     marginBottom: '8px',
@@ -65,6 +66,7 @@ const ProcessItem: React.FC<ProcessItemProps> = ({ title, description, icon, del
 
   const descriptionStyles: React.CSSProperties = {
     fontSize: '15px !important',
+    fontFamily: "Figtree, Figtree Fallback",
     color: '#64748b',
     lineHeight: '1.6',
     margin: 0,
@@ -200,7 +202,7 @@ export const PpcProcess: React.FC = () => {
 
   return (
     <div style={wrapperStyles}>
-      <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
+      <section className="px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden">
         <div className="container container-1550">
           {/* Section Header */}
           <div className="row align-items-center mb-5" data-aos="fade-up" data-aos-duration="800">

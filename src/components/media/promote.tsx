@@ -1,4 +1,3 @@
-// app/social-media-marketing/page.tsx
 'use client';
 
 import React from 'react';
@@ -60,8 +59,8 @@ export default function SocialMediaMarketingDemo() {
 
       {/* SECTION 1: HERO & INTRODUCTION */}
       {/* SECTION 1: HERO & INTRODUCTION */}
-<FlowSection
-  className="px-about-6-area pt-40 pb-40 pb-lg-110"
+<FlowSection 
+  className="px-about-6-area pt-40 pb-40 pb-lg-110 social-media-page social-intro-section"
   style={{
     backgroundColor: '#f5f5f5',
   }}
@@ -69,52 +68,25 @@ export default function SocialMediaMarketingDemo() {
   <div className="container container-1550">
 
     {/* Heading + Paragraph */}
-    <div>
-      <h4 className="px-about-title mb-20">
-        <span className="text-blue-about">
-          Want to Promote Your
-        </span>{' '}
-        Business on Social Media?
-      </h4>
+   
+       <div>
+          
+            <h4 className="px-about-title mb-20">
+                <span className="text-blue-about"> Want to Promote Your </span>
+             Business on Social Media?
+              </h4>
 
-      <p
-        className="text-figtree text-black mt-2"
-        style={{
-          color: '#333',
-          fontSize: '1.15rem',
-          maxWidth: '65ch',
-          lineHeight: '1.7',
-        }}
-      >
-        Build a stronger online presence with professional social
-        media marketing services in Chennai. We maintain a
-        consistent brand voice across your social media channels
-        while creating platform-specific content that reflects your
-        brand identity, values, and business objectives.
-      </p>
-    </div>
+            <p className="text-figtree text-black mt-2">
+Build a stronger online presence with professional social media marketing services in Chennai. We maintain a consistent brand voice across your social media channels while creating platform-specific content that reflects your brand identity, values, and business objectives.            </p>
+          </div>
 
     {/* THREE IMAGE CARDS */}
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '1.5rem',
-        marginTop: '3rem',
-      }}
-    >
+  <div className="social-image-grid">
 
       {/* Card 1 */}
-      <div
-        style={{
-          backgroundColor: '#ffffff',
-          borderRadius: '16px',
-          overflow: 'hidden',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-        }}
-      >
+   <div className="social-image-card">
         <img
-          src="assets/img/social/bottom-1.jpg"
+          src="/assets/img/social/bottom-1.jpg"
           alt="Social media marketing"
           style={{
             width: '100%',
@@ -128,16 +100,9 @@ export default function SocialMediaMarketingDemo() {
       </div>
 
       {/* Card 2 */}
-      <div
-        style={{
-          backgroundColor: '#ffffff',
-          borderRadius: '16px',
-          overflow: 'hidden',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-        }}
-      >
+     <div className="social-image-card">
         <img
-          src="assets/img/social/bottom-2.jpg"
+          src="/assets/img/social/bottom-2.jpg"
           alt="Social media content creation"
           style={{
             width: '100%',
@@ -151,16 +116,9 @@ export default function SocialMediaMarketingDemo() {
       </div>
 
       {/* Card 3 */}
-      <div
-        style={{
-          backgroundColor: '#ffffff',
-          borderRadius: '16px',
-          overflow: 'hidden',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-        }}
-      >
+     <div className="social-image-card">
         <img
-          src="assets/img/social/bottom-3.jpg"
+          src="/assets/img/social/bottom-3.jpg"
           alt="Social media advertising"
           style={{
             width: '100%',
@@ -179,11 +137,9 @@ export default function SocialMediaMarketingDemo() {
 </FlowSection>
 
       {/* SECTION 2: PLATFORM SELECTION & CONTENT CREATION */}
-      <FlowSection
-       
-        className="px-about-6-area pt-40 pb-40 pb-lg-110"
-      
-      >
+<FlowSection 
+  className="px-about-6-area pt-40 pb-40 pb-lg-110 social-media-page social-offer-section"
+>
         <div className="container container-1550">
         
 
@@ -200,9 +156,9 @@ export default function SocialMediaMarketingDemo() {
           </div>
 
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+         <div className="social-offer-grid">
             {/* Item 1 */}
-            <div style={{ border: '1px solid rgba(255,255,255,0.08)', padding: '1.5rem', borderRadius: '0.5rem', backgroundColor: CARD_BG, color: '#ffffff' }}>
+            <div className="social-offer-card">
               <div style={{ fontSize: '1.5rem', color: '#53ae7d', marginBottom: '1rem' }}>
                 <FontAwesomeIcon icon={faBullhorn} />
               </div>
@@ -210,7 +166,7 @@ export default function SocialMediaMarketingDemo() {
               <p className="text-figtree mt-2" style={{ fontSize: '15px !important', color: '#e5e7eb' }}>
                 Our SMM experts identify the platforms where your target audience is most active. Depending on your business objectives, we can create strategies for:
               </p>
-              <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', color: '#e5e7eb' }}>
+             <div className="social-platform-icons">
                 <BrandIcons.Facebook />
                 <BrandIcons.Instagram />
                 <BrandIcons.LinkedIn />
@@ -221,8 +177,8 @@ export default function SocialMediaMarketingDemo() {
             </div>
 
             {/* Item 2 */}
-            <div style={{ border: '1px solid rgba(255,255,255,0.08)', padding: '1.5rem', borderRadius: '0.5rem', backgroundColor: CARD_BG, color: '#ffffff' }}>
-              <div style={{ fontSize: '1.5rem', color: '#53ae7d', marginBottom: '1rem' }}>
+               <div className="social-offer-card">
+                <div style={{ fontSize: '1.5rem', color: '#53ae7d', marginBottom: '1rem' }}>
                 <FontAwesomeIcon icon={faPenNib} />
               </div>
               <h3 style={{ fontSize: '1.25rem',fontFamily: "Figtree, Figtree Fallback", fontWeight: 'bold',color:'white' }}>2. Social Media Content Creation</h3>
@@ -237,15 +193,13 @@ export default function SocialMediaMarketingDemo() {
       </FlowSection>
 
       {/* SECTION 3: MANAGEMENT & ADVERTISING */}
-      <FlowSection
-       
-        className="px-about-6-area pt-40 pb-40 pb-lg-110"
-       
-      >
+    <FlowSection 
+  className="px-about-6-area pt-40 pb-40 pb-lg-110 social-media-page social-services-section"
+>
         <div className="container container-1550">
         
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
+         <div className="social-services-grid">
             {[
               { icon: faCalendarCheck, title: '3. Consistent Posting', text: 'Consistency is essential for maintaining audience engagement. We develop content calendars and maintain a regular posting schedule.' },
               { icon: faComments, title: '4. Audience Engagement', text: 'Our team monitors comments, messages, mentions, and interactions to maintain an active relationship with your audience.' },
@@ -254,10 +208,10 @@ export default function SocialMediaMarketingDemo() {
               { icon: faChartLine, title: '7. Analytics & Monitoring', text: 'We monitor reach, impressions, engagement, clicks, leads, and conversions to refine and optimize ongoing strategies.' },
               { icon: faArrowTrendUp, title: '8. Trend-Based Strategy', text: 'We track changing algorithms, content formats, and trend shifts to keep your business visible and competitive.' },
             ].map((item, idx) => (
-              <div
-                key={idx}
-                style={{ backgroundColor: CARD_BG, color: '#ffffff', padding: '1.5rem', borderRadius: '0.5rem' }}
-              >
+              <div 
+  key={idx}
+  className="social-service-card"
+>
                 <FontAwesomeIcon icon={item.icon} style={{ color: '#53ae7d', marginBottom: '0.5rem',fontFamily: "Figtree, Figtree Fallback", fontSize: '1.25rem' }} />
                 <h4 style={{ fontWeight: 'bold', fontSize: '1.1rem',color:'white',fontFamily: "Figtree, Figtree Fallback", }}>{item.title}</h4>
                 <p className="text-figtree mt-2" style={{ color: '#e5e7eb',fontSize:"15px !important" }}>
@@ -269,11 +223,12 @@ export default function SocialMediaMarketingDemo() {
         </div>
       </FlowSection>
 
-      {/* SECTION 4: WHY CHOOSE US */}
-   {/* SECTION 4: WHY CHOOSE US */}
+    
+
+{/* SECTION 4: WHY CHOOSE US */}
 <FlowSection
   aria-label="Why Choose Us"
-  className="px-about-6-area pt-40 pb-40 pb-lg-110"
+  className="px-about-6-area pt-40 pb-40 pb-lg-110 social-media-page social-why-section"
   style={{
     backgroundColor: '#053456',
     color: '#ffffff',
@@ -281,9 +236,6 @@ export default function SocialMediaMarketingDemo() {
 >
   <div className="container container-1550">
 
-   
-
- 
     <div>
       <h2
         className="px-about-title mb-20"
@@ -300,83 +252,89 @@ export default function SocialMediaMarketingDemo() {
           color: '#f0f9ff',
         }}
       >
-        Choosing the right social media agency in Chennai
-        can make a significant difference to your digital
-        marketing performance. We combine strategy,
-        creativity, technology, and performance analysis
-        to help businesses achieve sustainable online growth.
+        Choosing the right social media agency in Chennai can make a
+        significant difference to your digital marketing performance.
+        We combine strategy, creativity, technology, and performance
+        analysis to help businesses achieve sustainable online growth.
       </p>
     </div>
 
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns:
-          'repeat(auto-fit, minmax(220px, 1fr))',
-        gap: '1rem',
-        marginTop: '2rem',
-      }}
-    >
-      {[
-        '11+ Years of Digital Experience',
-        'Reliable and Professional Service',
-        'Research-Driven Marketing Approach',
-        'Experienced Digital Marketing Team',
-        'Creative and Engaging Content Strategies',
-        'Regular Analytics and Performance Reports',
-        'Customized Social Media Marketing Solutions',
-        'Targeted Campaigns for Better Reach and Engagement',
-        'Focus on Leads, Traffic, and Business Growth',
-      ].map((point, idx) => (
-        <div
-          key={idx}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.75rem',
-            backgroundColor: '#053456',
-            padding: '0.75rem 1rem',
-            borderRadius: '0.375rem',
-          }}
-        >
-          <FontAwesomeIcon
-            icon={faCheckCircle}
-            style={{
-              color: '#53ae7d',
-            }}
-          />
+    {/* THREE COLUMN LAYOUT */}
+    <div className="social-why-grid">
 
-          <span
-            style={{
-             fontFamily: "Figtree, Figtree Fallback",
-              fontWeight: '500',
-              color: '#ffffff',
-            
-            }}
+      {/* COLUMN 1 - FIRST 5 POINTS */}
+      <div className="social-why-list">
+        {[
+          '11+ Years of Digital Experience',
+          'Reliable and Professional Service',
+          'Research-Driven Marketing Approach',
+          'Experienced Digital Marketing Team',
+          'Creative and Engaging Content Strategies',
+        ].map((point, idx) => (
+          <div
+            key={idx}
+            className="social-why-point"
           >
-            {point}
-          </span>
-        </div>
-      ))}
+            <FontAwesomeIcon
+              icon={faCheckCircle}
+              className="social-why-icon"
+            />
+
+            <span>
+              {point}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* COLUMN 2 - REMAINING 4 POINTS */}
+      <div className="social-why-list">
+        {[
+          'Regular Analytics and Performance Reports',
+          'Customized Social Media Marketing Solutions',
+          'Targeted Campaigns for Better Reach and Engagement',
+          'Focus on Leads, Traffic, and Business Growth',
+        ].map((point, idx) => (
+          <div
+            key={idx}
+            className="social-why-point"
+          >
+            <FontAwesomeIcon
+              icon={faCheckCircle}
+              className="social-why-icon"
+            />
+
+            <span>
+              {point}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* COLUMN 3 - IMAGE */}
+      <div className="social-why-image">
+        <img
+          src="/assets/img/social/imge-1.jpg"
+          alt="Social Media Marketing"
+        />
+      </div>
+
     </div>
 
+    {/* BOTTOM TEXT */}
     <p
-      className="text-figtree mt-2"
-      style={{
-        marginTop: '2.5rem',
-        color: '#f0f9ff',
-        
-      }}
+      className="text-figtree social-why-bottom-text"
     >
-      Whether you are a startup, small business,
-      established company, or enterprise, our social
-      media marketing services in Chennai can be
-      customized according to your business requirements
-      and marketing objectives.
+      Whether you are a startup, small business, established company,
+      or enterprise, our social media marketing services in Chennai
+      can be customized according to your business requirements and
+      marketing objectives.
     </p>
 
   </div>
 </FlowSection>
+
+
 
     </FlowArt>
   );

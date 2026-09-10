@@ -3,8 +3,10 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 
 export default function AboutSection() {
+    const { openModal } = useQuoteModal();
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -14,7 +16,7 @@ export default function AboutSection() {
 
   return (
     <section 
-      className="px-about-6-area pt-50 pb-80 pb-lg-110 bg-white"
+      className="px-about-6-area pt-40 pb-40 pb-lg-110 bg-white social-about-last-section"
       style={{ overflowX: 'hidden', width: '100%' }}
     >
       <div className="container container-1550 mx-auto px-4" style={{ overflow: 'hidden' }}>
@@ -89,6 +91,29 @@ export default function AboutSection() {
             <p className="text-figtree text-black mt-2 font-medium">
               Contact us today to discuss your social media marketing requirements.
             </p>
+             {/* Left Aligned CTA Button */}
+            <button
+             onClick={openModal}
+              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+              style={{
+                backgroundColor: '#053456',
+                color: '#ffffff',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                border: '1px solid #053456',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Let's Talk our Team</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
+            </button>
           </div>
 
         </div>

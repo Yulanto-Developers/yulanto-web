@@ -1,9 +1,10 @@
 'use client';
 
 import React, {
-  useEffect,
-  useRef,
-  useState,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
 } from 'react';
 
 import { gsap } from 'gsap';
@@ -13,338 +14,273 @@ import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger);
 
 function cx(
-  ...parts: Array<string | undefined | false | null>
+  ...parts: Array<string | undefined | false | null>
 ): string {
-  return parts.filter(Boolean).join(' ');
+  return parts.filter(Boolean).join(' ');
 }
 
 export interface FlowSectionProps {
-  className?: string;
-  style?: React.CSSProperties;
-  children: React.ReactNode;
-  'aria-label'?: string;
+  className?: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+  'aria-label'?: string;
 }
 
 export const FlowSection: React.FC<FlowSectionProps> = ({
-  className,
-  style = {},
-  children,
-  'aria-label': ariaLabel,
+  className,
+  style = {},
+  children,
+  'aria-label': ariaLabel,
 }) => {
-  return (
-    <section
-      data-flow-section
-      aria-label={ariaLabel}
-      className={cx(
-        'relative w-full min-h-screen',
-        className
-      )}
-      style={{
-        ...style,
-
-        /*
-         * IMPORTANT
-         * Every section must have an opaque background.
-         * Otherwise the previous pinned section will be
-         * visible underneath it.
-         */
-      backgroundColor:
-        style.backgroundColor || '#f5f5f5',
-
-        /*
-         * Make sure each section is above the previous one.
-         * This is also reset dynamically by GSAP.
-         */
-        position: 'relative',
-
-        /*
-         * Do NOT use overflow:hidden here.
-         * Section 3 can be taller than the viewport.
-         */
-        overflow: 'visible',
-
-        width: '100%',
-        minHeight: '100vh',
-      }}
-    >
-      <div
-        data-flow-inner
-        className="flow-art-container relative flex min-h-screen w-full flex-col justify-between"
-      >
-        {children}
-      </div>
-    </section>
-  );
+  return (
+    <section
+      data-flow-section
+      aria-label={ariaLabel}
+      className={cx(
+        'relative w-full min-h-screen',
+        className
+      )}
+      style={{
+        ...style,
+        backgroundColor:
+          style.backgroundColor || '#f5f5f5',
+        position: 'relative',
+        overflow: 'visible',
+        width: '100%',
+        minHeight: '100vh',
+      }}
+    >
+      <div
+        data-flow-inner
+        className="flow-art-container relative flex min-h-screen w-full flex-col justify-between"
+      >
+        {children}
+      </div>
+    </section>
+  );
 };
 
 export interface FlowArtProps {
-  children: React.ReactNode;
-  className?: string;
-  'aria-label'?: string;
+  children: React.ReactNode;
+  className?: string;
+  'aria-label'?: string;
 }
 
 const childCount = (
-  children: React.ReactNode
+  children: React.ReactNode
 ) => React.Children.count(children);
 
+/*
+ * Below this width, the pin/stack scroll effect is
+ * disabled entirely. Sections flow normally, one after
+ * another, like a regular page.
+ */
+const MOBILE_BREAKPOINT = 992;
+
+/*
+ * Read the viewport width synchronously so the very
+ * first render already knows whether we're on mobile.
+ * This avoids a "flash" where GSAP briefly pins a
+ * section on mobile before the effect corrects it —
+ * that flash was leaving a stale pin-spacer behind and
+ * breaking scroll to the final section.
+ */
+function getIsMobile(): boolean {
+  if (typeof window === 'undefined') {
+    return false;
+  }
+  return window.innerWidth < MOBILE_BREAKPOINT;
+}
+
 const FlowArt: React.FC<FlowArtProps> = ({
-  children,
-  className,
-  'aria-label': ariaLabel = 'Story scroll',
+  children,
+  className,
+  'aria-label': ariaLabel = 'Story scroll',
 }) => {
-  const containerRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLElement>(null);
 
-  const [reducedMotion, setReducedMotion] =
-    useState(false);
+  const [reducedMotion, setReducedMotion] =
+    useState(false);
 
-  /*
-   * Reduced motion
-   */
-  useEffect(() => {
-    const mq = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    );
+  const [isMobile, setIsMobile] = useState(getIsMobile);
 
-    const update = () => {
-      setReducedMotion(mq.matches);
-    };
+  /*
+   * Reduced motion
+   */
+  useEffect(() => {
+    const mq = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    );
 
-    update();
+    const update = () => {
+      setReducedMotion(mq.matches);
+    };
 
-    mq.addEventListener('change', update);
+    update();
 
-    return () => {
-      mq.removeEventListener('change', update);
-    };
-  }, []);
+    mq.addEventListener('change', update);
 
-  useGSAP(
-    () => {
-      if (
-        !containerRef.current ||
-        reducedMotion
-      ) {
-        return;
-      }
+    return () => {
+      mq.removeEventListener('change', update);
+    };
+  }, []);
 
-      const sections = Array.from(
-        containerRef.current.querySelectorAll<HTMLElement>(
-          '[data-flow-section]'
-        )
-      );
+  /*
+   * Mobile / narrow viewport detection.
+   * useLayoutEffect so this resolves BEFORE useGSAP
+   * (also a layout effect) runs on the same commit,
+   * preventing any pin from ever being created on
+   * mobile in the first place.
+   */
+  useLayoutEffect(() => {
+    const mq = window.matchMedia(
+      `(max-width: ${MOBILE_BREAKPOINT - 1}px)`
+    );
 
-      if (sections.length === 0) {
-        return;
-      }
+    const update = () => {
+      setIsMobile(mq.matches);
+    };
 
-      const triggers: ScrollTrigger[] = [];
+    update();
 
-      /*
-       * --------------------------------------------------
-       * INITIAL SECTION STACK
-       * --------------------------------------------------
-       *
-       * Section 1 = z-index 1
-       * Section 2 = z-index 2
-       * Section 3 = z-index 3
-       * Section 4 = z-index 4
-       *
-       * Therefore:
-       *
-       * Section 4 covers Section 3
-       * Section 3 covers Section 2
-       * Section 2 covers Section 1
-       */
-      sections.forEach((section, index) => {
-        gsap.set(section, {
-          position: 'relative',
-          zIndex: index + 1,
-        });
-      });
+    mq.addEventListener('change', update);
 
-      /*
-       * --------------------------------------------------
-       * PIN SECTIONS
-       * --------------------------------------------------
-       *
-       * Every section except the last one is pinned.
-       *
-       * The next section comes normally from below.
-       *
-       * When the next section reaches the top,
-       * it covers the previous section.
-       */
-      sections.forEach((section, index) => {
-        const nextSection =
-          sections[index + 1];
+    return () => {
+      mq.removeEventListener('change', update);
+    };
+  }, []);
 
-        /*
-         * Last section must NOT be pinned.
-         *
-         * It should scroll normally so the user can
-         * see all of its content.
-         */
-        if (!nextSection) {
-          return;
-        }
+  useGSAP(
+    () => {
+      if (!containerRef.current) {
+        return;
+      }
 
-        const trigger =
-          ScrollTrigger.create({
-            trigger: section,
+      const sections = Array.from(
+        containerRef.current.querySelectorAll<HTMLElement>(
+          '[data-flow-section]'
+        )
+      );
 
-            /*
-             * Start when this section reaches
-             * the top of the viewport.
-             */
-            start: 'top top',
+      /*
+       * MOBILE / REDUCED MOTION:
+       * Make 100% sure no pin, spacer, inline transform,
+       * or z-index survives from a previous state. This
+       * is what was silently eating the scroll height
+       * and hiding the last section.
+       */
+      if (reducedMotion || isMobile) {
+        ScrollTrigger.getAll().forEach((t) => t.kill());
 
-            /*
-             * Stop pinning when the NEXT section
-             * reaches the top.
-             */
-            endTrigger: nextSection,
-            end: 'top top',
+        sections.forEach((section) => {
+          gsap.set(section, { clearProps: 'all' });
+        });
 
-            /*
-             * Pin the current section.
-             */
-            pin: section,
+        // Force the browser to recompute document height.
+        requestAnimationFrame(() => {
+          ScrollTrigger.refresh();
+        });
 
-            /*
-             * IMPORTANT:
-             *
-             * false gives the stacked/card effect.
-             *
-             * Section 2 covers Section 1.
-             * Section 3 covers Section 2.
-             * Section 4 covers Section 3.
-             */
-            pinSpacing: false,
+        return;
+      }
 
-            /*
-             * Helps prevent a visible jump when
-             * the section becomes pinned.
-             */
-            anticipatePin: 1,
+      if (sections.length === 0) {
+        return;
+      }
 
-            /*
-             * Recalculate when the page layout changes.
-             */
-            invalidateOnRefresh: true,
+      const triggers: ScrollTrigger[] = [];
 
-            /*
-             * Make sure z-index remains correct
-             * after ScrollTrigger refresh.
-             */
-            onRefresh: () => {
-              gsap.set(section, {
-                zIndex: index + 1,
-              });
-            },
-          });
+      sections.forEach((section, index) => {
+        gsap.set(section, {
+          position: 'relative',
+          zIndex: index + 1,
+        });
+      });
 
-        triggers.push(trigger);
-      });
+      sections.forEach((section, index) => {
+        const nextSection = sections[index + 1];
 
-      /*
-       * --------------------------------------------------
-       * REFRESH
-       * --------------------------------------------------
-       *
-       * Section 3 has a card grid and may be taller
-       * than one viewport, so refresh after layout settles.
-       */
-      const refresh = () => {
-        ScrollTrigger.refresh();
-      };
+        if (!nextSection) {
+          return;
+        }
 
-      window.addEventListener(
-        'load',
-        refresh
-      );
+        const trigger = ScrollTrigger.create({
+          trigger: section,
+          start: 'top top',
+          endTrigger: nextSection,
+          end: 'top top',
+          pin: section,
+          pinSpacing: false,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+          onRefresh: () => {
+            gsap.set(section, {
+              zIndex: index + 1,
+            });
+          },
+        });
 
-      /*
-       * Initial refresh after React/browser layout.
-       */
-      const timer = window.setTimeout(() => {
-        ScrollTrigger.refresh();
-      }, 500);
+        triggers.push(trigger);
+      });
 
-      /*
-       * --------------------------------------------------
-       * RESIZE OBSERVER
-       * --------------------------------------------------
-       *
-       * If card height changes, refresh ScrollTrigger.
-       */
-      let resizeObserver:
-        | ResizeObserver
-        | null = null;
+      const refresh = () => {
+        ScrollTrigger.refresh();
+      };
 
-      if (
-        typeof ResizeObserver !==
-        'undefined'
-      ) {
-        resizeObserver =
-          new ResizeObserver(() => {
-            ScrollTrigger.refresh();
-          });
+      window.addEventListener('load', refresh);
 
-        sections.forEach((section) => {
-          resizeObserver?.observe(
-            section
-          );
-        });
-      }
+      const timer = window.setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 500);
 
-      /*
-       * --------------------------------------------------
-       * CLEANUP
-       * --------------------------------------------------
-       */
-      return () => {
-        window.removeEventListener(
-          'load',
-          refresh
-        );
+      let resizeObserver: ResizeObserver | null = null;
 
-        window.clearTimeout(timer);
+      if (typeof ResizeObserver !== 'undefined') {
+        resizeObserver = new ResizeObserver(() => {
+          ScrollTrigger.refresh();
+        });
 
-        resizeObserver?.disconnect();
+        sections.forEach((section) => {
+          resizeObserver?.observe(section);
+        });
+      }
 
-        triggers.forEach((trigger) => {
-          trigger.kill();
-        });
+      return () => {
+        window.removeEventListener('load', refresh);
+        window.clearTimeout(timer);
+        resizeObserver?.disconnect();
+        triggers.forEach((trigger) => {
+          trigger.kill();
+        });
+        ScrollTrigger.refresh();
+      };
+    },
+    {
+      scope: containerRef,
+      dependencies: [
+        childCount(children),
+        reducedMotion,
+        isMobile,
+      ],
+    }
+  );
 
-        ScrollTrigger.refresh();
-      };
-    },
-    {
-      scope: containerRef,
-
-      dependencies: [
-        childCount(children),
-        reducedMotion,
-      ],
-    }
-  );
-
-  return (
-    <main
-      ref={containerRef}
-      aria-label={ariaLabel}
-      className={cx(
-        'w-full overflow-x-hidden',
-        className
-      )}
-      style={{
-        position: 'relative',
-        width: '100%',
-      }}
-    >
-      {children}
-    </main>
-  );
+  return (
+    <main
+      ref={containerRef}
+      aria-label={ariaLabel}
+      className={cx(
+        'w-full overflow-x-hidden',
+        className
+      )}
+      style={{
+        position: 'relative',
+        width: '100%',
+      }}
+    >
+      {children}
+    </main>
+  );
 };
 
-export default FlowArt; 
+export default FlowArt;
