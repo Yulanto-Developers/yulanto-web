@@ -11,13 +11,25 @@ export default function ClientProviders({
     children: React.ReactNode;
 }) {
     const url = useParams();
-    console.log('url fro lay:', JSON.stringify(url));
+    // console.log('url fro lay:', JSON.stringify(url));
 
     return (
         <AppProvider>
             <BootstrapProvider>
-                {
-                    url.pages === "corporate-website-design" ? <>
+                {url.pages === "corporate-website-design" ? (
+
+                    <ScrollToTopProvider>
+                        <VideoProvider>
+                            <AnimationWrapper>
+                                {/* Global UI Elements */}
+                                <div className="px-blur-bottom" />
+                                <BackToTop />
+                                {children}
+                            </AnimationWrapper>
+                        </VideoProvider>
+                    </ScrollToTopProvider>
+                ) : (
+                    <ScrollSmoothProvider>
                         <ScrollToTopProvider>
                             <VideoProvider>
                                 <AnimationWrapper>
@@ -28,21 +40,8 @@ export default function ClientProviders({
                                 </AnimationWrapper>
                             </VideoProvider>
                         </ScrollToTopProvider>
-                    </>
-                        :
-                        <ScrollSmoothProvider>
-                            <ScrollToTopProvider>
-                                <VideoProvider>
-                                    <AnimationWrapper>
-                                        {/* Global UI Elements */}
-                                        <div className="px-blur-bottom" />
-                                        <BackToTop />
-                                        {children}
-                                    </AnimationWrapper>
-                                </VideoProvider>
-                            </ScrollToTopProvider>
-                        </ScrollSmoothProvider>
-                }
+                    </ScrollSmoothProvider>
+                )}
             </BootstrapProvider>
         </AppProvider>
     );
