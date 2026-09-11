@@ -95,7 +95,7 @@ function CorporateApproachGrid({
                                     </h3>
 
                                     <span className="approach-view text-figtree">
-                                        Read more
+                                        View Details
                                     </span>
                                 </div>
                             </motion.div>

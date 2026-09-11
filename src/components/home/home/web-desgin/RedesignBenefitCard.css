@@ -65,8 +65,7 @@
 }
 
 
-.redesign-benefit-card:hover
-.redesign-benefit-image {
+.redesign-benefit-card:hover .redesign-benefit-image {
     transform: scale(1.07);
 
     filter: brightness(0.65);
@@ -89,21 +88,18 @@
     pointer-events: none;
 
     background:
-        linear-gradient(
-            to top,
+        linear-gradient(to top,
             rgba(0, 0, 0, 0.88) 0%,
             rgba(0, 0, 0, 0.65) 18%,
             rgba(0, 0, 0, 0.15) 50%,
-            rgba(0, 0, 0, 0) 75%
-        );
+            rgba(0, 0, 0, 0) 75%);
 
     transition:
         opacity 0.4s ease;
 }
 
 
-.redesign-benefit-card:hover
-.redesign-image-gradient {
+.redesign-benefit-card:hover .redesign-image-gradient {
     opacity: 0;
 }
 
@@ -180,8 +176,7 @@
     color: #053456;
 
     transform:
-        rotate(90deg)
-        scale(1.15);
+        rotate(90deg) scale(1.15);
 }
 
 
@@ -221,8 +216,7 @@
 
 /* Hide normal title on hover */
 
-.redesign-benefit-card:hover
-.redesign-normal-content {
+.redesign-benefit-card:hover .redesign-normal-content {
     opacity: 0;
 
     transform: translateY(15px);
@@ -235,7 +229,7 @@
 
 .redesign-hover-overlay {
     position: absolute;
-
+    top: 15px !important;
     inset: 0;
 
     z-index: 10;
@@ -251,11 +245,9 @@
     border-radius: 13px;
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             rgba(5, 52, 86, 0.97),
-            rgba(5, 52, 86, 0.91)
-        );
+            rgba(5, 52, 86, 0.91));
 
     opacity: 0;
 
@@ -271,8 +263,7 @@
 
 /* Show overlay */
 
-.redesign-benefit-card:hover
-.redesign-hover-overlay {
+.redesign-benefit-card:hover .redesign-hover-overlay {
     opacity: 1;
 
     transform: translateY(0);
@@ -306,8 +297,7 @@
     opacity: 0;
 
     transform:
-        translateY(25px)
-        scale(0.9);
+        translateY(25px) scale(0.9);
 
     transition:
         opacity 0.4s ease 0.12s,
@@ -317,13 +307,11 @@
 
 /* Show icon */
 
-.redesign-benefit-card:hover
-.redesign-hover-icon {
+.redesign-benefit-card:hover .redesign-hover-icon {
     opacity: 1;
 
     transform:
-        translateY(0)
-        scale(1);
+        translateY(0) scale(1);
 }
 
 
@@ -342,8 +330,7 @@
 }
 
 
-.redesign-benefit-card:hover
-.redesign-hover-content {
+.redesign-benefit-card:hover .redesign-hover-content {
     opacity: 1;
 
     transform: translateY(0);
