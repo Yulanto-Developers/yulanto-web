@@ -117,7 +117,7 @@ function Startupwebsitedesign() {
     const industries = [
         {
             id: 1,
-            name: "Retail and eCommerce",
+            name: "Retail and Ecommerce",
             icon: <FaCartShopping />,
             image: v1.src,
             description:
@@ -125,7 +125,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 2,
-            name: "Clothing and fashion",
+            name: "Clothing and Fashion",
             icon: <FaShirt />,
             image: v2.src,
             description:
@@ -133,7 +133,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 3,
-            name: "FMCG and consumer products",
+            name: "FMCG and Consumer Products",
             icon: <FaBoxOpen />,
             image: v3.src,
             description:
@@ -149,7 +149,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 5,
-            name: "Beauty and lifestyle",
+            name: "Beauty and Lifestyle",
             icon: <FaStar />,
             image: v5.src,
             description:
@@ -157,7 +157,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 6,
-            name: "Real estate",
+            name: "Real Estate",
             icon: <FaBuilding />,
             image: v6.src,
             description:
@@ -165,7 +165,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 7,
-            name: "Interior design",
+            name: "Interior Design",
             icon: <FaCouch />,
             image: v7.src,
             description:
@@ -181,7 +181,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 9,
-            name: "Import and export",
+            name: "Import and Export",
             icon: <FaGlobe />,
             image: v9.src,
             description:
@@ -189,7 +189,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 10,
-            name: "Travel and tourism",
+            name: "Travel and Tourism",
             icon: <FaPlane />,
             image: v10.src,
             description:
@@ -197,7 +197,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 11,
-            name: "Professional services",
+            name: "Professional Services",
             icon: <FaBriefcase />,
             image: v11.src,
             description:
@@ -213,7 +213,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 13,
-            name: "Manufacturing & industrial",
+            name: "Manufacturing & Industrial",
             icon: <FaIndustry />,
             image: v13.src,
             description:
@@ -730,6 +730,10 @@ function Startupwebsitedesign() {
             <div className='container mt-5 mb-50' data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
                 <div className='row align-items-center'>
                     <div className="col-xl-12">
+
+                    </div>
+
+                    <div className='col-md-7'>
                         <div className="px-project-title-box">
                             <span className="tp-section-subtitle text-black blink-ball">
                                 Start Your Design
@@ -740,9 +744,6 @@ function Startupwebsitedesign() {
 
 
                         </div>
-                    </div>
-
-                    <div className='col-md-7'>
                         <p className='text-figtree'>
                             As an experienced web designing company in Chennai, Yulanto Web Creations creates tailor-made websites for startups and emerging businesses across different industries.
                             <br /><br />
@@ -912,7 +913,7 @@ function Startupwebsitedesign() {
 
             </div>
 
-            <div className="container mt-50 mb-20">
+            <div className="container mt-50 mb-100">
                 <div className="startup-benefits">
 
                     {/* Header */}
@@ -1007,7 +1008,21 @@ function Startupwebsitedesign() {
                         })}
 
                     </div>
+                    <div>
+                        <div className='container mt-50 mb-20'>
+                            <h5 className=" mb-20 text-blue-about text-tenor" style={{ fontWeight: 700 }}>
 
+                                Affordable Website Design {" "}
+
+                                Without Compromising Quality
+                            </h5>
+                            <p>We understand that startups often operate with limited budgets. Our
+                                approach combines efficient project planning, practical technology
+                                selection, and streamlined development to deliver{" "}
+                                affordable web design in Chennai.</p>
+                        </div>
+
+                    </div>
 
                     {/* Budget Section */}
                     {startupBenefitsContent
@@ -1083,9 +1098,11 @@ function Startupwebsitedesign() {
                                                 {paragraph.content}
                                             </p>
                                         ))}
-                                    <button onClick={openModal} className='mt-2 bg-white rounded-md py-2 px-3 text-tenor' style={{ borderRadius: '10px', color: '#053456' }}>
-                                        Talk to our Expert
-                                    </button>
+                                    <div className='d-flex justify-content-center'>
+                                        <button onClick={openModal} className='mt-2 bg-white rounded-md py-2 px-3 text-tenor' style={{ borderRadius: '10px', color: '#053456' }}>
+                                            Talk to our Expert
+                                        </button>
+                                    </div>
 
                                 </div>
                             );
@@ -1094,20 +1111,9 @@ function Startupwebsitedesign() {
                 </div>
             </div>
             <div>
-                <div className='container mt-50 mb-20'>
-                    <h5 className=" mb-20 text-blue-about text-tenor" style={{ fontWeight: 700 }}>
-
-                        Affordable Website Design {" "}
-
-                        Without Compromising Quality
-                    </h5>
-                    <p>We understand that startups often operate with limited budgets. Our
-                        approach combines efficient project planning, practical technology
-                        selection, and streamlined development to deliver{" "}
-                        affordable web design in Chennai.</p>
-                </div>
 
             </div>
+
             <div
                 className="seo-friendly-section"
                 style={{
@@ -1115,7 +1121,7 @@ function Startupwebsitedesign() {
                 }}
                 data-aos='fade-right' data-aos-delay={400} data-aos-once={true}
             >
-                <div className="container" >
+                <div className="container mt-50" >
 
                     <div className="row align-items-center pt-50">
 
@@ -1309,7 +1315,7 @@ function Startupwebsitedesign() {
 
                         <div className='col-md-4'>
 
-                            <img src={b2.src} alt='img' className='img-border-cls' />
+                            <img src={b2.src} alt='img' className='img-border-cls' style={{ height: '330px' }} />
                         </div>
 
 
