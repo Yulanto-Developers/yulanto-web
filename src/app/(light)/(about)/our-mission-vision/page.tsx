@@ -8,6 +8,7 @@ import CoreValues from "@/components/home/home/visionmission/CoreValues"
 // };
 
 import { generateSeo } from "@/lib/seo";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 
 export const metadata = generateSeo({
   title: "Yulanto Mission & Vision, Core Values | Web Design Chennai",
@@ -19,6 +20,18 @@ export const metadata = generateSeo({
 const HomePage = () => {
   return (
     <>
+    <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://yulanto-web.vercel.app/",
+          },
+          {
+            name: "Our Mission & Vision",
+            url: "https://yulanto-web.vercel.app/our-mission-vision",
+          },
+        ]}
+      />
       <Breadcrumbdata />
       <VisionMission />
       <CoreValues />

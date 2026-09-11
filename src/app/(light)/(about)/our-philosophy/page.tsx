@@ -7,6 +7,7 @@ import GradientCardDemo from "@/components/home/home/ourPhilosophy/GradientCardD
 // };
 
 import { generateSeo } from "@/lib/seo";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 
 export const metadata = generateSeo({
   title: "Our Philosophy | Yulanto Building Trust Through Better Web Designing in Chennai",
@@ -18,6 +19,18 @@ export const metadata = generateSeo({
 const HomePage = () => {
   return (
     <>
+    <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://yulanto-web.vercel.app/",
+          },
+          {
+            name: "Our Philosophy",
+            url: "https://yulanto-web.vercel.app/our-philosophy",
+          },
+        ]}
+      />
       <Breadcrumbdata />
       <GradientCardDemo />
       

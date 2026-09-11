@@ -12,14 +12,26 @@ import { USAFlagIcon } from "@/components/ourclients/USAFlagIcon";
 import Image1 from "@/assets/img/usa/banner-usa.jpg";
 import Image2 from "@/assets/img/usa/image-usa.jpg";
 import GlobalComp from "@/components/ourclients/globalcomp";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 
 
 export default function USAClientsPage() {
   return (
      <>
+     <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://yulanto-web.vercel.app/",
+          },
+          {
+            name: "Our Story",
+            url: "https://yulanto-web.vercel.app/usa",
+          },
+        ]}
+      />
     <ClientsShowcasePage
       heroImage={Image1}
       heroBadgeText="Your Trusted Digital Partner for Web Design, Development & Digital Marketing"

@@ -81,7 +81,9 @@ export function CardStack<T extends CardStackItem>({
   const reduceMotion = useReducedMotion();
   const len = items.length;
 
-  const [active, setActive] = React.useState(() => wrapIndex(initialIndex, len));
+  const [active, setActive] = React.useState(() =>
+    wrapIndex(initialIndex, len),
+  );
   const [hovering, setHovering] = React.useState(false);
 
   React.useEffect(() => {
@@ -95,7 +97,35 @@ export function CardStack<T extends CardStackItem>({
   }, [active]);
 
   const maxOffset = Math.max(0, Math.floor(maxVisible / 2));
-  const cardSpacing = Math.max(10, Math.round(cardWidth * (1 - overlap)));
+  // ak cahnges
+  // const cardSpacing = Math.max(10, Math.round(cardWidth * (1 - overlap)));
+
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const responsiveCardWidth = isMobile
+    ? Math.min(cardWidth, window.innerWidth - 40)
+    : cardWidth;
+
+  const responsiveCardHeight = isMobile
+    ? Math.min(cardHeight, 300)
+    : cardHeight;
+
+  const cardSpacing = Math.max(
+    10,
+    Math.round(responsiveCardWidth * (1 - overlap)),
+  );
+  //
   const stepDeg = maxOffset > 0 ? spreadDeg / maxOffset : 0;
 
   const canGoPrev = loop || active > 0;
@@ -120,12 +150,25 @@ export function CardStack<T extends CardStackItem>({
     if (!autoAdvance || reduceMotion || !len) return;
     if (pauseOnHover && hovering) return;
 
-    const id = window.setInterval(() => {
-      if (loop || active < len - 1) next();
-    }, Math.max(700, intervalMs));
+    const id = window.setInterval(
+      () => {
+        if (loop || active < len - 1) next();
+      },
+      Math.max(700, intervalMs),
+    );
 
     return () => window.clearInterval(id);
-  }, [autoAdvance, intervalMs, hovering, pauseOnHover, reduceMotion, len, loop, active, next]);
+  }, [
+    autoAdvance,
+    intervalMs,
+    hovering,
+    pauseOnHover,
+    reduceMotion,
+    len,
+    loop,
+    active,
+    next,
+  ]);
 
   if (!len) return null;
 
@@ -142,7 +185,9 @@ export function CardStack<T extends CardStackItem>({
         style={{
           position: "relative",
           width: "100%",
-          height: Math.max(380, cardHeight + 80),
+          height: isMobile
+            ? responsiveCardHeight + 60
+            : Math.max(380, cardHeight + 80),
         }}
         tabIndex={0}
         onKeyDown={onKeyDown}
@@ -228,8 +273,8 @@ export function CardStack<T extends CardStackItem>({
                   style={{
                     position: "absolute",
                     bottom: 0,
-                    width: cardWidth,
-                    height: cardHeight,
+                    width: responsiveCardWidth,
+                    height: responsiveCardHeight,
                     zIndex,
                     borderRadius: "16px",
                     border: "4px solid rgba(0,0,0,0.1)",
@@ -244,8 +289,19 @@ export function CardStack<T extends CardStackItem>({
                       ? false
                       : { opacity: 0, y: y + 40, x, rotateZ, rotateX, scale }
                   }
-                  animate={{ opacity: 1, x, y: y + lift, rotateZ, rotateX, scale }}
-                  transition={{ type: "spring", stiffness: springStiffness, damping: springDamping }}
+                  animate={{
+                    opacity: 1,
+                    x,
+                    y: y + lift,
+                    rotateZ,
+                    rotateX,
+                    scale,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: springStiffness,
+                    damping: springDamping,
+                  }}
                   onClick={() => setActive(i)}
                   {...dragProps}
                 >
@@ -348,7 +404,8 @@ function DefaultFanCard({ item }: { item: CardStackItem; active: boolean }) {
         style={{
           position: "absolute",
           inset: 0,
-          background: "linear-gradient(to top, rgba(0,0,0,0.6), transparent 60%)",
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0.6), transparent 60%)",
           pointerEvents: "none",
         }}
       />
@@ -363,9 +420,17 @@ function DefaultFanCard({ item }: { item: CardStackItem; active: boolean }) {
           padding: "20px",
         }}
       >
-        <div style={{ fontSize: "18px", fontWeight: 600, color: "#fff" }}>{item.title}</div>
+        <div style={{ fontSize: "18px", fontWeight: 600, color: "#fff" }}>
+          {item.title}
+        </div>
         {item.description ? (
-          <div style={{ marginTop: "4px", fontSize: "14px", color: "rgba(255,255,255,0.8)" }}>
+          <div
+            style={{
+              marginTop: "4px",
+              fontSize: "14px",
+              color: "rgba(255,255,255,0.8)",
+            }}
+          >
             {item.description}
           </div>
         ) : null}

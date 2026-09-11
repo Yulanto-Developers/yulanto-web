@@ -11,10 +11,26 @@ import { EuropeFlagIcon } from "@/components/ourclients/EuropeFlagIcon";
 import Image1 from "@/assets/img/usa/banner-europe.jpg";
 import Image2 from "@/assets/img/usa/image-europe.jpg";
 import GlobalComp from "@/components/ourclients/globalcomp";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
+
+
+
 
 export default function USAClientsPage() {
   return (
     <>
+     <BreadcrumbSchema
+            items={[
+              {
+                name: "Home",
+                url: "https://yulanto-web.vercel.app/",
+              },
+              {
+                name: "Our Clients",
+                url: "https://yulanto-web.vercel.app/europe",
+              },
+            ]}
+          />
       <ClientsShowcasePage
         heroImage={Image1}
         heroBadgeText="Your Trusted Global Digital Solutions Partner"

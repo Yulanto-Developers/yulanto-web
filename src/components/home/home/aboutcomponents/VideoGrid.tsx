@@ -58,9 +58,10 @@ const VideoGrid = ({
         description=""
         animationType="text-reveal-lines"
         delay={300}
+        className="margin-m"
       />
 
-      <div className="row g-4 mt-3">
+      <div className="row g-4 mt-0 mt-md-3">
         {videos.map((video, index) => (
           <div
             key={`${video.id}-${video.youtubeId}-${index}`}

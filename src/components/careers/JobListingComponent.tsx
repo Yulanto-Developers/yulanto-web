@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type JSX } from "react";
-import type { SVGProps } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOnClickOutside } from "usehooks-ts";
 
@@ -28,7 +27,9 @@ export default function JobListingComponent({
   onJobClick,
 }: JobListingComponentProps) {
   const [activeItem, setActiveItem] = useState<Job | null>(null);
-  const ref = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
+
+  const ref = useRef<HTMLDivElement>(null!);
+
   useOnClickOutside(ref, () => setActiveItem(null));
 
   useEffect(() => {
@@ -39,13 +40,17 @@ export default function JobListingComponent({
     }
 
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+    };
   }, []);
 
   const safeJobs = Array.isArray(jobs) ? jobs : [];
 
   return (
     <div
+      className={`job-listing-wrapper ${className}`}
       style={{
         position: "relative",
         backgroundColor: "#ffffff",
@@ -53,8 +58,10 @@ export default function JobListingComponent({
         minHeight: "420px",
         overflow: "hidden",
       }}
-      className={className}
     >
+      {/* =========================
+          SECTION HEADING
+      ========================= */}
       <div className="text-center">
         <span className="tp-section-subtitle text-black blink-ball">
           We're Hiring
@@ -66,7 +73,9 @@ export default function JobListingComponent({
         </h4>
       </div>
 
-      {/* Overlay Backdrop */}
+      {/* =========================
+          OVERLAY BACKDROP
+      ========================= */}
       <AnimatePresence>
         {activeItem ? (
           <motion.div
@@ -79,16 +88,18 @@ export default function JobListingComponent({
               inset: 0,
               zIndex: 10,
               backdropFilter: "blur(12px)",
-             
             }}
           />
         ) : null}
       </AnimatePresence>
 
-      {/* Expanded Modal */}
+      {/* =========================
+          EXPANDED JOB MODAL
+      ========================= */}
       <AnimatePresence>
         {activeItem ? (
           <div
+            className="job-modal-wrapper"
             style={{
               position: "absolute",
               inset: 0,
@@ -99,6 +110,9 @@ export default function JobListingComponent({
             }}
           >
             <motion.div
+              ref={ref}
+              layoutId={`workItem-${activeItem.company}`}
+              className="job-modal"
               style={{
                 backgroundColor: "#ffffff",
                 display: "flex",
@@ -111,14 +125,17 @@ export default function JobListingComponent({
                 overflow: "hidden",
                 border: "2px solid #53ae7d",
                 padding: "24px",
-                boxShadow: "0 10px 25px -5px rgba(5, 52, 86, 0.2)",
+                boxShadow:
+                  "0 10px 25px -5px rgba(5, 52, 86, 0.2)",
                 borderRadius: "12px",
+                boxSizing: "border-box",
               }}
-              ref={ref}
-              layoutId={`workItem-${activeItem.company}`}
             >
-              {/* Job Header */}
+              {/* =========================
+                  MODAL HEADER
+              ========================= */}
               <div
+                className="job-modal-header"
                 style={{
                   display: "flex",
                   width: "100%",
@@ -126,6 +143,7 @@ export default function JobListingComponent({
                   gap: "16px",
                 }}
               >
+                {/* Logo */}
                 <motion.div
                   layoutId={`workItemLogo-${activeItem.company}`}
                   style={{
@@ -140,21 +158,24 @@ export default function JobListingComponent({
                   {activeItem.logo}
                 </motion.div>
 
+                {/* Company Details */}
                 <div
                   style={{
                     display: "flex",
                     flexGrow: 1,
                     flexDirection: "column",
                     gap: "4px",
+                    minWidth: 0,
                   }}
                 >
                   <motion.div
+                    layoutId={`workItemCompany-${activeItem.company}`}
                     style={{
                       color: "#053456",
                       fontSize: "18px",
                       fontWeight: 700,
+                      wordBreak: "break-word",
                     }}
-                    layoutId={`workItemCompany-${activeItem.company}`}
                   >
                     {activeItem.company}
                   </motion.div>
@@ -166,18 +187,20 @@ export default function JobListingComponent({
                       fontSize: "14px",
                       fontWeight: 600,
                       margin: 0,
+                      wordBreak: "break-word",
                     }}
                   >
                     {activeItem.title}
                   </motion.p>
 
                   <motion.div
+                    layoutId={`workItemExtras-${activeItem.company}`}
                     style={{
                       color: "#053456",
                       fontSize: "13px",
                       opacity: 0.8,
+                      wordBreak: "break-word",
                     }}
-                    layoutId={`workItemExtras-${activeItem.company}`}
                   >
                     {activeItem.salary} &nbsp; | &nbsp;
                     {activeItem.location} &nbsp; | &nbsp;
@@ -186,7 +209,9 @@ export default function JobListingComponent({
                 </div>
               </div>
 
-              {/* Job Description */}
+              {/* =========================
+                  JOB DESCRIPTION
+              ========================= */}
               <motion.p
                 layout
                 initial={{ opacity: 0 }}
@@ -200,19 +225,25 @@ export default function JobListingComponent({
                   fontSize: "14px",
                   lineHeight: 1.6,
                   margin: 0,
+                  width: "100%",
+                  wordBreak: "break-word",
                 }}
               >
                 {activeItem.job_description}
               </motion.p>
 
-              {/* Action Buttons */}
+              {/* =========================
+                  ACTION BUTTONS
+              ========================= */}
               <div
+                className="job-modal-actions"
                 style={{
                   display: "flex",
                   width: "100%",
                   justifyContent: "space-between",
                   alignItems: "center",
                   marginTop: "8px",
+                  gap: "12px",
                 }}
               >
                 <button
@@ -225,6 +256,7 @@ export default function JobListingComponent({
                     cursor: "pointer",
                     fontSize: "14px",
                     fontWeight: 600,
+                    padding: "8px 0",
                   }}
                 >
                   Close
@@ -245,11 +277,14 @@ export default function JobListingComponent({
         ) : null}
       </AnimatePresence>
 
-      {/* Grid: 3 cards per row */}
+      {/* =========================
+          JOB CARDS GRID
+      ========================= */}
       <div
+        className="job-listing-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
           gap: "16px",
           width: "100%",
           maxWidth: "1200px",
@@ -262,8 +297,12 @@ export default function JobListingComponent({
             key={role.company}
             onClick={() => {
               setActiveItem(role);
-              if (onJobClick) onJobClick(role);
+
+              if (onJobClick) {
+                onJobClick(role);
+              }
             }}
+            className="job-card"
             style={{
               backgroundColor: "#ffffff",
               display: "flex",
@@ -277,10 +316,15 @@ export default function JobListingComponent({
               boxShadow: "0 2px 8px rgba(5, 52, 86, 0.08)",
               borderRadius: "8px",
               boxSizing: "border-box",
+              minWidth: 0,
             }}
           >
+            {/* =========================
+                CARD LOGO
+            ========================= */}
             <motion.div
               layoutId={`workItemLogo-${role.company}`}
+              className="job-card-logo"
               style={{
                 fontSize: "32px",
                 color: "#053456",
@@ -293,7 +337,11 @@ export default function JobListingComponent({
               {role.logo}
             </motion.div>
 
+            {/* =========================
+                CARD CONTENT
+            ========================= */}
             <div
+              className="job-card-content"
               style={{
                 display: "flex",
                 width: "100%",
@@ -301,31 +349,40 @@ export default function JobListingComponent({
                 alignItems: "flex-start",
                 justifyContent: "space-between",
                 gap: "4px",
+                minWidth: 0,
               }}
             >
+              {/* Company */}
               <motion.div
+                layoutId={`workItemCompany-${role.company}`}
                 style={{
                   color: "#053456",
                   fontWeight: 700,
                   fontSize: "15px",
+                  wordBreak: "break-word",
+                  width: "100%",
                 }}
-                layoutId={`workItemCompany-${role.company}`}
               >
                 {role.company}
               </motion.div>
 
+              {/* Job Title + Salary */}
               <motion.div
+                layoutId={`workItemTitle-${role.company}`}
                 style={{
                   color: "#53ae7d",
                   fontSize: "13px",
                   fontWeight: 600,
+                  wordBreak: "break-word",
+                  width: "100%",
                 }}
-                layoutId={`workItemTitle-${role.company}`}
               >
                 {role.title} / {role.salary}
               </motion.div>
 
+              {/* Location + Job Time */}
               <motion.div
+                layoutId={`workItemExtras-${role.company}`}
                 style={{
                   color: "#053456",
                   display: "flex",
@@ -333,17 +390,22 @@ export default function JobListingComponent({
                   gap: "8px",
                   fontSize: "12px",
                   opacity: 0.85,
+                  flexWrap: "wrap",
+                  width: "100%",
+                  wordBreak: "break-word",
                 }}
-                layoutId={`workItemExtras-${role.company}`}
               >
                 {role.remote === "Yes" && ` ${role.location} `}
+
                 {role.remote === "No" && ` ${role.location} `}
+
                 {role.remote === "Hybrid" &&
                   ` ${role.remote} / ${role.location} `}
+
                 | {role.job_time}
               </motion.div>
 
-              {/* Read More Link */}
+              {/* Read More */}
               <span
                 style={{
                   color: "#53ae7d",
@@ -362,6 +424,111 @@ export default function JobListingComponent({
           </motion.div>
         ))}
       </div>
+
+      {/* =========================
+          RESPONSIVE CSS
+      ========================= */}
+      <style jsx>{`
+        /* =================================
+           TABLET
+           768px - 991px
+           2 CARDS PER ROW
+        ================================= */
+        @media (max-width: 991px) {
+          .job-listing-wrapper {
+            padding: 50px 20px !important;
+          }
+
+          .job-listing-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 16px !important;
+          }
+
+          .job-card {
+            padding: 15px !important;
+            gap: 14px !important;
+          }
+
+          .job-card-logo {
+            font-size: 30px !important;
+          }
+        }
+
+        /* =================================
+           MOBILE
+           767px AND BELOW
+           1 CARD PER ROW
+        ================================= */
+        @media (max-width: 767px) {
+          .job-listing-wrapper {
+            padding: 40px 15px !important;
+          }
+
+          .job-listing-grid {
+            grid-template-columns: minmax(0, 1fr) !important;
+            gap: 14px !important;
+            width: 100% !important;
+          }
+
+          .job-card {
+            width: 100% !important;
+            padding: 15px !important;
+            gap: 14px !important;
+          }
+
+          .job-card-logo {
+            font-size: 28px !important;
+          }
+
+          .job-card-content {
+            min-width: 0 !important;
+          }
+
+          .job-modal {
+            width: 95% !important;
+            max-width: 95% !important;
+            padding: 18px !important;
+          }
+
+          .job-modal-header {
+            gap: 12px !important;
+          }
+        }
+
+        /* =================================
+           SMALL MOBILE
+           480px AND BELOW
+        ================================= */
+        @media (max-width: 480px) {
+          .job-listing-wrapper {
+            padding: 35px 12px !important;
+          }
+
+          .job-listing-grid {
+            grid-template-columns: minmax(0, 1fr) !important;
+            gap: 12px !important;
+          }
+
+          .job-card {
+            padding: 13px !important;
+            gap: 12px !important;
+          }
+
+          .job-card-logo {
+            font-size: 26px !important;
+          }
+
+          .job-modal {
+            width: 96% !important;
+            max-width: 96% !important;
+            padding: 16px !important;
+          }
+
+          .job-modal-actions {
+            flex-wrap: wrap;
+          }
+        }
+      `}</style>
     </div>
   );
 }

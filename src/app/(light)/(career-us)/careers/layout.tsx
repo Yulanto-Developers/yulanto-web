@@ -5,7 +5,13 @@ import FloatingActionsWrapper from "@/components/home/home/components/FloatingIc
 import QuoteModal from "@/components/home/home/myComponents/Pop";
 import "@/assets/css/style.css";
 import "@/assets/css/custome.css";
+import { generateSeo } from "@/lib/seo";
 
+export const metadata = generateSeo({
+  title: "Careers at Yulanto Web Creations | Join Our Growing Team",
+  description:
+    "Explore career opportunities at Yulanto Web Creations and join a growing team working on web design, development, SEO and digital solutions.",
+});
 export default function DesignStudioLayout({
   children,
 }: {
