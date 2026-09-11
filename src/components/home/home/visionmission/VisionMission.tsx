@@ -13,7 +13,7 @@ const VisionMission = () => {
   useAOS();
 
   return (
-    <div className="container py-5">
+    <div className="container pt-3 pb-3 pt-md-5 pb-md-4">
       <div 
         className="vision-mission-row"
         onMouseLeave={() => setActiveCard("vision")}

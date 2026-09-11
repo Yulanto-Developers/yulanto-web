@@ -12,10 +12,22 @@ import { CanadaFlagIcon } from "@/components/ourclients/CanadaFlagIcon";
 import Image1 from "@/assets/img/usa/banner-uk.jpg";
 import Image2 from "@/assets/img/usa/image-uk.jpg";
 import GlobalComp from "@/components/ourclients/globalcomp";
-
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 export default function SingaporeMalaysiaClientsPage() {
   return (
     <>
+    <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://yulanto-web.vercel.app/",
+          },
+          {
+            name: "Our Story",
+            url: "https://yulanto-web.vercel.app/uk",
+          },
+        ]}
+      />
       <ClientsShowcasePage
         heroImage={Image1}
         heroBadgeText="Empowering UK Businesses with Innovative Digital Solutions"

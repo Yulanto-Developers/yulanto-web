@@ -55,7 +55,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                 data-delay=".3"
                             >
                                 <div>
-                                    <Image src="/assets/img/logo/logo-white.png" alt="Pixora Logo" width={200} height={90} />
+                                    <Image src="/assets/img/logo/logo-white.png" alt="yulanto Logo" width={200} height={90} />
                                     <h4 className="px-footer-widget-title mt-3">
                                         We create professional websites that help businesses build a strong online presence, generate leads, and grow digitally.
                                     </h4>
@@ -161,7 +161,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                         <span className="font-size-18">
                                             F3, #4/608, First Floor,<br />
                                             V.O.C Street, Kottivakkam,<br /> OMR,
-                                            Chennai - 600 041,<br /> Tamilnadu, India
+                                            Chennai - 600 041,<br /> Tamil Nadu, India
                                         </span>
                                     </Link>
                                 </div>
@@ -175,7 +175,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                             <i className="fa-solid fa-location-arrow"></i>
                                         </span>
 
-                                        <span className="text">Get Direction</span>
+                                        <span className="text">Get Directions</span>
                                     </Link>
                                 </div>
 

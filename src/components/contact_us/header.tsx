@@ -1,6 +1,7 @@
 import { BigArrowIcon, ScrollDownArrowIcon } from "@/svg/ArrowIcons";
 import { ScrollLink } from "../common/ScrollLink";
 import Image from "next/image";
+import "../../components/ourclients/clientpage.css"
 
 const ContactUsTopIntro = () => {
     return (

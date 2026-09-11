@@ -44,8 +44,8 @@ const data = [
   },
   {
     path: "/careers",
-    title: "Our Career",
-    currentPage: "Our Career",
+    title: "Our Careers",
+    currentPage: "Our Careers",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
