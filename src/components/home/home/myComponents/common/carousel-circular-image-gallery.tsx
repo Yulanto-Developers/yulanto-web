@@ -150,7 +150,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
         }
 
         autoplayTimer.current =
-            window.setInterval(next, 4500000);
+            window.setInterval(next, 4500);
 
         return () => {
             if (autoplayTimer.current) {

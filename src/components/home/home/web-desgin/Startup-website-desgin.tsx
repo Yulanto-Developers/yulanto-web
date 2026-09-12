@@ -205,7 +205,7 @@ function Startupwebsitedesign() {
         },
         {
             id: 12,
-            name: "Education and institutions",
+            name: "Education and Institutions",
             icon: <FaGraduationCap />,
             image: v12.src,
             description:
@@ -664,9 +664,9 @@ function Startupwebsitedesign() {
 `}</style>
 
             <IntroContent data-aos='fade-up'
-                leftTitle={'Startup Website Design'}
+                leftTitle={'Startup Website Desgin'}
                 rightTitle1={'Web Designing Company'}
-                rightTitle2={' in Chennai for Startups.'}
+                rightTitle2={' in Chennai for Startups'}
                 description={'Launch your business with a professional, high-performing website designed to build credibility, attract customers, and support long-term growth. '}
                 css='mt-5'
             />
@@ -1315,7 +1315,7 @@ function Startupwebsitedesign() {
 
                         <div className='col-md-4'>
 
-                            <img src={b2.src} alt='img' className='img-border-cls' style={{ height: '330px' }} />
+                            <img src={b2.src} alt='img' className='img-border-cls' style={{ height: '300px' }} />
                         </div>
 
 
@@ -1433,7 +1433,7 @@ function Startupwebsitedesign() {
                         {/* <br /> */}
                         Whether you are looking for webdesign Chennai, startup website design, responsive web design, WordPress website design, or a complete digital presence, our team can develop a solution around your business requirements.
                     </p>
-                    <div className="ambassador-card">
+                    <div className="ambassador-card" onClick={openModal}>
 
                         {/* Default Content */}
                         <div className="ambassador-card-content ambassador-card-default">

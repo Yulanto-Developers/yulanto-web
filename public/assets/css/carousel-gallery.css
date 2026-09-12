@@ -21,7 +21,7 @@
     position: relative;
 
     /* Original image ratio: 800 x 320 */
-    width: min(1000px, 80vw);
+    width: min(900px, 60vw);
     aspect-ratio: 800 / 320;
 
     max-width: 900px;

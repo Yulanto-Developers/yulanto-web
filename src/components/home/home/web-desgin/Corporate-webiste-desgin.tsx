@@ -29,7 +29,7 @@ import img3_2 from "@/assets/img/website/corporate/3.2.jpg";
 import img4_1 from "@/assets/img/website/corporate/4.1.jpg";
 import img4_2 from "@/assets/img/website/corporate/4.2.jpg";
 // import img2_2 from "@/assets/img/website/corporate/2.2.jpg";
-
+import Image from "next/image";
 
 import {
   FaShieldHalved,
@@ -84,6 +84,10 @@ import AnimatedFeatureGrid from "../myComponents/common/AnimatedFeatureGrid";
 import CorporateApproachGrid from "../myComponents/common/CorporateApproachGrid";
 import { useAOS } from "@/components/hooks/useAOS";
 import CreativeAgencyCapsule from "../myComponents/common/CreativeAgencyCapsule";
+// import b1 from '@/assets/img/website/redesgin/Professional-Excellence-1.jpg'
+// import b2 from '@/assets/img/website/redesgin/Professional-Excellence-left.jpg'
+// import b3 from '@/assets/img/website/redesgin/Professional-Excellence-right.jpg'
+import vector from '@/assets/img/website/corporate/vector-1.png'
 
 interface WhyChooseUsProps {
   featuresList?: string[];
@@ -106,7 +110,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
     { name: "PHP", icon: FaPhp, color: "#777BB4" },
     { name: "CodeIgniter", icon: SiCodeigniter, color: "#EF4223" },
     { name: "React", icon: FaReact, color: "#61DAFB" },
-    { name: "Node Js", icon: FaNodeJs, color: "#339933" },
+    { name: "Node Js", icon: FaNodeJs, color: "#c5b215" },
     { name: "WooCommerce", icon: SiWoocommerce, color: "#96588A" },
     { name: "Shopify", icon: FaShopify, color: "#95BF47" },
     { name: "MySQL", icon: SiMysql, color: "#4479A1" },
@@ -1015,7 +1019,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
 
           {/* TRUSTED PARTNER & CTA BANNER */}
           <div className="trusted-partner-banner mb-80">
-            <div className="row align-items-center">
+            <div className="row align-item-between">
               <div className="col-lg-8 mb-4 mb-lg-0">
                 <span className="partner-badge">Your Trusted Partner</span>
                 <h3>Your Trusted Website Design Partner in Chennai</h3>
@@ -1044,6 +1048,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               </div>
 
               <div className="col-lg-4  text-start">
+                <Image src={vector} alt='vector-img' />
                 <div className="cta-box">
                   <h4>Let’s build something great together.</h4>
                   <p>
