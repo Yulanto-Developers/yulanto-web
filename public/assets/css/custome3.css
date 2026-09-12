@@ -2325,6 +2325,32 @@
     animation-delay: 1.5s;
 }
 
+
+.redesign-para p {
+     max-width: 1000px;
+     margin: auto;
+     text-align: center;
+     border: #e4d6d6 solid 1px;
+     padding: 7px;
+     background-color: #fff;
+     border-radius: 10px;
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     -ms-border-radius: 10px;
+     -o-border-radius: 10px;
+     border-left: #053456 4px solid;
+     border-right: #053456 4px solid;
+     font-size: 16px !important;
+}
+.redesign-para p:hover{
+    transform: translateY(-4px) ;
+    -webkit-transform: translateY(-4px) ;
+    -moz-transform: translateY(-4px) ;
+    -ms-transform: translateY(-4px) ;
+    -o-transform: translateY(-4px) ;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
 @keyframes growthDraw {
     to {
         stroke-dashoffset: 0;
@@ -2381,7 +2407,7 @@
 ========================================= */
 
 .portal-contact-banner {
-   
+
     padding: 55px 65px;
     display: flex;
     align-items: center;

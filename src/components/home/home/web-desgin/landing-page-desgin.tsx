@@ -39,7 +39,7 @@ function Landingpagedesgin() {
                 data-aos-once={true}>
                 <div className='container'>
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 redesign-para">
                             <p className='text-center'>
                                 From First Click to Final Conversion — We Design Landing Pages That Make an Impact.</p>
                         </div>
@@ -63,10 +63,6 @@ function Landingpagedesgin() {
                                 </span>
                                 Best Web Designers in Chennai
                             </h4>
-
-                        </div>
-
-                        <div className="col-md-7">
                             <p>
                                 A landing page is more than just a single webpage. It is a focused
                                 digital experience created to guide visitors toward a specific action
@@ -77,8 +73,12 @@ function Landingpagedesgin() {
                                 landing pages that combine attractive design with strategic content
                                 and user-friendly navigation.
                             </p>
+                        </div>
 
-                            <div className="landing-list mt-25">
+                        <div className="col-md-7">
+
+
+                            <div className="landing-list ">
                                 <div className="row">
                                     {landinglist.map((item, index) => {
                                         const Icon = item.icon;
@@ -207,16 +207,17 @@ function Landingpagedesgin() {
                                         data-aos-delay={index * 100}
                                         data-aos-once={true}
                                     >
-                                        <div className="welcome-benefit-card">
-
+                                        <div className="welcome-benefit-card position-relative overflow-hidden">
                                             <span className="welcome-benefit-number">
                                                 {String(item.id).padStart(2, "0")}
                                             </span>
 
-                                            <h3 className='text-tenor'>
+                                            <h3 className="text-tenor">
                                                 {item.title}
                                             </h3>
 
+                                            {/* Round element in bottom right corner */}
+                                            <div className="welcome-benefit-circle position-absolute bottom-0 end-0 rounded-circle"></div>
                                         </div>
                                     </div>
                                 ))}
@@ -286,7 +287,7 @@ function Landingpagedesgin() {
             <div data-aos="fade-down"
                 data-aos-delay={400}
                 data-aos-once={true}>
-                <div className="container mt-50 mb-50">
+                <div className="container mt-20 mb-50">
                     <div className="row">
                         <div className="col-12">
                             <span className="tp-section-subtitle blink-ball">

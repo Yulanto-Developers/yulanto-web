@@ -17,6 +17,10 @@ import l3 from "@/assets/img/website/landing/Landing-Page-3.jpg";
 import l4 from "@/assets/img/website/landing/Landing-Page-4.jpg";
 import l5 from "@/assets/img/website/landing/Landing-Page-5.jpg";
 import l6 from "@/assets/img/website/landing/Landing-Page-6.jpg";
+import tc from "@/assets/img/website/landing/tpc.jpg";
+import tl from "@/assets/img/website/landing/tpr.jpg";
+import tr from "@/assets/img/website/landing/tpc.jpg";
+
 import {
     FaGoogle,
     FaFacebookF,
@@ -91,17 +95,17 @@ export const startupGalleryImages = [
 
 export const galleryImages = [
     {
-        src: bc.src,
+        src: tc.src,
         alt: "Corporate website design",
         className: "gallery-main",
     },
     {
-        src: bl.src,
+        src: tl.src,
         alt: "Corporate website development",
         className: "gallery-small gallery-small-one",
     },
     {
-        src: br.src,
+        src: tr.src,
         alt: "Corporate website",
         className: "gallery-small gallery-small-two",
     },

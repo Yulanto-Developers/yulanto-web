@@ -69,6 +69,7 @@ import wl2 from '@/assets/img/website/redesgin/Looking-for-Website-left.jpg';
 import wl3 from '@/assets/img/website/redesgin/Looking-for-Website-right.jpg';
 import { useQuoteModal } from '../myComponents/Content/QuoteContext';
 
+
 function Websiteredesign() {
 
     /* =====================================================
@@ -473,10 +474,10 @@ function Websiteredesign() {
             text: "SEO-friendly structure",
             icon: <FaMagnifyingGlassChart />,
         },
-        {
-            text: "Content presentation",
-            icon: <FaFileLines />,
-        },
+        // {
+        //     text: "Content presentation",
+        //     icon: <FaFileLines />,
+        // },
         {
             text: "Conversion-focused layouts",
             icon: <FaArrowTrendUp />,
@@ -628,7 +629,7 @@ function Websiteredesign() {
                 css='mt-50'
             />
             <div className="container">
-                <div className="row my-3">
+                <div className="row my-3 align-items-center">
                     <div className="col-md-6">
                         <div className="corporate-features">
                             {corporate.map((item) => (
@@ -687,7 +688,7 @@ function Websiteredesign() {
             <div data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
                 <div className="container mt-10 mb-50">
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 redesign-para">
                             <p>
                                 We don't simply change the colors and layout. We analyze your existing website, identify opportunities for improvement, and develop a redesign strategy that delivers a better overall digital experience.</p>
                         </div>
@@ -751,7 +752,7 @@ function Websiteredesign() {
                         <ImageGallery images={galleryImages} />
 
                         <div className="col-12 mt-20">
-                            <p> At Yulanto Web Creations, we combine creative UI/UX design, modern web technologies, responsive layouts, performance optimization, and SEO-friendly structures to give your existing website a complete digital makeover.
+                            <p className=''> At Yulanto Web Creations, we combine creative UI/UX design, modern web technologies, responsive layouts, performance optimization, and SEO-friendly structures to give your existing website a complete digital makeover.
                                 Whether you need a simple website revamp in Chennai, a complete redesign, or an AI website redesign in Chennai, our team creates a website that looks modern, performs better, and supports your business goals.</p>
                         </div>
                     </div>

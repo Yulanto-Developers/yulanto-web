@@ -1,7 +1,17 @@
 'use client';
 
-import React, { forwardRef } from 'react';
+import React, {
+    forwardRef,
+    useLayoutEffect,
+    useRef,
+} from 'react';
+
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import '@/assets/css/scroll-card.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export interface ProcessCardData {
     title: string;
@@ -19,15 +29,162 @@ interface ScrollCardProps {
 const ScrollCard = forwardRef<HTMLElement, ScrollCardProps>(
     ({ cardsData, sectionTitle }, ref) => {
 
+        const sectionRef = useRef<HTMLElement | null>(null);
+
+        useLayoutEffect(() => {
+
+            const section = sectionRef.current;
+
+            if (!section) return;
+
+            const ctx = gsap.context(() => {
+
+                const cards = gsap.utils.toArray<HTMLElement>(
+                    '.scroll-process-card'
+                );
+
+                const heading =
+                    section.querySelector(
+                        '.scroll-process-heading-inner'
+                    );
+
+                if (!cards.length) return;
+
+
+                /* =====================================================
+                   CARD STACK
+                ===================================================== */
+
+                cards.forEach((card, index) => {
+
+                    gsap.set(card, {
+                        zIndex: index + 1,
+                    });
+
+                });
+
+
+                /* =====================================================
+                   PIN LEFT CARDS
+                ===================================================== */
+
+                ScrollTrigger.create({
+                    trigger: section,
+
+                    start: 'top top',
+
+                    end: 'bottom bottom',
+
+                    pin: false,
+
+                    scrub: false,
+
+                    invalidateOnRefresh: true,
+                });
+
+
+                /* =====================================================
+                   EACH CARD POSITION
+                ===================================================== */
+
+                cards.forEach((card, index) => {
+
+                    const wrapper =
+                        card.closest(
+                            '.scroll-process-card-wrapper'
+                        ) as HTMLElement | null;
+
+                    if (!wrapper) return;
+
+
+                    gsap.set(wrapper, {
+                        position: 'relative',
+                    });
+
+
+                    /*
+                     * Keep each card centered while its
+                     * wrapper scrolls.
+                     */
+                    ScrollTrigger.create({
+
+                        trigger: wrapper,
+
+                        start: 'top top+=100',
+
+                        end: 'bottom top+=100',
+
+                        pin: card,
+
+                        pinSpacing: false,
+
+                        anticipatePin: 1,
+
+                        invalidateOnRefresh: true,
+                    });
+
+                });
+
+
+                /* =====================================================
+                   RIGHT HEADING
+                ===================================================== */
+
+                if (heading) {
+
+                    ScrollTrigger.create({
+
+                        trigger: section,
+
+                        start: 'top top',
+
+                        end: 'bottom bottom',
+
+                        pin: heading,
+
+                        pinSpacing: false,
+
+                        anticipatePin: 1,
+
+                        invalidateOnRefresh: true,
+                    });
+
+                }
+
+
+                /* =====================================================
+                   REFRESH
+                ===================================================== */
+
+                ScrollTrigger.refresh();
+
+            }, section);
+
+            return () => {
+                ctx.revert();
+            };
+
+        }, [cardsData]);
+
+
         return (
             <section
-                ref={ref}
+                ref={(node) => {
+                    sectionRef.current = node;
+
+                    if (typeof ref === 'function') {
+                        ref(node);
+                    } else if (ref) {
+                        ref.current = node;
+                    }
+                }}
                 className="scroll-process-section"
             >
 
                 <div className="scroll-process-container">
 
-                    {/* LEFT SIDE - SCROLLING IMAGE CARDS */}
+                    {/* LEFT SIDE */}
+
                     <div className="scroll-process-cards">
 
                         {cardsData.map((card, index) => (
@@ -38,23 +195,28 @@ const ScrollCard = forwardRef<HTMLElement, ScrollCardProps>(
                             >
 
                                 <article
-                                    className={`scroll-process-card ${card.rotation || ''}`}
+                                    className={`scroll-process-card ${
+                                        card.rotation || ''
+                                    }`}
                                     style={{
-                                        backgroundImage: `url("${card.bgImage}")`,
+                                        backgroundImage:
+                                            `url("${card.bgImage}")`,
                                     }}
                                 >
 
-                                    {/* IMAGE DARK OVERLAY */}
                                     <div className="scroll-process-overlay" />
 
-                                    {/* CONTENT OVER IMAGE */}
                                     <div className="scroll-process-card-content">
 
                                         <span className="scroll-process-step">
-                                            Step {String(index + 1).padStart(2, '0')}
+                                            Step{' '}
+                                            {String(index + 1).padStart(
+                                                2,
+                                                '0'
+                                            )}
                                         </span>
 
-                                        <h3 className='text-tenor'>
+                                        <h3 className="text-tenor">
                                             {card.title}
                                         </h3>
 
@@ -85,7 +247,8 @@ const ScrollCard = forwardRef<HTMLElement, ScrollCardProps>(
                     </div>
 
 
-                    {/* RIGHT SIDE - STICKY HEADING */}
+                    {/* RIGHT SIDE */}
+
                     <div className="scroll-process-heading">
 
                         <div className="scroll-process-heading-inner text-tenor">
