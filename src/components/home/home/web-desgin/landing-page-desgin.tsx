@@ -155,7 +155,7 @@ function Landingpagedesgin() {
 
                 </div>
 
-                {/* Scroll cards OUTSIDE Bootstrap row */}
+            
                 <ScrollCard
                     cardsData={processCards}
                     sectionTitle={
@@ -252,7 +252,7 @@ function Landingpagedesgin() {
                         </div>
                     </div>
 
-                    {/* Feature Grid Component */}
+                    
                     <LandingUiFeatures features={landingUiFeatures} />
                 </div>
             </div>
@@ -340,35 +340,31 @@ function Landingpagedesgin() {
 
                         <div className="col-12">
 
-                            <div className="row g-4 mt-20">
+                           <div className="row g-4 mt-20">
+    {landingPageBenefits.map((item, index) => (
+        <div
+            className="col-lg-3 col-md-6"
+            key={item.id}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+            data-aos-once={true}
+        >
+            <div className="landing-page-benefit-card">
+                <h3 className="text-tenor">
+                    {item.title}
+                </h3>
 
-                                {landingPageBenefits.map((item, index) => (
-                                    <div
-                                        className="col-lg-3 col-md-6"
-                                        key={item.id}
-                                        data-aos="fade-up"
-                                        data-aos-delay={index * 100}
-                                        data-aos-once={true}
-                                    >
-                                        <div className="landing-page-benefit-card">
+                {/* <p className="landing-page-benefit-desc">
+                    {item.description}
+                </p> */}
 
-                                            <span className="landing-page-benefit-number">
-                                                {String(item.id).padStart(2, "0")}
-                                            </span>
-
-                                            <h3 className='text-tenor'>
-                                                {item.title}
-                                            </h3>
-
-                                            <span className="landing-page-benefit-arrow">
-                                                →
-                                            </span>
-
-                                        </div>
-                                    </div>
-                                ))}
-
-                            </div>
+                {/* <div className="landing-page-benefit-arrow">
+                    →
+                </div> */}
+            </div>
+        </div>
+    ))}
+</div>
 
                         </div>
 
@@ -384,7 +380,7 @@ function Landingpagedesgin() {
 
                     <div className="row">
 
-                        <div className="col-12 text-center mb-40">
+                        <div className="col-12 mb-40">
 
                             <span className="tp-section-subtitle blink-ball">
                                 Your Landing Page Is Your Digital Sales Pitch
@@ -430,7 +426,7 @@ function Landingpagedesgin() {
                             </div>
                         ))}
 
-                        <div className="col-12 mt-30">
+                        <div className="col-12 mt-30 redesign-para">
 
                             <p className="text-center">
                                 We bring these elements together to create a landing
@@ -567,17 +563,17 @@ function Landingpagedesgin() {
 
                         <div className="col-12">
 
-                            <span className="tp-section-subtitle blink-ball">
+                            {/* <span className="tp-section-subtitle blink-ball">
                                 FAQs
-                            </span>
+                            </span> */}
 
-                            <h4 className="px-about-title mb-20">
+                            {/* <h4 className="px-about-title mb-20">
                                 <span className="text-blue-about">
-                                    Landing Page {" "}
+                                     {" "}
                                 </span>
                                 Design
-                            </h4>
-                            <FAQA1 num1={32} num2={42} highlightedText="Frequently Asked Questions"
+                            </h4> */}
+                            <FAQA1 num1={32} num2={42} highlightedText="Landing Page Design - Frequently Asked Questions"
                                 titleSuffix="" />
 
 

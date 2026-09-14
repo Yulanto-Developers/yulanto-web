@@ -18,6 +18,8 @@
 
 /* =========================================================
    MAIN TWO COLUMN CONTAINER
+   LEFT  = HEADING
+   RIGHT = CARDS
 ========================================================= */
 
 .scroll-process-container {
@@ -25,11 +27,16 @@
     max-width: 1320px;
 
     margin: 0 auto;
+
     padding: 0 30px;
 
     display: grid;
 
-    grid-template-columns: 55% 45%;
+    /*
+     * LEFT  = 45%
+     * RIGHT = 55%
+     */
+    grid-template-columns: 45% 55%;
 
     align-items: start;
 
@@ -40,7 +47,96 @@
 
 
 /* =========================================================
-   LEFT SIDE - CARDS
+   LEFT SIDE - HEADING
+========================================================= */
+
+.scroll-process-heading {
+    width: 100%;
+
+    position: sticky;
+
+    top: 78px;
+
+    height: calc(100vh - 78px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+    z-index: 20;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADING INNER
+========================================================= */
+
+.scroll-process-heading-inner {
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.scroll-process-small-title {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #53AE7D;
+
+    font-size: 14px;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.scroll-process-heading h2 {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 54px;
+
+    line-height: 1.12;
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+}
+
+
+.scroll-process-heading h2 span {
+    color: #53AE7D;
+}
+
+
+/* =========================================================
+   RIGHT SIDE - CARDS
 ========================================================= */
 
 .scroll-process-cards {
@@ -62,28 +158,32 @@
 
 /* =========================================================
    CARD WRAPPER
+
+   IMPORTANT:
+   DO NOT USE position: sticky HERE.
+
+   GSAP ScrollTrigger is responsible for
+   pinning the card.
 ========================================================= */
 
 .scroll-process-card-wrapper {
     width: 100%;
 
     /*
-     * Main scroll distance.
-     *
-     * 75vh gives a tighter card transition than 100vh.
+     * This creates the scroll distance
+     * for each card.
      */
     height: 75vh;
 
     /*
      * IMPORTANT:
-     * The wrapper is sticky.
+     * GSAP controls the pinning.
      */
-    position: sticky;
+    position: relative;
 
-    /*
-     * Navbar/header height.
-     */
-    top: 78px;
+    top: auto;
+    left: auto;
+    right: auto;
 
     display: flex;
 
@@ -91,7 +191,7 @@
 
     justify-content: center;
 
-    padding: 20px 20px;
+    padding: 20px;
 
     box-sizing: border-box;
 }
@@ -193,6 +293,7 @@
     inset: 0;
 
     width: 100%;
+
     height: 100%;
 
     z-index: 1;
@@ -324,107 +425,13 @@
         transform 0.3s ease;
 }
 
+
 .scroll-process-link:hover {
     background: #8ecaff;
 
     color: #053456;
 
     transform: translateX(5px);
-}
-
-
-/* =========================================================
-   RIGHT SIDE - STICKY HEADING
-========================================================= */
-
-.scroll-process-heading {
-    width: 100%;
-
-    position: sticky;
-
-    /*
-     * Keep heading below navbar.
-     */
-    top: 78px;
-
-    /*
-     * Viewport height minus navbar.
-     */
-    height: calc(100vh - 78px);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 40px;
-
-    z-index: 20;
-
-    box-sizing: border-box;
-}
-
-
-/* =========================================================
-   RIGHT HEADING INNER
-========================================================= */
-
-.scroll-process-heading-inner {
-    width: 100%;
-
-    max-width: 520px;
-
-    padding: 20px;
-
-    box-sizing: border-box;
-}
-
-
-/* =========================================================
-   SMALL TITLE
-========================================================= */
-
-.scroll-process-small-title {
-    display: inline-block;
-
-    margin-bottom: 20px;
-
-    color: #53AE7D;
-
-    font-size: 14px;
-
-    line-height: 1.3;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-}
-
-
-/* =========================================================
-   MAIN HEADING
-========================================================= */
-
-.scroll-process-heading h2 {
-    margin: 0;
-
-    color: #fff;
-
-    font-size: 54px;
-
-    line-height: 1.12;
-
-    font-weight: 600;
-
-    letter-spacing: -1px;
-}
-
-
-.scroll-process-heading h2 span {
-    color: #53AE7D;
 }
 
 
@@ -438,16 +445,33 @@
         max-width: 1400px;
 
         padding-left: 30px;
+
         padding-right: 30px;
+
+        /*
+         * LEFT TEXT | RIGHT CARDS
+         */
+        grid-template-columns: 45% 55%;
+    }
+
+
+    .scroll-process-heading {
+        top: 78px;
     }
 
 
     .scroll-process-card-wrapper {
         height: 75vh;
 
-        top: 78px;
+        /*
+         * GSAP pin only
+         */
+        position: relative;
+
+        top: auto;
 
         padding-left: 20px;
+
         padding-right: 20px;
     }
 
@@ -472,19 +496,36 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .scroll-process-container {
-        grid-template-columns: 53% 47%;
+
+        /*
+         * LEFT TEXT | RIGHT CARDS
+         */
+        grid-template-columns: 45% 55%;
 
         padding-left: 25px;
+
         padding-right: 25px;
+    }
+
+
+    .scroll-process-heading {
+        top: 78px;
+
+        padding-left: 30px;
+
+        padding-right: 30px;
     }
 
 
     .scroll-process-card-wrapper {
         height: 75vh;
 
-        top: 78px;
+        position: relative;
+
+        top: auto;
 
         padding-left: 10px;
+
         padding-right: 10px;
     }
 
@@ -508,12 +549,6 @@
 
     .scroll-process-card-content p {
         font-size: 15px;
-    }
-
-
-    .scroll-process-heading {
-        padding-left: 30px;
-        padding-right: 30px;
     }
 
 
@@ -546,6 +581,7 @@
         grid-template-columns: 1fr;
 
         padding-left: 20px;
+
         padding-right: 20px;
 
         overflow: visible;
@@ -559,11 +595,15 @@
     .scroll-process-heading {
         width: 100%;
 
+        /*
+         * Disable sticky on tablet.
+         */
         position: relative;
 
         top: auto;
 
         left: auto;
+
         right: auto;
 
         height: auto;
@@ -625,6 +665,9 @@
 
         min-height: 550px;
 
+        /*
+         * No sticky on tablet.
+         */
         position: relative;
 
         top: auto;
@@ -653,6 +696,7 @@
         top: auto;
 
         left: auto;
+
         right: auto;
 
         margin: 0 auto;
@@ -737,6 +781,7 @@
 
     .scroll-process-container {
         padding-left: 15px;
+
         padding-right: 15px;
 
         grid-template-columns: 1fr;
@@ -845,6 +890,7 @@
         top: auto;
 
         left: auto;
+
         right: auto;
 
         margin: 0 auto;
@@ -925,6 +971,7 @@
 
     .scroll-process-container {
         padding-left: 10px;
+
         padding-right: 10px;
     }
 

@@ -296,13 +296,13 @@ import {
 } from "lucide-react";
 
 export const posterIndustries = [
-    { id: 1, name: "Lead Generation", icon: FileText, position: { top: "10%", left: "35%" } },
-    { id: 2, name: "Google Ads", icon: Palette, position: { top: "15%", right: "25%" } },
-    { id: 3, name: "Social Media Ads", icon: Sparkles, position: { top: "30%", left: "18%" } },
-    { id: 4, name: "Product Launches", icon: Award, position: { top: "30%", right: "18%" } },
-    { id: 5, name: "Service Promotions", icon: PenTool, position: { top: "50%", left: "4%" } },
-    { id: 6, name: "Event Registration", icon: Calendar, position: { top: "50%", right: "5%" } },
-    { id: 7, name: "Offers & Discounts", icon: Printer, position: { bottom: "35%", left: "45%" } },
+    { id: 1, name: "Lead Generation", icon: FileText, position: { top: "15%", left: "20%" } },
+    { id: 2, name: "Google Ads", icon: Palette, position: { top: "15%", right: "20%" } },
+    { id: 3, name: "Social Media Ads", icon: Sparkles, position: { top: "30%", left: "0%" } },
+    { id: 4, name: "Product Launches", icon: Award, position: { top: "30%", right: "0%" } },
+    { id: 5, name: "Service Promotions", icon: PenTool, position: { top: "65%", left: "4%" } },
+    { id: 6, name: "Event Registration", icon: Calendar, position: { top: "65%", right: "5%" } },
+    { id: 7, name: "Offers & Discounts", icon: Printer, position: { bottom: "10%", left: "45%" } },
 ];
 
 export interface wayStep {
