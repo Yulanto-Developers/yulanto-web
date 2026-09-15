@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
-
-
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface FAQItem {
   question: string;
@@ -51,10 +51,6 @@ const faqs: FAQItem[] = [
 ];
 
 const styles = `
-
-  /* FAQ 2-Column Grid Layout */
-  
-
   .faq-header-title {
     font-size: 28px;
     font-weight: 800;
@@ -141,35 +137,6 @@ const styles = `
   }
 
   @media (max-width: 768px) {
-    .tools-outer-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-    
-    .center-chip-container {
-      grid-column: span 2;
-      grid-row: auto;
-      margin: 10px 0;
-    }
-
-    .tool-card {
-      width: 105px;
-      height: 105px;
-    }
-
-    .ai-chip {
-      width: 110px;
-      height: 110px;
-    }
-
-    .ai-chip-title {
-      font-size: 20px;
-    }
-
-    .connection-svg {
-      display: none;
-    }
-
     .faq-container {
       margin-top: 40px;
       padding: 0 10px;
@@ -194,6 +161,13 @@ const styles = `
 export const AIToolsIntegrations: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -202,26 +176,23 @@ export const AIToolsIntegrations: React.FC = () => {
   const rightFaqs = faqs.slice(5, 9);
 
   return (
-    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{
-        backgroundColor: "#ffffff" ,overflowX:"hidden"
-      
-      }}>
+    <section 
+      className="px-about-6-area pt-40 pb-40 pb-lg-110" 
+      style={{ backgroundColor: "#ffffff", overflowX: "hidden" }}
+    >
       <style>{styles}</style>
 
       <div className="container container-1550">
-     
-
-
-        {/* 2-Column Split FAQ Layout (5 Items Left / 4 Items Right) */}
-        <div className="faq-container" data-aos="fade-up" data-aos-delay="250">
-        <h4 className="px-about-title mb-20">
-                <span className="text-blue-about text-center">Frequently Asked </span>
-                Questions
-              </h4>
+        {/* 2-Column Split FAQ Layout */}
+        <div className="faq-container">
+          <h4 className="px-about-title mb-20 text-center" data-aos="fade-up">
+            <span className="text-blue-about ">Frequently Asked </span>
+            Questions
+          </h4>
 
           <div className="faq-grid-2col">
             {/* Left Column (Items 0 to 4) */}
-            <div className="faq-column">
+            <div className="faq-column" data-aos="fade-right" data-aos-delay="150">
               {leftFaqs.map((faq, index) => {
                 const actualIndex = index;
                 const isOpen = openIndex === actualIndex;
@@ -235,7 +206,9 @@ export const AIToolsIntegrations: React.FC = () => {
                       onClick={() => toggleFAQ(actualIndex)}
                       aria-expanded={isOpen}
                     >
-                      <h5 className="" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"20px" }}>{faq.question}</h5>
+                      <h5 style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"', fontSize: "20px" }}>
+                        {faq.question}
+                      </h5>
                       <span className="faq-icon">+</span>
                     </button>
                     {isOpen && (
@@ -249,7 +222,7 @@ export const AIToolsIntegrations: React.FC = () => {
             </div>
 
             {/* Right Column (Items 5 to 8) */}
-            <div className="faq-column">
+            <div className="faq-column" data-aos="fade-left" data-aos-delay="300">
               {rightFaqs.map((faq, index) => {
                 const actualIndex = index + 5;
                 const isOpen = openIndex === actualIndex;
@@ -263,7 +236,9 @@ export const AIToolsIntegrations: React.FC = () => {
                       onClick={() => toggleFAQ(actualIndex)}
                       aria-expanded={isOpen}
                     >
-                        <h5 className="" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"20px", }}>{faq.question}</h5>
+                      <h5 style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"', fontSize: "20px" }}>
+                        {faq.question}
+                      </h5>
                       <span className="faq-icon">+</span>
                     </button>
                     {isOpen && (
