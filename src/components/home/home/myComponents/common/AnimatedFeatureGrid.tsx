@@ -88,7 +88,7 @@ function FeatureRow({
                         pathLength: 0,
                     }}
                     animate={{
-                        pathLength: isHovered ? 0.4 : 0,
+                        pathLength: isHovered ? 0.45 : 0,
                     }}
                     transition={{
                         duration: 1.2,

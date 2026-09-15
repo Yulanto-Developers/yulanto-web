@@ -85,41 +85,47 @@ const CultureCard = ({
   position: CardPosition;
 }) => {
   const theme = customColors || THEME_COLORS[colorTheme];
-
   const isLeft = !!position.left;
 
   return (
     <div
+      className="culture-card-wrapper"
       style={{
-        position: "absolute",
-        top: `${position.top}px`,
-        left: position.left || "auto",
-        right: position.right || "auto",
-        width: "280px",
-        transform: `rotate(${rotate}deg)`,
+        width: "100%",
+        maxWidth: "320px",
         transition: "transform 0.3s ease, z-index 0.3s ease",
         zIndex: 10,
+        // Desktop styles applied through CSS variable dynamic calculation below
+        ["--top" as any]: `${position.top}px`,
+        ["--left" as any]: position.left || "auto",
+        ["--right" as any]: position.right || "auto",
+        ["--rotate" as any]: `${rotate}deg`,
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.transform = `rotate(${rotate}deg) scale(1.05)`;
-        e.currentTarget.style.zIndex = "30";
+        if (window.innerWidth >= 768) {
+          e.currentTarget.style.transform = `rotate(${rotate}deg) scale(1.05)`;
+          e.currentTarget.style.zIndex = "30";
+        }
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.transform = `rotate(${rotate}deg) scale(1)`;
-        e.currentTarget.style.zIndex = "10";
+        if (window.innerWidth >= 768) {
+          e.currentTarget.style.transform = `rotate(${rotate}deg) scale(1)`;
+          e.currentTarget.style.zIndex = "10";
+        }
       }}
     >
-      {/* SIDE DECORATIVE IMAGE */}
+      {/* SIDE DECORATIVE IMAGE (DESKTOP ONLY) */}
       {sideImgSrc && (
         <img
           src={sideImgSrc}
           alt=""
           aria-hidden="true"
+          className="side-decorative-img"
           style={{
             position: "absolute",
             top: "50%",
-            width: "200px",
-            height: "200px",
+            width: "180px",
+            height: "180px",
             objectFit: "contain",
             borderRadius: "50px",
             transform: "translateY(-50%)",
@@ -127,12 +133,8 @@ const CultureCard = ({
             pointerEvents: "none",
 
             ...(isLeft
-              ? {
-                  left: "-250px",
-                }
-              : {
-                  right: "-250px",
-                }),
+              ? { left: "-210px" }
+              : { right: "-210px" }),
           }}
         />
       )}
@@ -145,6 +147,7 @@ const CultureCard = ({
           borderRadius: "25px",
           boxShadow: "0px 10px 20px 0px #D3D3D3",
           border: "1px solid #f5f5f5",
+          height: "100%",
         }}
       >
         <Pin color={theme.text} />
@@ -159,6 +162,7 @@ const CultureCard = ({
             flexDirection: "column",
             position: "relative",
             overflow: "hidden",
+            height: "calc(100% - 44px)",
           }}
         >
           {/* CARD IMAGE */}
@@ -189,7 +193,7 @@ const CultureCard = ({
           <p
             style={{
               color: "#6b7280",
-              fontSize: "15px !important",
+              fontSize: "14px",
               lineHeight: "1.5",
               margin: 0,
             }}
@@ -229,7 +233,6 @@ export default function WorkCultureSection() {
       sideImgSrc: "/assets/img/careers/Values.png",
       colorTheme: "orange",
     },
-
     {
       title: "Communication",
       description:
@@ -238,7 +241,6 @@ export default function WorkCultureSection() {
       sideImgSrc: "/assets/img/careers/communication.png",
       colorTheme: "blue",
     },
-
     {
       title: "Collaboration",
       description:
@@ -247,7 +249,6 @@ export default function WorkCultureSection() {
       sideImgSrc: "/assets/img/careers/Collaboration.png",
       colorTheme: "purple",
     },
-
     {
       title: "Leadership Style",
       description:
@@ -256,7 +257,6 @@ export default function WorkCultureSection() {
       sideImgSrc: "/assets/img/careers/leadership.png",
       colorTheme: "orange",
     },
-
     {
       title: "Employee Engagement",
       description:
@@ -265,7 +265,6 @@ export default function WorkCultureSection() {
       sideImgSrc: "/assets/img/careers/Employee Engagement.png",
       colorTheme: "blue",
     },
-
     {
       title: "Work-Life Balance",
       description:
@@ -274,7 +273,6 @@ export default function WorkCultureSection() {
       sideImgSrc: "/assets/img/careers/Work-Life Balance.png",
       colorTheme: "purple",
     },
-
     {
       title: "Recognition & Reward",
       description:
@@ -283,7 +281,6 @@ export default function WorkCultureSection() {
       sideImgSrc: "/assets/img/careers/Recognition & Reward.png",
       colorTheme: "orange",
     },
-
     {
       title: "Adaptability",
       description:
@@ -300,11 +297,61 @@ export default function WorkCultureSection() {
     <section
       style={{
         backgroundColor: "#ffffff",
-        padding: "40px 40px",
+        padding: "40px 16px",
         position: "relative",
         overflow: "hidden",
       }}
     >
+      {/* INJECTED RESPONSIVE MEDIA QUERIES */}
+      <style jsx global>{`
+        /* Mobile Layout Default */
+        .cards-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+          height: auto !important;
+        }
+
+        .culture-card-wrapper {
+          position: relative !important;
+          top: auto !important;
+          left: auto !important;
+          right: auto !important;
+          transform: none !important;
+        }
+
+        .svg-connector,
+        .side-decorative-img {
+          display: none !important;
+        }
+
+        /* Desktop Layout (768px and up) */
+        @media (min-width: 768px) {
+          .cards-container {
+            display: block;
+            height: ${height}px !important;
+          }
+
+          .culture-card-wrapper {
+            position: absolute !important;
+            width: 280px !important;
+            top: var(--top) !important;
+            left: var(--left) !important;
+            right: var(--right) !important;
+            transform: rotate(var(--rotate)) !important;
+          }
+
+          .svg-connector {
+            display: block !important;
+          }
+
+          .side-decorative-img {
+            display: block !important;
+          }
+        }
+      `}</style>
+
       {/* RULE LINES BACKGROUND */}
       <div
         style={{
@@ -321,7 +368,7 @@ export default function WorkCultureSection() {
       <div
         style={{
           maxWidth: "1150px",
-          margin: "0 auto 60px auto",
+          margin: "0 auto 40px auto",
           textAlign: "center",
           position: "relative",
           zIndex: 10,
@@ -330,16 +377,13 @@ export default function WorkCultureSection() {
         <h4
           className="px-about-title mb-20"
           style={{
-            fontSize: "32px",
+            fontSize: "28px",
             fontWeight: "700",
             color: "#1f2937",
-            margin: "0 0 20px 0",
+            margin: "0 0 16px 0",
           }}
         >
-          <span
-            className="text-blue-about"
-            style={{ color: "#2563eb" }}
-          >
+          <span className="text-blue-about" style={{ color: "#2563eb" }}>
             Work{" "}
           </span>{" "}
           Culture
@@ -355,15 +399,10 @@ export default function WorkCultureSection() {
           zIndex: 10,
         }}
       >
-        <div
-          style={{
-            position: "relative",
-            width: "100%",
-            height: `${height}px`,
-          }}
-        >
-          {/* SVG DASHED CONNECTING LINE */}
+        <div className="cards-container">
+          {/* SVG DASHED CONNECTING LINE (DESKTOP ONLY) */}
           <svg
+            className="svg-connector"
             style={{
               position: "absolute",
               top: 0,

@@ -5,6 +5,8 @@ import Banner from "@/components/careers/banner";
 import Culture from "@/components/careers/culture";
 import Job from "@/components/careers/job";
 import Hero from "@/components/careers/hero";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
+
 const careerImages: string[] = [
   "/assets/img/careers/banner/img-careers-1.jpg",
   "/assets/img/careers/banner/img-careers-2.jpg",
@@ -19,6 +21,18 @@ const careerImages: string[] = [
 export default function CareersPage() {
   return (
     <main>
+      <BreadcrumbSchema
+              items={[
+                {
+                  name: "Home",
+                  url: "https://yulanto-web.vercel.app/",
+                },
+                {
+                  name: "Our Story",
+                  url: "https://yulanto-web.vercel.app/uae",
+                },
+              ]}
+            />
       <Breadcrumbdata />
       <Hero
         subtitle="Join Our Journey"

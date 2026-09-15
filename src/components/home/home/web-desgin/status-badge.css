@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: center;
 
-    gap: 16px;
+    gap: 50px;
 
     width: auto;
     max-width: 100%;
@@ -53,7 +53,7 @@
 
     box-sizing: border-box;
 
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 1;
 
@@ -86,15 +86,15 @@
 ========================================= */
 
 .custom-badge-professional {
-    width: 180px;
-}
-
-.custom-badge-responsive {
     width: 250px;
 }
 
+.custom-badge-responsive {
+    width: 300px;
+}
+
 .custom-badge-navigation {
-    width: 160px;
+    width: 190px;
 }
 
 .custom-badge-seo {
@@ -102,15 +102,15 @@
 }
 
 .custom-badge-performance {
-    width: 230px;
+    width: 300px;
 }
 
 .custom-badge-conversion {
-    width: 180px;
+    width: 230px;
 }
 
 .custom-badge-scalable {
-    width: 280px;
+    width: 350px;
 }
 
 
@@ -182,7 +182,7 @@
     justify-content: center;
     align-items: center;
 
-    gap: 16px;
+    gap: 20px;
 }
 
 
@@ -837,11 +837,11 @@
     }
 
     .custom-badge-conversion {
-        width: 170px;
+        width: 220px;
     }
 
     .custom-badge-scalable {
-        width: 200px;
+        width: 250px;
     }
 
 

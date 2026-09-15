@@ -12,10 +12,25 @@ import { MalaysiaFlagIcon } from "@/components/ourclients/MalaysiaFlagIcon";
 import Image1 from "@/assets/img/usa/banner-singapore.jpg";
 import Image2 from "@/assets/img/usa/image-singapore.jpg";
 import GlobalComp from "@/components/ourclients/globalcomp";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
+
+
 
 export default function SingaporeMalaysiaClientsPage() {
   return (
     <>
+    <BreadcrumbSchema
+                items={[
+                  {
+                    name: "Home",
+                    url: "https://yulanto-web.vercel.app/",
+                  },
+                  {
+                    name: "Our Clients",
+                    url: "https://yulanto-web.vercel.app/singapore",
+                  },
+                ]}
+              />
       <ClientsShowcasePage
         heroImage={Image1}
         heroBadgeText="Your Trusted Digital Partner for Growth in Singapore & Malaysia"

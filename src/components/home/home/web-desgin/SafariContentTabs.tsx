@@ -172,9 +172,9 @@ export default function SafariContentTabs({
                         className="safari-text safari-text-full"
                     >
 
-                        <span className="safari-number">
+                        {/* <span className="safari-number">
                             {String(activeTab + 1).padStart(2, "0")}
-                        </span>
+                        </span> */}
 
                         <h4 className="px-about-title mb-20">
                             <span className="text-blue-about">

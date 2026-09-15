@@ -78,6 +78,7 @@ const GradientCardDemo = () => {
                             ethical practices, and complete accountability. Our commitment to integrity has
                             earned the trust and confidence of our clients, enabling us to grow together and
                             deliver lasting value with reliability and professionalism."
+        className="margin-m"
         />
 
 

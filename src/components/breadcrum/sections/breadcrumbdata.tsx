@@ -44,8 +44,8 @@ const data = [
   },
   {
     path: "/careers",
-    title: "Our Career",
-    currentPage: "Our Career",
+    title: "Our Careers",
+    currentPage: "Our Careers",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
@@ -100,8 +100,8 @@ const data = [
   },
   {
     path: "/web-design/startup-website-design",
-    title: "Startup Webiste Desgin",
-    currentPage: "Startup Webiste Design",
+    title: "Startup Website Desgin",
+    currentPage: "Startup Website Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {

@@ -7,6 +7,13 @@ const CreativeAgencyCapsule = () => {
 
     return (
         <div className="px-capsule-area">
+            <style>
+                {
+                    `.mb-md-100{
+                        margin-bottom: 100px !important;
+                    }`
+                }
+            </style>
             <div className="container container-1550">
                 <div className="row">
                     <div className="col-xl-12">
@@ -15,13 +22,13 @@ const CreativeAgencyCapsule = () => {
                                 className="px-capsule-top-wrapper p-relative"
                                 data-px-throwable-scene="true" ref={sceneRef}
                             >
-                                <div className="px-capsule-title-wrapper mb-70">
+                                <div className="px-capsule-title-wrapper mb-0 mb-md-100">
                                     {/* <span className="px-capsule-subtitle">
                                         Digital Services
                                     </span> */}
 
-                                    <h3 className="px-capsule-title">
-                                        Our <br /> <span style={{ color: '#053456' }}>Technologies</span>
+                                    <h3 className="px-capsule-title ">
+                                        Our  <span style={{ color: '#053456' }}>Technologies</span>
                                     </h3>
                                     <p>We use modern and reliable web technologies to create responsive, secure, scalable, and SEO-friendly websites. Depending on your business requirements, our website development solutions can be built using technologies and platforms such as</p>
                                 </div>

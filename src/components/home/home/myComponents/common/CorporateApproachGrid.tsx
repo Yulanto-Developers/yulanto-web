@@ -86,9 +86,9 @@ function CorporateApproachGrid({
 
                                 {/* CARD CONTENT */}
                                 <div className="approach-card-content">
-                                    <span className="approach-category text-tenor">
+                                    {/* <span className="approach-category text-tenor">
                                         {item.mainCategory}
-                                    </span>
+                                    </span> */}
 
                                     <h3 className="text-tenor">
                                         {item.title}
@@ -161,11 +161,11 @@ function CorporateApproachGrid({
                                 }}
                             >
                                 <span className="approach-modal-category">
-                                    {selectedItem.mainCategory} ({selectedItem.category})
+                                    {selectedItem.mainCategory}
                                 </span>
 
                                 <h2>
-                                    {selectedItem.title}
+                                    {selectedItem.category + " " + selectedItem.title}
                                 </h2>
 
                                 <p>

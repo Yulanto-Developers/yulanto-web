@@ -7,7 +7,7 @@ import { Metadata } from "next";
 // };
 
 import { generateSeo } from "@/lib/seo";
-
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 export const metadata = generateSeo({
   title: "Why Choose Yulanto? | Website Designing Company in Chennai",
   description:
@@ -18,6 +18,18 @@ export const metadata = generateSeo({
 const HomePage = () => {
   return (
     <>
+    <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://yulanto-web.vercel.app/",
+          },
+          {
+            name: "Why Choose us",
+            url: "https://yulanto-web.vercel.app/why-choose-us",
+          },
+        ]}
+      />
       <Breadcrumbdata />
       <WhyChooseUs />
     </>

@@ -7,10 +7,10 @@ import {
 } from "@/components/home/home/aboutcomponents";
 import GalleryGrid from "@/components/home/home/aboutcomponents/GalleryGrid";
 // import "./globals.scss";
+// seo
 import { generateSeo } from "@/lib/seo";
 import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 import FAQSchema from "@/components/seo-sechama/FAQSchema";
-
 import { faqData } from "@/lib/faq-data";
 
 export const metadata = generateSeo({
@@ -18,6 +18,7 @@ export const metadata = generateSeo({
   description:
     "Yulanto Web Creations is a leading web designing and development company in Chennai since 2015, creating custom web design and SEO-friendly websites.",
 });
+// end seo
 
 const HomePage = () => {
   const faq = faqData["our-story"];

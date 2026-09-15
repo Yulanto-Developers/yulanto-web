@@ -739,11 +739,14 @@
         }
 
         @media #{$xs} {
-            font-size: 60px;
+            font-size: 38px;
         }
 
         &-wrapper {
-            padding: 60px 0 0 40px;
+            padding: 10px 0 0 10px;
+             @media #{$lg,$xl} {
+             padding: 60px 0 0 40px;
+        }
         }
     }
 }
@@ -1509,3 +1512,127 @@
 
 
 // swiper ends
+
+
+/* =========================================================
+   TECHNOLOGY THROWABLE - MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Allow throwable elements to go outside their parents */
+    .px-capsule-area,
+    .px-capsule-area .container,
+    .px-capsule-area .row,
+    .px-capsule-area .col-xl-12,
+    .px-capsule-inner,
+    .px-capsule-top-wrapper,
+    .px-capsule-item-wrapper {
+        overflow: visible !important;
+    }
+
+    /* Main throwable scene */
+    .px-capsule-top-wrapper {
+        height: auto !important;
+        min-height: 500px !important;
+        padding-bottom: 200px !important;
+    }
+
+    /* Heading */
+    .px-capsule-title-wrapper {
+        margin-bottom: 40px !important;
+        position: relative;
+        z-index: 10;
+    }
+
+    .px-capsule-title {
+        font-size: 30px !important;
+        line-height: 1.2 !important;
+    }
+
+    .px-capsule-title-wrapper p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Throwable items area */
+    .px-capsule-item-wrapper {
+        position: relative !important;
+        width: 100% !important;
+        height: 500px !important;
+        min-height: 500px !important;
+        overflow: visible !important;
+    }
+
+    /* Each throwable item */
+    .px-capsule-item-wrapper > p {
+        overflow: visible !important;
+        margin: 0 !important;
+    }
+
+    /* Circles */
+    .px-capsule-item {
+        width:100px !important;
+        height:100px !important;
+
+        min-width:100px !important;
+        min-height:100px !important;
+
+        max-width: 100px !important;
+        max-height:100px !important;
+
+        border-radius: 50% !important;
+
+        font-size: 18px !important;
+        line-height: 1.1 !important;
+
+        padding: 7px !important;
+
+        gap: 4px !important;
+
+        white-space: nowrap;
+    }
+
+    .px-capsule-icon {
+        width: 11px !important;
+        height: 11px !important;
+        font-size: 11px !important;
+        flex-shrink: 0;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .px-capsule-top-wrapper {
+        min-height: 300px !important;
+        padding-bottom: 180px !important;
+    }
+
+    .px-capsule-item-wrapper {
+        height: 550px !important;
+        min-height: 550px !important;
+    }
+
+    .px-capsule-item {
+        width: 100px !important;
+        height: 100px !important;
+
+        min-width: 100px !important;
+        min-height: 100px !important;
+
+        max-width: 100px !important;
+        max-height: 100px !important;
+
+        font-size: 20px !important;
+    }
+
+    .px-capsule-icon {
+        width: 10px !important;
+        height: 10px !important;
+    }
+}

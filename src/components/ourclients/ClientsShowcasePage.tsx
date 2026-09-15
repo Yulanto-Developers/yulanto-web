@@ -114,57 +114,57 @@ const styles: Record<string, CSSProperties> = {
   visitLink: { color: colors.brand, fontSize: "1rem", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 4, textDecoration: "none" },
 };
 
-const ScrollToTop: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+// const ScrollToTop: React.FC = () => {
+//   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const toggleVisibility = () => {
-      setIsVisible(window.pageYOffset > 300);
-    };
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
+//   useEffect(() => {
+//     const toggleVisibility = () => {
+//       setIsVisible(window.pageYOffset > 300);
+//     };
+//     window.addEventListener("scroll", toggleVisibility);
+//     return () => window.removeEventListener("scroll", toggleVisibility);
+//   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+//   const scrollToTop = () => {
+//     window.scrollTo({ top: 0, behavior: "smooth" });
+//   };
 
-  return (
-    <button
-      onClick={scrollToTop}
-      style={{
-        position: "fixed",
-        bottom: "30px",
-        right: "30px",
-        width: "50px",
-        height: "50px",
-        borderRadius: "50%",
-        backgroundColor: colors.brand,
-        color: "#fff",
-        border: "none",
-        cursor: "pointer",
-        display: isVisible ? "flex" : "none",
-        alignItems: "center",
-        justifyContent: "center",
-        boxShadow: "0 4px 20px rgba(5, 52, 86, 0.3)",
-        transition: "all 0.3s ease",
-        zIndex: 999,
-        fontSize: "20px",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "scale(1.1)";
-        e.currentTarget.style.boxShadow = "0 6px 30px rgba(5, 52, 86, 0.4)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "scale(1)";
-        e.currentTarget.style.boxShadow = "0 4px 20px rgba(5, 52, 86, 0.3)";
-      }}
-      aria-label="Scroll to top"
-    >
-      <ArrowUp size={24} />
-    </button>
-  );
-};
+//   return (
+//     <button
+//       onClick={scrollToTop}
+//       style={{
+//         position: "fixed",
+//         bottom: "30px",
+//         right: "30px",
+//         width: "50px",
+//         height: "50px",
+//         borderRadius: "50%",
+//         backgroundColor: colors.brand,
+//         color: "#fff",
+//         border: "none",
+//         cursor: "pointer",
+//         display: isVisible ? "flex" : "none",
+//         alignItems: "center",
+//         justifyContent: "center",
+//         boxShadow: "0 4px 20px rgba(5, 52, 86, 0.3)",
+//         transition: "all 0.3s ease",
+//         zIndex: 999,
+//         fontSize: "20px",
+//       }}
+//       onMouseEnter={(e) => {
+//         e.currentTarget.style.transform = "scale(1.1)";
+//         e.currentTarget.style.boxShadow = "0 6px 30px rgba(5, 52, 86, 0.4)";
+//       }}
+//       onMouseLeave={(e) => {
+//         e.currentTarget.style.transform = "scale(1)";
+//         e.currentTarget.style.boxShadow = "0 4px 20px rgba(5, 52, 86, 0.3)";
+//       }}
+//       aria-label="Scroll to top"
+//     >
+//       <ArrowUp size={24} />
+//     </button>
+//   );
+// };
 
 export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
   const {
@@ -482,7 +482,7 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               {whyChooseItems.map((item, index) => (
-                <div
+                <div className="sn-why"
                   key={item.num}
                   data-aos="fade-up"
                   data-aos-delay={index * 50}
@@ -782,7 +782,7 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
         </div>
       </section>
 
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </div>
   );
 }

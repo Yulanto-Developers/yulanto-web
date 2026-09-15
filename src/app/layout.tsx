@@ -7,6 +7,7 @@ import "./globals.scss";
 import type { Metadata } from "next";
 import { company } from "@/lib/company";
 import Script from "next/script";
+import favicon from "@/assets/img/logo/favicon.png"
 
 // ===============================
 // FONTS
@@ -44,6 +45,7 @@ const SITE_URL = "https://yulanto-web.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  icons: favicon.src,
 
   // Default title.
   // Individual pages can override this.

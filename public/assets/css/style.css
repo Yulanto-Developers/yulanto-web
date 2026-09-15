@@ -12,7 +12,6 @@
   overflow: hidden;
 }
 
-
 .breadcrumb-banner-img {
   position: absolute;
   top: 85px !important;
@@ -104,6 +103,15 @@
     padding: 70px 0;
   }
 
+  .breadcrumb-content {
+    padding: 111px 0 0px !important;
+  }
+
+  .breadcrumb-banner-img {
+    top: 85px !important;
+    left: -100px !important;
+  }
+
   .breadcrumb-content h1 {
     font-size: 32px;
   }
@@ -117,6 +125,5 @@
     font-size: 15px;
   }
 }
-
 
 /********************************/

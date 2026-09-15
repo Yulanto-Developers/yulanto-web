@@ -41,7 +41,7 @@ export default function TeamSlider() {
   return (
     <section className="tm-slider-section">
       <SectionTitle
-        subtitle="Our Team"
+        subtitle="The People Behind Yulanto"
         titleFirst="Meet Our Team"
         titleSecond=""
         description="Our talented team of designers, developers, strategists, and innovators works together to deliver exceptional digital solutions. With expertise, creativity, and a commitment to excellence, we transform ideas into impactful results."/>

@@ -8,6 +8,7 @@ import MDProfile from "@/components/home/home/ourTeam/MDProfile";
 // };
 
 import { generateSeo } from "@/lib/seo";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 
 export const metadata = generateSeo({
   title: "Meet Our Team | Website Designers & Developers in Chennai | Yulanto",
@@ -18,6 +19,18 @@ export const metadata = generateSeo({
 const HomePage = () => {
     return (
         <>
+        <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://yulanto-web.vercel.app/",
+          },
+          {
+            name: "Meet Our Team",
+            url: "https://yulanto-web.vercel.app/our-team",
+          },
+        ]}
+      />
            <Breadcrumbdata />
             <MDProfile/>
             <TeamSlider />

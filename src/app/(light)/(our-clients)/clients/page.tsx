@@ -4,13 +4,13 @@ import Logoslider from "@/components/ourclients/logoslider";
 import GlobalComp from "@/components/ourclients/globalcomp";
 import Breadcrumbdata from "@/components/breadcrum/sections/breadcrumbdata";
 
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
  
 
 export default function Page() {
   return (
     <main>
      <Breadcrumbdata />
- 
       <Client />
       <Logoslider />
       <GlobalComp />

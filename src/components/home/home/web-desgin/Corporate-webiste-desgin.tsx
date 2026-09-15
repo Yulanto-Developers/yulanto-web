@@ -29,7 +29,7 @@ import img3_2 from "@/assets/img/website/corporate/3.2.jpg";
 import img4_1 from "@/assets/img/website/corporate/4.1.jpg";
 import img4_2 from "@/assets/img/website/corporate/4.2.jpg";
 // import img2_2 from "@/assets/img/website/corporate/2.2.jpg";
-
+import Image from "next/image";
 
 import {
   FaShieldHalved,
@@ -84,6 +84,10 @@ import AnimatedFeatureGrid from "../myComponents/common/AnimatedFeatureGrid";
 import CorporateApproachGrid from "../myComponents/common/CorporateApproachGrid";
 import { useAOS } from "@/components/hooks/useAOS";
 import CreativeAgencyCapsule from "../myComponents/common/CreativeAgencyCapsule";
+// import b1 from '@/assets/img/website/redesgin/Professional-Excellence-1.jpg'
+// import b2 from '@/assets/img/website/redesgin/Professional-Excellence-left.jpg'
+// import b3 from '@/assets/img/website/redesgin/Professional-Excellence-right.jpg'
+import vector from '@/assets/img/website/corporate/vector-1.png'
 
 interface WhyChooseUsProps {
   featuresList?: string[];
@@ -106,7 +110,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
     { name: "PHP", icon: FaPhp, color: "#777BB4" },
     { name: "CodeIgniter", icon: SiCodeigniter, color: "#EF4223" },
     { name: "React", icon: FaReact, color: "#61DAFB" },
-    { name: "Node Js", icon: FaNodeJs, color: "#339933" },
+    { name: "Node Js", icon: FaNodeJs, color: "#c5b215" },
     { name: "WooCommerce", icon: SiWoocommerce, color: "#96588A" },
     { name: "Shopify", icon: FaShopify, color: "#95BF47" },
     { name: "MySQL", icon: SiMysql, color: "#4479A1" },
@@ -440,6 +444,10 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-12">
+
+          </div>
+
+          <div className="col-md-7">
             <span className="tp-section-subtitle text-black blink-ball">
               Start Your Design
             </span>
@@ -447,9 +455,6 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               <span className="text-blue-about">Company Website Design </span>
               in Chennai
             </h4>
-          </div>
-
-          <div className="col-md-7">
             <p className="text-figtree">
               Our corporate websites are designed to strengthen your online
               presence, communicate your brand effectively, and create
@@ -460,12 +465,6 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               creative design, user-friendly navigation, responsive development,
               SEO-friendly structures, and reliable technology to create
               websites that support your business goals.
-              <br />
-              <br />
-              Whether you need a new corporate website, a website redesign, or a
-              customized business website, our team of experienced website
-              designers in Chennai can create a professional digital platform
-              tailored to your brand.
             </p>
           </div>
 
@@ -485,11 +484,17 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               </div>
             </div>
           </div>
+          <div className="col-12 mt-30">
+            <p>Whether you need a new corporate website, a website redesign, or a
+              customized business website, our team of experienced website
+              designers in Chennai can create a professional digital platform
+              tailored to your brand.</p>
+          </div>
         </div>
       </div>
 
       <div className="professional-section">
-        <div className="container py-5">
+        <div className="container">
           <div className="row align-items-center pt-50">
             <div className="col-12 mb-4">
               <span className="tp-section-subtitle text-black blink-ball">
@@ -502,6 +507,13 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
                 </span>
                 Best Web Designers in Chennai
               </h4>
+              <p className="text-figtree">
+                A corporate website is more than an online presence — it is a
+                digital representation of your company. A professionally
+                designed website helps establish credibility, showcase your
+                products and services, communicate your expertise, and
+                generate valuable business enquiries.
+              </p>
             </div>
 
             <div className="col-lg-4 col-md-5 mb-4 mb-md-0">
@@ -514,15 +526,9 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               </div>
             </div>
 
-            <div className="col-lg-8 col-md-7">
+            <div className="col-lg-8 col-md-7 mb-5">
               <div className="professional-content">
-                <p className="text-figtree">
-                  A corporate website is more than an online presence — it is a
-                  digital representation of your company. A professionally
-                  designed website helps establish credibility, showcase your
-                  products and services, communicate your expertise, and
-                  generate valuable business enquiries.
-                </p>
+
 
                 <p className="professional-list-heading">
                   Our corporate website design services focus on:
@@ -595,9 +601,12 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
         style={{ backgroundColor: "#053456", margin: "100px auto" }}
       >
         <div className="container py-5">
-          <div className="row align-items-center">
-            <div className="col-12">
-              <span className="tp-section-subtitle text-white blink-ball">
+          <div className="row align-items-center mt-30">
+           
+
+            <div className="row align-items-start">
+              <div className="col-md-7">
+                  <span className="tp-section-subtitle text-white blink-ball">
                 Expert Web Design Services
               </span>
 
@@ -605,10 +614,6 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
                 <span className="">Best Website </span>
                 Designers in Chennai
               </h4>
-            </div>
-
-            <div className="row align-items-start">
-              <div className="col-md-7">
                 <p className="text-figtree text-white">
                   Your website is often the first point of interaction between
                   your business and potential customers. At Yulanto, we
@@ -619,20 +624,17 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
                   Our team of experienced website designers in Chennai spends
                   considerable time understanding your business, target
                   audience, competitors, and objectives before beginning the
-                  design process. This helps us create a website that is not
+                  design process.
+                  <br />
+                  <br />
+                  This helps us create a website that is not
                   only visually appealing but also easy to navigate and
                   effective in generating enquiries.
-                  <br />
-                  <br />
                   As a dedicated website creation company in Chennai, we focus
                   on developing unique websites rather than relying on generic
-                  designs. Every project is planned according to the client’s
-                  business requirements, content, branding, functionality, and
-                  future growth.
+                  designs.
                   <br />
-                  From corporate websites and business portals to customized
-                  websites, our website creator in Chennai team provides
-                  end-to-end design and development support.
+
                 </p>
               </div>
 
@@ -644,6 +646,16 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
                     </div>
                   ))}
                 </div>
+              </div>
+              <div className="col-12 mt-10">
+                <p className="text-white">
+                  Every project is planned according to the client’s
+                  business requirements, content, branding, functionality, and
+                  future growth.
+                  From corporate websites and business portals to customized
+                  websites, our website creator in Chennai team provides
+                  end-to-end design and development support.
+                </p>
               </div>
             </div>
           </div>
@@ -658,8 +670,8 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
             </span>
 
             <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">Best Website </span>
-              Designers in Chennai
+              <span className="text-blue-about">Key Considerations </span>
+              in Corporate Website Design
             </h4>
             <p className="text-figtree mb-0">
               A professionally developed corporate website can help improve your
@@ -758,7 +770,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
 
       <div className="container mb-80">
         <div className="row justify-content-start mb-5">
-          <div className="col-lg-8">
+          <div className="col-lg-12">
             <span className="tp-section-subtitle text-black blink-ball">
               Scope of Work
             </span>
@@ -1007,7 +1019,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
 
           {/* TRUSTED PARTNER & CTA BANNER */}
           <div className="trusted-partner-banner mb-80">
-            <div className="row align-items-center">
+            <div className="row align-item-between">
               <div className="col-lg-8 mb-4 mb-lg-0">
                 <span className="partner-badge">Your Trusted Partner</span>
                 <h3>Your Trusted Website Design Partner in Chennai</h3>
@@ -1036,6 +1048,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               </div>
 
               <div className="col-lg-4  text-start">
+                <Image src={vector} alt='vector-img' />
                 <div className="cta-box">
                   <h4>Let’s build something great together.</h4>
                   <p>

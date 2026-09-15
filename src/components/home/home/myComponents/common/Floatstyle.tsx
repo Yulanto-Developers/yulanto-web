@@ -192,8 +192,8 @@ export const Floatstyle = React.forwardRef<HTMLDivElement, IndustryHeroProps>(
         style={{
           position: "relative",
           width: "100%",
-          minHeight: "650px",
-          padding: "80px 16px",
+          minHeight: "450px",
+          padding: "80px 16px 20x 16px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

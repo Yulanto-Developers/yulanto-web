@@ -67,12 +67,16 @@ import sl4 from '@/assets/img/website/redesgin/Travel-Companies-0.jpg';
 import wl1 from '@/assets/img/website/redesgin/Looking-for-Website-1.jpg';
 import wl2 from '@/assets/img/website/redesgin/Looking-for-Website-left.jpg';
 import wl3 from '@/assets/img/website/redesgin/Looking-for-Website-right.jpg';
+import { useQuoteModal } from '../myComponents/Content/QuoteContext';
+
 
 function Websiteredesign() {
 
     /* =====================================================
        ROUND SWIPER STATE
     ===================================================== */
+
+    const { openModal } = useQuoteModal();
 
     const [activeRoundIndex, setActiveRoundIndex] = useState(0);
 
@@ -470,10 +474,10 @@ function Websiteredesign() {
             text: "SEO-friendly structure",
             icon: <FaMagnifyingGlassChart />,
         },
-        {
-            text: "Content presentation",
-            icon: <FaFileLines />,
-        },
+        // {
+        //     text: "Content presentation",
+        //     icon: <FaFileLines />,
+        // },
         {
             text: "Conversion-focused layouts",
             icon: <FaArrowTrendUp />,
@@ -616,21 +620,95 @@ function Websiteredesign() {
             ================================================= */}
 
             <IntroContent
+                leftTitle={'Refresh Your Online Presence'}
+                rightTitle1={'Give Your Old Website'}
+                rightTitle2={' a Fresh, Modern Look'}
+                description={
+                    'Your website is often the first interaction customers have with your business. An outdated design can affect credibility, user engagement, search visibility, and conversions.'
+                }
+                css='mt-50'
+            />
+            <div className="container">
+                <div className="row my-3 align-items-center">
+                    <div className="col-md-6">
+                        <div className="corporate-features">
+                            {corporate.map((item) => (
+                                <div key={item.text} className="corporate-feature">
+                                    <div className="corporate-feature-icon">{item.icon}</div>
+
+                                    <div className="corporate-feature-content">
+                                        <span>{item.text}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className='col-md-6'>
+                        <div className='stats-glass-card'>
+
+                            <div className='stats-glow-bg' />
+
+                            <div className='stats-badge-tag'>
+                                Startup Website Design
+                            </div>
+
+
+                            <div className='stats-grid-wrapper'>
+
+                                {stats.map((item, index) => (
+
+                                    <div
+                                        key={index}
+                                        className='stat-box-item'
+                                    >
+
+                                        <div className='stat-value-num'>
+                                            {item.value}
+                                        </div>
+
+                                        <div className='stat-label-text'>
+                                            {item.label}
+                                        </div>
+
+                                    </div>
+
+                                ))}
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* <ImageGallery images={galleryImages} /> */}
+            {/* =================================================
+                WEBSITE REDESIGN INTRO
+            ================================================= */}
+            <div data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
+                <div className="container mt-10 mb-50">
+                    <div className="row">
+                        <div className="col-12 redesign-para">
+                            <p>
+                                We don't simply change the colors and layout. We analyze your existing website, identify opportunities for improvement, and develop a redesign strategy that delivers a better overall digital experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* <IntroContent
                 leftTitle={'Modern Website Revamp'}
                 rightTitle1={'Transform Your Existing Website'}
                 rightTitle2={' with a Modern, High-Performance Design'}
                 description={
                     'Is your website outdated, slow, difficult to navigate, or no longer delivering the results you expect? Our website redesign services in Chennai help businesses transform existing websites into modern, responsive, user-friendly, and conversion-focused digital experiences.'
                 }
-                css='mt-5'
+                css='mt-50'
             />
 
             <ImageGallery images={galleryImages} />
-            {/* =================================================
-                WEBSITE REDESIGN INTRO
-            ================================================= */}
+            
             <div data-aos='fade-up' data-aos-delay={400} data-aos-once={true}>
-                <div className="container">
+                <div className="container mt-10 mb-100">
                     <div className="row">
                         <div className="col-12">
                             <p> At Yulanto Web Creations, we combine creative UI/UX design, modern web technologies, responsive layouts, performance optimization, and SEO-friendly structures to give your existing website a complete digital makeover.
@@ -638,95 +716,44 @@ function Websiteredesign() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
             <div data-aos='fade-down' data-aos-delay={400} data-aos-once={true}>
-                <div className='container mb-4 mt-30'>
+                <div className='container mt-100'>
 
-                    <div className='row align-items-center'>
+                    <div className='row align-items-start'>
 
                         <div className='col-12'>
                             <span className="tp-section-subtitle text-black blink-ball">
-                                Refresh Your Online Presence
+                                Modern Website Revamp
                             </span>
                             <h4 className="px-about-title mb-20">
-
+                                Transform Your Existing Website
                                 <span className="text-blue-about">
-                                    Give Your Old Website {" "}
+                                    {" "}with a Modern, High-Performance Design
                                 </span>
 
-                                a Fresh, Modern Look
+
 
                             </h4>
 
                         </div>
 
 
-                        <div className='col-md-7'>
+                        <div className='col-md-12'>
 
                             <p className='text-figtree'>
 
-                                Your website is often the first interaction customers have with your business. An outdated design can affect credibility, user engagement, search visibility, and conversions.
+                                Is your website outdated, slow, difficult to navigate, or no longer delivering the results you expect? Our website redesign services in Chennai help businesses transform existing websites into modern, responsive, user-friendly, and conversion-focused digital experiences.
 
                             </p>
-                            <div className="corporate-features">
-                                {corporate.map((item) => (
-                                    <div key={item.text} className="corporate-feature">
-                                        <div className="corporate-feature-icon">{item.icon}</div>
-
-                                        <div className="corporate-feature-content">
-                                            <span>{item.text}</span>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-
-
                         </div>
+                        <ImageGallery images={galleryImages} />
 
-
-
-                        <div className='col-md-5'>
-
-                            <div className='stats-glass-card'>
-
-                                <div className='stats-glow-bg' />
-
-                                <div className='stats-badge-tag'>
-                                    Startup Website Design
-                                </div>
-
-
-                                <div className='stats-grid-wrapper'>
-
-                                    {stats.map((item, index) => (
-
-                                        <div
-                                            key={index}
-                                            className='stat-box-item'
-                                        >
-
-                                            <div className='stat-value-num'>
-                                                {item.value}
-                                            </div>
-
-                                            <div className='stat-label-text'>
-                                                {item.label}
-                                            </div>
-
-                                        </div>
-
-                                    ))}
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div className="col-12 mt-1">
-                            <p>We don't simply change the colors and layout. We analyze your existing website, identify opportunities for improvement, and develop a redesign strategy that delivers a better overall digital experience.</p>
+                        <div className="col-12 mt-20">
+                            <p className=''> At Yulanto Web Creations, we combine creative UI/UX design, modern web technologies, responsive layouts, performance optimization, and SEO-friendly structures to give your existing website a complete digital makeover.
+                                Whether you need a simple website revamp in Chennai, a complete redesign, or an AI website redesign in Chennai, our team creates a website that looks modern, performs better, and supports your business goals.</p>
                         </div>
                     </div>
 
@@ -742,16 +769,24 @@ function Websiteredesign() {
             <div
                 style={{
                     backgroundColor: 'rgb(245 245 245)',
-                    margin: '100px 0px 20px 0px'
+                    margin: '50px 0px 50px 0px'
                 }}
             >
 
                 <div className='container'>
 
-                    <div className='row align-items-center pt-50'>
+                    <div className='row align-items-center pt-100 pb-50'>
 
-                        <div className='col-12'>
+                        <div className='col-md-4'>
 
+                            <img
+                                src={img0.src}
+                                alt='img'
+                                className='img-border-cls'
+                            />
+
+                        </div>
+                        <div className="col-md-8">
                             <span className="tp-section-subtitle text-black blink-ball">
                                 AI Website Redesign in Chennai
                             </span>
@@ -764,20 +799,6 @@ function Websiteredesign() {
                                 AI-Powered Design Strategies
 
                             </h4>
-
-                        </div>
-
-
-                        <div className='col-md-4'>
-
-                            <img
-                                src={img0.src}
-                                alt='img'
-                                className='img-border-cls'
-                            />
-
-                        </div>
-                        <div className="col-md-8">
                             <p className="text-figtree mb-25">
                                 AI is transforming the way websites are planned, designed, and
                                 optimized. Our AI website redesign in Chennai
@@ -787,7 +808,7 @@ function Websiteredesign() {
                             </p>
 
                         </div>
-                        <div className='col-12'>
+                        <div className='col-12 mt-20'>
                             <h5 className="ai-redesign-title text-tenor">
                                 AI-assisted redesign can help with:
                             </h5>
@@ -824,9 +845,7 @@ function Websiteredesign() {
                             YOUR SAFARI COMPONENT - KEEP THIS
                         ================================================= */}
 
-                        <SafariContentTabs
-                            data={redesignServices}
-                        />
+
 
 
                         <style>{`
@@ -875,7 +894,7 @@ function Websiteredesign() {
                 KEY BENEFITS
             ================================================= */}
 
-            <div className="container mt-120 mb-50">
+            <div className="container mt-100 mb-50">
 
                 <div>
                     <span className="tp-section-subtitle text-black blink-ball">
@@ -915,7 +934,7 @@ function Websiteredesign() {
                         loop={true}
                         speed={800}
                         autoplay={{
-                            delay: 3000,
+                            delay: 3000000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: true,
                         }}
@@ -961,7 +980,16 @@ function Websiteredesign() {
 
             </div>
 
+            <div data-aos='fade-down' data-aos-delay={400} data-aos-once={true} style={{
+                backgroundColor: '#053456'
+            }}>
+                <div className='mb-50 mt-50'>
+                    <SafariContentTabs
+                        data={redesignServices}
+                    />
+                </div>
 
+            </div>
 
 
             <div className='container'>
@@ -1200,8 +1228,7 @@ function Websiteredesign() {
 
                 <div className='row align-items-center pt-50'>
 
-                    <div className='col-12'>
-
+                    <div className='col-md-7'>
                         <span className="tp-section-subtitle text-black blink-ball">
                             Website Redesign Near Me
                         </span>
@@ -1214,22 +1241,13 @@ function Websiteredesign() {
                             Services Near You?
 
                         </h4>
-
-                    </div>
-
-
-
-
-
-                    <div className='col-md-7'>
-
                         <p className='text-figtree'>
 
                             If you're searching for website redesign near me, Yulanto Web Creations provides professional website redesign and website revamp solutions for businesses in Chennai and beyond.
                             <br />
                             <br />
                             From redesigning a few important pages to completely transforming your existing website, we help you create a stronger and more modern online presence.
-                            <br />
+
                             Your existing website doesn't always need to be replaced. Sometimes, it simply needs the right redesign strategy.
 
                         </p>
@@ -1464,7 +1482,7 @@ function Websiteredesign() {
                                 Get a website audit to identify potential issues related to design, usability, mobile responsiveness, performance, SEO structure, and conversion opportunities.
 
                             </p>
-                            <button className='req-btn text-tenor'>Request Your Free Website Audit</button>
+                            <button onClick={openModal} className='req-btn text-tenor'>Request Your Free Website Audit</button>
 
                         </div>
 
@@ -1474,10 +1492,12 @@ function Websiteredesign() {
             </div>
 
 
+            <div className='mt-30'>
 
-            <FAQA1 num1={23} num2={31}
-                highlightedText="Frequently Asked Questions"
-                titleSuffix="" />
+                <FAQA1 num1={23} num2={31}
+                    highlightedText="Frequently Asked Questions"
+                    titleSuffix="" />
+            </div>
 
 
         </>

@@ -1,9 +1,20 @@
-
 "use client";
 
 import {
-  ShieldCheck, Radio, Cpu, Star, XCircle, Recycle, Trees,
-  Atom, FileCode2, Hexagon, Database, Code2, Globe2, Cloud,
+  ShieldCheck,
+  Radio,
+  Cpu,
+  Star,
+  XCircle,
+  Recycle,
+  Trees,
+  Atom,
+  FileCode2,
+  Hexagon,
+  Database,
+  Code2,
+  Globe2,
+  Cloud,
   ShoppingCart,
 } from "lucide-react";
 import ClientsShowcasePage from "@/components/ourclients/ClientsShowcasePage";
@@ -12,10 +23,24 @@ import Image1 from "@/assets/img/usa/banner-uae.jpg";
 import Image2 from "@/assets/img/usa/image-uae.jpg";
 import GlobalComp from "@/components/ourclients/globalcomp";
 import { IndustryCloud } from "@/components/ourclients/IndustryCloud";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
+
 
 export default function USAClientsPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://yulanto-web.vercel.app/",
+          },
+          {
+            name: "Our Story",
+            url: "https://yulanto-web.vercel.app/uae",
+          },
+        ]}
+      />
       <ClientsShowcasePage
         heroImage={Image1}
         heroBadgeText="Transform Your Business with Digital Solutions in UAE"
@@ -25,7 +50,6 @@ export default function USAClientsPage() {
 From a modern corporate website to a powerful e-commerce platform or a complete digital marketing strategy, our team delivers end-to-end digital solutions tailored to your business goals and the UAE market.`}
         aboutImage={Image2}
         aboutTitleHighlight="Our Digital"
-
         aboutTitleRest=" Services in UAE"
         aboutDescription="Create a professional and high-performing online presence with our web design and website development services in UAE. We develop responsive, user-friendly, mobile-friendly, and SEO-ready websites that represent your brand and convert visitors into customers"
         whyChooseHeading="Why Choose Yulanto Web Creations?"
@@ -46,7 +70,6 @@ From a modern corporate website to a powerful e-commerce platform or a complete 
         countryLabel="UAE"
         countryFlag={<UAEFlagIcon />}
         clients={[
-                 
           {
             name: "DDC Maritime",
             category: "Maritime Services",
@@ -155,10 +178,8 @@ We provide complete digital solutions in UAE, from strategy and design to develo
         ctaTitleRest="Business in UAE"
         ctaDescription="Ready to strengthen your digital presence? Talk to our team today and share your requirements. We will understand your business objectives and recommend the right website, technology, SEO, and digital marketing solutions for your UAE market"
         ctaButtonText="Whether you need a website, e-commerce store, custom web application, SEO, Google Ads, social media marketing, website redesign, or ongoing website maintenance, send us your requirements. Our team will get back to you with a suitable solution for your business."
-      
       />
       <GlobalComp />
     </>
-
   );
 }

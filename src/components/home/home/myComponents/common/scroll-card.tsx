@@ -1,122 +1,211 @@
-'use client';
+"use client";
 
-import React, { forwardRef } from 'react';
-import '@/assets/css/scroll-card.css';
+import React, { forwardRef, useLayoutEffect, useRef } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import "@/assets/css/scroll-card.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export interface ProcessCardData {
-    title: string;
-    description: string;
-    link?: string;
-    bgImage: string;
-    rotation?: string;
+  title: string;
+  description: string;
+  link?: string;
+  bgImage: string;
+  rotation?: string;
 }
 
 interface ScrollCardProps {
-    cardsData: ProcessCardData[];
-    sectionTitle?: React.ReactNode;
+  cardsData: ProcessCardData[];
+  sectionTitle?: React.ReactNode;
 }
 
 const ScrollCard = forwardRef<HTMLElement, ScrollCardProps>(
-    ({ cardsData, sectionTitle }, ref) => {
+  ({ cardsData, sectionTitle }, ref) => {
+    const sectionRef = useRef<HTMLElement | null>(null);
 
-        return (
-            <section
-                ref={ref}
-                className="scroll-process-section"
-            >
+    useLayoutEffect(() => {
+      const section = sectionRef.current;
 
-                <div className="scroll-process-container">
+      if (!section) return;
 
-                    {/* LEFT SIDE - SCROLLING IMAGE CARDS */}
-                    <div className="scroll-process-cards">
+      const ctx = gsap.context(() => {
+        /*
+         * Only run the pin animation on desktop.
+         */
+        const mm = gsap.matchMedia();
 
-                        {cardsData.map((card, index) => (
+        mm.add("(min-width: 992px)", () => {
+          const cards = gsap.utils.toArray<HTMLElement>(".scroll-process-card");
 
-                            <div
-                                className="scroll-process-card-wrapper"
-                                key={index}
-                            >
+          const heading = section.querySelector(
+            ".scroll-process-heading-inner",
+          ) as HTMLElement | null;
 
-                                <article
-                                    className={`scroll-process-card ${card.rotation || ''}`}
-                                    style={{
-                                        backgroundImage: `url("${card.bgImage}")`,
-                                    }}
-                                >
+          if (!cards.length) return;
 
-                                    {/* IMAGE DARK OVERLAY */}
-                                    <div className="scroll-process-overlay" />
+          /* =================================================
+                       INITIAL CARD STACK
+                    ================================================= */
 
-                                    {/* CONTENT OVER IMAGE */}
-                                    <div className="scroll-process-card-content">
+          cards.forEach((card, index) => {
+            gsap.set(card, {
+              zIndex: index + 1,
+            });
+          });
 
-                                        <span className="scroll-process-step">
-                                            Step {String(index + 1).padStart(2, '0')}
-                                        </span>
+          /* =================================================
+                       PIN HEADING
+                    ================================================= */
 
-                                        <h3 className='text-tenor'>
-                                            {card.title}
-                                        </h3>
+          if (heading) {
+            ScrollTrigger.create({
+              trigger: section,
 
-                                        <p>
-                                            {card.description}
-                                        </p>
+              start: "top top",
 
-                                        {card.link && (
-                                            <a
-                                                href={card.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="scroll-process-link"
-                                            >
-                                                Learn More
-                                                <span> →</span>
-                                            </a>
-                                        )}
+              end: "bottom bottom",
 
-                                    </div>
+              pin: heading,
 
-                                </article>
+              pinSpacing: false,
 
-                            </div>
+              anticipatePin: 1,
 
-                        ))}
+              invalidateOnRefresh: true,
+            });
+          }
 
-                    </div>
+          /* =================================================
+                       PIN EACH CARD
+                    ================================================= */
 
+          cards.forEach((card) => {
+            const wrapper = card.closest(
+              ".scroll-process-card-wrapper",
+            ) as HTMLElement | null;
 
-                    {/* RIGHT SIDE - STICKY HEADING */}
-                    <div className="scroll-process-heading">
+            if (!wrapper) return;
 
-                        <div className="scroll-process-heading-inner text-tenor">
+            ScrollTrigger.create({
+              trigger: wrapper,
 
-                            {sectionTitle || (
-                                <>
-                                    <span className="scroll-process-small-title">
-                                        How We Work
-                                    </span>
+              start: "top top+=100",
 
-                                    <h2>
-                                        Our Landing Page
-                                        <br />
-                                        <span>
-                                            Design Process
-                                        </span>
-                                    </h2>
-                                </>
-                            )}
+              end: "bottom top+=100",
 
-                        </div>
+              pin: card,
 
-                    </div>
+              pinSpacing: false,
 
-                </div>
+              anticipatePin: 1,
 
-            </section>
-        );
-    }
+              invalidateOnRefresh: true,
+            });
+          });
+
+          /*
+           * Refresh after all triggers are created.
+           */
+          ScrollTrigger.refresh();
+        });
+
+        return () => {
+          mm.revert();
+        };
+      }, section);
+
+      return () => {
+        ctx.revert();
+      };
+    }, [cardsData]);
+
+    return (
+      <section
+        ref={(node) => {
+          sectionRef.current = node;
+
+          if (typeof ref === "function") {
+            ref(node);
+          } else if (ref) {
+            ref.current = node;
+          }
+        }}
+        className="scroll-process-section"
+      >
+        <div className="scroll-process-container">
+          {/* =================================================
+                       LEFT SIDE
+                       HEADING
+                    ================================================= */}
+
+          <div className="scroll-process-heading">
+            <div className="scroll-process-heading-inner text-tenor">
+              {sectionTitle || (
+                <>
+                  <span className="scroll-process-small-title">
+                    How We Work
+                  </span>
+
+                  <h2>
+                    Our Landing Page
+                    <br />
+                    <span>Design Process</span>
+                  </h2>
+                </>
+              )}
+            </div>
+          </div>
+
+          {/* =================================================
+                       RIGHT SIDE
+                       CARDS
+                    ================================================= */}
+
+          <div className="scroll-process-cards">
+            {cardsData.map((card, index) => (
+              <div className="scroll-process-card-wrapper" key={index}>
+                <article
+                  className={`scroll-process-card ${card.rotation || ""}`}
+                  style={{
+                    backgroundImage: `url("${card.bgImage}")`,
+                  }}
+                >
+                  <div className="scroll-process-overlay" />
+
+                  <div className="scroll-process-card-content">
+                    <span className="scroll-process-step">
+                      Step {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <h3 className="text-tenor">{card.title}</h3>
+
+                    <p>{card.description}</p>
+
+                    {card.link && (
+                      <a
+                        href={card.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="scroll-process-link"
+                      >
+                        Learn More
+                        <span> →</span>
+                      </a>
+                    )}
+                  </div>
+                </article>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  },
 );
 
-ScrollCard.displayName = 'ScrollCard';
+ScrollCard.displayName = "ScrollCard";
 
 export default ScrollCard;

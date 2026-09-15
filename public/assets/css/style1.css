@@ -771,7 +771,7 @@
 =========================== */
 
 .core-value-section {
-  padding: 35px 0 40px;
+  padding: 35px 0 35px;
   background: #fff;
 }
 
@@ -784,15 +784,6 @@
   gap: 15px;
   height: 420px;
   margin-top: 50px;
-}
-
-/* ===========================
-   Core Values Section
-=========================== */
-
-.core-value-section {
-  padding: 35px 0 40px;
-  background: #fff;
 }
 
 /* ===========================
@@ -1243,6 +1234,24 @@
   padding: 10px 0;
 }
 
-.ft-23{
-   font-size: 23px !important;
+.ft-23 {
+  font-size: 23px !important;
 }
+/*  */
+@media (min-width: 768px) {
+  .margin-m {
+    margin-bottom: 10px !important;
+  }
+
+  .core-value-section {
+    padding: 40px 0 30px;
+    background: #fff;
+  }
+}
+@media (max-width: 576px) {
+  .margin-m {
+    margin-bottom: 10px !important;
+  }
+}
+
+/*  */
