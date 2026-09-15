@@ -1,18 +1,23 @@
 "use client";
 
-import React, { forwardRef, useLayoutEffect, useRef } from "react";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Navigation,
+  Pagination,
+  Autoplay,
+  Keyboard,
+} from "swiper/modules";
 
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import "@/assets/css/scroll-card.css";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export interface ProcessCardData {
   title: string;
   description: string;
-  link?: string;
   bgImage: string;
   rotation?: string;
 }
@@ -22,190 +27,163 @@ interface ScrollCardProps {
   sectionTitle?: React.ReactNode;
 }
 
-const ScrollCard = forwardRef<HTMLElement, ScrollCardProps>(
-  ({ cardsData, sectionTitle }, ref) => {
-    const sectionRef = useRef<HTMLElement | null>(null);
+const rotationClassMap: Record<string, string> = {
+  "rotate-3": "scroll-card-rotate-3",
+  "-rotate-2": "scroll-card-rotate-minus-2",
+  "rotate-2": "scroll-card-rotate-2",
+  "-rotate-3": "scroll-card-rotate-minus-3",
+  "rotate-0": "scroll-card-rotate-0",
+};
 
-    useLayoutEffect(() => {
-      const section = sectionRef.current;
+const ScrollCard: React.FC<ScrollCardProps> = ({
+  cardsData,
+  sectionTitle,
+}) => {
+  return (
+    <section className="scroll-card-section">
 
-      if (!section) return;
+      <div className="scroll-card-container">
 
-      const ctx = gsap.context(() => {
-        /*
-         * Only run the pin animation on desktop.
-         */
-        const mm = gsap.matchMedia();
+        {/* =====================================
+                    SECTION TITLE
+                ===================================== */}
 
-        mm.add("(min-width: 992px)", () => {
-          const cards = gsap.utils.toArray<HTMLElement>(".scroll-process-card");
-
-          const heading = section.querySelector(
-            ".scroll-process-heading-inner",
-          ) as HTMLElement | null;
-
-          if (!cards.length) return;
-
-          /* =================================================
-                       INITIAL CARD STACK
-                    ================================================= */
-
-          cards.forEach((card, index) => {
-            gsap.set(card, {
-              zIndex: index + 1,
-            });
-          });
-
-          /* =================================================
-                       PIN HEADING
-                    ================================================= */
-
-          if (heading) {
-            ScrollTrigger.create({
-              trigger: section,
-
-              start: "top top",
-
-              end: "bottom bottom",
-
-              pin: heading,
-
-              pinSpacing: false,
-
-              anticipatePin: 1,
-
-              invalidateOnRefresh: true,
-            });
-          }
-
-          /* =================================================
-                       PIN EACH CARD
-                    ================================================= */
-
-          cards.forEach((card) => {
-            const wrapper = card.closest(
-              ".scroll-process-card-wrapper",
-            ) as HTMLElement | null;
-
-            if (!wrapper) return;
-
-            ScrollTrigger.create({
-              trigger: wrapper,
-
-              start: "top top+=100",
-
-              end: "bottom top+=100",
-
-              pin: card,
-
-              pinSpacing: false,
-
-              anticipatePin: 1,
-
-              invalidateOnRefresh: true,
-            });
-          });
-
-          /*
-           * Refresh after all triggers are created.
-           */
-          ScrollTrigger.refresh();
-        });
-
-        return () => {
-          mm.revert();
-        };
-      }, section);
-
-      return () => {
-        ctx.revert();
-      };
-    }, [cardsData]);
-
-    return (
-      <section
-        ref={(node) => {
-          sectionRef.current = node;
-
-          if (typeof ref === "function") {
-            ref(node);
-          } else if (ref) {
-            ref.current = node;
-          }
-        }}
-        className="scroll-process-section"
-      >
-        <div className="scroll-process-container">
-          {/* =================================================
-                       LEFT SIDE
-                       HEADING
-                    ================================================= */}
-
-          <div className="scroll-process-heading">
-            <div className="scroll-process-heading-inner text-tenor">
-              {sectionTitle || (
-                <>
-                  <span className="scroll-process-small-title">
-                    How We Work
-                  </span>
-
-                  <h2>
-                    Our Landing Page
-                    <br />
-                    <span>Design Process</span>
-                  </h2>
-                </>
-              )}
-            </div>
+        {sectionTitle && (
+          <div className="scroll-card-heading">
+            {sectionTitle}
           </div>
+        )}
 
-          {/* =================================================
-                       RIGHT SIDE
-                       CARDS
-                    ================================================= */}
+        {/* =====================================
+                    CAROUSEL
+                ===================================== */}
 
-          <div className="scroll-process-cards">
+        <div className="scroll-card-slider">
+
+          <Swiper
+            modules={[
+              Navigation,
+              Pagination,
+              Autoplay,
+              Keyboard,
+            ]}
+            loop={true}
+            speed={800}
+            autoplay={{
+              delay: 60000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            navigation={{
+              nextEl: ".scroll-card-next",
+              prevEl: ".scroll-card-prev",
+            }}
+            pagination={{
+              el: ".scroll-card-pagination",
+              clickable: true,
+            }}
+            keyboard={{
+              enabled: true,
+            }}
+            slidesPerView={1}
+            spaceBetween={30}
+            className="scroll-card-swiper"
+          >
+
             {cardsData.map((card, index) => (
-              <div className="scroll-process-card-wrapper" key={index}>
+              <SwiperSlide key={`${card.title}-${index}`}>
+
                 <article
-                  className={`scroll-process-card ${card.rotation || ""}`}
-                  style={{
-                    backgroundImage: `url("${card.bgImage}")`,
-                  }}
+                  className={`scroll-card ${rotationClassMap[
+                    card.rotation || "rotate-0"
+                    ]
+                    }`}
                 >
-                  <div className="scroll-process-overlay" />
 
-                  <div className="scroll-process-card-content">
-                    <span className="scroll-process-step">
-                      Step {String(index + 1).padStart(2, "0")}
-                    </span>
+                  {/* =================================
+                                        IMAGE
+                                    ================================= */}
 
-                    <h3 className="text-tenor">{card.title}</h3>
+                  <div className="scroll-card-image">
 
-                    <p>{card.description}</p>
+                    <img
+                      src={card.bgImage}
+                      alt={card.title}
+                      draggable={false}
+                    />
 
-                    {card.link && (
-                      <a
-                        href={card.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="scroll-process-link"
-                      >
-                        Learn More
-                        <span> →</span>
-                      </a>
-                    )}
                   </div>
-                </article>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  },
-);
 
-ScrollCard.displayName = "ScrollCard";
+
+                  {/* =================================
+                                        CONTENT CARD
+                                    ================================= */}
+
+                  <div className="scroll-card-content">
+
+                    {/* Number */}
+
+                    <div className="scroll-card-number">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+
+
+                    <div className="scroll-card-content-inner">
+
+                      <h3 className="text-tenor">
+                        {card.title}
+                      </h3>
+
+                      <p>
+                        {card.description}
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </article>
+
+              </SwiperSlide>
+            ))}
+
+          </Swiper>
+
+        </div>
+
+
+        {/* =====================================
+                    NAVIGATION
+                ===================================== */}
+
+        {/* <div className="scroll-card-navigation">
+
+                    <button
+                        type="button"
+                        className="scroll-card-nav scroll-card-prev"
+                        aria-label="Previous"
+                    >
+                        <span>←</span>
+                    </button>
+
+
+                    <div className="scroll-card-pagination" />
+
+
+                    <button
+                        type="button"
+                        className="scroll-card-nav scroll-card-next"
+                        aria-label="Next"
+                    >
+                        <span>→</span>
+                    </button>
+
+                </div> */}
+
+      </div>
+
+    </section>
+  );
+};
 
 export default ScrollCard;

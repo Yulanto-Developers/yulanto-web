@@ -2340,7 +2340,7 @@
      -o-border-radius: 10px;
      border-left: #053456 4px solid;
      border-right: #053456 4px solid;
-     font-size: 16px !important;
+     /* font-size: 16px !important; */
 }
 .redesign-para p:hover{
     transform: translateY(-4px) ;

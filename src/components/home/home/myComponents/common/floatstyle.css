@@ -1,0 +1,542 @@
+/* =========================================================
+   FLOATSTYLE - DESKTOP
+========================================================= */
+
+.floatstyle-section {
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+}
+
+
+/* =========================================================
+   FLOATING ITEMS
+========================================================= */
+
+.floatstyle-items {
+    pointer-events: none;
+}
+
+.floating-industry {
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   FLOATING PILL
+========================================================= */
+
+.floating-industry-pill {
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   CENTER CONTENT
+========================================================= */
+
+.floatstyle-content {
+    pointer-events: none;
+}
+
+.floatstyle-content h1,
+.floatstyle-content p {
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .floatstyle-section {
+        min-height: 570px !important;
+
+        padding:
+            50px 12px 30px !important;
+    }
+
+
+    /* -----------------------------------------
+       Background glow
+    ----------------------------------------- */
+
+    .floatstyle-glow {
+        width: 300px !important;
+        height: 300px !important;
+
+        filter: blur(70px) !important;
+
+        opacity: 0.7;
+    }
+
+
+    /* -----------------------------------------
+       Floating area
+    ----------------------------------------- */
+
+    .floatstyle-items {
+        width: 100% !important;
+        height: 100% !important;
+
+        max-width: 100% !important;
+
+        left: 0 !important;
+        right: 0 !important;
+
+        overflow: visible;
+    }
+
+
+    /* -----------------------------------------
+       ALL FLOATING PILLS
+    ----------------------------------------- */
+
+    .floating-industry-pill {
+        gap: 5px !important;
+
+        padding:
+            6px 9px !important;
+
+        border-radius:
+            8px !important;
+
+        box-shadow:
+            0 6px 15px
+            rgba(0, 0, 0, 0.22) !important;
+    }
+
+
+    .floating-industry-icon {
+        width: 11px !important;
+        height: 11px !important;
+    }
+
+
+    .floating-industry-text {
+        font-size: 8px !important;
+
+        line-height: 1.1 !important;
+
+        font-weight: 600 !important;
+    }
+
+
+    /* =====================================================
+       MOBILE POSITIONS
+
+       We deliberately keep the center clear for heading.
+    ===================================================== */
+
+
+    /* 01 - Real Estate */
+
+    .floating-industry-1 {
+        top: 7% !important;
+        left: 3% !important;
+
+        right: auto !important;
+        bottom: auto !important;
+    }
+
+
+    /* 02 - Construction */
+
+    .floating-industry-2 {
+        top: 7% !important;
+
+        right: 3% !important;
+
+        left: auto !important;
+        bottom: auto !important;
+    }
+
+
+    /* 03 - Interior Design */
+
+    .floating-industry-3 {
+        top: 18% !important;
+
+        left: 1% !important;
+
+        right: auto !important;
+        bottom: auto !important;
+    }
+
+
+    /* 04 - Architecture */
+
+    .floating-industry-4 {
+        top: 18% !important;
+
+        right: 1% !important;
+
+        left: auto !important;
+        bottom: auto !important;
+    }
+
+
+    /* 05 - Industrial */
+
+    .floating-industry-5 {
+        top: 31% !important;
+
+        left: 2% !important;
+
+        right: auto !important;
+        bottom: auto !important;
+    }
+
+
+    /* 06 - Healthcare */
+
+    .floating-industry-6 {
+        top: 31% !important;
+
+        right: 2% !important;
+
+        left: auto !important;
+        bottom: auto !important;
+    }
+
+
+    /* 07 - Education */
+
+    .floating-industry-7 {
+        bottom: 31% !important;
+
+        left: 2% !important;
+
+        right: auto !important;
+        top: auto !important;
+    }
+
+
+    /* 08 - E-commerce */
+
+    .floating-industry-8 {
+        bottom: 31% !important;
+
+        right: 2% !important;
+
+        left: auto !important;
+        top: auto !important;
+    }
+
+
+    /* 09 - Hospitality */
+
+    .floating-industry-9 {
+        bottom: 19% !important;
+
+        left: 3% !important;
+
+        right: auto !important;
+        top: auto !important;
+    }
+
+
+    /* 10 - Professional Services */
+
+    .floating-industry-10 {
+        bottom: 19% !important;
+
+        right: 3% !important;
+
+        left: auto !important;
+        top: auto !important;
+    }
+
+
+    /* 11 - Startups */
+
+    .floating-industry-11 {
+        bottom: 7% !important;
+
+        left: 5% !important;
+
+        right: auto !important;
+        top: auto !important;
+    }
+
+
+    /* 12 - SMEs */
+
+    .floating-industry-12 {
+        bottom: 7% !important;
+
+        right: 5% !important;
+
+        left: auto !important;
+        top: auto !important;
+    }
+
+
+    /* 13 - Corporate Businesses */
+
+    .floating-industry-13 {
+        top: 7% !important;
+
+        left: 50% !important;
+
+        right: auto !important;
+        bottom: auto !important;
+
+        transform:
+            translateX(-50%) !important;
+    }
+
+
+    /* =====================================================
+       CENTER CONTENT
+    ===================================================== */
+
+    .floatstyle-content {
+        width: 100% !important;
+
+        max-width: 285px !important;
+
+        padding:
+            0 15px !important;
+
+        gap: 12px !important;
+
+        z-index: 20 !important;
+    }
+
+
+    .floatstyle-content h1 {
+        max-width: 260px;
+
+        margin-bottom: 8px !important;
+
+        font-size:
+            clamp(25px, 7vw, 34px) !important;
+
+        line-height:
+            1.15 !important;
+    }
+
+
+    .floatstyle-content p {
+        max-width: 270px;
+
+        margin: 0 auto;
+
+        font-size:
+            13px !important;
+
+        line-height:
+            1.55 !important;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .floatstyle-section {
+        min-height: 540px !important;
+
+        padding:
+            45px 8px 25px !important;
+    }
+
+
+    .floating-industry-pill {
+        padding:
+            5px 7px !important;
+
+        gap: 4px !important;
+
+        border-radius:
+            7px !important;
+    }
+
+
+    .floating-industry-icon {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+
+    .floating-industry-text {
+        font-size: 7px !important;
+    }
+
+
+    /* -----------------------------------------
+       Top row
+    ----------------------------------------- */
+
+    .floating-industry-1 {
+        left: 1% !important;
+    }
+
+    .floating-industry-2 {
+        right: 1% !important;
+    }
+
+    .floating-industry-13 {
+        top: 7% !important;
+    }
+
+
+    /* -----------------------------------------
+       Second row
+    ----------------------------------------- */
+
+    .floating-industry-3 {
+        top: 19% !important;
+        left: 0 !important;
+    }
+
+    .floating-industry-4 {
+        top: 19% !important;
+        right: 0 !important;
+    }
+
+
+    /* -----------------------------------------
+       Side items
+    ----------------------------------------- */
+
+    .floating-industry-5 {
+        top: 32% !important;
+        left: 0 !important;
+    }
+
+    .floating-industry-6 {
+        top: 32% !important;
+        right: 0 !important;
+    }
+
+
+    /* -----------------------------------------
+       Lower side items
+    ----------------------------------------- */
+
+    .floating-industry-7 {
+        bottom: 31% !important;
+        left: 0 !important;
+    }
+
+    .floating-industry-8 {
+        bottom: 31% !important;
+        right: 0 !important;
+    }
+
+
+    .floating-industry-9 {
+        bottom: 19% !important;
+        left: 1% !important;
+    }
+
+    .floating-industry-10 {
+        bottom: 19% !important;
+        right: 1% !important;
+    }
+
+
+    /* -----------------------------------------
+       Bottom
+    ----------------------------------------- */
+
+    .floating-industry-11 {
+        bottom: 7% !important;
+        left: 4% !important;
+    }
+
+    .floating-industry-12 {
+        bottom: 7% !important;
+        right: 4% !important;
+    }
+
+
+    /* -----------------------------------------
+       Center text
+    ----------------------------------------- */
+
+    .floatstyle-content {
+        max-width:
+            250px !important;
+
+        padding:
+            0 10px !important;
+    }
+
+
+    .floatstyle-content h1 {
+        font-size:
+            25px !important;
+
+        line-height:
+            1.15 !important;
+    }
+
+
+    .floatstyle-content p {
+        font-size:
+            12px !important;
+
+        line-height:
+            1.5 !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .floatstyle-section {
+        min-height: 510px !important;
+    }
+
+
+    .floating-industry-pill {
+        padding:
+            4px 6px !important;
+    }
+
+
+    .floating-industry-text {
+        font-size: 6.5px !important;
+    }
+
+
+    .floating-industry-icon {
+        width: 9px !important;
+        height: 9px !important;
+    }
+
+
+    .floatstyle-content {
+        max-width:
+            225px !important;
+    }
+
+
+    .floatstyle-content h1 {
+        font-size:
+            23px !important;
+    }
+
+
+    .floatstyle-content p {
+        font-size:
+            11px !important;
+    }
+
+}
