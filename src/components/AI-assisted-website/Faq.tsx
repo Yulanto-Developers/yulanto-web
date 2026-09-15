@@ -53,11 +53,7 @@ const faqs: FAQItem[] = [
 const styles = `
 
   /* FAQ 2-Column Grid Layout */
-  .faq-container {
-    max-width: 1100px;
-    margin: 60px auto 0 auto;
-    text-align: center;
-  }
+  
 
   .faq-header-title {
     font-size: 28px;
@@ -206,8 +202,8 @@ export const AIToolsIntegrations: React.FC = () => {
   const rightFaqs = faqs.slice(5, 9);
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{
-        backgroundColor: "#ffffff",
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{
+        backgroundColor: "#ffffff" ,overflowX:"hidden"
       
       }}>
       <style>{styles}</style>
@@ -219,7 +215,7 @@ export const AIToolsIntegrations: React.FC = () => {
         {/* 2-Column Split FAQ Layout (5 Items Left / 4 Items Right) */}
         <div className="faq-container" data-aos="fade-up" data-aos-delay="250">
         <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">Frequently Asked </span>
+                <span className="text-blue-about text-center">Frequently Asked </span>
                 Questions
               </h4>
 

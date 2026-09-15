@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FuturisticRobotCanvas: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -33,7 +35,7 @@ const FuturisticRobotCanvas: React.FC = () => {
 
       // --- 1. WORKSTATION & LAPTOP SETUP ---
       const deskX = width * 0.42;
-      const deskW = width * 0.54;
+      const deskW = width * 0.30;
       const deskY = baseFloorY - 110;
 
       // Desk Surface Shadow & Board
@@ -353,28 +355,6 @@ const FuturisticRobotCanvas: React.FC = () => {
       ctx.arc(holoX + 130, b1Y + 25, 8, 0, Math.PI * 2);
       ctx.fill();
 
-      // Lower Floating Pie Chart Card
-      const b2Y = holoY + 65 + Math.cos(time * 2.5) * 5;
-      ctx.fillStyle = "rgba(14, 165, 233, 0.9)";
-      ctx.beginPath();
-      ctx.roundRect(holoX + 90, b2Y, 70, 42, 8);
-      ctx.fill();
-
-      // Pie Chart Graphic
-      ctx.fillStyle = "#ffffff";
-      ctx.beginPath();
-      ctx.moveTo(holoX + 112, b2Y + 21);
-      ctx.arc(holoX + 112, b2Y + 21, 11, 0, Math.PI * 1.3);
-      ctx.closePath();
-      ctx.fill();
-
-      ctx.fillStyle = "#38bdf8";
-      ctx.beginPath();
-      ctx.moveTo(holoX + 112, b2Y + 21);
-      ctx.arc(holoX + 112, b2Y + 21, 11, Math.PI * 1.3, Math.PI * 2);
-      ctx.closePath();
-      ctx.fill();
-
       animationFrameId = requestAnimationFrame(render);
     };
 
@@ -399,18 +379,25 @@ const FuturisticRobotCanvas: React.FC = () => {
 };
 
 export const ShopifyExperience: React.FC = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110"  style={{overflowX:"hidden"}}>
       <div className="container container-1550">
         {/* Title Section */}
-        <div className="row align-items-center mb-50" data-aos="fade-up">
-          <div className="col-xl-3">
+        <div className="row align-items-center mb-20" data-aos="fade-up">
+          <div className="col-xl-3" data-aos="fade-right" data-aos-delay="100">
             <span className="tp-section-subtitle text-black blink-ball">
               AI-Assisted Website Design
             </span>
           </div>
 
-          <div className="col-xl-9">
+          <div className="col-xl-9" data-aos="fade-left" data-aos-delay="200">
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
                 <span className="text-blue-about">Build Better Websites. </span>
@@ -427,11 +414,13 @@ export const ShopifyExperience: React.FC = () => {
 
         {/* Robot Canvas Container */}
         <div
+          data-aos="zoom-in"
+          data-aos-delay="300"
           style={{
             position: "sticky",
             top: "100px",
             width: "100%",
-            height: "450px",
+            height: "400px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",

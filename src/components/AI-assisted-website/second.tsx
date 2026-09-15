@@ -1,13 +1,21 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const AIAcceleratedDesign: React.FC = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{
         backgroundColor: "#ffffff",
-      
       }}>
       <div className="container container-1550">
         <div 

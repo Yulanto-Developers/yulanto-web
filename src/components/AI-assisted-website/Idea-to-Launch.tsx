@@ -1,6 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface ProcessStep {
   number: string;
@@ -9,54 +11,59 @@ interface ProcessStep {
   color: string;
 }
 
+// Using strictly #053456 and #53ae7d alternatively
 const stepsLeft: ProcessStep[] = [
   {
     number: '01',
     title: 'Understand',
     description: 'We start with your business, audience, goals, competitors and brand.',
-    color: '#FF6B00',
+    color: '#053456',
   },
   {
     number: '02',
     title: 'Explore',
     description: 'AI-assisted research and creative tools help us explore multiple directions quickly.',
-    color: '#E91E63',
+    color: '#53ae7d',
   },
   {
     number: '03',
     title: 'Design',
     description: 'Our designers turn the strongest ideas into a focused website experience around your brand.',
-    color: '#9C27B0',
+    color: '#053456',
   },
 ];
 
 const stepsRight: ProcessStep[] = [
- 
   {
     number: '04',
     title: 'Build',
     description: 'AI-assisted development helps accelerate implementation while our developers control the code and architecture.',
-    color: '#673AB7',
+    color: '#53ae7d',
   },
- {
+  {
     number: '05',
     title: 'Refine',
     description: 'We test responsiveness, usability, visual consistency and performance across devices.',
-    color: '#2196F3',
+    color: '#053456',
   },
- {
+  {
     number: '06',
     title: 'Launch',
     description: 'Once everything is reviewed and approved, your website is optimized and prepared for launch.',
-    color: '#00BCD4',
+    color: '#53ae7d',
   },
- 
- 
 ];
 
 export default function ProcessSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ overflowX: 'hidden',overflowY: 'hidden' }}>
       <div className="container container-1550">
         
         <style jsx>{`
@@ -77,7 +84,7 @@ export default function ProcessSection() {
             position: relative;
           }
 
-          /* Background Dashed Ring */
+          /* Background Dashed Ring with a slow rotation scroll flair */
           .dashed-ring {
             position: absolute;
             left: 50%;
@@ -86,9 +93,19 @@ export default function ProcessSection() {
             width: 500px;
             height: 500px;
             border-radius: 50%;
-            border: 2px dashed #e2e8f0;
+            border: 2px dashed #cbd5e1;
             pointer-events: none;
             z-index: 1;
+            animation: rotateRing 30s linear infinite;
+          }
+
+          @keyframes rotateRing {
+            from {
+              transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+              transform: translate(-50%, -50%) rotate(360deg);
+            }
           }
 
           /* Center Circle */
@@ -105,12 +122,22 @@ export default function ProcessSection() {
             height: 230px;
             border-radius: 50%;
             background-color: #ffffff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 15px 35px rgba(5, 52, 86, 0.08);
             display: flex;
             align-items: center;
             justify-content: center;
             border: 4px solid #f8fafc;
             text-align: center;
+            animation: hubPulse 4s ease-in-out infinite;
+          }
+
+          @keyframes hubPulse {
+            0%, 100% {
+              box-shadow: 0 15px 35px rgba(5, 52, 86, 0.08), 0 0 0 0 rgba(83, 174, 125, 0.1);
+            }
+            50% {
+              box-shadow: 0 20px 40px rgba(5, 52, 86, 0.12), 0 0 0 15px rgba(83, 174, 125, 0);
+            }
           }
 
           .center-hub h3 {
@@ -128,13 +155,11 @@ export default function ProcessSection() {
             padding: 4px;
             background: conic-gradient(
               from 180deg,
-              #FF6B00,
-              #E91E63,
-              #9C27B0,
-              #673AB7,
-              #2196F3,
-              #00BCD4,
-              #FF6B00
+              #053456,
+              #53ae7d,
+              #053456,
+              #53ae7d,
+              #053456
             );
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
@@ -145,7 +170,7 @@ export default function ProcessSection() {
           .step-column {
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 40px;
             z-index: 2;
           }
 
@@ -153,6 +178,15 @@ export default function ProcessSection() {
             display: flex;
             align-items: center;
             gap: 20px;
+            padding: 12px;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          }
+
+          .step-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
           }
 
           .step-item.left {
@@ -176,8 +210,14 @@ export default function ProcessSection() {
             font-weight: 700;
             font-size: 16px;
             border: 3px solid #ffffff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
             flex-shrink: 0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+
+          .step-item:hover .step-badge {
+            transform: scale(1.15) rotate(8deg);
+            box-shadow: 0 8px 20px rgba(83, 174, 125, 0.3);
           }
 
           .step-content {
@@ -210,6 +250,12 @@ export default function ProcessSection() {
               border: 1px solid #f1f5f9;
               border-radius: 12px;
               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .mobile-card:hover {
+              transform: translateY(-4px);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
             }
           }
         `}</style>
@@ -224,18 +270,23 @@ export default function ProcessSection() {
 
             {/* Left Column (Steps 01, 02, 03) */}
             <div className="step-column">
-              {stepsLeft.map((step) => (
-                <div key={step.number} className="step-item left">
+              {stepsLeft.map((step, index) => (
+                <div 
+                  key={step.number} 
+                  className="step-item left" 
+                  data-aos="fade-right" 
+                  data-aos-delay={150 * (index + 1)}
+                >
                   <div className="step-badge" style={{ backgroundColor: step.color }}>
                     {step.number}
                   </div>
                   <div className="step-content">
-                    <h4 className="px-about-title mb-20" style={{ margin: 0 }}>
-                      <span className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' ,fontSize:"22px"}}>
+                    <h4 className="px-about-title mb-10" style={{ margin: 0 }}>
+                      <span className="mb-2 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"', fontSize: "22px", color: '#053456' }}>
                         {step.title}
                       </span>
                     </h4>
-                    <span className="text-figtree text-black mt-2" style={{  fontSize: '18px !important' }}>
+                    <span className="text-figtree text-black mt-2" style={{ fontSize: '16px', lineHeight: '1.5', color: '#334155' }}>
                       {step.description}
                     </span>
                   </div>
@@ -244,29 +295,34 @@ export default function ProcessSection() {
             </div>
 
             {/* Central Hub */}
-            <div className="center-hub-wrapper">
+            <div className="center-hub-wrapper" data-aos="zoom-in" data-aos-delay="200">
               <div className="center-hub">
                 <div className="center-ring-arc" />
-               <h4 className="px-about-title mb-20" style={{ fontSize: '20px' }}>
-                 <span className="text-blue-about" style={{ fontSize: '20px' }}> From Idea to</span> Launch, Faster.
+                <h4 className="px-about-title mb-0" style={{ fontSize: '20px', padding: '0 20px' }}>
+                  From Idea to Launch, Faster.
                 </h4>
               </div>
             </div>
 
-            {/* Right Column (Steps 06, 05, 04) */}
+            {/* Right Column (Steps 04, 05, 06) */}
             <div className="step-column">
-              {stepsRight.map((step) => (
-                <div key={step.number} className="step-item right">
+              {stepsRight.map((step, index) => (
+                <div 
+                  key={step.number} 
+                  className="step-item right" 
+                  data-aos="fade-left" 
+                  data-aos-delay={150 * (index + 1)}
+                >
                   <div className="step-badge" style={{ backgroundColor: step.color }}>
                     {step.number}
                   </div>
                   <div className="step-content">
-                    <h4 className="px-about-title mb-20" style={{ margin: 0 }}>
-                      <span className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"22px" }}>
+                    <h4 className="px-about-title mb-10" style={{ margin: 0 }}>
+                      <span className="mb-2 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"', fontSize: "22px", color: '#053456' }}>
                         {step.title}
                       </span>
                     </h4>
-                    <span className="text-figtree text-black mt-2" style={{ margin: '6px 0 0 0', fontSize: '18px', lineHeight: '1.5' }}>
+                    <span className="text-figtree text-black mt-2" style={{ margin: '6px 0 0 0', fontSize: '16px', lineHeight: '1.5', color: '#334155' }}>
                       {step.description}
                     </span>
                   </div>
@@ -278,18 +334,23 @@ export default function ProcessSection() {
 
           {/* Mobile Grid Layout */}
           <div className="mobile-grid-container">
-            {[...stepsLeft, ...stepsRight].map((step) => (
-              <div key={step.number} className="mobile-card">
+            {[...stepsLeft, ...stepsRight].map((step, index) => (
+              <div 
+                key={step.number} 
+                className="mobile-card" 
+                data-aos="fade-up" 
+                data-aos-delay={100 * (index + 1)}
+              >
                 <div className="step-badge" style={{ backgroundColor: step.color }}>
                   {step.number}
                 </div>
                 <div>
-                  <h4 className="px-about-title mb-20" style={{ margin: 0 }}>
-                    <span className="text-blue-about" style={{ fontWeight: 700, fontSize: '20px' }}>
+                  <h4 className="px-about-title mb-10" style={{ margin: 0 }}>
+                    <span style={{ fontWeight: 700, fontSize: '18px', color: '#053456', fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' }}>
                       {step.title}
                     </span>
                   </h4>
-                  <p className="text-figtree text-black mt-2" style={{ margin: '6px 0 0 0', fontSize: '14px', lineHeight: '1.5' }}>
+                  <p className="text-figtree text-black mt-1" style={{ margin: 0, fontSize: '14px', lineHeight: '1.5', color: '#334155' }}>
                     {step.description}
                   </p>
                 </div>

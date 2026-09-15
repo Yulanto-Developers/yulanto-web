@@ -1,6 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface Tool {
   name: string;
@@ -26,7 +28,7 @@ const styles = `
   .ai-hub-wrapper {
     position: relative;
     width: 100%;
-    max-width: 900px;
+    max-width: 1050px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -34,11 +36,11 @@ const styles = `
     align-items: center;
   }
 
-  /* Grid surround layout */
+  /* Grid surround layout: 5 columns for desktop */
   .tools-outer-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
     width: 100%;
     position: relative;
     z-index: 2;
@@ -46,10 +48,10 @@ const styles = `
     align-items: center;
   }
 
-  /* Central AI Chip Container */
+  /* Central AI Chip Container (Spans columns 2-4, rows 2-3 on desktop) */
   .center-chip-container {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,9 +94,9 @@ const styles = `
     background: #fff;
     border: 1px solid #e2e8f0;
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    padding: 10px;
+    width: 160px;
+    height: 160px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,16 +105,18 @@ const styles = `
     position: relative;
     cursor: pointer;
     box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   }
 
   .tool-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+    border-color: #53ae7d;
   }
 
   .tool-icon {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -122,15 +126,15 @@ const styles = `
   }
 
   .tool-name {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     color: #1e293b;
     text-align: center;
     margin: 0;
     line-height: 1.2;
-    max-width: 200px;
+    max-width: 150px;
     overflow: hidden;
-    text-overflow: ellipsis;
+  
     white-space: nowrap;
   }
 
@@ -155,31 +159,41 @@ const styles = `
     }
   }
 
-  /* Responsive Settings */
-  @media (max-width: 768px) {
-    .tools-outer-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-    
-    .center-chip-container {
-      grid-column: span 2;
-      grid-row: auto;
-      margin: 10px 0;
+  /* Mobile & Tablet Responsive Styles (2-Column Grid Layout) */
+  @media (max-width: 991px) {
+    .ai-hub-wrapper {
+      padding: 10px;
     }
 
-    .tool-card {
-      width: 150px;
-      height: 150px;
+    .tools-outer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      justify-items: center;
+      align-items: center;
+    }
+
+    /* Span central chip across both columns at the very top of mobile view */
+    .center-chip-container {
+      grid-column: span 2 !important;
+      grid-row: auto !important;
+      margin-bottom: 10px;
+      order: -1;
     }
 
     .ai-chip {
-      width: 110px;
-      height: 110px;
+      width: 160px;
+      height: 160px;
     }
 
     .ai-chip-title {
-      font-size: 20px;
+      font-size: 22px;
+    }
+
+    .tool-card {
+      width: 180px !important;
+      height: 180px !important;
+      grid-column: auto !important; /* Clear explicit desktop grid placement overrides */
     }
 
     .connection-svg {
@@ -189,6 +203,13 @@ const styles = `
 `;
 
 export const AIToolsIntegrations: React.FC = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
       <style>{styles}</style>
@@ -225,34 +246,9 @@ export const AIToolsIntegrations: React.FC = () => {
           </svg>
 
           <div className="tools-outer-grid">
-            {/* Top Row Cards */}
-            {toolsList.slice(0, 4).map((tool) => (
-              <div key={tool.name} className="tool-card">
-                <img
-                  src={tool.iconSrc}
-                  alt={tool.name}
-                  className="tool-icon"
-                />
-                <p className="tool-name">{tool.name}</p>
-              </div>
-            ))}
-
-            {/* Middle Left Side */}
-            {toolsList.slice(4, 5).map((tool) => (
-              <div key={tool.name} className="tool-card">
-                <img
-                  src={tool.iconSrc}
-                  alt={tool.name}
-                  className="tool-icon"
-                />
-                <p className="tool-name">{tool.name}</p>
-              </div>
-            ))}
-
             {/* Central AI Processor Round Node */}
-            <div className="center-chip-container">
+            <div className="center-chip-container" data-aos="zoom-in" data-aos-delay="200">
               <div className="ai-chip">
-                {/* Microchip SVG Logo */}
                 <svg
                   width="30"
                   height="30"
@@ -274,39 +270,72 @@ export const AIToolsIntegrations: React.FC = () => {
                   <path d="M9 2v2" />
                   <path d="M9 20v2" />
                 </svg>
-                <h5
-                  className="ai-chip-title"
-                  style={{ fontFamily: '"Tenor Sans", sans-serif' }}
-                >
+                <h5 className="ai-chip-title" style={{ fontFamily: '"Tenor Sans", sans-serif' }}>
                   AI
                 </h5>
                 <span className="ai-chip-subtitle">Engine</span>
               </div>
             </div>
 
-            {/* Middle Right Side */}
-            {toolsList.slice(5, 6).map((tool) => (
-              <div key={tool.name} className="tool-card">
-                <img
-                  src={tool.iconSrc}
-                  alt={tool.name}
-                  className="tool-icon"
-                />
-                <p className="tool-name">{tool.name}</p>
-              </div>
-            ))}
+            {/* Row 1 */}
+            <div className="tool-card" data-aos="zoom-in" data-aos-delay="100">
+              <img src={toolsList[0].iconSrc} alt={toolsList[0].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[0].name}</p>
+            </div>
+            <div className="tool-card" data-aos="zoom-in" data-aos-delay="150">
+              <img src={toolsList[1].iconSrc} alt={toolsList[1].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[1].name}</p>
+            </div>
+            {/* Gemini on top center blue line (Desktop) */}
+            <div className="tool-card" data-aos="zoom-in" data-aos-delay="200">
+              <img src={toolsList[2].iconSrc} alt={toolsList[2].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[2].name}</p>
+            </div>
+            <div className="tool-card" data-aos="zoom-in" data-aos-delay="250">
+              <img src={toolsList[3].iconSrc} alt={toolsList[3].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[3].name}</p>
+            </div>
+            <div className="tool-card" data-aos="zoom-in" data-aos-delay="300">
+              <img src={toolsList[4].iconSrc} alt={toolsList[4].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[4].name}</p>
+            </div>
 
-            {/* Bottom Row Cards */}
-            {toolsList.slice(6, 10).map((tool) => (
-              <div key={tool.name} className="tool-card">
-                <img
-                  src={tool.iconSrc}
-                  alt={tool.name}
-                  className="tool-icon"
-                />
-                <p className="tool-name">{tool.name}</p>
-              </div>
-            ))}
+            {/* Row 2 Left */}
+            <div className="tool-card" data-aos="fade-right" data-aos-delay="350">
+              <img src={toolsList[5].iconSrc} alt={toolsList[5].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[5].name}</p>
+            </div>
+            {/* Row 2 Right */}
+            <div className="tool-card" data-aos="fade-left" data-aos-delay="350">
+              <img src={toolsList[6].iconSrc} alt={toolsList[6].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[6].name}</p>
+            </div>
+
+            {/* Row 3 Left */}
+            <div className="tool-card" data-aos="fade-right" data-aos-delay="400">
+              <img src={toolsList[7].iconSrc} alt={toolsList[7].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[7].name}</p>
+            </div>
+            {/* Row 3 Right */}
+            <div className="tool-card" data-aos="fade-left" data-aos-delay="400">
+              <img src={toolsList[8].iconSrc} alt={toolsList[8].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[8].name}</p>
+            </div>
+
+            {/* Row 4 */}
+            <div className="tool-card" data-aos="zoom-in" data-aos-delay="450">
+              <img src={toolsList[10].iconSrc} alt={toolsList[10].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[10].name}</p>
+            </div>
+            {/* Lovable on bottom center blue line (Desktop) */}
+            <div className="tool-card" data-aos="zoom-in" data-aos-delay="500" style={{ gridColumn: 3 }}>
+              <img src={toolsList[9].iconSrc} alt={toolsList[9].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[9].name}</p>
+            </div>
+            <div className="tool-card" data-aos="zoom-in" data-aos-delay="550" style={{ gridColumn: 5 }}>
+              <img src={toolsList[11].iconSrc} alt={toolsList[11].name} className="tool-icon" />
+              <p className="tool-name">{toolsList[11].name}</p>
+            </div>
           </div>
         </div>
       </div>

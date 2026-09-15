@@ -1,6 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface ServiceCard {
   title: string;
@@ -121,10 +123,16 @@ const cardStyles = `
 `;
 
 export const BusinessWebsitesSection: React.FC = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{
         backgroundColor: "#ffffff",
-      
       }}>
       <style>{cardStyles}</style>
 
@@ -153,9 +161,14 @@ export const BusinessWebsitesSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="service-grid" data-aos="fade-up" data-aos-delay="150">
+        <div className="service-grid">
           {servicesData.map((card, index) => (
-            <div key={index} className="service-card">
+            <div 
+              key={index} 
+              className="service-card"
+              data-aos="fade-up"
+              data-aos-delay={100 * (index + 1)}
+            >
               <img
                 src={card.imageUrl}
                 alt={card.title}

@@ -251,9 +251,9 @@ const data = [
   },
   {
     path: "/AI-assisted-website",
-    title: "AI Assisted Website",
+    title: "AI Web Design & Development",
 
-    currentPage: "AI Assisted Website",
+    currentPage: "AI Web Design & Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
 
