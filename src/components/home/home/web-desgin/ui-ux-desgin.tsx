@@ -36,7 +36,7 @@ function Uiuxdesgin() {
             <div data-aos="fade-right"
                 data-aos-delay={400}
                 data-aos-once={true}>
-                <div className='container mt-100 mb-20'>
+                <div className='container mt-50 mt-lg-100 mb-20'>
                     <div className="row">
                         <div className="col-md-7">
                             <span className="tp-section-subtitle text-black blink-ball">
@@ -70,7 +70,7 @@ function Uiuxdesgin() {
                     </div>
                 </div>
             </div>
-            <div className='mb-50 mt-50'>
+            <div className='mb-50 mt-100'>
                 <div className='container mt-50'>
                     <div className="row">
 
@@ -101,9 +101,9 @@ function Uiuxdesgin() {
             >
                 <div className="container mt-100 mb-20">
 
-                    <div className="row">
 
-                        <div className="col-12 mb-4">
+
+                    {/* <div className="col-12 mb-4">
 
                             <span className="tp-section-subtitle text-black blink-ball">
                                 From Research to Final Design
@@ -116,9 +116,9 @@ function Uiuxdesgin() {
                                 Design Process
                             </h4>
 
-                        </div>
+                        </div> */}
 
-                    </div>
+
 
                     <UISteps steps={uisteps} />
 
@@ -129,7 +129,7 @@ function Uiuxdesgin() {
                 data-aos-delay={400}
                 data-aos-once={true}
             >
-                <div className="container mt-30 mb-20">
+                <div className="container mt-100 mb-50">
 
                     <div className="row">
 
@@ -150,7 +150,7 @@ function Uiuxdesgin() {
 
                     </div>
 
-                    <div className="row">
+                    <div className="row pt-20">
 
                         {whyChooseItems.map((item, index) => (
                             <div
@@ -182,10 +182,21 @@ function Uiuxdesgin() {
                 style={{ background: "#f5f5f5" }}
             >
                 <div className="container mt-30 mb-20">
-
+                    .
                     {/* UI/UX DESIGN - INTRO */}
-                    <div className="row align-items-center">
+                    <div className="row align-items-center pt-50">
+                        <div className="col-12 d-block d-lg-none">
+                            <span className="tp-section-subtitle text-black blink-ball">
+                                UI/UX Design That Supports Business Growth
+                            </span>
 
+                            <h4 className="px-about-title text-tenor mb-20">
+                                Design That Drives Better
+                                <span className="text-blue-about">
+                                    {" "}Digital Experiences
+                                </span>
+                            </h4>
+                        </div>
                         {/* LEFT - ANIMATED SVG */}
                         <div className="col-lg-5 col-md-6 mb-4 mb-md-0">
 
@@ -455,21 +466,23 @@ function Uiuxdesgin() {
 
                         {/* RIGHT - CONTENT */}
                         <div className="col-lg-7 col-md-6">
-
-                            <span className="tp-section-subtitle text-black blink-ball">
-                                UI/UX Design That Supports Business Growth
-                            </span>
-
-                            <h4 className="px-about-title text-tenor mb-20">
-                                Design That Drives Better
-                                <span className="text-blue-about">
-                                    {" "}Digital Experiences
+                            <div className='d-none d-lg-block'>
+                                <span className="tp-section-subtitle text-black blink-ball">
+                                    UI/UX Design That Supports Business Growth
                                 </span>
-                            </h4>
+
+                                <h4 className="px-about-title text-tenor mb-20">
+                                    Design That Drives Better
+                                    <span className="text-blue-about">
+                                        {" "}Digital Experiences
+                                    </span>
+                                </h4>
+                            </div>
+
 
                             <p>
                                 Good design is more than attractive screens. A well-planned
-                               UX design and UI design
+                                UX design and UI design
                                 strategy can help users find information faster, understand
                                 your offerings clearly, and take the actions that matter to
                                 your business.
@@ -522,7 +535,7 @@ function Uiuxdesgin() {
 
                                         <p className="text-white mb-0">
                                             Looking for professional
-                                            ui and ux designers in Chennai 
+                                            ui and ux designers in Chennai
                                             for your website or digital product? Let's
                                             create an interface that looks great, feels
                                             intuitive, and helps your users accomplish more.

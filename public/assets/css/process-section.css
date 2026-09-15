@@ -24,7 +24,7 @@
 .process-wrapper {
     width: 100%;
     max-width: 980px;
-    margin: 0 auto;
+    margin: 50px auto;
 
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));

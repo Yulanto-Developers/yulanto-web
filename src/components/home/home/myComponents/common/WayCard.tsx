@@ -103,6 +103,7 @@ export function PackagingProcessSection({
                                     style={{
                                         position: "relative",
                                         zIndex: 2,
+                                        margin:'20px 0px'
                                     }}
                                 >
 
