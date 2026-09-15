@@ -70,7 +70,7 @@ const ScrollCard: React.FC<ScrollCardProps> = ({
             loop={true}
             speed={800}
             autoplay={{
-              delay: 60000,
+              delay: 5000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}

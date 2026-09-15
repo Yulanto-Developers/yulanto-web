@@ -27,9 +27,25 @@ const UISteps = ({ steps }: UIStepsProps) => {
     const active = steps[activeStep];
 
     return (
-        <section className="ui-steps-section">
+        <section className="ui-steps-section ui-steps-wrappers">
             <div className="container">
 
+                <div className="row">
+                    <div className="col-12">
+
+                        <span className="tp-section-subtitle text-white blink-ball">
+                            From Research to Final Design
+                        </span>
+
+                        <h4 className="px-about-title text-white ">
+                            <span className="text-blue-about text-white">
+                                Our UX Design & UI{" "}
+                            </span>
+                            Design Process
+                        </h4>
+
+                    </div>
+                </div>
                 <div className="ui-steps-wrapper">
 
                     {/* =========================================

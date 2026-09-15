@@ -50,7 +50,7 @@ function Landingpagedesgin() {
             <div data-aos="fade-right"
                 data-aos-delay={400}
                 data-aos-once={true}>
-                <div className='container mt-30 mb-20'>
+                <div className='container mt-100 mb-50'>
                     <div className="row">
 
                         <div className="col-12 mb-4">
@@ -280,7 +280,7 @@ function Landingpagedesgin() {
             <div data-aos="fade-down"
                 data-aos-delay={400}
                 data-aos-once={true}>
-                <div className="container  mb-50">
+                <div className="container mt-100  mb-50">
                     <div className="row">
                         <div className="col-12">
                             <span className="tp-section-subtitle blink-ball">
@@ -472,7 +472,18 @@ function Landingpagedesgin() {
                 <div className="container">
 
                     <div className="row align-items-center">
+                        <div>
+                            <span className="tp-section-subtitle blink-ball text-white">
+                                Get a Professional Landing Page Designed in Chennai
+                            </span>
 
+                            <h4 className="px-about-title mb-20 text-tenor text-white">
+                                <span className="text-blue-about text-white">
+                                    Get a Professional Landing Page{" "}
+                                </span>
+                                Designed in Chennai
+                            </h4>
+                        </div>
                         {/* LEFT - IMAGE */}
                         <div className="col-lg-5 mb-4 mb-lg-0">
 
@@ -492,16 +503,7 @@ function Landingpagedesgin() {
 
                             <div className="landing-cta-content">
 
-                                <span className="tp-section-subtitle blink-ball text-white">
-                                    Get a Professional Landing Page Designed in Chennai
-                                </span>
 
-                                <h4 className="px-about-title mb-20 text-tenor text-white">
-                                    <span className="text-blue-about text-white">
-                                        Get a Professional Landing Page{" "}
-                                    </span>
-                                    Designed in Chennai
-                                </h4>
 
                                 <p>
                                     Ready to create a landing page that supports your
