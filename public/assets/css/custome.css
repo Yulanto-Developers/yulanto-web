@@ -786,7 +786,7 @@
 
 /* CRITICAL: When hovering over an item with sublinks, EXPAND the total container width! */
 .split-dropdown-menu.tp-submenu:has(.sidebar-item:hover .dropdown-content-pane) {
-    width: 700px !important;
+    width: 655px !important;
     /* Expands smoothly to make space for the right panel */
 }
 
@@ -848,13 +848,13 @@
 .split-dropdown-menu .dropdown-content-pane {
     position: absolute !important;
     top: 0 !important;
-    left: 40% !important;
+    left: 41% !important;
     /* Begins exactly where the sidebar finishes */
     width: auto !important;
     /* Explicit space allocation (680px - 260px) */
     height: 350 !important;
     background: #ffffff !important;
-    padding: 32px 36px !important;
+    padding: 32px 0px 30px 36px !important;
     box-sizing: border-box !important;
     border-radius: 0 12px 12px 0 !important;
     list-style: none !important;

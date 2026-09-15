@@ -1,36 +1,24 @@
-/* =========================================
+/* =========================================================
    WEBSITE REDESIGN BENEFITS
-========================================= */
+========================================================= */
 
 .website-benefits-grid {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 20px;
-
     margin-top: 35px;
 }
 
-
-/* =========================================
-   CARD
-========================================= */
-
 .website-benefit-card {
     position: relative;
-
     min-height: 300px;
-
     padding: 28px 24px;
 
     display: flex;
     flex-direction: column;
 
     background: #ffffff;
-
     border: 1px solid #e7ebee;
-
     border-radius: 14px;
 
     overflow: hidden;
@@ -44,14 +32,8 @@
         border-color 0.35s ease;
 }
 
-
-/* =========================================
-   HOVER
-========================================= */
-
 .website-benefit-card:hover {
     transform: translateY(-8px);
-
     border-color: #053456;
 
     box-shadow:
@@ -59,22 +41,19 @@
 }
 
 
-/* =========================================
-   NUMBER
-========================================= */
+/* =========================================================
+   WEBSITE BENEFIT NUMBER
+========================================================= */
 
 .website-benefit-number {
     position: absolute;
-
     top: 18px;
     right: 20px;
 
     font-family: "Tenor Sans", sans-serif;
 
     font-size: 42px;
-
     line-height: 1;
-
     font-weight: 400;
 
     color: rgba(5, 52, 86, 0.07);
@@ -86,14 +65,13 @@
 
 .website-benefit-card:hover .website-benefit-number {
     color: rgba(5, 52, 86, 0.14);
-
     transform: scale(1.08);
 }
 
 
-/* =========================================
-   ICON
-========================================= */
+/* =========================================================
+   WEBSITE BENEFIT ICON
+========================================================= */
 
 .website-benefit-icon {
     width: 54px;
@@ -108,7 +86,6 @@
     border-radius: 12px;
 
     background: #053456;
-
     color: #ffffff;
 
     font-size: 22px;
@@ -123,18 +100,16 @@
 
 .website-benefit-card:hover .website-benefit-icon {
     transform: rotate(-5deg) scale(1.08);
-
     border-radius: 16px;
 }
 
 
-/* =========================================
-   CONTENT
-========================================= */
+/* =========================================================
+   WEBSITE BENEFIT CONTENT
+========================================================= */
 
 .website-benefit-content {
     position: relative;
-
     z-index: 2;
 }
 
@@ -146,9 +121,7 @@
     font-family: "Tenor Sans", sans-serif;
 
     font-size: 20px;
-
     line-height: 1.3;
-
     font-weight: 500;
 }
 
@@ -156,24 +129,21 @@
     margin: 0;
 
     font-size: 15px !important;
-
     line-height: 1.5;
 }
 
 
-/* =========================================
-   ARROW
-========================================= */
+/* =========================================================
+   WEBSITE BENEFIT ARROW
+========================================================= */
 
 .website-benefit-arrow {
     margin-top: auto;
-
     padding-top: 20px;
 
     color: #053456;
 
     font-size: 22px;
-
     font-weight: 600;
 
     opacity: 0.4;
@@ -185,14 +155,13 @@
 
 .website-benefit-card:hover .website-benefit-arrow {
     transform: translateX(7px);
-
     opacity: 1;
 }
 
 
-/* =========================================
-   DECORATIVE BACKGROUND
-========================================= */
+/* =========================================================
+   WEBSITE BENEFIT DECORATIVE CIRCLE
+========================================================= */
 
 .website-benefit-card::after {
     content: "";
@@ -216,14 +185,1411 @@
 
 .website-benefit-card:hover::after {
     transform: scale(2.2);
-
     background: rgba(5, 52, 86, 0.06);
 }
 
 
-/* =========================================
+/* =========================================================
+   REQUEST BUTTON
+========================================================= */
+
+.req-btn {
+    background-color: #ffffff;
+    color: #053456;
+
+    padding: 12px;
+
+    border-radius: 20px;
+
+    margin-top: 10px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   WEBSITE APPROACH SECTION
+========================================================= */
+
+.website-approach-section {
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+
+/* =========================================================
+   WEBSITE APPROACH HEADER
+========================================================= */
+
+.website-approach-header {
+    margin-bottom: 45px;
+}
+
+.website-approach-intro {
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   APPROACH GRID
+========================================================= */
+
+.website-approach-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 100px;
+}
+
+
+/* =========================================================
+   APPROACH CARD
+========================================================= */
+
+.website-approach-card {
+    position: relative;
+
+    min-height: 230px;
+
+    padding: 25px 25px 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaee;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 6px 25px rgba(5, 52, 86, 0.05);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.website-approach-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #053456;
+
+    box-shadow:
+        0 15px 40px rgba(5, 52, 86, 0.11);
+}
+
+
+/* =========================================================
+   APPROACH NUMBER / LINE
+========================================================= */
+
+.approach-card-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+.approach-number {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #053456;
+    color: #ffffff;
+
+    font-family: "Figtree", sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.approach-line {
+    height: 1px;
+
+    flex: 1;
+
+    background: #e2e7ea;
+}
+
+
+/* =========================================================
+   APPROACH CONTENT
+========================================================= */
+
+.website-approach-card h5 {
+    color: #053456;
+
+    font-family: "Tenor Sans", sans-serif;
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+.website-approach-card p {
+    margin: 0;
+
+    color: #666666;
+
+    font-family: "Figtree", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   APPROACH DECORATION
+========================================================= */
+
+.website-approach-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    right: -45px;
+    bottom: -45px;
+
+    border-radius: 50%;
+
+    background: rgba(5, 52, 86, 0.035);
+
+    transition: transform 0.4s ease;
+}
+
+.website-approach-card:hover::after {
+    transform: scale(2);
+}
+
+
+/* =========================================================
+   WHY YULANTO
+========================================================= */
+
+.why-yulanto-section {
+    padding-top: 10px;
+}
+
+.why-yulanto-header {
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   WHY YULANTO GRID
+========================================================= */
+
+.why-yulanto-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px 20px;
+}
+
+
+/* =========================================================
+   WHY YULANTO ITEM
+========================================================= */
+
+.why-yulanto-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 64px;
+
+    padding: 12px 16px;
+
+    background: #f8fafb;
+
+    border: 1px solid #e8edf0;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.why-yulanto-item:hover {
+    transform: translateX(5px);
+
+    background: #ffffff;
+
+    border-color: #053456;
+
+    box-shadow:
+        0 6px 20px rgba(5, 52, 86, 0.07);
+}
+
+
+/* =========================================================
+   WHY YULANTO CHECK
+========================================================= */
+
+.why-yulanto-check {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #053456;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   WHY YULANTO TEXT
+========================================================= */
+
+.why-yulanto-text {
+    color: #333333;
+
+    font-family: "Figtree", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   LANDING LIST
+========================================================= */
+
+.landing-list {
+    margin-top: 10px;
+}
+
+.landing-list-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 64px;
+
+    padding: 12px 16px;
+
+    border: 1px solid rgba(5, 52, 86, 0.10);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f8fbfd 100%
+        );
+
+    box-shadow:
+        0 6px 18px rgba(5, 52, 86, 0.045);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.landing-list-item:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(5, 52, 86, 0.22);
+
+    box-shadow:
+        0 14px 30px rgba(5, 52, 86, 0.10);
+}
+
+.landing-list-icon {
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(83, 174, 125, 0.12);
+
+    color: #053456;
+
+    font-size: 17px;
+}
+
+.landing-list-item span {
+    font-size: 15px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   WELCOME BENEFIT CARDS
+   THIS IS THE ANIMATED SECTION
+========================================================= */
+
+.welcome-benefit-card {
+    position: relative;
+
+    width: 100%;
+    height: 180px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(5, 52, 86, 0.05);
+
+    transition:
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* =========================================================
+   WELCOME TOP ANIMATION LINE
+========================================================= */
+
+.welcome-benefit-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #053456,
+            #53ae7d
+        );
+
+    transform: scaleX(0);
+
+    transform-origin: left center;
+
+    opacity: 0;
+
+    transition:
+        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   WELCOME HOVER
+========================================================= */
+
+.welcome-benefit-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #053456;
+
+    box-shadow:
+        0 20px 40px rgba(5, 52, 86, 0.13);
+}
+
+.welcome-benefit-card:hover::before {
+    transform: scaleX(1);
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   WELCOME ACTIVE
+========================================================= */
+
+.welcome-benefit-card.active {
+    transform: translateY(-8px);
+
+    border-color: #053456;
+
+    box-shadow:
+        0 20px 40px rgba(5, 52, 86, 0.13);
+}
+
+.welcome-benefit-card.active::before {
+    transform: scaleX(1);
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   WELCOME NUMBER
+========================================================= */
+
+.welcome-benefit-number {
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #053456;
+
+    font-family: "Figtree", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.welcome-benefit-card:hover .welcome-benefit-number,
+.welcome-benefit-card.active .welcome-benefit-number {
+    color: #53ae7d;
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   WELCOME TITLE
+========================================================= */
+
+.welcome-benefit-title {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    color: #1e293b;
+
+    font-family: "Tenor Sans", sans-serif;
+
+    font-size: 21px;
+
+    line-height: 1.35;
+
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.welcome-benefit-card:hover .welcome-benefit-title,
+.welcome-benefit-card.active .welcome-benefit-title {
+    color: #053456;
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   WELCOME DECORATIVE CIRCLE
+========================================================= */
+
+.welcome-benefit-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    right: -65px;
+    bottom: -65px;
+
+    border-radius: 50%;
+
+    background: rgba(5, 52, 86, 0.035);
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    transform: scale(1);
+
+    transition:
+        transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+        background 0.4s ease;
+}
+
+.welcome-benefit-card:hover::after,
+.welcome-benefit-card.active::after {
+    transform: scale(2.1);
+
+    background: rgba(83, 174, 125, 0.08);
+}
+
+
+/* =========================================================
+   WELCOME BENEFITS TITLE
+========================================================= */
+
+.welcome-benefits-title {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    margin: 40px 0 25px;
+
+    background: #053456;
+
+    color: #ffffff;
+
+    border-radius: 5px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   CORNER CIRCLE
+========================================================= */
+
+.corner-circle {
+    position: absolute;
+
+    bottom: -50px;
+    right: -50px;
+
+    width: 140px;
+    height: 140px;
+
+    background-color: #f0f4f8;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   LANDING UI FEATURES
+========================================================= */
+
+.landing-ui-feature-card {
+    position: relative;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 28px;
+
+    background: #053456;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* =========================================================
+   LANDING UI BACKGROUND
+========================================================= */
+
+.landing-ui-feature-bg {
+    position: absolute;
+
+    inset: 0;
+
+    background-size: cover;
+
+    background-position: center;
+
+    transition:
+        transform 0.7s ease;
+}
+
+.landing-ui-feature-card:hover
+.landing-ui-feature-bg {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   LANDING UI OVERLAY
+========================================================= */
+
+.landing-ui-feature-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.70) 45%,
+            rgba(0, 0, 0, 0.30) 100%
+        );
+
+    transition:
+        opacity 0.4s ease;
+}
+
+.landing-ui-feature-card:hover
+.landing-ui-feature-overlay {
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   LANDING UI CARD HOVER
+========================================================= */
+
+.landing-ui-feature-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   LANDING UI TOP
+========================================================= */
+
+.landing-ui-feature-top {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LANDING UI ICON
+========================================================= */
+
+.landing-ui-feature-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(5, 52, 86, 0.92);
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.landing-ui-feature-card:hover
+.landing-ui-feature-icon {
+    background: #53ae7d;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   LANDING UI NUMBER
+========================================================= */
+
+.landing-ui-feature-number {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   LANDING UI CONTENT
+========================================================= */
+
+.landing-ui-feature-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.landing-ui-feature-content h3 {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease;
+}
+
+.landing-ui-feature-card:hover
+.landing-ui-feature-content h3 {
+    color: #53ae7d;
+}
+
+.landing-ui-feature-content p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   LANDING PAGE BENEFIT
+========================================================= */
+
+.landing-page-benefit-card {
+    position: relative;
+
+    height: 100%;
+
+    min-height: 175px;
+
+    padding: 30px 26px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(5, 52, 86, 0.14);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    box-shadow:
+        0 8px 25px rgba(5, 52, 86, 0.055);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.landing-page-benefit-card::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -60px;
+    right: -60px;
+
+    width: 200px;
+    height: 200px;
+
+    background: #eef3f7;
+
+    border-radius: 50%;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.landing-page-benefit-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(15, 55, 89, 0.08);
+}
+
+.landing-page-benefit-card:hover::after {
+    transform: scale(1.08);
+}
+
+.landing-page-benefit-card h3 {
+    position: relative;
+
+    z-index: 1;
+
+    margin: 0 0 16px;
+
+    color: #0f3759;
+
+    font-size: 21px;
+
+    line-height: 1.35;
+
+    font-weight: 500;
+}
+
+.landing-page-benefit-desc {
+    position: relative;
+
+    z-index: 1;
+
+    color: #333333;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+
+    margin-bottom: 24px;
+}
+
+.landing-page-benefit-arrow {
+    position: relative;
+
+    z-index: 1;
+
+    color: #0f3759;
+
+    font-size: 22px;
+
+    display: inline-block;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.landing-page-benefit-card:hover
+.landing-page-benefit-arrow {
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   SALES PITCH
+========================================================= */
+
+.sales-pitch-card {
+    position: relative;
+
+    height: 100%;
+
+    min-height: 255px;
+
+    padding: 32px 28px;
+
+    background: #053456;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 12px 30px rgba(5, 52, 86, 0.12);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.sales-pitch-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(5, 52, 86, 0.20);
+}
+
+.sales-pitch-number {
+    margin-bottom: 25px;
+
+    color: #53ae7d;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.sales-pitch-card h3 {
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+}
+
+.sales-pitch-card p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CTA SECTION
+========================================================= */
+
+.landing-cta-section {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 95px 0;
+
+    background: #053456;
+}
+
+.landing-cta-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -180px;
+    top: -180px;
+
+    border-radius: 50%;
+
+    background: rgba(83, 174, 125, 0.08);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CTA IMAGE
+========================================================= */
+
+.landing-cta-image {
+    width: 100%;
+
+    height: 600px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+.landing-cta-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.landing-cta-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   CTA CONTENT
+========================================================= */
+
+.landing-cta-content {
+    position: relative;
+
+    z-index: 1;
+
+    padding-left: 45px;
+}
+
+.landing-cta-content p {
+    max-width: 700px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.landing-cta-content h3 {
+    max-width: 650px;
+
+    margin: 30px 0;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   CTA LIST
+========================================================= */
+
+.landing-cta-section .landing-list-item {
+    min-height: 55px;
+
+    padding: 10px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    box-shadow: none;
+}
+
+.landing-cta-section .landing-list-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+
+    transform: translateY(-3px);
+}
+
+.landing-cta-section .landing-list-icon {
+    width: 35px;
+    height: 35px;
+
+    min-width: 35px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #053456;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.landing-cta-button {
+    display: inline-block;
+
+    min-height: 50px;
+
+    padding: 13px 25px;
+
+    background: #53ae7d;
+
+    color: #ffffff;
+
+    border: 1px solid transparent;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 24px rgba(83, 174, 125, 0.18);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.landing-cta-button:hover {
+    background: #ffffff;
+
+    color: #053456;
+
+    border-color: rgba(255, 255, 255, 0.35);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   LOTTIE
+========================================================= */
+
+.top-banner-animation {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+.top-banner-animation > div {
+    width: 100%;
+    height: 100%;
+}
+
+.top-banner-animation svg {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+}
+
+
+/* =========================================================
+   CORPORATE GALLERY
+========================================================= */
+
+.landing-page-desgin .corporate-gallery,
+.corporate-gallery {
+    position: relative;
+
+    width: 100%;
+    height: 420px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+.corporate-gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+.corporate-gallery .gallery-main {
+    position: absolute;
+
+    top: 20px;
+    left: 30px;
+
+    width: calc(80% - 10px);
+    height: 380px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    z-index: 2;
+
+    box-shadow:
+        0 22px 55px rgba(5, 52, 86, 0.14);
+}
+
+.corporate-gallery .gallery-main img,
+.corporate-gallery .gallery-small img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.55s ease;
+}
+
+.corporate-gallery .gallery-small {
+    position: absolute;
+
+    width: 145px;
+    height: 145px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 6px solid #ffffff;
+
+    box-shadow:
+        0 16px 38px rgba(5, 52, 86, 0.18);
+
+    z-index: 3;
+}
+
+.corporate-gallery .gallery-small-one {
+    left: 0;
+    right: auto;
+
+    bottom: 28px;
+
+    animation:
+        landingGalleryFloat 3.5s ease-in-out infinite;
+}
+
+.corporate-gallery .gallery-small-two {
+    right: 0;
+
+    bottom: -10px;
+
+    animation:
+        landingGalleryFloat 3.5s ease-in-out 0.5s infinite;
+}
+
+.corporate-gallery .gallery-main:hover img,
+.corporate-gallery .gallery-small:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   GALLERY ANIMATION
+========================================================= */
+
+@keyframes landingGalleryFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================================
+   LANDING PROCESS SECTION
+========================================================= */
+
+.landing-process-main-section {
+    overflow: visible;
+
+    padding-bottom: 0;
+}
+
+.landing-process-main-section > .container {
+    padding-top: 70px !important;
+
+    padding-bottom: 25px;
+}
+
+
+/* =========================================================
+   REDESIGN PARAGRAPH
+========================================================= */
+
+.redesign-para p {
+    max-width: 900px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 18px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
    LARGE TABLET
-========================================= */
+========================================================= */
 
 @media (max-width: 1200px) {
 
@@ -231,14 +1597,40 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .website-approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-yulanto-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .corporate-gallery {
+        height: 380px;
+    }
+
+    .corporate-gallery .gallery-main {
+        height: 330px;
+
+        width: 78%;
+    }
+
+    .corporate-gallery .gallery-small {
+        width: 125px;
+        height: 125px;
+    }
+
+    .landing-cta-content {
+        padding-left: 25px;
+    }
 }
 
 
-/* =========================================
+/* =========================================================
    TABLET
-========================================= */
+========================================================= */
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 
     .website-benefits-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -246,12 +1638,143 @@
         gap: 18px;
     }
 
+    .landing-process-main-section > .container {
+        padding-top: 55px !important;
+    }
+
+    .landing-cta-section {
+        padding: 70px 0;
+    }
+
+    .landing-cta-image {
+        height: 400px;
+    }
+
+    .landing-cta-content {
+        padding-left: 0;
+
+        margin-top: 20px;
+    }
+
+    .landing-ui-feature-card {
+        height: 330px;
+
+        padding: 25px;
+    }
+
+    .landing-ui-feature-content h3 {
+        font-size: 21px;
+    }
 }
 
 
-/* =========================================
+/* =========================================================
+   MOBILE TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .website-approach-section {
+        padding-top: 70px;
+
+        padding-bottom: 60px;
+    }
+
+    .website-approach-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-bottom: 70px;
+    }
+
+    .why-yulanto-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .website-approach-card {
+        min-height: auto;
+    }
+
+    .landing-list-item {
+        min-height: 58px;
+
+        padding: 10px 12px;
+    }
+
+    .landing-list-icon {
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+    }
+
+    .corporate-gallery {
+        height: 330px;
+
+        padding: 10px;
+
+        margin-top: 15px;
+    }
+
+    .corporate-gallery .gallery-main {
+        top: 10px;
+
+        left: 10%;
+
+        width: 80%;
+
+        height: 260px;
+
+        border-radius: 18px;
+    }
+
+    .corporate-gallery .gallery-small {
+        width: 100px;
+        height: 100px;
+
+        border-width: 4px;
+
+        border-radius: 14px;
+    }
+
+    .corporate-gallery .gallery-small-one {
+        left: 3%;
+
+        bottom: 8px;
+    }
+
+    .corporate-gallery .gallery-small-two {
+        right: 3%;
+
+        bottom: -5px;
+    }
+
+    .sales-pitch-card {
+        min-height: 225px;
+
+        padding: 28px 24px;
+    }
+
+    .landing-cta-content {
+        padding-left: 0;
+    }
+
+    .landing-cta-content h3 {
+        font-size: 22px;
+    }
+
+    .redesign-para p {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
    MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 576px) {
 
@@ -290,367 +1813,9 @@
         font-size: 13px;
     }
 
-}
-
-.req-btn {
-    background-color: #fff;
-    color: #053456;
-    padding: 12px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    margin-top: 10px;
-    font-weight: 600;
-}
-
-
-
-/* =========================================
-   WEBSITE APPROACH SECTION
-========================================= */
-
-.website-approach-section {
-    padding-top: 100px;
-    padding-bottom: 30px;
-}
-
-
-/* =========================================
-   HEADER
-========================================= */
-
-.website-approach-header {
-    /* max-width: 850px; */
-    margin-bottom: 45px;
-}
-
-.website-approach-intro {
-    /* max-width: 800px; */
-    line-height: 1.8;
-    margin-bottom: 0;
-}
-
-
-/* =========================================
-   APPROACH GRID
-========================================= */
-
-.website-approach-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-
-    margin-bottom: 100px;
-}
-
-
-/* =========================================
-   APPROACH CARD
-========================================= */
-
-.website-approach-card {
-    position: relative;
-
-    min-height: 230px;
-
-    padding: 25px 25px 28px;
-
-    background: #ffffff;
-
-    border: 1px solid #e5eaee;
-
-    border-radius: 12px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 6px 25px rgba(5, 52, 86, 0.05);
-
-    transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
-}
-
-.website-approach-card:hover {
-    transform: translateY(-7px);
-
-    border-color: #053456;
-
-    box-shadow:
-        0 15px 40px rgba(5, 52, 86, 0.11);
-}
-
-
-/* =========================================
-   NUMBER / LINE
-========================================= */
-
-.approach-card-top {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 28px;
-}
-
-.approach-number {
-    width: 45px;
-    height: 45px;
-
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #053456;
-
-    color: #ffffff;
-
-    font-family: "Figtree", sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 600;
-}
-
-.approach-line {
-    height: 1px;
-
-    flex: 1;
-
-    background: #e2e7ea;
-}
-
-
-/* =========================================
-   CARD CONTENT
-========================================= */
-
-.website-approach-card h5 {
-    color: #053456;
-
-    font-family: "Tenor Sans", sans-serif;
-
-    font-size: 21px;
-
-    font-weight: 500;
-
-    margin-bottom: 12px;
-}
-
-.website-approach-card p {
-    margin: 0;
-
-    color: #666666;
-
-    font-family: "Figtree", sans-serif;
-
-    font-size: 14px;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   DECORATIVE NUMBER
-========================================= */
-
-.website-approach-card::after {
-    content: "";
-
-    position: absolute;
-
-    width: 100px;
-    height: 100px;
-
-    right: -45px;
-    bottom: -45px;
-
-    border-radius: 50%;
-
-    background: rgba(5, 52, 86, 0.035);
-
-    transition: transform 0.4s ease;
-}
-
-.website-approach-card:hover::after {
-    transform: scale(2);
-}
-
-
-/* =========================================
-   WHY YULANTO
-========================================= */
-
-.why-yulanto-section {
-    padding-top: 10px;
-}
-
-.why-yulanto-header {
-    margin-bottom: 35px;
-}
-
-
-/* =========================================
-   WHY YULANTO GRID
-========================================= */
-
-.why-yulanto-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 14px 20px;
-}
-
-
-/* =========================================
-   WHY YULANTO ITEM
-========================================= */
-
-.why-yulanto-item {
-    display: flex;
-
-    align-items: center;
-
-    gap: 14px;
-
-    min-height: 64px;
-
-    padding: 12px 16px;
-
-    background: #f8fafb;
-
-    border: 1px solid #e8edf0;
-
-    border-radius: 8px;
-
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        border-color 0.3s ease;
-}
-
-.why-yulanto-item:hover {
-    transform: translateX(5px);
-
-    background: #ffffff;
-
-    border-color: #053456;
-
-    box-shadow:
-        0 6px 20px rgba(5, 52, 86, 0.07);
-}
-
-
-/* =========================================
-   CHECK ICON
-========================================= */
-
-.why-yulanto-check {
-    width: 32px;
-    height: 32px;
-
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #053456;
-
-    color: #ffffff;
-
-    font-size: 14px;
-
-    font-weight: 600;
-}
-
-
-/* =========================================
-   TEXT
-========================================= */
-
-.why-yulanto-text {
-    color: #333333;
-
-    font-family: "Figtree", sans-serif;
-
-    font-size: 14px;
-
-    line-height: 1.45;
-}
-
-
-/* =========================================
-   LARGE TABLET
-========================================= */
-
-@media (max-width: 1200px) {
-
-    .website-approach-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .why-yulanto-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 768px) {
-
-    .website-approach-section {
-        padding-top: 70px;
-        padding-bottom: 60px;
-    }
-
-    .website-approach-grid {
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-
-        margin-bottom: 70px;
-    }
-
-    .why-yulanto-grid {
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-    }
-
-    .website-approach-card {
-        min-height: auto;
-    }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 576px) {
-
     .website-approach-section {
         padding-top: 50px;
+
         padding-bottom: 40px;
     }
 
@@ -696,349 +1861,19 @@
         font-size: 13px;
     }
 
-}
-
-/* landingl pge css */
-
-.landing-list-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 15px;
-    border: 1px solid #e8e8e8;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    background: #fff;
-}
-
-.landing-list-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-.landing-list-icon {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #f0f5ff;
-    color: #053456;
-    font-size: 17px;
-}
-
-.landing-list-item span {
-    font-size: 15px;
-    font-weight: 500;
-    color: #222;
-    line-height: 1.4;
-}
-
-/* Ensure gallery container stays within its 5-column grid bounds */
-.corporate-gallery {
-    position: relative;
-    width: 100%;
-}
-
-/* Ensure absolute positioned floating cards stay constrained */
-.corporate-gallery img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-.welcome-benefits-title {
-    display: inline-block;
-    padding: 12px 20px;
-    margin: 40px 0 25px;
-    background: #053456;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-.welcome-benefit-card {
-    position: relative;
-    height: 180px;
-    padding: 30px;
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    transition: all 0.4s ease;
-}
-
-.welcome-benefit-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 4px;
-    background: #053456;
-    transition: width 0.4s ease;
-}
-
-.welcome-benefit-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-}
-
-.welcome-benefit-card:hover::before {
-    width: 100%;
-}
-
-.welcome-benefit-number {
-    margin-bottom: 15px;
-    color: #053456;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.welcome-benefit-card h3 {
-    margin: 0;
-    color: #053456;
-    font-size: 21px;
-    line-height: 1.35;
-    font-weight: 600;
-}
-
-@media (max-width: 575px) {
     .welcome-benefit-card {
         height: 150px;
+
         padding: 25px;
     }
 
-    .welcome-benefit-card h3 {
+    .welcome-benefit-number {
+        font-size: 13px;
+    }
+
+    .welcome-benefit-title {
         font-size: 18px;
     }
-}
-
-
-/* =========================================
-   LANDING UI FEATURES
-========================================= */
-
-.landing-ui-feature-card {
-    position: relative;
-
-    height: 350px;
-
-    overflow: hidden;
-
-    border-radius: 18px;
-
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    padding: 28px;
-
-    background: #053456;
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-}
-
-
-/* =========================================
-   BACKGROUND IMAGE
-========================================= */
-
-.landing-ui-feature-bg {
-    position: absolute;
-
-    inset: 0;
-
-    background-size: cover;
-    background-position: center;
-
-    transition: transform 0.7s ease;
-}
-
-.landing-ui-feature-card:hover .landing-ui-feature-bg {
-    transform: scale(1.1);
-}
-
-
-/* =========================================
-   OVERLAY
-========================================= */
-
-.landing-ui-feature-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(to top,
-            rgba(0, 0, 0, 0.92) 0%,
-            rgba(0, 0, 0, 0.70) 45%,
-            rgba(0, 0, 0, 0.30) 100%);
-
-    transition: opacity 0.4s ease;
-}
-
-.landing-ui-feature-card:hover .landing-ui-feature-overlay {
-    opacity: 0.85;
-}
-
-
-/* =========================================
-   CARD HOVER
-========================================= */
-
-.landing-ui-feature-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 25px 50px rgba(0, 0, 0, 0.25);
-}
-
-
-/* =========================================
-   TOP
-========================================= */
-
-.landing-ui-feature-top {
-    position: relative;
-
-    z-index: 2;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-
-/* =========================================
-   ICON
-========================================= */
-
-.landing-ui-feature-icon {
-    width: 52px;
-    height: 52px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 12px;
-
-    background: rgba(5, 52, 86, 0.92);
-
-    color: #fff;
-
-    font-size: 23px;
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.25);
-
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
-}
-
-.landing-ui-feature-card:hover .landing-ui-feature-icon {
-    background: #53ae7d;
-
-    transform: translateY(-3px);
-}
-
-
-/* =========================================
-   NUMBER
-========================================= */
-
-.landing-ui-feature-number {
-    color: rgba(255, 255, 255, 0.65);
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-}
-
-
-/* =========================================
-   CONTENT
-========================================= */
-
-.landing-ui-feature-content {
-    position: relative;
-
-    z-index: 2;
-}
-
-
-.landing-ui-feature-content h3 {
-    margin: 0 0 12px;
-
-    color: #fff;
-
-    font-size: 23px;
-
-    line-height: 1.3;
-
-    font-weight: 600;
-
-    transition: color 0.3s ease;
-}
-
-.landing-ui-feature-card:hover .landing-ui-feature-content h3 {
-    color: #53ae7d;
-}
-
-
-.landing-ui-feature-content p {
-    margin: 0;
-
-    color: rgba(255, 255, 255, 0.85);
-
-    font-size: 15px;
-
-    line-height: 1.65;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 991px) {
-
-    .landing-ui-feature-card {
-        height: 330px;
-
-        padding: 25px;
-    }
-
-    .landing-ui-feature-content h3 {
-        font-size: 21px;
-    }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 575px) {
 
     .landing-ui-feature-card {
         height: 320px;
@@ -1063,270 +1898,18 @@
         font-size: 14px;
     }
 
-}
-
-
-.landing-page-benefit-card {
-    position: relative;
-    height: 100%;
-    min-height: 150px;
-    padding: 32px 28px;
-    background: #ffffff;
-    border-radius: 16px;
-    border: 1.5px solid #0f3759;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-    transition: all 0.3s ease;
-}
-
-/* Bottom right soft decorative shape */
-.landing-page-benefit-card::after {
-    content: "";
-    position: absolute;
-    bottom: -60px;
-    right: -60px;
-    width: 200px;
-    height: 200px;
-    background: #eef3f7;
-    border-radius: 50%;
-    z-index: 0;
-    pointer-events: none;
-    transition: transform 0.3s ease;
-}
-
-.landing-page-benefit-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 18px 40px rgba(15, 55, 89, 0.08);
-}
-
-.landing-page-benefit-card:hover::after {
-    transform: scale(1.08);
-}
-
-.landing-page-benefit-card h3 {
-    position: relative;
-    z-index: 1;
-    margin: 0 0 16px 0;
-    color: #0f3759;
-    font-size: 22px;
-    line-height: 1.3;
-    font-weight: 500;
-}
-
-.landing-page-benefit-desc {
-    position: relative;
-    z-index: 1;
-    color: #333333;
-    font-size: 15px;
-    line-height: 1.55;
-    margin-bottom: 24px;
-}
-
-.landing-page-benefit-arrow {
-    position: relative;
-    z-index: 1;
-    color: #0f3759;
-    font-size: 22px;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.landing-page-benefit-card:hover .landing-page-benefit-arrow {
-    transform: translateX(6px);
-}
-
-@media (max-width: 575px) {
     .landing-page-benefit-card {
-        padding: 24px;
-        min-height: 220px;
+        min-height: 155px;
+
+        padding: 24px 22px;
     }
 
     .landing-page-benefit-card h3 {
         font-size: 19px;
     }
 
-    .landing-page-benefit-desc {
-        font-size: 14px;
-    }
-}
-
-.sales-pitch-card {
-    position: relative;
-    height: 250px;
-    padding: 35px 30px;
-    background: #053456;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.4s ease;
-}
-
-.sales-pitch-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(5, 52, 86, 0.2);
-}
-
-.sales-pitch-number {
-    margin-bottom: 25px;
-    color: #53ae7d;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.sales-pitch-card h3 {
-    margin-bottom: 15px;
-    color: #fff;
-    font-size: 23px;
-    font-weight: 600;
-}
-
-.sales-pitch-card p {
-    margin: 0;
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-
-/* CTA */
-.landing-cta-section {
-    padding: 90px 0;
-    background: #053456;
-}
-
-.landing-cta-image {
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.landing-cta-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.landing-cta-image:hover img {
-    transform: scale(1.05);
-}
-
-.landing-cta-content {
-    padding-left: 30px;
-}
-
-.landing-cta-content p {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-.landing-cta-content h3 {
-    margin: 30px 0;
-    color: #fff;
-    font-size: 26px;
-    line-height: 1.4;
-}
-
-
-/* Landing List */
-
-.landing-list-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    min-height: 55px;
-    padding: 10px 15px;
-
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-
-    background: rgba(255, 255, 255, 0.06);
-
-    transition: all 0.3s ease;
-}
-
-.landing-list-item:hover {
-    background: rgba(255, 255, 255, 0.12);
-    transform: translateY(-3px);
-}
-
-.landing-list-icon {
-    width: 35px;
-    height: 35px;
-    min-width: 35px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #fff;
-    color: #053456;
-
-    font-size: 15px;
-}
-
-.landing-list-item span {
-
-    font-size: 14px;
-}
-
-
-/* Button */
-
-.landing-cta-button {
-    display: inline-block;
-
-    padding: 13px 25px;
-
-    background: #53ae7d;
-    color: #fff;
-
-    border-radius: 6px;
-
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-
-    transition: all 0.3s ease;
-}
-
-.landing-cta-button:hover {
-    background: #fff;
-    color: #053456;
-    transform: translateY(-3px);
-    -webkit-transform: translateY(-3px);
-    -moz-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
-    -o-transform: translateY(-3px);
-}
-
-
-/* Mobile */
-
-@media (max-width: 991px) {
-
-    .landing-cta-image {
-        height: 400px;
-    }
-
-    .landing-cta-content {
-        padding-left: 0;
-    }
-
-}
-
-@media (max-width: 575px) {
-
     .landing-cta-section {
-        padding: 60px 0;
+        padding: 55px 0;
     }
 
     .landing-cta-image {
@@ -1337,54 +1920,43 @@
         font-size: 22px;
     }
 
+    .landing-cta-button {
+        width: 100%;
+
+        text-align: center;
+    }
 }
 
 
-/* lottie csss */
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
-.top-banner-animation {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-}
+@media (max-width: 480px) {
 
-.top-banner-animation>div {
-    width: 100%;
-    height: 100%;
-}
+    .welcome-benefit-card {
+        height: 145px;
 
-.top-banner-animation svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
+        padding: 22px;
+    }
 
+    .welcome-benefit-title {
+        font-size: 17px;
+    }
 
+    .landing-page-benefit-card {
+        min-height: 150px;
 
+        padding: 22px;
+    }
 
-.corner-circle {
-    position: absolute;
-    bottom: -50px;
-    /* Pushes half of the circle outside the card */
-    right: -50px;
-    /* Pushes half of the circle outside the card */
-    width: 140px;
-    /* Adjust size as needed */
-    height: 140px;
-    background-color: #f0f4f8;
-    /* Light gray accent color */
-    border-radius: 50%;
-    pointer-events: none;
-    /* Prevents interference with text selection */
-    z-index: 0;
-}
+    .sales-pitch-card {
+        min-height: 215px;
 
-/* Ensure inner card text stays above the decorative shape */
-.welcome-benefit-number,
-.welcome-benefit-card h3 {
-    position: relative;
-    z-index: 1;
+        padding: 25px 20px;
+    }
+
+    .corporate-gallery {
+        height: 310px;
+    }
 }

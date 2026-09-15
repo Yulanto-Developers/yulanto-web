@@ -1,285 +1,177 @@
 /* =========================================================
-   SCROLL PROCESS SECTION
+   MAIN SECTION
 ========================================================= */
 
-.scroll-process-section {
+.scroll-card-section {
     width: 100%;
-    position: relative;
 
-    background: #053456;
 
-    overflow: visible;
-
-    padding: 0 0 100px;
-
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
-
-/* =========================================================
-   MAIN TWO COLUMN CONTAINER
-   LEFT  = HEADING
-   RIGHT = CARDS
-========================================================= */
-
-.scroll-process-container {
+.scroll-card-container {
     width: 100%;
-    max-width: 1320px;
+    max-width: 1250px;
 
     margin: 0 auto;
 
-    padding: 0 30px;
-
-    display: grid;
-
-    /*
-     * LEFT  = 45%
-     * RIGHT = 55%
-     */
-    grid-template-columns: 45% 55%;
-
-    align-items: start;
-
-    overflow: visible;
-
-    box-sizing: border-box;
+    padding: 0 25px;
 }
 
 
 /* =========================================================
-   LEFT SIDE - HEADING
+   HEADING
 ========================================================= */
 
-.scroll-process-heading {
+.scroll-card-heading {
     width: 100%;
 
-    position: sticky;
+    margin-bottom: 65px;
 
-    top: 78px;
-
-    height: calc(100vh - 78px);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 40px;
-
-    z-index: 20;
-
-    box-sizing: border-box;
+    text-align: center;
 }
 
-
-/* =========================================================
-   HEADING INNER
-========================================================= */
-
-.scroll-process-heading-inner {
-    width: 100%;
-
-    max-width: 520px;
-
-    padding: 20px;
-
-    box-sizing: border-box;
-}
-
-
-/* =========================================================
-   SMALL TITLE
-========================================================= */
-
-.scroll-process-small-title {
-    display: inline-block;
-
-    margin-bottom: 20px;
-
-    color: #53AE7D;
-
-    font-size: 14px;
-
-    line-height: 1.3;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-}
-
-
-/* =========================================================
-   MAIN HEADING
-========================================================= */
-
-.scroll-process-heading h2 {
+.scroll-card-heading h2 {
     margin: 0;
-
-    color: #fff;
-
-    font-size: 54px;
-
-    line-height: 1.12;
-
-    font-weight: 600;
-
-    letter-spacing: -1px;
-}
-
-
-.scroll-process-heading h2 span {
-    color: #53AE7D;
 }
 
 
 /* =========================================================
-   RIGHT SIDE - CARDS
+   SWIPER
 ========================================================= */
 
-.scroll-process-cards {
+.scroll-card-slider {
     width: 100%;
-
-    position: relative;
-
-    top: auto;
-    left: auto;
-    right: auto;
-
-    overflow: visible;
-
-    height: auto;
-
-    box-sizing: border-box;
 }
 
-
-/* =========================================================
-   CARD WRAPPER
-
-   IMPORTANT:
-   DO NOT USE position: sticky HERE.
-
-   GSAP ScrollTrigger is responsible for
-   pinning the card.
-========================================================= */
-
-.scroll-process-card-wrapper {
+.scroll-card-swiper {
     width: 100%;
 
-    /*
-     * This creates the scroll distance
-     * for each card.
-     */
-    height: 75vh;
+    overflow: visible !important;
+}
 
-    /*
-     * IMPORTANT:
-     * GSAP controls the pinning.
-     */
-    position: relative;
-
-    top: auto;
-    left: auto;
-    right: auto;
+.scroll-card-swiper .swiper-slide {
+    width: 100%;
 
     display: flex;
-
-    align-items: center;
 
     justify-content: center;
 
-    padding: 20px;
-
-    box-sizing: border-box;
+    overflow: visible;
 }
 
 
 /* =========================================================
-   CARD STACK ORDER
+   MAIN CARD
 ========================================================= */
 
-.scroll-process-card-wrapper:nth-child(1) {
-    z-index: 1;
-}
-
-.scroll-process-card-wrapper:nth-child(2) {
-    z-index: 2;
-}
-
-.scroll-process-card-wrapper:nth-child(3) {
-    z-index: 3;
-}
-
-.scroll-process-card-wrapper:nth-child(4) {
-    z-index: 4;
-}
-
-.scroll-process-card-wrapper:nth-child(5) {
-    z-index: 5;
-}
-
-
-/* =========================================================
-   CARD
-========================================================= */
-
-.scroll-process-card {
-    width: 100%;
-
-    max-width: 560px;
-
-    height: 420px;
-
+.scroll-card {
     position: relative;
 
-    overflow: hidden;
+    width: 100%;
+    max-width: 1050px;
 
-    border-radius: 20px;
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-repeat: no-repeat;
-
-    box-shadow:
-        0 25px 60px rgba(0, 0, 0, 0.35);
+    min-height: 480px;
 
     display: flex;
+    align-items: center;
 
-    align-items: flex-end;
+    transition:
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 
-    flex-shrink: 0;
-
-    box-sizing: border-box;
+    transform-origin: center center;
 }
 
 
 /* =========================================================
-   CARD ROTATION
+   ROTATIONS
 ========================================================= */
 
-.scroll-process-card.rotate-3 {
+.scroll-card-rotate-3 {
     transform: rotate(2deg);
 }
 
-.scroll-process-card.-rotate-2 {
-    transform: rotate(-2deg);
-}
-
-.scroll-process-card.rotate-2 {
-    transform: rotate(1.5deg);
-}
-
-.scroll-process-card.-rotate-3 {
+.scroll-card-rotate-minus-2 {
     transform: rotate(-1.5deg);
 }
 
-.scroll-process-card.rotate-0 {
+.scroll-card-rotate-2 {
+    transform: rotate(1.5deg);
+}
+
+.scroll-card-rotate-minus-3 {
+    transform: rotate(-2deg);
+}
+
+.scroll-card-rotate-0 {
     transform: rotate(0deg);
+}
+
+
+/* =========================================================
+   ACTIVE SLIDE
+========================================================= */
+
+/*
+   Active slide becomes straight.
+*/
+
+.scroll-card-swiper .swiper-slide-active .scroll-card {
+    transform: rotate(0deg);
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.scroll-card:hover {
+    transform:
+        rotate(0deg) translateY(-5px);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.scroll-card-image {
+    position: relative;
+
+    width: 52%;
+
+    height: 400px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background: #ddd;
+
+    z-index: 1;
+}
+
+.scroll-card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.8s ease;
+}
+
+
+/*
+   Image zoom on hover
+*/
+
+.scroll-card:hover .scroll-card-image img {
+    transform: scale(1.035);
 }
 
 
@@ -287,137 +179,157 @@
    IMAGE OVERLAY
 ========================================================= */
 
-.scroll-process-overlay {
+.scroll-card-image::after {
+    content: "";
+
     position: absolute;
 
     inset: 0;
 
-    width: 100%;
-
-    height: 100%;
-
-    z-index: 1;
-
     background:
-        linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.90) 0%,
-            rgba(0, 0, 0, 0.65) 40%,
-            rgba(0, 0, 0, 0.15) 100%
-        );
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.02),
+            rgba(0, 0, 0, 0.08));
 
     pointer-events: none;
 }
 
 
 /* =========================================================
-   CARD CONTENT
+   CONTENT CARD
 ========================================================= */
 
-.scroll-process-card-content {
+.scroll-card-content {
     position: relative;
 
-    z-index: 2;
+    width: 55%;
 
-    width: 100%;
+    min-height: 300px;
 
-    padding: 40px;
+    margin-left: -90px;
 
-    color: #fff;
+    padding: 55px 55px 55px 80px;
 
-    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    background: #053456;
+
+    border-radius: 28px;
+
+    z-index: 3;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
 }
 
 
 /* =========================================================
-   STEP
+   NUMBER
 ========================================================= */
 
-.scroll-process-step {
-    display: block;
+.scroll-card-number {
+    position: absolute;
 
-    margin-bottom: 12px;
+    top: 32px;
+    left: 32px;
 
-    font-size: 13px;
+    width: 52px;
+    height: 52px;
 
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f5f5;
+
+    color: #171717;
+
+    font-size: 14px;
     font-weight: 700;
 
-    line-height: 1.3;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    color: #53AE7D;
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
 }
 
 
 /* =========================================================
-   CARD TITLE
+   CONTENT INNER
 ========================================================= */
 
-.scroll-process-card-content h3 {
-    margin: 0 0 15px;
+.scroll-card-content-inner {
+    width: 100%;
+}
+
+.scroll-card-content h3 {
+    margin: 0 0 20px;
 
     color: #fff;
 
-    font-size: 32px;
+    font-size: 25px;
 
-    line-height: 1.2;
+    line-height: 1.15;
 
     font-weight: 600;
 }
 
-
-/* =========================================================
-   CARD DESCRIPTION
-========================================================= */
-
-.scroll-process-card-content p {
-    max-width: 500px;
-
+.scroll-card-content p {
     margin: 0;
 
-    color: rgba(255, 255, 255, 0.90);
+    color: rgba(255, 255, 255, 0.88);
 
-    font-size: 16px;
+    font-size: 17px;
 
     line-height: 1.7;
 
-    font-weight: 400;
+    max-width: 550px;
 }
 
 
 /* =========================================================
-   LEARN MORE LINK
+   NAVIGATION
 ========================================================= */
 
-.scroll-process-link {
-    display: inline-flex;
+.scroll-card-navigation {
+    display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    gap: 8px;
+    gap: 20px;
 
-    margin-top: 20px;
+    margin-top: 50px;
+}
 
-    padding: 10px 18px;
 
-    border-radius: 5px;
+/* =========================================================
+   NAV BUTTON
+========================================================= */
 
-    background: #fff;
+.scroll-card-nav {
+    width: 52px;
+    height: 52px;
 
-    color: #053456;
+    padding: 0;
 
-    text-decoration: none;
+    border-radius: 50%;
 
-    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 
-    line-height: 1.4;
+    background: rgba(255, 255, 255, 0.08);
 
-    font-weight: 600;
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
 
     transition:
         background 0.3s ease,
@@ -425,136 +337,58 @@
         transform 0.3s ease;
 }
 
+.scroll-card-nav span {
+    font-size: 21px;
 
-.scroll-process-link:hover {
-    background: #8ecaff;
+    line-height: 1;
+}
 
-    color: #053456;
+.scroll-card-nav:hover {
+    background: #fff;
 
-    transform: translateX(5px);
+    color: #111;
+
+    transform: scale(1.08);
 }
 
 
 /* =========================================================
-   LARGE DESKTOP
+   PAGINATION
 ========================================================= */
 
-@media (min-width: 1400px) {
+.scroll-card-pagination {
+    display: flex;
 
-    .scroll-process-container {
-        max-width: 1400px;
+    align-items: center;
 
-        padding-left: 30px;
+    justify-content: center;
 
-        padding-right: 30px;
+    gap: 8px;
 
-        /*
-         * LEFT TEXT | RIGHT CARDS
-         */
-        grid-template-columns: 45% 55%;
-    }
-
-
-    .scroll-process-heading {
-        top: 78px;
-    }
-
-
-    .scroll-process-card-wrapper {
-        height: 75vh;
-
-        /*
-         * GSAP pin only
-         */
-        position: relative;
-
-        top: auto;
-
-        padding-left: 20px;
-
-        padding-right: 20px;
-    }
-
-
-    .scroll-process-card {
-        max-width: 580px;
-
-        height: 440px;
-    }
-
-
-    .scroll-process-heading h2 {
-        font-size: 58px;
-    }
+    min-width: 65px;
 }
 
+.scroll-card-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
 
-/* =========================================================
-   LAPTOP
-========================================================= */
+    margin: 0 !important;
 
-@media (min-width: 992px) and (max-width: 1199px) {
+    opacity: 1;
 
-    .scroll-process-container {
+    background: rgba(255, 255, 255, 0.35);
 
-        /*
-         * LEFT TEXT | RIGHT CARDS
-         */
-        grid-template-columns: 45% 55%;
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
 
-        padding-left: 25px;
+.scroll-card-pagination .swiper-pagination-bullet-active {
+    width: 26px;
 
-        padding-right: 25px;
-    }
+    border-radius: 20px;
 
-
-    .scroll-process-heading {
-        top: 78px;
-
-        padding-left: 30px;
-
-        padding-right: 30px;
-    }
-
-
-    .scroll-process-card-wrapper {
-        height: 75vh;
-
-        position: relative;
-
-        top: auto;
-
-        padding-left: 10px;
-
-        padding-right: 10px;
-    }
-
-
-    .scroll-process-card {
-        max-width: 500px;
-
-        height: 390px;
-    }
-
-
-    .scroll-process-card-content {
-        padding: 32px;
-    }
-
-
-    .scroll-process-card-content h3 {
-        font-size: 29px;
-    }
-
-
-    .scroll-process-card-content p {
-        font-size: 15px;
-    }
-
-
-    .scroll-process-heading h2 {
-        font-size: 46px;
-    }
+    background: #fff;
 }
 
 
@@ -564,197 +398,38 @@
 
 @media (max-width: 991px) {
 
-    .scroll-process-section {
-        padding-bottom: 80px;
-
-        overflow: visible;
+    .scroll-card-section {
+        padding: 50px 0;
     }
 
-
-    /* -----------------------------------------
-       CONTAINER
-    ----------------------------------------- */
-
-    .scroll-process-container {
-        width: 100%;
-
-        grid-template-columns: 1fr;
-
-        padding-left: 20px;
-
-        padding-right: 20px;
-
-        overflow: visible;
+    .scroll-card-container {
+        padding: 0 20px;
     }
 
-
-    /* -----------------------------------------
-       HEADING
-    ----------------------------------------- */
-
-    .scroll-process-heading {
-        width: 100%;
-
-        /*
-         * Disable sticky on tablet.
-         */
-        position: relative;
-
-        top: auto;
-
-        left: auto;
-
-        right: auto;
-
-        height: auto;
-
-        padding: 70px 20px 50px;
-
-        text-align: center;
-
-        z-index: auto;
+    .scroll-card {
+        min-height: 430px;
     }
 
-
-    .scroll-process-heading-inner {
-        max-width: 700px;
-
-        margin: 0 auto;
-
-        padding: 10px;
+    .scroll-card-image {
+        height: 430px;
     }
 
+    .scroll-card-content {
+        min-height: 300px;
 
-    .scroll-process-small-title {
-        margin-bottom: 15px;
+        margin-left: -70px;
 
-        font-size: 13px;
+        padding: 45px 40px 45px 95px;
     }
 
-
-    .scroll-process-heading h2 {
-        font-size: 42px;
-
-        line-height: 1.15;
+    .scroll-card-content h3 {
+        font-size: 27px;
     }
 
-
-    /* -----------------------------------------
-       CARDS
-    ----------------------------------------- */
-
-    .scroll-process-cards {
-        position: relative;
-
-        top: auto;
-
-        height: auto;
-
-        overflow: visible;
-    }
-
-
-    /* -----------------------------------------
-       CARD WRAPPER
-    ----------------------------------------- */
-
-    .scroll-process-card-wrapper {
-        width: 100%;
-
-        height: auto;
-
-        min-height: 550px;
-
-        /*
-         * No sticky on tablet.
-         */
-        position: relative;
-
-        top: auto;
-
-        padding: 30px 10px;
-
-        margin-bottom: 20px;
-
-        z-index: auto !important;
-    }
-
-
-    /* -----------------------------------------
-       CARD
-    ----------------------------------------- */
-
-    .scroll-process-card {
-        width: 100%;
-
-        max-width: 650px;
-
-        height: 420px;
-
-        position: relative;
-
-        top: auto;
-
-        left: auto;
-
-        right: auto;
-
-        margin: 0 auto;
-    }
-
-
-    /* -----------------------------------------
-       CONTENT
-    ----------------------------------------- */
-
-    .scroll-process-card-content {
-        padding: 35px;
-    }
-
-
-    .scroll-process-card-content h3 {
-        font-size: 30px;
-    }
-
-
-    .scroll-process-card-content p {
+    .scroll-card-content p {
         font-size: 15px;
-
-        line-height: 1.65;
-    }
-}
-
-
-/* =========================================================
-   SMALL TABLET
-========================================================= */
-
-@media (min-width: 576px) and (max-width: 767px) {
-
-    .scroll-process-heading {
-        padding-top: 60px;
-
-        padding-bottom: 40px;
     }
 
-
-    .scroll-process-heading h2 {
-        font-size: 38px;
-    }
-
-
-    .scroll-process-card-wrapper {
-        min-height: 520px;
-
-        padding: 25px 10px;
-    }
-
-
-    .scroll-process-card {
-        max-width: 600px;
-
-        height: 400px;
-    }
 }
 
 
@@ -762,269 +437,128 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
 
-    /* -----------------------------------------
-       SECTION
-    ----------------------------------------- */
+    .scroll-card-section {
+        padding: 30px 0;
+    }
 
-    .scroll-process-section {
-        padding-bottom: 60px;
+    .scroll-card-container {
+        padding: 0 18px;
+    }
 
-        overflow: visible;
+    .scroll-card-heading {
+        margin-bottom: 40px;
+    }
+
+    .scroll-card {
+        min-height: auto;
+
+        display: block;
+
+        transform: rotate(0deg) !important;
     }
 
 
-    /* -----------------------------------------
-       CONTAINER
-    ----------------------------------------- */
+    /* Image */
 
-    .scroll-process-container {
-        padding-left: 15px;
-
-        padding-right: 15px;
-
-        grid-template-columns: 1fr;
-
-        overflow: visible;
-    }
-
-
-    /* -----------------------------------------
-       HEADING
-    ----------------------------------------- */
-
-    .scroll-process-heading {
-        position: relative;
-
-        top: auto;
-
-        height: auto;
-
-        padding: 50px 10px 35px;
-
-        text-align: center;
-
-        z-index: auto;
-    }
-
-
-    .scroll-process-heading-inner {
+    .scroll-card-image {
         width: 100%;
-
-        max-width: 100%;
-
-        padding: 5px;
-    }
-
-
-    .scroll-process-small-title {
-        margin-bottom: 14px;
-
-        font-size: 11px;
-
-        letter-spacing: 1.5px;
-    }
-
-
-    .scroll-process-heading h2 {
-        font-size: 32px;
-
-        line-height: 1.15;
-
-        letter-spacing: -0.5px;
-    }
-
-
-    /* -----------------------------------------
-       CARDS CONTAINER
-    ----------------------------------------- */
-
-    .scroll-process-cards {
-        position: relative;
-
-        top: auto;
-
-        height: auto;
-
-        overflow: visible;
-    }
-
-
-    /* -----------------------------------------
-       CARD WRAPPER
-    ----------------------------------------- */
-
-    .scroll-process-card-wrapper {
-        width: 100%;
-
-        height: auto;
-
-        min-height: 500px;
-
-        position: relative;
-
-        top: auto;
-
-        padding: 20px 5px;
-
-        margin-bottom: 10px;
-
-        z-index: auto !important;
-    }
-
-
-    /* -----------------------------------------
-       CARD
-    ----------------------------------------- */
-
-    .scroll-process-card {
-        width: 100%;
-
-        max-width: 100%;
 
         height: 360px;
 
-        position: relative;
-
-        top: auto;
-
-        left: auto;
-
-        right: auto;
-
-        margin: 0 auto;
-
-        border-radius: 16px;
-
-        transform: none !important;
+        border-radius: 24px;
     }
 
 
-    /* -----------------------------------------
-       CONTENT
-    ----------------------------------------- */
+    /* Content */
 
-    .scroll-process-card-content {
-        padding: 25px;
+    .scroll-card-content {
+        width: calc(100% - 30px);
+
+        min-height: 260px;
+
+        margin:
+            -55px auto 0;
+
+        padding:
+            70px 25px 35px;
+
+        border-radius: 24px;
     }
 
 
-    /* -----------------------------------------
-       STEP
-    ----------------------------------------- */
+    /* Number */
 
-    .scroll-process-step {
-        margin-bottom: 10px;
+    .scroll-card-number {
+        top: 20px;
+        left: 25px;
 
-        font-size: 11px;
+        width: 45px;
+        height: 45px;
 
-        letter-spacing: 1.5px;
+        font-size: 13px;
     }
 
 
-    /* -----------------------------------------
-       TITLE
-    ----------------------------------------- */
+    /* Text */
 
-    .scroll-process-card-content h3 {
-        margin-bottom: 12px;
+    .scroll-card-content h3 {
+        font-size: 24px;
 
-        font-size: 25px;
-
-        line-height: 1.2;
+        margin-bottom: 14px;
     }
 
-
-    /* -----------------------------------------
-       DESCRIPTION
-    ----------------------------------------- */
-
-    .scroll-process-card-content p {
-        max-width: 100%;
-
+    .scroll-card-content p {
         font-size: 14px;
 
         line-height: 1.6;
     }
 
 
-    /* -----------------------------------------
-       LINK
-    ----------------------------------------- */
+    /* Navigation */
 
-    .scroll-process-link {
-        margin-top: 16px;
+    .scroll-card-navigation {
+        margin-top: 35px;
 
-        padding: 9px 15px;
-
-        font-size: 13px;
+        gap: 15px;
     }
+
+    .scroll-card-nav {
+        width: 46px;
+        height: 46px;
+    }
+
 }
 
 
 /* =========================================================
-   VERY SMALL MOBILE
+   SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
 
-    .scroll-process-container {
-        padding-left: 10px;
-
-        padding-right: 10px;
+    .scroll-card-image {
+        height: 320px;
     }
 
+    .scroll-card-content {
+        width: calc(100% - 20px);
 
-    .scroll-process-heading {
-        padding: 40px 5px 30px;
+        margin-top: -45px;
+
+        padding:
+            65px 20px 30px;
     }
 
-
-    .scroll-process-heading h2 {
-        font-size: 29px;
+    .scroll-card-content h3 {
+        font-size: 21px;
     }
 
-
-    .scroll-process-card-wrapper {
-        min-height: 470px;
-
-        padding: 15px 3px;
-    }
-
-
-    .scroll-process-card {
-        height: 330px;
-
-        border-radius: 14px;
-    }
-
-
-    .scroll-process-card-content {
-        padding: 20px;
-    }
-
-
-    .scroll-process-card-content h3 {
-        font-size: 23px;
-    }
-
-
-    .scroll-process-card-content p {
+    .scroll-card-content p {
         font-size: 13px;
-
-        line-height: 1.55;
     }
+
 }
 
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .scroll-process-link {
-        transition: none;
-    }
-}

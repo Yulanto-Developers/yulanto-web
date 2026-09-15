@@ -21,18 +21,24 @@ function Uiuxdesgin() {
                 titlePrefix="User Interface Design "
                 titleSuffix="That Makes Every Interaction Better"
                 topDescription={seoTopText}
-                bottomDescription={seoBottomText}
+                // bottomDescription={seoBottomText}
                 slides={seoSlides}
                 autoScrollSpeed={1200}
                 className="akone"
             />
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 redesign-para">
+                        <p>{seoBottomText}</p>
+                    </div>
+                </div>
+            </div>
             <div data-aos="fade-right"
                 data-aos-delay={400}
                 data-aos-once={true}>
-                <div className='container mt-30 mb-20'>
+                <div className='container mt-100 mb-20'>
                     <div className="row">
-
-                        <div className="col-12 mb-4">
+                        <div className="col-md-7">
                             <span className="tp-section-subtitle text-black blink-ball">
                                 Modern UI/UX Design Solutions
                             </span>
@@ -44,9 +50,6 @@ function Uiuxdesgin() {
                                 Modern Digital Experiences
                             </h4>
 
-                        </div>
-
-                        <div className="col-md-7">
                             <p>
                                 We provide professional UX design and UI design solutions for businesses looking to build intuitive and engaging digital experiences. Whether you need a new website interface, a mobile app design, or a complete digital product experience, our UI and UX designers focus on making every screen purposeful and easy to use.
                                 <br />
@@ -67,7 +70,7 @@ function Uiuxdesgin() {
                     </div>
                 </div>
             </div>
-            <div className='mb-50'>
+            <div className='mb-50 mt-50'>
                 <div className='container mt-50'>
                     <div className="row">
 
@@ -96,7 +99,7 @@ function Uiuxdesgin() {
                 data-aos-delay={400}
                 data-aos-once={true}
             >
-                <div className="container mt-30 mb-20">
+                <div className="container mt-100 mb-20">
 
                     <div className="row">
 
@@ -466,14 +469,14 @@ function Uiuxdesgin() {
 
                             <p>
                                 Good design is more than attractive screens. A well-planned
-                                <strong> UX design and UI design </strong>
+                               UX design and UI design
                                 strategy can help users find information faster, understand
                                 your offerings clearly, and take the actions that matter to
                                 your business.
                             </p>
 
                             <p>
-                                As a <strong>UI/UX designer team in Chennai</strong>, we
+                                As a UI/UX designer team in Chennai, we
                                 combine creativity, usability, and business thinking to
                                 build digital experiences that are both visually impressive
                                 and practical.
@@ -519,7 +522,7 @@ function Uiuxdesgin() {
 
                                         <p className="text-white mb-0">
                                             Looking for professional
-                                            <strong> ui and ux designers in Chennai </strong>
+                                            ui and ux designers in Chennai 
                                             for your website or digital product? Let's
                                             create an interface that looks great, feels
                                             intuitive, and helps your users accomplish more.

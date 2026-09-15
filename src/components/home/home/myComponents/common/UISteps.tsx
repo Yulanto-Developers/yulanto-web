@@ -52,11 +52,10 @@ const UISteps = ({ steps }: UIStepsProps) => {
                                 <button
                                     key={step.stepNumber}
                                     type="button"
-                                    className={`ui-step-card ui-left-step-${index + 1} ${
-                                        activeStep === index
-                                            ? "active"
-                                            : ""
-                                    }`}
+                                    className={`ui-step-card ui-left-step-${index + 1} ${activeStep === index
+                                        ? "active"
+                                        : ""
+                                        }`}
                                     onClick={() => setActiveStep(index)}
                                 >
 
@@ -64,16 +63,31 @@ const UISteps = ({ steps }: UIStepsProps) => {
                                         <Icon />
                                     </span>
 
-                                    <span className="ui-step-title text-tenor">
+                                    <span className={`ui-step-title text-tenor ${activeStep === index
+                                        ? "active"
+                                        : ""
+                                        }`}>
                                         {step.title}
                                     </span>
 
                                     {/* Connector */}
                                     <span className="ui-step-connector">
-                                        <span className="ui-connector-horizontal" />
-                                        <span className="ui-connector-vertical" />
-                                        <span className="ui-connector-horizontal-center" />
-                                        <span className="ui-connector-dot" />
+                                        <span className={`ui-connector-horizontal ${activeStep === index
+                                            ? "active"
+                                            : ""
+                                            }`} />
+                                        <span className={`ui-connector-vertical ${activeStep === index
+                                            ? "active"
+                                            : ""
+                                            }`} />
+                                        <span className={`ui-connector-horizontal-center ${activeStep === index
+                                            ? "active"
+                                            : ""
+                                            }`} />
+                                        <span className={`ui-connector-dot ${activeStep === index
+                                            ? "active"
+                                            : ""
+                                            }`} />
                                     </span>
 
                                 </button>
@@ -129,43 +143,59 @@ const UISteps = ({ steps }: UIStepsProps) => {
                         RIGHT SIDE
                     ========================================= */}
 
+                    {/* =========================================
+    RIGHT SIDE
+========================================= */}
+
                     <div className="ui-steps-column ui-steps-right">
 
                         {rightSteps.map((step, index) => {
                             const actualIndex = index + 3;
-
                             const Icon = step.icon;
 
                             return (
                                 <button
                                     key={step.stepNumber}
                                     type="button"
-                                    className={`ui-step-card ui-right-step-${index + 1} ${
-                                        activeStep === actualIndex
-                                            ? "active"
-                                            : ""
-                                    }`}
-                                    onClick={() =>
-                                        setActiveStep(actualIndex)
-                                    }
+                                    className={`ui-step-card ui-right-step-${index + 1} ${activeStep === actualIndex ? "active" : ""
+                                        }`}
+                                    onClick={() => setActiveStep(actualIndex)}
                                 >
 
                                     <span className="ui-step-icon">
                                         <Icon />
                                     </span>
 
-                                    <span className="ui-step-title text-tenor">
+                                    <span
+                                        className={`ui-step-title text-tenor ${activeStep === actualIndex ? "active" : ""
+                                            }`}
+                                    >
                                         {step.title}
                                     </span>
 
-
                                     {/* Connector */}
-
                                     <span className="ui-step-connector">
-                                        <span className="ui-connector-horizontal" />
-                                        <span className="ui-connector-vertical" />
-                                        <span className="ui-connector-horizontal-center" />
-                                        <span className="ui-connector-dot" />
+
+                                        <span
+                                            className={`ui-connector-horizontal ${activeStep === actualIndex ? "active" : ""
+                                                }`}
+                                        />
+
+                                        <span
+                                            className={`ui-connector-vertical ${activeStep === actualIndex ? "active" : ""
+                                                }`}
+                                        />
+
+                                        <span
+                                            className={`ui-connector-horizontal-center ${activeStep === actualIndex ? "active" : ""
+                                                }`}
+                                        />
+
+                                        <span
+                                            className={`ui-connector-dot ${activeStep === actualIndex ? "active" : ""
+                                                }`}
+                                        />
+
                                     </span>
 
                                 </button>
@@ -173,11 +203,10 @@ const UISteps = ({ steps }: UIStepsProps) => {
                         })}
 
                     </div>
-
                 </div>
 
             </div>
-        </section>
+        </section >
     );
 };
 
