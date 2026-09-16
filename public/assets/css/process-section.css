@@ -24,7 +24,7 @@
 .process-wrapper {
     width: 100%;
     max-width: 980px;
-    margin: 0 auto;
+    margin: 50px auto;
 
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -604,7 +604,7 @@
     .process-images {
         top: 32px;
 
-        width: 82%;
+        width: 50%;
         height: 145px;
     }
 
@@ -697,4 +697,171 @@
     color: #555;
     font-size: 15px;
     font-weight: 500;
+}
+
+
+
+
+/* =========================================
+   UI/UX SVG ANIMATIONS
+========================================= */
+
+/* Main laptop - gentle floating */
+.uiux-device {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: uiux-device-float 4s ease-in-out infinite;
+}
+
+/* Mobile - slightly different movement */
+.uiux-mobile {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: uiux-mobile-float 3.5s ease-in-out infinite;
+}
+
+/* Floating dots */
+.uiux-float {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: uiux-dot-float 3s ease-in-out infinite;
+}
+
+.uiux-float-delay {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: uiux-dot-float 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+/* Design icon */
+.uiux-icon-float {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation:
+        uiux-icon-move 3s ease-in-out infinite,
+        uiux-icon-pulse 2.5s ease-in-out infinite;
+}
+
+/* Target */
+.uiux-target {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation:
+        uiux-target-float 3s ease-in-out infinite,
+        uiux-target-pulse 2s ease-in-out infinite;
+}
+
+
+/* =========================================
+   KEYFRAMES
+========================================= */
+
+@keyframes uiux-device-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+@keyframes uiux-mobile-float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(3px, -10px) rotate(1deg);
+    }
+}
+
+
+@keyframes uiux-dot-float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.15);
+        opacity: 1;
+    }
+}
+
+
+@keyframes uiux-icon-move {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-5px, -8px) rotate(-4deg);
+    }
+}
+
+
+@keyframes uiux-icon-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.85;
+    }
+}
+
+
+@keyframes uiux-target-float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(5px, -7px);
+    }
+}
+
+
+@keyframes uiux-target-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .uiux-device,
+    .uiux-mobile,
+    .uiux-float,
+    .uiux-float-delay,
+    .uiux-icon-float,
+    .uiux-target {
+        animation: none;
+    }
 }

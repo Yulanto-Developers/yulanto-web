@@ -3,6 +3,7 @@
 ============================================================ */
 
 .ui-steps-section {
+    /* background-color: #053456; */
     padding: 35px 0 80px;
     overflow: hidden;
 }
@@ -12,6 +13,28 @@
    MAIN CONTAINER
 ============================================================ */
 
+.ui-steps-wrappers {
+    position: relative;
+
+    min-height: 650px;
+
+
+
+
+    border-radius: 38px;
+
+    background:
+        #053456;
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        0 20px 60px rgba(0, 0, 0, 0.05);
+
+    overflow: hidden;
+}
+
 .ui-steps-wrapper {
     position: relative;
 
@@ -20,9 +43,7 @@
     display: grid;
 
     grid-template-columns:
-        minmax(300px, 1fr)
-        330px
-        minmax(300px, 1fr);
+        minmax(300px, 1fr) 330px minmax(300px, 1fr);
 
     align-items: center;
 
@@ -32,18 +53,7 @@
 
     border-radius: 38px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #f7f7f7 0%,
-            #eeeeee 100%
-        );
 
-    border: 1px solid rgba(255, 255, 255, 0.95);
-
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.95),
-        0 20px 60px rgba(0, 0, 0, 0.05);
 
     overflow: hidden;
 }
@@ -62,7 +72,7 @@
     left: 17%;
     right: 17%;
 
-    border: 1px dashed rgba(150, 150, 150, 0.22);
+    border: 1px dashed rgba(255, 255, 255, 0.767);
 
     border-radius: 32px;
 
@@ -89,13 +99,11 @@
     width: 1px;
 
     background:
-        repeating-linear-gradient(
-            to bottom,
+        repeating-linear-gradient(to bottom,
             rgba(145, 145, 145, 0.20) 0,
             rgba(145, 145, 145, 0.20) 6px,
             transparent 6px,
-            transparent 14px
-        );
+            transparent 14px);
 
     transform: translateX(-50%);
 
@@ -152,16 +160,12 @@
 
     padding: 8px 18px;
 
-    border: 1px solid rgba(255, 255, 255, 0.95);
+    border: 1px solid #053456;
 
     border-radius: 21px;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.88),
-            rgba(255, 255, 255, 0.55)
-        );
+        #fff;
 
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -193,12 +197,10 @@
 
     border-radius: 20px;
 
-    background:
-        linear-gradient(
-            120deg,
+    /* background:
+        linear-gradient(120deg,
             rgba(255, 255, 255, 0.55),
-            transparent 50%
-        );
+            transparent 50%); */
 
     pointer-events: none;
 }
@@ -278,11 +280,7 @@
     border-radius: 15px;
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.96),
-            rgba(245, 245, 245, 0.65)
-        );
+        #fff;
 
     border: 1px solid rgba(255, 255, 255, 0.95);
 
@@ -333,9 +331,9 @@
 
     z-index: 2;
 
-    color: #555;
+    color: #080505;
 
-    
+
 
     font-size: 15px;
 
@@ -358,11 +356,12 @@
 
 .ui-step-card.active {
     background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.97),
-            rgba(255, 255, 255, 0.65)
-        );
+        #53AE7D;
+    border: 1px solid #fff;
+}
+
+.ui-step-title.active {
+    color: #fff;
 }
 
 
@@ -413,8 +412,13 @@
 
     width: 72px;
 
-    border-top: 1px dashed rgba(145, 145, 145, 0.50);
+    border-top: 1px dashed rgb(255, 255, 255);
 }
+
+.ui-steps-left .ui-connector-horizontal.active {
+    border-top: 1px dashed #53AE7D;
+}
+
 
 
 /* Vertical line */
@@ -427,8 +431,13 @@
 
     height: 82px;
 
-    border-left: 1px dashed rgba(145, 145, 145, 0.50);
+    border-left: 1px dashed rgba(248, 247, 247, 0.993);
 }
+
+.ui-steps-left .ui-connector-vertical.active {
+    border-left: 1px dashed #53AE7D;
+}
+
 
 
 /* Horizontal line toward center */
@@ -441,9 +450,12 @@
 
     width: 43px;
 
-    border-top: 1px dashed rgba(145, 145, 145, 0.50);
+    border-top: 1px dashed rgba(252, 248, 248, 0.959);
 }
 
+.ui-steps-left .ui-connector-horizontal-center.active {
+    border-top: 1px dashed #53AE7D;
+}
 
 /* ============================================================
    LEFT MIDDLE
@@ -517,9 +529,12 @@
 
     width: 72px;
 
-    border-top: 1px dashed rgba(145, 145, 145, 0.50);
+    border-top: 1px dashed rgba(250, 248, 248, 0.993);
 }
 
+.ui-steps-right .ui-connector-horizontal.active {
+    border-top: 1px dashed #53AE7D;
+}
 
 /* Vertical */
 
@@ -531,9 +546,12 @@
 
     height: 82px;
 
-    border-left: 1px dashed rgba(145, 145, 145, 0.50);
+    border-left: 1px dashed rgba(248, 246, 246, 0.973);
 }
 
+.ui-steps-right .ui-connector-vertical.active {
+    border-left: 1px dashed #53AE7D;
+}
 
 /* Toward center */
 
@@ -545,9 +563,12 @@
 
     width: 43px;
 
-    border-top: 1px dashed rgba(145, 145, 145, 0.50);
+    border-top: 1px dashed rgb(248, 246, 246);
 }
 
+.ui-steps-right .ui-connector-horizontal-center.active {
+    border-top: 1px dashed #53AE7D;
+}
 
 /* ============================================================
    RIGHT MIDDLE
@@ -604,9 +625,12 @@
 
     border-radius: 50%;
 
-    background: #b9b9b9;
+    background: #fffdfd;
 }
 
+.ui-connector-dot.active {
+    background: #053456;
+}
 
 /* LEFT DOT */
 
@@ -657,11 +681,9 @@
     border-radius: 38px;
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             rgba(255, 255, 255, 0.98),
-            rgba(249, 249, 249, 0.90)
-        );
+            rgba(249, 249, 249, 0.90));
 
     border: 1px solid rgba(255, 255, 255, 1);
 
@@ -774,11 +796,9 @@
     border-radius: 10px;
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             #155b77,
-            #2dbb75
-        );
+            #2dbb75);
 }
 
 
@@ -790,9 +810,7 @@
 
     .ui-steps-wrapper {
         grid-template-columns:
-            minmax(230px, 1fr)
-            310px
-            minmax(230px, 1fr);
+            minmax(230px, 1fr) 310px minmax(230px, 1fr);
 
         column-gap: 55px;
 

@@ -22,6 +22,7 @@ import { Floatstyle } from '../myComponents/common/Floatstyle';
 import { FAQA1 } from '../website-development/components';
 
 function Landingpagedesgin() {
+    const [activeIndex, setActiveIndex] = React.useState<number>(0);
     const { openModal } = useQuoteModal();
     useAOS();
     return (
@@ -49,7 +50,7 @@ function Landingpagedesgin() {
             <div data-aos="fade-right"
                 data-aos-delay={400}
                 data-aos-once={true}>
-                <div className='container mt-30 mb-20'>
+                <div className='container mt-100 mb-50'>
                     <div className="row">
 
                         <div className="col-12 mb-4">
@@ -112,25 +113,23 @@ function Landingpagedesgin() {
                 </div>
             </div>
             <div
-                data-aos="fade-right"
-                data-aos-delay={400}
-                data-aos-once={true}
+
                 className="landing-process-main-section"
-                style={{ background: '#053456' }}
+                style={{ background: '#f5f5f5' }}
             >
                 <div className="container pt-30">
 
                     <div className="row">
 
-                        <div className="col-12 mb-4">
+                        <div className="col-12">
 
-                            <span className="tp-section-subtitle text-white blink-ball">
+                            <span className="tp-section-subtitle  blink-ball">
                                 Engage Visitors and Drive Conversions
                             </span>
 
-                            <h4 className="px-about-title mb-20 text-white">
+                            <h4 className="px-about-title mb-20">
 
-                                <span className="text-blue-about text-white">
+                                <span className="text-blue-about">
                                     Creative Website Landing Page{" "}
                                 </span>
 
@@ -138,7 +137,7 @@ function Landingpagedesgin() {
 
                             </h4>
 
-                            <p className="text-white">
+                            <p className="">
                                 Your landing page is often the first interaction a
                                 potential customer has with your brand. We make that
                                 first impression count.
@@ -155,76 +154,10 @@ function Landingpagedesgin() {
 
                 </div>
 
-            
+
                 <ScrollCard
                     cardsData={processCards}
-                    sectionTitle={
-                        <>
-                            <span className="scroll-process-small-title">
-                                Our Approach
-                            </span>
-
-                            <h2 className='text-tenor'>
-                                Turn Visitors into
-                                <br />
-                                <span>High-Converting Leads</span>
-                            </h2>
-                        </>
-                    }
                 />
-
-            </div>
-            <div data-aos="fade-right"
-                data-aos-delay={400}
-                data-aos-once={true}>
-                <div className="container mt-80 mb-60">
-                    <div className="row">
-                        <div className="col-12">
-                            <span className="tp-section-subtitle blink-ball">
-                                Engaging Welcome Page Solutions
-                            </span>
-
-                            <h4 className="px-about-title mb-20">
-
-                                <span className="text-blue-about">
-                                    Welcome Page Design That {" "}
-                                </span>
-                                Creates a Strong First Impression
-                            </h4>
-                            <p>Need an attractive welcome page design for your website, campaign or business? We create customized welcome pages that introduce your brand, communicate your key message and guide visitors to the next step.</p>
-                        </div>
-                        <div className="col-12">
-                            <h5 className="welcome-benefits-title text-figtree">
-                                A well-designed welcome page can help:
-                            </h5>
-
-                            <div className="row g-4 mt-10">
-                                {welcomePageBenefits.map((item, index) => (
-                                    <div
-                                        className="col-lg-4 col-md-6"
-                                        key={item.id}
-                                        data-aos="fade-up"
-                                        data-aos-delay={index * 100}
-                                        data-aos-once={true}
-                                    >
-                                        <div className="welcome-benefit-card position-relative overflow-hidden">
-                                            <span className="welcome-benefit-number">
-                                                {String(item.id).padStart(2, "0")}
-                                            </span>
-
-                                            <h3 className="text-tenor">
-                                                {item.title}
-                                            </h3>
-
-                                            {/* Round element in bottom right corner */}
-                                            <div className="welcome-benefit-circle position-absolute bottom-0 end-0 rounded-circle"></div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
             <div
@@ -232,7 +165,94 @@ function Landingpagedesgin() {
                 data-aos-delay={400}
                 data-aos-once={true}
             >
-                <div className="container mt-50 mb-50">
+                <div className="container mt-80 mb-60">
+                    <div className="row">
+
+                        <div className="col-12">
+
+                            <span className="tp-section-subtitle blink-ball">
+                                Engaging Welcome Page Solutions
+                            </span>
+
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">
+                                    Welcome Page Design That{" "}
+                                </span>
+                                Creates a Strong First Impression
+                            </h4>
+
+                            <p>
+                                Need an attractive welcome page design for your website,
+                                campaign or business? We create customized welcome pages
+                                that introduce your brand, communicate your key message
+                                and guide visitors to the next step.
+                            </p>
+
+                        </div>
+
+
+                        <div className="col-12">
+
+                            <h5 className="text-figtree">
+                                A well-designed welcome page can help:
+                            </h5>
+
+
+                            <div className="row g-4 mt-4">
+
+                                {welcomePageBenefits.map((item, index) => {
+
+                                    const isActive = activeIndex === index;
+
+                                    return (
+                                        <div
+                                            className="col-lg-4 col-md-6"
+                                            key={item.id}
+                                            data-aos="fade-up"
+                                            data-aos-delay={index * 100}
+                                            data-aos-once="true"
+                                        >
+
+                                            <div
+                                                className={`welcome-benefit-card ${isActive
+                                                    ? "active"
+                                                    : ""
+                                                    }`}
+                                                onClick={() =>
+                                                    setActiveIndex(index)
+                                                }
+                                                onMouseEnter={() =>
+                                                    setActiveIndex(index)
+                                                }
+                                            >
+
+                                                <span className="welcome-benefit-number">
+                                                    {String(item.id).padStart(2, "0")}
+                                                </span>
+
+                                                <h3 className="text-tenor welcome-benefit-title">
+                                                    {item.title}
+                                                </h3>
+
+                                            </div>
+
+                                        </div>
+                                    );
+                                })}
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div
+                data-aos="fade-right"
+                data-aos-delay={400}
+                data-aos-once={true}
+            >
+                <div className="container mt-100 mb-50">
                     <div className="row">
                         <div className="col-12 mb-2">
                             <span className="tp-section-subtitle text-black blink-ball">
@@ -252,7 +272,7 @@ function Landingpagedesgin() {
                         </div>
                     </div>
 
-                    
+
                     <LandingUiFeatures features={landingUiFeatures} />
                 </div>
             </div>
@@ -260,7 +280,7 @@ function Landingpagedesgin() {
             <div data-aos="fade-down"
                 data-aos-delay={400}
                 data-aos-once={true}>
-                <div className="container  mb-50">
+                <div className="container mt-100  mb-50">
                     <div className="row">
                         <div className="col-12">
                             <span className="tp-section-subtitle blink-ball">
@@ -340,31 +360,31 @@ function Landingpagedesgin() {
 
                         <div className="col-12">
 
-                           <div className="row g-4 mt-20">
-    {landingPageBenefits.map((item, index) => (
-        <div
-            className="col-lg-3 col-md-6"
-            key={item.id}
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
-            data-aos-once={true}
-        >
-            <div className="landing-page-benefit-card">
-                <h3 className="text-tenor">
-                    {item.title}
-                </h3>
+                            <div className="row g-4 mt-20">
+                                {landingPageBenefits.map((item, index) => (
+                                    <div
+                                        className="col-lg-3 col-md-6"
+                                        key={item.id}
+                                        data-aos="fade-up"
+                                        data-aos-delay={index * 100}
+                                        data-aos-once={true}
+                                    >
+                                        <div className="landing-page-benefit-card">
+                                            <h3 className="text-tenor">
+                                                {item.title}
+                                            </h3>
 
-                {/* <p className="landing-page-benefit-desc">
-                    {item.description}
-                </p> */}
+                                            {/* <i className={`landing-page-benefit-desc ${item.iconClass}`}>
 
-                {/* <div className="landing-page-benefit-arrow">
+                                            </i> */}
+
+                                            {/* <div className="landing-page-benefit-arrow">
                     →
                 </div> */}
-            </div>
-        </div>
-    ))}
-</div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
 
                         </div>
 
@@ -452,7 +472,18 @@ function Landingpagedesgin() {
                 <div className="container">
 
                     <div className="row align-items-center">
+                        <div>
+                            <span className="tp-section-subtitle blink-ball text-white">
+                                Get a Professional Landing Page Designed in Chennai
+                            </span>
 
+                            <h4 className="px-about-title mb-20 text-tenor text-white">
+                                <span className="text-blue-about text-white">
+                                    Get a Professional Landing Page{" "}
+                                </span>
+                                Designed in Chennai
+                            </h4>
+                        </div>
                         {/* LEFT - IMAGE */}
                         <div className="col-lg-5 mb-4 mb-lg-0">
 
@@ -472,16 +503,7 @@ function Landingpagedesgin() {
 
                             <div className="landing-cta-content">
 
-                                <span className="tp-section-subtitle blink-ball text-white">
-                                    Get a Professional Landing Page Designed in Chennai
-                                </span>
 
-                                <h4 className="px-about-title mb-20 text-tenor text-white">
-                                    <span className="text-blue-about text-white">
-                                        Get a Professional Landing Page{" "}
-                                    </span>
-                                    Designed in Chennai
-                                </h4>
 
                                 <p>
                                     Ready to create a landing page that supports your

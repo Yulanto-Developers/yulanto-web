@@ -357,34 +357,42 @@ export const landingPageBenefits = [
     {
         id: 1,
         title: "Generate more qualified enquiries",
+        iconClass: "fa-solid fa-user-check",
     },
     {
         id: 2,
         title: "Improve campaign performance",
+        iconClass: "fa-solid fa-chart-line",
     },
     {
         id: 3,
         title: "Present your offer more clearly",
+        iconClass: "fa-solid fa-bullhorn",
     },
     {
         id: 4,
         title: "Build trust with potential customers",
+        iconClass: "fa-solid fa-shield-halved",
     },
     {
         id: 5,
         title: "Create a stronger first impression",
+        iconClass: "fa-solid fa-star",
     },
     {
         id: 6,
         title: "Improve the user experience",
+        iconClass: "fa-solid fa-face-smile",
     },
     {
         id: 7,
         title: "Support Google Ads and digital marketing campaigns",
+        iconClass: "fa-solid fa-rectangle-ad",
     },
     {
         id: 8,
         title: "Increase opportunities for conversions",
+        iconClass: "fa-solid fa-arrow-trend-up",
     },
 ];
 
