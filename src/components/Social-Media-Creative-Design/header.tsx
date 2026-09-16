@@ -46,15 +46,11 @@ export function PulseFitHero({
   }, []);
 
   return (
-    <section className={`px-about-6-area pt-50 pb-80 pb-lg-110 overflow-hidden ${className}`}>
+    <section className={`px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden ${className}`}>
       <div className="container container-1550">
         <div className="row align-items-center" data-aos="fade-up">
           {/* Subtitle Row */}
-          <div className="col-12 mb-3" data-aos="fade-right" data-aos-delay="100">
-            {/* <span className="tp-section-subtitle text-black blink-ball">
-              {subtitle}
-            </span> */}
-          </div>
+         
 
           {/* Left Side: Content Block */}
           <div className="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
@@ -66,9 +62,7 @@ export function PulseFitHero({
               <p className="text-figtree text-black mt-2">
                 {descriptionTop}
               </p>
-              {/* <p className="text-figtree text-black mt-3">
-                {descriptionBottom}
-              </p> */}
+            
             </div>
           </div>
 

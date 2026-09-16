@@ -5,8 +5,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faPalette } from "@fortawesome/free-solid-svg-icons";
+import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 
 export function BuildPresenceSection() {
+    const { openModal } = useQuoteModal();
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -16,7 +19,7 @@ export function BuildPresenceSection() {
   }, []);
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110 overflow-hidden" style={{ backgroundColor: "#ffffff" }}>
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden" style={{ backgroundColor: "#ffffff" }}>
       <div className="container container-1550">
         <div 
           className="rounded-4 p-4 p-md-5 position-relative overflow-hidden shadow-sm"
@@ -47,19 +50,31 @@ export function BuildPresenceSection() {
 
               {/* CTA Button directly below content */}
               <div>
-                <a
-                  href="#contact"
-                  className="btn rounded-pill px-4 py-3 text-white fw-semibold d-inline-flex align-items-center gap-2 shadow-sm"
-                  style={{
-                    backgroundColor: "#53ae7d",
-                    borderColor: "#53ae7d",
-                    fontSize: "16px",
-                    transition: "all 0.3s ease",
-                  }}
-                >
-                  <span>Get Started Today</span>
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </a>
+              
+                {/* Left Aligned CTA Button */}
+            <button
+             onClick={openModal}
+              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+              style={{
+                backgroundColor: '#53ae7d',
+                color: '#ffffff',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                border: '1px solid #53ae7d',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#53ae7d';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#53ae7d';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Get Started Today</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+            </button>
+
               </div>
             </div>
 
