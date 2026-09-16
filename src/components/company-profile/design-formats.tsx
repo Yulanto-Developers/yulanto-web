@@ -65,6 +65,7 @@ const PlusCard: React.FC<PlusCardProps> = ({
             data-aos="fade-up"
             data-aos-delay={delay}
             data-aos-duration="800"
+            className="ruixen-plus-card"
             style={{
                 position: "relative",
                 border: "1px dashed #a1a1aa",
@@ -75,7 +76,19 @@ const PlusCard: React.FC<PlusCardProps> = ({
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
+                transition: "all 0.3s ease-in-out",
+                cursor: "pointer",
                 ...style,
+            }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-6px)"
+                e.currentTarget.style.borderColor = "#053456"
+                e.currentTarget.style.boxShadow = "0 12px 30px rgba(5, 52, 86, 0.1)"
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)"
+                e.currentTarget.style.borderColor = "#a1a1aa"
+                e.currentTarget.style.boxShadow = "none"
             }}
         >
             <CornerPlusIcons />
@@ -159,7 +172,7 @@ export default function RuixenBentoCards() {
     }, [])
 
     return (
-        <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
+        <section className="px-about-6-area pt-40 pb-40 pb-lg-110">
             <div
                 className="container container-1550"
                 style={{ paddingLeft: "16px", paddingRight: "16px" }}

@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({
   const duplicatedImages = [...images, ...images];
 
   return (
-    <section className={`px-about-6-area pt-50 pb-80 pb-lg-110 animated-marquee-hero overflow-hidden ${className}`}>
+    <section className={`px-about-6-area pt-40 pb-40 pb-lg-110 animated-marquee-hero overflow-hidden ${className}`}>
       {/* Content Container */}
       <div className="container container-1550 position-relative z-2">
         <div className="row justify-content-start">

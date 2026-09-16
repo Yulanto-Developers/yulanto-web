@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 
 interface ServiceItem {
   title: string;
@@ -26,11 +27,14 @@ const servicesList: ServiceItem[] = [
 ];
 
 export default function FlyerPosterServices() {
+  // Hook correctly placed at the top level
+  const { openModal } = useQuoteModal();
+
   return (
     <div className="flyer-poster-wrapper">
 
       {/* SECTION 1: Left Content | Right Image */}
-      <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
+      <section className="px-about-6-area pt-40 pb-40 pb-lg-110">
         <div className="container container-1550">
           <div className="row g-5 align-items-center">
 
@@ -49,6 +53,30 @@ export default function FlyerPosterServices() {
                   <br /><br />
                   From simple promotional flyers to premium corporate designs, we make sure your flyer reflects your brand identity and communicates your message clearly.
                 </p>
+                <button
+                  onClick={openModal}
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+                  style={{
+                    backgroundColor: '#053456',
+                    color: '#ffffff',
+                    fontSize: '15px',
+                    transition: 'all 0.3s ease',
+                    border: '1px solid #053456',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#053456';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#053456';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Let's Talk our Team</span>
+                  <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+                </button>
               </div>
             </div>
 
@@ -85,8 +113,7 @@ export default function FlyerPosterServices() {
                       border: "1px solid #53ae7d",
                     }}
                   >
-                    <h6 className="mb-0 fw-bold" style={{ color: "#053456",fontFamily: "Figtree, Figtree Fallback",
- }}>
+                    <h6 className="mb-0 fw-bold" style={{ color: "#053456", fontFamily: "Figtree, Figtree Fallback"}}>
                       <i className="fa-solid fa-circle-check me-2" style={{ color: "#53ae7d" }}></i>
                       Promotional Print Ready
                     </h6>
@@ -100,14 +127,10 @@ export default function FlyerPosterServices() {
       </section>
 
       {/* SECTION 2: Left Image | Right Content & Services Tiles */}
-      <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{
-        backgroundColor: "#ffffff",
-      
-      }}>
+      <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ backgroundColor: "#ffffff" }}>
         <div className="container container-1550">
           {/* Title Section */}
           <div className="row align-items-center mb-5" data-aos="fade-up">
-
             <div className="col-xl-12">
               <div className="px-project-title-box">
                 <h4 className="px-about-title mb-20 text-center">
@@ -116,7 +139,7 @@ export default function FlyerPosterServices() {
                 </h4>
                 <p className="text-figtree text-black mt-2">
                   Make your marketing message impossible to ignore with professionally designed posters. Our poster designers in Chennai create visually engaging posters for advertisements, events, promotions, product launches, educational campaigns, social media, and business announcements.
-
+                  <br /><br />
                   Every poster is designed with the right balance of typography, images, colors, branding, and content to create maximum visual impact.
                 </p>
               </div>
@@ -157,8 +180,8 @@ export default function FlyerPosterServices() {
                       border: "1px solid #53ae7d",
                     }}
                   >
-                    <h6 className="mb-0 fw-bold" style={{ color: "#053456", fontFamily: "Figtree, Figtree Fallback",  }}>
-                      <i className="fa-solid fa-circle-check me-2" style={{ color: "#53ae7d", }}></i>
+                    <h6 className="mb-0 fw-bold" style={{ color: "#053456", fontFamily: "Figtree, Figtree Fallback" }}>
+                      <i className="fa-solid fa-circle-check me-2" style={{ color: "#53ae7d" }}></i>
                       High-Impact Posters
                     </h6>
                   </div>
@@ -167,10 +190,7 @@ export default function FlyerPosterServices() {
             </div>
 
             {/* Right Side Content & Service Grid */}
-
             <div className="col-12 col-lg-7 order-1 order-lg-2">
-
-
               {/* Service Tiles Grid */}
               <div className="row g-3">
                 {servicesList.map((service, index) => (
@@ -201,22 +221,19 @@ export default function FlyerPosterServices() {
                           height: "36px",
                           backgroundColor: "rgba(83, 174, 125, 0.15)",
                           color: "#53ae7d",
-                          fontSize: "15px!important",
+                          fontSize: "15px",
                           fontFamily: "Figtree, Figtree Fallback",
-
                         }}
                       >
                         <i className={service.iconClass}></i>
                       </div>
-                      <span className="fw-semibold" style={{ color: "#053456", fontSize: "15px!important",fontFamily: "Figtree, Figtree Fallback",
- }}>
+                      <span className="fw-semibold" style={{ color: "#053456", fontSize: "15px", fontFamily: "Figtree, Figtree Fallback" }}>
                         {service.title}
                       </span>
                     </div>
                   </div>
                 ))}
               </div>
-
             </div>
 
           </div>

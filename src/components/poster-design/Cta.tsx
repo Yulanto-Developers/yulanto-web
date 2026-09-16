@@ -5,8 +5,13 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
+
 export default function PosterCTA() {
+    const { openModal } = useQuoteModal();
   useEffect(() => {
+    
+
     AOS.init({
       duration: 800,
       once: true,
@@ -15,10 +20,10 @@ export default function PosterCTA() {
   }, []);
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110 overflow-hidden">
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden">
       <div className="container container-1550">
-        <div className="row align-items-center justify-content-center text-center">
-          <div className="col-12 col-lg-10">
+        <div >
+          <div className="col-12 col-lg-12">
             {/* Title Fade Up */}
             <h2 
               className="px-about-title mb-20" 
@@ -53,13 +58,29 @@ export default function PosterCTA() {
 
             {/* Button Zoom In */}
             <div data-aos="zoom-in" data-aos-delay="400">
-              <a
-                href="#contact"
-                className="btn btn-primary px-4 py-3 rounded-pill fw-bold"
-                style={{ backgroundColor: "#053456", borderColor: "#053456" }}
-              >
-                Get in Touch Today
-              </a>
+            
+                <button
+             onClick={openModal}
+              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+              style={{
+                backgroundColor: '#053456',
+                color: '#ffffff',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                border: '1px solid #053456',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+            <span style={{fontFamily: "Figtree, Figtree Fallback"}}> Talk to Our Designers</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+            </button>
             </div>
           </div>
         </div>

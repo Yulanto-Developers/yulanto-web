@@ -72,7 +72,7 @@ const HeroSection = ({
         <div className="row align-items-center">
           {/* Left Column: 4-Image Grid */}
           <div className="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-            <motion.div
+            <motion.div className="marginfix"
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(2, 1fr)",

@@ -32,7 +32,7 @@ export default function HeroSection04() {
 
     return (
         <section
-            className="px-about-6-area pt-50 pb-80 pb-lg-110"
+            className="px-about-6-area pt-40 pb-40 pb-lg-110"
             style={{ overflow: "hidden" }}
         >
             <div className="container container-1550">
@@ -59,13 +59,7 @@ export default function HeroSection04() {
                 {/* Middle Card Block (7-Column Content / 5-Column Image) */}
                 <div style={{ position: "relative", margin: "20px 0" }} data-aos="fade-up" data-aos-delay="100">
                     <div
-                        style={{
-                            backgroundColor: "#F3F4F6",
-                            padding: "20px",
-                            borderRadius: "16px",
-                            position: "relative",
-                            overflow: "hidden"
-                        }}
+                      
                     >
                         <div className="row align-items-center">
                             {/* 7 Column Content */}
@@ -102,7 +96,7 @@ export default function HeroSection04() {
                                             width: "100%",
                                             height: "100%",
                                             objectFit: "cover",
-                                            filter: "grayscale(100%)",
+                                          
                                             display: "block"
                                         }}
                                     />
@@ -122,8 +116,8 @@ export default function HeroSection04() {
                         <div
                             style={{
                                 width: "100%",
-                                maxWidth: "280px",
-                                height: "200px",
+                                maxWidth: "500px",
+                                height: "300px",
                                 margin: "0 auto",
                                 borderRadius: "12px",
                                 overflow: "hidden",

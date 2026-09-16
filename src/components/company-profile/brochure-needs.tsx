@@ -37,7 +37,7 @@ export function BrochureNeeds({}: Readonly<BrochureNeedsProps>) {
 
   return (
     <section
-      className="px-about-6-area pt-80 pb-80"
+      className="px-about-6-area pt-40 pb-40"
       style={{
         position: 'relative',
         backgroundColor: '#053456',

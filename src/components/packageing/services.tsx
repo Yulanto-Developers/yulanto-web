@@ -95,7 +95,7 @@ export function PackagingServicesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" >
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" >
       <div className="container container-1550">
         
         {/* Section Header */}
@@ -151,7 +151,7 @@ export function PackagingServicesSection() {
                     <i className={activeService.iconClass}></i>
                     Featured Design
                   </span>
-                  <h5 className="m-0 text-white fw-bold">{activeService.title}</h5>
+                  <h5 className="m-0 text-white fw-bold" style={{fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' }}>{activeService.title}</h5>
                 </div>
               </div>
             </div>

@@ -3187,3 +3187,9 @@ input[name="name"].has-value+.name-next-btn {
     height: 190px !important;
   }
 }
+
+@media (max-width: 768px) {
+.marginfix{
+margin-bottom: 30px !important;
+}
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -57,6 +57,8 @@ const featuresData: FeatureItem[] = [
 ];
 
 export default function Why() {
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
+
   useEffect(() => {
     AOS.init({
       once: true,
@@ -65,36 +67,34 @@ export default function Why() {
   }, []);
 
   return (
-    <section
-      className="px-about-6-area pt-50 pb-80 pb-lg-110"
-     
-    >
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110">
       <div className="container container-1550">
         {/* Header Title Section */}
         {/* Top Title Row */}
-                <div className="row align-items-center" data-aos="fade-up">
-                    <div className="col-xl-3">
-                        <span className="tp-section-subtitle text-black blink-ball">
-                          Why Choose Us for Graphic Design in Chennai?
-                        </span>
-                    </div>
+        <div className="row align-items-center" data-aos="fade-up">
+          <div className="col-xl-3">
+            <span className="tp-section-subtitle text-black blink-ball">
+              Why Choose Us for Graphic Design in Chennai?
+            </span>
+          </div>
 
-                    <div className="col-xl-9">
-                        <div className="px-project-title-box">
-                            <h4 className="px-about-title mb-20">
-                                <span className="text-blue-about">Design That Combines Creativity </span>with Business Strategy
-                            </h4>
-                            <p className="text-figtree text-black mt-2">
-                                Choosing the right design partner is important when your marketing materials represent your brand. Our approach focuses on creating designs that are visually appealing, easy to understand, and aligned with your business goals.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          <div className="col-xl-9">
+            <div className="px-project-title-box">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">Design That Combines Creativity </span>with Business Strategy
+              </h4>
+              <p className="text-figtree text-black mt-2">
+                Choosing the right design partner is important when your marketing materials represent your brand. Our approach focuses on creating designs that are visually appealing, easy to understand, and aligned with your business goals.
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* 6 Feature Cards Grid */}
         <div className="row gx-4 gy-4">
           {featuresData.map((feature, index) => {
             const isDark = index % 2 !== 0;
+            const isHovered = hoveredId === feature.id;
 
             return (
               <div
@@ -104,13 +104,21 @@ export default function Why() {
                 data-aos-delay={index * 100}
               >
                 <div
+                  className="feature-card-item"
+                  onMouseEnter={() => setHoveredId(feature.id)}
+                  onMouseLeave={() => setHoveredId(null)}
                   style={{
                     ...baseCardStyle,
                     backgroundColor: isDark ? "#053456" : "#ffffff",
                     borderColor: isDark ? "#053456" : "#e2e8f0",
-                    boxShadow: isDark
+                    boxShadow: isHovered
+                      ? isDark
+                        ? "0px 18px 35px rgba(5, 52, 86, 0.25)"
+                        : "0px 18px 35px rgba(0, 0, 0, 0.1)"
+                      : isDark
                       ? "0px 10px 25px rgba(5, 52, 86, 0.15)"
                       : "0px 10px 25px rgba(0, 0, 0, 0.05)",
+                    transform: isHovered ? "translateY(-6px)" : "translateY(0px)",
                   }}
                 >
                   {/* Top-Right Cut Line Accent */}
@@ -131,12 +139,21 @@ export default function Why() {
                   <div
                     style={{
                       ...iconBoxStyle,
-                      backgroundColor: isDark ? "#ffffff" : "#f1f5f9",
+                      backgroundColor: isHovered
+                        ? "#53ae7d"
+                        : isDark
+                        ? "#ffffff"
+                        : "#f1f5f9",
+                      transition: "background-color 0.3s ease",
                     }}
                   >
                     <i
-                      className={`${feature.icon} text-blue-about`}
-                      style={{ fontSize: "24px" }}
+                      className={feature.icon}
+                      style={{
+                        fontSize: "24px",
+                        color: isHovered ? "#ffffff" : "#053456",
+                        transition: "color 0.3s ease",
+                      }}
                     />
                   </div>
 
@@ -184,12 +201,13 @@ const baseCardStyle: React.CSSProperties = {
   // Top-Right Cut Corner Shape matching your reference image
   clipPath: "polygon(0 0, calc(100% - 35px) 0, 100% 35px, 100% 100%, 0 100%)",
 
-  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  transition: "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
   height: "100%",
   minHeight: "280px",
+  cursor: "pointer",
 };
 
 const iconBoxStyle: React.CSSProperties = {

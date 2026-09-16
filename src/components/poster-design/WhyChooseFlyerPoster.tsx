@@ -71,7 +71,7 @@ export default function WhyChooseFlyerPoster() {
   const activeFeature = featuresList[activeIndex];
 
   return (
-    <section className="px-about-6-area pt-80 pb-80">
+    <section className="px-about-6-area pt-40 pb-40">
       <div className="container container-1550">
         {/* Top Title Row */}
         <div className="row align-items-center mb-5" data-aos="fade-up">
@@ -100,7 +100,7 @@ export default function WhyChooseFlyerPoster() {
         {/* Section Heading before Layout */}
         <div className="row mb-4" data-aos="fade-up">
           <div className="col-12">
-            <h4 className="px-about-title mb-20 text-center">
+            <h4 className="px-about-title mb-10 text-center">
               <span className="text-blue-about">Why Choose Our Flyer & </span>
               Poster Design Services?
             </h4>
@@ -108,11 +108,11 @@ export default function WhyChooseFlyerPoster() {
         </div>
 
         {/* Interactive Circular Layout Section */}
-        <div className="row align-items-center g-5">
+        <div className="row align-items-center g-3">
           {/* Left Side: Circular Interactive Graphic with Dynamic Center Content Card */}
           <div className="col-12 col-lg-7" data-aos="fade-right">
             <div
-              className="position-relative d-flex align-items-center justify-content-center mx-auto"
+              className="position-relative d-flex align-items-center justify-content-center mx-auto why-choose-circle-wrap"
               style={{
                 width: "100%",
                 maxWidth: "520px",
@@ -228,6 +228,21 @@ export default function WhyChooseFlyerPoster() {
           </div>
         </div>
       </div>
+
+      {/* Internal responsive style injection to scale down the circle cleanly on mobile screens only */}
+      <style jsx>{`
+        @media (max-width: 576px) {
+          .why-choose-circle-wrap {
+            transform: scale(0.78);
+            transform-origin: center;
+            margin-top: -30px;
+            margin-bottom: -30px;
+          }
+            .text-muted{
+            font-size: 15px !important;
+            }
+        }
+      `}</style>
     </section>
   );
 }

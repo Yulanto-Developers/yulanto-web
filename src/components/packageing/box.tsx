@@ -26,7 +26,7 @@ export function CreativePackagingSection({
 
     return (
         <section
-            className={`px-about-6-area pt-50 pb-80 pb-lg-110 overflow-hidden ${className}`}
+            className={`px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden ${className}`}
             style={{ backgroundColor: "#ffffff" }}
         >
             <div className="container container-1550">

@@ -55,7 +55,7 @@ const featuresList: FeatureItem[] = [
 
 export default function WhyChooseFlyerPoster() {
   return (
-    <section className="px-about-6-area pt-80 pb-80  " style={{ backgroundColor: "#ffffff" }}>
+    <section className="px-about-6-area pt-40 pb-40  " style={{ backgroundColor: "#ffffff" }}>
       <div className="container container-1550">
         <div className="row align-items-center g-5">
           {/* Left Side: Image Layout */}

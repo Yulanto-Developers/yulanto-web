@@ -152,7 +152,7 @@ export function PackagingFeaturesSection() {
   );
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110">
       <div className="container container-1550">
         
         {/* Section Title Header */}

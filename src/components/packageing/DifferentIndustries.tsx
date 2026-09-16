@@ -28,8 +28,21 @@ const industriesData: IndustryNode[] = [
 
 export function RotatingIndustriesSection() {
   const totalItems = industriesData.length;
-  const radius = 210; // Slightly expanded orbit radius
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check screen size to adjust orbit radius for mobile
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Responsive radius: smaller on mobile to prevent clipping/overflow
+  const radius = isMobile ? 150 : 210;
 
   // Auto-slide through center images every 3 seconds
   useEffect(() => {
@@ -41,7 +54,7 @@ export function RotatingIndustriesSection() {
 
   return (
     <section 
-      className="px-about-6-area pt-50 pb-80 pb-lg-110" 
+      className="px-about-6-area pt-40 pb-40 pb-lg-110" 
       style={{ overflow: "hidden" }}
     >
       {/* Dynamic Keyframe Animations & Hover Effects */}
@@ -94,11 +107,11 @@ export function RotatingIndustriesSection() {
 
       <div className="container container-1550">
         
-        <h4 className="px-about-title mb-20 text-center">
+        <h4 className="px-about-title mb-20 text-center" data-aos="fade-up" data-aos-duration="800">
           <span className="text-blue-about">Packaging Design </span>
           for Different Industries
         </h4>
-              
+            
         {/* Main 2-Column Row */}
         <div className="row align-items-center g-5">
           
@@ -140,17 +153,18 @@ export function RotatingIndustriesSection() {
             <div 
               className="position-relative d-flex align-items-center justify-content-center rotating-wheel-container"
               style={{ 
-                width: "550px", 
-                height: "550px",
-                fontFamily: "Figtree, Figtree Fallback"
+                width: isMobile ? "360px" : "550px", 
+                height: isMobile ? "360px" : "550px",
+                fontFamily: "Figtree, Figtree Fallback",
+                maxWidth: "100%"
               }}
             >
               {/* Central Auto-Sliding Image Circle with Glowing Glass Frame */}
               <div
                 className="position-absolute rounded-circle overflow-hidden shadow-lg center-circle-glow"
                 style={{
-                  width: "160px",
-                  height: "160px",
+                  width: isMobile ? "110px" : "160px",
+                  height: isMobile ? "110px" : "160px",
                   backgroundColor: "#053456",
                   border: "4px solid #53ae7d",
                   outline: "6px solid rgba(83, 174, 125, 0.2)",
@@ -205,17 +219,17 @@ export function RotatingIndustriesSection() {
                       className="position-absolute d-flex flex-column align-items-center text-center"
                       style={{
                         transform: `translate(${x}px, ${y}px)`,
-                        width: "120px",
+                        width: isMobile ? "95px" : "120px",
                       }}
                     >
                       {/* Counter-Rotating Badge Pill */}
                       <div className="counter-rotate d-flex flex-column align-items-center text-center node-pill">
                         <div
-                          className="d-flex align-items-center gap-2 shadow-lg"
+                          className="d-flex align-items-center gap-1 gap-lg-2 shadow-lg"
                           style={{
                             backgroundColor: "#fff",
                             color: "#053456",
-                            padding: "6px 14px 6px 8px",
+                            padding: isMobile ? "4px 8px 4px 5px" : "6px 14px 6px 8px",
                             borderRadius: "30px",
                             border: "1.5px solid #53ae7d",
                             boxShadow: "0 4px 12px rgba(5, 52, 86, 0.3)",
@@ -227,11 +241,11 @@ export function RotatingIndustriesSection() {
                           <div
                             className="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
                             style={{
-                              width: "32px",
-                              height: "32px",
+                              width: isMobile ? "24px" : "32px",
+                              height: isMobile ? "24px" : "32px",
                               backgroundColor: "#53ae7d",
                               color: "#ffffff",
-                              fontSize: "14px",
+                              fontSize: isMobile ? "10px" : "14px",
                             }}
                           >
                             <i className={item.iconClass}></i>
@@ -241,7 +255,7 @@ export function RotatingIndustriesSection() {
                           <span
                             className="fw-bold"
                             style={{
-                              fontSize: "12px",
+                              fontSize: isMobile ? "9px" : "12px",
                               letterSpacing: "0.3px",
                             }}
                           >

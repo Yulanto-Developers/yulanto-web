@@ -18,9 +18,20 @@ export const BeautyCardContainer: React.FC<BeautyCardContainerProps> = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCardIndex, setHoveredCardIndex] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
-  // Auto-trigger fan-out animation when scrolled into view
+  // Check screen size for mobile view (< 768px)
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Auto-trigger fan-out animation when scrolled into view (Desktop only)
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -42,18 +53,19 @@ export const BeautyCardContainer: React.FC<BeautyCardContainerProps> = ({
     };
   }, []);
 
-  // Calculate dynamic positions for auto-scroll fan-out
+  // Calculate dynamic positions with increased spacing to create gaps between cards (Desktop)
   const getCardStyles = (index: number) => {
     const isThisCardHovered = hoveredCardIndex === index;
     const totalImages = images.length;
     const reverseIndex = totalImages - 1 - index;
-    const hoverOffset = (index + 1) * 200;
+    
+    const hoverOffset = (index + 1) * 235;
 
     return {
       position: "absolute" as const,
       left: isVisible ? `${hoverOffset}px` : "10px",
       top: isVisible ? "20px" : "10px",
-      width: "220px",
+      width: "230px",
       height: isVisible ? "250px" : "180px",
       backgroundImage: `url(${images[index]})`,
       backgroundSize: "cover",
@@ -74,10 +86,10 @@ export const BeautyCardContainer: React.FC<BeautyCardContainerProps> = ({
   return (
     <section
       ref={sectionRef}
-      className={`px-about-6-area pt-50 pb-80 pb-lg-110 ${className}`}
+      className={`px-about-6-area pt-40 pb-40 pb-lg-110 ${className}`}
       style={{
         backgroundColor: "#ffffff",
-        overflow: "hidden", // Completely disables horizontal and vertical scrollbars
+        overflow: "hidden",
       }}
     >
       <div className="container container-1550">
@@ -91,7 +103,7 @@ export const BeautyCardContainer: React.FC<BeautyCardContainerProps> = ({
           <div className="col-xl-9" data-aos="fade-left" data-aos-delay="200">
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">Packaging Design That</span>  Connects With Customers
+                <span className="text-blue-about">Packaging Design That</span> Connects With Customers
               </h4>
               <p className="text-figtree text-black mt-2">
                 A successful package needs to communicate the right message at a glance. We carefully consider typography, colours, imagery, product information, brand guidelines, and layout to create a consistent visual experience.
@@ -101,82 +113,110 @@ export const BeautyCardContainer: React.FC<BeautyCardContainerProps> = ({
             </div>
           </div>
         </div>
+
         <div
           className="w-100 py-4 d-flex justify-content-start align-items-center"
           style={{ overflow: "hidden" }}
         >
-          {/* Main Envelope Container */}
-          <div
-            className="position-relative d-flex align-items-center"
-            style={{
-              width: "100%",
-              maxWidth: isVisible ? `${(images.length + 1) * 210 + 60}px` : "320px",
-              height: "320px",
-          
-              margin: "0 left",
-              transition: "max-width 0.8s cubic-bezier(0.25, 1, 0.5, 1)",
-            }}
-          >
-            {/* Base Packaging Backing */}
+          {isMobile ? (
+            /* Mobile View: 2-column grid layout showing all images without envelope */
             <div
               style={{
-                position: "absolute",
-                top: "40px",
-                left: "10px",
-                width: "260px",
-                height: "240px",
-                backgroundColor: "#e0b888",
-                boxShadow: "inset 60px 0 20px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0,0,0,0.1)",
-                borderTopRightRadius: "20px",
-                borderBottomRightRadius: "20px",
-                zIndex: 0,
-              }}
-            />
-
-            {/* Render Cards */}
-            {images.map((_, index) => (
-              <div
-                key={index}
-                className="beauty-card"
-                onMouseEnter={() => setHoveredCardIndex(index)}
-                onMouseLeave={() => setHoveredCardIndex(null)}
-                style={getCardStyles(index)}
-              />
-            ))}
-
-            {/* Front Cover Sleeve */}
-            <div
-              style={{
-                position: "absolute",
-                top: "40px",
-                left: isVisible ? "-10px" : "10px",
-                width: "260px",
-                height: "240px",
-                backgroundColor: "#d6a771",
-                borderRadius: "16px",
-                borderTopRightRadius: "20px",
-                borderBottomRightRadius: "20px",
-                transition: "left 0.6s ease, box-shadow 0.6s ease",
-                boxShadow: "6px 0 15px rgba(0, 0, 0, 0.2)",
-                zIndex: images.length + 5,
-                pointerEvents: "none",
+                display: "grid",
+                gridTemplateColumns: "repeat(2, 1fr)",
+                gap: "12px",
+                width: "100%",
+                padding: "0 5px",
               }}
             >
+              {images.map((img, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: "100%",
+                    height: "170px",
+                    backgroundImage: `url(${img})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center center",
+                    borderRadius: "12px",
+                    boxShadow: "0 6px 15px rgba(0, 0, 0, 0.12)",
+                  }}
+                />
+              ))}
+            </div>
+          ) : (
+            /* Desktop View: Original Envelope & Fan-out Cards Container */
+            <div
+              className="position-relative d-flex align-items-center"
+              style={{
+                width: "100%",
+                maxWidth: isVisible ? `${(images.length + 1) * 245 + 80}px` : "320px",
+                height: "320px",
+                margin: "0 left",
+                transition: "max-width 0.8s cubic-bezier(0.25, 1, 0.5, 1)",
+              }}
+            >
+              {/* Base Packaging Backing */}
               <div
                 style={{
                   position: "absolute",
-                  top: 0,
-                  right: 0,
-                  width: "12px",
-                  height: "100%",
-                  backgroundColor: "#c59660",
+                  top: "40px",
+                  left: "10px",
+                  width: "260px",
+                  height: "240px",
+                  backgroundColor: "#e0b888",
+                  boxShadow: "inset 60px 0 20px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0,0,0,0.1)",
                   borderTopRightRadius: "20px",
                   borderBottomRightRadius: "20px",
+                  zIndex: 0,
                 }}
               />
-            </div>
 
-          </div>
+              {/* Render Cards */}
+              {images.map((_, index) => (
+                <div
+                  key={index}
+                  className="beauty-card"
+                  onMouseEnter={() => setHoveredCardIndex(index)}
+                  onMouseLeave={() => setHoveredCardIndex(null)}
+                  style={getCardStyles(index)}
+                />
+              ))}
+
+              {/* Front Cover Sleeve */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: "40px",
+                  left: isVisible ? "-10px" : "10px",
+                  width: "260px",
+                  height: "240px",
+                  backgroundColor: "#d6a771",
+                  borderRadius: "16px",
+                  borderTopRightRadius: "20px",
+                  borderBottomRightRadius: "20px",
+                  transition: "left 0.6s ease, box-shadow 0.6s ease",
+                  boxShadow: "6px 0 15px rgba(0, 0, 0, 0.2)",
+                  zIndex: images.length + 5,
+                  pointerEvents: "none",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    right: 0,
+                    width: "12px",
+                    height: "100%",
+                    backgroundColor: "#c59660",
+                    borderTopRightRadius: "20px",
+                    borderBottomRightRadius: "20px",
+                  }}
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -44,8 +44,6 @@ export const defaultFaqData: FaqSectionData = {
   rows: [
     {
       id: "row1",
-      speed: "55s",
-      direction: "left",
       faqItems: [
         {
           id: "q1",
@@ -63,8 +61,6 @@ export const defaultFaqData: FaqSectionData = {
     },
     {
       id: "row2",
-      speed: "65s",
-      direction: "right",
       faqItems: [
         {
           id: "q3",
@@ -84,109 +80,101 @@ export const defaultFaqData: FaqSectionData = {
 };
 
 // ==========================================
-// 3. SUB-COMPONENTS
+// 3. SUB-COMPONENTS (Accordion Card)
 // ==========================================
 
-export const FaqCard: React.FC<FaqItem> = ({ question, answer }) => {
+export const FaqAccordionItem: React.FC<{ item: FaqItem }> = ({ item }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start",
-        gap: "12px",
-        padding: "24px",
         backgroundColor: "#ffffff",
         borderRadius: "16px",
         border: "1px solid #eaeaea",
-        width: "380px",
-        flexShrink: 0,
-        cursor: "pointer",
-        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.03)",
-      }}
-    >
-      <h3
-        className="text-blue-about"
-        style={{
-          fontSize: "18px",
-          fontWeight: 700,
-          fontFamily: "Figtree, Figtree Fallback",
-          lineHeight: "1.4",
-          margin: 0,
-        }}
-      >
-        {question}
-      </h3>
-      <p
-        className="text-figtree"
-        style={{
-          fontSize: "15px !important",
-          color: "#555555",
-          lineHeight: "1.6",
-          margin: 0,
-        }}
-      >
-        {answer}
-      </p>
-    </div>
-  );
-};
-
-export const HorizontalScroller: React.FC<{
-  children: React.ReactNode;
-  speed?: string;
-  direction?: "left" | "right";
-}> = ({ children, speed = "40s", direction = "left" }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const animationName =
-    direction === "right" ? "scrollHorizontalReverse" : "scrollHorizontal";
-
-  return (
-    <div
-      style={{
-        width: "100%",
         overflow: "hidden",
-        position: "relative",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.02)",
+        transition: "border-color 0.3s ease",
       }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
-      <div
+      <button
+        onClick={() => setIsOpen(!isOpen)}
         style={{
+          width: "100%",
           display: "flex",
-          width: "max-content",
-          animation: `${animationName} ${speed} linear infinite`,
-          animationPlayState: isHovered ? "paused" : "running",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "24px",
+          background: "transparent",
+          border: "none",
+          cursor: "pointer",
+          textAlign: "left",
+          gap: "16px",
         }}
       >
-        <div
+        <h3
+          className="text-blue-about"
           style={{
-            display: "flex",
-            alignItems: "stretch",
-            gap: "24px",
-            paddingLeft: "12px",
-            paddingRight: "12px",
-            flexShrink: 0,
+            fontSize: "18px",
+            fontWeight: 700,
+            fontFamily: "Figtree, Figtree Fallback",
+            lineHeight: "1.4",
+            margin: 0,
           }}
         >
-          {children}
-        </div>
-        {/* Duplicate content for infinite scrolling loop */}
-        <div
+          {item.question}
+        </h3>
+        <span
           style={{
             display: "flex",
-            alignItems: "stretch",
-            gap: "24px",
-            paddingLeft: "12px",
-            paddingRight: "12px",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "32px",
+            height: "32px",
+            borderRadius: "50%",
+            backgroundColor: isOpen ? "#053456" : "#f4f7fa",
+            color: isOpen ? "#ffffff" : "#053456",
             flexShrink: 0,
+            transition: "all 0.3s ease",
           }}
-          aria-hidden="true"
         >
-          {children}
-        </div>
-      </div>
+          <i
+            className={`fa-solid fa-chevron-down`}
+            style={{
+              fontSize: "12px",
+              transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+              transition: "transform 0.3s ease",
+            }}
+          ></i>
+        </span>
+      </button>
+
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+          <div
+            style={{
+              padding: "0 24px 24px 24px",
+            }}
+          >
+            <p
+              className="text-figtree"
+              style={{
+                fontSize: "15px",
+                color: "#555555",
+                lineHeight: "1.6",
+                margin: 0,
+              }}
+            >
+              {item.answer}
+            </p>
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 };
@@ -220,10 +208,17 @@ export const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
       },
     };
 
+    // Flatten rows or split items evenly into two columns
+    // If rows are provided, we can pull all items or group row 0 into left and row 1 into right.
+    const allItems = data.rows.flatMap((row) => row.faqItems);
+    const midPoint = Math.ceil(allItems.length / 2);
+    const leftColumnItems = allItems.slice(0, midPoint);
+    const rightColumnItems = allItems.slice(midPoint);
+
     return (
       <motion.section
         ref={ref}
-        className={`px-about-6-area pt-50 pb-80 pb-lg-110 ${className || ""}`}
+        className={`px-about-6-area pt-40 pb-40 pb-lg-110 ${className || ""}`}
         style={{ overflow: "hidden", backgroundColor: "#fff" }}
         initial="hidden"
         whileInView="visible"
@@ -231,17 +226,6 @@ export const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
         variants={containerVariants}
         {...props}
       >
-        <style>{`
-          @keyframes scrollHorizontal {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          @keyframes scrollHorizontalReverse {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); }
-          }
-        `}</style>
-
         <div className="container container-1550">
           {/* Header Section */}
           <div className="row align-items-center mb-50">
@@ -277,32 +261,37 @@ export const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
             </div>
           </div>
 
-          {/* Scrolling Rows */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "24px",
-              marginTop: "30px",
-              width: "100%",
-            }}
-          >
-            {data.rows.map((row) => (
-              <HorizontalScroller
-                key={row.id}
-                speed={row.speed}
-                direction={row.direction}
+          {/* Two-Column FAQ Grid Layout */}
+          <div className="row g-4">
+            {/* Left Column */}
+            <div className="col-lg-6">
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "20px",
+                }}
               >
-                {row.faqItems.map((item) => (
-                  <FaqCard
-                    key={item.id}
-                    id={item.id}
-                    question={item.question}
-                    answer={item.answer}
-                  />
+                {leftColumnItems.map((item) => (
+                  <FaqAccordionItem key={item.id} item={item} />
                 ))}
-              </HorizontalScroller>
-            ))}
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="col-lg-6">
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "20px",
+                }}
+              >
+                {rightColumnItems.map((item) => (
+                  <FaqAccordionItem key={item.id} item={item} />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </motion.section>

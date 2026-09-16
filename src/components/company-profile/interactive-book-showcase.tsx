@@ -50,22 +50,34 @@ export default function StPageFlipBook() {
   const bookContainerRef = useRef<HTMLDivElement>(null);
   const pageFlipInstance = useRef<PageFlip | null>(null);
   const [currentPage, setCurrentPage] = useState(0);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     if (!bookContainerRef.current) return;
 
+    const mobile = window.innerWidth < 768;
+
     const pf = new PageFlip(bookContainerRef.current, {
-      width: 550,
-      height: 500,
+      width: mobile ? 320 : 550,
+      height: mobile ? 460 : 500,
       size: "fixed",
-      minWidth: 300,
-      maxWidth: 600,
-      minHeight: 400,
+      minWidth: 280,
+      maxWidth: mobile ? 400 : 600,
+      minHeight: 350,
       maxHeight: 700,
       drawShadow: true,
       maxShadowOpacity: 0.6,
       showCover: false,
-      usePortrait: false,
+      usePortrait: mobile,
       startPage: 0,
     });
 
@@ -74,14 +86,15 @@ export default function StPageFlipBook() {
     pageFlipInstance.current = pf;
 
     pf.on("flip", (e) => {
-      const stepIndex = Math.floor((e.data as number) / 2);
+      const stepIndex = mobile ? (e.data as number) : Math.floor((e.data as number) / 2);
       setCurrentPage(stepIndex);
     });
 
     const interval = setInterval(() => {
       if (!pageFlipInstance.current) return;
       const totalLeafs = pf.getPageCount();
-      const nextLeaf = (pf.getCurrentPageIndex() + 2) % totalLeafs;
+      const increment = mobile ? 1 : 2;
+      const nextLeaf = (pf.getCurrentPageIndex() + increment) % totalLeafs;
       pf.flip(nextLeaf);
     }, 3000);
 
@@ -92,16 +105,16 @@ export default function StPageFlipBook() {
         pageFlipInstance.current = null;
       }
     };
-  }, []);
+  }, [isMobile]);
 
   const goToStep = (index: number) => {
     if (pageFlipInstance.current) {
-      pageFlipInstance.current.flip(index * 2);
+      pageFlipInstance.current.flip(isMobile ? index : index * 2);
     }
   };
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ overflow: "hidden", backgroundColor: "#fff" }}>
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ overflow: "hidden", backgroundColor: "#fff" }}>
       <div className="container container-1550">
         {/* Top Title Row */}
         <div className="row align-items-center mb-50" data-aos="fade-up">
@@ -126,6 +139,7 @@ export default function StPageFlipBook() {
 
         {/* FlipBook Section */}
         <div
+          key={isMobile ? "mobile-book-wrapper" : "desktop-book-wrapper"}
           style={{
             width: "100%",
             display: "flex",
@@ -145,53 +159,55 @@ export default function StPageFlipBook() {
               maxWidth: "100%",
             }}
           >
-            {/* LEFT STACKED PAGES */}
-            <div
-              style={{
-                position: "absolute",
-                left: 0,
-                top: 0,
-                bottom: 0,
-                display: "flex",
-                alignItems: "center",
-                pointerEvents: "none",
-                zIndex: 0,
-              }}
-            >
-              {bookSteps.map((step, idx) => {
-                if (idx >= currentPage) return null;
-                const offset = (currentPage - idx) * 12;
-                return (
-                  <div
-                    key={`left-stack-${idx}`}
-                    style={{
-                      position: "absolute",
-                      right: `calc(100% + ${offset}px)`,
-                      width: "50px",
-                      height: "500px",
-                      borderRadius: "16px 0 0 16px",
-                      overflow: "hidden",
-                      boxShadow: "-6px 0 12px rgba(0,0,0,0.3)",
-                      transform: `scale(${1 - (currentPage - idx) * 0.02})`,
-                      transformOrigin: "right center",
-                      transition: "all 500ms cubic-bezier(0.4, 0, 0.2, 1)",
-                    }}
-                  >
-                    <img
-                      src={step.spreadImage}
-                      alt="Previous Page Stack"
+            {/* LEFT STACKED PAGES (Desktop Only) */}
+            {!isMobile && (
+              <div
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  bottom: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  pointerEvents: "none",
+                  zIndex: 0,
+                }}
+              >
+                {bookSteps.map((step, idx) => {
+                  if (idx >= currentPage) return null;
+                  const offset = (currentPage - idx) * 12;
+                  return (
+                    <div
+                      key={`left-stack-${idx}`}
                       style={{
-                        width: "550px",
-                        height: "100%",
-                        objectFit: "cover",
-                        objectPosition: "left center",
-                        filter: "brightness(0.6)",
+                        position: "absolute",
+                        right: `calc(100% + ${offset}px)`,
+                        width: "50px",
+                        height: "500px",
+                        borderRadius: "16px 0 0 16px",
+                        overflow: "hidden",
+                        boxShadow: "-6px 0 12px rgba(0,0,0,0.3)",
+                        transform: `scale(${1 - (currentPage - idx) * 0.02})`,
+                        transformOrigin: "right center",
+                        transition: "all 500ms cubic-bezier(0.4, 0, 0.2, 1)",
                       }}
-                    />
-                  </div>
-                );
-              })}
-            </div>
+                    >
+                      <img
+                        src={step.spreadImage}
+                        alt="Previous Page Stack"
+                        style={{
+                          width: "550px",
+                          height: "100%",
+                          objectFit: "cover",
+                          objectPosition: "left center",
+                          filter: "brightness(0.6)",
+                        }}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            )}
 
             {/* MAIN BOOK CONTAINER */}
             <div
@@ -204,17 +220,19 @@ export default function StPageFlipBook() {
                 zIndex: 2,
               }}
             >
-              {bookSteps.map((step, idx) => (
-                <React.Fragment key={idx}>
-                  {/* LEFT PAGE */}
+              {bookSteps.map((step, idx) =>
+                isMobile ? (
+                  // ================= MOBILE SINGLE PAGE =================
                   <div
+                    key={`mobile-page-${idx}`}
                     className="page-leaf"
                     style={{
                       backgroundColor: "#000000",
                       position: "relative",
                       overflow: "hidden",
-                      borderRadius: "16px 0 0 16px",
+                      borderRadius: "16px",
                       boxSizing: "border-box",
+                      height: "100%",
                     }}
                   >
                     <img
@@ -224,64 +242,22 @@ export default function StPageFlipBook() {
                         position: "absolute",
                         left: 0,
                         top: 0,
-                        width: "200%",
+                        width: "100%",
                         height: "100%",
                         objectFit: "cover",
-                        objectPosition: "left center",
                         display: "block",
                       }}
                     />
                     <div
                       style={{
                         position: "absolute",
-                        top: 0,
-                        right: 0,
-                        bottom: 0,
-                        width: "35px",
-                        background:
-                          "linear-gradient(to left, rgba(0,0,0,0.4), transparent)",
-                        pointerEvents: "none",
-                      }}
-                    />
-                  </div>
-
-                  {/* RIGHT PAGE */}
-                  <div
-                    className="page-leaf"
-                    style={{
-                      backgroundColor: "#000000",
-                      position: "relative",
-                      overflow: "hidden",
-                      borderRadius: "0 16px 16px 0",
-                      boxSizing: "border-box",
-                    }}
-                  >
-                    <img
-                      src={step.spreadImage}
-                      alt={step.title}
-                      style={{
-                        position: "absolute",
-                        right: 0,
-                        top: 0,
-                        width: "200%",
-                        height: "100%",
-                        objectFit: "cover",
-                        objectPosition: "right center",
-                        display: "block",
-                      }}
-                    />
-
-                    {/* Content Box Over the Right Half */}
-                    <div
-                      style={{
-                        position: "absolute",
-                        bottom: "32px",
-                        left: "24px",
-                        right: "24px",
-                        backgroundColor: "rgba(15, 23, 42, 0.75)",
+                        bottom: "16px",
+                        left: "16px",
+                        right: "16px",
+                        backgroundColor: "rgba(15, 23, 42, 0.85)",
                         backdropFilter: "blur(12px)",
                         WebkitBackdropFilter: "blur(12px)",
-                        padding: "24px",
+                        padding: "16px",
                         borderRadius: "12px",
                         border: "1px solid rgba(255, 255, 255, 0.15)",
                         color: "#ffffff",
@@ -291,9 +267,9 @@ export default function StPageFlipBook() {
                     >
                       <h2
                         style={{
-                          fontSize: "22px",
+                          fontSize: "18px",
                           fontWeight: 700,
-                          margin: "0 0 10px 0",
+                          margin: "0 0 6px 0",
                           lineHeight: "1.3",
                           fontFamily: "Figtree, Figtree Fallback",
                           color: "#ffffff",
@@ -303,9 +279,9 @@ export default function StPageFlipBook() {
                       </h2>
                       <p
                         style={{
-                          fontSize: "15px",
+                          fontSize: "13px",
                           fontFamily: "Figtree, Figtree Fallback",
-                          lineHeight: "1.6",
+                          lineHeight: "1.5",
                           color: "#e2e8f0",
                           margin: 0,
                         }}
@@ -313,71 +289,185 @@ export default function StPageFlipBook() {
                         {step.description}
                       </p>
                     </div>
-
+                  </div>
+                ) : (
+                  // ================= DESKTOP SPREAD PAGES =================
+                  <React.Fragment key={`desktop-spread-${idx}`}>
+                    {/* LEFT PAGE */}
                     <div
+                      className="page-leaf"
+                      style={{
+                        backgroundColor: "#000000",
+                        position: "relative",
+                        overflow: "hidden",
+                        borderRadius: "16px 0 0 16px",
+                        boxSizing: "border-box",
+                      }}
+                    >
+                      <img
+                        src={step.spreadImage}
+                        alt={step.title}
+                        style={{
+                          position: "absolute",
+                          left: 0,
+                          top: 0,
+                          width: "200%",
+                          height: "100%",
+                          objectFit: "cover",
+                          objectPosition: "left center",
+                          display: "block",
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: 0,
+                          right: 0,
+                          bottom: 0,
+                          width: "35px",
+                          background:
+                            "linear-gradient(to left, rgba(0,0,0,0.4), transparent)",
+                          pointerEvents: "none",
+                        }}
+                      />
+                    </div>
+
+                    {/* RIGHT PAGE */}
+                    <div
+                      className="page-leaf"
+                      style={{
+                        backgroundColor: "#000000",
+                        position: "relative",
+                        overflow: "hidden",
+                        borderRadius: "0 16px 16px 0",
+                        boxSizing: "border-box",
+                      }}
+                    >
+                      <img
+                        src={step.spreadImage}
+                        alt={step.title}
+                        style={{
+                          position: "absolute",
+                          right: 0,
+                          top: 0,
+                          width: "200%",
+                          height: "100%",
+                          objectFit: "cover",
+                          objectPosition: "right center",
+                          display: "block",
+                        }}
+                      />
+
+                      {/* Content Box Over the Right Half */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          bottom: "32px",
+                          left: "24px",
+                          right: "24px",
+                          backgroundColor: "rgba(15, 23, 42, 0.75)",
+                          backdropFilter: "blur(12px)",
+                          WebkitBackdropFilter: "blur(12px)",
+                          padding: "24px",
+                          borderRadius: "12px",
+                          border: "1px solid rgba(255, 255, 255, 0.15)",
+                          color: "#ffffff",
+                          boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.35)",
+                          zIndex: 3,
+                        }}
+                      >
+                        <h2
+                          style={{
+                            fontSize: "22px",
+                            fontWeight: 700,
+                            margin: "0 0 10px 0",
+                            lineHeight: "1.3",
+                            fontFamily: "Figtree, Figtree Fallback",
+                            color: "#ffffff",
+                          }}
+                        >
+                          {step.title}
+                        </h2>
+                        <p
+                          style={{
+                            fontSize: "15px",
+                            fontFamily: "Figtree, Figtree Fallback",
+                            lineHeight: "1.6",
+                            color: "#e2e8f0",
+                            margin: 0,
+                          }}
+                        >
+                          {step.description}
+                        </p>
+                      </div>
+
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          bottom: 0,
+                          width: "35px",
+                          background:
+                            "linear-gradient(to right, rgba(0,0,0,0.4), transparent)",
+                          pointerEvents: "none",
+                        }}
+                      />
+                    </div>
+                  </React.Fragment>
+                )
+              )}
+            </div>
+
+            {/* RIGHT STACKED PAGES (Desktop Only) */}
+            {!isMobile && (
+              <div
+                style={{
+                  position: "absolute",
+                  right: 0,
+                  top: 0,
+                  bottom: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  pointerEvents: "none",
+                  zIndex: 0,
+                }}
+              >
+                {bookSteps.map((step, idx) => {
+                  if (idx <= currentPage) return null;
+                  const offset = (idx - currentPage) * 12;
+                  return (
+                    <div
+                      key={`right-stack-${idx}`}
                       style={{
                         position: "absolute",
-                        top: 0,
-                        left: 0,
-                        bottom: 0,
-                        width: "35px",
-                        background:
-                          "linear-gradient(to right, rgba(0,0,0,0.4), transparent)",
-                        pointerEvents: "none",
+                        left: `calc(100% + ${offset}px)`,
+                        width: "50px",
+                        height: "500px",
+                        borderRadius: "0 16px 16px 0",
+                        overflow: "hidden",
+                        boxShadow: "6px 0 12px rgba(0,0,0,0.3)",
+                        transform: `scale(${1 - (idx - currentPage) * 0.02})`,
+                        transformOrigin: "left center",
+                        transition: "all 500ms cubic-bezier(0.4, 0, 0.2, 1)",
                       }}
-                    />
-                  </div>
-                </React.Fragment>
-              ))}
-            </div>
-
-            {/* RIGHT STACKED PAGES */}
-            <div
-              style={{
-                position: "absolute",
-                right: 0,
-                top: 0,
-                bottom: 0,
-                display: "flex",
-                alignItems: "center",
-                pointerEvents: "none",
-                zIndex: 0,
-              }}
-            >
-              {bookSteps.map((step, idx) => {
-                if (idx <= currentPage) return null;
-                const offset = (idx - currentPage) * 12;
-                return (
-                  <div
-                    key={`right-stack-${idx}`}
-                    style={{
-                      position: "absolute",
-                      left: `calc(100% + ${offset}px)`,
-                      width: "50px",
-                      height: "500px",
-                      borderRadius: "0 16px 16px 0",
-                      overflow: "hidden",
-                      boxShadow: "6px 0 12px rgba(0,0,0,0.3)",
-                      transform: `scale(${1 - (idx - currentPage) * 0.02})`,
-                      transformOrigin: "left center",
-                      transition: "all 500ms cubic-bezier(0.4, 0, 0.2, 1)",
-                    }}
-                  >
-                    <img
-                      src={step.spreadImage}
-                      alt="Upcoming Page Stack"
-                      style={{
-                        width: "550px",
-                        height: "100%",
-                        objectFit: "cover",
-                        objectPosition: "right center",
-                        filter: "brightness(0.6)",
-                      }}
-                    />
-                  </div>
-                );
-              })}
-            </div>
+                    >
+                      <img
+                        src={step.spreadImage}
+                        alt="Upcoming Page Stack"
+                        style={{
+                          width: "550px",
+                          height: "100%",
+                          objectFit: "cover",
+                          objectPosition: "right center",
+                          filter: "brightness(0.6)",
+                        }}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           {/* PAGINATION */}

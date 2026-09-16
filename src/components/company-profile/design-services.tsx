@@ -41,7 +41,7 @@ export default function Hero() {
 
     return (
         <section
-            className="px-about-6-area pt-50 pb-80 pb-lg-110 overflow-hidden"
+            className="px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden"
             style={{ backgroundColor: "#ffffff" }}
         >
             <div className="container container-1550">
@@ -125,7 +125,7 @@ export default function Hero() {
                             </div>
                         </div>
 
-                        <p className="text-figtree text-black mt-30" style={{ fontSize: "16px" }}>
+                        <p className="text-figtree text-black mt-10" style={{ fontSize: "16px" }}>
                             Whether you need a single marketing creative or a complete set of business collateral, our graphic designers in Chennai can create designs that align with your brand identity.
                         </p>
                     </div>
@@ -138,7 +138,7 @@ export default function Hero() {
 // Inline Styles
 const heroWrapperStyle: React.CSSProperties = {
     width: "100%",
-    padding: "10px 0 40px 0",
+  
     boxSizing: "border-box",
 };
 
