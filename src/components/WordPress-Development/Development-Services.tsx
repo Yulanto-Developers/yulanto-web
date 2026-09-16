@@ -67,7 +67,7 @@ export function WordPressServicesGrid() {
   }, []);
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" >
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" >
       <div className="container container-1550">
         <div className="row align-items-center">
           <div className="col-xl-12">

@@ -24,7 +24,7 @@ export function FocusSection() {
   }, []);
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110 overflow-hidden" style={{ backgroundColor: "#ffffff" }}>
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden" style={{ backgroundColor: "#ffffff" }}>
       <div className="container container-1550">
         <div className="row align-items-center">
           <div className="col-xl-12">
@@ -39,7 +39,7 @@ export function FocusSection() {
           </div>
         </div>
 
-        <h5>
+        <h5 className="mt-4 mb-4">
           As a WordPress web design company in Chennai, we create websites with a strong focus on:
         </h5>
 
@@ -47,15 +47,15 @@ export function FocusSection() {
           {/* Left Side: Detailed WordPress Interface Mockup */}
           <div className="col-lg-6" data-aos="fade-right">
             <div 
-              className="position-relative rounded-4 p-4 d-flex align-items-center justify-content-center" 
-              style={{ minHeight: "480px" }}
+              className="position-relative rounded-4 p-2 p-md-4 d-flex align-items-center justify-content-center overflow-hidden" 
+              style={{ minHeight: "420px" }}
             >
               {/* Floating WordPress Top Logo Badge */}
               <div 
                 className="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center shadow"
                 style={{
-                  width: "70px",
-                  height: "70px",
+                  width: "60px",
+                  height: "60px",
                   top: "0px",
                   left: "50%",
                   transform: "translateX(-50%)",
@@ -66,13 +66,13 @@ export function FocusSection() {
                 <img 
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" 
                   alt="WordPress Logo" 
-                  style={{ width: "42px", height: "42px" }}
+                  style={{ width: "36px", height: "36px" }}
                 />
               </div>
 
               {/* Full Detailed WordPress Web Browser Frame */}
               <div 
-                className="w-100 bg-white rounded-3 shadow-lg overflow-hidden mt-4"
+                className="w-100 bg-white rounded-3 shadow-lg overflow-hidden mt-3"
                 style={{
                   zIndex: 1,
                   border: "1px solid #e2e8f0",
@@ -80,97 +80,83 @@ export function FocusSection() {
               >
                 {/* Browser Header Bar */}
                 <div 
-                  className="d-flex align-items-center justify-content-between px-3 py-2"
+                  className="d-flex align-items-center justify-content-between px-2 px-md-3 py-2"
                   style={{ backgroundColor: "#1e293b" }}
                 >
-                  <div className="d-flex align-items-center gap-2">
-                    <span className="rounded-circle bg-danger opacity-75" style={{ width: "10px", height: "10px" }} />
-                    <span className="rounded-circle bg-warning opacity-75" style={{ width: "10px", height: "10px" }} />
-                    <span className="rounded-circle bg-success opacity-75" style={{ width: "10px", height: "10px" }} />
+                  <div className="d-flex align-items-center gap-1 gap-md-2">
+                    <span className="rounded-circle bg-danger opacity-75" style={{ width: "8px", height: "8px" }} />
+                    <span className="rounded-circle bg-warning opacity-75" style={{ width: "8px", height: "8px" }} />
+                    <span className="rounded-circle bg-success opacity-75" style={{ width: "8px", height: "8px" }} />
                   </div>
-                  <div className="px-3 py-1 bg-dark rounded text-light opacity-75 font-monospace" style={{ fontSize: "10px" }}>
+                  <div className="px-2 py-1 bg-dark rounded text-light opacity-75 font-monospace text-truncate" style={{ fontSize: "9px", maxWidth: "180px" }}>
                     https://yourdomain.com/wp-admin
                   </div>
-                  <div style={{ width: "30px" }} />
+                  <div style={{ width: "20px" }} />
                 </div>
 
                 {/* Top WordPress Admin Toolbar */}
                 <div 
-                  className="d-flex align-items-center justify-content-between px-3 py-1 border-bottom"
-                  style={{ backgroundColor: "#1d2327", color: "#f0f0f1", fontSize: "11px" }}
+                  className="d-flex align-items-center justify-content-between px-2 px-md-3 py-1 border-bottom overflow-x-auto"
+                  style={{ backgroundColor: "#1d2327", color: "#f0f0f1", fontSize: "10px", whiteSpace: "nowrap" }}
                 >
-                  <div className="d-flex align-items-center gap-3">
+                  <div className="d-flex align-items-center gap-2">
                     <span>w</span>
-                    <span>🏠 My WordPress Site</span>
+                    <span className="d-none d-sm-inline">🏠 My WordPress Site</span>
                     <span className="text-success">♻️ 3 Updates</span>
                   </div>
-                  <div className="d-flex align-items-center gap-2">
+                  <div className="d-flex align-items-center gap-1">
                     <span>Howdy, Admin</span>
-                    <span className="rounded-circle bg-secondary d-inline-block" style={{ width: "16px", height: "16px" }} />
+                    <span className="rounded-circle bg-secondary d-inline-block" style={{ width: "14px", height: "14px" }} />
                   </div>
                 </div>
 
                 {/* Dashboard Layout: Sidebar + Main Content Grid */}
-                <div className="d-flex" style={{ minHeight: "340px" }}>
+                <div className="d-flex" style={{ minHeight: "320px" }}>
                   {/* Left Sidebar Menu */}
                   <div 
-                    className="text-white p-2"
+                    className="text-white p-1 p-md-2 d-none d-sm-block"
                     style={{
                       backgroundColor: "#1d2327",
-                      width: "150px",
-                      fontSize: "12px",
+                      width: "120px",
+                      fontSize: "11px",
                       fontFamily: "sans-serif",
                       flexShrink: 0,
                     }}
                   >
-                    <div className="py-2 px-2 mb-1 d-flex align-items-center gap-2 opacity-75">
-                      <span>⚙️</span> Dashboard
-                    </div>
-                    <div className="py-2 px-2 mb-1 d-flex align-items-center gap-2 opacity-75">
-                      <span>📌</span> Posts
-                    </div>
-                    <div className="py-2 px-2 mb-1 d-flex align-items-center gap-2 opacity-75">
-                      <span>🖼️</span> Media
-                    </div>
+                    <div className="py-1 px-1 mb-1 d-flex align-items-center gap-1 opacity-75"><span>⚙️</span> Dashboard</div>
+                    <div className="py-1 px-1 mb-1 d-flex align-items-center gap-1 opacity-75"><span>📌</span> Posts</div>
+                    <div className="py-1 px-1 mb-1 d-flex align-items-center gap-1 opacity-75"><span>🖼️</span> Media</div>
                     <div 
-                      className="py-2 px-2 mb-1 rounded d-flex align-items-center justify-content-between font-weight-bold"
+                      className="py-1 px-1 mb-1 rounded d-flex align-items-center justify-content-between fw-bold"
                       style={{ backgroundColor: "#2271b1" }}
                     >
                       <span>📄 Pages</span>
-                      <span style={{ fontSize: "9px" }}>◀</span>
+                      <span style={{ fontSize: "8px" }}>◀</span>
                     </div>
-                    <div className="py-2 px-2 mb-1 d-flex align-items-center gap-2 opacity-75">
-                      <span>💬</span> Comments
-                    </div>
-                    <div className="py-2 px-2 mb-1 d-flex align-items-center gap-2 opacity-75">
-                      <span>🎨</span> Appearance
-                    </div>
-                    <div className="py-2 px-2 mb-1 d-flex align-items-center gap-2 opacity-75">
-                      <span>🔌</span> Plugins
-                    </div>
-                    <div className="py-2 px-2 opacity-75 d-flex align-items-center gap-2">
-                      <span>🛠️</span> Tools
-                    </div>
+                    <div className="py-1 px-1 mb-1 d-flex align-items-center gap-1 opacity-75"><span>💬</span> Comments</div>
+                    <div className="py-1 px-1 mb-1 d-flex align-items-center gap-1 opacity-75"><span>🎨</span> Appearance</div>
+                    <div className="py-1 px-1 mb-1 d-flex align-items-center gap-1 opacity-75"><span>🔌</span> Plugins</div>
+                    <div className="py-1 px-1 opacity-75 d-flex align-items-center gap-1"><span>🛠️</span> Tools</div>
                   </div>
 
                   {/* Main Detailed Grid View */}
-                  <div className="p-3 bg-light w-100">
+                  <div className="p-2 p-md-3 bg-light w-100 overflow-hidden">
                     {/* Header Action Bar */}
-                    <div className="d-flex justify-content-between align-items-center mb-3">
-                      <h6 className="m-0 text-dark fw-bold" style={{ fontSize: "14px" }}>Pages List</h6>
-                      <button className="btn btn-sm btn-primary py-0 px-2" style={{ fontSize: "11px", backgroundColor: "#2271b1" }}>
-                        + Add New Page
+                    <div className="d-flex justify-content-between align-items-center mb-2">
+                      <h6 className="m-0 text-dark fw-bold" style={{ fontSize: "12px" }}>Pages List</h6>
+                      <button className="btn btn-sm btn-primary py-0 px-2" style={{ fontSize: "10px", backgroundColor: "#2271b1" }}>
+                        + Add New
                       </button>
                     </div>
 
                     {/* Media Preview Row */}
-                    <div className="row g-2 mb-3">
+                    <div className="row g-1 g-md-2 mb-2">
                       <div className="col-6">
                         <img 
                           src="/assets/img/WordPress-Development/Professional-WordPress-1.jpg" 
                           alt="WordPress Design Media" 
                           className="img-fluid rounded border shadow-sm" 
-                          style={{ height: "110px", objectFit: "cover", width: "100%" }}
+                          style={{ height: "85px", objectFit: "cover", width: "100%" }}
                         />
                       </div>
                       <div className="col-6">
@@ -178,39 +164,39 @@ export function FocusSection() {
                           src="/assets/img/WordPress-Development/Professional-WordPress-2.jpg" 
                           alt="WordPress Design Team" 
                           className="img-fluid rounded border shadow-sm" 
-                          style={{ height: "110px", objectFit: "cover", width: "100%" }}
+                          style={{ height: "85px", objectFit: "cover", width: "100%" }}
                         />
                       </div>
                     </div>
 
                     {/* Content Table Lines Mockup */}
                     <div className="bg-white rounded p-2 border shadow-sm mb-2">
-                      <div className="d-flex align-items-center justify-content-between mb-2 border-bottom pb-1">
-                        <div className="bg-primary opacity-50 rounded" style={{ height: "8px", width: "45%" }} />
-                        <span className="badge bg-success-subtle text-success border border-success" style={{ fontSize: "9px" }}>Published</span>
+                      <div className="d-flex align-items-center justify-content-between mb-1 border-bottom pb-1">
+                        <div className="bg-primary opacity-50 rounded" style={{ height: "6px", width: "45%" }} />
+                        <span className="badge bg-success-subtle text-success border border-success" style={{ fontSize: "8px", padding: "1px 4px" }}>Published</span>
                       </div>
-                      <div className="d-flex align-items-center justify-content-between mb-2 border-bottom pb-1">
-                        <div className="bg-secondary opacity-25 rounded" style={{ height: "8px", width: "60%" }} />
-                        <span className="badge bg-success-subtle text-success border border-success" style={{ fontSize: "9px" }}>Published</span>
+                      <div className="d-flex align-items-center justify-content-between mb-1 border-bottom pb-1">
+                        <div className="bg-secondary opacity-25 rounded" style={{ height: "6px", width: "60%" }} />
+                        <span className="badge bg-success-subtle text-success border border-success" style={{ fontSize: "8px", padding: "1px 4px" }}>Published</span>
                       </div>
                       <div className="d-flex align-items-center justify-content-between">
-                        <div className="bg-secondary opacity-25 rounded" style={{ height: "8px", width: "35%" }} />
-                        <span className="badge bg-warning-subtle text-warning border border-warning" style={{ fontSize: "9px" }}>Draft</span>
+                        <div className="bg-secondary opacity-25 rounded" style={{ height: "6px", width: "35%" }} />
+                        <span className="badge bg-warning-subtle text-warning border border-warning" style={{ fontSize: "8px", padding: "1px 4px" }}>Draft</span>
                       </div>
                     </div>
 
                     {/* Performance Widget Row */}
-                    <div className="row g-2">
+                    <div className="row g-1 g-md-2">
                       <div className="col-6">
-                        <div className="bg-white rounded p-2 border shadow-sm">
-                          <span className="text-muted d-block" style={{ fontSize: "9px" }}>Page Speed</span>
-                          <span className="fw-bold text-success" style={{ fontSize: "12px" }}>98 / 100 ⚡</span>
+                        <div className="bg-white rounded p-1.5 p-md-2 border shadow-sm">
+                          <span className="text-muted d-block" style={{ fontSize: "8px" }}>Page Speed</span>
+                          <span className="fw-bold text-success" style={{ fontSize: "11px" }}>98 / 100 ⚡</span>
                         </div>
                       </div>
                       <div className="col-6">
-                        <div className="bg-white rounded p-2 border shadow-sm">
-                          <span className="text-muted d-block" style={{ fontSize: "9px" }}>SEO Score</span>
-                          <span className="fw-bold text-primary" style={{ fontSize: "12px" }}>Optimized 🎯</span>
+                        <div className="bg-white rounded p-1.5 p-md-2 border shadow-sm">
+                          <span className="text-muted d-block" style={{ fontSize: "8px" }}>SEO Score</span>
+                          <span className="fw-bold text-primary" style={{ fontSize: "11px" }}>Optimized 🎯</span>
                         </div>
                       </div>
                     </div>
@@ -226,11 +212,11 @@ export function FocusSection() {
           <div className="col-lg-6" data-aos="fade-left">
             <div className="ps-lg-4">
               {/* Bulleted Points */}
-              <div className="row g-3 my-3">
+              <div className="row g-3 my-2">
                 {focusPoints.map((point, idx) => (
                   <div key={idx} className="col-md-6 d-flex align-items-start gap-2">
                     <CheckCircle2 size={18} style={{ color: "#53ae7d", flexShrink: 0, marginTop: "3px" }} />
-                    <span className="text-dark" style={{ fontSize: "20px", fontFamily: "Figtree, Figtree Fallback" }}>
+                    <span className="text-dark" style={{ fontSize: "16px", md: { fontSize: "20px" }, fontFamily: "Figtree, Figtree Fallback" }}>
                       {point}
                     </span>
                   </div>

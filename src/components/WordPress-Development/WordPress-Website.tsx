@@ -2,8 +2,9 @@
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
-
+import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 export const Header: React.FC = () => {
+    const { openModal } = useQuoteModal();
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -29,8 +30,8 @@ export const Header: React.FC = () => {
 
   return (
     <motion.section
-      className="px-about-6-area pt-50 pb-80 pb-lg-110"
-      style={{ overflow: "hidden" }}
+      className="px-about-6-area pt-40 pb-40 pb-lg-110"
+      style={{ overflow: "hidden",  backgroundColor: "#ffffff",}}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -70,7 +71,7 @@ export const Header: React.FC = () => {
               <p
                 className="text-figtree text-black mt-2"
                 style={{
-                  fontSize: "15px !important",
+                  fontSize: "20px !important",
                   color: "#053456",
                   lineHeight: "1.8",
                   margin: "0 0 16px 0",
@@ -84,7 +85,7 @@ export const Header: React.FC = () => {
               <p
                 className="text-figtree text-black mt-2"
                 style={{
-                  fontSize: "15px !important",
+                  fontSize: "20px !important",
                   color: "#053456",
                   lineHeight: "1.8",
                   margin: 0,
@@ -110,7 +111,7 @@ export const Header: React.FC = () => {
                 boxShadow: "0 12px 30px rgba(5, 52, 86, 0.15)",
                 display: "flex",
                 flexDirection: "column",
-                gap: "20px",
+                gap: "10px",
               }}
             >
               <p
@@ -141,33 +142,29 @@ export const Header: React.FC = () => {
 
               {/* Let's Talk Button */}
               <div style={{ marginTop: "10px" }}>
-                <a
-                  href="#contact"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "14px 32px",
-                    backgroundColor: "#53ae7d",
-                    color: "#ffffff",
-                    fontSize: "15px",
-                    fontWeight: 700,
-                    borderRadius: "50px",
-                    textDecoration: "none",
-                    transition: "all 0.3s ease",
-                    cursor: "pointer",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = "#43966a";
-                    e.currentTarget.style.transform = "translateY(-2px)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "#53ae7d";
-                    e.currentTarget.style.transform = "translateY(0)";
-                  }}
-                >
-                  Let's Talk
-                </a>
+               
+                 <button
+             onClick={openModal}
+              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+              style={{
+                backgroundColor: '#53ae7d',
+                color: '#ffffff',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                border: '1px solid #53ae7d',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#53ae7d';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#53ae7d';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Let's Talk our Team</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+            </button>
               </div>
             </motion.div>
           </div>

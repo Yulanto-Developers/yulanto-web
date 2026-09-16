@@ -83,8 +83,9 @@ export default function Page() {
       <Why />
       <Benifits />
       <Faq data={wordpressFaqData} />
+        <DevlopmentCompany />
       <Website />
-      <DevlopmentCompany />
+    
     </main>
   );
 }

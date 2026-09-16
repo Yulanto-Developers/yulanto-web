@@ -1,9 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "motion/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-// Added leading slashes to prevent relative route breaking in Next.js/React
+// Sample WordPress website design mockup/thumbnail images
 const graphicDesignImages = [
   "/assets/img/WordPress-Development/top-1.jpg",
   "/assets/img/WordPress-Development/top-2.jpg",
@@ -19,56 +21,66 @@ const graphicDesignImages = [
 ];
 
 export default function GraphicDesignSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110"   >
-     
- 
-  
-      <div
-        className="container container-1550"
-       
-      >
-         {/* Top Title Row */}
-                <div className="row align-items-center" data-aos="fade-up">
-                    <div className="col-xl-3">
-                        <span className="tp-section-subtitle text-black blink-ball">
-                           WordPress Website Design & Development Company in Chennai
-                        </span>
-                    </div>
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden">
+      <div className="container container-1550">
+        
+        {/* Top Title Row with AOS Animation */}
+        <div className="row align-items-center" data-aos="fade-up">
+          <div className="col-xl-3 mb-3 mb-xl-0">
+            <span className="tp-section-subtitle text-black blink-ball">
+              WordPress Website Design & Development Company in Chennai
+            </span>
+          </div>
 
-                    <div className="col-xl-9">
-                        <div className="px-project-title-box">
-                            <h4 className="px-about-title mb-20">
-                                <span className="text-blue-about">Build a Powerful Website with </span>Expert WordPress Development 
-                            </h4>
-                            <p className="text-figtree text-black mt-2">
-                            Looking for a reliable WordPress website development company in Chennai? Yulanto Web Creations helps businesses build professional, responsive, and SEO-friendly WordPress websites that support long-term online growth.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          <div className="col-xl-9">
+            <div className="px-project-title-box">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">Build a Powerful Website with </span>Expert WordPress Development 
+              </h4>
+              <p className="text-figtree text-black mt-2">
+                Looking for a reliable WordPress website development company in Chennai? Yulanto Web Creations helps businesses build professional, responsive, and SEO-friendly WordPress websites that support long-term online growth.
+              </p>
+            </div>
+          </div>
+        </div>
 
-        {/* 3D Marquee Container */}
+        {/* 3D Vertical Marquee Container */}
         <div
+          data-aos="fade-up"
+          data-aos-delay="200"
           style={{
             marginTop: "30px",
-          
-         
             padding: "8px",
-           
           }}
         >
           <ThreeDMarquee images={graphicDesignImages} />
         </div>
-         <p className="text-figtree text-black mt-2" >From a simple business website to a feature-rich corporate portal or eCommerce store, our WordPress website design and development services are tailored to your business goals. We combine modern UI/UX, responsive design, performance optimization, and easy content management to create websites that look professional and work smoothly across devices.
 
-Whether you need a new WordPress website, redesign an existing website, or require ongoing WordPress support, our experienced team can help.</p>
+        {/* Bottom Description Paragraph */}
+        <div data-aos="fade-up" data-aos-delay="300">
+          <p className="text-figtree text-black mt-4">
+            From a simple business website to a feature-rich corporate portal or eCommerce store, our WordPress website design and development services are tailored to your business goals. We combine modern UI/UX, responsive design, performance optimization, and easy content management to create websites that look professional and work smoothly across devices.
+                        Whether you need a new WordPress website, redesign an existing website, or require ongoing WordPress support, our experienced team can help.
+
+          </p>
+        
+        </div>
+
       </div>
     </section>
   );
 }
 
-/* --- Fixed 3D Marquee Component --- */
+/* --- Fixed Vertical Marquee Component with Balanced Column Speeds --- */
 
 const ThreeDMarquee = ({
   images,
@@ -77,12 +89,16 @@ const ThreeDMarquee = ({
   images: string[];
   className?: string;
 }) => {
-  // Split images into 4 columns
+  // Split images into 4 vertical columns cleanly and triple them for seamless continuous loop
   const chunkSize = Math.ceil(images.length / 4);
   const chunks = Array.from({ length: 4 }, (_, colIndex) => {
     const start = colIndex * chunkSize;
-    return images.slice(start, start + chunkSize);
+    const slice = images.slice(start, start + chunkSize);
+    return [...slice, ...slice, ...slice]; 
   });
+
+  // Balanced durations for each column so they scroll smoothly and consistently without lag
+  const columnDurations = [20, 22, 21, 20];
 
   return (
     <div
@@ -90,7 +106,7 @@ const ThreeDMarquee = ({
       style={{
         margin: "0 auto",
         display: "block",
-        height: "550px",
+        height: "520px",
         overflow: "hidden",
         borderRadius: "16px",
         position: "relative",
@@ -112,22 +128,27 @@ const ThreeDMarquee = ({
             top: "50%",
             left: "50%",
             transform:
-              "translate(-50%, -50%) rotateX(45deg) rotateY(0deg) rotateZ(-35deg) scale(0.85)",
+              "translate(-50%, -50%) rotateX(15deg) rotateY(0deg) rotateZ(-10deg) scale(0.92)",
             transformStyle: "preserve-3d",
+            width: "100%",
+            maxWidth: "1150px",
           }}
         >
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(4, 260px)",
-              gap: "24px",
+              gridTemplateColumns: "repeat(4, minmax(200px, 1fr))",
+              gap: "20px",
+              padding: "0 15px",
             }}
           >
             {chunks.map((subarray, colIndex) => (
               <motion.div
-                animate={{ y: colIndex % 2 === 0 ? [0, -250, 0] : [-250, 0, -250] }}
+                animate={{
+                  y: colIndex % 2 === 0 ? ["0%", "-33.33%"] : ["-33.33%", "0%"],
+                }}
                 transition={{
-                  duration: colIndex % 2 === 0 ? 18 : 22,
+                  duration: columnDurations[colIndex],
                   repeat: Infinity,
                   ease: "linear",
                 }}
@@ -135,24 +156,24 @@ const ThreeDMarquee = ({
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "24px",
+                  gap: "20px",
                 }}
               >
-                <GridLineVertical offset="80px" style={{ left: "-12px" }} />
+                <GridLineVertical offset="80px" style={{ left: "-10px" }} />
                 {subarray.map((image, imageIndex) => (
                   <div
-                    key={imageIndex + image}
+                    key={imageIndex + image + colIndex}
                     style={{ position: "relative", width: "100%" }}
                   >
-                    <GridLineHorizontal offset="20px" style={{ top: "-12px" }} />
+                    <GridLineHorizontal offset="20px" style={{ top: "-10px" }} />
                     <motion.img
-                      whileHover={{ y: -10, scale: 1.03 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      whileHover={{ y: -6, scale: 1.02 }}
+                      transition={{ duration: 0.25, ease: "easeInOut" }}
                       src={image}
-                      alt={`Graphic Design Sample ${imageIndex + 1}`}
+                      alt={`WordPress Design Sample ${imageIndex + 1}`}
                       style={{
                         width: "100%",
-                        height: "180px",
+                        height: "175px",
                         borderRadius: "12px",
                         objectFit: "cover",
                         boxShadow: "0 10px 25px -5px rgba(0,0,0,0.15)",
@@ -165,11 +186,8 @@ const ThreeDMarquee = ({
               </motion.div>
             ))}
           </div>
-         
         </div>
-        
       </div>
-      
     </div>
   );
 };
@@ -189,7 +207,7 @@ const GridLineHorizontal = ({
         height: "1px",
         width: `calc(100% + ${offset || "200px"})`,
         backgroundImage:
-          "linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 50%, transparent 0, transparent)",
+          "linear-gradient(to right, rgba(0,0,0,0.12), rgba(0,0,0,0.12) 50%, transparent 0, transparent)",
         backgroundSize: "6px 1px",
         zIndex: 30,
         ...style,
@@ -213,7 +231,7 @@ const GridLineVertical = ({
         height: `calc(100% + ${offset || "150px"})`,
         width: "1px",
         backgroundImage:
-          "linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 50%, transparent 0, transparent)",
+          "linear-gradient(to bottom, rgba(0,0,0,0.12), rgba(0,0,0,0.12) 50%, transparent 0, transparent)",
         backgroundSize: "1px 6px",
         zIndex: 30,
         ...style,

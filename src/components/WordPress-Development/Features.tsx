@@ -57,7 +57,7 @@ export function WordPressFeaturesGrid() {
   }, []);
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ backgroundColor: "#ffffff" }}>
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ backgroundColor: "#ffffff" }}>
       <div className="container container-1550">
         
         <div className="row align-items-center">

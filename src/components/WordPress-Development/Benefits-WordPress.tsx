@@ -73,6 +73,8 @@ export default function WordpressBenefits() {
       id: 2,
       image:
         "/assets/img/WordPress-Development/Key-Benefits-2.jpg",
+      sideImage:
+        "/assets/img/WordPress-Development/Key-Benefits-3.jpg",
       mainFeatures: [
         {
           icon: DollarSign,
@@ -117,7 +119,7 @@ export default function WordpressBenefits() {
 
   return (
     <section
-      className="px-about-6-area pt-50 pb-80 pb-lg-110 py-5 bg-light"
+      className="px-about-6-area pt-40 pb-40 pb-lg-110 py-5 bg-light"
       aria-labelledby="wordpress-benefits-heading"
     >
       <div className="container container-1550">
@@ -133,7 +135,6 @@ export default function WordpressBenefits() {
             <span className="text-blue-about">Key Benefits of WordPress </span>
             Website Development
           </h2>
-      
         </div>
 
         {/* Feature Blocks (Alternating Layout) */}
@@ -144,7 +145,7 @@ export default function WordpressBenefits() {
             return (
               <div
                 key={section.id}
-                className="row align-items-center border-bottom pb-5 g-4"
+                className="row align-items-center  pb-30 g-4"
                 data-aos="fade-up"
                 data-aos-delay={idx * 150}
               >
@@ -191,7 +192,7 @@ export default function WordpressBenefits() {
                   </div>
                 </div>
 
-                {/* Side Metrics / Sub-features Block */}
+                {/* Side Metrics / Sub-features or Image Block */}
                 <div
                   className={`col-12 col-lg-5 ${
                     isReversed ? "order-lg-1" : ""
@@ -215,6 +216,22 @@ export default function WordpressBenefits() {
                         </div>
                       );
                     })}
+
+                    {section.sideImage && (
+                      <div className="mt-2">
+                        <Image
+                          src={section.sideImage}
+                          alt="WordPress Integration Illustration"
+                          width={500}
+                          height={280}
+                          className="img-fluid rounded-4 object-fit-cover shadow-sm border w-100"
+                          style={{
+                            maxHeight: "185px",
+                          }}
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -222,26 +239,42 @@ export default function WordpressBenefits() {
           })}
         </div>
 
-        {/* Industries Served Section */}
-        <div className="mt-5 pt-4 text-center" data-aos="fade-up">
-         <div className="row align-items-center">
-          <div className="col-xl-12">
-            <div className="px-project-title-box">
-              <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">WordPress Website Development for  </span>Different Businesses
-              </h4>
-              <p className="text-figtree text-black mt-2 font-paragraph-cls">
-              Our WordPress web development services in Chennai can be customized for different industries and business requirements, including:
-              </p>
+        {/* Industries Served Section with White Background & Card Hover Effects */}
+        <div className="mt-20 pt-5 pb-4 px-4 bg-white rounded-4 shadow-sm text-center" data-aos="fade-up">
+          <div className="row align-items-center mb-4">
+            <div className="col-xl-12">
+              <div className="px-project-title-box">
+                <h4 className="px-about-title mb-20 mt-20">
+                  <span className="text-blue-about">WordPress Website Development for </span>Different Businesses
+                </h4>
+                <p className="text-figtree text-black mt-2 font-paragraph-cls">
+                  Our WordPress web development services in Chennai can be customized for different industries and business requirements, including:
+                </p>
+              </div>
             </div>
           </div>
-        </div>
           <div className="row g-3 justify-content-center">
             {industries.map((ind, i) => {
               const IndIcon = ind.icon;
               return (
                 <div key={i} className="col-12 col-sm-6 col-md-4 col-lg-3">
-                  <div className="d-flex align-items-center gap-3 p-3 bg-white rounded-3 border shadow-sm h-100">
+                  <div 
+                    className="d-flex align-items-center gap-3 p-3 bg-white rounded-3 border shadow-sm h-100 transition-all duration-300"
+                    style={{
+                      transition: "all 0.3s ease-in-out",
+                      cursor: "pointer",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(-5px)";
+                      e.currentTarget.style.boxShadow = "0 10px 20px rgba(0,0,0,0.08)";
+                      e.currentTarget.style.borderColor = "rgba(var(--bs-primary-rgb, 13, 110, 253), 0.4)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow = "";
+                      e.currentTarget.style.borderColor = "";
+                    }}
+                  >
                     <div className="p-2 rounded bg-light text-blue-about">
                       <IndIcon size={20} />
                     </div>
