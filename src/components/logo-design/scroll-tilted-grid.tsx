@@ -10,9 +10,6 @@ import {
   cubicBezier,
 } from "framer-motion";
 
-/**
- * 16 unique default high-quality asset URLs.
- */
 export const DEFAULT_GRID_IMAGES: readonly string[] = [
   "assets/img/logodesign/logos/Design-portfolio-1.jpg",
   "https://images.unsplash.com/photo-1550585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
@@ -20,7 +17,6 @@ export const DEFAULT_GRID_IMAGES: readonly string[] = [
   "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop",
- 
 ];
 
 const easeIntoFocus = cubicBezier(0.22, 1, 0.36, 1);
@@ -38,6 +34,28 @@ type TileConfig = {
   maxBlur: number;
   rounded: string;
 };
+
+const mobileStyles = `
+  .scroll-tilted-grid-wrapper {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+  }
+  @media (max-width: 768px) {
+    .scroll-tilted-grid-container {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+    .scroll-tilted-figure,
+    .scroll-tilted-figure > div {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: 250px !important;
+      perspective: none !important;
+      transform: none !important;
+    }
+  }
+`;
 
 function Tile({
   src,
@@ -62,39 +80,24 @@ function Tile({
   const bright = useTransform(p, [0, 0.5, 1], [0.2, 1, 0.2], { ease: focusEase });
   const contrast = useTransform(p, [0, 0.5, 1], [2, 1, 2], { ease: focusEase });
 
-  const ty = useTransform(p, [0, 0.5, 1], ["40%", "0%", "-40%"], { ease: focusEase });
-  const tz = useTransform(p, [0, 0.5, 1], [150, 0, 150], { ease: focusEase });
+  const ty = useTransform(p, [0, 0.5, 1], ["30%", "0%", "-30%"], { ease: focusEase });
+  const tz = useTransform(p, [0, 0.5, 1], [100, 0, 100], { ease: focusEase });
   const rx = useTransform(p, [0, 0.5, 1], [maxTilt, 0, -maxTilt], { ease: focusEase });
 
-  const tx = useTransform(p, [0, 0.5, 1], [`${sign * 15}%`, "0%", `${sign * 15}%`], { ease: focusEase });
-  const rot = useTransform(p, [0, 0.5, 1], [-sign * 3, 0, sign * 3], { ease: focusEase });
-  const sk = useTransform(p, [0, 0.5, 1], [sign * 8, 0, -sign * 8], { ease: focusEase });
+  // Reduced horizontal shift range to completely prevent overflowing the viewport edge
+  const tx = useTransform(p, [0, 0.5, 1], [`${sign * 4}%`, "0%", `${sign * 4}%`], { ease: focusEase });
+  const rot = useTransform(p, [0, 0.5, 1], [-sign * 1.5, 0, sign * 1.5], { ease: focusEase });
+  const sk = useTransform(p, [0, 0.5, 1], [sign * 2, 0, -sign * 2], { ease: focusEase });
 
-  const innerSY = useTransform(p, [0, 0.5, 1], [1.3, 1, 1.3], { ease: focusEase });
+  const innerSY = useTransform(p, [0, 0.5, 1], [1.2, 1, 1.2], { ease: focusEase });
 
   const filter = useMotionTemplate`blur(${blur}px) brightness(${bright}) contrast(${contrast})`;
 
   if (reduce) {
     return (
-      <figure ref={ref} style={{ position: "relative", zIndex: 10, margin: 0, width: "270px", height: "270px" }}>
-        <div
-          style={{
-            position: "relative",
-            width: "550px",
-            height: "300px",
-            overflow: "hidden",
-            borderRadius: rounded,
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundImage: `url("${src}")`,
-            }}
-          />
+      <figure ref={ref} className="scroll-tilted-figure" style={{ position: "relative", zIndex: 10, margin: 0, width: "100%", height: "250px" }}>
+        <div style={{ position: "relative", width: "100%", height: "100%", overflow: "hidden", borderRadius: rounded, backgroundColor: "#ffffff" }}>
+          <div style={{ position: "absolute", inset: 0, backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundImage: `url("${src}")` }} />
         </div>
       </figure>
     );
@@ -103,12 +106,14 @@ function Tile({
   return (
     <motion.figure
       ref={ref}
+      className="scroll-tilted-figure"
       style={{
         position: "relative",
         zIndex: 10,
         margin: "0 auto",
-        width: "550px",
-        height: "300px",
+        width: "100%",
+        maxWidth: "550px",
+        height: "390px",
         perspective: `${perspective}px`,
         willChange: "transform",
       }}
@@ -116,11 +121,12 @@ function Tile({
       <motion.div
         style={{
           position: "relative",
-          width: "550px",
-          height: "300px",
+          width: "100%",
+          height: "390px",
           overflow: "hidden",
           willChange: "filter, transform",
           borderRadius: rounded,
+          backgroundColor: "#ffffff",
           filter,
           x: tx,
           y: ty,
@@ -135,6 +141,7 @@ function Tile({
             position: "absolute",
             inset: 0,
             backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundImage: `url("${src}")`,
             scaleY: innerSY,
@@ -169,7 +176,7 @@ export function ScrollTiltedGrid({
   maxTilt = 35,
   maxBlur = 4,
   rounded = "12px",
-  columns = 4,
+  columns = 2,
   style,
 }: ScrollTiltedGridProps = {}) {
   const [cycles, setCycles] = useState(loop ? initialCycles : 1);
@@ -216,15 +223,27 @@ export function ScrollTiltedGrid({
     gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
     gap,
     width: "100%",
+    maxWidth: "100%",
     justifyItems: "center",
     alignItems: "center",
     boxSizing: "border-box",
-    overflow: "hidden",
   };
 
   return (
-    <div style={{ position: "relative", width: "100%", ...style }}>
-      <div style={gridContainerStyle}>
+    <div 
+      className="scroll-tilted-grid-wrapper" 
+      style={{ 
+        position: "relative", 
+        width: "100%", 
+        maxWidth: "100%", 
+        overflowX: "hidden", 
+        overflowY: "visible",
+        boxSizing: "border-box",
+        ...style 
+      }}
+    >
+      <style>{mobileStyles}</style>
+      <div style={gridContainerStyle} className="scroll-tilted-grid-container">
         {items.map((src, i) => (
           <Tile
             key={`${i}-${src}`}

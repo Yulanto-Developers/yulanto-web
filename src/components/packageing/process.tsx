@@ -107,7 +107,7 @@ export function PackagingProcessSection() {
                   className={`d-flex align-items-center gap-4 ${
                     isEven ? "flex-row" : "flex-row-reverse"
                   }`}
-                  style={{ position: "relative", zIndex: 2 }}
+                  style={{ position: "relative", zIndex: 2,marginTop:"20px" }}
                 >
                   
                   {/* Text Details Box */}

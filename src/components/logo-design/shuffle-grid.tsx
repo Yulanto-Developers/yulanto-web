@@ -20,6 +20,10 @@ const squareData = [
   { id: 14, src: "assets/img/logodesign/logo-14.jpg" },
   { id: 15, src: "assets/img/logodesign/logo-15.jpg" },
   { id: 16, src: "assets/img/logodesign/logo-16.jpg" },
+   { id: 17, src: "assets/img/logodesign/logo-15.jpg" },
+  { id: 18, src: "assets/img/logodesign/logo-16.jpg" },
+   { id: 19, src: "assets/img/logodesign/logo-15.jpg" },
+  { id: 20, src: "assets/img/logodesign/logo-16.jpg" },
 ];
 
 const processSteps = [
@@ -131,7 +135,7 @@ const ShuffleGrid = () => {
 export const ShuffleHero = () => {
   return (
     <section
-      className="px-about-6-area pt-50 pb-80 pb-lg-110"
+      className="px-about-6-area pt-40 pb-40 pb-lg-110"
       style={{
         backgroundColor: "#ffffff",
       }}
@@ -150,16 +154,18 @@ export const ShuffleHero = () => {
                 <span className="text-blue-about">From Your Idea </span>
                 to a Professional Brand Identity
               </h4>
-              <p className="text-figtree text-black mt-2">
-                We follow a structured design process to ensure your logo represents your business effectively.
-              </p>
+             
             </div>
           </div>
         </div>
 
         {/* Content Section: Split into 6 and 6 */}
         <div className="row align-items-center g-4">
+          <p className="text-figtree text-black mt-2">
+                We follow a structured design process to ensure your logo represents your business effectively.
+              </p>
           <div className="col-lg-6 d-flex flex-column justify-content-center">
+             
             <ul
               style={{
                 listStyle: "none",

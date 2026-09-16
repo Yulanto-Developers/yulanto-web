@@ -60,7 +60,7 @@ const HeroSection = ({
 
   return (
     <section
-      className={`px-about-6-area pt-50 pb-80 pb-lg-110 ${className}`}
+      className={`px-about-6-area pt-40 pb-40 pb-lg-110 ${className}`}
       style={{
         width: "100%",
         overflow: "hidden",

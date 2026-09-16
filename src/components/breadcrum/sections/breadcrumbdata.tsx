@@ -100,7 +100,7 @@ const data = [
   },
   {
     path: "/web-design/startup-website-design",
-    title: "Startup Website Desgin",
+    title: "Startup Website Design",
     currentPage: "Startup Website Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
@@ -169,16 +169,16 @@ const data = [
   },
   {
     path: "/logo-design&branding",
-    title: " Logo Design & branding",
+    title: " Logo Design & Branding",
 
-    currentPage: "Logo Design & branding",
+    currentPage: "Logo Design & Branding",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
     path: "/company-profile-design",
     title: "Brochure & Company Profile Design",
 
-    currentPage: "Logo Design & branding",
+    currentPage: "Brochure & Company Profile Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {

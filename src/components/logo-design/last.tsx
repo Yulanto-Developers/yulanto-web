@@ -4,15 +4,11 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 
 // FontAwesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faStar,
-  faArrowRight,
-  faShieldHalved,
-  faAward,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 interface LogoBannerProps {
   imageSrc?: string;
@@ -26,6 +22,9 @@ export default function LogoDesignBanner({
   imageSrc = DEFAULT_IMAGE,
   onCtaClick,
 }: LogoBannerProps) {
+  // Hook properly called inside the component body
+  const { openModal } = useQuoteModal();
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -98,6 +97,35 @@ export default function LogoDesignBanner({
               <p className="text-figtree text-black mt-2">
                 Let's create a logo that makes your brand memorable.
               </p>
+
+              <button
+                onClick={() => {
+                  if (onCtaClick) onCtaClick();
+                  openModal();
+                }}
+                className="btn align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none mt-2"
+                style={{
+                  display: 'inline-flex', // Changed from d-inline-flex to wrap content tightly
+                  width: 'fit-content',   // Ensures it only takes up the space it needs
+                  backgroundColor: '#053456',
+                  color: '#ffffff',
+                  fontSize: '15px',
+                  transition: 'all 0.3s ease',
+                  border: '1px solid #053456',
+                  cursor: 'pointer',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#042844';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#053456';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Create Your Brand Logo</span>
+                <FontAwesomeIcon icon={faPaperPlane} style={{ fontSize: '14px' }} />
+              </button>
             </div>
           </div>
         </div>
@@ -106,7 +134,7 @@ export default function LogoDesignBanner({
   );
 }
 
-// Inline Styles (Pure CSS Objects - No Tailwind CSS Used)
+// Inline Styles (Pure CSS Objects)
 
 const sectionStyle: React.CSSProperties = {
   backgroundColor: "#ffffff",
@@ -150,62 +178,6 @@ const imageOverlayStyle: React.CSSProperties = {
   pointerEvents: "none",
 };
 
-const floatingBadgeTopStyle: React.CSSProperties = {
-  position: "absolute",
-  top: "24px",
-  left: "24px",
-  backgroundColor: "#ffffff",
-  padding: "12px 18px",
-  borderRadius: "14px",
-  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.12)",
-  display: "flex",
-  alignItems: "center",
-  gap: "12px",
-  zIndex: 10,
-  border: "1px solid rgba(83, 174, 125, 0.2)",
-};
-
-const floatingBadgeBottomStyle: React.CSSProperties = {
-  position: "absolute",
-  bottom: "24px",
-  right: "24px",
-  backgroundColor: "#ffffff",
-  padding: "12px 18px",
-  borderRadius: "14px",
-  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.12)",
-  display: "flex",
-  alignItems: "center",
-  gap: "12px",
-  zIndex: 10,
-  border: "1px solid rgba(83, 174, 125, 0.2)",
-};
-
-const badgeIconBoxStyle: React.CSSProperties = {
-  width: "36px",
-  height: "36px",
-  borderRadius: "50%",
-  backgroundColor: "#f0fdf4",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexShrink: 0,
-};
-
-const badgeTitleStyle: React.CSSProperties = {
-  margin: 0,
-  fontSize: "0.875rem",
-  fontWeight: 700,
-  color: "#053456",
-  lineHeight: 1.2,
-};
-
-const badgeSubtextStyle: React.CSSProperties = {
-  margin: "2px 0 0 0",
-  fontSize: "0.75rem",
-  color: "#64748b",
-  lineHeight: 1.2,
-};
-
 const textContentStyle: React.CSSProperties = {
   display: "flex",
   flexDirection: "column",
@@ -226,52 +198,4 @@ const highlightTextStyle: React.CSSProperties = {
   lineHeight: "1.5",
   margin: 0,
   fontFamily: "Figtree, Figtree Fallback",
-};
-
-const paragraphStyle: React.CSSProperties = {
-  fontSize: "1.0625rem",
-  lineHeight: "1.7",
-  color: "#334155",
-  margin: "0",
-  fontFamily: "Figtree, sans-serif",
-};
-
-const ctaWrapperStyle: React.CSSProperties = {
-  marginTop: "12px",
-  backgroundColor: "#f8fafc",
-  border: "1px solid #e2e8f0",
-  borderRadius: "16px",
-  padding: "20px 24px",
-};
-
-const ctaInnerStyle: React.CSSProperties = {
-  display: "flex",
-  flexWrap: "wrap",
-  alignItems: "center",
-  justifyContent: "space-between",
-  gap: "16px",
-};
-
-const ctaTextStyle: React.CSSProperties = {
-  fontSize: "1rem",
-  fontWeight: 600,
-  color: "#053456",
-  margin: 0,
-  fontFamily: "Figtree, sans-serif",
-};
-
-const ctaButtonStyle: React.CSSProperties = {
-  backgroundColor: "#53ae7d",
-  color: "#ffffff",
-  border: "none",
-  borderRadius: "10px",
-  padding: "12px 22px",
-  fontSize: "0.9375rem",
-  fontWeight: 600,
-  cursor: "pointer",
-  display: "flex",
-  alignItems: "center",
-  gap: "10px",
-  transition: "all 0.3s ease",
-  boxShadow: "0 4px 12px rgba(83, 174, 125, 0.3)",
 };
