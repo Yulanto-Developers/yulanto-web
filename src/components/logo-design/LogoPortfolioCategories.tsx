@@ -157,12 +157,11 @@ export const LogoPortfolioCategories = () => {
               className="collage-image-container"
             >
               <img
-                src="assets/img/logodesign/logos/multiple-logos-grid.jpg"
+                src="assets/img/logodesign/all-Logo-img.jpg"
                 alt="Multiple Logo Designs Showcase"
                 style={{
                   width: "100%",
                   height: "100%",
-                  objectFit: "cover",
                   transition: "transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)",
                 }}
                 className="collage-hover-img"

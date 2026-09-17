@@ -20,10 +20,10 @@ const squareData = [
   { id: 14, src: "assets/img/logodesign/logo-14.jpg" },
   { id: 15, src: "assets/img/logodesign/logo-15.jpg" },
   { id: 16, src: "assets/img/logodesign/logo-16.jpg" },
-   { id: 17, src: "assets/img/logodesign/logo-15.jpg" },
-  { id: 18, src: "assets/img/logodesign/logo-16.jpg" },
-   { id: 19, src: "assets/img/logodesign/logo-15.jpg" },
-  { id: 20, src: "assets/img/logodesign/logo-16.jpg" },
+   { id: 17, src: "assets/img/logodesign/logo-17.jpg" },
+  { id: 18, src: "assets/img/logodesign/logo-18.jpg" },
+   { id: 19, src: "assets/img/logodesign/logo-19.jpg" },
+  { id: 20, src: "assets/img/logodesign/logo-20.jpg" },
 ];
 
 const processSteps = [
