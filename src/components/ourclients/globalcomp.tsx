@@ -2,6 +2,7 @@
 
 import { useRef, useState, MouseEvent } from "react";
 import Link from "next/link";
+import "@/assets/css/style1.css";
 
 interface ClientFlag {
   code: string;
@@ -164,7 +165,7 @@ function FlagCard({ item }: FlagCardProps) {
           >
             <img
               src={item.flag}
-              alt={`${item.label} flag`}
+              alt={`Visit our ${item.label} clients page`}
               loading="lazy"
               style={{
                 width: 130,
@@ -226,6 +227,14 @@ export default function GlobalTrustDock() {
               </span>{" "}
               Across the World
             </h4>
+
+             <h1
+                  className="ft-23 mt-0 mb-2 text-start text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"
+                >
+                Trusted by Clients Worldwide for Website Design & Development
+                </h1>
 
             <p className="text-figtree text-black mt-2 font-paragraph-cls">
               We proudly partner with companies and

@@ -38,6 +38,7 @@ export default function SingaporeMalaysiaClientsPage() {
         heroTitleRest="Businesses in Singapore & Malaysia"
         heroDescription={`At Yulanto Web Creations, we provide comprehensive digital solutions to businesses across Singapore and Malaysia, helping startups, SMEs, established companies, and organizations build a strong digital presence and achieve sustainable growth.
 From professional website design and custom web development to e-commerce, digital marketing, SEO, graphic design, hosting, and ongoing website maintenance, our team delivers reliable, scalable, and cost-effective solutions tailored to your business requirements.`}
+heroH1="Web Design Firms for Singapore Companies"
         aboutImage={Image2}
         aboutTitleHighlight="Our Web Design Services for"
         aboutTitleRest="Singapore and Malaysia Businesses"

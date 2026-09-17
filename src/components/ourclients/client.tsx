@@ -3,6 +3,7 @@
 import React from "react";
 import { CardStack, CardStackItem } from "./cardstack";
 // import { log } from "console";
+import "./clientpage.css";
 
 // Fallback used only if a local client photo fails to load
 const FALLBACK_IMG =
@@ -179,7 +180,7 @@ function ClientCard(item: CardStackItem, { active }: { active: boolean }) {
           {item.title}
         </h4>
         {item.description ? (
-          <p style={{ margin: 0, fontSize: "13px", fontWeight: 500, lineHeight: 1.45, color: "rgba(255,255,255,0.8)" }}>
+          <p className="m-ps" style={{ margin: 0, fontSize: "13px", fontWeight: 500, lineHeight: 1.45, color: "rgba(255,255,255,0.8)" }}>
             {item.description}
           </p>
         ) : null}

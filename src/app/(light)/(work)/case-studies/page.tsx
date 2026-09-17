@@ -40,6 +40,7 @@ export default function PortfolioPage() {
 
     return (
         <>
+        
             <BreadcurmbData />
             <style>{`
         @keyframes fadeInText {
