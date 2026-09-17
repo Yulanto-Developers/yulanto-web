@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 interface FAQItem {
   id: number;
   question: string;
@@ -171,8 +172,8 @@ export default function WooCommerceFAQ(): React.ReactElement {
 
   return (
     <section 
-      className="px-faq-area pt-80 pb-100" 
-      style={{ overflowX: 'hidden', backgroundColor: '#ffff' }}
+    className="px-about-6-area pt-40 pb-40 pb-lg-110"
+      style={{ overflowX: 'hidden', overflowY: 'hidden', backgroundColor: '#ffff' }}
     >
       <div className="container container-1550">
         {/* Header Section */}

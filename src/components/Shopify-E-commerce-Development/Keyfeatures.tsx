@@ -63,14 +63,7 @@ const shopifyFeaturesData: FeatureItem[] = [
     rotation: '3deg',
     floatAnimation: 'floatSlow 4.4s ease-in-out infinite 0.4s'
   },
-  {
-    id: 7,
-    title: 'Scalable Ecommerce Platform',
-    desc: 'Shopify can support businesses from startups and small businesses to growing ecommerce brands and larger online stores.',
-    imageSrc: '/assets/img/Shopify E-commerce Development/Key-Shopify-Features-7.jpg',
-    rotation: '-3deg',
-    floatAnimation: 'floatSlow 4.6s ease-in-out infinite 0.9s'
-  }
+ 
 ];
 
 export const ShopifyKeyFeatures: React.FC = () => {
@@ -83,7 +76,7 @@ export const ShopifyKeyFeatures: React.FC = () => {
 
   return (
     <section
-      className="px-about-6-area pt-50 pb-80 pb-lg-110"
+      className="px-about-6-area pt-40 pb-40 pb-lg-110"
       style={{
         overflow: 'hidden',
         background: '#fff'

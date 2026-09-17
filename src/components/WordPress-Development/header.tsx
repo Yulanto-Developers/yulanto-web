@@ -216,7 +216,7 @@ export function FocusSection() {
                 {focusPoints.map((point, idx) => (
                   <div key={idx} className="col-md-6 d-flex align-items-start gap-2">
                     <CheckCircle2 size={18} style={{ color: "#53ae7d", flexShrink: 0, marginTop: "3px" }} />
-                    <span className="text-dark" style={{ fontSize: "16px", md: { fontSize: "20px" }, fontFamily: "Figtree, Figtree Fallback" }}>
+                    <span className="text-dark" style={{ fontSize: "16px", fontFamily: "Figtree, Figtree Fallback" }}>
                       {point}
                     </span>
                   </div>

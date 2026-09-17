@@ -28,7 +28,7 @@ export default function DemoPage() {
       className="px-about-6-area pt-40 pb-40 pb-lg-110" 
       style={{ position: "relative" }}
     >
-      <div style={{ width: "100%", overflowX: "hidden", position: "relative" }}>
+      <div style={{ width: "100%", overflowX: "hidden",  overflowY: "hidden",position: "relative" }}>
         <div className="container container-1550">
           {/* Title Section with AOS */}
           <div className="row align-items-center mb-5" data-aos="fade-up">

@@ -69,7 +69,7 @@ export const ShopifyFAQSection: React.FC = () => {
   };
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ background: '#fff' }}>
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ background: '#fff' }}>
       <style>{`
         .faq-accordion-card {
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

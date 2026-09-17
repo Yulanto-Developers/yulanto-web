@@ -32,7 +32,7 @@ export default function WhyChooseUsSection(): React.ReactElement {
 
   return (
     <section 
-      className="px-about-6-area pt-50 pb-80 pb-lg-110" 
+      className="px-about-6-area pt-40 pb-40 pb-lg-110" 
       style={{ overflowX: 'hidden' }}
     >
       <div className="container container-1550">
