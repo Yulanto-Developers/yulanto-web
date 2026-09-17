@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOnClickOutside } from "usehooks-ts";
-
+import "@/assets/css/style1.css";
 export interface Job {
   company: string;
   title: string;
@@ -67,10 +67,18 @@ export default function JobListingComponent({
           We're Hiring
         </span>
 
-        <h4 className="px-about-title mb-20 text-center">
+        <h4 className="px-about-title mb-10 text-center">
           <span className="text-blue-about">Join Our&nbsp;</span>
           Team
         </h4>
+
+        
+ <h1 className="ft-23 mt-0 mb-3 text-center text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"  style={{ lineHeight: "1.2" }}
+                >
+                Careers at Yulanto Web ceration
+                </h1>
       </div>
 
       {/* =========================

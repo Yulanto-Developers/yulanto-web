@@ -38,6 +38,7 @@ export default function USAClientsPage() {
       heroTitleHighlight="Digital Solutions for"
       heroTitleRest="Businesses Across the USA"
       heroDescription={`At Yulanto Web Creations, we help businesses across the USA build a strong, professional, and results-driven digital presence. From website design and custom web development to eCommerce, SEO, digital marketing, graphic design, hosting, and ongoing website maintenance, we provide complete digital solutions under one roof. Whether you are a startup, small business, professional service provider, growing company, or established enterprise, our team creates customized solutions designed around your business goals, target audience, and growth plans.`}
+      heroH1="Helping USA Companies Build Better Web Design & Development"
       aboutImage={Image2}
       aboutTitleHighlight="Our Web Design Services"
       aboutTitleRest="for USA Businesses"

@@ -1,16 +1,11 @@
 "use client";
 
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  CSSProperties,
-} from "react";
+import React, { useEffect, useRef, useState, CSSProperties } from "react";
 import { Flag, BadgeCheck, ArrowUp } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import type { StaticImageData } from "next/image";
-
+import "@/assets/css/style1.css";
 
 // ---- SHARED TYPES ---------------------------------------------------------
 export interface ClientItem {
@@ -52,6 +47,7 @@ export interface ClientsShowcasePageProps {
   heroTitleHighlight: string;
   heroTitleRest: string;
   heroDescription: string;
+  heroH1?: string;
 
   middleComponent?: React.ReactNode;
 
@@ -93,7 +89,7 @@ export interface ClientsShowcasePageProps {
   ctaTitleRest: string;
   ctaDescription: string;
   ctaButtonText: string;
-  ctaHref ?: string;
+  ctaHref?: string;
 }
 
 const colors = {
@@ -105,13 +101,54 @@ const colors = {
 } as const;
 
 const styles: Record<string, CSSProperties> = {
-  root: { background: "#fff", color: colors.ink, minHeight: "100vh", fontFamily: "system-ui, -apple-system, sans-serif", overflowX: "hidden" },
+  root: {
+    background: "#fff",
+    color: colors.ink,
+    minHeight: "100vh",
+    fontFamily: "system-ui, -apple-system, sans-serif",
+    overflowX: "hidden",
+  },
   section: { padding: "60px 0", overflow: "hidden" },
-  container: { maxWidth: 1200, margin: "0 auto", padding: "0 24px", overflow: "hidden" },
-  heroBadge: { background: "#eef2ff", color: "#334155", borderRadius: 999, padding: "7px 16px", fontSize: ".82rem", fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 6 },
-  clientCategory: { color: colors.muted, fontSize: ".82rem", margin: "6px 0 12px" },
-  badgeCompleted: { background: "#e9fbf1", color: "#1a9b5c", fontWeight: 600, fontSize: ".72rem", padding: "5px 14px", borderRadius: 10, display: "inline-block" },
-  visitLink: { color: colors.brand, fontSize: "1rem", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 4, textDecoration: "none" },
+  container: {
+    maxWidth: 1200,
+    margin: "0 auto",
+    padding: "0 24px",
+    overflow: "hidden",
+  },
+  heroBadge: {
+    background: "#eef2ff",
+    color: "#334155",
+    borderRadius: 999,
+    padding: "7px 16px",
+    fontSize: ".82rem",
+    fontWeight: 500,
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 6,
+  },
+  clientCategory: {
+    color: colors.muted,
+    fontSize: ".82rem",
+    margin: "6px 0 12px",
+  },
+  badgeCompleted: {
+    background: "#e9fbf1",
+    color: "#1a9b5c",
+    fontWeight: 600,
+    fontSize: ".72rem",
+    padding: "5px 14px",
+    borderRadius: 10,
+    display: "inline-block",
+  },
+  visitLink: {
+    color: colors.brand,
+    fontSize: "1rem",
+    fontWeight: 600,
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 4,
+    textDecoration: "none",
+  },
 };
 
 // const ScrollToTop: React.FC = () => {
@@ -173,6 +210,7 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
     heroTitleHighlight,
     heroTitleRest,
     heroDescription,
+    heroH1,
     aboutImage,
     aboutTitleHighlight,
     aboutTitleRest,
@@ -213,20 +251,23 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
   const [aosInitialized, setAosInitialized] = useState(false);
 
-  const flatClients: (ClientItem & { _countryLabel: string; _countryFlag: React.ReactNode })[] =
+  const flatClients: (ClientItem & {
+    _countryLabel: string;
+    _countryFlag: React.ReactNode;
+  })[] =
     clientGroups && clientGroups.length > 0
       ? clientGroups.flatMap((g) =>
-        g.clients.map((c) => ({
-          ...c,
-          _countryLabel: g.countryLabel,
-          _countryFlag: g.countryFlag,
-        }))
-      )
+          g.clients.map((c) => ({
+            ...c,
+            _countryLabel: g.countryLabel,
+            _countryFlag: g.countryFlag,
+          })),
+        )
       : (clients || []).map((c) => ({
-        ...c,
-        _countryLabel: countryLabel || "",
-        _countryFlag: countryFlag,
-      }));
+          ...c,
+          _countryLabel: countryLabel || "",
+          _countryFlag: countryFlag,
+        }));
 
   useEffect(() => {
     AOS.init({
@@ -402,6 +443,16 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
                 <span className="text-blue-about">{heroTitleHighlight} </span>
                 {heroTitleRest}
               </h4>
+
+              {heroH1 && (
+                <h1
+                  className="ft-23 mt-0 mb-2 text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"
+                >
+                  {heroH1}
+                </h1>
+              )}
             </div>
 
             <div data-aos="fade-up" data-aos-delay="200">
@@ -431,7 +482,11 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
               </p>
             </div>
 
-            <div data-aos="fade-left" data-aos-delay="100" style={{ textAlign: "center" }}>
+            <div
+              data-aos="fade-left"
+              data-aos-delay="100"
+              style={{ textAlign: "center" }}
+            >
               <img
                 src={aboutImage.src}
                 alt="Web Design Services Showcase"
@@ -448,7 +503,10 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
         </div>
       </section>
 
-      <div className="container bf-service-area pt-50 pb-80" style={{ backgroundColor: "#053456", borderRadius: "20px" }}>
+      <div
+        className="container bf-service-area pt-50 pb-80"
+        style={{ backgroundColor: "#053456", borderRadius: "20px" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -482,7 +540,8 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               {whyChooseItems.map((item, index) => (
-                <div className="sn-why"
+                <div
+                  className="sn-why"
                   key={item.num}
                   data-aos="fade-up"
                   data-aos-delay={index * 50}
@@ -492,7 +551,10 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
                     alignItems: "flex-start",
                     padding: "28px 0",
                     borderBottom: "1px solid rgba(255, 255, 255, 0.15)",
-                    borderTop: index === 0 ? "1px solid rgba(255, 255, 255, 0.15)" : "none",
+                    borderTop:
+                      index === 0
+                        ? "1px solid rgba(255, 255, 255, 0.15)"
+                        : "none",
                   }}
                 >
                   <span
@@ -506,7 +568,10 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
                     {item.num}
                   </span>
                   <div>
-                    <h4 className="text-white mb-10" style={{ fontSize: "1.25rem", fontWeight: "600" }}>
+                    <h4
+                      className="text-white mb-10"
+                      style={{ fontSize: "1.25rem", fontWeight: "600" }}
+                    >
                       {item.title}
                     </h4>
                     <p
@@ -550,7 +615,9 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
 
             <div data-aos="fade-up" data-aos-delay="100">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">{clientsTitleHighlight} </span>
+                <span className="text-blue-about">
+                  {clientsTitleHighlight}{" "}
+                </span>
                 {clientsTitleRest}
               </h4>
             </div>
@@ -623,6 +690,7 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
                     href={c.website}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Yulanto Client ${c.name} website (opens in a new tab)`}
                     style={styles.visitLink}
                   >
                     Visit Website <span aria-hidden>→</span>
@@ -634,12 +702,18 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
         </div>
       </section>
 
-      <section className="section-bg-alt" id="technologies" style={styles.section}>
+      <section
+        className="section-bg-alt"
+        id="technologies"
+        style={styles.section}
+      >
         <div style={styles.container} className="dx-grid-rw">
           <div>
             <div data-aos="fade-right" data-aos-delay="0">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">{techSectionTitleHighlight} </span>
+                <span className="text-blue-about">
+                  {techSectionTitleHighlight}{" "}
+                </span>
                 {techSectionTitleRest}
               </h4>
             </div>
@@ -658,7 +732,12 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
               {techs.map((t, index) => {
                 const Icon = t.icon;
                 return (
-                  <div key={t.name} className="dx-tech-tile" data-aos="zoom-in" data-aos-delay={index * 50}>
+                  <div
+                    key={t.name}
+                    className="dx-tech-tile"
+                    data-aos="zoom-in"
+                    data-aos-delay={index * 50}
+                  >
                     <Icon
                       size={24}
                       style={{
@@ -678,7 +757,11 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
         </div>
       </section>
 
-      <section className="section-bg-white" id="testimonials" style={styles.section}>
+      <section
+        className="section-bg-white"
+        id="testimonials"
+        style={styles.section}
+      >
         <div style={styles.container} className="dx-grid-2">
           <div>
             <div data-aos="fade-right" data-aos-delay="0">
@@ -689,25 +772,49 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
 
             <div data-aos="fade-right" data-aos-delay="100">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">{testimonialsTitleHighlight} </span>
+                <span className="text-blue-about">
+                  {testimonialsTitleHighlight}{" "}
+                </span>
                 {testimonialsTitleRest}
               </h4>
             </div>
 
             {activeTestimonial && (
-              <div data-aos="fade-up" data-aos-delay="200" className="dx-testimonial-card">
-                <div style={{ color: "#f5a524", fontSize: "1rem", letterSpacing: 2, marginBottom: 4 }}>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="200"
+                className="dx-testimonial-card"
+              >
+                <div
+                  style={{
+                    color: "#f5a524",
+                    fontSize: "1rem",
+                    letterSpacing: 2,
+                    marginBottom: 4,
+                  }}
+                >
                   ★★★★★
                 </div>
-                <p className="text-figtree text-black" style={{ margin: "16px 0" }}>
+                <p
+                  className="text-figtree text-black"
+                  style={{ margin: "16px 0" }}
+                >
                   &quot;{activeTestimonial.text}&quot;
                 </p>
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <div>
-                    <div style={{ fontWeight: 700, fontSize: "0.98rem", color: colors.ink }}>
+                    <div
+                      style={{
+                        fontWeight: 700,
+                        fontSize: "0.98rem",
+                        color: colors.ink,
+                      }}
+                    >
                       {activeTestimonial.name}
                     </div>
-                    <div style={{ fontSize: ".82rem", color: colors.muted }}>{activeTestimonial.role}</div>
+                    <div style={{ fontSize: ".82rem", color: colors.muted }}>
+                      {activeTestimonial.role}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -743,21 +850,43 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
 
             <div data-aos="fade-left" data-aos-delay="100">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">{achievementsTitleHighlight} </span>
+                <span className="text-blue-about">
+                  {achievementsTitleHighlight}{" "}
+                </span>
                 {achievementsTitleRest}
               </h4>
             </div>
 
             <div data-aos="fade-up" data-aos-delay="200">
-              <p className="text-figtree text-black">{achievementsDescription}</p>
+              <p className="text-figtree text-black">
+                {achievementsDescription}
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-bg-alt" id="contact" style={{ padding: "64px 0", overflow: "hidden" }}>
-        <div style={{ ...styles.container, maxWidth: 1200, margin: "0 auto", textAlign: "center" }}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 20 }}>
+      <section
+        className="section-bg-alt"
+        id="contact"
+        style={{ padding: "64px 0", overflow: "hidden" }}
+      >
+        <div
+          style={{
+            ...styles.container,
+            maxWidth: 1200,
+            margin: "0 auto",
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 20,
+            }}
+          >
             <div data-aos="fade-up" data-aos-delay="0">
               <h4 className="px-about-title mb-20">
                 <span className="text-blue-about">{ctaTitleHighlight} </span>
@@ -772,9 +901,19 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
             <div
               data-aos="fade-up"
               data-aos-delay="200"
-              style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap", marginTop: 8 }}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: 14,
+                flexWrap: "wrap",
+                marginTop: 8,
+              }}
             >
-              <a href={ctaHref} className="btn-primary" style={{ fontSize: "18px" }}>
+              <a
+                href={ctaHref}
+                className="btn-primary"
+                style={{ fontSize: "18px" }}
+              >
                 {ctaButtonText}
               </a>
             </div>
