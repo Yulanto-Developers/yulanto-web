@@ -15,7 +15,7 @@ export default function WooCommerceSection(): JSX.Element {
   return (
     /* Fix: Added style={{ overflowX: 'hidden' }} to prevent X-axis overflow */
     <section 
-      className="px-about-6-area pt-50 pb-80 pb-lg-110" 
+      className="px-about-6-area pt-40 pb-40 pb-lg-110" 
       style={{ overflowX: 'hidden', backgroundColor: '#ffffff' }}
     >
       <div className="container container-1550">
@@ -51,7 +51,7 @@ export default function WooCommerceSection(): JSX.Element {
                 src="/assets/img/WooCommerce-Development/Flexible-Features-Built-1.png"
                 alt="WooCommerce Custom Development"
                 className="img-fluid"
-                style={{ maxWidth: '100%', height: 'auto' }}
+                style={{ maxWidth: '400px', height: 'auto' }}
               />
             </div>
           </div>

@@ -96,8 +96,8 @@ export default function WooCommerceStoreCapabilities(): React.ReactElement {
 
   return (
     <section 
-      className="px-store-features-area pt-80 pb-100" 
-      style={{ overflowX: 'hidden',backgroundColor: '#fff' }}
+      className="px-about-6-area pt-40 pb-40 pb-lg-110" 
+      style={{ overflowX: 'hidden',overflowY: 'hidden',backgroundColor: '#fff' }}
     >
       <div className="container container-1550">
         {/* Header Section */}

@@ -10,27 +10,14 @@ interface IndustryItem {
 
 // Complete list mapped directly from the source text
 const businessTypes: IndustryItem[] = [
-    { label: "Retail businesses", color: "#d946ef", icon: "🛍️" },
+    { label: "Retail businesses", color: "#ece0ee", icon: "🛍️" },
     { label: "Manufacturers", color: "#6366f1", icon: "🏭" },
     { label: "Fashion & lifestyle", color: "#eab308", icon: "👗" },
     { label: "Electronics stores", color: "#10b981", icon: "📱" },
     { label: "Food & groceries", color: "#06b6d4", icon: "🛒" },
     { label: "Service businesses", color: "#3b82f6", icon: "💼" },
     { label: "B2B businesses", color: "#8b5cf6", icon: "🏢" },
-    { label: "Startups & SMEs", color: "#ec4899", icon: "🚀" },
-];
-
-const industriesList: string[] = [
-    "Retail businesses",
-    "Manufacturers",
-    "Fashion and lifestyle brands",
-    "Electronics businesses",
-    "Food and grocery businesses",
-    "Service-based businesses",
-    "B2B businesses",
-    "Startups and entrepreneurs",
-    "Subscription-based businesses",
-    "Small and medium-sized enterprises",
+    { label: "Startups & SMEs", color: "#362d32", icon: "🚀" },
 ];
 
 export default function WooCommerceIndustriesSection() {
@@ -40,8 +27,50 @@ export default function WooCommerceIndustriesSection() {
     const rightItems = businessTypes.slice(4, 8);
 
     return (
-        <section className="px-about-6-area pt-50 pb-80 pb-lg-110">
-            <div className="container container-1550">
+        <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ overflowX: "hidden",width:"100%" }}>
+            {/* Mobile Responsiveness & Overflow Fix Style */}
+            <style jsx>{`
+                @media (max-width: 768px) {
+                    .hub-spoke-container {
+                        height: auto !important;
+                        min-height: auto !important;
+                        padding: 20px 10px !important;
+                        flex-direction: column !important;
+                        gap: 12px !important;
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        box-sizing: border-box !important;
+                    }
+                    .hub-dashed-ring {
+                        display: none !important;
+                    }
+                    .side-nodes-left, .side-nodes-right {
+                        position: relative !important;
+                        left: auto !important;
+                        right: auto !important;
+                        height: auto !important;
+                        width: 100% !important;
+                        flex-direction: row !important;
+                        flex-wrap: wrap !important;
+                        justify-content: center !important;
+                        align-items: center !important;
+                        gap: 8px !important;
+                    }
+                    .side-nodes-left div, .side-nodes-right div {
+                        margin-right: 0px !important;
+                        margin-left: 0px !important;
+                        max-width: 100% !important;
+                    }
+                    .central-hub-node {
+                        order: 5;
+                        margin: 10px 0;
+                        width: 160px !important;
+                        height: 160px !important;
+                    }
+                }
+            `}</style>
+
+            <div className="container container-1550" style={{ overflowX: "hidden",overflowY: "hidden" }}>
                 <div className="row align-items-center" data-aos="fade-up">
                     <div className="col-xl-12">
                         <span className="tp-section-subtitle text-black blink-ball">
@@ -55,8 +84,7 @@ export default function WooCommerceIndustriesSection() {
                                 A successful ecommerce website needs more than attractive product images. It should make it easy for customers to discover products, compare options, add items to their cart, complete payments, and track their orders.
                                 Our WooCommerce website development company creates streamlined ecommerce experiences with intuitive navigation, responsive layouts, optimized product pages, and simplified checkout processes.
                             </p>
-                              <h5 className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' }}>
-
+                            <h5 className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' }}>
                                 We can build WooCommerce stores for:
                             </h5>
                         </div>
@@ -65,8 +93,9 @@ export default function WooCommerceIndustriesSection() {
 
                 <div className="row align-items-center" data-aos="fade-up">
                     {/* WooCommerce Hub & Spoke Node Design */}
-                    <div className="col-lg-12 mb-5 mb-lg-0">
+                    <div className="col-lg-12 mb-5 mb-lg-0 px-0">
                         <div
+                            className="hub-spoke-container"
                             style={{
                                 position: "relative",
                                 width: "100%",
@@ -80,6 +109,7 @@ export default function WooCommerceIndustriesSection() {
                         >
                             {/* Outer Circular Dashed Ring */}
                             <div
+                                className="hub-dashed-ring"
                                 style={{
                                     position: "absolute",
                                     width: "380px",
@@ -92,6 +122,7 @@ export default function WooCommerceIndustriesSection() {
 
                             {/* LEFT SIDE NODES (4 items) */}
                             <div
+                                className="side-nodes-left"
                                 style={{
                                     position: "absolute",
                                     left: "0",
@@ -109,9 +140,9 @@ export default function WooCommerceIndustriesSection() {
                                         style={{
                                             display: "flex",
                                             alignItems: "center",
-                                            gap: "12px",
+                                            gap: "10px",
                                             backgroundColor: "#ffffff",
-                                            padding: "6px 16px 6px 6px",
+                                            padding: "6px 14px 6px 6px",
                                             borderRadius: "50px",
                                             boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.08)",
                                             border: "1px solid #f1f5f9",
@@ -121,15 +152,15 @@ export default function WooCommerceIndustriesSection() {
                                     >
                                         <span
                                             style={{
-                                                width: "38px",
-                                                height: "38px",
+                                                width: "36px",
+                                                height: "36px",
                                                 borderRadius: "50%",
                                                 backgroundColor: item.color,
                                                 color: "#ffffff",
                                                 display: "flex",
                                                 alignItems: "center",
                                                 justifyContent: "center",
-                                                fontSize: "18px",
+                                                fontSize: "16px",
                                                 boxShadow: `0 4px 10px ${item.color}66`,
                                                 flexShrink: 0,
                                             }}
@@ -139,7 +170,7 @@ export default function WooCommerceIndustriesSection() {
 
                                         <span
                                             style={{
-                                                fontSize: "14px",
+                                                fontSize: "13px",
                                                 fontWeight: "600",
                                                 color: "#1e293b",
                                                 whiteSpace: "nowrap",
@@ -153,52 +184,31 @@ export default function WooCommerceIndustriesSection() {
 
                             {/* Central Hub with WordPress Logo + Woo */}
                             <div
+                                className="central-hub-node"
                                 style={{
                                     position: "relative",
                                     width: "220px",
                                     height: "220px",
-                                    borderRadius: "50%",
-                                    backgroundColor: "#ffffff",
-                                    boxShadow: "0 20px 40px rgba(124, 58, 237, 0.2)",
+                                    zIndex: 3,
                                     display: "flex",
-                                    flexDirection: "column",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    gap: "10px",
-                                    zIndex: 3,
-                                    border: "10px solid #f3e8ff",
                                 }}
                             >
-                                {/* WordPress Logo SVG */}
-                                <svg
-                                    width="42"
-                                    height="42"
-                                    viewBox="0 0 24 24"
-                                    fill="#21759b"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12zm0 1.163c5.98 0 10.837 4.857 10.837 10.837 0 2.29-.715 4.415-1.932 6.166l-4.103-11.838c.376-.021.734-.055.734-.055.352 0 .313-.509-.04-.509 0 0-1.056.086-1.741.086-.645 0-1.721-.086-1.721-.086-.352 0-.391.509-.039.509 0 0 .358.034.694.055l2.093 5.792-2.955 8.861L8.51 5.885c.376-.021.734-.055.734-.055.352 0 .313-.509-.04-.509 0 0-1.056.086-1.741.086-.645 0-1.721-.086-1.721-.086-.352 0-.391.509-.039.509 0 0 .358.034.694.055l3.966 11.432L8.27 18.06C6.883 16.51 6.037 14.364 6.037 12c0-2.31.815-4.432 2.167-6.002L4.015 17.84C2.261 16.223 1.163 13.918 1.163 11.999c0-5.98 4.857-10.836 10.837-10.836zm3.504 18.995c-.378.13-.77.23-1.173.298l2.91-8.435 2.137 6.166c-1.09 1.036-2.428 1.723-3.874 1.971z" />
-                                </svg>
-
-                                {/* Woo Badge */}
-                                <div
+                                <img
+                                    src="/assets/img/WooCommerce-Development/wooo.png"
+                                    alt="WordPress and WooCommerce"
                                     style={{
-                                        backgroundColor: "#7c3aed",
-                                        color: "#ffffff",
-                                        fontWeight: "900",
-                                        fontSize: "24px",
-                                        padding: "8px 22px",
-                                        borderRadius: "16px",
-                                        boxShadow: "0 8px 16px rgba(124, 58, 237, 0.3)",
-                                        letterSpacing: "-0.5px",
+                                        width: "100%",
+                                        height: "100%",
+                                        objectFit: "contain",
                                     }}
-                                >
-                                    woo
-                                </div>
+                                />
                             </div>
 
                             {/* RIGHT SIDE NODES (4 items) */}
                             <div
+                                className="side-nodes-right"
                                 style={{
                                     position: "absolute",
                                     right: "0",
@@ -216,9 +226,9 @@ export default function WooCommerceIndustriesSection() {
                                         style={{
                                             display: "flex",
                                             alignItems: "center",
-                                            gap: "12px",
+                                            gap: "10px",
                                             backgroundColor: "#ffffff",
-                                            padding: "6px 16px 6px 6px",
+                                            padding: "6px 14px 6px 6px",
                                             borderRadius: "50px",
                                             boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.08)",
                                             border: "1px solid #f1f5f9",
@@ -228,15 +238,15 @@ export default function WooCommerceIndustriesSection() {
                                     >
                                         <span
                                             style={{
-                                                width: "38px",
-                                                height: "38px",
+                                                width: "36px",
+                                                height: "36px",
                                                 borderRadius: "50%",
                                                 backgroundColor: item.color,
                                                 color: "#ffffff",
                                                 display: "flex",
                                                 alignItems: "center",
                                                 justifyContent: "center",
-                                                fontSize: "18px",
+                                                fontSize: "16px",
                                                 boxShadow: `0 4px 10px ${item.color}66`,
                                                 flexShrink: 0,
                                             }}
@@ -246,7 +256,7 @@ export default function WooCommerceIndustriesSection() {
 
                                         <span
                                             style={{
-                                                fontSize: "14px",
+                                                fontSize: "13px",
                                                 fontWeight: "600",
                                                 color: "#1e293b",
                                                 whiteSpace: "nowrap",
@@ -261,7 +271,7 @@ export default function WooCommerceIndustriesSection() {
                     </div>
                 </div>
                 <p className="text-figtree text-black mt-4" data-aos="fade-up">
-               For businesses that require a simple online presence, we can also develop a one page ecommerce website with essential product information, enquiry or purchase functionality, payment integration, and mobile-friendly design.
+                    For businesses that require a simple online presence, we can also develop a one page ecommerce website with essential product information, enquiry or purchase functionality, payment integration, and mobile-friendly design.
                 </p>
             </div>
         </section>

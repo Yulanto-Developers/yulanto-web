@@ -83,7 +83,7 @@ export const ShopifyDigitalCraft = () => {
 
   return (
     <>
-      <section className="px-about-6-area pt-50 pb-80 pb-lg-110 overflow-hidden">
+      <section className="px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden">
         <div className="container container-1550">
           <div style={{ textAlign: 'center', marginBottom: '48px' }} data-aos="fade-up">
             <h4 className="px-about-title mb-20">

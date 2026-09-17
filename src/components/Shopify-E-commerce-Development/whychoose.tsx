@@ -62,7 +62,7 @@ export const WhyChooseShopifyPartner = () => {
   }, []);
 
   return (
-    <section className="px-about-6-area pt-50 pb-80 pb-lg-110" style={{ overflow: 'hidden' }}>
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ overflow: 'hidden' }}>
       <style>{`
         .auto-card {
           transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);

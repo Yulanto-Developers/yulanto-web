@@ -73,8 +73,8 @@ export function WordPressFeaturesGrid() {
           </div>
         </div>
 
-        {/* 6 Cards Per Row Grid */}
-        <div className="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6">
+        {/* 2 Cards Per Row on Mobile (row-cols-2), 3 on MD, 6 on LG */}
+        <div className="row g-3 g-sm-4 row-cols-2 row-cols-md-3 row-cols-lg-6">
           {features.map((item, index) => {
             const IconComponent = item.icon;
             return (
@@ -85,14 +85,14 @@ export function WordPressFeaturesGrid() {
                 data-aos-delay={(index % 6) * 80}
               >
                 <div 
-                  className="h-100 p-4 rounded-4 position-relative overflow-hidden d-flex flex-column align-items-center text-center justify-content-center"
+                  className="h-100 p-3 p-sm-4 rounded-4 position-relative overflow-hidden d-flex flex-column align-items-center text-center justify-content-center"
                   style={{
                     backgroundColor: "#ffffff",
                     border: "1.5px solid rgba(5, 52, 86, 0.12)",
                     boxShadow: "0 4px 15px rgba(5, 52, 86, 0.04)",
                     transition: "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
                     cursor: "pointer",
-                    minHeight: "170px"
+                    minHeight: "160px"
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = "translateY(-6px)";
@@ -138,16 +138,16 @@ export function WordPressFeaturesGrid() {
 
                   {/* Icon Box */}
                   <div 
-                    className="feature-icon-box rounded-circle d-flex align-items-center justify-content-center mb-3"
+                    className="feature-icon-box rounded-circle d-flex align-items-center justify-content-center mb-2 mb-sm-3"
                     style={{ 
-                      width: "52px", 
-                      height: "52px", 
+                      width: "46px", 
+                      height: "46px", 
                       backgroundColor: "rgba(5, 52, 86, 0.06)",
                       color: "#053456",
                       transition: "all 0.35s ease",
                     }}
                   >
-                    <IconComponent size={24} />
+                    <IconComponent size={22} />
                   </div>
 
                   {/* Feature Title */}
@@ -156,9 +156,9 @@ export function WordPressFeaturesGrid() {
                     style={{ 
                       color: "#053456", 
                       fontWeight: 600, 
-                      fontSize: "15px",
+                      fontSize: "14px",
                       fontFamily: "Figtree, Figtree Fallback",
-                      lineHeight: "1.4"
+                      lineHeight: "1.35"
                     }}
                   >
                     {item.title}
