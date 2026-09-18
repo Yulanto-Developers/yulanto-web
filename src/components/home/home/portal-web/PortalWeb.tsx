@@ -878,22 +878,7 @@ function PortalWeb() {
             </div>
             <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ backgroundColor: "#ffffff", overflowX: 'hidden', overflowY: 'hidden', }}>
                 <div className="container container-1550">
-                    <div className="row align-items-center" data-aos="fade-up">
-                        <div className="col-xl-3">
-                            <span className="tp-section-subtitle text-black blink-ball">
-                                Business-Focused Web Portal Solutions
-                            </span>
-                        </div>
 
-                        <div className="col-xl-9">
-                            <div className="px-project-title-box">
-                                <h4 className="px-about-title mb-20">
-                                    <span className="text-blue-about">Professional Web Portal </span>  Development Services
-                                </h4>
-
-                            </div>
-                        </div>
-                    </div>
                     <div className="row align-items-center">
 
 
@@ -902,6 +887,12 @@ function PortalWeb() {
       ========================================= */}
                         <div className="col-lg-6 col-md-12">
                             <div className="portal-services-content-wrapper">
+                                <span className="tp-section-subtitle text-black blink-ball">
+                                    Business-Focused Web Portal Solutions
+                                </span>
+                                <h4 className="px-about-title mb-20">
+                                    <span className="text-blue-about">Professional Web Portal </span>  Development Services
+                                </h4>
 
 
                                 <p>
@@ -925,7 +916,7 @@ function PortalWeb() {
                         <div className="col-lg-6 col-md-12">
                             <div className="portal-services-visual text-center">
                                 <img
-                                    src="/assets/img/portal-development-illustration.png"
+                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
                                     alt="Web portal development illustration"
                                     className="img-fluid"
                                 />
@@ -951,22 +942,22 @@ function PortalWeb() {
                     <h4 className="px-about-title mb-30 text-center">
                         <span className="text-blue-about">Our Portal Development</span> Solutions Include:
                     </h4>
-                    <div className="row align-items-center">
+
+                    {/* Added align-items-stretch so both columns match heights */}
+                    <div className="row align-items-stretch">
 
                         {/* =========================================
-                                        LEFT SIDE: TWO-COLUMN SOLUTIONS LIST (7 Columns)
-                                    ========================================= */}
-                        <div className="col-lg-7 col-md-12 mb-4 mb-lg-0">
-
-
-                            <div className="row">
+                LEFT SIDE: TWO-COLUMN SOLUTIONS LIST (7 Columns)
+            ========================================= */}
+                        <div className="col-lg-7 col-md-12 mb-4 mb-lg-0 d-flex flex-column">
+                            <div className="row flex-grow-1">
                                 {portalSolutions.map((item, index) => {
                                     const Icon = portalIcons[index];
 
                                     return (
-                                        <div className="col-md-6 mb-3" key={index}>
+                                        <div className="col-md-6 mb-3 d-flex" key={index}>
                                             <div
-                                                className="portal-services-item d-flex align-items-center p-3 h-100"
+                                                className="portal-services-item d-flex align-items-center p-3 w-100 h-100"
                                                 style={{
                                                     borderRadius: "10px",
                                                     border: "none",
@@ -977,13 +968,13 @@ function PortalWeb() {
                                                 onMouseEnter={(e) => {
                                                     e.currentTarget.style.transform = "translateY(-4px)";
                                                     e.currentTarget.style.boxShadow = "0 10px 25px rgba(0, 0, 0, 0.08)";
-                                                    const iconBox = e.currentTarget.querySelector<HTMLElement>(".portal-services-icon");
+                                                    const iconBox = e.currentTarget.querySelector(".portal-services-icon");
                                                     if (iconBox) iconBox.style.color = "#53ae7d";
                                                 }}
                                                 onMouseLeave={(e) => {
                                                     e.currentTarget.style.transform = "translateY(0px)";
                                                     e.currentTarget.style.boxShadow = "none";
-                                                    const iconBox = e.currentTarget.querySelector<HTMLElement>(".portal-services-icon");
+                                                    const iconBox = e.currentTarget.querySelector(".portal-services-icon");
                                                     if (iconBox) iconBox.style.color = "#0056b3";
                                                 }}
                                             >
@@ -1015,15 +1006,21 @@ function PortalWeb() {
                         </div>
 
                         {/* =========================================
-          RIGHT SIDE: IMAGE / VISUAL (5 Columns)
-      ========================================= */}
-                        <div className="col-lg-5 col-md-12">
-                            <div className="portal-services-visual text-center ps-lg-4">
+                RIGHT SIDE: IMAGE / VISUAL (5 Columns matching height)
+            ========================================= */}
+                        <div className="col-lg-5 col-md-12 d-flex">
+                            <div className="portal-services-visual text-center ps-lg-4 w-100 d-flex flex-column justify-content-center">
                                 <img
-                                    src="/assets/img/portal-solutions-illustration.png"
+                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
                                     alt="Portal Development Solutions"
-                                    className="img-fluid"
-                                    style={{ maxHeight: "480px", objectFit: "contain" }}
+                                    className="img-fluid w-100 shadow-sm"
+                                    style={{
+                                        height: "100%",
+                                        maxHeight: "none",
+                                        minHeight: "100%",
+                                        objectFit: "cover",
+                                        borderRadius: "12px"
+                                    }}
                                 />
                             </div>
                         </div>
@@ -1031,7 +1028,7 @@ function PortalWeb() {
                     </div>
                 </div>
             </section>
-  <div
+            <div
                 data-aos="fade-up"
                 data-aos-delay={400}
                 data-aos-once={true}
@@ -1042,12 +1039,12 @@ function PortalWeb() {
 
             </div>
 
-            <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ background: '#fff', overflowX: 'hidden', overflowY: 'hidden'  }}>
+            <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ background: '#fff', overflowX: 'hidden', overflowY: 'hidden' }}>
                 <div className="container container-1550">
                     <div className="row align-items-center" data-aos="fade-up">
                         <div className="col-xl-3">
                             <span className="tp-section-subtitle text-black blink-ball">
-                             Job & Career Portal Development
+                                Job & Career Portal Development
                             </span>
                         </div>
 
@@ -1057,102 +1054,102 @@ function PortalWeb() {
                                     <span className="text-blue-about"> Connect Employers, Recruiters </span> & Job Seekers
                                 </h4>
                                 <p className="text-figtree text-black mt-2">
-We develop modern and user-friendly Job & Career Portals that connect employers with qualified candidates through an easy-to-manage online platform. Whether you need a general job portal, industry-specific recruitment portal, or a career-focused platform, we can create a solution based on your business requirements.                                </p>
+                                    We develop modern and user-friendly Job & Career Portals that connect employers with qualified candidates through an easy-to-manage online platform. Whether you need a general job portal, industry-specific recruitment portal, or a career-focused platform, we can create a solution based on your business requirements.                                </p>
                             </div>
                         </div>
                     </div>
 
                     <div className="row align-items-center mt-4">
                         <h5 className="mb-3 fw-bold text-center" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' }}>
-                          Key Features
+                            Key Features
                         </h5>
 
                         {/* Right Features Grid Column (6 items per row using col-xl-2 / col-md-4) */}
-                     <div
-    className="col-lg-12"
-    data-aos="fade-left"
-    data-aos-delay={400}
-    data-aos-once={true}
->
-    <div
-        className="row g-0 align-items-stretch feature-grid-wrapper"
-        style={{
-            borderLeft: '1px solid rgba(83, 174, 125, 0.2)'
-        }}
-    >
-        {[
-            { title: "Candidate & Employer Registration", icon: "fa-solid fa-user-plus" },
-            { title: "Job Posting & Management", icon: "fa-solid fa-briefcase" },
-            { title: "Resume / CV Upload", icon: "fa-solid fa-file-arrow-up" },
-            { title: "Candidate Profile Management", icon: "fa-solid fa-id-card" },
-            { title: "Advanced Job Search & Filters", icon: "fa-solid fa-magnifying-glass" },
-            { title: "Location-Based Job Search", icon: "fa-solid fa-location-dot" },
-            { title: "Job Categories & Industries", icon: "fa-solid fa-layer-group" },
-            { title: "Online Job Applications", icon: "fa-solid fa-paper-plane" },
-            { title: "Employer Dashboard", icon: "fa-solid fa-chart-pie" },
-            { title: "Candidate Dashboard", icon: "fa-solid fa-gauge-high" },
-            { title: "Job Alerts & Notifications", icon: "fa-solid fa-bell" },
-            { title: "Featured & Premium Job Listings", icon: "fa-solid fa-star" },
-            { title: "Application Management", icon: "fa-solid fa-list-check" },
-            { title: "Admin Approval & Moderation",icon: "fa-solid fa-user-shield"},
-            { title: "Subscription & Payment Integration", icon: "fa-solid fa-credit-card" },
-            { title: "Reports & Analytics", icon: "fa-solid fa-chart-line" }
-        ].map((item, index) => (
-            <div
-                className="col-xl-2 col-md-4 col-6 text-center p-3 feature-grid-item d-flex align-items-stretch"
-                key={index}
-                style={{
-                    borderBottom: '1px solid rgba(83, 174, 125, 0.2)',
-                    borderRight: '1px solid rgba(83, 174, 125, 0.2)',
-                    transition: 'all 0.3s ease'
-                }}
-            >
-                <div className="feature-item-box w-100 d-flex flex-column align-items-center justify-content-between py-3">
+                        <div
+                            className="col-lg-12"
+                            data-aos="fade-left"
+                            data-aos-delay={400}
+                            data-aos-once={true}
+                        >
+                            <div
+                                className="row g-0 align-items-stretch feature-grid-wrapper"
+                                style={{
+                                    borderLeft: '1px solid rgba(83, 174, 125, 0.2)'
+                                }}
+                            >
+                                {[
+                                    { title: "Candidate & Employer Registration", icon: "fa-solid fa-user-plus" },
+                                    { title: "Job Posting & Management", icon: "fa-solid fa-briefcase" },
+                                    { title: "Resume / CV Upload", icon: "fa-solid fa-file-arrow-up" },
+                                    { title: "Candidate Profile Management", icon: "fa-solid fa-id-card" },
+                                    { title: "Advanced Job Search & Filters", icon: "fa-solid fa-magnifying-glass" },
+                                    { title: "Location-Based Job Search", icon: "fa-solid fa-location-dot" },
+                                    { title: "Job Categories & Industries", icon: "fa-solid fa-layer-group" },
+                                    { title: "Online Job Applications", icon: "fa-solid fa-paper-plane" },
+                                    { title: "Employer Dashboard", icon: "fa-solid fa-chart-pie" },
+                                    { title: "Candidate Dashboard", icon: "fa-solid fa-gauge-high" },
+                                    { title: "Job Alerts & Notifications", icon: "fa-solid fa-bell" },
+                                    { title: "Featured & Premium Job Listings", icon: "fa-solid fa-star" },
+                                    { title: "Application Management", icon: "fa-solid fa-list-check" },
+                                    { title: "Admin Approval & Moderation", icon: "fa-solid fa-user-shield" },
+                                    { title: "Subscription & Payment Integration", icon: "fa-solid fa-credit-card" },
+                                    { title: "Reports & Analytics", icon: "fa-solid fa-chart-line" }
+                                ].map((item, index) => (
+                                    <div
+                                        className="col-xl-2 col-md-4 col-6 text-center p-3 feature-grid-item d-flex align-items-stretch"
+                                        key={index}
+                                        style={{
+                                            borderBottom: '1px solid rgba(83, 174, 125, 0.2)',
+                                            borderRight: '1px solid rgba(83, 174, 125, 0.2)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        <div className="feature-item-box w-100 d-flex flex-column align-items-center justify-content-between py-3">
 
-                    <div
-                        className="icon-circle mb-3 d-flex align-items-center justify-content-center"
-                        style={{
-                            width: '60px',
-                            height: '60px',
-                            borderRadius: '50%',
-                            background: '#ffffff',
-                            boxShadow: '0 5px 15px rgba(5, 52, 86, 0.05)',
-                            transition: 'all 0.3s ease'
-                        }}
-                    >
-                        <i
-                            className={item.icon}
-                            style={{
-                                fontSize: '22px',
-                                color: '#53ae7d',
-                                transition: 'all 0.3s ease'
-                            }}
-                        ></i>
-                    </div>
+                                            <div
+                                                className="icon-circle mb-3 d-flex align-items-center justify-content-center"
+                                                style={{
+                                                    width: '60px',
+                                                    height: '60px',
+                                                    borderRadius: '50%',
+                                                    background: '#ffffff',
+                                                    boxShadow: '0 5px 15px rgba(5, 52, 86, 0.05)',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                            >
+                                                <i
+                                                    className={item.icon}
+                                                    style={{
+                                                        fontSize: '22px',
+                                                        color: '#53ae7d',
+                                                        transition: 'all 0.3s ease'
+                                                    }}
+                                                ></i>
+                                            </div>
 
-                    <h6
-                        className="feature-title mb-0"
-                        style={{
-                            color: '#053456',
-                            fontSize: '14px',
-                            fontFamily: "Figtree, Figtree Fallback",
-                            fontWeight: '600',
-                            minHeight: '40px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }}
-                    >
-                        {item.title}
-                    </h6>
+                                            <h6
+                                                className="feature-title mb-0"
+                                                style={{
+                                                    color: '#053456',
+                                                    fontSize: '14px',
+                                                    fontFamily: "Figtree, Figtree Fallback",
+                                                    fontWeight: '600',
+                                                    minHeight: '40px',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center'
+                                                }}
+                                            >
+                                                {item.title}
+                                            </h6>
 
-                </div>
-            </div>
-        ))}
-    </div>
-</div>
-                        <p  className="text-figtree text-black mt-20">Our job portal development services include candidate registration, employer accounts, job posting, resume management, job search, applications, notifications, and administrative controls.
-</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <p className="text-figtree text-black mt-20">Our job portal development services include candidate registration, employer accounts, job posting, resume management, job search, applications, notifications, and administrative controls.
+                        </p>
 
                     </div>
                 </div>
@@ -1185,119 +1182,123 @@ We develop modern and user-friendly Job & Career Portals that connect employers 
 
             <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{
                 backgroundColor: "#f5f5f5", overflowX: 'hidden', overflowY: 'hidden',
-
-            }}
-            >
+            }}>
                 <div className="container container-1550">
 
                     {/* Section Heading Area */}
                     <div className="row align-items-center mb-5" data-aos="fade-up">
-
                         <div className="col-xl-12">
                             <div className="px-project-title-box">
                                 <span className="tp-section-subtitle text-black blink-ball">
-                                  LMS Portal Development
+                                    LMS Portal Development
                                 </span>
                                 <h4 className="px-about-title mb-20">
-                                    <span className="text-blue-about">Build a Powerful Online  </span>Learning Platform
+                                    <span className="text-blue-about">Build a Powerful Online </span>Learning Platform
                                 </h4>
                                 <p className="text-figtree text-black mt-2">
-                                An LMS (Learning Management System) Portal provides a centralized platform for institutions, trainers, businesses, and educators to deliver and manage online learning.
+                                    An LMS (Learning Management System) Portal provides a centralized platform for institutions, trainers, businesses, and educators to deliver and manage online learning.
 
-We provide LMS portal development services to create customized learning platforms where administrators, instructors, and students can manage courses, lessons, assessments, progress, and learning resources from a single system.
+                                    We provide LMS portal development services to create customized learning platforms where administrators, instructors, and students can manage courses, lessons, assessments, progress, and learning resources from a single system.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    {/* Main Layout: Left 4 Columns Image, Right 8 Columns Features Grid (3 Columns) */}
-                    <div className="row align-items-center">
+                    {/* Main Layout: Left 4 Columns Image, Right 8 Columns Features Grid (3 Columns) - Added align-items-stretch */}
+                    <div className="row align-items-stretch">
 
-                        {/* Left Side: 4 Columns Image */}
-                        <div className="col-lg-4 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay={200} data-aos-once={true}>
-                            <div className="directory-left-image-box text-center">
+                        {/* Left Side: 4 Columns Image (Matched to full row height) */}
+                        <div className="col-lg-4 mb-4 mb-lg-0 d-flex flex-column" data-aos="fade-right" data-aos-delay={200} data-aos-once={true}>
+                            <div className="directory-left-image-box text-center h-100 d-flex flex-column">
                                 <img
-                                    src="/assets/img/about/directory-portal.png"
+                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
                                     alt="Directory Portal Development"
-                                    className="img-fluid w-100"
-                                    style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '480px', boxShadow: '0 10px 30px rgba(5, 52, 86, 0.08)' }}
+                                    className="img-fluid w-100 shadow-sm"
+                                    style={{
+                                        borderRadius: '16px',
+                                        objectFit: 'cover',
+                                        height: '100%',
+                                        maxHeight: 'none',
+                                        minHeight: '100%',
+                                        boxShadow: '0 10px 30px rgba(5, 52, 86, 0.08)'
+                                    }}
                                 />
                             </div>
                         </div>
 
                         {/* Right Side: 8 Columns Features Grid (3 Columns) */}
-                     <div className="col-lg-8" data-aos="fade-left" data-aos-delay={400} data-aos-once={true}>
-    <div className="row g-3">
-        {[
-            { id: 1, title: "Student Registration & Login", icon: "fa-solid fa-user-plus" },
-            { id: 2, title: "Instructor & Trainer Accounts", icon: "fa-solid fa-chalkboard-user" },
-            { id: 3, title: "Course Creation & Management", icon: "fa-solid fa-book-open" },
-            { id: 4, title: "Video-Based Learning", icon: "fa-solid fa-circle-play" },
-            { id: 5, title: "Lessons & Learning Materials", icon: "fa-solid fa-file-lines" },
-           { id: 6, title: "Online Assessments & Quizzes", icon: "fa-solid fa-list-ol" },
-            { id: 7, title: "Assignment Management", icon: "fa-solid fa-file-pen" },
-            { id: 8, title: "Student Progress Tracking", icon: "fa-solid fa-chart-line" },
-            { id: 9, title: "Course Categories", icon: "fa-solid fa-layer-group" },
-            { id: 10, title: "Certificates", icon: "fa-solid fa-certificate" },
-            { id: 11, title: "Course Completion Tracking", icon: "fa-solid fa-list-check" },
-            { id: 12, title: "Discussion & Communication", icon: "fa-solid fa-comments" },
-            { id: 13, title: "Notifications & Announcements", icon: "fa-solid fa-bell" },
-            { id: 14, title: "Subscription & Payment Integration", icon: "fa-solid fa-credit-card" },
-            { id: 15, title: "Student & Instructor Dashboards", icon: "fa-solid fa-gauge-high" },
-            { id: 16, title: "Admin Dashboard", icon: "fa-solid fa-user-gear" },
-            { id: 17, title: "Reports & Analytics", icon: "fa-solid fa-chart-pie" }
-        ].map((item) => (
-            <div className="col-lg-4 col-md-6 col-12" key={item.id}>
-                <div
-                    className="directory-feature-card d-flex align-items-center p-3 h-100"
-                    style={{
-                        transition: 'all 0.3s ease',
-                        borderRadius: '10px',
-                        border: '1px solid rgba(83, 174, 125, 0.15)',
-                        background: '#fff'
-                    }}
-                >
-                    <div
-                        className="feature-icon-wrapper me-3 flex-shrink-0 d-flex align-items-center justify-content-center"
-                        style={{
-                            width: '45px',
-                            height: '45px',
-                            borderRadius: '50%',
-                            background: 'rgba(83, 174, 125, 0.1)',
-                            transition: 'all 0.3s ease'
-                        }}
-                    >
-                        <i
-                            className={item.icon}
-                            style={{
-                                fontSize: '16px',
-                                color: '#53ae7d',
-                                transition: 'all 0.3s ease'
-                            }}
-                        ></i>
-                    </div>
+                        <div className="col-lg-8 d-flex flex-column" data-aos="fade-left" data-aos-delay={400} data-aos-once={true}>
+                            <div className="row g-3 flex-grow-1">
+                                {[
+                                    { id: 1, title: "Student Registration & Login", icon: "fa-solid fa-user-plus" },
+                                    { id: 2, title: "Instructor & Trainer Accounts", icon: "fa-solid fa-chalkboard-user" },
+                                    { id: 3, title: "Course Creation & Management", icon: "fa-solid fa-book-open" },
+                                    { id: 4, title: "Video-Based Learning", icon: "fa-solid fa-circle-play" },
+                                    { id: 5, title: "Lessons & Learning Materials", icon: "fa-solid fa-file-lines" },
+                                    { id: 6, title: "Online Assessments & Quizzes", icon: "fa-solid fa-list-ol" },
+                                    { id: 7, title: "Assignment Management", icon: "fa-solid fa-file-pen" },
+                                    { id: 8, title: "Student Progress Tracking", icon: "fa-solid fa-chart-line" },
+                                    { id: 9, title: "Course Categories", icon: "fa-solid fa-layer-group" },
+                                    { id: 10, title: "Certificates", icon: "fa-solid fa-certificate" },
+                                    { id: 11, title: "Course Completion Tracking", icon: "fa-solid fa-list-check" },
+                                    { id: 12, title: "Discussion & Communication", icon: "fa-solid fa-comments" },
+                                    { id: 13, title: "Notifications & Announcements", icon: "fa-solid fa-bell" },
+                                    { id: 14, title: "Subscription & Payment Integration", icon: "fa-solid fa-credit-card" },
+                                    { id: 15, title: "Student & Instructor Dashboards", icon: "fa-solid fa-gauge-high" },
+                                    { id: 16, title: "Admin Dashboard", icon: "fa-solid fa-user-gear" },
+                                    { id: 17, title: "Reports & Analytics", icon: "fa-solid fa-chart-pie" }
+                                ].map((item) => (
+                                    <div className="col-lg-4 col-md-6 col-12 d-flex" key={item.id}>
+                                        <div
+                                            className="directory-feature-card d-flex align-items-center p-3 w-100 h-100"
+                                            style={{
+                                                transition: 'all 0.3s ease',
+                                                borderRadius: '10px',
+                                                border: '1px solid rgba(83, 174, 125, 0.15)',
+                                                background: '#fff'
+                                            }}
+                                        >
+                                            <div
+                                                className="feature-icon-wrapper me-3 flex-shrink-0 d-flex align-items-center justify-content-center"
+                                                style={{
+                                                    width: '45px',
+                                                    height: '45px',
+                                                    borderRadius: '50%',
+                                                    background: 'rgba(83, 174, 125, 0.1)',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                            >
+                                                <i
+                                                    className={item.icon}
+                                                    style={{
+                                                        fontSize: '16px',
+                                                        color: '#53ae7d',
+                                                        transition: 'all 0.3s ease'
+                                                    }}
+                                                ></i>
+                                            </div>
 
-                    <div className="feature-content">
-                        <h6
-                            className="mb-0"
-                            style={{
-                                color: '#053456',
-                                fontSize: '13px',
-                                fontWeight: '700',
-                                fontFamily: 'Figtree, Figtree Fallback'
-                            }}
-                        >
-                            {item.title}
-                        </h6>
-                    </div>
-                </div>
-            </div>
-        ))}
-    </div>
-</div>
+                                            <div className="feature-content">
+                                                <h6
+                                                    className="mb-0"
+                                                    style={{
+                                                        color: '#053456',
+                                                        fontSize: '13px',
+                                                        fontWeight: '700',
+                                                        fontFamily: 'Figtree, Figtree Fallback'
+                                                    }}
+                                                >
+                                                    {item.title}
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
 
                     </div>
-                    <p className="text-figtree text-black mt-2">Our LMS website development solutions can be designed for schools, colleges, training institutes, coaching centres, corporate training programs, professional educators, and online course businesses.</p>
+                    <p className="text-figtree text-black mt-4 mb-0">Our LMS website development solutions can be designed for schools, colleges, training institutes, coaching centres, corporate training programs, professional educators, and online course businesses.</p>
                 </div>
 
                 {/* Custom Hover Effects */}
@@ -1315,166 +1316,167 @@ We provide LMS portal development services to create customized learning platfor
         }
     `}</style>
             </section>
-<div 
-    data-aos="fade-up" 
-    data-aos-delay={400} 
-    data-aos-once={true}
-    className="px-magazine-area pt-60 pb-60 pb-lg-120"
-    style={{ backgroundColor: '#fff' }}
->
-    <div className="container container-1550">
-        
-        {/* Top Header Section */}
-        <div className="row justify-content-center mb-5">
-            <div className="row align-items-center" data-aos="fade-up">
-                <div className="col-xl-3">
-                    <span className="tp-section-subtitle text-black blink-ball" style={{ color: '#053456' }}>
-                        Magazine Portal Development
-                    </span>
-                </div>
+            <div
+                data-aos="fade-up"
+                data-aos-delay={400}
+                data-aos-once={true}
+                className="px-magazine-area pt-60 pb-60 pb-lg-120"
+                style={{ backgroundColor: '#fff' }}
+            >
+                <div className="container container-1550">
 
-                <div className="col-xl-9">
-                    <div className="px-project-title-box">
-                        <h4 className="px-about-title mb-20">
-                            <span className="text-blue-about" style={{ color: '#053456' }}>Create an Engaging </span>Digital Magazine Experience
-                        </h4>
-                        <p className="text-figtree text-black mt-2">
-                            Transform your publication into an interactive online platform with customized Magazine Portal Development solutions. We develop digital magazine portals for publishers, organizations, communities, brands, and niche publications where readers can explore articles, stories, interviews, features, images, videos, and other digital content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    {/* Top Header Section */}
+                    <div className="row justify-content-center mb-5">
+                        <div className="row align-items-center" data-aos="fade-up">
+                            <div className="col-xl-3">
+                                <span className="tp-section-subtitle text-black blink-ball" style={{ color: '#053456' }}>
+                                    Magazine Portal Development
+                                </span>
+                            </div>
 
-        {/* Featured Editorial Image Showcase Section */}
-        <div className="row mb-30 align-items-center" data-aos="fade-up">
-            <div className="col-12">
-                <div 
-                    className="magazine-hero-image-wrapper p-3 p-lg-4" 
-                    style={{
-                        borderRadius: '16px',
-                        background: 'linear-gradient(135deg, rgba(5, 52, 86, 0.03) 0%, rgba(83, 174, 125, 0.05) 100%)',
-                        border: '1px solid rgba(83, 174, 125, 0.15)',
-                        boxShadow: '0 10px 30px rgba(5, 52, 86, 0.04)'
-                    }}
-                >
-                    <div className="row align-items-center justify-content-center">
-                        <div className="col-lg-12">
-                            <div className="position-relative overflow-hidden text-center" style={{ borderRadius: '12px', minHeight: '300px', maxHeight: '380px' }}>
-                                <img 
-                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop" 
-                                    alt="Digital Magazine Portal Development" 
-                                    className="w-100 h-100 object-fit-cover"
-                                    style={{ borderRadius: '12px', transition: 'transform 0.5s ease' }}
-                                />
+                            <div className="col-xl-9">
+                                <div className="px-project-title-box">
+                                    <h4 className="px-about-title mb-20">
+                                        <span className="text-blue-about" style={{ color: '#053456' }}>Create an Engaging </span>Digital Magazine Experience
+                                    </h4>
+                                    <p className="text-figtree text-black mt-2">
+                                        Transform your publication into an interactive online platform with customized Magazine Portal Development solutions. We develop digital magazine portals for publishers, organizations, communities, brands, and niche publications where readers can explore articles, stories, interviews, features, images, videos, and other digital content.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        {/* Features Grid - 5 Cards per row on Desktop, 2 cards per row on Mobile */}
-        <div className="row g-3 mb-5">
-            {[
-                { id: 1, title: "Digital magazine publishing", icon: "fa-solid fa-newspaper" },
-                { id: 2, title: "Article and content management", icon: "fa-solid fa-file-lines" },
-                { id: 3, title: "Magazine categories", icon: "fa-solid fa-folder-open" },
-                { id: 4, title: "Featured stories", icon: "fa-solid fa-star" },
-                { id: 5, title: "Author profiles", icon: "fa-solid fa-user-pen" },
-                { id: 6, title: "Image galleries", icon: "fa-solid fa-images" },
-                { id: 7, title: "Video content", icon: "fa-solid fa-circle-play" },
-                { id: 8, title: "Interview and editorial sections", icon: "fa-solid fa-microphone-lines" },
-                { id: 9, title: "Search and filtering", icon: "fa-solid fa-magnifying-glass" },
-                { id: 10, title: "Featured publications", icon: "fa-solid fa-book-bookmark" },
-                { id: 11, title: "Digital archive", icon: "fa-solid fa-box-archive" },
-                { id: 12, title: "Social media integration", icon: "fa-solid fa-share-nodes" },
-                { id: 13, title: "Newsletter subscription", icon: "fa-solid fa-envelope-open-text" },
-                { id: 14, title: "Advertisement management", icon: "fa-solid fa-rectangle-ad" },
-                { id: 15, title: "Subscription management", icon: "fa-solid fa-id-card" },
-                { id: 16, title: "Online payment integration", icon: "fa-solid fa-credit-card" },
-                { id: 17, title: "SEO-friendly pages", icon: "fa-solid fa-globe" },
-                { id: 18, title: "Mobile-friendly design", icon: "fa-solid fa-mobile-screen-button" },
-                { id: 19, title: "Admin and editor management", icon: "fa-solid fa-user-shield" }
-            ].map((item, index) => (
-                // col-xl custom override for exactly 5 columns per row, col-6 for 2 columns on mobile
-                <div className="col-xl-2dot4 col-lg-4 col-md-6 col-6 mb-3" key={item.id} data-aos="fade-up" data-aos-delay={(index % 5) * 50}>
-                    <div
-                        className="magazine-feature-card p-3 h-100 d-flex flex-column justify-content-between"
-                        style={{
-                            transition: 'all 0.35s ease',
-                            borderRadius: '10px',
-                            border: '1px solid rgba(83, 174, 125, 0.15)',
-                            background: '#ffffff',
-                            boxShadow: '0 4px 15px rgba(5, 52, 86, 0.03)',
-                            position: 'relative',
-                            overflow: 'hidden'
-                        }}
-                    >
-                        {/* Top Accent Line on Card Hover */}
-                        <div 
-                            className="card-top-line"
-                            style={{
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                width: '100%',
-                                height: '3px',
-                                background: '#53ae7d',
-                                transform: 'scaleX(0)',
-                                transformOrigin: 'left',
-                                transition: 'transform 0.3s ease'
-                            }}
-                        />
-
-                        <div>
+                    {/* Featured Editorial Image Showcase Section */}
+                    <div className="row mb-30 align-items-center" data-aos="fade-up">
+                        <div className="col-12">
                             <div
-                                className="feature-icon-wrapper mb-3 d-flex align-items-center justify-content-center"
+                                className="magazine-hero-image-wrapper p-3 p-lg-4"
                                 style={{
-                                    width: '45px',
-                                    height: '45px',
-                                    borderRadius: '50%',
-                                    background: 'rgba(83, 174, 125, 0.1)',
-                                    transition: 'all 0.3s ease'
+                                    borderRadius: '16px',
+                                    background: 'linear-gradient(135deg, rgba(5, 52, 86, 0.03) 0%, rgba(83, 174, 125, 0.05) 100%)',
+                                    border: '1px solid rgba(83, 174, 125, 0.15)',
+                                    boxShadow: '0 10px 30px rgba(5, 52, 86, 0.04)'
                                 }}
                             >
-                                <i
-                                    className={`${item.icon} card-icon-hover`}
-                                    style={{
-                                        fontSize: '16px',
-                                        color: '#53ae7d',
-                                        transition: 'all 0.3s ease'
-                                    }}
-                                ></i>
+                                <div className="row align-items-center justify-content-center">
+                                    <div className="col-lg-12">
+                                        <div className="position-relative overflow-hidden text-center" style={{ borderRadius: '12px', minHeight: '300px', maxHeight: '380px' }}>
+                                            <img
+                                                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+                                                alt="Digital Magazine Portal Development"
+                                                className="w-100 h-100 object-fit-cover"
+                                                style={{ borderRadius: '12px', transition: 'transform 0.5s ease' }}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <h6
-                                className="mb-0"
-                                style={{
-                                    color: '#053456',
-                                    fontSize: '14px',
-                                    fontWeight: '700',
-                                    fontFamily: 'Figtree, Figtree Fallback',
-                                    lineHeight: '1.4'
-                                }}
-                            >
-                                {item.title}
-                            </h6>
                         </div>
-
                     </div>
+
+                    {/* Features Grid - 5 Cards per row on Desktop, 2 cards per row on Mobile */}
+                    <div className="row g-3 mb-5">
+                        {[
+                            { id: 1, title: "Digital magazine publishing", icon: "fa-solid fa-newspaper" },
+                            { id: 2, title: "Article and content management", icon: "fa-solid fa-file-lines" },
+                            { id: 3, title: "Magazine categories", icon: "fa-solid fa-folder-open" },
+                            { id: 4, title: "Featured stories", icon: "fa-solid fa-star" },
+                            { id: 5, title: "Author profiles", icon: "fa-solid fa-user-pen" },
+                            { id: 6, title: "Image galleries", icon: "fa-solid fa-images" },
+                            { id: 7, title: "Video content", icon: "fa-solid fa-circle-play" },
+                            { id: 8, title: "Interview and editorial sections", icon: "fa-solid fa-microphone-lines" },
+                            { id: 9, title: "Search and filtering", icon: "fa-solid fa-magnifying-glass" },
+                            { id: 10, title: "Featured publications", icon: "fa-solid fa-book-bookmark" },
+                            { id: 11, title: "Digital archive", icon: "fa-solid fa-box-archive" },
+                            { id: 12, title: "Social media integration", icon: "fa-solid fa-share-nodes" },
+                            { id: 13, title: "Newsletter subscription", icon: "fa-solid fa-envelope-open-text" },
+                            { id: 14, title: "Advertisement management", icon: "fa-solid fa-rectangle-ad" },
+                            { id: 15, title: "Subscription management", icon: "fa-solid fa-id-card" },
+                            { id: 16, title: "Online payment integration", icon: "fa-solid fa-credit-card" },
+                            { id: 17, title: "SEO-friendly pages", icon: "fa-solid fa-globe" },
+                            { id: 18, title: "Mobile-friendly design", icon: "fa-solid fa-mobile-screen-button" },
+                            { id: 19, title: "Admin and editor management", icon: "fa-solid fa-user-shield" }
+                        ].map((item, index) => (
+                            // col-xl custom override for exactly 5 columns per row, col-6 for 2 columns on mobile
+                            <div className="col-xl-2dot4 col-lg-4 col-md-6 col-6 mb-3" key={item.id} data-aos="fade-up" data-aos-delay={(index % 5) * 50}>
+                                <div
+                                    className="magazine-feature-card p-3 h-100 d-flex flex-column justify-content-between"
+                                    style={{
+                                        transition: 'all 0.35s ease',
+                                        borderRadius: '10px',
+                                        border: '1px solid rgba(83, 174, 125, 0.15)',
+                                        background: '#ffffff',
+                                        boxShadow: '0 4px 15px rgba(5, 52, 86, 0.03)',
+                                        position: 'relative',
+                                        overflow: 'hidden'
+                                    }}
+                                >
+                                    {/* Top Accent Line on Card Hover */}
+                                    <div
+                                        className="card-top-line"
+                                        style={{
+                                            position: 'absolute',
+                                            top: 0,
+                                            left: 0,
+                                            width: '100%',
+                                            height: '3px',
+                                            background: '#53ae7d',
+                                            transform: 'scaleX(0)',
+                                            transformOrigin: 'left',
+                                            transition: 'transform 0.3s ease'
+                                        }}
+                                    />
+
+                                    <div>
+                                        <div
+                                            className="feature-icon-wrapper mb-3 d-flex align-items-center justify-content-center"
+                                            style={{
+                                                width: '45px',
+                                                height: '45px',
+                                                borderRadius: '50%',
+                                                background: 'rgba(83, 174, 125, 0.1)',
+                                                transition: 'all 0.3s ease'
+                                            }}
+                                        >
+                                            <i
+                                                className={`${item.icon} card-icon-hover`}
+                                                style={{
+                                                    fontSize: '16px',
+                                                    color: '#53ae7d',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                            ></i>
+                                        </div>
+
+                                        <h6
+                                            className="mb-0"
+                                            style={{
+                                                color: '#053456',
+                                                fontSize: '14px',
+                                                fontWeight: '700',
+                                                fontFamily: 'Figtree, Figtree Fallback',
+                                                lineHeight: '1.4'
+                                            }}
+                                        >
+                                            {item.title}
+                                        </h6>
+                                    </div>
+
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Bottom Closing Description */}
+                    <p className="text-figtree text-black mt-20">A customized magazine portal can help publishers build a stronger digital presence while making content easier to discover and access across devices.</p>
+
                 </div>
-            ))}
-        </div>
+            </div>
 
-        {/* Bottom Closing Description */}
-        <p className="text-figtree text-black mt-20">A customized magazine portal can help publishers build a stronger digital presence while making content easier to discover and access across devices.</p>
-
-    </div>
-</div>
-
-{/* Custom Styles for 5 columns layout, image effects and icon color transition on hover */}
-<style dangerouslySetInnerHTML={{__html: `
+            {/* Custom Styles for 5 columns layout, image effects and icon color transition on hover */}
+            <style dangerouslySetInnerHTML={{
+                __html: `
     @media (min-width: 1200px) {
         .col-xl-2dot4 {
             flex: 0 0 20%;
@@ -1550,7 +1552,7 @@ We provide LMS portal development services to create customized learning platfor
                             <div className="col-lg-4 text-center my-4 my-lg-0" data-aos="zoom-in" data-aos-delay={300}>
                                 <div className="directory-left-image-box text-center">
                                     <img
-                                        src="/assets/img/about/real-estate-portal.png"
+                                        src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
                                         alt="Real Estate Portal Development"
                                         className="img-fluid w-100"
                                         style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '480px', boxShadow: '0 10px 30px rgba(5, 52, 86, 0.08)' }}
@@ -1609,7 +1611,7 @@ We provide LMS portal development services to create customized learning platfor
                         {/* Top Header Row */}
                         <div className="row align-items-center mb-40" data-aos="fade-up">
                             <div className="col-xl-3">
-                                <span className="tp-section-subtitle text-black blink-ball">
+                                <span className="tp-section-subtitle text-black blink-ball" style={{ color: '#053456' }}>
                                     Feature-Rich Portal Development
                                 </span>
                             </div>
@@ -1617,7 +1619,7 @@ We provide LMS portal development services to create customized learning platfor
                             <div className="col-xl-9">
                                 <div className="px-project-title-box">
                                     <h4 className="px-about-title mb-20">
-                                        <span className="text-blue-about">Restaurant </span>Portal Development
+                                        <span className="text-blue-about" style={{ color: '#053456' }}>Restaurant </span>Portal Development
                                     </h4>
                                     <p className="text-figtree text-black mt-2">
                                         Build a restaurant discovery and listing platform where customers can search and explore restaurants, cuisines, menus, locations, offers, and reviews.
@@ -1626,24 +1628,24 @@ We provide LMS portal development services to create customized learning platfor
                             </div>
                         </div>
 
-                        <h5 className="mb-20 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' }}>
+                        <h5 className="mb-30 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"', color: '#053456' }}>
                             Our restaurant portal solutions can include:
                         </h5>
 
-                        {/* Main Content Row: Left 8 Columns for Grid, Right 4 Columns for Image */}
-                        <div className="row align-items-center">
-                            {/* Left Side: 8 Columns for the Features Grid */}
+                        {/* Main Content Row: Left Columns for Grid, Right Columns for Image */}
+                        <div className="row align-items-center g-4">
+                            {/* Left Side: 7 Columns for the Features Grid to give proper breathing room */}
                             <div className="col-lg-8">
-                                <div className="restaurant-app-grid">
+                                <div className="restaurant-app-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px 20px' }}>
                                     {restaurantPortalFeatures.map((item) => (
                                         <div
-                                            className="restaurant-app-item"
+                                            className="restaurant-app-item text-center p-2"
                                             key={item.id}
                                         >
-                                            <div className="restaurant-app-icon">
+                                            <div className="restaurant-app-icon mx-auto mb-2" style={{ width: '65px', height: '65px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                                 {/* Restaurant Registration */}
                                                 {item.icon === "registration" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <circle cx="40" cy="30" r="9" className="restaurant-svg" />
                                                         <path d="M23 61C25 45 55 45 57 61" className="restaurant-svg restaurant-svg-draw" />
                                                         <path d="M58 50V62M52 56H64" className="restaurant-svg restaurant-svg-draw" />
@@ -1652,7 +1654,7 @@ We provide LMS portal development services to create customized learning platfor
 
                                                 {/* Profile */}
                                                 {item.icon === "profile" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <circle cx="40" cy="28" r="9" className="restaurant-svg" />
                                                         <path d="M23 61C25 45 55 45 57 61" className="restaurant-svg restaurant-svg-draw" />
                                                     </svg>
@@ -1660,7 +1662,7 @@ We provide LMS portal development services to create customized learning platfor
 
                                                 {/* Cuisine */}
                                                 {item.icon === "cuisine" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <path d="M25 18V42M31 18V42M28 42V64" className="restaurant-svg restaurant-svg-draw" />
                                                         <path d="M25 18V31H31V18" className="restaurant-svg" />
                                                         <path d="M50 18C43 26 43 39 50 43V64" className="restaurant-svg restaurant-svg-draw" />
@@ -1670,7 +1672,7 @@ We provide LMS portal development services to create customized learning platfor
 
                                                 {/* Location */}
                                                 {item.icon === "location" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <path d="M40 66S21 47 21 33A19 19 0 0 1 59 33C59 47 40 66 40 66Z" className="restaurant-svg restaurant-svg-pin" />
                                                         <circle cx="40" cy="33" r="7" className="restaurant-svg" />
                                                     </svg>
@@ -1678,7 +1680,7 @@ We provide LMS portal development services to create customized learning platfor
 
                                                 {/* Menu */}
                                                 {item.icon === "menu" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <rect x="20" y="13" width="40" height="54" rx="5" className="restaurant-svg" />
                                                         <path d="M29 28H51M29 38H51M29 48H45M29 58H40" className="restaurant-svg restaurant-svg-draw" />
                                                     </svg>
@@ -1686,7 +1688,7 @@ We provide LMS portal development services to create customized learning platfor
 
                                                 {/* Food */}
                                                 {item.icon === "food" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <circle cx="40" cy="42" r="23" className="restaurant-svg restaurant-svg-rotate" />
                                                         <path d="M25 42H55M40 27V57" className="restaurant-svg restaurant-svg-draw" />
                                                         <circle cx="40" cy="42" r="5" className="restaurant-svg" />
@@ -1695,14 +1697,14 @@ We provide LMS portal development services to create customized learning platfor
 
                                                 {/* Reviews */}
                                                 {item.icon === "reviews" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <path d="M40 13L47 29L65 31L52 43L55 61L40 52L25 61L28 43L15 31L33 29L40 13Z" className="restaurant-svg restaurant-svg-star" />
                                                     </svg>
                                                 )}
 
                                                 {/* Offers */}
                                                 {item.icon === "offers" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <path d="M20 18H60V62H20V18Z" className="restaurant-svg" />
                                                         <path d="M27 30H53M27 40H53M27 50H44" className="restaurant-svg restaurant-svg-draw" />
                                                         <circle cx="55" cy="57" r="8" className="restaurant-svg" />
@@ -1712,7 +1714,7 @@ We provide LMS portal development services to create customized learning platfor
 
                                                 {/* Enquiry */}
                                                 {item.icon === "enquiry" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <path d="M14 20H66V55H32L20 65V55H14V20Z" className="restaurant-svg" />
                                                         <path d="M26 32H54M26 42H49" className="restaurant-svg restaurant-svg-draw" />
                                                     </svg>
@@ -1720,7 +1722,7 @@ We provide LMS portal development services to create customized learning platfor
 
                                                 {/* Booking */}
                                                 {item.icon === "booking" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <rect x="15" y="19" width="50" height="46" rx="5" className="restaurant-svg" />
                                                         <path d="M15 33H65" className="restaurant-svg" />
                                                         <path d="M27 14V24M53 14V24" className="restaurant-svg restaurant-svg-draw" />
@@ -1730,7 +1732,7 @@ We provide LMS portal development services to create customized learning platfor
 
                                                 {/* Ordering */}
                                                 {item.icon === "ordering" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <path d="M18 20H25L30 53H58L63 30H27" className="restaurant-svg restaurant-svg-draw" />
                                                         <circle cx="34" cy="62" r="4" className="restaurant-svg" />
                                                         <circle cx="54" cy="62" r="4" className="restaurant-svg" />
@@ -1740,7 +1742,7 @@ We provide LMS portal development services to create customized learning platfor
 
                                                 {/* Dashboard */}
                                                 {item.icon === "dashboard" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <rect x="13" y="14" width="54" height="52" rx="6" className="restaurant-svg" />
                                                         <path d="M13 30H67" className="svg" />
                                                         <path d="M25 53V44M39 53V37M53 53V32" className="restaurant-svg restaurant-svg-bars" />
@@ -1749,7 +1751,7 @@ We provide LMS portal development services to create customized learning platfor
 
                                                 {/* Admin */}
                                                 {item.icon === "admin" && (
-                                                    <svg viewBox="0 0 80 80">
+                                                    <svg viewBox="0 0 80 80" width="50" height="50">
                                                         <circle cx="40" cy="27" r="9" className="restaurant-svg" />
                                                         <path d="M23 61C25 45 55 45 57 61" className="restaurant-svg restaurant-svg-draw" />
                                                         <circle cx="59" cy="54" r="9" className="restaurant-svg" />
@@ -1758,29 +1760,51 @@ We provide LMS portal development services to create customized learning platfor
                                                 )}
                                             </div>
 
-                                            <div className="restaurant-app-title text-tenor">
+                                            <div className="restaurant-app-title text-tenor" style={{ fontSize: '14px', fontWeight: '600', color: '#053456', lineHeight: '1.3' }}>
                                                 {item.title}
                                             </div>
-
-                                          
                                         </div>
                                     ))}
                                 </div>
                             </div>
 
-                            {/* Right Side: 4 Columns for a Single Feature Image */}
-                            <div className="col-lg-4 mt-4 mt-lg-0">
+                            {/* Right Side: 5 Columns for a Single Feature Image with nice spacing */}
+                            <div className="col-lg-4 ps-lg-4 mt-4 mt-lg-0">
                                 <div className="restaurant-portal-side-image text-center">
-                                    <img
-                                        src="/assets/img/about/portal-feature-img.png"
-                                        alt="Restaurant Portal Feature"
-                                        className="img-fluid rounded shadow-sm"
-                                    />
+                                      <img
+                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+                                    alt="Directory Portal Development"
+                                    className="img-fluid w-100 shadow-sm"
+                                    style={{
+                                        borderRadius: '16px',
+                                        objectFit: 'cover',
+                                        height: '500px',
+                                        maxHeight: 'none',
+                                        minHeight: '100%',
+                                        boxShadow: '0 10px 30px rgba(5, 52, 86, 0.08)'
+                                    }}
+                                />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
+                {/* Responsive override for grid layout */}
+                <style dangerouslySetInnerHTML={{
+                    __html: `
+    @media (max-width: 991px) {
+        .restaurant-app-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+    @media (max-width: 575px) {
+        .restaurant-app-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 15px 10px !important;
+        }
+    }
+`}} />
             </div>
 
             <div
@@ -1789,7 +1813,7 @@ We provide LMS portal development services to create customized learning platfor
                 data-aos-once={true}
                 className="px-about-6-area pt-40 pb-40 pb-lg-110"
                 style={{
-                    overflowX: 'hidden', overflowY: 'hidden',  backgroundColor: "#f5f5f5",
+                    overflowX: 'hidden', overflowY: 'hidden', backgroundColor: "#f5f5f5",
 
                 }}
             >
@@ -1959,8 +1983,8 @@ We provide LMS portal development services to create customized learning platfor
                 data-aos="fade-up"
                 data-aos-delay={300}
                 data-aos-once={true}
-                className="px-about-6-area pt-40 pb-40 pb-lg-110 portal-growth-box" style={{overflowX:"hidden",overflowY:"hidden"}}  >
-         
+                className="px-about-6-area pt-40 pb-40 pb-lg-110 portal-growth-box" style={{ overflowX: "hidden", overflowY: "hidden" }}  >
+
                 <div className="container container-1550">
 
 
@@ -2045,12 +2069,12 @@ We provide LMS portal development services to create customized learning platfor
                                 className="portal-growth-visual"
                             >
                                 <img
-                                    src="/assets/images/shopify-development.jpg"
+                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
                                     alt="Shopify Development"
                                     className="img-fluid"
                                     style={{
                                         width: "100%",
-                                        height: "auto",
+                                        height: "400px",
                                         objectFit: "cover",
                                         borderRadius: "20px",
                                         display: "block",
@@ -2074,7 +2098,7 @@ We provide LMS portal development services to create customized learning platfor
                 data-aos="fade-up"
                 data-aos-delay={400}
                 data-aos-once={true}
-                className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{overflowX:"hidden",overflowY:"hidden"}}
+                className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ overflowX: "hidden", overflowY: "hidden" }}
             >
                 <div className="container container-1550">
                     <div className="row align-items-center">
@@ -2082,7 +2106,7 @@ We provide LMS portal development services to create customized learning platfor
                         <div className="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay={200}>
                             <div className="portal-cta-image text-center">
                                 <img
-                                    src="/assets/img/about/portal-cta.png"
+                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
                                     alt="Web Portal Development Chennai"
                                     className="img-fluid w-100"
                                     style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '450px' }}
