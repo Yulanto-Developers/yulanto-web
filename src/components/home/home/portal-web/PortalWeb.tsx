@@ -968,13 +968,13 @@ function PortalWeb() {
                                                 onMouseEnter={(e) => {
                                                     e.currentTarget.style.transform = "translateY(-4px)";
                                                     e.currentTarget.style.boxShadow = "0 10px 25px rgba(0, 0, 0, 0.08)";
-                                                    const iconBox = e.currentTarget.querySelector(".portal-services-icon");
+                                                    const iconBox = e.currentTarget.querySelector<HTMLElement>(".portal-services-icon");
                                                     if (iconBox) iconBox.style.color = "#53ae7d";
                                                 }}
                                                 onMouseLeave={(e) => {
                                                     e.currentTarget.style.transform = "translateY(0px)";
                                                     e.currentTarget.style.boxShadow = "none";
-                                                    const iconBox = e.currentTarget.querySelector(".portal-services-icon");
+                                                    const iconBox = e.currentTarget.querySelector<HTMLElement>(".portal-services-icon");
                                                     if (iconBox) iconBox.style.color = "#0056b3";
                                                 }}
                                             >
