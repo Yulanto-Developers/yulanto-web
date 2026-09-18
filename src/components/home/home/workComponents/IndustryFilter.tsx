@@ -209,6 +209,7 @@ export default function Industry() {
                                                 href={project.url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
+                                                title={` yulanto client ${project.name}`}
                                                 className="btn-view-project"
                                             >
 
