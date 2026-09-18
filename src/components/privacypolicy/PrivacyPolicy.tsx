@@ -102,7 +102,7 @@ const PrivacyPolicy = () => {
         Privacy Policy
       </h1>
       <p className="last-updated" data-aos="fade-up" data-aos-delay="200">
-        Last Updated: September 2026
+        Last Updated: October 2026
       </p>
 
       <p data-aos="fade-up" data-aos-delay="300">

@@ -8,7 +8,6 @@ import "@/assets/css/style1.css";
 import "@/assets/css/textAnimations.css";
 
 const LicenseCopyright = () => {
-
   // Initialize AOS directly
   useEffect(() => {
     AOS.init({
@@ -106,35 +105,62 @@ const LicenseCopyright = () => {
         License &amp; Copyright
       </h1>
       <p className="last-updated" data-aos="fade-up" data-aos-delay="200">
-        Last Updated: September 2026
+        Last Updated: October 2026
       </p>
 
       <p data-aos="fade-up" data-aos-delay="300">
-        Unless otherwise stated, all content and materials available on{' '}
-        <a href="http://www.yulanto.com/" target="_blank" rel="noopener noreferrer">
+        Unless otherwise stated, all content and materials available on{" "}
+        <a
+          href="http://www.yulanto.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           www.yulanto.com
-        </a>{' '}
-        are the property of{' '}
-        <strong>Yulanto Web Creations Pvt. Ltd.</strong> or are used with
-        appropriate permission, license, or authorization.
+        </a>{" "}
+        are the property of <strong>Yulanto Web Creations Pvt. Ltd.</strong> or
+        are used with appropriate permission, license, or authorization.
       </p>
 
       <p data-aos="fade-up" data-aos-delay="400">
         This includes, but is not limited to:
       </p>
       <ul>
-        <li data-aos="fade-up" data-aos-delay="450">Website design and layout</li>
-        <li data-aos="fade-up" data-aos-delay="500">Website content and text</li>
-        <li data-aos="fade-up" data-aos-delay="550">Logos, trademarks, and brand elements</li>
-        <li data-aos="fade-up" data-aos-delay="600">Graphics and illustrations</li>
-        <li data-aos="fade-up" data-aos-delay="650">Images and photographs</li>
-        <li data-aos="fade-up" data-aos-delay="700">Icons and visual elements</li>
-        <li data-aos="fade-up" data-aos-delay="750">Videos and animations</li>
-        <li data-aos="fade-up" data-aos-delay="800">Source code and custom code</li>
-        <li data-aos="fade-up" data-aos-delay="850">Scripts and functionality</li>
-        <li data-aos="fade-up" data-aos-delay="900">UI/UX designs</li>
-        <li data-aos="fade-up" data-aos-delay="950">Portfolio presentations</li>
-        <li data-aos="fade-up" data-aos-delay="1000">Case studies</li>
+        <li data-aos="fade-up" data-aos-delay="450">
+          Website design and layout
+        </li>
+        <li data-aos="fade-up" data-aos-delay="500">
+          Website content and text
+        </li>
+        <li data-aos="fade-up" data-aos-delay="550">
+          Logos, trademarks, and brand elements
+        </li>
+        <li data-aos="fade-up" data-aos-delay="600">
+          Graphics and illustrations
+        </li>
+        <li data-aos="fade-up" data-aos-delay="650">
+          Images and photographs
+        </li>
+        <li data-aos="fade-up" data-aos-delay="700">
+          Icons and visual elements
+        </li>
+        <li data-aos="fade-up" data-aos-delay="750">
+          Videos and animations
+        </li>
+        <li data-aos="fade-up" data-aos-delay="800">
+          Source code and custom code
+        </li>
+        <li data-aos="fade-up" data-aos-delay="850">
+          Scripts and functionality
+        </li>
+        <li data-aos="fade-up" data-aos-delay="900">
+          UI/UX designs
+        </li>
+        <li data-aos="fade-up" data-aos-delay="950">
+          Portfolio presentations
+        </li>
+        <li data-aos="fade-up" data-aos-delay="1000">
+          Case studies
+        </li>
         <li data-aos="fade-up" data-aos-delay="1050">
           Proposals, documents, and other original materials
         </li>
@@ -143,7 +169,9 @@ const LicenseCopyright = () => {
         </li>
       </ul>
 
-      <h2 className="text-tenor" data-aos="fade-up">1. Copyright Ownership</h2>
+      <h2 className="text-tenor" data-aos="fade-up">
+        1. Copyright Ownership
+      </h2>
       <p data-aos="fade-up" data-aos-delay="100">
         All original content created and published by Yulanto Web Creations Pvt.
         Ltd. is protected by applicable copyright and intellectual property
@@ -156,7 +184,9 @@ const LicenseCopyright = () => {
         permission from Yulanto Web Creations Pvt. Ltd.
       </p>
 
-      <h2 className="text-tenor" data-aos="fade-up">2. Permitted Use</h2>
+      <h2 className="text-tenor" data-aos="fade-up">
+        2. Permitted Use
+      </h2>
       <p data-aos="fade-up" data-aos-delay="100">
         Visitors may access and view the Website for personal, informational, or
         legitimate business purposes.
@@ -176,7 +206,8 @@ const LicenseCopyright = () => {
           Republish Yulanto&apos;s content on another website or platform
         </li>
         <li data-aos="fade-up" data-aos-delay="350">
-          Modify or create derivative works from Yulanto&apos;s original materials
+          Modify or create derivative works from Yulanto&apos;s original
+          materials
         </li>
         <li data-aos="fade-up" data-aos-delay="400">
           Use Yulanto&apos;s branding, logo, or trademarks without written
@@ -194,33 +225,40 @@ const LicenseCopyright = () => {
         </li>
       </ul>
 
-      <h2 className="text-tenor" data-aos="fade-up">3. Yulanto Logo &amp; Trademarks</h2>
+      <h2 className="text-tenor" data-aos="fade-up">
+        3. Yulanto Logo &amp; Trademarks
+      </h2>
       <p data-aos="fade-up" data-aos-delay="100">
-        <strong>Yulanto Web Creations</strong>, the Yulanto name, logo, taglines,
-        and other brand elements are the property of Yulanto Web Creations Pvt.
-        Ltd., unless otherwise stated.
+        <strong>Yulanto Web Creations</strong>, the Yulanto name, logo,
+        taglines, and other brand elements are the property of Yulanto Web
+        Creations Pvt. Ltd., unless otherwise stated.
       </p>
       <p data-aos="fade-up" data-aos-delay="200">
         Unauthorized use, reproduction, modification, or representation of
         Yulanto&apos;s trademarks or branding is prohibited.
       </p>
 
-      <h2 className="text-tenor" data-aos="fade-up">4. Portfolio &amp; Client Work</h2>
+      <h2 className="text-tenor" data-aos="fade-up">
+        4. Portfolio &amp; Client Work
+      </h2>
       <p data-aos="fade-up" data-aos-delay="100">
-        The portfolio, case studies, screenshots, project descriptions, and other
-        work displayed on the Yulanto Website may represent projects completed
-        for Yulanto&apos;s clients.
+        The portfolio, case studies, screenshots, project descriptions, and
+        other work displayed on the Yulanto Website may represent projects
+        completed for Yulanto&apos;s clients.
       </p>
       <p data-aos="fade-up" data-aos-delay="200">
-        Where applicable, the respective client names, logos, trademarks, images,
-        and other materials remain the property of their respective owners.
+        Where applicable, the respective client names, logos, trademarks,
+        images, and other materials remain the property of their respective
+        owners.
       </p>
       <p data-aos="fade-up" data-aos-delay="300">
         Yulanto does not claim ownership of a client&apos;s trademarks, logos,
         content, or other materials unless expressly agreed otherwise.
       </p>
 
-      <h2 className="text-tenor" data-aos="fade-up">5. Third-Party Content &amp; Licenses</h2>
+      <h2 className="text-tenor" data-aos="fade-up">
+        5. Third-Party Content &amp; Licenses
+      </h2>
       <p data-aos="fade-up" data-aos-delay="100">
         Certain content, software, plugins, themes, fonts, images, icons,
         libraries, APIs, or other materials used on the Website may be provided
@@ -235,7 +273,9 @@ const LicenseCopyright = () => {
         Yulanto does not claim ownership of third-party intellectual property.
       </p>
 
-      <h2 className="text-tenor" data-aos="fade-up">6. Website Development Projects</h2>
+      <h2 className="text-tenor" data-aos="fade-up">
+        6. Website Development Projects
+      </h2>
       <p data-aos="fade-up" data-aos-delay="100">
         For websites and digital products developed by Yulanto for clients,
         ownership and usage rights are governed by the applicable project
@@ -252,8 +292,8 @@ const LicenseCopyright = () => {
           Third-party software remains subject to its applicable license.
         </li>
         <li data-aos="fade-up" data-aos-delay="300">
-          Custom work specifically developed for the Client may be transferred to
-          the Client upon receipt of full payment.
+          Custom work specifically developed for the Client may be transferred
+          to the Client upon receipt of full payment.
         </li>
         <li data-aos="fade-up" data-aos-delay="350">
           Yulanto retains ownership of its pre-existing tools, frameworks,
@@ -266,7 +306,9 @@ const LicenseCopyright = () => {
         </li>
       </ul>
 
-      <h2 className="text-tenor" data-aos="fade-up">7. Unauthorized Use</h2>
+      <h2 className="text-tenor" data-aos="fade-up">
+        7. Unauthorized Use
+      </h2>
       <p data-aos="fade-up" data-aos-delay="100">
         If any content belonging to Yulanto is found to have been copied,
         reproduced, distributed, or used without authorization, Yulanto reserves
@@ -274,7 +316,9 @@ const LicenseCopyright = () => {
         other action available under applicable law.
       </p>
 
-      <h2 className="text-tenor" data-aos="fade-up">8. Copyright Infringement</h2>
+      <h2 className="text-tenor" data-aos="fade-up">
+        8. Copyright Infringement
+      </h2>
       <p data-aos="fade-up" data-aos-delay="100">
         If you believe that any material displayed on the Yulanto Website
         infringes your copyright or intellectual property rights, please contact
@@ -303,28 +347,34 @@ const LicenseCopyright = () => {
         complaints and take appropriate action where necessary.
       </p>
 
-      <h2 className="text-tenor" data-aos="fade-up">9. No Unauthorized Commercial Use</h2>
+      <h2 className="text-tenor" data-aos="fade-up">
+        9. No Unauthorized Commercial Use
+      </h2>
       <p data-aos="fade-up" data-aos-delay="100">
         The Website and its content may not be used for commercial purposes
         without prior written authorization from Yulanto Web Creations Pvt. Ltd.
       </p>
       <p data-aos="fade-up" data-aos-delay="200">
-        This includes copying Yulanto&apos;s website structure, content, designs,
-        proposals, service descriptions, marketing materials, or other original
-        work for use in a competing business.
+        This includes copying Yulanto&apos;s website structure, content,
+        designs, proposals, service descriptions, marketing materials, or other
+        original work for use in a competing business.
       </p>
 
-      <h2 className="text-tenor" data-aos="fade-up">10. Changes to License &amp; Copyright Policy</h2>
+      <h2 className="text-tenor" data-aos="fade-up">
+        10. Changes to License &amp; Copyright Policy
+      </h2>
       <p data-aos="fade-up" data-aos-delay="100">
-        Yulanto Web Creations Pvt. Ltd. reserves the right to update this License
-        &amp; Copyright Policy at any time.
+        Yulanto Web Creations Pvt. Ltd. reserves the right to update this
+        License &amp; Copyright Policy at any time.
       </p>
       <p data-aos="fade-up" data-aos-delay="200">
         Any updated version will be published on this page with a revised
         &quot;Last Updated&quot; date.
       </p>
 
-      <h2 className="text-tenor" data-aos="fade-up">11. Contact</h2>
+      <h2 className="text-tenor" data-aos="fade-up">
+        11. Contact
+      </h2>
       <p data-aos="fade-up" data-aos-delay="100">
         For copyright, licensing, or intellectual property-related enquiries,
         please contact:
@@ -336,8 +386,12 @@ const LicenseCopyright = () => {
 
       <div className="address-block">
         <p data-aos="fade-up" data-aos-delay="200">
-          Website:{' '}
-          <a href="http://www.yulanto.com/" target="_blank" rel="noopener noreferrer">
+          Website:{" "}
+          <a
+            href="http://www.yulanto.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             www.yulanto.com
           </a>
         </p>
@@ -362,8 +416,8 @@ const LicenseCopyright = () => {
       </div>
 
       <p className="copyright" data-aos="fade-up" data-aos-delay="100">
-        © 2015-2026 <strong>Yulanto Web Creations Pvt. Ltd.</strong> All Rights
-        Reserved.
+        © 2015-{new Date().getFullYear()}{" "}
+        <strong>Yulanto Web Creations Pvt. Ltd.</strong> All Rights Reserved.
       </p>
     </div>
   );
