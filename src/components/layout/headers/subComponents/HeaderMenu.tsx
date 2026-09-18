@@ -27,6 +27,7 @@ export default function HeaderMenu() {
                             {item.type === "dropdown" && (
                                 <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
                             )}
+
                         </a>
                     ) : (
                         <a className="menu-link" href={item.href}>
@@ -46,18 +47,47 @@ export default function HeaderMenu() {
                                     const hasSubLinks = link.subLinks && link.subLinks.length > 0;
                                     return (
                                         <li key={`${link.href}-${index}`} className="sidebar-item">
-                                            <a href={link.href} className="sidebar-link">
-                                                <span className="sidebar-link-content">
-                                                    <FontAwesomeIcon
-                                                        icon={faAnglesRight}
-                                                        className="submenu-icon"
-                                                    />
-                                                    {link.label}
-                                                </span>
-                                                {hasSubLinks && (
-                                                    <FontAwesomeIcon icon={faChevronRight} className="sidebar-arrow" />
-                                                )}
-                                            </a>
+                                            {link.active ? (
+                                                <a href={link.href} className="sidebar-link">
+                                                    <span className="sidebar-link-content">
+                                                        <FontAwesomeIcon
+                                                            icon={faAnglesRight}
+                                                            className="submenu-icon"
+                                                        />
+                                                        {link.label}
+                                                    </span>
+
+                                                    {hasSubLinks && (
+                                                        <FontAwesomeIcon
+                                                            icon={faChevronRight}
+                                                            className="sidebar-arrow"
+                                                        />
+                                                    )}
+                                                </a>
+                                            ) : (
+                                                <a
+                                                    data-href={link.href}
+                                                    href={link.href}
+                                                    tabIndex={0}
+                                                    className="sidebar-link"
+                                                >
+                                                    <span className="sidebar-link-content">
+                                                        <FontAwesomeIcon
+                                                            icon={faAnglesRight}
+                                                            className="submenu-icon"
+                                                        />
+                                                        {link.label}
+                                                    </span>
+
+                                                    {hasSubLinks && (
+                                                        <FontAwesomeIcon
+                                                            icon={faChevronRight}
+                                                            className="sidebar-arrow"
+                                                        />
+                                                    )}
+                                                </a>
+                                            )}
+
 
                                             {/* Right Side Pane */}
                                             {hasSubLinks && (

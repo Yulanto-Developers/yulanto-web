@@ -333,7 +333,7 @@ function Landingpagedesgin() {
                 data-aos-delay={400}
                 data-aos-once={true}
             >
-                <div className="container mt-50 mb-50">
+                <div className="container  mb-50">
 
                     <div className="row">
 
