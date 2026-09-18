@@ -256,7 +256,34 @@ const data = [
     currentPage: "AI Web Design & Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
+  {
+    path: "/privacy",
+    title: "Privacy",
  
+    currentPage: "Privacy",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+    {
+    path: "/disclaimer",
+    title: "Disclaimer",
+ 
+    currentPage: "Disclaimer",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+    {
+    path: "/termsconditions",
+    title: "Terms Conditions",
+ 
+    currentPage: "Terms Conditions",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+  {
+    path: "/license",
+    title: "License",
+ 
+    currentPage: "License",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
  
  
  

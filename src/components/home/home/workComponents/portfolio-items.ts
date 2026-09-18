@@ -68,7 +68,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: web1.src,
     category: "website",
     date: "Nov, 2024",
-    description: "Website, UX design, UI best practices, ",
+    description: "Website, UX design, UI best practices ",
   },
   {
     id: "web-2",
@@ -120,7 +120,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "web-8",
-    title: "GTA Balloon Desginers",
+    title: "GTA Balloon Designers",
     image: web8.src,
     category: "website",
     date: "Jan, 2024",
@@ -268,7 +268,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "bro-2",
-    title: "Sky Petro Chem PTE LTD",
+    title: "Sky Petro Chem Pte. Ltd.",
     image: bro2.src,
     category: "brochure",
     date: "Oct, 2023",
@@ -292,7 +292,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "bro-5",
-    title: "Altis Calserv PTE LTD",
+    title: "Altis Calserv Pte. Ltd.",
     image: bro5.src,
     category: "brochure",
     date: "Oct, 2023",
@@ -478,7 +478,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "flyer-4",
-    title: "Rithusa Consultancy Servicrd",
+    title: "Rithusa Consultancy Services",
     image: flyers4.src,
     category: "flyers",
     date: "Oct, 2023",
@@ -486,7 +486,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "flyer-5",
-    title: "Sky Petro Chem PTE LTD",
+    title: "Sky Petro Chem Pte. Ltd.",
     image: flyers5.src,
     category: "flyers",
     date: "Oct, 2023",
