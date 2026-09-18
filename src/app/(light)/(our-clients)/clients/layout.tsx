@@ -8,9 +8,9 @@ import "../../../../components/ourclients/clientpage.css";
 
 import { generateSeo } from "@/lib/seo";
 export const metadata = generateSeo({
-  title: "Web Design & Development from Chennai for USA Companies | Yulanto",
+  title: "Our Clients | Global Website Design & Development Services | Yulanto",
   description:
-    "Yulanto partners with USA companies to create professional web design, development and digital experiences designed to support business growth.",
+    "We serve clients across the USA, UAE, Singapore, UK, Europe and Worldwide with professional website design, development and digital solutions.",
 });
 export default function DesignStudioLayout({
   children,

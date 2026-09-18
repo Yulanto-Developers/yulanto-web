@@ -607,7 +607,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 60px 0;
+  padding: 40px 0 10px;
   background: #fff;
 }
 
@@ -616,11 +616,12 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
   z-index: 2;
+  border-bottom: 1px solid #6b7280;
 }
 
 /* Background Text */

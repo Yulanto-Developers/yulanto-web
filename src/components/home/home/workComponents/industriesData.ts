@@ -68,7 +68,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'interior',
-    label: 'Interior & Architect',
+    label: 'Interior & Architecture ',
     icon: Paintbrush,
     image: false,
     industryImg: '/assets/img/all-works/head-img/interior.jpg',
@@ -81,7 +81,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'engineering',
-    label: 'Engineering & Electronic',
+    label: 'Engineering & Electronics',
     icon: Wrench,
     image: false,
     industryImg: '/assets/img/all-works/head-img/engineering.jpg',
@@ -147,7 +147,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   // },
   {
     id: 'import',
-    label: 'Import & Exports',
+    label: 'Imports & Exports',
     icon: Ship,
     image: false,
     industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
@@ -160,7 +160,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'logistics',
-    label: 'Logistic',
+    label: 'Logistics',
     icon: Truck,
     image: false,
     industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
@@ -173,7 +173,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'education',
-    label: 'Education & Institute',
+    label: 'Education & Institutions',
     icon: GraduationCap,
     image: false,
     industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
@@ -186,7 +186,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'tour',
-    label: 'Tour & Travels',
+    label: 'Tours & Travel',
     icon: Plane,
     image: true,
     industryImg: '/assets/img/industry/tour.jpg',
@@ -264,7 +264,7 @@ export const INDUSTRIES: IndustryCategory[] = [
   },
   {
     id: 'manufacturer',
-    label: 'Product Manufacturer',
+    label: 'Product Manufacturers',
     icon: Factory,
     image: false,
     industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
@@ -358,7 +358,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       },
       {
         id: 'typhoonelec',
-        name: 'Typoon Electronic',
+        name: 'Typhoon Electronics',
         logo: '/assets/img/all-works/new/typhoonelec.png',
         location: 'Chennai, India',
         url: 'https://typhoonelec.com/',

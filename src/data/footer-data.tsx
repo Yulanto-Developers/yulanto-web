@@ -24,9 +24,10 @@ export const socialLinks = [
 ];
 
 export const quickLinks = [
-  { label: "Payment & Refund Policy", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms & Conditions", href: "#" },
-  { label: "License & Copyright", href: "#" },
+  { label: "Terms & Conditions", href: "/termsconditions" },
+  { label: "License & Copyright", href: "/license" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Disclaimer", href: "/disclaimer" },
+  
 
 ];

@@ -28,6 +28,8 @@ import img10 from '@/assets/img/case-study/harithams-2.jpg'
 import img11 from '@/assets/img/case-study/veedalayam-1.jpg'
 import img12 from '@/assets/img/case-study/veedalayam-2.jpg'
 
+import "@/assets/css/style1.css";
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 /* =========================================================
@@ -87,7 +89,7 @@ export const innerClient = [
       "Optimized presentation of wildlife photography and eco-tourism services",
     ],
     result: 'The redesigned Naturographers website delivers a premium, immersive, and SEO-friendly digital experience that combines wildlife photography, eco-tourism, safari adventures, and cinematic storytelling.',
-    tech: ['Web Design | UI/UX Design | Admin Panel Development | Responsive Design | SEO Optimisation | Image Gallery Integration | Tour Booking System | Rental Camera | Eco-Tourism Solutions | Performance Optimisation'],
+    tech: ['Web Design | UI/UX Design | Admin Panel Development | Responsive Design | SEO Optimization | Image Gallery Integration | Tour Booking System | Rental Camera | Eco-Tourism Solutions | Performance Optimization'],
     images: [
       img1.src, img2.src
     ],
@@ -135,7 +137,7 @@ export const innerClient = [
       "SEO-friendly website structure and content organisation",
     ],
     result: 'The redesigned CORE Energy Systems website delivers a professional, technically focused, responsive, and SEO-friendly digital experience. It makes CORE’s complex engineering capabilities easier to understand while providing a structured platform to showcase its projects, sectors, innovation, global operations, and industry expertise.',
-    tech: ['Website Design | UI/UX Design | Responsive Web Development | Corporate Website Development | SEO-Friendly Website Structure | Content Architecture | Performance Optimisation'],
+    tech: ['Website Design | UI/UX Design | Responsive Web Development | Corporate Website Development | SEO-Friendly Website Structure | Content Architecture | Performance Optimization'],
     images: [
       img3.src, img4.src
     ],
@@ -190,7 +192,7 @@ export const innerClient = [
       "Clear corporate information architecture",
     ],
     reuslt: 'The new GRAYT website delivers a modern, responsive, SEO-friendly, and conversion-focused digital experience. It provides a structured platform for showcasing GRAYT\'s technology products while making product discovery, enquiries, customer support, and brand exploration more convenient.',
-    tech: ['Website Design | UI/UX Design | Responsive Web Development | Corporate Website Development | Product Catalogue Website | Technology Website Design | SEO-Friendly Website Structure | Product Showcase | Enquiry Management | Customer Support Integration | Warranty & Diagnostic Features | Mobile Optimisation | Performance Optimisation'],
+    tech: ['Website Design | UI/UX Design | Responsive Web Development | Corporate Website Development | Product Catalog Website | Technology Website Design | SEO-Friendly Website Structure | Product Showcase | Enquiry Management | Customer Support Integration | Warranty & Diagnostic Features | Mobile Optimization | Performance Optimization'],
     images: [
       img5.src, img6.src
     ],
@@ -241,7 +243,7 @@ export const innerClient = [
     ],
     result: 'The new Freight Digital FZC website delivers a professional, modern, responsive, SEO-friendly, and conversion-focused digital experience specifically tailored to the global freight and logistics industry.',
     tech: [
-      'Website Design | UI/UX Design | Responsive Web Development | Corporate Website Development | Logistics Website Design | Freight Forwarding Website | SEO-Friendly Website Structure | Digital Marketing Website | Lead Generation | Service Showcase | Content Architecture | Mobile Optimisation | Performance Optimisation | Conversion-Focused Design'
+      'Website Design | UI/UX Design | Responsive Web Development | Corporate Website Development | Logistics Website Design | Freight Forwarding Website | SEO-Friendly Website Structure | Digital Marketing Website | Lead Generation | Service Showcase | Content Architecture | Mobile Optimization | Performance Optimization | Conversion-Focused Design'
     ],
     images: [
       img7.src, img8.src
@@ -291,7 +293,7 @@ export const innerClient = [
     ],
     result: 'The new Harithams website delivers a premium, modern, responsive, SEO-friendly, and conversion-focused digital experience for a real estate and construction brand.',
     tech: [
-      'Website Design | UI/UX Design | Responsive Web Development | Real Estate Website Design | Property Project Showcase | Real Estate SEO Structure | Lead Generation | Project Catalogue | Property Enquiry Integration | Brochure Integration | Mobile Optimisation | Performance Optimisation | Content Architecture | Conversion-Focused Design'
+      'Website Design | UI/UX Design | Responsive Web Development | Real Estate Website Design | Property Project Showcase | Real Estate SEO Structure | Lead Generation | Project Catalog | Property Enquiry Integration | Brochure Integration | Mobile Optimization | Performance Optimization | Content Architecture | Conversion-Focused Design'
     ],
     images: [
       img9.src, img10.src
@@ -344,7 +346,7 @@ export const innerClient = [
     ],
     result: 'The new Vedaalayam website delivers a modern, inspiring, responsive, SEO-friendly, and education-focused digital experience.',
     tech: [
-      'Website Design | UI/UX Design | Responsive Web Development | Education Website Design | Institute Website Development | SEO-Friendly Website Structure | Program Showcase | Content Architecture | Student-Focused UX | Lead Generation | Call-to-Action Optimisation | Mobile Optimisation | Performance Optimisation | Education SEO'
+      'Website Design | UI/UX Design | Responsive Web Development | Education Website Design | Institute Website Development | SEO-Friendly Website Structure | Program Showcase | Content Architecture | Student-Focused UX | Lead Generation | Call-to-Action Optimization | Mobile Optimization | Performance Optimization | Education SEO'
     ],
     images: [
       img11.src, img12.src
@@ -541,6 +543,7 @@ const MajorInnerItems = ({
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      title={title}
                       className="cs-visit-btn btn"
                       style={{
                         display: "inline-block",
@@ -729,6 +732,15 @@ const MajorClientService = () => {
       className="major-client-service-area"
     >
       <div className="container container-1830">
+
+        <h1
+              className="ft-23 mt-0 mb-3 text-tenor"
+              data-aos="text-reveal"
+              data-aos-delay="100"
+            >
+              Web Design & Development Case Studies:-
+            </h1> 
+        
         <div className="row major-client-service-row">
           {/* LEFT SIDE */}
 
