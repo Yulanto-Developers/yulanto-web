@@ -59,69 +59,6 @@ export interface DirectoryFeature {
     icon: string;
 }
 
-export const directoryPortalFeatures: DirectoryFeature[] = [
-    {
-        id: 1,
-        title: "Business Registration",
-        icon: "business-registration",
-    },
-    {
-        id: 2,
-        title: "Business Profiles",
-        icon: "business-profile",
-    },
-    {
-        id: 3,
-        title: "Category Management",
-        icon: "categories",
-    },
-    {
-        id: 4,
-        title: "Location-Based Search",
-        icon: "location-search",
-    },
-    {
-        id: 5,
-        title: "Google Maps Integration",
-        icon: "maps",
-    },
-    {
-        id: 6,
-        title: "Search and Filtering",
-        icon: "search-filter",
-    },
-    {
-        id: 7,
-        title: "Customer Reviews and Ratings",
-        icon: "reviews",
-    },
-    {
-        id: 8,
-        title: "Featured Listings",
-        icon: "featured",
-    },
-    {
-        id: 9,
-        title: "Subscription Packages",
-        icon: "subscription",
-    },
-    {
-        id: 10,
-        title: "Lead Enquiry Forms",
-        icon: "enquiry",
-    },
-    {
-        id: 11,
-        title: "Vendor Dashboards",
-        icon: "dashboard",
-    },
-    {
-        id: 12,
-        title: "Admin Management",
-        icon: "admin",
-    },
-];
-
 
 
 

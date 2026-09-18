@@ -69,10 +69,8 @@ export default function GraphicDesignSection() {
         <div data-aos="fade-up" data-aos-delay="300">
           <p className="text-figtree text-black mt-4">
             From a simple business website to a feature-rich corporate portal or eCommerce store, our WordPress website design and development services are tailored to your business goals. We combine modern UI/UX, responsive design, performance optimization, and easy content management to create websites that look professional and work smoothly across devices.
-                        Whether you need a new WordPress website, redesign an existing website, or require ongoing WordPress support, our experienced team can help.
-
+            Whether you need a new WordPress website, redesign an existing website, or require ongoing WordPress support, our experienced team can help.
           </p>
-        
         </div>
 
       </div>
@@ -80,7 +78,7 @@ export default function GraphicDesignSection() {
   );
 }
 
-/* --- Fixed Vertical Marquee Component with Balanced Column Speeds --- */
+/* --- Fixed Vertical Marquee Component with Staggered Columns --- */
 
 const ThreeDMarquee = ({
   images,
@@ -89,11 +87,18 @@ const ThreeDMarquee = ({
   images: string[];
   className?: string;
 }) => {
-  // Split images into 4 vertical columns cleanly and triple them for seamless continuous loop
-  const chunkSize = Math.ceil(images.length / 4);
+  // Calculate chunk size and offset each column by 3 items so the 4th column starts 3 images further down
+  const baseChunkSize = Math.ceil(images.length / 4);
   const chunks = Array.from({ length: 4 }, (_, colIndex) => {
-    const start = colIndex * chunkSize;
-    const slice = images.slice(start, start + chunkSize);
+    const startIndex = (colIndex * 3) % images.length;
+    const slice: string[] = [];
+    
+    // Gather baseChunkSize items wrapping around the array seamlessly if needed
+    for (let i = 0; i < baseChunkSize; i++) {
+      slice.push(images[(startIndex + i) % images.length]);
+    }
+    
+    // Triple them for seamless continuous loop animation
     return [...slice, ...slice, ...slice]; 
   });
 

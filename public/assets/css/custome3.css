@@ -1,6 +1,6 @@
 .web-portal-animation {
     width: 100%;
-    padding: 0 0 70px;
+    padding: 0 0 20px;
     overflow: hidden;
 }
 
@@ -251,7 +251,7 @@
 @media (max-width: 991px) {
 
     .web-portal-animation {
-        padding: 20px 0 50px;
+        padding: 20px 0 20px;
     }
 
 }
@@ -262,7 +262,7 @@
 @media (max-width: 767px) {
 
     .web-portal-animation {
-        padding: 10px 0 30px;
+        padding: 10px 0 20px;
     }
 
     .portal-svg {
@@ -2101,7 +2101,7 @@
 .portal-growth-box {
     position: relative;
     overflow: hidden;
-    padding: 90px 80px;
+  
     background: #053456;
     color: #fff;
 }
@@ -2496,9 +2496,7 @@
 
 @media (max-width: 991px) {
 
-    .portal-growth-box {
-        padding: 65px 40px;
-    }
+  
 
     .portal-growth-content h2 {
         font-size: 40px;
@@ -2533,9 +2531,7 @@
 
 @media (max-width: 575px) {
 
-    .portal-growth-box {
-        padding: 50px 25px;
-    }
+  
 
     .portal-growth-content h2 {
         font-size: 32px;

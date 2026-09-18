@@ -8,7 +8,8 @@ interface ContentLayout {
 }
 function IntroContent({ leftTitle, rightTitle1, rightTitle2, description, css }: ContentLayout) {
     return (
-        <div className={`container ${css || 'my-5'}`}>
+        <div  className="container container-1550"
+>
 
             <div className="row align-items-center">
                 <div className="col-xl-3">
