@@ -106,7 +106,7 @@ const Disclaimer = () => {
         Disclaimer
       </h1>
       <p className="last-updated" data-aos="fade-up" data-aos-delay="200">
-        Last Updated: September 2026
+        Last Updated: October 2026
       </p>
 
       <p data-aos="fade-up" data-aos-delay="300">
@@ -397,7 +397,7 @@ const Disclaimer = () => {
       </div>
 
       <p className="copyright" data-aos="fade-up" data-aos-delay="100">
-        © 2015-2026 Yulanto Web Creations Pvt. Ltd. All Rights Reserved.
+         © 2015-{new Date().getFullYear()}{" "} Yulanto Web Creations Pvt. Ltd. All Rights Reserved.
       </p>
     </div>
   );
