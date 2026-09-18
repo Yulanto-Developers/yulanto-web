@@ -8,7 +8,13 @@ import '@/assets/css/textAnimations.css';
 import "@/assets/css/style.css";
 import "@/assets/css/style1.css";
 import "glightbox/dist/css/glightbox.css";
+import { generateSeo } from "@/lib/seo";
 
+export const metadata = generateSeo({
+  title: "Privacy Policy | Yulanto Web Creations",
+  description:
+    "Learn how Yulanto Web Creations collects, uses, stores, and protects your personal information in our Privacy Policy.",
+});
 export default function AboutUsLayout({ children }: {
 
     children: React.ReactNode;

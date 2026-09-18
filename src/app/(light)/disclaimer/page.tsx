@@ -18,7 +18,7 @@ export default function CareersPage() {
                 },
                 {
                   name: "Our Story",
-                  url: "https://yulanto-web.vercel.app/uae",
+                  url: "https://yulanto-web.vercel.app/disclaimer",
                 },
               ]}
             />
