@@ -509,9 +509,10 @@ const LandmarkPin: React.FC<LandmarkPinProps> = ({ name, type, top, left }) => {
 interface InteractiveMapProps {
   locationTitle?: string;
   locationAddress?: string;
+  minHeight?: number | string; 
 }
 
-const InteractiveMap: React.FC<InteractiveMapProps> = () => {
+const InteractiveMap: React.FC<InteractiveMapProps> = ({ minHeight = 450 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const x = useMotionValue(0);
@@ -553,7 +554,7 @@ const InteractiveMap: React.FC<InteractiveMapProps> = () => {
         position: "relative",
         width: "100%",
         height: "100%",
-        minHeight: "450px",
+        minHeight, 
         borderRadius: "24px",
         overflow: "hidden",
         perspective: "1200px",
@@ -690,10 +691,15 @@ export const ContactLocationSection: React.FC<ContactLocationProps> = ({
       }}
     >
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
-        <h4 className="px-about-title mb-20 text-center" style={{ marginBottom: "32px" }}>
+        <h4 className="px-about-title mb-10 text-center" style={{ marginBottom: "12px" }}>
           <span className="text-blue-about">Get In Touch </span> With Us
         </h4>
-
+        <h1  className="ft-23 mt-0 mb-4 text-center text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"
+                >
+                 Contact Us for Web Design & Digital Marketing Solutions
+        </h1>
         {Array.from({ length: 12 }).map((_, i) => (
           <FloatingParticle key={i} index={i} />
         ))}
@@ -747,6 +753,7 @@ export const ContactLocationSection: React.FC<ContactLocationProps> = ({
             <InteractiveMap
               locationTitle={locationTitle}
               locationAddress={locationAddress}
+              minHeight={isMobile ? 260 : 450}
             />
           </div>
         </div>

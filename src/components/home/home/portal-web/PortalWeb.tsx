@@ -1031,9 +1031,18 @@ function PortalWeb() {
                     </div>
                 </div>
             </section>
+  <div
+                data-aos="fade-up"
+                data-aos-delay={400}
+                data-aos-once={true}
+                className="mt-0 "
+            >
 
 
-            <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ background: '#fff' }}>
+
+            </div>
+
+            <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ background: '#fff', overflowX: 'hidden', overflowY: 'hidden'  }}>
                 <div className="container container-1550">
                     <div className="row align-items-center" data-aos="fade-up">
                         <div className="col-xl-3">
@@ -1320,7 +1329,7 @@ function PortalWeb() {
                 data-aos-once={true}
                 className=""
             >
-                <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ backgroundColor: '#f5f5f5' }}>
+                <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{ backgroundColor: '#f5f5f5', overflowX: 'hidden' }}>
                     <div className="container">
                         {/* Top Header Row */}
                         <div className="row align-items-center mb-40" data-aos="fade-up">
@@ -1675,8 +1684,8 @@ function PortalWeb() {
                 data-aos="fade-up"
                 data-aos-delay={300}
                 data-aos-once={true}
-                className="px-about-6-area pt-40 pb-40 pb-lg-110 portal-growth-box"
-            >
+                className="px-about-6-area pt-40 pb-40 pb-lg-110 portal-growth-box" style={{overflowX:"hidden",overflowY:"hidden"}}  >
+         
                 <div className="container container-1550">
 
 
@@ -1790,7 +1799,7 @@ function PortalWeb() {
                 data-aos="fade-up"
                 data-aos-delay={400}
                 data-aos-once={true}
-                className="px-about-6-area pt-40 pb-40 pb-lg-110"
+                className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{overflowX:"hidden",overflowY:"hidden"}}
             >
                 <div className="container container-1550">
                     <div className="row align-items-center">

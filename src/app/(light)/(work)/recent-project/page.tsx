@@ -4,13 +4,12 @@ import { Metadata } from "next";
 import breadcrumbimg from "../../../../../public/assets/images/breadcrumb/Company-Overview.jpg"
 import { RecentProject } from "@/components/home/home/workComponents";
 import BreadcurmbData from "@/components/breadcrum/sections/breadcrumbdata";
-export const metadata: Metadata = {
-    title: "Recent Work",
-};
+
 
 const page = () => {
     return (
         <>
+        
             <BreadcurmbData />
             <RecentProject/>
         </>

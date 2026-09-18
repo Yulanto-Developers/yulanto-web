@@ -35,6 +35,7 @@ export default function SingaporeMalaysiaClientsPage() {
         heroTitleRest=" Services in the UK"
         heroDescription={`At Yulanto Web Creations, we provide professional digital solutions to businesses across the United Kingdom, helping startups, SMEs, established companies, and organisations build a strong digital presence and achieve sustainable online growth. From website design and web development to SEO, digital marketing, eCommerce, branding, and ongoing website maintenance, we offer complete digital solutions tailored to your business goals.
 Whether you are launching a new business, redesigning an existing website, expanding your online presence, or looking to generate more leads, our experienced team delivers reliable, user-focused, and result-oriented solutions for businesses across the UK.`}
+ heroH1="Reliable Web Solutions for Growing UK Companies"
         aboutImage={Image2}
         aboutTitleHighlight="Our Digital Services "
         aboutTitleRest="in the UK"

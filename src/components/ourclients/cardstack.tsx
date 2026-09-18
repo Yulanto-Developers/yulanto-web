@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { SquareArrowOutUpRight } from "lucide-react";
 import Link from "next/link";
 
+
 export type CardStackItem = {
   id: string | number;
   title: string;
@@ -424,7 +425,7 @@ function DefaultFanCard({ item }: { item: CardStackItem; active: boolean }) {
           {item.title}
         </div>
         {item.description ? (
-          <div
+          <div 
             style={{
               marginTop: "4px",
               fontSize: "14px",

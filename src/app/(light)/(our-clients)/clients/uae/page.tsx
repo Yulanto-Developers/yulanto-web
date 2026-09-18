@@ -48,6 +48,7 @@ export default function USAClientsPage() {
         heroTitleRest=" Company in UAE"
         heroDescription={`Yulanto Web Creations provides professional web design, website development, e-commerce, digital marketing, SEO, and custom digital solutions in UAE. We help startups, SMEs, established businesses, and organizations build a strong digital presence, attract the right audience, generate quality leads, and achieve sustainable business growth.
 From a modern corporate website to a powerful e-commerce platform or a complete digital marketing strategy, our team delivers end-to-end digital solutions tailored to your business goals and the UAE market.`}
+heroH1="Web Designers & Developers for UAE Companies"
         aboutImage={Image2}
         aboutTitleHighlight="Our Digital"
         aboutTitleRest=" Services in UAE"

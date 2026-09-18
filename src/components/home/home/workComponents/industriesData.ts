@@ -341,12 +341,12 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         borderClass: 'brb'
       },
       {
-        id: 'klitech',
-        name: 'KL iTech',
-        logo: '/assets/img/all-works/new/klitech.png',
-        location: 'Chennai, India',
-        url: 'https://klitech.in/',
-        borderClass: 'brb'
+        id: 'jpr',
+        name: 'JPR Steels',
+        logo: '/assets/img/all-works/new/jpr.png',
+        location: 'Kancheepuram, India',
+        url: 'https://www.jprsteels.com/',
+        borderClass: 'brl'
       },
       {
         id: 'Sovereign',
@@ -413,12 +413,12 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         borderClass: 'brl'
       },
       {
-        id: 'jpr',
-        name: 'JPR Steels',
-        logo: '/assets/img/all-works/new/jpr.png',
-        location: 'Kancheepuram, India',
-        url: 'https://www.jprsteels.com/',
-        borderClass: 'brl'
+        id: 'klitech',
+        name: 'KL iTech',
+        logo: '/assets/img/all-works/new/klitech.png',
+        location: 'Chennai, India',
+        url: 'https://klitech.in/',
+        borderClass: 'brb'
       },
     ],
   },

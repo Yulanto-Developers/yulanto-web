@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
+import "@/assets/css/style1.css";
 interface ContentLayout {
-    leftTitle: string;
-    rightTitle1: string;
-    rightTitle2: string;
-    description: string;
-    css?: string;
+  leftTitle: string;
+  rightTitle1: string;
+  rightTitle2: string;
+  description: string;
+  css?: string;
 }
 function IntroContent({ leftTitle, rightTitle1, rightTitle2, description, css }: ContentLayout) {
     return (
-        <div  className="container container-1550"
->
+        <div className={`container ${css || 'my-5'}`}>
 
             <div className="row align-items-center">
                 <div className="col-xl-3">
@@ -18,21 +18,30 @@ function IntroContent({ leftTitle, rightTitle1, rightTitle2, description, css }:
                     </span>
                 </div>
 
-                <div className="col-xl-9">
-                    <div className="px-project-title-box">
+        <div className="col-xl-9">
+          <div className="px-project-title-box">
+            <h4 className="px-about-title mb-20">
+              <span className="text-blue-about">{rightTitle1} </span>
+              {rightTitle2}
+            </h4>
 
-                        <h4 className="px-about-title mb-20">
-                            <span className="text-blue-about">{rightTitle1} {' '}</span>{rightTitle2}
-                        </h4>
+            <h1
+              className="ft-23 mt-0 mb-2  text-tenor"
+              data-aos="text-reveal"
+              data-aos-delay="100"
+            >
+              Web Design & Development Case Studies
+            </h1>
 
-                        <p className="text-figtree text-dark mt-2 font-paragraph-cls" dangerouslySetInnerHTML={{ __html: description }}>
-                           
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <p
+              className="text-figtree text-dark mt-2 font-paragraph-cls"
+              dangerouslySetInnerHTML={{ __html: description }}
+            ></p>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
 export default IntroContent;

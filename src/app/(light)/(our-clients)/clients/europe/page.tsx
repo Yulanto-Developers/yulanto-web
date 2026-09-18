@@ -38,6 +38,7 @@ export default function USAClientsPage() {
         heroTitleRest=" North America, the Middle East & Asia"
         heroDescription={`At Yulanto Web Creations, we provide comprehensive digital solutions to businesses across Europe, North America, the Middle East, and Asia. From innovative website design and custom web development to SEO, digital marketing, eCommerce, branding, and ongoing website support, we help businesses build a strong digital presence and achieve sustainable online growth.
 Whether you are a startup, small business, growing company, professional organization, or established enterprise, our experienced team delivers scalable, user-friendly, and results-driven digital solutions tailored to your business goals and target market.`}
+heroH1="best web design firms for Europe & East Windsor"
         aboutImage={Image2}
         aboutTitleHighlight="Our Global Digital Services Across "
 

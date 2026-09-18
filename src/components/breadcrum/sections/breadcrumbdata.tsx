@@ -1,9 +1,9 @@
 "use client";
-
+ 
 import { usePathname } from "next/navigation";
 import Breadcrumb from "@/components/breadcrum/sections/breadcrumb";
-
-
+ 
+ 
 const data = [
   {
     path: "/our-story",
@@ -59,7 +59,7 @@ const data = [
     title: "Recent Projects",
     currentPage: "Recent Projects",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
-
+ 
   },
   {
     path: "/portfolio",
@@ -85,7 +85,7 @@ const data = [
     currentPage: "SEO",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-
+ 
   {
     path: "/offpageseo",
     title: "Off Page Seo",
@@ -122,14 +122,14 @@ const data = [
     currentPage: "Custom Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-
+ 
   {
     path: "/website-development/php-website-development",
     title: "PHP Website Development",
     currentPage: "PHP Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-
+ 
   {
     path: "/website-development/react-website-development",
     title: "React Website Development",
@@ -143,7 +143,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-
+ 
     path: "/web-design/corporate-website-design",
     title: " Corporate Website Design",
     currentPage: " Corporate Website Design ",
@@ -170,65 +170,65 @@ const data = [
   {
     path: "/logo-design&branding",
     title: " Logo Design & Branding",
-
+ 
     currentPage: "Logo Design & Branding",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
     path: "/company-profile-design",
     title: "Brochure & Company Profile Design",
-
+ 
     currentPage: "Brochure & Company Profile Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
     path: "/company-profile-design",
     title: "Brochure & Company Profile Design",
-
+ 
     currentPage: "Logo Design & branding",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
     path: "/flyer-poster-design",
     title: "Flyer & Poster Design",
-
+ 
     currentPage: "Flyer & Poster Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-
+ 
   {
     path: "/Packaging-Design",
     title: " Packaging Design",
-
+ 
     currentPage: " Packaging Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-
+ 
   {
     path: "/Social-Media-Creative-Design",
     title: "Social Media Creative Designs",
-
+ 
     currentPage: "Social Media Creative Designs",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-
-
+ 
+ 
   {
     path: "/WordPress-Development",
     title: "WordPress Development",
-
+ 
     currentPage: "WordPress Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
     path: "/WooCommerce-Development",
-
+ 
     title: "WooCommerce Development",
-
+ 
     currentPage: "WooCommerce Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-
+ 
   {
     path: "/custome-ecommerce-development",
     title: "Custome Ecommerce Development",
@@ -236,7 +236,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-
+ 
     path: "/portal-web-development",
     title: "Portal Web Development",
     currentPage: "Portal Web Development",
@@ -245,32 +245,32 @@ const data = [
   {
     path: "/Shopify-E-commerce-Development",
     title: "Shopify E-commerce Development",
-
+ 
     currentPage: "Shopify E-commerce Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
     path: "/AI-assisted-website",
     title: "AI Web Design & Development",
-
+ 
     currentPage: "AI Web Design & Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 ];
-
+ 
 export default function BreadcurmbData() {
   const pathname = usePathname();
-
+ 
   const page = data.find((item) => item.path === pathname);
   // console.log('ez')
-
+ 
   if (!page) return null;
-
+ 
   return (
     <Breadcrumb
       title={page.title}
