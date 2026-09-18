@@ -8,7 +8,13 @@ import '@/assets/css/textAnimations.css';
 import "@/assets/css/style.css";
 import "@/assets/css/style1.css";
 import "glightbox/dist/css/glightbox.css";
+import { generateSeo } from "@/lib/seo";
 
+export const metadata = generateSeo({
+  title: "Terms & Conditions | Yulanto Web Creations",
+  description:
+    "Read the Terms & Conditions of Yulanto Web Creations to understand the rules, rights, and responsibilities when using our website and services.",
+});
 export default function AboutUsLayout({ children }: {
 
     children: React.ReactNode;
