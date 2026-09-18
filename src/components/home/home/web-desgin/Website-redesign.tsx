@@ -894,7 +894,7 @@ function Websiteredesign() {
                 KEY BENEFITS
             ================================================= */}
 
-            <div className="container mt-100 mb-50">
+            <div className="container mt-50 mb-50">
 
                 <div>
                     <span className="tp-section-subtitle text-black blink-ball">
@@ -1482,7 +1482,10 @@ function Websiteredesign() {
                                 Get a website audit to identify potential issues related to design, usability, mobile responsiveness, performance, SEO structure, and conversion opportunities.
 
                             </p>
-                            <button onClick={openModal} className='req-btn text-tenor'>Request Your Free Website Audit</button>
+                            <div className='d-flex justify-content-center align-items-center'>
+                                <button onClick={openModal} className='req-btn text-tenor'>Request Your Free Website Audit</button>
+                            </div>
+
 
                         </div>
 

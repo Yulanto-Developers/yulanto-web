@@ -1256,8 +1256,8 @@ function Startupwebsitedesign() {
                     content={startupProcessContent}
                 />
             </div>
-            <div style={{ backgroundColor: '#053456', margin: '100px 0px 100px 0px !important' }}>
-                <div className='container my-5' >
+            <div style={{ backgroundColor: '#053456', margin: '100px 0px 50px 0px !important' }}>
+                <div className='container' >
                     <div className='row align-items-center pb-50 pt-50'>
 
 
@@ -1325,7 +1325,7 @@ function Startupwebsitedesign() {
 
             <div className="why-choose-section">
 
-                <div className="container mt-20 mb-20">
+                <div className="container mt-10 mb-20">
 
                     {/* Heading */}
                     <div className="why-choose-header">

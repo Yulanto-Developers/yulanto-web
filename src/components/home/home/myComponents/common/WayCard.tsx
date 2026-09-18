@@ -22,7 +22,7 @@ export function PackagingProcessSection({
 }: PackagingProcessSectionProps) {
     return (
         <section
-            className="px-about-6-area pb-80 pb-lg-110"
+            className="px-about-6-area pb-50 pb-lg-110"
             style={{ backgroundColor: "#ffffff" }}
         >
             <div className="container container-1550">

@@ -915,7 +915,7 @@
 
     z-index: 2;
 
-    max-width: 850px;
+    max-width: 1000px;
 }
 
 
@@ -991,7 +991,7 @@
 ========================================================= */
 
 .audit-description {
-    max-width: 850px;
+    max-width: 950px;
 
     margin: 0;
 
@@ -2506,5 +2506,14 @@
 
     .process-card h3 {
         font-size: 18px;
+    }
+}
+.image-og-cls{
+     width: 80%
+}
+
+@media screen and (max-width:800px) {
+    .image-og-cls{
+        width:90%;
     }
 }

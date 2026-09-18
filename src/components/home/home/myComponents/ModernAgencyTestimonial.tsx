@@ -198,8 +198,8 @@ const Testimonial = () => {
                                         src="/assets/img/brand/review.png"
                                         alt="Yulanto Web Creation Google Review"
 
-                                        className="img-fluid object-contain"
-                                        style={{ width: '80%' }}
+                                        className="img-fluid object-contain image-og-cls"
+                                    
                                     />
                                 </div>
                             </div>

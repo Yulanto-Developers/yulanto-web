@@ -396,7 +396,7 @@ const heroContent = [
         subtitle: "Leading Web Design Company in Chennai for Business Growth.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Make an Enquiry",
-        alt:"web developers in chennai"
+        alt: "web developers in chennai"
     },
     {
         //1
@@ -404,7 +404,7 @@ const heroContent = [
         title: "We start by listening closely to your goals, ensuring you feel understood from the very beginning.", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pl-80", alignCls: "justify-content-start",
         head: "Boost",
-        alt:"best website developers in chennai"
+        alt: "best website developers in chennai"
     },
     {
         // 2
@@ -412,7 +412,7 @@ const heroContent = [
         title: " ", subtitle: "Awesome Website Creation in Chennai For Your Business",
         spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Design",
-        alt:"web designers in chennai"
+        alt: "web designers in chennai"
     },
     {
         //3
@@ -420,7 +420,7 @@ const heroContent = [
         title: "Every detail is noted and aligned with your vision, so nothing important is ever missed.", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.",
         spacingCls: "pl-10", alignCls: "justify-content-end",
         head: "Increase Sales",
-        alt:"web designers in chennai"
+        alt: "web designers in chennai"
     },
     {
         //4
@@ -428,7 +428,7 @@ const heroContent = [
         title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.",
         spacingCls: "pr-10", alignCls: "justify-content-end",
         head: "Gather Requirements",
-        alt:"website design company in chennai"
+        alt: "website design company in chennai"
     },
     {
         //5
@@ -436,7 +436,7 @@ const heroContent = [
         title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: " Write the code",
-         alt:"website design company in chennai"
+        alt: "website design company in chennai"
     },
     {
         //6
@@ -444,7 +444,7 @@ const heroContent = [
         title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Custom Website creations company for Growing Businesses in Chennai",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Design the website",
-        alt:"web designers near me"
+        alt: "web designers near me"
     },
     {
         //7
@@ -452,7 +452,7 @@ const heroContent = [
         title: "Our commitment is to a long-term partnership that supports your business growth.", subtitle: "Elevate Your Business with Chennai's Best Web Design Company",
         spacingCls: "pl-10", alignCls: "justify-content-start",
         head: "Continuous Success",
-        alt:"website design agency"
+        alt: "website design agency"
     },
 ];
 
@@ -569,6 +569,7 @@ const Hero = () => {
                                                                 padding: "4px",
                                                             }}
                                                         >
+
                                                             <span
                                                                 style={{
                                                                     color:
@@ -600,6 +601,12 @@ const Hero = () => {
 
                                         <div className="px-hero-2-content text-center z-index-1">
                                             <div className="fix">
+                                                <span className="desc desc-cls" style={{ fontWeight: 600, color: '#053456' }} dangerouslySetInnerHTML={{
+                                                    __html: item.head,
+                                                }}></span>
+                                            </div>
+                                            <div className="fix">
+
                                                 <span
                                                     className="title-cls"
                                                     dangerouslySetInnerHTML={{

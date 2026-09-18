@@ -95,6 +95,7 @@ export default function QuoteModal() {
         }
 
         console.log("Quote Request", formData);
+        
         closeModal();
     };
 
