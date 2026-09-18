@@ -1269,9 +1269,7 @@ function Ecommerce() {
                             >
                                 <div
                                     className="ecommerce-design-card"
-                                    style={{
-                                        "--card-bg-image": `url(${card.bgImage})`
-                                    }}
+                                  
                                 >
                                     {/* Icon */}
                                     <div className="ecommerce-card-icon">
