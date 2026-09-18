@@ -9,7 +9,8 @@ interface ContentLayout {
 }
 function IntroContent({ leftTitle, rightTitle1, rightTitle2, description, css }: ContentLayout) {
     return (
-        <div className={`container ${css }`}>
+      <section  className="px-about-6-area pt-40 pb-lg-110">
+        <div className={`container container-1550 ${css }`}>
 
             <div className="row align-items-center">
                 <div className="col-xl-3">
@@ -41,6 +42,7 @@ function IntroContent({ leftTitle, rightTitle1, rightTitle2, description, css }:
         </div>
       </div>
     </div>
+    </section>
   );
 }
 

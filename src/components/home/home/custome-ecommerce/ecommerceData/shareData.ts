@@ -160,6 +160,7 @@ export const ecommerceDesignCards = [
 export const ecommerceHomepageCards = [
     {
         title: "Storefront Essentials",
+        bgImage: "/assets/img/about/portal-feature-img.png", // Unique background image for card 1
         icon: React.createElement(
             "svg",
             {
@@ -202,6 +203,7 @@ export const ecommerceHomepageCards = [
     },
     {
         title: "Product Discovery",
+        bgImage: "/assets/img/about/directory-portal.png", // Unique background image for card 2
         icon: React.createElement(
             "svg",
             {
@@ -245,6 +247,7 @@ export const ecommerceHomepageCards = [
     },
     {
         title: "Brand & Trust",
+        bgImage: "/assets/img/about/real-estate-portal.png", // Unique background image for card 3
         icon: React.createElement(
             "svg",
             {
@@ -276,6 +279,7 @@ export const ecommerceHomepageCards = [
     },
     {
         title: "Engagement & Promotion",
+        bgImage: "/assets/img/about/portal-cta.png", // Unique background image for card 4
         icon: React.createElement(
             "svg",
             {

@@ -24,7 +24,9 @@ function Ecommerce() {
             />
 
             <div className="ecommerce-hero-animation" >
-                <div className="container">
+
+                <div className="container container-1550">
+
                     <div className="row align-items-center">
                         <div className="col-12">
                             <svg
@@ -1137,22 +1139,21 @@ function Ecommerce() {
                             </svg>
                         </div>
                     </div>
+                    <p className='pb-40'>From ecommerce website design and engaging homepage layouts to custom shopping experiences, payment integration, order management, and mobile-friendly interfaces, we create ecommerce websites that are designed around your products, customers, and business goals.</p>
+
                 </div>
+
+
             </div>
 
-            <div className="container" >
-                <div className="row">
-                    <div className="col-12">
-                        <p>From ecommerce website design and engaging homepage layouts to custom shopping experiences, payment integration, order management, and mobile-friendly interfaces, we create ecommerce websites that are designed around your products, customers, and business goals.</p>
-                    </div>
-                </div>
-            </div>
+
             <div
                 data-aos="fade-right"
                 data-aos-delay={400}
-                data-aos-once={true} style={{ background: '#f5f5f5', padding: "50px 0px" }}
+                data-aos-once={true} style={{ background: '#f5f5f5' }}
+                className="px-about-6-area pt-40 pb-40 pb-lg-110"
             >
-                <div className="container mt-30 mb-20">
+                <div className="container container-1550">
                     <div className="row">
 
                         <div className="col-12 mb-4">
@@ -1230,27 +1231,24 @@ function Ecommerce() {
                 data-aos="fade-right"
                 data-aos-delay={400}
                 data-aos-once={true}
+                className="px-about-6-area pt-40 pb-40 pb-lg-110"
             >
-                <div className="container mt-30 mb-20">
+                <div className="container container-1550">
                     <div className="row">
 
                         <div className="col-12 mb-4">
-
                             <span className="tp-section-subtitle text-black blink-ball">
                                 High-Converting E-commerce Homepage Design
                             </span>
-
                             <h4 className="px-about-title">
                                 <span className="text-blue-about">
                                     Ecommerce Homepage Design{" "}
                                 </span>
                                 That Makes a Strong First Impression
                             </h4>
-
                         </div>
 
                         <div className="col-md-12">
-
                             <p className="text-figtree">
                                 Your homepage is often the first interaction customers
                                 have with your brand. Our ecommerce homepage design
@@ -1258,7 +1256,6 @@ function Ecommerce() {
                                 sections, trust elements, and clear calls-to-action to
                                 encourage visitors to explore your store.
                             </p>
-
                         </div>
 
                         {/* Homepage Design Cards */}
@@ -1270,8 +1267,12 @@ function Ecommerce() {
                                 data-aos-once={true}
                                 key={card.title}
                             >
-                                <div className="ecommerce-design-card">
-
+                                <div
+                                    className="ecommerce-design-card"
+                                    style={{
+                                        "--card-bg-image": `url(${card.bgImage})`
+                                    }}
+                                >
                                     {/* Icon */}
                                     <div className="ecommerce-card-icon">
                                         {card.icon}
@@ -1284,7 +1285,6 @@ function Ecommerce() {
 
                                     {/* Items */}
                                     <ul className="ecommerce-card-list">
-
                                         {card.items.map((item) => (
                                             <li
                                                 className="text-figtree"
@@ -1293,27 +1293,22 @@ function Ecommerce() {
                                                 <span className="ecommerce-list-icon">
                                                     ✓
                                                 </span>
-
                                                 {item}
                                             </li>
                                         ))}
-
                                     </ul>
-
                                 </div>
                             </div>
                         ))}
 
                         {/* Bottom Content */}
                         <div className="col-12 mt-4">
-
                             <p className="text-figtree">
                                 Our homepage design for ecommerce is structured to
                                 provide customers with a clear path from discovering
                                 your brand to browsing products and completing a
                                 purchase.
                             </p>
-
                         </div>
 
                     </div>

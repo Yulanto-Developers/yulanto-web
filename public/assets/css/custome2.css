@@ -1,6 +1,6 @@
 .ecommerce-hero-animation {
     width: 100%;
-    padding: 0px 0 70px;
+   
     overflow: hidden;
 }
 
@@ -359,21 +359,11 @@
     overflow: hidden;
 }
 
-.ecommerce-design-card::before {
-    content: "";
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #eef5ff;
-    top: -35px;
-    right: -35px;
-    transition: all 0.4s ease;
-}
+
 
 .ecommerce-design-card:hover {
     transform: translateY(-10px);
-    border-color: #1769ff;
+  
     box-shadow: 0 18px 45px rgba(23, 105, 255, 0.12);
 }
 
