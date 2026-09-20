@@ -1,20 +1,22 @@
 // components/Autopop.tsx
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect } from "react";
 
 export default function Autopop() {
   const [isOpen, setIsOpen] = useState(false);
   const [doNotDisturb, setDoNotDisturb] = useState(false);
+ 
 
   useEffect(() => {
     // 1. Check if user already muted pop-ups previously
-    const isMuted = localStorage.getItem('autopop_dnd') === 'true';
+    const isMuted = localStorage.getItem("autopop_dnd") === "true";
     if (isMuted) return;
 
     // 2. Set interval to trigger every 6 seconds (6000ms) or 1 minute (60000ms)
     const timer = setInterval(() => {
-      const currentDnd = localStorage.getItem('autopop_dnd') === 'true';
+      const currentDnd = localStorage.getItem("autopop_dnd") === "true";
       if (!currentDnd) {
         setIsOpen(true);
       } else {
@@ -27,7 +29,7 @@ export default function Autopop() {
 
   const handleClose = () => {
     if (doNotDisturb) {
-      localStorage.setItem('autopop_dnd', 'true');
+      localStorage.setItem("autopop_dnd", "true");
     }
     setIsOpen(false);
     setDoNotDisturb(false); // Reset checkbox for next cycle
@@ -40,7 +42,8 @@ export default function Autopop() {
       <div style={styles.modal}>
         <h3 style={styles.title}>Disclaimer</h3>
         <p style={styles.body}>
-          This disclaimer appears periodically. Check "Do Not Disturb" to mute it.
+          This disclaimer appears periodically. Check "Do Not Disturb" to mute
+          it.
         </p>
 
         {/* Do Not Disturb Checkbox */}
@@ -70,71 +73,72 @@ export default function Autopop() {
 
 const styles: { [key: string]: React.CSSProperties } = {
   overlay: {
-    position: 'fixed',
+    position: "fixed",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    backdropFilter: 'blur(4px)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '16px',
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backdropFilter: "blur(4px)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "16px",
     zIndex: 1000,
   },
   modal: {
-    backgroundColor: '#ffffff',
-    borderRadius: '12px',
-    padding: '24px',
-    maxWidth: '400px',
-    width: '100%',
-    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-    fontFamily: 'system-ui, -apple-system, sans-serif',
+    backgroundColor: "#ffffff",
+    borderRadius: "12px",
+    padding: "24px",
+    maxWidth: "400px",
+    width: "100%",
+    boxShadow:
+      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+    fontFamily: "system-ui, -apple-system, sans-serif",
   },
   title: {
-    margin: '0 0 8px 0',
-    fontSize: '18px',
+    margin: "0 0 8px 0",
+    fontSize: "18px",
     fontWeight: 700,
-    color: '#111827',
+    color: "#111827",
   },
   body: {
-    margin: '0 0 16px 0',
-    fontSize: '14px',
-    color: '#4b5563',
+    margin: "0 0 16px 0",
+    fontSize: "14px",
+    color: "#4b5563",
     lineHeight: 1.5,
   },
   checkboxContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
-    marginBottom: '20px',
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+    marginBottom: "20px",
   },
   checkbox: {
-    width: '16px',
-    height: '16px',
-    cursor: 'pointer',
-    accentColor: '#2563eb',
+    width: "16px",
+    height: "16px",
+    cursor: "pointer",
+    accentColor: "#2563eb",
   },
   label: {
-    fontSize: '14px',
-    color: '#374151',
-    cursor: 'pointer',
-    userSelect: 'none',
+    fontSize: "14px",
+    color: "#374151",
+    cursor: "pointer",
+    userSelect: "none",
   },
   footer: {
-    display: 'flex',
-    justifyContent: 'flex-end',
+    display: "flex",
+    justifyContent: "flex-end",
   },
   button: {
-    backgroundColor: '#2563eb',
-    color: '#ffffff',
-    border: 'none',
-    padding: '8px 16px',
-    borderRadius: '8px',
-    fontSize: '14px',
+    backgroundColor: "#2563eb",
+    color: "#ffffff",
+    border: "none",
+    padding: "8px 16px",
+    borderRadius: "8px",
+    fontSize: "14px",
     fontWeight: 500,
-    cursor: 'pointer',
-    transition: 'background-color 0.2s ease',
+    cursor: "pointer",
+    transition: "background-color 0.2s ease",
   },
 };

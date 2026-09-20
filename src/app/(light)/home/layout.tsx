@@ -7,11 +7,13 @@ import { QuoteProvider } from "@/components/home/home/myComponents/Content/Quote
 import QuoteModal from "@/components/home/home/myComponents/Pop";
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
 import Autopop from "@/components/home/home/myComponents/Autopop";
+// import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 export default function DesignStudioLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // const newclient = new QueryClient();
   return (
     <QuoteProvider>
       <ClientProviders>
@@ -20,7 +22,6 @@ export default function DesignStudioLayout({
         <div id="smooth-wrapper" style={{ backgroundColor: "#f5f5f5" }}>
           <div id="smooth-content">
             {children}
-
 
             <MainFooter />
           </div>
