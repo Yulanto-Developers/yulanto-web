@@ -640,7 +640,7 @@
 .why-card-content p {
     margin: 0;
 
-  
+
 
     font-size: 16px !important;
 
@@ -1792,7 +1792,7 @@
 
     .tech-name {
         font-size: 11px;
-       
+
     }
 }
 
@@ -1876,6 +1876,7 @@
     bottom: -25px;
     animation: galleryFloat 3s ease-in-out infinite;
 }
+
 .gallery-small-one {
     right: 0;
     bottom: 45px;
@@ -1993,7 +1994,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    
+
 }
 
 .browser-address {
@@ -2239,6 +2240,7 @@
 ========================================== */
 
 @keyframes browserFloat {
+
     0%,
     100% {
         transform: translateY(0) rotateY(-5deg) rotateX(3deg);
@@ -2250,6 +2252,7 @@
 }
 
 @keyframes imagePulse {
+
     0%,
     100% {
         transform: translateX(-50%) scale(1);
@@ -2275,6 +2278,7 @@
 }
 
 @keyframes floatingCardOne {
+
     0%,
     100% {
         transform: translateY(0);
@@ -2286,6 +2290,7 @@
 }
 
 @keyframes floatingCardTwo {
+
     0%,
     100% {
         transform: translateY(0);
@@ -2373,7 +2378,6 @@
     left: 25px;
     width: 2px;
     background: #053456
-    
 }
 
 /* Main number */
@@ -2498,7 +2502,7 @@
         font-size: 12px;
     } */
 
- 
+
 
     .process-card {
         padding: 22px;
@@ -2508,12 +2512,17 @@
         font-size: 18px;
     }
 }
-.image-og-cls{
-     width: 80%
+
+.image-og-cls {
+    width: 80%
 }
 
-@media screen and (max-width:800px) {
-    .image-og-cls{
-        width:90%;
+@media screen and (max-width:768px) {
+    .image-og-cls {
+        width: 90%;
     }
+}
+
+.captcha-input{
+    max-width: 150px;
 }

@@ -46,9 +46,10 @@ const PrimaryOffCanvas = () => {
 
   return (
     <>
-      <div className={`tp-offcanvas-area ${isMainSidebarOpen ? "opened" : ""}`}>
+      <div className={`tp-offcanvas-area ${isMainSidebarOpen ? "opened" : ""}`} >
         <div
           className={`tp-offcanvas-wrapper ${isDark ? "offcanvas-black-bg" : "offcanvas-white-bg"}`}
+
         >
           <div className="tp-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="tp-offcanvas-logo">
@@ -58,14 +59,14 @@ const PrimaryOffCanvas = () => {
                   height={65}
                   className="logo-1"
                   src="/assets/img/logo/Yulanto-logo.png"
-                  alt="logo-orange"
+                  alt="Yulanto-logo"
                 />
                 <Image
                   width={120}
                   height={42}
                   className="logo-2"
                   src="/assets/img/logo/Yulanto-logo.png"
-                  alt="logo-orange"
+                  alt="Yulanto-logo"
                 />
               </Link>
             </div>
@@ -88,8 +89,8 @@ const PrimaryOffCanvas = () => {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
             </div> */}
             <div className="mb-20 d-none d-xl-block">
-              <a href="https://www.google.com/maps/place/Yulanto+Web+Creations+Pvt+Ltd/@12.9724698,80.2510529,1421m/data=!3m1!1e3!4m6!3m5!1s0x3a525df3d6bf9167:0xc1aae342aa473d1!8m2!3d12.9725177!4d80.2518352!16s%2Fg%2F11b7rnd8vq?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D" target="blank"> <Image src='/assets/img/map/m2.png' alt="map" width={500} height={350} style={{  borderRadius: '20px',  }} /></a>
-             
+              <a href="https://www.google.com/maps/place/Yulanto+Web+Creations+Pvt+Ltd/@12.9724698,80.2510529,1421m/data=!3m1!1e3!4m6!3m5!1s0x3a525df3d6bf9167:0xc1aae342aa473d1!8m2!3d12.9725177!4d80.2518352!16s%2Fg%2F11b7rnd8vq?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D" target="blank"> <Image src='/assets/img/map/m3.jpg' alt="map" width={500} height={350} style={{ borderRadius: '20px', }}  /></a>
+
             </div>
 
 
@@ -98,31 +99,11 @@ const PrimaryOffCanvas = () => {
                 <MobileMenus />
               </nav>
             </div>
-            {/* <div className="tp-offcanvas-gallery d-none d-xl-block">
-              <div className="row gx-2">
-                <PhotoProviderWrapper>
-                  {galleryImages.map((image: ImageDT) => (
-                    <div className="col-md-3 col-3" key={image.id}>
-                      <div className="tp-offcanvas-gallery-img fix">
-                        <PhotoView src={image.imgSrc}>
-                          <Image
-                            style={{ width: "auto", height: "auto" }}
-                            width={82}
-                            height={82}
-                            src={image.imgSrc}
-                            alt={`gallery image${image.id}`}
-                          />
-                        </PhotoView>
-                      </div>
-                    </div>
-                  ))}
-                </PhotoProviderWrapper>
-              </div>
-            </div> */}
+
             <div className="tp-offcanvas-contact">
               <h3 className="tp-offcanvas-title sm">Reach Us</h3>
               <ul>
-                 <li className="d-flex justify-content-start align-items-start ">
+                <li className="d-flex justify-content-start align-items-start ">
                   <div className="contact-icons">
                     <FontAwesomeIcon className="" icon={faLocationDot} />
                   </div>
@@ -136,18 +117,28 @@ const PrimaryOffCanvas = () => {
                   <div className="contact-icons" style={{ height: '30px' }}>
                     <FontAwesomeIcon className="" icon={faPhone} />
                   </div>
-                  <Link href="tel:+919962157250" className="text-figtree">+91 99621 57250</Link>
+                  <Link href="tel:+919962157250" className="text-figtree text-black">+91 99621 57250</Link>
                 </li>
                 <li className="d-flex justify-content-start align-items-center">
                   <div className="contact-icons">
                     <FontAwesomeIcon className="" icon={faEnvelope} />
                   </div>
-                  <Link href="mailto:info@yulanto.com" className="text-figtree">info@yulanto.com</Link>
+                  <Link href="mailto:info@yulanto.com" className="text-figtree text-black">info@yulanto.com</Link>
                 </li>
-               
+
               </ul>
             </div>
-            <div className="tp-offcanvas-social ">
+            <div className='contact-border'>
+              <ul className="contact-list py-2">
+                <li className="">
+                  <a href="/tocontact" className="button-style text-tenor" style={{ fontWeight: "lighter", textAlign: 'left', padding: '10px 20px 10px 10px', fontSize: '18px' }}>
+                    <FontAwesomeIcon icon={faPhone} className="me-2" />
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="tp-offcanvas-social pt-10">
               <h3 className="tp-offcanvas-title sm">Follow Us</h3>
               <Dock items={dockItems}
                 page=
