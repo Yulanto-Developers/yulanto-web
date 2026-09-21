@@ -8,6 +8,7 @@ export const lightMenu: MenuItem[] = [
     sublinkTrue: true,
     label: "About Us",
     href: "#",
+    active: false,
     links: [
       { label: "Our Story", href: "/our-story" },
       { label: "Vision & Mission", href: "/our-mission-vision" },
@@ -23,6 +24,7 @@ export const lightMenu: MenuItem[] = [
     sublinkTrue: true,
     label: "Services",
     href: "#",
+    active: false,
     links: [
       {
         label: "Website Design",
@@ -100,6 +102,7 @@ export const lightMenu: MenuItem[] = [
     sublinkTrue: true,
     label: "Our Work",
     href: "#",
+    active: false,
     links: [
       { label: "Recent Projects", href: "/recent-project" },
       { label: "Portfolio", href: "/portfolio" },
@@ -115,6 +118,7 @@ export const lightMenu: MenuItem[] = [
     sublinkTrue: false,
     label: "Our Clients",
     href: "/clients",
+    active: true,
   },
   {
     id: 5,
@@ -124,6 +128,7 @@ export const lightMenu: MenuItem[] = [
     sublinkTrue: false,
     isLastMenu: true,
     href: "/careers",
+    active: true,
   },
   {
     id: 6,
@@ -133,5 +138,6 @@ export const lightMenu: MenuItem[] = [
     sublinkTrue: false,
     isLastMenu: true,
     href: "/contact",
+    active: true,
   },
 ];

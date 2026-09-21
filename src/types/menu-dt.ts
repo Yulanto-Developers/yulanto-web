@@ -3,6 +3,7 @@ export interface MenuLink {
   href: string;
   subLinks?: MenuLink[];
   sublabel?: string
+  active?: boolean;
 }
 
 export interface MenuColumn {
@@ -22,4 +23,5 @@ export interface MenuItem {
   links?: MenuLink[];
   sublinkTrue: boolean;
   mobileV?: boolean;
+  active?: boolean;
 }

@@ -36,7 +36,7 @@ function Uiuxdesgin() {
             <div data-aos="fade-right"
                 data-aos-delay={400}
                 data-aos-once={true}>
-                <div className='container mt-50 mt-lg-100 mb-20'>
+                <div className='container  mt-100 mb-20'>
                     <div className="row">
                         <div className="col-md-7">
                             <span className="tp-section-subtitle text-black blink-ball">
@@ -70,7 +70,7 @@ function Uiuxdesgin() {
                     </div>
                 </div>
             </div>
-            <div className='mb-50 mt-100'>
+            <div className='mb-50'>
                 <div className='container mt-50'>
                     <div className="row">
 

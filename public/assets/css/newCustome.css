@@ -196,14 +196,14 @@
 .req-btn {
     background-color: #ffffff;
     color: #053456;
-
     padding: 12px;
-
-    border-radius: 20px;
-
-    margin-top: 10px;
-
+    border-radius: 15px;
+    margin-top: 30px;
     font-weight: 600;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 

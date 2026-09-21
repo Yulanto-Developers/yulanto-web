@@ -1,7 +1,7 @@
 "use client";  
 
 import React from "react";
-import MDImg from "@/assets/images/our-team/md-1.png";
+// import MDImg from "@/assets/images/our-team/md-1.png";
 import MDImg2 from "@/assets/images/our-team/md-2.png";
 import { useAOS } from '@/components/hooks/useAOS';
 import '@/assets/css/textAnimations.css';

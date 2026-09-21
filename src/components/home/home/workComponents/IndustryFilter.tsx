@@ -154,7 +154,7 @@ export default function Industry() {
                                                 <div className="logo-box">
                                                     <img
                                                         src={project.logo}
-                                                        alt={project.name}
+                                                        alt={`yulanto client - ${project.name}`}
                                                         className="project-logo"
                                                     />
                                                 </div>

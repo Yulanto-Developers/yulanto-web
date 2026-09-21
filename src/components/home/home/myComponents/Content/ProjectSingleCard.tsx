@@ -17,16 +17,16 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
 
                 <div className="px-project-content d-flex align-items-center justify-content-between">
                     <h4 className="px-project-title">
-                        <SmartLink href={`/`}>
+                        {/* <SmartLink href={`/`}> */}
                             {title}
-                        </SmartLink>
+                        {/* </SmartLink> */}
                     </h4>
 
                     <span>/ {year}</span>
                 </div>
 
                 <div className="px-project-thumb">
-                    <SmartLink href={`/`}>
+                    {/* <SmartLink href={`/`}> */}
                         <div className="ripple-image project-hover-card">
 
                             <style jsx>{`
@@ -98,7 +98,7 @@ const ProjectSingleCard: React.FC<PortfolioProjectDT> = ({
                             </div>
 
                         </div>
-                    </SmartLink>
+                    {/* </SmartLink> */}
                 </div>
 
                 {categories && (

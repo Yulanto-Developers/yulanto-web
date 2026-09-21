@@ -122,6 +122,16 @@ const PrimaryOffCanvas = () => {
             <div className="tp-offcanvas-contact">
               <h3 className="tp-offcanvas-title sm">Reach Us</h3>
               <ul>
+                 <li className="d-flex justify-content-start align-items-start ">
+                  <div className="contact-icons">
+                    <FontAwesomeIcon className="" icon={faLocationDot} />
+                  </div>
+                  <p className="d-flex flex-column justify-content-center align-items-start text-figtree fs-6">
+                    <span> First Floor, F3, #4/608,</span>
+                    <span> VOC St, OMR, Kottivakkam,</span>
+                    <span> Chennai, Tamil Nadu 600041</span>
+                  </p>
+                </li>
                 <li className="d-flex justify-content-start align-items-center">
                   <div className="contact-icons" style={{ height: '30px' }}>
                     <FontAwesomeIcon className="" icon={faPhone} />
@@ -134,16 +144,7 @@ const PrimaryOffCanvas = () => {
                   </div>
                   <Link href="mailto:info@yulanto.com" className="text-figtree">info@yulanto.com</Link>
                 </li>
-                <li className="d-flex justify-content-start align-items-start ">
-                  <div className="contact-icons">
-                    <FontAwesomeIcon className="" icon={faLocationDot} />
-                  </div>
-                  <p className="d-flex flex-column justify-content-center align-items-start text-figtree fs-6">
-                    <span> First Floor, F3, #4/608,</span>
-                    <span> VOC St, OMR, Kottivakkam,</span>
-                    <span> Chennai, Tamil Nadu 600041</span>
-                  </p>
-                </li>
+               
               </ul>
             </div>
             <div className="tp-offcanvas-social ">

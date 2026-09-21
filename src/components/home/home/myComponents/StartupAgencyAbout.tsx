@@ -106,7 +106,7 @@ const StartupAgencyAbout = () => {
     });
 
     return (
-        <section ref={ref} className="px-about-area about-skew-anim pt-lg-120   pb-50 overflow-hidden">
+        <section ref={ref} className="px-about-area about-skew-anim pt-50   pb-50 overflow-hidden">
             <div className="container container-1550">
 
 
@@ -126,8 +126,8 @@ const StartupAgencyAbout = () => {
                         <div className="px-about-content-wrap">
 
 
-                            <h4 className="px-about-title mb-55">
-                                <span className='text-blue-about'>We are a Leading Web design agency</span> specializing in
+                            <h4 className="px-about-title mb-30">
+                                <span className='text-blue-about'>We are a leading web design company in Chennai,</span> specializing in
                                 <Link href={'/website'} title="Website Design Services" > website design</Link>, <Link href={'/development'} title="Website Development Services">web development</Link>, <Link href={'/e-comerce'} title="E-commerce Website Design">E-commerce</Link>, <Link href={'/graphic-desgin'} title="Graphic design company">Graphic Design</Link>, <Link href={'/seo'} title="seo optimization">SEO</Link>, and <Link href={'/digital'} title="digital marketing services">digital marketing</Link>.
                             </h4>
 

@@ -31,11 +31,11 @@ const techIcons: Record<string, React.ReactNode> = {
     Php: <FaPhp />,
     Html: <FaHtml5 />,
     Css: <FaCss3Alt />,
-    Boostrap: <FaBootstrap />,
+    Bootstrap: <FaBootstrap />,
     Ajax: <FaCode />,
-    "React js": <FaReact />,
+    "React Js": <FaReact />,
     "Next Js": <SiNextdotjs />,
-    "Node JS": <FaNodeJs />,
+    "Node Js": <FaNodeJs />,
     "Tailwind Css": <SiTailwindcss />,
 };
 
@@ -193,7 +193,7 @@ export default function RecentProject() {
             icons: [
                 "Html",
                 "Css",
-                "Boostrap",
+                "Bootstrap",
                 "Ajax",
                 "Php",
             ],
@@ -234,14 +234,14 @@ export default function RecentProject() {
                 "Website Security & SSL Integration",
             ],
 
-            location: "Chennai - India",
+            location: "Malaysia",
 
             webDate: "Jan - 2026",
 
             icons: [
                 "Html",
                 "Css",
-                "Boostrap",
+                "Bootstrap",
                 "Ajax",
                 "Php",
             ],
@@ -285,9 +285,9 @@ export default function RecentProject() {
 
             icons: [
 
-                "React js",
+                "React Js",
                 "Next Js",
-                "Node JS",
+                "Node Js",
                 "Css",
                 "Tailwind Css"
             ],
@@ -309,7 +309,7 @@ export default function RecentProject() {
             image: img3,
 
             description:
-                "Marine safety solutions website showcasing lifeboat, fire-fighting, calibration, testing, and fleet services in Malaysia.",
+                "Modern product showcase website designed to highlight the brand, products, expertise, and business solutions with a professional online presence. What We Did",
             services: [
                 "Corporate Website Design & Development",
                 "Modern UI/UX Design",
@@ -325,18 +325,18 @@ export default function RecentProject() {
                 "Ongoing Website Support & Maintenance",
             ],
 
-            location: "Unitied States of America (USA)",
+            location: "United States of America (USA)",
 
             webDate: "Jan - 2026",
 
             icons: [
                 "Html",
                 "Css",
-                "Boostrap",
+                "Bootstrap",
                 "Php",
-                "React js",
+                "React Js",
                 "Next Js",
-                "Node JS",
+                "Node Js",
             ],
 
             links:
@@ -354,7 +354,7 @@ export default function RecentProject() {
             image: img4,
 
             description:
-                "Modern product showcase website designed to highlight the brand, products, expertise, and business solutions with a professional online presence. What We Did",
+                "Marine safety solutions website showcasing lifeboat, fire-fighting, calibration, testing, and fleet services in Malaysia.",
             services: [
                 "Marine Safety Website Design & Development",
                 "Corporate Website Design",
@@ -374,14 +374,14 @@ export default function RecentProject() {
                 "SSL & Website Security Integration"
             ],
 
-            location: "Unitied States of America (USA)",
+            location: "United States of America (USA)",
 
             webDate: "Jan - 2026",
 
             icons: [
                 "Html",
                 "Css",
-                "Boostrap",
+                "Bootstrap",
                 "Ajax",
                 "Php",
 

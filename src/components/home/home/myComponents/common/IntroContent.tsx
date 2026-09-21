@@ -1,5 +1,5 @@
 import React from "react";
-import "@/assets/css/style1.css";
+
 interface ContentLayout {
   leftTitle: string;
   rightTitle1: string;
@@ -26,13 +26,13 @@ function IntroContent({ leftTitle, rightTitle1, rightTitle2, description, css }:
               {rightTitle2}
             </h4>
 
-            <h1
+            {/* <h1
               className="ft-23 mt-0 mb-2  text-tenor"
               data-aos="text-reveal"
               data-aos-delay="100"
             >
               Web Design & Development Case Studies
-            </h1>
+            </h1> */}
 
             <p
               className="text-figtree text-dark mt-2 font-paragraph-cls"
