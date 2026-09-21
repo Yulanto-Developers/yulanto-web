@@ -44,8 +44,8 @@ function FloatingActions({
         <i className="fa-brands fa-whatsapp" style={{ fontSize: '28px', color: '#fff' }}></i>
       </a>
 
-      {/* Live Chat Button */}
-      <button
+      
+      {/* <button
         onClick={onChatClick}
         type="button"
         className="btn btn-primary d-flex align-items-center justify-content-center rounded-circle shadow-lg border-0"
@@ -55,7 +55,7 @@ function FloatingActions({
         title="Open Support Chat"
       >
         <i className="fa-solid fa-comment-dots" style={{ fontSize: '24px', color: '#fff' }}></i>
-      </button>
+      </button> */}
     </div>
   );
 }

@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 import { OurPartner } from '@/components/home/home/myComponents'
+import '../web-desgin/common.css'
 
 // Counter Animation Component
 const AnimatedCounter = ({ value }: { value: number }) => {
