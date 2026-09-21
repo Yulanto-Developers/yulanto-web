@@ -612,7 +612,7 @@
 
 .product-page-features {
     margin-top: 25px;
-    border-top: 1px solid #e5e5e5;
+   
 }
 
 .product-feature-item {
@@ -738,7 +738,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0 25px;
-    border-top: 1px solid #e5e5e5;
+  
 }
 
 .product-feature-item {
@@ -1473,8 +1473,8 @@
 }
 
 .ecommerce-chennai-content p {
-    color: #626a70;
-    font-size: 16px;
+  
+    font-size: 20px;
     line-height: 1.75;
     margin-bottom: 16px;
 }
@@ -2107,7 +2107,7 @@
 
 .ecommerce-cta-content>p {
     max-width: 780px;
-    color: #68737a;
+ 
     font-size: 16px;
     line-height: 1.75;
     margin-bottom: 15px;
@@ -2126,8 +2126,8 @@
 }
 
 .ecommerce-cta-company span {
-    color: #69777e;
-    font-size: 13px;
+   
+    font-size: 16px;
 }
 
 .ecommerce-cta-action {
@@ -2416,9 +2416,7 @@
    HEADING
 ========================================================= */
 
-.ecom-process-heading-area {
-    margin-bottom: 55px;
-}
+
 
 .ecom-process-heading-area .tp-section-subtitle {
     display: inline-flex;
@@ -2448,10 +2446,10 @@
 }
 
 .ecom-process-intro p {
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.8;
     margin-bottom: 22px;
-    color: #555;
+   
 }
 
 .ecom-process-intro p:last-child {
@@ -2660,10 +2658,7 @@
         padding: 70px 0;
     }
 
-    .ecom-process-heading-area {
-        margin-bottom: 45px;
-    }
-
+   
     .ecom-process-intro {
         position: static;
         max-width: 100%;
@@ -2694,9 +2689,6 @@
         padding: 55px 0;
     }
 
-    .ecom-process-heading-area {
-        margin-bottom: 35px;
-    }
 
     .ecom-process-heading-area .px-about-title {
         font-size: 30px;
@@ -2792,3 +2784,229 @@
         font-size: 14px;
     }
 }
+/***************** cusotom********************/
+/* =========================================================
+   UNIQUE E-COMMERCE HOMEPAGE HOVER CARDS SECTION
+========================================================= */
+
+:root {
+    --card-anim-duration: 700ms;
+    --card-anim-easing: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.unique-ecom-cards-section .ecommerce-design-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 1.5rem;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    color: #f8fafc;
+    background-color: #0b1329;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(5, 52, 86, 0.12);
+    background-size: cover;
+    background-position: center;
+    transition: transform calc(var(--card-anim-duration) * 1.5) var(--card-anim-easing);
+}
+
+/* Dynamic background images per card column */
+.unique-ecom-cards-section .col-lg-3:nth-child(1) .ecommerce-design-card {
+    background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?q=80&w=400&fit=max);
+}
+.unique-ecom-cards-section .col-lg-3:nth-child(2) .ecommerce-design-card {
+    background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?q=80&w=400&fit=max);
+}
+.unique-ecom-cards-section .col-lg-3:nth-child(3) .ecommerce-design-card {
+    background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?q=80&w=400&fit=max);
+}
+.unique-ecom-cards-section .col-lg-3:nth-child(4) .ecommerce-design-card {
+    background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?q=80&w=400&fit=max);
+}
+
+/* Dark Gradient Overlay */
+.unique-ecom-cards-section .ecommerce-design-card::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    background-image: linear-gradient(
+        to bottom,
+        hsla(215, 30%, 10%, 0) 0%,
+        hsla(215, 30%, 10%, 0.05) 20%,
+        hsla(215, 30%, 10%, 0.45) 55%,
+        hsla(215, 30%, 10%, 0.9) 100%
+    );
+    transform: translateY(0);
+    transition: transform calc(var(--card-anim-duration) * 2) var(--card-anim-easing);
+    z-index: 1;
+}
+
+.unique-ecom-cards-section .ecommerce-card-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Changed from center to left-align items */
+    width: 100%;
+    z-index: 2;
+    transition: transform var(--card-anim-duration) var(--card-anim-easing);
+    transform: translateY(calc(100% - 4.8rem));
+}
+
+.unique-ecom-cards-section .ecommerce-card-content > * + * {
+    margin-top: 0.85rem;
+}
+
+.unique-ecom-cards-section .ecommerce-card-icon {
+    font-size: 24px;
+    color: #53ae7d;
+}
+
+.unique-ecom-cards-section .ecommerce-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff !important;
+    margin: 0;
+    text-align: left; /* Ensure title text starts from the left */
+    width: 100%;
+}
+
+
+
+.unique-ecom-cards-section .ecommerce-card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    font-size: 0.875rem;
+}
+
+.unique-ecom-cards-section .ecommerce-card-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    color: #cbd5e1;
+}
+
+.unique-ecom-cards-section .ecommerce-list-icon {
+    color: #53ae7d;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Hover reveal interactions */
+@media (hover: hover) {
+    .unique-ecom-cards-section .ecommerce-card-content > *:not(.ecommerce-card-title) {
+        opacity: 0;
+        transform: translateY(1rem);
+        transition: transform var(--card-anim-duration) var(--card-anim-easing), 
+                    opacity var(--card-anim-duration) var(--card-anim-easing);
+    }
+
+    .unique-ecom-cards-section .ecommerce-design-card:hover,
+    .unique-ecom-cards-section .ecommerce-design-card:focus-within {
+        transform: translateY(-5px);
+    }
+
+    .unique-ecom-cards-section .ecommerce-design-card:hover .ecommerce-card-content,
+    .unique-ecom-cards-section .ecommerce-design-card:focus-within .ecommerce-card-content {
+        transform: translateY(0);
+    }
+
+    .unique-ecom-cards-section .ecommerce-design-card:hover .ecommerce-card-content > *:not(.ecommerce-card-title),
+    .unique-ecom-cards-section .ecommerce-design-card:focus-within .ecommerce-card-content > *:not(.ecommerce-card-title) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(var(--card-anim-duration) / 8);
+    }
+}
+
+/**********************************************************************/
+
+
+/* =========================================================
+   TWO-COLUMN SPLIT: LEFT CONTENT & RIGHT IMAGE DESIGN
+========================================================= */
+/* =========================================================
+   TWO-COLUMN SPLIT & 2-COLUMN LEFT GRID DESIGN
+========================================================= */
+
+.unique-split-layout-section .split-content-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Changed to CSS Grid with 2 columns */
+.unique-split-layout-section .product-page-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 576px) {
+    .unique-split-layout-section .product-page-features {
+        grid-template-columns: 1fr; /* Fallback to 1 column on very small screens */
+    }
+}
+
+.unique-split-layout-section .product-feature-item {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: all 300ms ease;
+    height: 100%;
+}
+
+.unique-split-layout-section .product-feature-item:hover {
+    transform: translateY(-4px);
+    border-color: #053456;
+    box-shadow: 0 8px 25px rgba(5, 52, 86, 0.06);
+}
+
+.unique-split-layout-section .product-feature-content h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0b1329;
+    margin: 0;
+}
+
+/* Right Side Centered Image Container (Preserved) */
+.unique-split-layout-section .split-image-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+}
+
+
+
+ .split-showcase-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&fit=max');
+    background-size: cover;
+    background-position: center;
+    transition: transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.unique-split-layout-section .split-showcase-image-wrapper:hover .split-showcase-image {
+    transform: scale(1.05);
+}
+
+/**********************************************/

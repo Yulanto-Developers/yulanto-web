@@ -466,101 +466,17 @@ export const ecommerceHomepageFeatures = [
 
 
 export const productPageFeatures = [
-    {
-        title: "High-quality Product Images",
-        description: "Clear and visually appealing product imagery.",
-        icon: React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none" },
-            React.createElement("rect", { x: "3", y: "4", width: "18", height: "16", rx: "2", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("circle", { cx: "8", cy: "9", r: "1.5", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("path", { d: "M3 17L8 12L12 16L15 13L21 19", stroke: "currentColor", strokeWidth: "1.8", strokeLinejoin: "round" })
-        ),
-    },
-    {
-        title: "Product Descriptions",
-        description: "Organized product details that are easy to understand.",
-        icon: React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none" },
-            React.createElement("path", { d: "M5 4H19V20H5V4Z", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("path", { d: "M8 8H16M8 12H16M8 16H13", stroke: "currentColor", strokeWidth: "1.8", strokeLinecap: "round" })
-        ),
-    },
-    {
-        title: "Pricing & Offers",
-        description: "Clear pricing, discounts, and promotional offers.",
-        icon: React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none" },
-            React.createElement("path", { d: "M20 12L12 20L4 12V5H11L20 12Z", stroke: "currentColor", strokeWidth: "1.8", strokeLinejoin: "round" }),
-            React.createElement("circle", { cx: "8", cy: "8", r: "1", fill: "currentColor" })
-        ),
-    },
-    {
-        title: "Product Variations",
-        description: "Simple options for colors, styles, and product variants.",
-        icon: React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none" },
-            React.createElement("circle", { cx: "7", cy: "7", r: "3", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("circle", { cx: "17", cy: "7", r: "3", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("circle", { cx: "7", cy: "17", r: "3", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("circle", { cx: "17", cy: "17", r: "3", stroke: "currentColor", strokeWidth: "1.8" })
-        ),
-    },
-    {
-        title: "Size & Specification Options",
-        description: "Easy-to-select size and specification choices.",
-        icon: React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none" },
-            React.createElement("path", { d: "M4 7H20M4 12H20M4 17H20", stroke: "currentColor", strokeWidth: "1.8", strokeLinecap: "round" }),
-            React.createElement("path", { d: "M8 5V9M15 10V14M11 15V19", stroke: "currentColor", strokeWidth: "1.8", strokeLinecap: "round" })
-        ),
-    },
-    {
-        title: "Availability Information",
-        description: "Visible stock and availability information.",
-        icon: React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none" },
-            React.createElement("path", { d: "M4 7L12 3L20 7V17L12 21L4 17V7Z", stroke: "currentColor", strokeWidth: "1.8", strokeLinejoin: "round" }),
-            React.createElement("path", { d: "M4 7L12 11L20 7M12 11V21", stroke: "currentColor", strokeWidth: "1.8" })
-        ),
-    },
-    {
-        title: "Customer Reviews",
-        description: "Reviews that help customers purchase with confidence.",
-        icon: React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none" },
-            React.createElement("path", { d: "M20 11.5C20 15.6 16.4 19 12 19C10.7 19 9.5 18.7 8.4 18.2L4 20L5.5 16.2C4.5 14.9 4 13.3 4 11.5C4 7.4 7.6 4 12 4C16.4 4 20 7.4 20 11.5Z", stroke: "currentColor", strokeWidth: "1.8" })
-        ),
-    },
-    {
-        title: "Related Products",
-        description: "Relevant products that encourage further browsing.",
-        icon: React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none" },
-            React.createElement("rect", { x: "4", y: "4", width: "6", height: "6", rx: "1", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("rect", { x: "14", y: "4", width: "6", height: "6", rx: "1", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("rect", { x: "4", y: "14", width: "6", height: "6", rx: "1", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("rect", { x: "14", y: "14", width: "6", height: "6", rx: "1", stroke: "currentColor", strokeWidth: "1.8" })
-        ),
-    },
-    {
-        title: "Frequently Bought Products",
-        description: "Product combinations that help increase purchase opportunities.",
-        icon: React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none" },
-            React.createElement("path", { d: "M6 7H18L19 20H5L6 7Z", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("path", { d: "M9 7V5C9 3.9 9.9 3 11 3H13C14.1 3 15 3.9 15 5V7", stroke: "currentColor", strokeWidth: "1.8" })
-        ),
-    },
-    {
-        title: "Delivery Information",
-        description: "Clear delivery details to reduce purchase uncertainty.",
-        icon: React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none" },
-            React.createElement("path", { d: "M3 6H15V17H3V6Z", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("path", { d: "M15 10H19L21 13V17H15V10Z", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("circle", { cx: "7", cy: "18", r: "2", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("circle", { cx: "18", cy: "18", r: "2", stroke: "currentColor", strokeWidth: "1.8" })
-        ),
-    },
-    {
-        title: "Add-to-Cart & Buy-Now",
-        description: "Prominent actions that make purchasing quick and simple.",
-        icon: React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none" },
-            React.createElement("path", { d: "M4 5H6L8.4 15.5H18L20 8H7", stroke: "currentColor", strokeWidth: "1.8", strokeLinecap: "round", strokeLinejoin: "round" }),
-            React.createElement("circle", { cx: "10", cy: "19", r: "1.5", stroke: "currentColor", strokeWidth: "1.8" }),
-            React.createElement("circle", { cx: "17", cy: "19", r: "1.5", stroke: "currentColor", strokeWidth: "1.8" })
-        ),
-    },
+    { title: "High-quality Product Images", icon: "fas fa-image" },
+    { title: "Product Descriptions", icon: "fas fa-align-left" },
+    { title: "Pricing & Offers", icon: "fas fa-tag" },
+    { title: "Product Variations", icon: "fas fa-layer-group" },
+    { title: "Size & Specification Options", icon: "fas fa-sliders-h" },
+    { title: "Availability Information", icon: "fas fa-box-open" },
+    { title: "Customer Reviews", icon: "fas fa-star" },
+    { title: "Related Products", icon: "fas fa-th-large" },
+    { title: "Frequently Bought Products", icon: "fas fa-shopping-basket" },
+    { title: "Delivery Information", icon: "fas fa-truck" },
+    { title: "Add-to-Cart & Buy-Now", icon: "fas fa-shopping-cart" },
 ];
 
 
@@ -1815,43 +1731,42 @@ export const industryData: IndustryItem[] = [
 
 export const ecommerceProcessData = [
     {
-        number: "01",
+       
         title: "Business Understanding",
         description:
             "We understand your products, customers, competitors, and business objectives.",
     },
     {
-        number: "02",
+      
         title: "Website Planning",
         description:
             "We define the sitemap, product categories, functionality, and customer journey.",
     },
-    {
-        number: "03",
+    { 
         title: "UI/UX Design",
         description:
             "Our designers create the homepage, category pages, product pages, cart, and checkout experience.",
     },
     {
-        number: "04",
+      
         title: "E-commerce Development",
         description:
             "We convert the approved design into a functional ecommerce website.",
     },
     {
-        number: "05",
+      
         title: "Integration",
         description:
             "Payment gateways, shipping, analytics, communication tools, and other required integrations are implemented.",
     },
     {
-        number: "06",
+    
         title: "Testing",
         description:
             "We test the store across devices, browsers, forms, checkout processes, and key functionalities.",
     },
     {
-        number: "07",
+      
         title: "Launch & Support",
         description:
             "After final approval, your ecommerce website is launched and supported for ongoing improvements.",

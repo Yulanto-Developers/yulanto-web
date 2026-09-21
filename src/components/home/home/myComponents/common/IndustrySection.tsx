@@ -1,7 +1,8 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
-import { industryData, IndustryItem } from "../../custome-ecommerce/ecommerceData/shareData";
+import type { IndustryItem } from "../../custome-ecommerce/ecommerceData/shareData";
 import "@/assets/css/industrySection.css";
 
 interface IndustrySectionProps {
@@ -14,8 +15,43 @@ const IndustrySection = ({ data }: IndustrySectionProps) => {
 
     const totalIndustries = data.length;
 
+    // Keep active index valid when data changes
+    useEffect(() => {
+        setActiveIndex(0);
+    }, [data]);
+
+    // Automatically change the active industry
+    useEffect(() => {
+        if (totalIndustries <= 1) return;
+
+        const interval = setInterval(() => {
+            setIsChanging(true);
+
+            setTimeout(() => {
+                setActiveIndex((currentIndex) =>
+                    (currentIndex + 1) % totalIndustries
+                );
+
+                setIsChanging(false);
+            }, 300);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [totalIndustries]);
+
+    // Split the same data into three columns
+    const third = Math.ceil(totalIndustries / 3);
+
+    const columns = [
+        data.slice(0, third),
+        data.slice(third, third * 2),
+        data.slice(third * 2),
+    ];
+
+    const activeIndustry = data[activeIndex];
+
     const changeIndustry = (index: number) => {
-        if (index === activeIndex || isChanging) return;
+        if (index === activeIndex) return;
 
         setIsChanging(true);
 
@@ -25,39 +61,20 @@ const IndustrySection = ({ data }: IndustrySectionProps) => {
         }, 300);
     };
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIsChanging(true);
-
-            setTimeout(() => {
-                setActiveIndex((currentIndex) => {
-                    return (currentIndex + 1) % totalIndustries;
-                });
-
-                setIsChanging(false);
-            }, 300);
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, [totalIndustries]);
-
-    const firstColumn = data.slice(0, 8);
-    const secondColumn = data.slice(8);
-
-    const activeIndustry = data[activeIndex];
-
     return (
         <section className="industry-section">
-
             <div className="row industry-main-row align-items-center">
 
-                {/* SVG */}
-                <div className="col-lg-4">
+                {/* SVG / Visual Column */}
+                <div className="col-lg-3">
                     <div className="industry-visual">
 
                         <div
-                            className={`industry-svg ${isChanging ? "industry-svg-changing" : ""
-                                }`}
+                            className={`industry-svg ${
+                                isChanging
+                                    ? "industry-svg-changing"
+                                    : ""
+                            }`}
                         >
                             {activeIndustry?.icon}
                         </div>
@@ -67,7 +84,6 @@ const IndustrySection = ({ data }: IndustrySectionProps) => {
                         </h3>
 
                         <div className="industry-counter text-figtree">
-
                             <span>
                                 {String(activeIndex + 1).padStart(2, "0")}
                             </span>
@@ -75,10 +91,11 @@ const IndustrySection = ({ data }: IndustrySectionProps) => {
                             <div className="industry-counter-line">
                                 <span
                                     style={{
-                                        width: `${((activeIndex + 1) /
-                                            totalIndustries) *
+                                        width: `${
+                                            ((activeIndex + 1) /
+                                                totalIndustries) *
                                             100
-                                            }%`,
+                                        }%`,
                                     }}
                                 />
                             </div>
@@ -86,81 +103,51 @@ const IndustrySection = ({ data }: IndustrySectionProps) => {
                             <span>
                                 {String(totalIndustries).padStart(2, "0")}
                             </span>
-
                         </div>
-
                     </div>
                 </div>
 
-                {/* First List */}
-                <div className="col-lg-4">
-                    <div className="industry-list">
+                {/* Three Industry Columns */}
+                {columns.map((column, columnIndex) => (
+                    <div
+                        className="col-lg-3"
+                        key={columnIndex}
+                    >
+                        <div className="industry-list">
+                            {column.map((item) => {
+                                const globalIndex = data.findIndex(
+                                    (industry) => industry.id === item.id
+                                );
 
-                        {firstColumn.map((item, index) => (
-                            <button
-                                key={item.id}
-                                type="button"
-                                className={`industry-item ${activeIndex === index ? "active" : ""
-                                    }`}
-                                onClick={() => changeIndustry(index)}
-                            >
-                                <span className="industry-number text-figtree">
-                                    {String(index + 1).padStart(2, "0")}
-                                </span>
-
-                                <span className="industry-name text-figtree">
-                                    {item.title}
-                                </span>
-
-                                <span className="industry-arrow">
-                                    →
-                                </span>
-                            </button>
-                        ))}
-
-                    </div>
-                </div>
-
-                {/* Second List */}
-                <div className="col-lg-4">
-                    <div className="industry-list">
-
-                        {secondColumn.map((item, index) => {
-
-                            const actualIndex = index + 8;
-
-                            return (
-                                <button
-                                    key={item.id}
-                                    type="button"
-                                    className={`industry-item ${activeIndex === actualIndex
-                                        ? "active"
-                                        : ""
+                                return (
+                                    <button
+                                        key={item.id}
+                                        type="button"
+                                        className={`industry-item ${
+                                            activeIndex === globalIndex
+                                                ? "active"
+                                                : ""
                                         }`}
-                                    onClick={() =>
-                                        changeIndustry(actualIndex)
-                                    }
-                                >
-                                    <span className="industry-number text-figtree">
-                                        {String(actualIndex + 1).padStart(2, "0")}
-                                    </span>
+                                        onClick={() =>
+                                            changeIndustry(globalIndex)
+                                        }
+                                    >
+                                        <span className="industry-icon">
+                                            {item.icon || (
+                                                <i className="fa-solid fa-store" />
+                                            )}
+                                        </span>
 
-                                    <span className="industry-name text-figtree">
-                                        {item.title}
-                                    </span>
-
-                                    <span className="industry-arrow">
-                                        →
-                                    </span>
-                                </button>
-                            );
-                        })}
-
+                                        <span className="industry-name text-figtree">
+                                            {item.title}
+                                        </span>
+                                    </button>
+                                );
+                            })}
+                        </div>
                     </div>
-                </div>
-
+                ))}
             </div>
-
         </section>
     );
 };

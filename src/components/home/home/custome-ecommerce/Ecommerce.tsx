@@ -1231,7 +1231,7 @@ function Ecommerce() {
                 data-aos="fade-right"
                 data-aos-delay={400}
                 data-aos-once={true}
-                className="px-about-6-area pt-40 pb-40 pb-lg-110"
+                className="px-about-6-area pt-40 pb-40 pb-lg-110 unique-ecom-cards-section"
             >
                 <div className="container container-1550">
                     <div className="row">
@@ -1249,7 +1249,7 @@ function Ecommerce() {
                         </div>
 
                         <div className="col-md-12">
-                            <p className="text-figtree">
+                            <p className="text-figtree mb-5">
                                 Your homepage is often the first interaction customers
                                 have with your brand. Our ecommerce homepage design
                                 combines strong visuals, product highlights, promotional
@@ -1267,40 +1267,35 @@ function Ecommerce() {
                                 data-aos-once={true}
                                 key={card.title}
                             >
-                                <div
-                                    className="ecommerce-design-card"
-                                  
-                                >
-                                    {/* Icon */}
-                                    <div className="ecommerce-card-icon">
-                                        {card.icon}
+                                <div className="ecommerce-design-card">
+                                    <div className="ecommerce-card-content">
+                                        {/* Icon */}
+
+
+                                        {/* Title */}
+                                        <h5 className="ecommerce-card-title text-figtree">
+                                            {card.title}
+                                        </h5>
+
+                                        {/* Hover Image Preview (Appears smoothly between title and list) */}
+                                        <div className="ecommerce-card-image"></div>
+
+                                        {/* Items / Bullet Points */}
+                                        <ul className="ecommerce-card-list">
+                                            {card.items.map((item) => (
+                                                <li className="text-figtree" key={item}>
+                                                    <span className="ecommerce-list-icon">✓</span>
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
-
-                                    {/* Title */}
-                                    <h5 className="ecommerce-card-title text-figtree">
-                                        {card.title}
-                                    </h5>
-
-                                    {/* Items */}
-                                    <ul className="ecommerce-card-list">
-                                        {card.items.map((item) => (
-                                            <li
-                                                className="text-figtree"
-                                                key={item}
-                                            >
-                                                <span className="ecommerce-list-icon">
-                                                    ✓
-                                                </span>
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
                                 </div>
                             </div>
                         ))}
 
                         {/* Bottom Content */}
-                        <div className="col-12 mt-4">
+                        <div className="col-12 mt-20">
                             <p className="text-figtree">
                                 Our homepage design for ecommerce is structured to
                                 provide customers with a clear path from discovering
@@ -1315,9 +1310,14 @@ function Ecommerce() {
             <div
                 data-aos="fade-right"
                 data-aos-delay={400}
-                data-aos-once={true}
+                data-aos-once={true} className="px-about-6-area pt-40 pb-40 pb-lg-110"
+                style={{
+                    backgroundColor: "#f5f5f5",
+
+                }}
             >
-                <div className="container mt-30 mb-20">
+                <div className="container container-1550">
+
 
                     <div className="row">
 
@@ -1482,96 +1482,123 @@ function Ecommerce() {
                 data-aos="fade-right"
                 data-aos-delay={400}
                 data-aos-once={true}
+               
+               className="px-about-6-area pt-40 pb-40 pb-lg-110"
             >
-                <div className="container mt-100 mb-20">
-
-                    <div className="row">
-
-                        <div className="col-lg-12 mb-4">
-
-                            <span className="tp-section-subtitle text-black blink-ball">
-                                Better Shopping Experiences
+                <div className="container container-1550" >
+                    <div className="row align-items-center mb-4" data-aos="fade-up">
+                        <div className="col-xl-3 col-lg-4 mb-3 mb-lg-0">
+                            <span className="tp-section-subtitle text-black blink-ball" >
+                                Product Design That Connects
                             </span>
-
-                            <h4 className="px-about-title">
-                                <span className="text-blue-about">
-                                    E-commerce Web Design{" "}
-                                </span>
-                                Focused on User Experience
-                            </h4>
-
                         </div>
 
-                        <div className="row align-items-center">
-
-                            {/* RIGHT CONTENT */}
-                            <div className="col-lg-12">
-
-                                <p className="text-figtree">
-                                    Your product page plays a major role in the buying decision.
-                                    We create product layouts that present important information
-                                    clearly while keeping the design visually appealing.
+                        <div className="col-xl-9 col-lg-8">
+                            <div className="px-project-title-box">
+                                <h4 className="px-about-title mb-3" >
+                                    <span className="text-blue-about">Product Page Design for </span> Better Customer Engagement
+                                </h4>
+                                <p className="text-figtree mb-0">
+                                    Your product page plays a major role in the buying decision. We create product layouts that present important information clearly while keeping the design visually appealing.
                                 </p>
-
-                                <div className="product-page-features">
-
-                                    {productPageFeatures.map((feature, index) => (
-                                        <div
-                                            className="product-feature-item"
-                                            key={feature.title}
-                                            data-aos="fade-up"
-                                            data-aos-delay={(index + 1) * 80}
-                                            data-aos-once={true}
-                                        >
-                                            <span className="product-feature-number">
-                                                {String(index + 1).padStart(2, "0")}
-                                            </span>
-
-                                            <div className="product-feature-icon">
-                                                {feature.icon}
-                                            </div>
-
-                                            <div className="product-feature-content">
-                                                <h6 className="text-tenor">
-                                                    {feature.title}
-                                                </h6>
-
-                                                <p className="text-figtree">
-                                                    {feature.description}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    ))}
-
-                                </div>
-
-                                <p className="text-figtree product-page-bottom-text">
-                                    Our <strong style={{ color: '#053456' }}>design for ecommerce websites</strong> keeps
-                                    product information organized so customers can make
-                                    purchase decisions with confidence.
-                                </p>
-
                             </div>
-
                         </div>
-
                     </div>
 
+                    {/* Main Split Row */}
+                    <div className="row align-items-stretch" style={{ display: 'flex', flexWrap: 'wrap' }}>
+                        {/* LEFT SIDE: 2-Column Grid of Feature Cards (Icon on top, Title below) */}
+                     <div className="col-lg-7 mb-4 mb-lg-0" style={{ display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ 
+                            display: 'grid', 
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', 
+                            gap: '16px', 
+                            height: '100%' 
+                        }}>
+                            {productPageFeatures.map((feature, index) => (
+                                <div
+                                    key={feature.title}
+                                    data-aos="fade-up"
+                                    data-aos-delay={(index + 1) * 60}
+                                    data-aos-once={true}
+                                    style={{
+                                        background: '#ffffff',
+                                        padding: '18px 20px',
+                                        borderRadius: '12px',
+                                        boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                        alignItems: 'center',
+                                        justifyContent: 'flex-start',
+                                        border: '1px solid #eaeaea',
+                                    }}
+                                >
+                                    <div style={{
+                                        fontSize: '20px',
+                                        color: '#053456',
+                                        marginRight: '14px',
+                                        background: '#f0f4f8',
+                                        width: '42px',
+                                        height: '42px',
+                                        borderRadius: '8px',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        flexShrink: 0
+                                    }}>
+                                        <i className={feature.icon}></i>
+                                    </div>
+                                    <h6 style={{ fontSize: '15px', fontWeight: 600, color: '#111', margin: 0, lineHeight: 1.4 }}>
+                                        {feature.title}
+                                    </h6>
+                                </div>
+                            ))}
+                        </div>
+                        </div>
+                        {/* RIGHT SIDE: Visual Image Showcase matching full height */}
+                        <div className="col-lg-5" data-aos="fade-left" data-aos-delay={200} data-aos-once={true} style={{ display: 'flex' }}>
+                            <div style={{
+                                width: '100%',
+                                background: '#f8f9fa',
+                                borderRadius: '16px',
+                                border: '1px solid #eaeaea',
+                                minHeight: '100%',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
+                                overflow: 'hidden'
+                            }} className="split-showcase-image-wrapper">
+                                <div style={{ width: '100%', height: '100%', minHeight: '450px', backgroundSize: 'cover', backgroundPosition: 'center' }} className="split-showcase-image"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row mt-4">
+                        <div className="col-12">
+                            <p className="text-figtree product-page-bottom-text mb-0" style={{ color: '#555', fontSize: '16px' }}>
+                                Our <strong style={{ color: '#053456' }}>design for ecommerce websites</strong> keeps
+                                product information organized so customers can make
+                                purchase decisions with confidence.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div
                 data-aos="fade-up"
                 data-aos-delay={400}
                 data-aos-once={true}
-                className="responsive-ecommerce-section"
+                className="px-about-6-area pt-40 pb-40 pb-lg-110"
+                style={{
+                    backgroundColor: "#f5f5f5",
+                }}
             >
-                <div className="container">
-
+                <div className="container container-1550">
                     <div className="row align-items-center">
 
                         {/* LEFT CONTENT */}
                         <div className="col-lg-6">
-
                             <span className="tp-section-subtitle text-black blink-ball">
                                 Responsive Shopping Experience
                             </span>
@@ -1601,131 +1628,73 @@ function Ecommerce() {
                                 <strong> website and ecommerce design</strong> provide a
                                 consistent shopping experience.
                             </p>
-
                         </div>
 
                         {/* RIGHT RESPONSIVE VISUAL */}
                         <div className="col-lg-6">
 
-                            <div className="responsive-devices">
 
-                                <div className="responsive-desktop">
-                                    <div className="device-browser">
-                                        <div className="browser-top">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-
-                                        <div className="device-screen">
-                                            <div className="screen-header"></div>
-
-                                            <div className="screen-hero">
-                                                <div></div>
-                                                <span></span>
-                                            </div>
-
-                                            <div className="screen-products">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="responsive-tablet">
-                                    <div className="tablet-screen">
-
-                                        <div className="tablet-header"></div>
-
-                                        <div className="tablet-hero">
-                                            <span></span>
-                                        </div>
-
-                                        <div className="tablet-products">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div className="responsive-mobile">
-                                    <div className="mobile-speaker"></div>
-
-                                    <div className="mobile-screen">
-
-                                        <div className="mobile-header"></div>
-
-                                        <div className="mobile-hero">
-                                            <span></span>
-                                        </div>
-
-                                        <div className="mobile-product">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-
-                                        <div className="mobile-button"></div>
-
-                                    </div>
-                                </div>
-
-                                <div className="responsive-circle responsive-circle-one"></div>
-                                <div className="responsive-circle responsive-circle-two"></div>
-
+                            <div className="portal-cta-image text-center">
+                                <img
+                                    src="assets/img/portal/8.Looking-for-a-Web-Portal-Development.jpg"
+                                    alt="Web Portal Development Chennai"
+                                    className="img-fluid w-100 "
+                                    style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '450px',marginBottom:'20px' }}
+                                />
                             </div>
+
+
+
+
+
+
 
                         </div>
 
                     </div>
-
                 </div>
             </div>
             <div
                 data-aos="fade-up"
                 data-aos-delay={400}
                 data-aos-once={true}
-                className="responsive-ecommerce-section"
+                className="px-about-6-area pt-40 pb-40 pb-lg-110"
             >
-                <div className="container">
-                    <div className="row align-items-center">
-
-                        <div className="col-12">
+                <div className="container container-1550">
+                    <div className="row align-items-center mb-4" data-aos="fade-up">
+                        <div className="col-xl-3">
                             <span className="tp-section-subtitle text-black blink-ball">
                                 Tailored E-commerce Development
                             </span>
-
-                            <h4 className="px-about-title">
-                                <span className="text-blue-about">
-                                    Custom E-commerce Development{" "}
-                                </span>
-                                for Different Industries
-                            </h4>
                         </div>
 
-                        <div className="col-md-12">
-                            <p className="text-figtree">
-                                Our ecommerce website development solutions can be customized for businesses across different industries.
-                            </p>
-                            <p>We can develop online stores for: </p>
+                        <div className="col-xl-9">
+                            <div className="px-project-title-box">
+                                <h4 className="px-about-title mb-20">
+                                    <span className="text-blue-about"> Custom E-commerce Development </span> for Different Industries
+                                </h4>
+                                <p className="text-figtree mt-2">
+                                    Our ecommerce website development solutions can be customized for businesses across different industries.
+                                </p>
+                            </div>
                         </div>
-
-
                     </div>
 
-                    <IndustrySection data={industryData} />
+                    <h5 className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' }}>We can develop online stores for:</h5>
 
+                    <IndustrySection data={industryData} />
                 </div>
             </div>
             <div
                 data-aos="fade-up"
                 data-aos-delay={400}
                 data-aos-once={true}
-                className="responsive-ecommerce-section ecommerce-chennai-section"
+                className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{
+                    backgroundColor: "#f5f5f5",
+
+                }}
             >
-                <div className="container">
+                <div className="container container-1550">
                     <div className="row align-items-center">
                         <div className="col-md-12">
                             <span className="tp-section-subtitle text-black blink-ball">
@@ -1741,581 +1710,23 @@ function Ecommerce() {
                         </div>
                         {/* LEFT - E-COMMERCE SVG */}
                         <div className="col-lg-6">
-                            <div className="ecommerce-chennai-visual">
-
-                                <svg
-                                    className="ecommerce-chennai-svg"
-                                    viewBox="0 0 600 520"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-
-                                    {/* Background */}
-                                    <ellipse
-                                        cx="300"
-                                        cy="270"
-                                        rx="245"
-                                        ry="190"
-                                        fill="#EDF6FA"
-                                    />
-
-                                    <circle
-                                        cx="105"
-                                        cy="105"
-                                        r="38"
-                                        fill="#E5F3F7"
-                                        className="eco-float"
-                                    />
-
-                                    <circle
-                                        cx="500"
-                                        cy="125"
-                                        r="28"
-                                        fill="#E5F3F7"
-                                        className="eco-float-delay"
-                                    />
-
-                                    {/* YULANTO BRAND */}
-                                    <g className="eco-brand">
-                                        <text
-                                            x="62"
-                                            y="72"
-                                            fill="#053456"
-                                            fontSize="28"
-                                            fontWeight="700"
-                                            className='text-tenor'
-                                        >
-                                            Yulanto
-                                        </text>
-
-                                        <text
-                                            x="65"
-                                            y="91"
-                                            fill="#53ae7d"
-                                            fontSize="9"
-                                            fontWeight="600"
-                                            letterSpacing="3"
-                                            className='text-tenor'
-                                        >
-                                            WEB CREATIONS
-                                        </text>
-                                    </g>
-
-                                    {/* CHENNAI LOCATION */}
-                                    <g className="eco-location">
-
-                                        <path
-                                            d="M475 65C475 48 489 35 506 35C523 35 537 48 537 65C537 88 506 112 506 112C506 112 475 88 475 65Z"
-                                            fill="#53ae7d"
-                                        />
-
-                                        <circle
-                                            cx="506"
-                                            cy="64"
-                                            r="10"
-                                            fill="white"
-                                        />
-
-                                        <text
-                                            x="430"
-                                            y="135"
-                                            fill="#053456"
-                                            fontSize="15"
-                                            fontWeight="600"
-                                            className='text-tenor'
-                                        >
-                                            Chennai
-                                        </text>
-
-                                        <path
-                                            d="M425 143C455 151 485 148 515 137"
-                                            stroke="#53ae7d"
-                                            strokeWidth="3"
-                                            fill="none"
-                                        />
-
-                                    </g>
-
-                                    {/* CHENNAI BUILDING */}
-                                    <g className="eco-building">
-
-                                        <path
-                                            d="M75 225L135 170L195 225V315H75V225Z"
-                                            fill="#D9EDF4"
-                                            stroke="#053456"
-                                            strokeWidth="4"
-                                        />
-
-                                        <path
-                                            d="M55 225L135 155L215 225"
-                                            stroke="#053456"
-                                            strokeWidth="5"
-                                            fill="none"
-                                        />
-
-                                        <path
-                                            d="M112 315V250H158V315"
-                                            fill="#53ae7d"
-                                            stroke="#053456"
-                                            strokeWidth="4"
-                                        />
-
-                                        <rect
-                                            x="88"
-                                            y="235"
-                                            width="20"
-                                            height="25"
-                                            rx="3"
-                                            fill="#053456"
-                                        />
-
-                                        <rect
-                                            x="163"
-                                            y="235"
-                                            width="20"
-                                            height="25"
-                                            rx="3"
-                                            fill="#053456"
-                                        />
-
-                                    </g>
-
-                                    {/* MAIN LAPTOP */}
-                                    <g className="eco-laptop">
-
-                                        {/* Laptop screen */}
-                                        <rect
-                                            x="155"
-                                            y="150"
-                                            width="315"
-                                            height="225"
-                                            rx="18"
-                                            fill="#053456"
-                                        />
-
-                                        {/* Screen */}
-                                        <rect
-                                            x="170"
-                                            y="165"
-                                            width="285"
-                                            height="190"
-                                            rx="8"
-                                            fill="white"
-                                        />
-
-                                        {/* Browser top */}
-                                        <circle
-                                            cx="187"
-                                            cy="181"
-                                            r="5"
-                                            fill="#53ae7d"
-                                        />
-
-                                        <circle
-                                            cx="203"
-                                            cy="181"
-                                            r="5"
-                                            fill="#D8E9EF"
-                                        />
-
-                                        <circle
-                                            cx="219"
-                                            cy="181"
-                                            r="5"
-                                            fill="#D8E9EF"
-                                        />
-
-                                        {/* Store Header */}
-                                        <rect
-                                            x="188"
-                                            y="202"
-                                            width="245"
-                                            height="32"
-                                            rx="6"
-                                            fill="#EDF6FA"
-                                        />
-
-                                        <text
-                                            x="202"
-                                            y="223"
-                                            fill="#053456"
-                                            fontSize="11"
-                                            fontWeight="700"
-                                            className='text-figtree'
-                                        >
-                                            YULANTO
-                                        </text>
-
-                                        {/* Search */}
-                                        <rect
-                                            x="320"
-                                            y="210"
-                                            width="95"
-                                            height="15"
-                                            rx="7"
-                                            fill="white"
-                                            stroke="#D8E9EF"
-                                            strokeWidth="2"
-                                        />
-
-                                        {/* Product Image */}
-                                        <rect
-                                            x="190"
-                                            y="248"
-                                            width="110"
-                                            height="85"
-                                            rx="8"
-                                            fill="#EDF6FA"
-                                        />
-
-                                        {/* Product Shoe */}
-                                        <path
-                                            d="M205 295C225 290 232 263 248 258L270 270L285 292L300 301V315H210C200 312 198 303 205 295Z"
-                                            fill="#053456"
-                                        />
-
-                                        <path
-                                            d="M245 280L270 291"
-                                            stroke="#53ae7d"
-                                            strokeWidth="7"
-                                            strokeLinecap="round"
-                                        />
-
-                                        <path
-                                            d="M211 315H301"
-                                            stroke="#53ae7d"
-                                            strokeWidth="5"
-                                            strokeLinecap="round"
-                                        />
-
-                                        {/* Product details */}
-                                        <rect
-                                            x="320"
-                                            y="250"
-                                            width="85"
-                                            height="9"
-                                            rx="4"
-                                            fill="#053456"
-                                        />
-
-                                        <rect
-                                            x="320"
-                                            y="269"
-                                            width="65"
-                                            height="7"
-                                            rx="4"
-                                            fill="#CFE4EC"
-                                        />
-
-                                        <rect
-                                            x="320"
-                                            y="284"
-                                            width="50"
-                                            height="7"
-                                            rx="4"
-                                            fill="#CFE4EC"
-                                        />
-
-                                        {/* Stars */}
-                                        <text
-                                            x="320"
-                                            y="310"
-                                            fill="#53ae7d"
-                                            fontSize="15"
-                                            fontFamily="Arial, sans-serif"
-                                        >
-                                            ★ ★ ★ ★ ★
-                                        </text>
-
-                                        {/* Price */}
-                                        <text
-                                            x="320"
-                                            y="330"
-                                            fill="#053456"
-                                            fontSize="13"
-                                            fontWeight="700"
-                                            className='text-figtree'
-                                        >
-                                            ₹2,499
-                                        </text>
-
-                                        {/* Laptop base */}
-                                        <path
-                                            d="M125 375H485L455 400H155L125 375Z"
-                                            fill="#053456"
-                                        />
-
-                                        <path
-                                            d="M155 400H455"
-                                            stroke="#53ae7d"
-                                            strokeWidth="6"
-                                            strokeLinecap="round"
-                                        />
-
-                                    </g>
-
-                                    {/* CART ICON */}
-                                    <g className="eco-cart">
-
-                                        <circle
-                                            cx="485"
-                                            cy="225"
-                                            r="42"
-                                            fill="white"
-                                            stroke="#E0EEF3"
-                                            strokeWidth="5"
-                                        />
-
-                                        <path
-                                            d="M465 210H475L482 240H510L518 218H480"
-                                            stroke="#053456"
-                                            strokeWidth="6"
-                                            fill="none"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-
-                                        <circle
-                                            cx="486"
-                                            cy="249"
-                                            r="5"
-                                            fill="#53ae7d"
-                                        />
-
-                                        <circle
-                                            cx="507"
-                                            cy="249"
-                                            r="5"
-                                            fill="#53ae7d"
-                                        />
-
-                                        <circle
-                                            cx="515"
-                                            cy="201"
-                                            r="14"
-                                            fill="#53ae7d"
-                                        />
-
-                                        <text
-                                            x="511"
-                                            y="206"
-                                            fill="white"
-                                            fontSize="11"
-                                            fontWeight="700"
-                                            className='text-figtree'
-                                        >
-                                            3
-                                        </text>
-
-                                    </g>
-
-                                    {/* PAYMENT CARD */}
-                                    <g className="eco-payment">
-
-                                        <rect
-                                            x="55"
-                                            y="335"
-                                            width="125"
-                                            height="72"
-                                            rx="12"
-                                            fill="white"
-                                            stroke="#053456"
-                                            strokeWidth="4"
-                                        />
-
-                                        <rect
-                                            x="72"
-                                            y="352"
-                                            width="90"
-                                            height="10"
-                                            rx="5"
-                                            fill="#053456"
-                                        />
-
-                                        <rect
-                                            x="72"
-                                            y="372"
-                                            width="55"
-                                            height="7"
-                                            rx="4"
-                                            fill="#D4E7EE"
-                                        />
-
-                                        <circle
-                                            cx="145"
-                                            cy="378"
-                                            r="10"
-                                            fill="#53ae7d"
-                                        />
-
-                                    </g>
-
-                                    {/* UI/UX CARD */}
-                                    <g className="eco-service-card">
-
-                                        <rect
-                                            x="405"
-                                            y="330"
-                                            width="135"
-                                            height="75"
-                                            rx="12"
-                                            fill="white"
-                                            stroke="#E1EDF2"
-                                            strokeWidth="3"
-                                        />
-
-                                        <circle
-                                            cx="432"
-                                            cy="356"
-                                            r="14"
-                                            fill="#EDF6FA"
-                                        />
-
-                                        <path
-                                            d="M425 357L431 363L441 349"
-                                            stroke="#53ae7d"
-                                            strokeWidth="4"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-
-                                        <text
-                                            x="454"
-                                            y="355"
-                                            fill="#053456"
-                                            fontSize="11"
-                                            fontWeight="700"
-                                            className='text-tenor'
-                                        >
-                                            UI/UX Design
-                                        </text>
-
-                                        <text
-                                            x="454"
-                                            y="372"
-                                            fill="#71828B"
-                                            fontSize="9"
-                                            className='text-tenor'
-                                        >
-                                            User-focused
-                                        </text>
-
-                                    </g>
-
-                                    {/* DELIVERY BOXES */}
-                                    <g className="eco-boxes">
-
-                                        <rect
-                                            x="405"
-                                            y="405"
-                                            width="80"
-                                            height="65"
-                                            rx="6"
-                                            fill="#53ae7d"
-                                            stroke="#053456"
-                                            strokeWidth="4"
-                                        />
-
-                                        <path
-                                            d="M405 420H485"
-                                            stroke="#053456"
-                                            strokeWidth="4"
-                                        />
-
-                                        <path
-                                            d="M445 405V470"
-                                            stroke="#053456"
-                                            strokeWidth="4"
-                                        />
-
-                                        <text
-                                            x="417"
-                                            y="447"
-                                            fill="white"
-                                            fontSize="10"
-                                            fontWeight="700"
-                                            fontFamily="Arial, sans-serif"
-                                        >
-                                            Yulanto
-                                        </text>
-
-                                        <rect
-                                            x="475"
-                                            y="430"
-                                            width="55"
-                                            height="40"
-                                            rx="5"
-                                            fill="#053456"
-                                        />
-
-                                    </g>
-
-                                    {/* GROWTH ARROW */}
-                                    <g className="eco-growth">
-
-                                        <path
-                                            d="M85 455C125 420 150 430 175 400C195 375 210 355 235 340"
-                                            stroke="#53ae7d"
-                                            strokeWidth="6"
-                                            fill="none"
-                                            strokeLinecap="round"
-                                        />
-
-                                        <path
-                                            d="M220 342L238 338L234 356"
-                                            stroke="#53ae7d"
-                                            strokeWidth="6"
-                                            fill="none"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-
-                                        <circle
-                                            cx="100"
-                                            cy="445"
-                                            r="7"
-                                            fill="#053456"
-                                            className="eco-pulse"
-                                        />
-
-                                    </g>
-
-                                    {/* FLOATING DOTS */}
-                                    <circle
-                                        cx="75"
-                                        cy="145"
-                                        r="6"
-                                        fill="#53ae7d"
-                                        className="eco-float"
-                                    />
-
-                                    <circle
-                                        cx="545"
-                                        cy="285"
-                                        r="7"
-                                        fill="#53ae7d"
-                                        className="eco-float-delay"
-                                    />
-
-                                    <circle
-                                        cx="115"
-                                        cy="300"
-                                        r="5"
-                                        fill="#53ae7d"
-                                        className="eco-float-delay"
-                                    />
-
-                                </svg>
-
+                            <div className="portal-cta-image text-center">
+                                <img
+                                    src="assets/img/portal/8.Looking-for-a-Web-Portal-Development.jpg"
+                                    alt="Web Portal Development Chennai"
+                                    className="img-fluid w-100"
+                                    style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '450px' }}
+                                />
                             </div>
                         </div>
 
                         {/* RIGHT - CONTENT */}
                         <div className="col-lg-6">
-                            <div className="ecommerce-chennai-content">
+                        
 
 
 
-                                <p className="text-figtree">
+                                <p className="text-figtree mt-3 mt-lg-20">
                                     Looking for an{" "}
 
                                     ecommerce website design company in Chennai
@@ -2339,41 +1750,8 @@ function Ecommerce() {
                                     create a scalable digital storefront.
                                 </p>
 
-                                <div className="ecommerce-service-points">
 
-                                    <div className="ecommerce-point">
-                                        <span>01</span>
-                                        <div>
-                                            <strong>Custom Online Stores</strong>
-                                            <small>
-                                                Designed around your business
-                                            </small>
-                                        </div>
-                                    </div>
-
-                                    <div className="ecommerce-point">
-                                        <span>02</span>
-                                        <div>
-                                            <strong>Secure Payment Integration</strong>
-                                            <small>
-                                                Smooth and reliable checkout
-                                            </small>
-                                        </div>
-                                    </div>
-
-                                    <div className="ecommerce-point">
-                                        <span>03</span>
-                                        <div>
-                                            <strong>Scalable Development</strong>
-                                            <small>
-                                                Built for long-term growth
-                                            </small>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
+                          
                         </div>
 
                     </div>
@@ -2383,9 +1761,9 @@ function Ecommerce() {
                 data-aos="fade-up"
                 data-aos-delay={400}
                 data-aos-once={true}
-                className="responsive-ecommerce-section why-yulanto-section"
+                className="px-about-6-area pt-40 pb-40 pb-lg-110"
             >
-                <div className="container">
+                <div className="container container-1550">
                     <div className="row align-items-center">
                         <div className="col-md-12">
                             <span className="tp-section-subtitle text-black blink-ball">
@@ -2416,9 +1794,7 @@ function Ecommerce() {
                                     {/* 01 */}
                                     <div className="why-yulanto-feature">
 
-                                        <span className="why-feature-number">
-                                            01
-                                        </span>
+
 
                                         <div>
                                             <h5 className="text-tenor">
@@ -2439,9 +1815,7 @@ function Ecommerce() {
                                     {/* 02 */}
                                     <div className="why-yulanto-feature">
 
-                                        <span className="why-feature-number">
-                                            02
-                                        </span>
+
 
                                         <div>
                                             <h5 className="text-tenor">
@@ -2461,9 +1835,7 @@ function Ecommerce() {
                                     {/* 03 */}
                                     <div className="why-yulanto-feature">
 
-                                        <span className="why-feature-number">
-                                            03
-                                        </span>
+
 
                                         <div>
                                             <h5 className="text-tenor">
@@ -2483,9 +1855,7 @@ function Ecommerce() {
                                     {/* 04 */}
                                     <div className="why-yulanto-feature">
 
-                                        <span className="why-feature-number">
-                                            04
-                                        </span>
+
 
                                         <div>
                                             <h5 className="text-tenor">
@@ -2505,9 +1875,7 @@ function Ecommerce() {
                                     {/* 05 */}
                                     <div className="why-yulanto-feature">
 
-                                        <span className="why-feature-number">
-                                            05
-                                        </span>
+
 
                                         <div>
                                             <h5 className="text-tenor">
@@ -2524,37 +1892,12 @@ function Ecommerce() {
                                     </div>
 
 
-                                    {/* 06 */}
-                                    <div className="why-yulanto-feature">
-
-                                        <span className="why-feature-number">
-                                            06
-                                        </span>
-
-                                        <div>
-                                            <h5 className="text-tenor">
-                                                SEO-Friendly Structure
-                                            </h5>
-
-                                            <p className="text-figtree">
-                                                Our{" "}
-                                                ecommerce web development{" "}
-                                                approach considers search-friendly URLs,
-                                                page structures, content organization,
-                                                mobile responsiveness, and technical SEO
-                                                fundamentals.
-                                            </p>
-                                        </div>
-
-                                    </div>
 
 
                                     {/* 07 */}
                                     <div className="why-yulanto-feature">
 
-                                        <span className="why-feature-number">
-                                            07
-                                        </span>
+
 
                                         <div>
                                             <h5 className="text-tenor">
@@ -2611,33 +1954,7 @@ function Ecommerce() {
                                         className="why-float-delay"
                                     />
 
-                                    {/* YULANTO */}
-                                    <g className="why-brand">
 
-                                        <text
-                                            x="55"
-                                            y="70"
-                                            fill="#053456"
-                                            fontSize="27"
-                                            fontWeight="700"
-                                            fontFamily="Arial, sans-serif"
-                                        >
-                                            Yulanto
-                                        </text>
-
-                                        <text
-                                            x="58"
-                                            y="89"
-                                            fill="#53ae7d"
-                                            fontSize="9"
-                                            fontWeight="700"
-                                            letterSpacing="3"
-                                            fontFamily="Arial, sans-serif"
-                                        >
-                                            WEB CREATIONS
-                                        </text>
-
-                                    </g>
 
 
                                     {/* CENTRAL WEBSITE WINDOW */}
@@ -2703,7 +2020,7 @@ function Ecommerce() {
                                             fontWeight="700"
                                             fontFamily="Arial, sans-serif"
                                         >
-                                            YULANTO
+                                            Add Cart
                                         </text>
 
                                         <rect
@@ -3106,26 +2423,31 @@ function Ecommerce() {
                     </div>
                 </div>
             </div>
-            <div className="ecom-process-main">
-                <div className="container">
+            <div className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{
+                backgroundColor: "#f5f5f5",
 
-                    {/* Heading */}
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="ecom-process-heading-area">
-                                <span className="tp-section-subtitle text-black blink-ball">
-                                    From Design to Development
-                                </span>
+            }}
+            >
+                <div className="container container-1550">
+                    <div className="row align-items-center" data-aos="fade-up">
+                        <div className="col-xl-3">
+                            <span className="tp-section-subtitle text-black blink-ball">
+                                From Design to Development
+                            </span>
+                        </div>
 
-                                <h4 className="px-about-title">
-                                    <span className="text-blue-about">
-                                        From Ecommerce Website Design
-                                    </span>{" "}
-                                    to Development—Everything Under One Roof
+                        <div className="col-xl-9">
+                            <div className="px-project-title-box">
+                                <h4 className="px-about-title mb-20">
+                                    <span className="text-blue-about">  From Ecommerce Website Design </span> to Development—Everything Under One Roof
                                 </h4>
+
                             </div>
                         </div>
                     </div>
+
+
+
 
                     <div className="row align-items-start">
 
@@ -3179,23 +2501,13 @@ function Ecommerce() {
                                         }}
                                     >
                                         {ecommerceProcessData.map((process) => (
-                                            <SwiperSlide key={process.number}>
+                                            <SwiperSlide>
                                                 <div className="ecom-process-slide">
 
-                                                    {/* Number */}
-                                                    <div className="ecom-process-number-area">
-                                                        <span className="ecom-process-number">
-                                                            {process.number}
-                                                        </span>
-
-                                                        <span className="ecom-process-line"></span>
-                                                    </div>
 
                                                     {/* Card */}
                                                     <div className="ecom-process-card">
-                                                        <span className="ecom-process-step">
-                                                            STEP {process.number}
-                                                        </span>
+
 
                                                         <h6 className="text-tenor">
                                                             {process.title}
@@ -3222,24 +2534,34 @@ function Ecommerce() {
                 data-aos="fade-up"
                 data-aos-delay={400}
                 data-aos-once={true}
-                className="responsive-ecommerce-section ecommerce-cta-section"
+                className="px-about-6-area pt-40 pb-40 pb-lg-110"
             >
-                <div className="container">
-
-                    <div className="ecommerce-cta-box">
-
-                        <div className="ecommerce-cta-content">
-
+                <div className="container container-1550">
+                    <div className="row align-items-center" data-aos="fade-up">
+                        <div className="col-xl-3">
                             <span className="tp-section-subtitle text-black blink-ball">
                                 Ready to Build Your Ecommerce Website?
                             </span>
+                        </div>
 
-                            <h4 className="px-about-title">
-                                <span className="text-blue-about">
-                                    Build an Ecommerce Website
-                                </span>{" "}
-                                Designed for Your Business Growth
-                            </h4>
+                        <div className="col-xl-9">
+                            <div className="px-project-title-box">
+                                <h4 className="px-about-title mb-20">
+                                    <span className="text-blue-about"> Build an Ecommerce Website </span> Designed for Your Business Growth
+                                </h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row align-items-center">
+
+                        {/* LEFT SIDE: Content */}
+                        <div className="col-lg-6 mb-5 mb-lg-0">
+
+
+
+
+
 
                             <p className="text-figtree">
                                 Whether you need a new online store, a complete ecommerce
@@ -3254,62 +2576,60 @@ function Ecommerce() {
                                 growth.
                             </p>
 
-                            <div className="ecommerce-cta-company">
-                                <strong>
-                                    Yulanto Web Creations
-                                </strong>
-
-                                <span>
-                                    Custom E-commerce Website Design & Development Company
-                                    in Chennai
+                            <div className="ecommerce-cta-company mb-3">
+                                <strong>Yulanto Web Creations</strong>{" "}
+                                <span style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' }}>
+                                    Custom E-commerce Website Design & Development Company in Chennai
                                 </span>
                             </div>
 
-                            <div className="ecommerce-cta-action">
+                            <p className="text-figtree">Get in touch with us today to discuss your ecommerce website requirements.</p>
 
-                                <p className="text-figtree">
-                                    Get in touch with us today to discuss your ecommerce
-                                    website requirements.
-                                </p>
-
-                                <button
-                                    onClick={openModal}
-                                    className="ecommerce-cta-button"
-                                >
-                                    Get in Touch
-                                    <span>→</span>
-                                </button>
-
-                            </div>
+                            <button
+                                onClick={openModal}
+                                className="btn d-inline-flex align-items-center gap-2 py-3 px-4 mt-3 rounded-3 fw-bold text-decoration-none"
+                                style={{
+                                    backgroundColor: '#053456',
+                                    color: '#ffffff',
+                                    fontSize: '15px',
+                                    transition: 'all 0.3s ease',
+                                    border: '1px solid #053456',
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#03233a';
+                                    e.currentTarget.style.transform = 'translateY(-2px)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#053456';
+                                    e.currentTarget.style.transform = 'translateY(0)';
+                                }}
+                            >
+                                <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Let's Talk to Our Team</span>
+                                <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
+                            </button>
 
                         </div>
 
-                        {/* DECORATIVE SIDE */}
-                        <div className="ecommerce-cta-visual">
+                        {/* RIGHT SIDE: Visual / Image Properly Aligned */}
+                        <div className="col-lg-6">
 
-                            <div className="cta-circle cta-circle-one"></div>
-                            <div className="cta-circle cta-circle-two"></div>
-
-                            <div className="cta-store-icon">
-                                <span>Y</span>
-                            </div>
-
-                            <div className="cta-floating cta-cart">
-                                🛒
-                            </div>
-
-                            <div className="cta-floating cta-growth">
-                                ↗
-                            </div>
-
-                            <div className="cta-floating cta-check">
-                                ✓
+                            <div className="portal-cta-image text-center">
+                                <img
+                                    src="assets/img/portal/8.Looking-for-a-Web-Portal-Development.jpg"
+                                    alt="Web Portal Development Chennai"
+                                    className="img-fluid w-150 shadow-sm"
+                                    style={{
+                                        borderRadius: '16px',
+                                        objectFit: 'cover',
+                                        maxHeight: '450px',
+                                        width: '100%'
+                                    }}
+                                />
                             </div>
 
                         </div>
 
                     </div>
-
                 </div>
             </div>
         </div>

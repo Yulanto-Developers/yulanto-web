@@ -916,7 +916,7 @@ function PortalWeb() {
                         <div className="col-lg-6 col-md-12">
                             <div className="portal-services-visual text-center">
                                 <img
-                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+                                    src="/assets/img/portal/1.Professional-Web-Portal-Development-Services.jpg"
                                     alt="Web portal development illustration"
                                     className="img-fluid"
                                 />
@@ -1011,14 +1011,14 @@ function PortalWeb() {
                         <div className="col-lg-5 col-md-12 d-flex">
                             <div className="portal-services-visual text-center ps-lg-4 w-100 d-flex flex-column justify-content-center">
                                 <img
-                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+                                    src="/assets/img/portal/2.Our-Portal-Development.jpg"
                                     alt="Portal Development Solutions"
                                     className="img-fluid w-100 shadow-sm"
                                     style={{
                                         height: "100%",
                                         maxHeight: "none",
                                         minHeight: "100%",
-                                        objectFit: "cover",
+                                      
                                         borderRadius: "12px"
                                     }}
                                 />
@@ -1211,12 +1211,12 @@ function PortalWeb() {
                         <div className="col-lg-4 mb-4 mb-lg-0 d-flex flex-column" data-aos="fade-right" data-aos-delay={200} data-aos-once={true}>
                             <div className="directory-left-image-box text-center h-100 d-flex flex-column">
                                 <img
-                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+                                    src="/assets/img/portal/3.Build-a-Powerful-Online.jpg"
                                     alt="Directory Portal Development"
                                     className="img-fluid w-100 shadow-sm"
                                     style={{
                                         borderRadius: '16px',
-                                        objectFit: 'cover',
+                                      
                                         height: '100%',
                                         maxHeight: 'none',
                                         minHeight: '100%',
@@ -1363,9 +1363,9 @@ function PortalWeb() {
                                     <div className="col-lg-12">
                                         <div className="position-relative overflow-hidden text-center" style={{ borderRadius: '12px', minHeight: '300px', maxHeight: '380px' }}>
                                             <img
-                                                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+                                                src="/assets/img/portal/4.Create-an-Engaging.jpg"
                                                 alt="Digital Magazine Portal Development"
-                                                className="w-100 h-100 object-fit-cover"
+                                                className="w-100 h-100"
                                                 style={{ borderRadius: '12px', transition: 'transform 0.5s ease' }}
                                             />
                                         </div>
@@ -1552,7 +1552,7 @@ function PortalWeb() {
                             <div className="col-lg-4 text-center my-4 my-lg-0" data-aos="zoom-in" data-aos-delay={300}>
                                 <div className="directory-left-image-box text-center">
                                     <img
-                                        src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+                                        src="/assets/img/portal/5.Real-Estate-Portal.jpg"
                                         alt="Real Estate Portal Development"
                                         className="img-fluid w-100"
                                         style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '480px', boxShadow: '0 10px 30px rgba(5, 52, 86, 0.08)' }}
@@ -1772,12 +1772,12 @@ function PortalWeb() {
                             <div className="col-lg-4 ps-lg-4 mt-4 mt-lg-0">
                                 <div className="restaurant-portal-side-image text-center">
                                       <img
-                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
-                                    alt="Directory Portal Development"
+                                    src="/assets/img/portal/6.Our-restaurant-portal.jpg"
+                                    alt="restaurant Portal Development"
                                     className="img-fluid w-100 shadow-sm"
                                     style={{
                                         borderRadius: '16px',
-                                        objectFit: 'cover',
+                                       
                                         height: '500px',
                                         maxHeight: 'none',
                                         minHeight: '100%',
@@ -2069,13 +2069,13 @@ function PortalWeb() {
                                 className="portal-growth-visual"
                             >
                                 <img
-                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+                                    src="/assets/img/portal/7.Grow-Your-Online.jpg"
                                     alt="Shopify Development"
                                     className="img-fluid"
                                     style={{
                                         width: "100%",
                                         height: "400px",
-                                        objectFit: "cover",
+                                      
                                         borderRadius: "20px",
                                         display: "block",
                                     }}
@@ -2106,7 +2106,7 @@ function PortalWeb() {
                         <div className="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay={200}>
                             <div className="portal-cta-image text-center">
                                 <img
-                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+                                    src="assets/img/portal/8.Looking-for-a-Web-Portal-Development.jpg"
                                     alt="Web Portal Development Chennai"
                                     className="img-fluid w-100"
                                     style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '450px' }}
