@@ -26,9 +26,9 @@ const clientData: CardStackItem[] = [
   {
     id: 3,
     title: "Mr. Aaron Ben",
-    tag: "EBITIMI Health Solution",
+    tag: "Ebitimi Health Solution",
     description:
-      "Wonderful meeting with Mr. Aaron Ben from EBITIMI Health Solution, Africa.",
+      "Wonderful meeting with Mr. Aaron Ben from Ebitimi Health Solution, Africa.",
     imageSrc: "/assets/img/clients/image-1.jpg",
   },
   {
@@ -43,7 +43,7 @@ const clientData: CardStackItem[] = [
     title: "Mr. Sam",
     tag: "B&F Roofing LLC",
     description:
-      "Honoured to meet Mr. Sam, Founder of B&F Roofing LLC, USA.",
+      "Honored to meet Mr. Sam, Founder of B&F Roofing LLC, USA.",
     imageSrc: "/assets/img/clients/image-3.jpg",
   },
   {
@@ -66,7 +66,7 @@ const clientData: CardStackItem[] = [
     title: "Mr. Kosuke",
     tag: "EBARA MACHINERY",
     description:
-      "Wonderful meeting with Mr. Kosuke, Managing Director of EBARA MACHINERY.",
+      "Wonderful meeting with Mr. Kosuke, Managing Director of Ebara Machinery.",
     imageSrc: "/assets/img/clients/ebara.webp",
   },
   {

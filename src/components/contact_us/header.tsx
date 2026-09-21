@@ -24,9 +24,7 @@ const ContactUsTopIntro = () => {
                   Let’s bring your ideas to life
                 </h4>
                 <p className="text-figtree text-black mt-2 font-paragraph-cls">
-                  Yulanto offers more than a mere website. it promises a digital
-                  masterpiece that enhances your online presence and drives your
-                  success to new heights.
+                  Yulanto offers more than just a website—we deliver a digital solution that enhances your online presence and drives your success to new heights.
                 </p>
                
               </div>

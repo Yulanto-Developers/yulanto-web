@@ -1,8 +1,8 @@
 import Script from "next/script";
 
 interface FAQItem {
-  question: string;
-  answer: string;
+  question?: string;
+  answer?: string;
 }
 
 interface FAQSchemaProps {

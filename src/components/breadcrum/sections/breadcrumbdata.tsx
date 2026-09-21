@@ -98,8 +98,14 @@ const data = [
     currentPage: "Google Ads Management",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-  {
-    path: "/web-design/startup-website-design",
+  // {
+  //   path: "/web-design/startup-website-design",
+  //   title: "Startup Website Design",
+  //   currentPage: "Startup Website Design",
+  //   backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  // },
+   {
+    path: "/web-design/Web-Designing-Company-in-Chennai",
     title: "Startup Website Design",
     currentPage: "Startup Website Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
@@ -142,27 +148,52 @@ const data = [
     currentPage: "API Integration",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
-  {
+  // {
  
-    path: "/web-design/corporate-website-design",
+  //   path: "/web-design/corporate-website-design",
+  //   title: " Corporate Website Design",
+  //   currentPage: " Corporate Website Design ",
+  //   backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  // },
+  // {
+  //   path: "/web-design/landing-page-desgin",
+  //   title: "Landing Page Design",
+  //   currentPage: "Landing Page Design",
+  //   backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  // },
+  // {
+  //   path: "/web-design/website-redesign",
+  //   title: " Website Redesign",
+  //   currentPage: "Website Redesign ",
+  //   backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  // },
+  // {
+  //   path: "/web-design/ui-ux-desgin",
+  //   title: " UI/UX Design",
+  //   currentPage: "UI/UX Design",
+  //   backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  // },
+   {
+ 
+    path: "/web-design/website-creation-company-in-Chennai",
     title: " Corporate Website Design",
     currentPage: " Corporate Website Design ",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/web-design/landing-page-desgin",
+    path: "/web-design/landing-page-design-chennai",
     title: "Landing Page Design",
     currentPage: "Landing Page Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/web-design/website-redesign",
-    title: " Website Redesign",
+    path: "/web-design/Website-Redesign-in-Chennai",
+    title: "Website Redesign",
     currentPage: "Website Redesign ",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/web-design/ui-ux-desgin",
+    path: "/web-design/UI-UX-Designers-in-Chennai",
     title: " UI/UX Design",
     currentPage: "UI/UX Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
