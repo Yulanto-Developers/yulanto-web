@@ -56,7 +56,7 @@ const NEARBY_LANDMARKS = [
     left: "22%",
   },
   {
-    name: "Appasamy",
+    name: "Appasamy Appartment",
     type: "Appartment",
     top: "78%",
     left: "55%",
@@ -662,10 +662,10 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({ minHeight = 450 }) => {
 export const ContactLocationSection: React.FC<ContactLocationProps> = ({
   phone = "+91 99621 57250",
   email = "info@yulanto.com",
-  address = "F3, #4/608, First Floor, V.O.C Street, Kottivakkam, OMR, Chennai - 600 041, India., Chennai, Tamil Nadu, 600041",
-  workingHours = "Mon - Fri : 10:00 AM - 7:00 PM\nAlternative Saturday : 10:00 AM - 5:30 PM",
+  address = "F3, #4/608, First Floor, V.O.C. Street, Kottivakkam, OMR, Chennai, Tamil Nadu 600041, India",
+  workingHours = "Mon - Fri : 10:00 AM - 7:00 PM\nAlternate Saturday : 10:00 AM - 5:30 PM",
   locationTitle = "Yulanto Web Creations",
-  locationAddress = "F3, #4/608, First Floor, V.O.C Street, Kottivakkam, OMR, Chennai - 600 041, India., Chennai, Tamil Nadu, 600041",
+  locationAddress = "F3, #4/608, First Floor, V.O.C. Street, Kottivakkam, OMR, Chennai, Tamil Nadu 600041, India",
   className,
   style,
 }) => {

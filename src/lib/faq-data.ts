@@ -104,6 +104,109 @@ export const faqData = {
     },
   ],
 
+ /* =========================================================
+     Startup Website Design
+  ========================================================= */
+  "Web-Designing-Company-in-Chennai": [
+    {
+      question: "What is API integration?",
+      answer:
+        "API integration connects two or more software applications or platforms so they can exchange information and work together automatically.",
+    },
+    {
+      question: "What types of APIs can you integrate?",
+      answer:
+        "We can integrate payment, SMS, WhatsApp, CRM, chat, shipping, accounting, booking, marketing and other third-party APIs based on your technical and business requirements.",
+    },
+    {
+      question: "Can you integrate APIs into an existing website?",
+      answer:
+        "Yes. APIs can be integrated into existing websites, eCommerce platforms, web applications and custom software systems.",
+    },
+  ],
+ /* =========================================================
+    corporate-website-design
+  ========================================================= */
+  "website-creation-company-in-Chennai": [
+    {
+      question: "What is API integration?",
+      answer:
+        "API integration connects two or more software applications or platforms so they can exchange information and work together automatically.",
+    },
+    {
+      question: "What types of APIs can you integrate?",
+      answer:
+        "We can integrate payment, SMS, WhatsApp, CRM, chat, shipping, accounting, booking, marketing and other third-party APIs based on your technical and business requirements.",
+    },
+    {
+      question: "Can you integrate APIs into an existing website?",
+      answer:
+        "Yes. APIs can be integrated into existing websites, eCommerce platforms, web applications and custom software systems.",
+    },
+  ],
+/* =========================================================
+    website-redesign
+  ========================================================= */
+  "Website-Redesign-in-Chennai": [
+    {
+      question: "What is API integration?",
+      answer:
+        "API integration connects two or more software applications or platforms so they can exchange information and work together automatically.",
+    },
+    {
+      question: "What types of APIs can you integrate?",
+      answer:
+        "We can integrate payment, SMS, WhatsApp, CRM, chat, shipping, accounting, booking, marketing and other third-party APIs based on your technical and business requirements.",
+    },
+    {
+      question: "Can you integrate APIs into an existing website?",
+      answer:
+        "Yes. APIs can be integrated into existing websites, eCommerce platforms, web applications and custom software systems.",
+    },
+  ],
+
+/* =========================================================
+   landing-page-desgin
+  ========================================================= */
+  "landing-page-design-chennai": [
+    {
+      question: "What is API integration?",
+      answer:
+        "API integration connects two or more software applications or platforms so they can exchange information and work together automatically.",
+    },
+    {
+      question: "What types of APIs can you integrate?",
+      answer:
+        "We can integrate payment, SMS, WhatsApp, CRM, chat, shipping, accounting, booking, marketing and other third-party APIs based on your technical and business requirements.",
+    },
+    {
+      question: "Can you integrate APIs into an existing website?",
+      answer:
+        "Yes. APIs can be integrated into existing websites, eCommerce platforms, web applications and custom software systems.",
+    },
+  ],
+
+  /* =========================================================
+   ui-ux-desgin
+  ========================================================= */
+  "UI-UX-Designers-in-Chennai": [
+    {
+      question: "What is API integration?",
+      answer:
+        "API integration connects two or more software applications or platforms so they can exchange information and work together automatically.",
+    },
+    {
+      question: "What types of APIs can you integrate?",
+      answer:
+        "We can integrate payment, SMS, WhatsApp, CRM, chat, shipping, accounting, booking, marketing and other third-party APIs based on your technical and business requirements.",
+    },
+    {
+      question: "Can you integrate APIs into an existing website?",
+      answer:
+        "Yes. APIs can be integrated into existing websites, eCommerce platforms, web applications and custom software systems.",
+    },
+  ],
+
   /* =========================================================
      OUR STORY
   ========================================================= */
@@ -115,8 +218,7 @@ export const faqData = {
     },
     {
       question: "Where is Yulanto Web Creations located?",
-      answer:
-        "Yulanto Web Creations is based in Chennai, Tamil Nadu, India.",
+      answer: "Yulanto Web Creations is based in Chennai, Tamil Nadu, India.",
     },
     {
       question: "What services does Yulanto Web Creations provide?",
@@ -125,3 +227,11 @@ export const faqData = {
     },
   ],
 } as const;
+
+export const faqDataCustomeEcommerce = [
+  {
+    question: "What is dynamic website development?",
+    answer:
+      "Dynamic website development creates websites where content can be managed, updated and displayed dynamically based on business requirements.",
+  },
+] as const;

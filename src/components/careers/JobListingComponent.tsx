@@ -77,7 +77,7 @@ export default function JobListingComponent({
                   data-aos="text-reveal"
                   data-aos-delay="100"  style={{ lineHeight: "1.2" }}
                 >
-                Careers at Yulanto Web ceration
+                Careers at Yulanto Web Creation
                 </h1>
       </div>
 

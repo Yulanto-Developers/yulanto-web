@@ -1,9 +1,9 @@
 import Script from "next/script";
 
 interface ServiceSchemaProps {
-  name: string;
-  description: string;
-  url: string;
+  name?: string;
+  description?: string;
+  url?: string;
   image?: string;
 }
 

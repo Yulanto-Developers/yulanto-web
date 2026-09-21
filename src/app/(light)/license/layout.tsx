@@ -15,6 +15,7 @@ export const metadata = generateSeo({
   description:
     "Read the License & Copyright information for Yulanto Web Creations. Learn how our website content, designs, code, and materials are protected and may be used.",
 });
+
 export default function AboutUsLayout({ children }: {
 
     children: React.ReactNode;

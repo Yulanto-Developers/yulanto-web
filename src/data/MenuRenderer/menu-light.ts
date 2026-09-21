@@ -30,11 +30,17 @@ export const lightMenu: MenuItem[] = [
         label: "Website Design",
         href: "#",
         subLinks: [
-          { label: "Startup Website Design", href: "/web-design/startup-website-design" },
-          { label: "Corporate Website Design", href: "/web-design/corporate-website-design" },
-          { label: "Website Redesign", href: "/web-design/website-redesign" },
-          { label: "Landing Page Design", href: "/web-design/landing-page-desgin" },
-          { label: "UI/UX Design", href: "/web-design/ui-ux-desgin" },
+          // { label: "Startup Website Design", href: "/web-design/startup-website-design" },
+          // { label: "Corporate Website Design", href: "/web-design/corporate-website-design" },
+          // { label: "Website Redesign", href: "/web-design/website-redesign" },
+          // { label: "Landing Page Design", href: "/web-design/landing-page-desgin" },
+          // { label: "UI/UX Design", href: "/web-design/ui-ux-desgin" },
+          // url change for seo
+          { label: "Startup Website Design", href: "/web-design/Web-Designing-Company-in-Chennai" },
+          { label: "Corporate Website Design", href: "/web-design/website-creation-company-in-Chennai" },
+          { label: "Website Redesign", href: "/web-design/Website-Redesign-in-Chennai" },
+          { label: "Landing Page Design", href: "/web-design/landing-page-design-chennai" },
+          { label: "UI/UX Design", href: "/web-design/UI-UX-Designers-in-Chennai" },
         ]
       },
       {

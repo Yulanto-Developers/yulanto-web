@@ -38,7 +38,7 @@ export default function CareersPage() {
         subtitle="Join Our Journey"
         titleBlue="Shape Your Future"
         titleBlack="With Us"
-        description="Our aim is to create potential career pathways and foster opportunities for growth. We provide avenues for career advancement through the accumulation of experience, the acquisition of new skills, the assumption of leadership responsibilities, and the continuous update on industry trends and technologies."
+        description="Our aim is to create potential career pathways and foster opportunities for growth. We provide avenues for career advancement through the accumulation of experience, the acquisition of new skills, the assumption of leadership responsibilities, and staying continuously updated on industry trends and technologies."
         images={careerImages}
       />
       <Banner />
