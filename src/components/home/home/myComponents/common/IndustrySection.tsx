@@ -133,9 +133,12 @@ const IndustrySection = ({ data }: IndustrySectionProps) => {
                                         }
                                     >
                                         <span className="industry-icon">
-                                            {item.icon || (
-                                                <i className="fa-solid fa-store" />
-                                            )}
+                                            <i
+                                                className={
+                                               
+                                                    "fa-solid fa-store"
+                                                }
+                                            />
                                         </span>
 
                                         <span className="industry-name text-figtree">
