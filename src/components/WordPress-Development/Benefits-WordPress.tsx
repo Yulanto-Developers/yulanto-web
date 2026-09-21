@@ -74,7 +74,7 @@ export default function WordpressBenefits() {
       image:
         "/assets/img/WordPress-Development/Key-Benefits-2.jpg",
       sideImage:
-        "/assets/img/WordPress-Development/Key-Benefits-3.jpg",
+        "/assets/img/WordPress-Development/image-1.jpg",
       mainFeatures: [
         {
           icon: DollarSign,
