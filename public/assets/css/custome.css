@@ -848,7 +848,7 @@
 .split-dropdown-menu .dropdown-content-pane {
     position: absolute !important;
     top: 0 !important;
-    left: 41% !important;
+    left: 35% !important;
     /* Begins exactly where the sidebar finishes */
     width: auto !important;
     /* Explicit space allocation (680px - 260px) */

@@ -54,6 +54,9 @@ const HeroSlide = () => {
                         {heroSlides.map((slide, index) => (
                             <SwiperSlide key={`${slide.title}-${index}`}>
                                 <div className="px-hero-2-contents text-center z-index-1">
+                                     <div className="fix">
+                                        <span style={{ fontWeight: 300, fontSize: '18px', paddingTop: '8px' }}>{slide.head}</span>
+                                    </div>
                                     <div className="fix">
                                         <span className="text-green-color">{slide.title}</span>
                                     </div>
