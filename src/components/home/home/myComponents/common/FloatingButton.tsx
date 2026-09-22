@@ -43,7 +43,7 @@ export default function FloatingQuoteButton() {
         <button
             type="button"
             className={`floating-quote-btn ${showButton ? "show" : ""} ${footerReached ? "footer-reached" : ""}`}
-            onClick={openModal}
+            onClick={() => { openModal('manual') }}
         >
             Get a Free Quote
         </button>

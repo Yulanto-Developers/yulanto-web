@@ -1018,7 +1018,7 @@ function PortalWeb() {
                                         height: "100%",
                                         maxHeight: "none",
                                         minHeight: "100%",
-                                      
+
                                         borderRadius: "12px"
                                     }}
                                 />
@@ -1216,7 +1216,7 @@ function PortalWeb() {
                                     className="img-fluid w-100 shadow-sm"
                                     style={{
                                         borderRadius: '16px',
-                                      
+
                                         height: '100%',
                                         maxHeight: 'none',
                                         minHeight: '100%',
@@ -1771,19 +1771,19 @@ function PortalWeb() {
                             {/* Right Side: 5 Columns for a Single Feature Image with nice spacing */}
                             <div className="col-lg-4 ps-lg-4 mt-4 mt-lg-0">
                                 <div className="restaurant-portal-side-image text-center">
-                                      <img
-                                    src="/assets/img/portal/6.Our-restaurant-portal.jpg"
-                                    alt="restaurant Portal Development"
-                                    className="img-fluid w-100 shadow-sm"
-                                    style={{
-                                        borderRadius: '16px',
-                                       
-                                        height: '500px',
-                                        maxHeight: 'none',
-                                        minHeight: '100%',
-                                        boxShadow: '0 10px 30px rgba(5, 52, 86, 0.08)'
-                                    }}
-                                />
+                                    <img
+                                        src="/assets/img/portal/6.Our-restaurant-portal.jpg"
+                                        alt="restaurant Portal Development"
+                                        className="img-fluid w-100 shadow-sm"
+                                        style={{
+                                            borderRadius: '16px',
+
+                                            height: '500px',
+                                            maxHeight: 'none',
+                                            minHeight: '100%',
+                                            boxShadow: '0 10px 30px rgba(5, 52, 86, 0.08)'
+                                        }}
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -2031,7 +2031,7 @@ function PortalWeb() {
 
 
                                     <button
-                                        onClick={openModal}
+                                        onClick={() => { openModal('manual') }}
                                         className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
                                         style={{
                                             backgroundColor: '#53ae7d',
@@ -2075,7 +2075,7 @@ function PortalWeb() {
                                     style={{
                                         width: "100%",
                                         height: "400px",
-                                      
+
                                         borderRadius: "20px",
                                         display: "block",
                                     }}
@@ -2132,7 +2132,7 @@ function PortalWeb() {
 
                                 {/* Left Aligned CTA Button */}
                                 <button
-                                    onClick={openModal}
+                                    onClick={() => { openModal('manual') }}
                                     className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
                                     style={{
                                         backgroundColor: '#053456',

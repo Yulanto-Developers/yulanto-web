@@ -12,14 +12,14 @@ export interface OffPageFeatureProps {
 }
 
 export default function OffPageSeoBanner() {
-    const { openModal } = useQuoteModal();
+  const { openModal } = useQuoteModal();
 
   return (
-    <section className="px-about-6-area pt-40 pb-40 pb-lg-110"  style={{
-        backgroundColor: "#ffffff",
-      
-      }}
->
+    <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{
+      backgroundColor: "#ffffff",
+
+    }}
+    >
       <div className="container container-1550">
         <div
           style={{
@@ -53,9 +53,9 @@ export default function OffPageSeoBanner() {
               step toward improving your organic visibility, attracting qualified
               visitors, and building sustainable online growth.
             </p>
-                {/* Left Aligned CTA Button */}
+            {/* Left Aligned CTA Button */}
             <button
-             onClick={openModal}
+              onClick={() => { openModal('manual') }}
               className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
               style={{
                 backgroundColor: '#053456',
@@ -73,8 +73,8 @@ export default function OffPageSeoBanner() {
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Boost Your Online Visibility</span>
-              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+              <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Boost Your Online Visibility</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
             </button>
           </motion.div>
 

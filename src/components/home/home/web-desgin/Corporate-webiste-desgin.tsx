@@ -617,18 +617,18 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       >
         <div className="container py-5">
           <div className="row align-items-center mt-30">
-           
+
 
             <div className="row align-items-start">
               <div className="col-md-7">
-                  <span className="tp-section-subtitle text-white blink-ball">
-                Expert Web Design Services
-              </span>
+                <span className="tp-section-subtitle text-white blink-ball">
+                  Expert Web Design Services
+                </span>
 
-              <h4 className="px-about-title mb-20 text-white">
-                <span className="">Best Website </span>
-                Designers in Chennai
-              </h4>
+                <h4 className="px-about-title mb-20 text-white">
+                  <span className="">Best Website </span>
+                  Designers in Chennai
+                </h4>
                 <p className="text-figtree text-white">
                   Your website is often the first point of interaction between
                   your business and potential customers. At Yulanto, we
@@ -1075,7 +1075,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
                     Let’s create a website that represents your brand, engages
                     your customers, and supports your business growth.
                   </p>
-                  <button onClick={openModal} className="cta-button">
+                  <button onClick={() => { openModal('manual') }} className="cta-button">
                     Talk to Our Experts
                   </button>
                 </div>

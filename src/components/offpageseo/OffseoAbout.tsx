@@ -16,25 +16,25 @@ const seoKeywordsData: KeywordRank[] = [
 ];
 
 export const SeoAboutSection: React.FC = () => {
- const { openModal } = useQuoteModal();
+  const { openModal } = useQuoteModal();
   return (
-    
+
     <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{
-        backgroundColor: "#ffffff",
-      
-      }}>
+      backgroundColor: "#ffffff",
+
+    }}>
       <div className="container container-1550">
         <div className="row align-items-center seo-about-row">
-          
+
           {/* Left Side: Mock Chrome Tab with Google Lens & Visual Images */}
-          <div 
+          <div
             className="col-lg-6 col-12 seo-visual-column"
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-once="true"
           >
             <div className="chrome-browser-mockup">
-              
+
               {/* Chrome Window Header */}
               <div className="chrome-tab-header">
                 <div className="chrome-controls">
@@ -66,13 +66,13 @@ export const SeoAboutSection: React.FC = () => {
                     <span className="protocol">https://</span>
                     <span className="domain">google.com/search?q=seo+services+chennai</span>
                   </div>
-                  
+
                   {/* Google Lens & Browser Action Icons */}
                   <div className="chrome-address-actions">
                     <svg className="lens-icon" viewBox="0 0 24 24" fill="none">
                       <title>Search with Google Lens</title>
-                      <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" fill="#4285F4"/>
-                      <path d="M19 6.5C19 5.12 17.88 4 16.5 4H14.5L13.25 2.5H10.75L9.5 4H7.5C6.12 4 5 5.12 5 6.5V8.5L3.5 9.75V14.25L5 15.5V17.5C5 18.88 6.12 20 7.5 20H16.5C17.88 20 19 18.88 19 17.5V15.5L20.5 14.25V9.75L19 8.5V6.5Z" stroke="#ea4335" strokeWidth="1.5"/>
+                      <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" fill="#4285F4" />
+                      <path d="M19 6.5C19 5.12 17.88 4 16.5 4H14.5L13.25 2.5H10.75L9.5 4H7.5C6.12 4 5 5.12 5 6.5V8.5L3.5 9.75V14.25L5 15.5V17.5C5 18.88 6.12 20 7.5 20H16.5C17.88 20 19 18.88 19 17.5V15.5L20.5 14.25V9.75L19 8.5V6.5Z" stroke="#ea4335" strokeWidth="1.5" />
                     </svg>
                     <span className="mic-icon" title="Search by voice">🎙️</span>
                     <span className="star-icon" title="Bookmark page">⭐</span>
@@ -83,7 +83,7 @@ export const SeoAboutSection: React.FC = () => {
               {/* Chrome Content Area: SEO Metrics + Visual Image Previews */}
               <div className="chrome-content-area">
                 <div className="seo-dashboard-summary">
-                  
+
                   {/* Header Banner */}
                   <div className="dashboard-top-bar">
                     <div>
@@ -93,14 +93,14 @@ export const SeoAboutSection: React.FC = () => {
                   </div>
 
                   {/* SEO Visual Image Banner */}
-                  <div 
+                  <div
                     className="seo-visual-banner"
                     data-aos="zoom-in"
                     data-aos-delay="200"
                   >
-                    <img 
-                      src="assets/img/offpage/Why-Choose-Our-SEO.jpg" 
-                      alt="SEO Traffic Growth Graph and Search Engine Analytics" 
+                    <img
+                      src="assets/img/offpage/Why-Choose-Our-SEO.jpg"
+                      alt="SEO Traffic Growth Graph and Search Engine Analytics"
                       className="seo-preview-image"
                     />
                     <div className="image-overlay-tag">
@@ -137,7 +137,7 @@ export const SeoAboutSection: React.FC = () => {
           </div>
 
           {/* Right Side: Structured Content */}
-          <div 
+          <div
             className="col-lg-6 col-12 seo-content-column"
             data-aos="fade-left"
             data-aos-duration="1000"
@@ -159,8 +159,8 @@ export const SeoAboutSection: React.FC = () => {
             <p className="text-figtree text-black mt-2">
               Whether you are searching for the best SEO agency in Chennai, an experienced SEO service company in Chennai, or a reliable SEO consultant in Chennai, we can create an SEO strategy aligned with your business objectives.
             </p>
-             <button
-             onClick={openModal}
+            <button
+              onClick={() => { openModal('manual') }}
               className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
               style={{
                 backgroundColor: '#053456',
@@ -178,8 +178,8 @@ export const SeoAboutSection: React.FC = () => {
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Improve Your Rankings</span>
-              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+              <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Improve Your Rankings</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
             </button>
           </div>
 

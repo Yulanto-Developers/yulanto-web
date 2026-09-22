@@ -96,7 +96,7 @@ export default function GoogleAdsHeroSection() {
               Start your Google Ads campaign today and turn relevant searches into valuable business opportunities.
             </p>
               <button
-             onClick={openModal}
+             onClick={()=>{openModal('manual')}}
               className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
               style={{
                 backgroundColor: '#053456',

@@ -68,7 +68,7 @@ const HeroSlide = () => {
                     {/* Fixed / Stable Button (Outside Swiper) */}
                     <div className="text-center mt-30 mb-40">
                         <button
-                            onClick={openModal}
+                            onClick={() => { openModal('manual') }}
                             className="button-style text-tenor"
                         >
                             Get a Free Quote

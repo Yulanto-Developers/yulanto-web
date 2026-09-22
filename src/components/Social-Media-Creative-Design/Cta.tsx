@@ -8,7 +8,7 @@ import { faArrowRight, faPalette } from "@fortawesome/free-solid-svg-icons";
 import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 
 export function BuildPresenceSection() {
-    const { openModal } = useQuoteModal();
+  const { openModal } = useQuoteModal();
 
   useEffect(() => {
     AOS.init({
@@ -21,17 +21,17 @@ export function BuildPresenceSection() {
   return (
     <section className="px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden" style={{ backgroundColor: "#ffffff" }}>
       <div className="container container-1550">
-        <div 
+        <div
           className="rounded-4 p-4 p-md-5 position-relative overflow-hidden shadow-sm"
           style={{ backgroundColor: "#053456" }}
           data-aos="fade-up"
         >
           <div className="row g-4 align-items-center">
-            
+
             {/* Left Content Area (Text + Button Below) */}
             <div className="col-lg-7" data-aos="fade-right" data-aos-delay="100">
               {/* Top Tag Badge */}
-             
+
 
               {/* Section Heading */}
               <h4 className="px-about-title text-white mb-20">
@@ -50,30 +50,30 @@ export function BuildPresenceSection() {
 
               {/* CTA Button directly below content */}
               <div>
-              
+
                 {/* Left Aligned CTA Button */}
-            <button
-             onClick={openModal}
-              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
-              style={{
-                backgroundColor: '#53ae7d',
-                color: '#ffffff',
-                fontSize: '15px',
-                transition: 'all 0.3s ease',
-                border: '1px solid #53ae7d',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#53ae7d';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#53ae7d';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Get Started Today</span>
-              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
-            </button>
+                <button
+                  onClick={() => { openModal('manual') }}
+                  className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+                  style={{
+                    backgroundColor: '#53ae7d',
+                    color: '#ffffff',
+                    fontSize: '15px',
+                    transition: 'all 0.3s ease',
+                    border: '1px solid #53ae7d',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#53ae7d';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#53ae7d';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Get Started Today</span>
+                  <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
+                </button>
 
               </div>
             </div>

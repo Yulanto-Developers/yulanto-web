@@ -3203,3 +3203,7 @@ input[name="name"].has-value+.name-next-btn {
 
 }
 
+
+.map-image-wrapper:hover .map-zoom-img {
+    transform: scale(1.1);
+}

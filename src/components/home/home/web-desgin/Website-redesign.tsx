@@ -1263,6 +1263,7 @@ function Websiteredesign() {
         </div>
       </div>
 
+<<<<<<< Updated upstream
       <div className="mt-30">
         <FAQA1
           num1={23}
@@ -1273,6 +1274,134 @@ function Websiteredesign() {
       </div>
     </>
   );
+=======
+            <div data-aos="fade-right"
+                data-aos-delay={400}
+                data-aos-once={true}>
+
+                <div className="container">
+
+                    <div className="why-yulanto-header">
+
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            Why Choose Yulanto for Website Redesign?
+                        </span>
+
+                        <h4 className="px-about-title mb-20">
+
+                            <span className="text-blue-about">
+                                Built Around Your{" "}
+                            </span>
+
+                            Business Goals
+
+                        </h4>
+
+                    </div>
+
+
+                    <div className="why-yulanto-grid">
+
+                        {[
+                            "Experienced website design and development team",
+                            "Customized redesign strategies",
+                            "Modern UI/UX design",
+                            "Responsive website development",
+                            "SEO-friendly redesign approach",
+                            "AI-assisted redesign capabilities",
+                            "Performance optimization",
+                            "Conversion-focused layouts",
+                            "Support for WordPress and custom websites",
+                            "Solutions for startups, small businesses, and enterprises",
+                            "White-label redesign support for agencies",
+                        ].map((item, index) => (
+
+                            <div
+                                className="why-yulanto-item"
+                                key={index}
+                            >
+
+                                <span className="why-yulanto-check">
+                                    ✓
+                                </span>
+
+                                <span className="why-yulanto-text">
+                                    {item}
+                                </span>
+
+                            </div>
+
+                        ))}
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div data-aos="fade-right"
+                data-aos-delay={400}
+                data-aos-once={true}>
+                <div className="container mt-80">
+
+                    <div className="website-audit-card">
+
+                        <div className="audit-decoration"></div>
+
+
+                        <div className="audit-content">
+
+                            <div className="audit-label">
+
+                                <span className="audit-icon">
+
+                                    <i className="fa-regular fa-file-lines"></i>
+
+                                </span>
+
+                                <span className='text-tenor'>
+                                    Free Website Audit
+                                </span>
+
+                            </div>
+
+
+                            <div className="service-item-title fw-600  text-white text-tenor audit-title">
+
+                                Not sure whether your website needs a complete redesign or a simple revamp?
+
+                            </div>
+
+
+                            <p className="slide-descr text-white audit-description">
+
+                                Get a website audit to identify potential issues related to design, usability, mobile responsiveness, performance, SEO structure, and conversion opportunities.
+
+                            </p>
+                            <div className='d-flex justify-content-center align-items-center'>
+                                <button onClick={() => { openModal('manual') }} className='req-btn text-tenor'>Request Your Free Website Audit</button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div className='mt-30'>
+
+                <FAQA1 num1={23} num2={31}
+                    highlightedText="Frequently Asked Questions"
+                    titleSuffix="" />
+            </div>
+
+
+        </>
+    )
+>>>>>>> Stashed changes
 }
 
 export default Websiteredesign;

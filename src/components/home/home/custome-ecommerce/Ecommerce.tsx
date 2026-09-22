@@ -1482,8 +1482,8 @@ function Ecommerce() {
                 data-aos="fade-right"
                 data-aos-delay={400}
                 data-aos-once={true}
-               
-               className="px-about-6-area pt-40 pb-40 pb-lg-110"
+
+                className="px-about-6-area pt-40 pb-40 pb-lg-110"
             >
                 <div className="container container-1550" >
                     <div className="row align-items-center mb-4" data-aos="fade-up">
@@ -1508,52 +1508,52 @@ function Ecommerce() {
                     {/* Main Split Row */}
                     <div className="row align-items-stretch" style={{ display: 'flex', flexWrap: 'wrap' }}>
                         {/* LEFT SIDE: 2-Column Grid of Feature Cards (Icon on top, Title below) */}
-                     <div className="col-lg-7 mb-4 mb-lg-0" style={{ display: 'flex', flexDirection: 'column' }}>
-                        <div style={{ 
-                            display: 'grid', 
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', 
-                            gap: '16px', 
-                            height: '100%' 
-                        }}>
-                            {productPageFeatures.map((feature, index) => (
-                                <div
-                                    key={feature.title}
-                                    data-aos="fade-up"
-                                    data-aos-delay={(index + 1) * 60}
-                                    data-aos-once={true}
-                                    style={{
-                                        background: '#ffffff',
-                                        padding: '18px 20px',
-                                        borderRadius: '12px',
-                                        boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
-                                        display: 'flex',
-                                        flexDirection: 'row',
-                                        alignItems: 'center',
-                                        justifyContent: 'flex-start',
-                                        border: '1px solid #eaeaea',
-                                    }}
-                                >
-                                    <div style={{
-                                        fontSize: '20px',
-                                        color: '#053456',
-                                        marginRight: '14px',
-                                        background: '#f0f4f8',
-                                        width: '42px',
-                                        height: '42px',
-                                        borderRadius: '8px',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        flexShrink: 0
-                                    }}>
-                                        <i className={feature.icon}></i>
+                        <div className="col-lg-7 mb-4 mb-lg-0" style={{ display: 'flex', flexDirection: 'column' }}>
+                            <div style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                                gap: '16px',
+                                height: '100%'
+                            }}>
+                                {productPageFeatures.map((feature, index) => (
+                                    <div
+                                        key={feature.title}
+                                        data-aos="fade-up"
+                                        data-aos-delay={(index + 1) * 60}
+                                        data-aos-once={true}
+                                        style={{
+                                            background: '#ffffff',
+                                            padding: '18px 20px',
+                                            borderRadius: '12px',
+                                            boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
+                                            display: 'flex',
+                                            flexDirection: 'row',
+                                            alignItems: 'center',
+                                            justifyContent: 'flex-start',
+                                            border: '1px solid #eaeaea',
+                                        }}
+                                    >
+                                        <div style={{
+                                            fontSize: '20px',
+                                            color: '#053456',
+                                            marginRight: '14px',
+                                            background: '#f0f4f8',
+                                            width: '42px',
+                                            height: '42px',
+                                            borderRadius: '8px',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            flexShrink: 0
+                                        }}>
+                                            <i className={feature.icon}></i>
+                                        </div>
+                                        <h6 style={{ fontSize: '15px', fontWeight: 600, color: '#111', margin: 0, lineHeight: 1.4 }}>
+                                            {feature.title}
+                                        </h6>
                                     </div>
-                                    <h6 style={{ fontSize: '15px', fontWeight: 600, color: '#111', margin: 0, lineHeight: 1.4 }}>
-                                        {feature.title}
-                                    </h6>
-                                </div>
-                            ))}
-                        </div>
+                                ))}
+                            </div>
                         </div>
                         {/* RIGHT SIDE: Visual Image Showcase matching full height */}
                         <div className="col-lg-5" data-aos="fade-left" data-aos-delay={200} data-aos-once={true} style={{ display: 'flex' }}>
@@ -1639,7 +1639,7 @@ function Ecommerce() {
                                     src="assets/img/portal/8.Looking-for-a-Web-Portal-Development.jpg"
                                     alt="Web Portal Development Chennai"
                                     className="img-fluid w-100 "
-                                    style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '450px',marginBottom:'20px' }}
+                                    style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '450px', marginBottom: '20px' }}
                                 />
                             </div>
 
@@ -1722,36 +1722,36 @@ function Ecommerce() {
 
                         {/* RIGHT - CONTENT */}
                         <div className="col-lg-6">
-                        
 
 
 
-                                <p className="text-figtree mt-3 mt-lg-20">
-                                    Looking for an{" "}
 
-                                    ecommerce website design company in Chennai
+                            <p className="text-figtree mt-3 mt-lg-20">
+                                Looking for an{" "}
 
-                                    ? Yulanto Web Creations helps startups, retailers,
-                                    manufacturers, service businesses, and established brands
-                                    create professional online stores.
-                                </p>
+                                ecommerce website design company in Chennai
 
-                                <p className="text-figtree">
-                                    Our local team understands the requirements of Chennai
-                                    businesses and provides end-to-end{" "}
-                                    e commerce and web design services—from
-                                    planning and UI/UX design to development, payment
-                                    integration, testing, launch, and ongoing support.
-                                </p>
+                                ? Yulanto Web Creations helps startups, retailers,
+                                manufacturers, service businesses, and established brands
+                                create professional online stores.
+                            </p>
 
-                                <p className="text-figtree">
-                                    Whether you're launching your first online store or
-                                    upgrading an existing ecommerce platform, we can help you
-                                    create a scalable digital storefront.
-                                </p>
+                            <p className="text-figtree">
+                                Our local team understands the requirements of Chennai
+                                businesses and provides end-to-end{" "}
+                                e commerce and web design services—from
+                                planning and UI/UX design to development, payment
+                                integration, testing, launch, and ongoing support.
+                            </p>
+
+                            <p className="text-figtree">
+                                Whether you're launching your first online store or
+                                upgrading an existing ecommerce platform, we can help you
+                                create a scalable digital storefront.
+                            </p>
 
 
-                          
+
                         </div>
 
                     </div>
@@ -2586,7 +2586,7 @@ function Ecommerce() {
                             <p className="text-figtree">Get in touch with us today to discuss your ecommerce website requirements.</p>
 
                             <button
-                                onClick={openModal}
+                                onClick={() => { openModal('manual') }}
                                 className="btn d-inline-flex align-items-center gap-2 py-3 px-4 mt-3 rounded-3 fw-bold text-decoration-none"
                                 style={{
                                     backgroundColor: '#053456',

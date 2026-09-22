@@ -631,7 +631,7 @@ const Hero = () => {
 
                         <div className="text-center btn-partent">
                             <button
-                                onClick={openModal}
+                                onClick={() => { openModal('manual') }}
                                 className="button-style relative-cls-header"
                             >
                                 <span className="text-tenor">

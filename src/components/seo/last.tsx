@@ -66,7 +66,7 @@ export default function ChooseSeoAgencySection() {
           <div data-aos="fade-up" data-aos-delay="300">
             <p className="text-figtree text-black mt-2">
               If you are searching for the <strong>best SEO company in Chennai</strong>,{" "}
-              <strong>best SEO agency in Chennai</strong>, or <strong>professional SEO services in Chennai</strong>, 
+              <strong>best SEO agency in Chennai</strong>, or <strong>professional SEO services in Chennai</strong>,
               we can create a customized SEO strategy tailored precisely to your business goals and target audience.
             </p>
             <p className="text-figtree text-black mt-2 mb-4">
@@ -75,7 +75,7 @@ export default function ChooseSeoAgencySection() {
 
             {/* Left Aligned CTA Button */}
             <button
-             onClick={openModal}
+              onClick={() => { openModal('manual') }}
               className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
               style={{
                 backgroundColor: '#053456',

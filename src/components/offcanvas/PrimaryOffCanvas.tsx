@@ -84,13 +84,36 @@ const PrimaryOffCanvas = () => {
             </div>
           </div>
           <div className="tp-offcanvas-main mb-30">
-            {/* <div className="tp-offcanvas-content d-none d-xl-block">
-              <h3 className="tp-offcanvas-title">Hello There!</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
-            </div> */}
             <div className="mb-20 d-none d-xl-block">
+<<<<<<< Updated upstream
               <a href="https://www.google.com/maps/place/Yulanto+Web+Creations+Pvt+Ltd/@12.9724698,80.2510529,1421m/data=!3m1!1e3!4m6!3m5!1s0x3a525df3d6bf9167:0xc1aae342aa473d1!8m2!3d12.9725177!4d80.2518352!16s%2Fg%2F11b7rnd8vq?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D" target="blank"> <Image src='/assets/img/map/m4.jpg' alt="map" width={500} height={250} style={{ borderRadius: '20px', }}  /></a>
 
+=======
+              <a
+                href="https://www.google.com/maps/place/Yulanto+Web+Creations+Pvt+Ltd/@12.9724698,80.2510529,1421m/data=!3m1!1e3!4m6!3m5!1s0x3a525df3d6bf9167:0xc1aae342aa473d1!8m2!3d12.9725177!4d80.2518352!16s%2Fg%2F11b7rnd8vq?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="map-image-wrapper"
+                style={{
+                  display: "block",
+                  overflow: "hidden",
+                  borderRadius: "20px",
+                }}
+              >
+                <Image
+                  src="/assets/img/map/m4.jpg"
+                  alt="map"
+                  width={500}
+                  height={300}
+                  className="map-zoom-img"
+                  style={{
+                    objectFit: "cover",
+                    display: "block",
+                    transition: "transform 0.4s ease-in-out",
+                  }}
+                />
+              </a>
+>>>>>>> Stashed changes
             </div>
 
 
@@ -128,10 +151,10 @@ const PrimaryOffCanvas = () => {
 
               </ul>
             </div>
-            <div className='contact-border'>
+            <div className='contact-border d-none d-md-block'>
               <ul className="contact-list py-2">
                 <li className="">
-                  <a href="/tocontact" className="button-style text-tenor" style={{ fontWeight: "lighter", textAlign: 'left', padding: '10px 20px 10px 10px', fontSize: '18px' }}>
+                  <a href="/contact-us" className="button-style text-tenor" style={{ fontWeight: "lighter", textAlign: 'left', padding: '10px 20px 10px 10px', fontSize: '18px' }}>
                     <FontAwesomeIcon icon={faPhone} className="me-2" />
                     Contact Us
                   </a>
