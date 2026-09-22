@@ -10,6 +10,7 @@ interface ProcessStep {
     badgeColor: string;
     textColor: string;
     imageSrc: string[];
+    alt?:string;
 }
 
 interface ProcessSectionProps {
@@ -75,7 +76,7 @@ const ProcessSection = ({
                                             >
                                                 <Image
                                                     src={image}
-                                                    alt={`${step.title} ${imageIndex + 1}`}
+                                                    alt={`${step.alt}`}
                                                     fill
                                                     priority={index < 2}
                                                     sizes="180px"

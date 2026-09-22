@@ -8,6 +8,7 @@ interface IndustryItem {
     name: string;
     icon: React.ReactNode;
     image?: string;
+    alt?: string;
     description?: string;
 }
 
@@ -214,9 +215,7 @@ export default function IndustryGallery({
                                         src={
                                             activeIndustry.image
                                         }
-                                        alt={
-                                            activeIndustry.name
-                                        }
+                                        alt={activeIndustry.alt ?? activeIndustry.name ?? ""}
                                         fill
                                         sizes="(max-width: 767px) 200px, 320px"
                                         className="industry-vector-image"

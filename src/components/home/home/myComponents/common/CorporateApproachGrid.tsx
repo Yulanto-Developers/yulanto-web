@@ -16,6 +16,7 @@ interface CorporateApproachItem {
     title: string;
     description: string;
     image: StaticImageData;
+    alt?:string;
     size: "large" | "small";
 }
 
@@ -74,7 +75,7 @@ function CorporateApproachGrid({
                                 <div className="approach-image-wrapper">
                                     <Image
                                         src={item.image}
-                                        alt={item.title}
+                                        alt={item.alt ?? item.title}
                                         fill
                                         className="approach-image"
                                         sizes="(max-width: 768px) 100vw, 50vw"

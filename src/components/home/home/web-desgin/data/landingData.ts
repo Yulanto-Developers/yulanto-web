@@ -38,13 +38,14 @@ export interface ProcessCardData {
     description: string;
     link?: string;
     bgImage: string;
+    alt?:string;
     rotation: string;
 }
 export const startupGalleryImages = [
     {
         id: 1,
         src: t1.src,
-        alt: "Startup website design",
+        alt: "Startup website design company",
         x: -320,
         y: 15,
         order: 0,
@@ -54,7 +55,7 @@ export const startupGalleryImages = [
     {
         id: 2,
         src: t2.src,
-        alt: "Business website design",
+        alt: "Business website design company in chennai",
         x: -160,
         y: 32,
         order: 1,
@@ -64,7 +65,7 @@ export const startupGalleryImages = [
     {
         id: 3,
         src: t3.src,
-        alt: "Modern website design",
+        alt: "website design company in chennai",
         x: 0,
         y: 8,
         order: 2,
@@ -74,7 +75,7 @@ export const startupGalleryImages = [
     {
         id: 4,
         src: t4.src,
-        alt: "Corporate website design",
+        alt: "Corporate website design company in chennai",
         x: 160,
         y: 22,
         order: 3,
@@ -84,7 +85,7 @@ export const startupGalleryImages = [
     {
         id: 5,
         src: t5.src,
-        alt: "Startup web design",
+        alt: "top web design company in chennai",
         x: 320,
         y: 44,
         order: 4,
@@ -96,17 +97,17 @@ export const startupGalleryImages = [
 export const galleryImages = [
     {
         src: tc.src,
-        alt: "Corporate website design",
+        alt: "Corporate website design chennai",
         className: "gallery-main",
     },
     {
         src: tl.src,
-        alt: "Corporate website development",
+        alt: "website development chennai",
         className: "gallery-small gallery-small-one",
     },
     {
         src: tr.src,
-        alt: "Corporate website",
+        alt: "Corporate website chennai",
         className: "gallery-small gallery-small-two",
     },
 ];
@@ -160,6 +161,7 @@ export const processCards: ProcessCardData[] = [
             'We understand your business, target audience, campaign objective and competitors before planning the page structure.',
         bgImage:
             p1.src,
+        alt:'custom website design company',
         rotation: 'rotate-3',
     },
     {
@@ -168,6 +170,7 @@ export const processCards: ProcessCardData[] = [
             'Our designers create a clean and professional landing page UI that matches your brand identity.',
         bgImage:
             p2.src,
+        alt:'custom website design company chennai',
         rotation: '-rotate-2',
     },
     {
@@ -176,6 +179,7 @@ export const processCards: ProcessCardData[] = [
             'We strategically place headlines, benefits, visuals, testimonials, forms and CTAs to encourage visitors to take action.',
         bgImage:
             p3.src,
+        alt:'custom website design chennai',
         rotation: 'rotate-2',
     },
     {
@@ -184,6 +188,7 @@ export const processCards: ProcessCardData[] = [
             'Your landing page is designed to provide a smooth experience across desktops, tablets and smartphones.',
         bgImage:
             p4.src,
+            alt:'custom web design',
         rotation: '-rotate-3',
     },
     {
@@ -192,6 +197,7 @@ export const processCards: ProcessCardData[] = [
             'We focus on a clean interface, easy navigation and an engaging experience that helps reduce distractions.',
         bgImage:
             p5.src,
+            alt:'custom web design chennai',
         rotation: 'rotate-0',
     },
 ];
