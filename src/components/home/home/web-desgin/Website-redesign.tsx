@@ -127,7 +127,7 @@ function Websiteredesign() {
       description:
         "We evaluate your current website, including design, content, navigation, responsiveness, performance, SEO structure, and overall user experience.",
       image: s1.src,
-      alt:'best web design companies',
+      alt: 'best web design companies',
       icon: (
         /* Search / Audit Icon */
         <svg
@@ -151,7 +151,7 @@ function Websiteredesign() {
       description:
         "We identify improvement areas and develop a redesign strategy based on your business objectives, target audience, competitors, and existing website performance.",
       image: s2.src,
-      alt:'best web design',
+      alt: 'best web design',
       icon: (
         /* Strategy / Target Icon */
         <svg
@@ -176,7 +176,7 @@ function Websiteredesign() {
       description:
         "Our designers create modern page layouts that improve visual appeal, usability, readability, and user engagement.",
       image: s3.src,
-      alt:'web design in chennai',
+      alt: 'web design in chennai',
       icon: (
         /* Layout / Palette / Design Icon */
         <svg
@@ -201,7 +201,7 @@ function Websiteredesign() {
       description:
         "The redesigned website is developed to provide a consistent experience across desktops, tablets, and mobile devices.",
       image: s4.src,
-      alt:'best websit design company for redesign',
+      alt: 'best websit design company for redesign',
       icon: (
         /* Desktop / Mobile Devices Icon */
         <svg
@@ -226,7 +226,7 @@ function Websiteredesign() {
       description:
         "We maintain important SEO elements while improving page structure, headings, content organization, internal linking, and technical foundations.",
       image: s5.src,
-      alt:'top websit design company for redesign',
+      alt: 'top websit design company for redesign',
       icon: (
         /* Search Check / SEO Icon */
         <svg
@@ -251,7 +251,7 @@ function Websiteredesign() {
       description:
         "Before launch, we test the redesigned website for responsiveness, functionality, usability, speed, forms, links, and major browsers.",
       image: s6.src,
-       alt:'top redesign company',
+      alt: 'top redesign company',
       icon: (
         /* Checklist / Testing Icon */
         <svg
@@ -276,7 +276,7 @@ function Websiteredesign() {
       description:
         "After final approval, we publish the redesigned website and provide ongoing support to help you maintain and improve your online presence.",
       image: s7.src,
-       alt:'top redesign company in chennai',
+      alt: 'top redesign company in chennai',
       icon: (
         /* Rocket / Launch Icon */
         <svg
@@ -424,22 +424,22 @@ function Websiteredesign() {
     {
       title: "Website Design",
       url: top1.src,
-      alt:'website redesign agency',
+      alt: 'website redesign agency',
     },
     {
       title: "Web Development",
       url: top2.src,
-      alt:'website redesign',
+      alt: 'website redesign',
     },
     {
       title: "UI UX Design",
       url: top3.src,
-      alt:'website redesign company',
+      alt: 'website redesign company',
     },
     {
       title: "Responsive Design",
       url: top4.src,
-      alt:'website redesign company in chennai',
+      alt: 'website redesign company in chennai',
     },
   ];
 
@@ -1005,9 +1005,8 @@ function Websiteredesign() {
                 <div
                   className="round-swiper-background"
                   style={{
-                    backgroundImage: `url(${
-                      quotationBenefits[activeRoundIndex].bgImage.src
-                    })`,
+                    backgroundImage: `url(${quotationBenefits[activeRoundIndex].bgImage.src
+                      })`,
                   }}
                 />
 
@@ -1048,9 +1047,8 @@ function Websiteredesign() {
                     return (
                       <div
                         key={index}
-                        className={`round-swiper-slide ${
-                          index === activeRoundIndex ? "active" : ""
-                        }`}
+                        className={`round-swiper-slide ${index === activeRoundIndex ? "active" : ""
+                          }`}
                         style={
                           {
                             "--slide-position": distance,
@@ -1254,7 +1252,7 @@ function Websiteredesign() {
                 structure, and conversion opportunities.
               </p>
               <div className="d-flex justify-content-center align-items-center">
-                <button onClick={openModal} className="req-btn text-tenor">
+                <button onClick={() => { openModal('manual') }} className="req-btn text-tenor">
                   Request Your Free Website Audit
                 </button>
               </div>
@@ -1263,18 +1261,7 @@ function Websiteredesign() {
         </div>
       </div>
 
-<<<<<<< Updated upstream
-      <div className="mt-30">
-        <FAQA1
-          num1={23}
-          num2={31}
-          highlightedText="Frequently Asked Questions"
-          titleSuffix=""
-        />
-      </div>
-    </>
-  );
-=======
+
             <div data-aos="fade-right"
                 data-aos-delay={400}
                 data-aos-once={true}>
@@ -1401,7 +1388,6 @@ function Websiteredesign() {
 
         </>
     )
->>>>>>> Stashed changes
 }
 
 export default Websiteredesign;

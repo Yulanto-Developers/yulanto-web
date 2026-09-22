@@ -1020,10 +1020,10 @@ export async function POST(req: NextRequest) {
                                     Website Design &amp; Development
                                 </h3>
 
-                                <p class="specialization-card-text">
+                             <!--   <p class="specialization-card-text">
                                     Modern, responsive and high-performing
                                     websites built around your business goals.
-                                </p>
+                                </p> -->
 
                             </div>
 
@@ -1045,10 +1045,10 @@ export async function POST(req: NextRequest) {
                                     WordPress
                                 </h3>
 
-                                <p class="specialization-card-text">
+                              <!--  <p class="specialization-card-text">
                                     Flexible and scalable WordPress websites
                                     that are easy to manage and grow.
-                                </p>
+                                </p> -->
 
                             </div>
 
@@ -1075,10 +1075,10 @@ export async function POST(req: NextRequest) {
                                     E-Commerce
                                 </h3>
 
-                                <p class="specialization-card-text">
+                             <!--   <p class="specialization-card-text">
                                     Conversion-focused online stores designed
                                     for seamless customer experiences.
-                                </p>
+                                </p> -->
 
                             </div>
 
@@ -1100,10 +1100,10 @@ export async function POST(req: NextRequest) {
                                     Web Portals
                                 </h3>
 
-                                <p class="specialization-card-text">
+                              <!--  <p class="specialization-card-text">
                                     Powerful web portals tailored to connect
                                     users, businesses and digital services.
-                                </p>
+                                </p> -->
 
                             </div>
 
@@ -1130,10 +1130,10 @@ export async function POST(req: NextRequest) {
                                     SEO
                                 </h3>
 
-                                <p class="specialization-card-text">
+                               <!-- <p class="specialization-card-text">
                                     Search-focused strategies to improve
                                     visibility, reach and organic growth.
-                                </p>
+                                </p> -->
 
                             </div>
 
@@ -1155,10 +1155,10 @@ export async function POST(req: NextRequest) {
                                     Digital Marketing
                                 </h3>
 
-                                <p class="specialization-card-text">
+                              <!--  <p class="specialization-card-text">
                                     Data-driven digital campaigns designed
                                     to reach and engage your target audience.
-                                </p>
+                                </p> -->
 
                             </div>
 

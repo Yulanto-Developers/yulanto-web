@@ -29,7 +29,7 @@ export interface GraphicDesignSectionProps extends HTMLMotionProps<"section"> {
 }
 
 export const GraphicDesignSection = React.forwardRef<HTMLElement, GraphicDesignSectionProps>(
-   
+
   (
     {
       className,
@@ -53,7 +53,7 @@ export const GraphicDesignSection = React.forwardRef<HTMLElement, GraphicDesignS
     },
     ref
   ) => {
-     const { openModal } = useQuoteModal();
+    const { openModal } = useQuoteModal();
     // Animation Variants
     const containerVariants = {
       hidden: { opacity: 0 },
@@ -119,28 +119,28 @@ export const GraphicDesignSection = React.forwardRef<HTMLElement, GraphicDesignS
                     {sec1SubDescription}
                   </motion.p>
                 )}
-                 <button
-             onClick={()=>{openModal('manual')}}
-              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
-              style={{
-                backgroundColor: '#053456',
-                color: '#ffffff',
-                fontSize: '15px',
-                transition: 'all 0.3s ease',
-                border: '1px solid #053456',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#053456';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#053456';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Start Your Design Project</span>
-              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
-            </button>
+                <button
+                  onClick={() => { openModal('manual') }}
+                  className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+                  style={{
+                    backgroundColor: '#053456',
+                    color: '#ffffff',
+                    fontSize: '15px',
+                    transition: 'all 0.3s ease',
+                    border: '1px solid #053456',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#053456';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#053456';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Start Your Design Project</span>
+                  <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
+                </button>
               </motion.div>
             </div>
 
@@ -185,7 +185,7 @@ export const GraphicDesignSection = React.forwardRef<HTMLElement, GraphicDesignS
                 transition={{ duration: 1.2, ease: "circOut" }}
                 viewport={{ once: true }}
               />
-                  
+
             </div>
 
             {/* Right Side: Content */}
@@ -227,28 +227,28 @@ export const GraphicDesignSection = React.forwardRef<HTMLElement, GraphicDesignS
                     {ctaNote}
                   </motion.p>
                 )}
-                 <button
-              onClick={()=>{openModal('manual')}}
-              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
-              style={{
-                backgroundColor: '#053456',
-                color: '#ffffff',
-                fontSize: '15px',
-                transition: 'all 0.3s ease',
-                border: '1px solid #053456',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#053456';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#053456';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Talk to Our Designers</span>
-              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
-            </button>
+                <button
+                  onClick={() => { openModal('manual') }}
+                  className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+                  style={{
+                    backgroundColor: '#053456',
+                    color: '#ffffff',
+                    fontSize: '15px',
+                    transition: 'all 0.3s ease',
+                    border: '1px solid #053456',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#053456';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#053456';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Talk to Our Designers</span>
+                  <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
+                </button>
               </motion.div>
             </div>
           </div>
