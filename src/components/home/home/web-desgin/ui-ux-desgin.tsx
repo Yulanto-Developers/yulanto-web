@@ -55,7 +55,7 @@ function Uiuxdesgin() {
                 <span className="text-blue-about">
                   Creative UI/UX Design for{"  "}
                 </span>
-                 Modern Digital Experiences
+                Modern Digital Experiences
               </h4>
               <h1
                 className="ft-23 mt-0 mb-2  text-tenor"
@@ -124,9 +124,9 @@ function Uiuxdesgin() {
 
                         </div> */}
 
-          <UISteps steps={uisteps} />
-        </div>
-      </div>
+
+        </div >
+      </div >
       <div data-aos="fade-down" data-aos-delay={400} data-aos-once={true}>
         <div className="container mt-100 mb-50">
           <div className="row">
@@ -463,7 +463,7 @@ function Uiuxdesgin() {
                   {/* CTA BUTTON */}
                   <div className="col-lg-4 text-lg-end mt-30 mt-lg-0">
                     <button
-                      onClick={openModal}
+                       onClick={()=>{openModal('manual')}}
                       className="tp-btn"
                       style={{
                         background: "#ffffff",
@@ -493,7 +493,7 @@ function Uiuxdesgin() {
               highlightedText="Frequently Asked Questions"
               titleSuffix=""
             />
-    </div>
+    </div >
   );
 }
 

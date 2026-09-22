@@ -15,7 +15,7 @@ const servicesList: ServiceItem[] = [
   { title: "Product Flyer Design", iconClass: "fa-solid fa-box-open" },
   { title: "Event Flyer Design", iconClass: "fa-solid fa-calendar-check" },
   { title: "Festival & Offer Flyers", iconClass: "fa-solid fa-tags" },
-  { title: "Real Estate Flyer Design", iconClass: "fa-solid fa-city"},
+  { title: "Real Estate Flyer Design", iconClass: "fa-solid fa-city" },
   { title: "Digital Flyer Design", iconClass: "fa-solid fa-laptop" },
   { title: "Social Media Flyer Design", iconClass: "fa-solid fa-share-nodes" },
   { title: "Advertising Poster Design", iconClass: "fa-solid fa-bullhorn" },
@@ -54,7 +54,7 @@ export default function FlyerPosterServices() {
                   From simple promotional flyers to premium corporate designs, we make sure your flyer reflects your brand identity and communicates your message clearly.
                 </p>
                 <button
-                  onClick={openModal}
+                  onClick={() => { openModal('manual') }}
                   data-aos="fade-up"
                   data-aos-delay="100"
                   className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
@@ -74,8 +74,8 @@ export default function FlyerPosterServices() {
                     e.currentTarget.style.transform = 'translateY(0)';
                   }}
                 >
-                  <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Let's Talk our Team</span>
-                  <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+                  <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Let's Talk our Team</span>
+                  <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
                 </button>
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function FlyerPosterServices() {
                       border: "1px solid #53ae7d",
                     }}
                   >
-                    <h6 className="mb-0 fw-bold" style={{ color: "#053456", fontFamily: "Figtree, Figtree Fallback"}}>
+                    <h6 className="mb-0 fw-bold" style={{ color: "#053456", fontFamily: "Figtree, Figtree Fallback" }}>
                       <i className="fa-solid fa-circle-check me-2" style={{ color: "#53ae7d" }}></i>
                       Promotional Print Ready
                     </h6>

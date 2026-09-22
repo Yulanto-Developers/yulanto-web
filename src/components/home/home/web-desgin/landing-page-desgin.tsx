@@ -564,7 +564,7 @@ function Landingpagedesgin() {
                                     Let's Create a Landing Page That Turns Clicks into Customers.
                                 </h3>
 
-                                <button onClick={openModal}
+                                <button onClick={() => { openModal('manual') }}
                                     className="landing-cta-button"
                                 >
                                     Get in Touch With Us Today

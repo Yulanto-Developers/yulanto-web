@@ -4,7 +4,7 @@ import React from "react";
 import { motion, Variants } from "framer-motion";
 import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 export const Header: React.FC = () => {
-    const { openModal } = useQuoteModal();
+  const { openModal } = useQuoteModal();
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
   return (
     <motion.section
       className="px-about-6-area pt-40 pb-40 pb-lg-110"
-      style={{ overflow: "hidden",  backgroundColor: "#ffffff",}}
+      style={{ overflow: "hidden", backgroundColor: "#ffffff", }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -47,8 +47,8 @@ export const Header: React.FC = () => {
             >
               <motion.h4
                 className="px-about-title mb-20"
-               
-              > 
+
+              >
                 <span className="text-blue-about" >
                   Looking for a WordPress
                 </span> Website Development Company?
@@ -118,7 +118,7 @@ export const Header: React.FC = () => {
                 className="text-figtree text-white mt-2"
                 style={{
                   fontSize: "15px !important",
-                 
+
                 }}
               >
                 If you are searching for a WordPress development company in
@@ -142,29 +142,29 @@ export const Header: React.FC = () => {
 
               {/* Let's Talk Button */}
               <div style={{ marginTop: "10px" }}>
-               
-                 <button
-             onClick={openModal}
-              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
-              style={{
-                backgroundColor: '#53ae7d',
-                color: '#ffffff',
-                fontSize: '15px',
-                transition: 'all 0.3s ease',
-                border: '1px solid #53ae7d',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#53ae7d';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#53ae7d';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Let's Talk our Team</span>
-              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
-            </button>
+
+                <button
+                  onClick={() => { openModal('manual') }}
+                  className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+                  style={{
+                    backgroundColor: '#53ae7d',
+                    color: '#ffffff',
+                    fontSize: '15px',
+                    transition: 'all 0.3s ease',
+                    border: '1px solid #53ae7d',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#53ae7d';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#53ae7d';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Let's Talk our Team</span>
+                  <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
+                </button>
               </div>
             </motion.div>
           </div>

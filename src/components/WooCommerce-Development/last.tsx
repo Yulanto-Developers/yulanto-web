@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 
 export default function WooCommerceCTA(): React.ReactElement {
-    const { openModal } = useQuoteModal();
+  const { openModal } = useQuoteModal();
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -42,7 +42,7 @@ export default function WooCommerceCTA(): React.ReactElement {
             {/* Left Column: Heading & Description */}
             <div className="col-lg-7">
               <div className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-2 mb-3"
-                   style={{ backgroundColor: 'rgba(5, 52, 86, 0.06)', border: '1px solid rgba(5, 52, 86, 0.12)' }}>
+                style={{ backgroundColor: 'rgba(5, 52, 86, 0.06)', border: '1px solid rgba(5, 52, 86, 0.12)' }}>
                 <i className="fa-solid fa-location-dot" style={{ color: '#053456', fontSize: '13px' }}></i>
                 <span
                   style={{
@@ -57,13 +57,13 @@ export default function WooCommerceCTA(): React.ReactElement {
                 </span>
               </div>
 
-               <h4 className="px-about-title mb-20">
+              <h4 className="px-about-title mb-20">
                 <span className="text-blue-about">Ready to launch or upgrade </span>
-              your ecommerce business?
+                your ecommerce business?
               </h4>
-              <p  className="text-figtree text-black mt-2"
-                
-               
+              <p className="text-figtree text-black mt-2"
+
+
               >
                 Partner with a professional WooCommerce development company in Chennai to build an online store that is easy to manage, customer-friendly, and prepared for future growth.
               </p>
@@ -80,32 +80,32 @@ export default function WooCommerceCTA(): React.ReactElement {
               >
                 <div className="d-flex align-items-center gap-2 text-muted" style={{ fontSize: '13px' }}>
                   <i className="fa-solid fa-clock" style={{ color: '#053456' }}></i>
-                  <span  className="text-figtree text-black mt-2">Talk to our experts today</span>
+                  <span className="text-figtree text-black mt-2">Talk to our experts today</span>
                 </div>
 
-        
-                   <button
-             onClick={openModal}
-              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
-              style={{
-                backgroundColor: '#053456',
-                color: '#ffffff',
-                fontSize: '15px',
-                transition: 'all 0.3s ease',
-                border: '1px solid #053456',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#053456';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#053456';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Discuss Your Project</span>
-              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
-            </button>
+
+                <button
+                  onClick={() => { openModal('manual') }}
+                  className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+                  style={{
+                    backgroundColor: '#053456',
+                    color: '#ffffff',
+                    fontSize: '15px',
+                    transition: 'all 0.3s ease',
+                    border: '1px solid #053456',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#053456';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#053456';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Discuss Your Project</span>
+                  <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
+                </button>
 
               </div>
             </div>

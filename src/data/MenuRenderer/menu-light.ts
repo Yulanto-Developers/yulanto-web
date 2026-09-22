@@ -143,7 +143,7 @@ export const lightMenu: MenuItem[] = [
     label: "Contact Us",
     sublinkTrue: false,
     isLastMenu: true,
-    href: "/contact",
+    href: "/contact-us",
     active: true,
   },
 ];

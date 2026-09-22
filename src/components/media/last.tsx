@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 
 export default function AboutSection() {
-    const { openModal } = useQuoteModal();
+  const { openModal } = useQuoteModal();
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -15,14 +15,14 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section 
+    <section
       className="px-about-6-area pt-40 pb-40 pb-lg-110 bg-white social-about-last-section"
       style={{ overflowX: 'hidden', width: '100%' }}
     >
       <div className="container container-1550 mx-auto px-4" style={{ overflow: 'hidden' }}>
-        
+
         {/* Main Side-by-Side Wrapper */}
-        <div 
+        <div
           style={{
             display: 'flex',
             flexWrap: 'wrap',
@@ -32,9 +32,9 @@ export default function AboutSection() {
             backgroundColor: '#ffffff'
           }}
         >
-          
+
           {/* Left Side: Circular Image */}
-          <div 
+          <div
             style={{
               flex: '1 1 300px',
               maxWidth: '450px',
@@ -45,7 +45,7 @@ export default function AboutSection() {
             }}
             data-aos="fade-right"
           >
-            <div 
+            <div
               style={{
                 width: '280px',
                 height: '280px',
@@ -69,7 +69,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right Side: Content */}
-          <div 
+          <div
             style={{
               flex: '1 1 400px',
               minWidth: '300px'
@@ -78,22 +78,22 @@ export default function AboutSection() {
           >
             <h4 className="px-about-title mb-20">
               <span className="text-blue-about">Grow Your Brand with </span>
-             Social Media Marketing
+              Social Media Marketing
             </h4>
 
 
             <p className="text-figtree text-black mt-2">
-              Ready to strengthen your online presence and connect with more customers? 
-              Partner with a professional social media marketing company in Chennai for 
+              Ready to strengthen your online presence and connect with more customers?
+              Partner with a professional social media marketing company in Chennai for
               strategic, creative, and results-focused social media campaigns.
             </p>
 
             <p className="text-figtree text-black mt-2 font-medium">
               Contact us today to discuss your social media marketing requirements.
             </p>
-             {/* Left Aligned CTA Button */}
+            {/* Left Aligned CTA Button */}
             <button
-             onClick={openModal}
+              onClick={() => { openModal('manual') }}
               className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
               style={{
                 backgroundColor: '#053456',
@@ -111,7 +111,7 @@ export default function AboutSection() {
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Start Your Campaign</span>
+              <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Start Your Campaign</span>
               <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
             </button>
           </div>

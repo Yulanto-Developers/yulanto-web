@@ -5,15 +5,15 @@ import { useQuoteModal } from "../home/home/myComponents/Content/QuoteContext";
 
 export function SingleImagePackagingSection() {
   const { openModal } = useQuoteModal();
-  
+
   return (
-    <section 
-      className="px-about-6-area pt-40 pb-40 pb-lg-110" 
-      style={{ 
-        backgroundColor: "#ffffff", 
-        overflowX: "hidden", 
-        width: "100%", 
-        position: "relative" 
+    <section
+      className="px-about-6-area pt-40 pb-40 pb-lg-110"
+      style={{
+        backgroundColor: "#ffffff",
+        overflowX: "hidden",
+        width: "100%",
+        position: "relative"
       }}
     >
       <style jsx>{`
@@ -50,22 +50,22 @@ export function SingleImagePackagingSection() {
       `}</style>
 
       {/* Section Title with AOS Animation */}
-      <h4 
-        className="px-about-title mb-20 text-center px-3" 
-        data-aos="fade-up" 
+      <h4
+        className="px-about-title mb-20 text-center px-3"
+        data-aos="fade-up"
         data-aos-duration="800"
       >
         <span className="text-blue-about">Build a Package That </span>
         Sells Your Product
       </h4>
 
-      <div   className="container container-1550">
+      <div className="container container-1550">
         <div className="row g-4 align-items-center justify-content-center">
-          
+
           {/* LEFT SIDE: Your Content with AOS Animation */}
-          <div 
-            className="col-12 col-lg-6" 
-            data-aos="fade-right" 
+          <div
+            className="col-12 col-lg-6"
+            data-aos="fade-right"
             data-aos-duration="1000"
           >
             <div className="content-card">
@@ -77,7 +77,7 @@ export function SingleImagePackagingSection() {
                 If you're looking for a packaging design company in Chennai, our creative team can develop professional packaging solutions that combine branding, creativity, functionality, and customer appeal.
               </p>
 
-              <div 
+              <div
                 style={{
                   width: "100%",
                   height: "1px",
@@ -91,7 +91,7 @@ export function SingleImagePackagingSection() {
               </p>
 
               <button
-                onClick={openModal}
+                onClick={() => { openModal('manual') }}
                 className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none mt-3"
                 style={{
                   backgroundColor: '#053456',
@@ -117,15 +117,15 @@ export function SingleImagePackagingSection() {
           </div>
 
           {/* RIGHT SIDE: Single Showcase Image with AOS Animation */}
-          <div 
-            className="col-12 col-lg-6" 
-            data-aos="fade-left" 
+          <div
+            className="col-12 col-lg-6"
+            data-aos="fade-left"
             data-aos-duration="1000"
           >
             <div className="single-image-wrapper">
-              <img 
-                src="assets/img/package/last-img.jpg" 
-                alt="Package Design Showcase" 
+              <img
+                src="assets/img/package/last-img.jpg"
+                alt="Package Design Showcase"
               />
             </div>
           </div>
