@@ -54,9 +54,6 @@ export const lightMenu: MenuItem[] = [
           { label: "API Integration", href: "/website-development/api-integration" },
           // {label: "AI Assisted Website Development", href: "/AI-assisted-website" }
 
-          { label: "React Website Development", href: "/" },
-          { label: "API Integration", href: "/" },
-
         ]
       },
       {
