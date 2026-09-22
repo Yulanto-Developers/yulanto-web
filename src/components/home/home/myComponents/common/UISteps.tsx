@@ -7,6 +7,7 @@ interface UIStep {
     title: string;
     description: string;
     imageSrc: string;
+    alt?:string;
     icon: React.ElementType;
 }
 
@@ -126,7 +127,7 @@ const UISteps = ({ steps }: UIStepsProps) => {
                                 <img
                                     key={active.imageSrc}
                                     src={active.imageSrc}
-                                    alt={active.title}
+                                    alt={active.alt}
                                 />
 
                             </div>

@@ -12,6 +12,7 @@ export interface StickyScrollItem {
     title: string;
     description: React.ReactNode;
     image: string;
+    alt?:string;
 }
 
 interface StickyScrollRevealProps {
@@ -245,7 +246,7 @@ const StickyScrollReveal = ({
                         ref={imageRef}
                         key={activeCard}
                         src={content[activeCard].image}
-                        alt={content[activeCard].title}
+                        alt={content[activeCard].alt}
                         draggable={false}
                     />
 

@@ -12,6 +12,7 @@ export interface ZigZagFeature {
     title: string;
     description: string;
     image: StaticImageData;
+    alt:string;
 }
 
 interface ZigZagFeatureSectionProps {
@@ -134,7 +135,7 @@ function FeatureRow({
                 >
                     <Image
                         src={feature.image}
-                        alt={feature.title}
+                        alt={feature.alt}
                         className="zigzag-feature-image"
                         fill
                         sizes="(max-width: 768px) 70vw, 50vw"

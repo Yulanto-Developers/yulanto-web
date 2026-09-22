@@ -7,6 +7,7 @@ interface RedesignBenefitCardProps {
     title: string;
     description: string;
     icon: React.ReactNode;
+    alt?:string;
 }
 
 
@@ -81,6 +82,7 @@ export default function RedesignBenefitCard({
     title,
     description,
     icon,
+    alt,
 }: RedesignBenefitCardProps) {
 
     const [isHovered, setIsHovered] = useState(false);
@@ -99,7 +101,7 @@ export default function RedesignBenefitCard({
 
             <img
                 src={image}
-                alt={title}
+                alt={alt}
                 className="redesign-benefit-image"
             />
 

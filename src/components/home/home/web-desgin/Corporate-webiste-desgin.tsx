@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { FAQA1 } from '../website-development/components'
 import { motion } from "framer-motion";
 import { useQuoteModal } from "../myComponents/Content/QuoteContext";
 import BreadcrumbData from "@/components/breadcrum/sections/breadcrumbdata";
@@ -144,6 +145,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "Your corporate website should represent your brand consistently across every page. We incorporate your logo, brand colors, typography, imagery, and communication style to create a unified visual identity.",
       image: a1,
+      alt:'top website development company in chennai',
     },
     {
       icon: FaBars,
@@ -151,6 +153,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "Visitors should be able to find the information they need quickly. We create logical page structures and intuitive navigation menus that make it easy for users to explore your website.",
       image: a2,
+      alt:'website development company in chennai',
     },
     {
       icon: FaLaptop,
@@ -158,6 +161,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "A professional website creates a strong first impression. Our website designers in Chennai focus on clean layouts, quality visuals, balanced typography, attractive sections, and modern design elements.",
       image: a3,
+       alt:'web dev company in chennai',
     },
     {
       icon: FaFileAlt,
@@ -165,6 +169,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "Good design works best when supported by relevant content. We organize your website content to clearly communicate your company profile, products, services, capabilities, achievements, and other important information.",
       image: a4,
+      alt:'web design company in chennai',
     },
     {
       icon: FaShieldAlt,
@@ -172,6 +177,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "Website security is an important part of corporate website development. We consider SSL implementation, secure development practices, software updates, hosting requirements, and other appropriate security measures.",
       image: a5,
+      alt: "corporate website security services",
     },
     {
       icon: FaSearch,
@@ -179,6 +185,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "Search engine visibility is considered during the website creation process. We develop SEO-friendly page structures, headings, URLs, content sections, mobile responsiveness, and technical elements that provide a strong foundation for ongoing SEO.",
       image: a6,
+       alt:'web design company near me',
     },
   ];
 
@@ -278,6 +285,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "The first stage is to understand your business requirements, target audience, competitors, industry, website objectives, and expected functionality. This information helps us establish a clear direction for the project.",
       image: img1_1,
+      alt:'web and app development company',
       size: "large" as const,
     },
     {
@@ -288,6 +296,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "We define the website structure, sitemap, navigation, content requirements, functionality, technology, and development approach. A clear plan helps ensure that the website remains organized and aligned with your business goals.",
       image: img1_2,
+      alt:'web development company',
       size: "small" as const,
     },
     {
@@ -298,6 +307,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "Our website designers in Chennai develop the visual concept of the website, including layouts, typography, colors, images, buttons, banners, and other UI elements. The design is created to reflect your brand identity and provide a positive user experience.",
       image: img2_1,
+      alt:'website development company',
       size: "small" as const,
     },
     {
@@ -308,6 +318,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "Once the design is approved, our development team converts the design into a functional website using suitable web technologies. This may include front-end development, back-end development, CMS integration, database integration, forms, and other required functionality.",
       image: img2_2,
+      alt:'website development company near me',
       size: "large" as const,
     },
     {
@@ -318,6 +329,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "Before launching the website, we conduct functional and compatibility testing. We check responsiveness, navigation, forms, links, content display, browser compatibility, mobile compatibility, and other important website elements.",
       image: img3_1,
+      alt:'website design company near me',
       size: "large" as const,
     },
     {
@@ -328,6 +340,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "Website content such as text, images, videos, product information, service details, and other multimedia elements are organized and integrated into the website according to the approved structure.",
       image: img3_2,
+      alt:'web design company near me',
       size: "small" as const,
     },
     {
@@ -338,6 +351,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "After testing and client approval, the completed website is deployed to the live hosting server and made accessible to visitors.",
       image: img4_1,
+      alt:'web design companies',
       size: "small" as const,
     },
     {
@@ -348,6 +362,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
       description:
         "A website requires regular maintenance to remain secure, functional, and up to date. Depending on your requirements, we provide website maintenance, content updates, technical support, software updates, security assistance, and performance monitoring.",
       image: img4_2,
+      alt:'web design companies near me',
       size: "large" as const,
     },
   ];
@@ -405,12 +420,12 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
     },
     {
       src: bl.src,
-      alt: "Corporate website development",
+      alt: "Corporate design company chennai",
       className: "gallery-small gallery-small-one",
     },
     {
       src: br.src,
-      alt: "Corporate website",
+      alt: "Corporate website design company chennai",
       className: "gallery-small gallery-small-two",
     },
   ];
@@ -673,6 +688,11 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               <span className="text-blue-about">Key Considerations </span>
               in Corporate Website Design
             </h4>
+
+            <h1 className="ft-23 mt-0 mb-2  text-tenor" data-aos="text-reveal"
+                data-aos-delay="100">
+              website creation company in Chennai
+            </h1>
             <p className="text-figtree mb-0">
               A professionally developed corporate website can help improve your
               company’s online credibility, user engagement, brand visibility,
@@ -1048,7 +1068,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
               </div>
 
               <div className="col-lg-4  text-start">
-                <Image src={vector} alt='vector-img' />
+                <Image src={vector} alt='website development firm' />
                 <div className="cta-box">
                   <h4>Let’s build something great together.</h4>
                   <p>
@@ -1064,6 +1084,10 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
           </div>
         </div>
       </div>
+
+      <FAQA1 num1={55} num2={67}
+                      highlightedText="Frequently Asked Questions"
+                      titleSuffix="" />
     </div>
   );
 }

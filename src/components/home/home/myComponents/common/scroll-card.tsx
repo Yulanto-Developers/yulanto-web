@@ -19,6 +19,7 @@ export interface ProcessCardData {
   title: string;
   description: string;
   bgImage: string;
+  alt?: string;
   rotation?: string;
 }
 
@@ -108,7 +109,7 @@ const ScrollCard: React.FC<ScrollCardProps> = ({
 
                     <img
                       src={card.bgImage}
-                      alt={card.title}
+                      alt={card.alt}
                       draggable={false}
                     />
 

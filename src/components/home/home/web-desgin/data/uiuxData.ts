@@ -36,26 +36,26 @@ export const seoTopText = `A great digital product should be easy to understand,
 
 export const seoBottomText = `From user research and information architecture to wireframes, prototypes, and final user interface design, we create experiences that balance usability, aesthetics, and business objectives.`;
 export const seoSlides: CoverflowSlide[] = [
-    { src: "/assets/img/website/ui/top-1.jpg", alt: "Off-Page Link Building Strategy" },
-    { src: "/assets/img/website/ui/top-2.jpg", alt: "Local Citation & Directory Submission" },
-    { src: "/assets/img/website/ui/top-3.jpg", alt: "Content Marketing & Guest Posting" },
-    { src: "/assets/img/website/ui/top-4.jpg", alt: "Brand Mention & Authority Building" },
-    { src: "/assets/img/website/ui/top-5.jpg", alt: "Social Signals & Digital PR" },
+    { src: "/assets/img/website/ui/top-1.jpg", alt: "ui ux company in chennai" },
+    { src: "/assets/img/website/ui/top-2.jpg", alt: "ui ux design company in chennai" },
+    { src: "/assets/img/website/ui/top-3.jpg", alt: "ui ux design in chennai" },
+    { src: "/assets/img/website/ui/top-4.jpg", alt: "ui design company chennai" },
+    { src: "/assets/img/website/ui/top-5.jpg", alt: "ux design company chennai" },
 ];
 export const galleryImages = [
     {
         src: bc.src,
-        alt: "Corporate website design",
+        alt: "Corporate ui ux design company in chennai",
         className: "gallery-main",
     },
     {
         src: bl.src,
-        alt: "Corporate website development",
+        alt: "Corporate ui ux design company",
         className: "gallery-small gallery-small-one",
     },
     {
         src: br.src,
-        alt: "Corporate website",
+        alt: "ui ux design company chennai",
         className: "gallery-small gallery-small-two",
     },
 ];
@@ -73,6 +73,7 @@ export const uiUxProcessData = [
         badgeColor: "#FFF3E9",
         textColor: "#DD6B20",
         imageSrc: [u1.src, u2.src],
+        alt:'ui ux web design services',
     },
 
     {
@@ -84,6 +85,7 @@ export const uiUxProcessData = [
         badgeColor: "#EBF8FF",
         textColor: "#3182CE",
         imageSrc: [u3.src, u4.src],
+        alt:'ui ux web design services chennai',
     },
 
     {
@@ -95,6 +97,7 @@ export const uiUxProcessData = [
         badgeColor: "#F3E8FF",
         textColor: "#805AD5",
         imageSrc: [u5.src, u6.src],
+         alt:'ui ux web design company chennai',
     },
 
     {
@@ -106,6 +109,7 @@ export const uiUxProcessData = [
         badgeColor: "#FFF5F5",
         textColor: "#E53E3E",
         imageSrc: [u7.src, u8.src],
+         alt:'ui ux web design services near me',
     },
 
     {
@@ -117,6 +121,7 @@ export const uiUxProcessData = [
         badgeColor: "#F0FDF4",
         textColor: "#16A34A",
         imageSrc: [u9.src, u10.src],
+         alt:'ui ux web design services nearby',
     },
 
     {
@@ -128,6 +133,7 @@ export const uiUxProcessData = [
         badgeColor: "#FFF7ED",
         textColor: "#EA580C",
         imageSrc: [u11.src, u12.src],
+         alt:'best ui ux web design services 2026',
     },
 
     {
@@ -139,6 +145,7 @@ export const uiUxProcessData = [
         badgeColor: "#F5F3FF",
         textColor: "#7C3AED",
         imageSrc: [u13.src, u14.src],
+         alt:'top ui ux web design services 2026',
     },
 ];
 
@@ -158,6 +165,7 @@ export const uisteps = [
         description:
             "We learn about your business, audience, objectives, competitors, and product requirements.",
         imageSrc: understand.src,
+        alt:'web & mobile ui design services',
         icon: FaMagnifyingGlass,
     },
 
@@ -167,6 +175,7 @@ export const uisteps = [
         description:
             "Our team studies user expectations and identifies opportunities to improve the overall experience.",
         imageSrc: Research.src,
+        alt:'web & mobile ui design services',
         icon: FaLightbulb,
     },
 
@@ -176,6 +185,7 @@ export const uisteps = [
         description:
             "We develop information architecture, user flows, and wireframes to establish a strong foundation.",
         imageSrc: Plan.src,
+        alt:'best ui ux design website',
         icon: FaLayerGroup,
     },
 
@@ -185,6 +195,7 @@ export const uisteps = [
         description:
             "Our UI/UX designers transform the structure into a visually engaging and user-friendly interface.",
         imageSrc: Design.src,
+        alt:'best ui ux design website',
         icon: FaPalette,
     },
 
@@ -194,6 +205,7 @@ export const uisteps = [
         description:
             "Interactive prototypes help you experience the product flow before development.",
         imageSrc: Prototype.src,
+        alt:'best ui ux design website company',
         icon: FaPlay,
     },
 
@@ -203,6 +215,7 @@ export const uisteps = [
         description:
             "We review feedback, improve usability, and prepare polished designs for development.",
         imageSrc: Refine.src,
+        alt:'best ui ux design company',
         icon: FaPenRuler,
     },
 ];
