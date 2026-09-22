@@ -89,7 +89,7 @@ const PrimaryOffCanvas = () => {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
             </div> */}
             <div className="mb-20 d-none d-xl-block">
-              <a href="https://www.google.com/maps/place/Yulanto+Web+Creations+Pvt+Ltd/@12.9724698,80.2510529,1421m/data=!3m1!1e3!4m6!3m5!1s0x3a525df3d6bf9167:0xc1aae342aa473d1!8m2!3d12.9725177!4d80.2518352!16s%2Fg%2F11b7rnd8vq?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D" target="blank"> <Image src='/assets/img/map/m3.jpg' alt="map" width={500} height={350} style={{ borderRadius: '20px', }}  /></a>
+              <a href="https://www.google.com/maps/place/Yulanto+Web+Creations+Pvt+Ltd/@12.9724698,80.2510529,1421m/data=!3m1!1e3!4m6!3m5!1s0x3a525df3d6bf9167:0xc1aae342aa473d1!8m2!3d12.9725177!4d80.2518352!16s%2Fg%2F11b7rnd8vq?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D" target="blank"> <Image src='/assets/img/map/m4.jpg' alt="map" width={500} height={350} style={{ borderRadius: '20px', }}  /></a>
 
             </div>
 

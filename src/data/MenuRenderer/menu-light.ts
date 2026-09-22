@@ -91,7 +91,7 @@ export const lightMenu: MenuItem[] = [
         ]
       },
       {
-        label: "AI Web Design & Development", href: "/AI-assisted-website",
+        label: "AI-Enhanced Web Design", href: "/AI-assisted-website",
         // subLinks: [
         //   { label: "Search Engine Optimization (SEO)", href: "/seo" },
         //   { label: "Google Ads Management (PPC)", href: "/ads" },
