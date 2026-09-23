@@ -136,6 +136,15 @@ export default function SeoServicesList() {
                 <span className="text-blue-about">Get the Best Social Media Marketing </span>
                 Services from Experienced Professionals
               </h4>
+                <h1
+                className="ft-23 mt-0 mb-3 text-tenor"
+                data-aos="text-reveal"
+                data-aos-delay="100"
+                style={{ lineHeight: "1.2" }}
+              >
+                Social Media Marketing agency in Chennai
+              </h1>
+
               <h5 className="mb-20">
                 An effective social media marketing strategy can help you:
               </h5>

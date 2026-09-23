@@ -32,8 +32,7 @@ export function HeroSection({
         <div
           style={{
             background: "#fff",
-           
-            
+
             display: "flex",
             flexDirection: "row-reverse",
             flexWrap: "wrap-reverse",
@@ -84,23 +83,86 @@ export function HeroSection({
                       justifyContent: "space-between",
                     }}
                   >
-                    <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "16px",
+                      }}
+                    >
                       <div style={{ display: "flex", gap: "8px" }}>
-                        <div style={{ width: "12px", height: "12px", backgroundColor: "#ef4444", borderRadius: "50%" }} />
-                        <div style={{ width: "12px", height: "12px", backgroundColor: "#eab308", borderRadius: "50%" }} />
-                        <div style={{ width: "12px", height: "12px", backgroundColor: "#22c55e", borderRadius: "50%" }} />
+                        <div
+                          style={{
+                            width: "12px",
+                            height: "12px",
+                            backgroundColor: "#ef4444",
+                            borderRadius: "50%",
+                          }}
+                        />
+                        <div
+                          style={{
+                            width: "12px",
+                            height: "12px",
+                            backgroundColor: "#eab308",
+                            borderRadius: "50%",
+                          }}
+                        />
+                        <div
+                          style={{
+                            width: "12px",
+                            height: "12px",
+                            backgroundColor: "#22c55e",
+                            borderRadius: "50%",
+                          }}
+                        />
                       </div>
-                      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                        <svg style={{ width: "16px", height: "16px", color: "#64748b" }} viewBox="0 0 24 24" fill="none">
-                          <path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "12px",
+                        }}
+                      >
+                        <svg
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#64748b",
+                          }}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
                         </svg>
-                        <svg style={{ width: "16px", height: "16px", color: "#64748b" }} viewBox="0 0 24 24" fill="none">
-                          <path d="m14 5 7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <svg
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#64748b",
+                          }}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="m14 5 7 7-7 7"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
                         </svg>
                       </div>
                     </div>
 
-                    <div style={{ flex: 1, maxWidth: "280px", margin: "0 24px" }}>
+                    <div
+                      style={{ flex: 1, maxWidth: "280px", margin: "0 24px" }}
+                    >
                       <div
                         style={{
                           backgroundColor: "#ffffff",
@@ -118,7 +180,13 @@ export function HeroSection({
                       </div>
                     </div>
 
-                    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "12px",
+                      }}
+                    >
                       <div
                         style={{
                           width: "32px",
@@ -137,8 +205,21 @@ export function HeroSection({
                 </div>
 
                 {/* Application Content */}
-                <div style={{ padding: "32px", backgroundColor: "#ffffff", minHeight: "320px" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
+                <div
+                  style={{
+                    padding: "32px",
+                    backgroundColor: "#ffffff",
+                    minHeight: "320px",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "16px",
+                      marginBottom: "32px",
+                    }}
+                  >
                     {logoComponent || (
                       <div
                         style={{
@@ -148,21 +229,63 @@ export function HeroSection({
                           boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1)",
                         }}
                       >
-                        <span style={{ color: "#ffffff", fontWeight: "bold", fontSize: "18px" }}></span>
+                        <span
+                          style={{
+                            color: "#ffffff",
+                            fontWeight: "bold",
+                            fontSize: "18px",
+                          }}
+                        ></span>
                       </div>
                     )}
                   </div>
 
-                  <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
-                    <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                      <h3 style={{ color: "#64748b", fontWeight: 500, margin: 0 }}>SEO Performance</h3>
-                      <div style={{ height: "8px", backgroundColor: "#f1f5f9", borderRadius: "9999px", overflow: "hidden" }}>
-                        <div style={{ height: "100%", backgroundColor: "#2563eb", width: "75%", borderRadius: "9999px" }} />
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "32px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "12px",
+                      }}
+                    >
+                      <h3
+                        style={{ color: "#64748b", fontWeight: 500, margin: 0 }}
+                      >
+                        SEO Performance
+                      </h3>
+                      <div
+                        style={{
+                          height: "8px",
+                          backgroundColor: "#f1f5f9",
+                          borderRadius: "9999px",
+                          overflow: "hidden",
+                        }}
+                      >
+                        <div
+                          style={{
+                            height: "100%",
+                            backgroundColor: "#2563eb",
+                            width: "75%",
+                            borderRadius: "9999px",
+                          }}
+                        />
                       </div>
                     </div>
 
                     {/* SEO Feature Grid */}
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "16px" }}>
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(6, 1fr)",
+                        gap: "16px",
+                      }}
+                    >
                       {[
                         { name: "Keywords", color: "#3b82f6", icon: "🔍" },
                         { name: "Analytics", color: "#22c55e", icon: "📊" },
@@ -175,7 +298,13 @@ export function HeroSection({
                           key={index}
                           data-aos="zoom-in"
                           data-aos-delay={400 + index * 50}
-                          style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px", cursor: "pointer" }}
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            gap: "8px",
+                            cursor: "pointer",
+                          }}
                         >
                           <div
                             style={{
@@ -189,38 +318,116 @@ export function HeroSection({
                               boxShadow: "0 4px 6px -1px rgba(0,0,0,0.1)",
                             }}
                           >
-                            <span style={{ color: "#ffffff", fontWeight: "bold", fontSize: "20px" }}>{item.icon}</span>
+                            <span
+                              style={{
+                                color: "#ffffff",
+                                fontWeight: "bold",
+                                fontSize: "20px",
+                              }}
+                            >
+                              {item.icon}
+                            </span>
                           </div>
-                          <span style={{ fontSize: "10px", color: "#64748b", textAlign: "center", fontWeight: 500 }}>{item.name}</span>
+                          <span
+                            style={{
+                              fontSize: "10px",
+                              color: "#64748b",
+                              textAlign: "center",
+                              fontWeight: 500,
+                            }}
+                          >
+                            {item.name}
+                          </span>
                         </div>
                       ))}
                     </div>
 
                     {/* SEO Stats */}
-                    <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", marginTop: "8px" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        gap: "12px",
+                        marginTop: "8px",
+                      }}
+                    >
                       <div
                         data-aos="fade-up"
                         data-aos-delay="700"
-                        style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, backgroundColor: "#f8fafc", padding: "8px", borderRadius: "8px" }}
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          flex: 1,
+                          backgroundColor: "#f8fafc",
+                          padding: "8px",
+                          borderRadius: "8px",
+                        }}
                       >
-                        <span style={{ fontSize: "20px", fontWeight: "bold", color: "#2563eb" }}>#1</span>
-                        <span style={{ fontSize: "10px", color: "#64748b" }}>Ranking</span>
+                        <span
+                          style={{
+                            fontSize: "20px",
+                            fontWeight: "bold",
+                            color: "#2563eb",
+                          }}
+                        >
+                          #1
+                        </span>
+                        <span style={{ fontSize: "10px", color: "#64748b" }}>
+                          Ranking
+                        </span>
                       </div>
                       <div
                         data-aos="fade-up"
                         data-aos-delay="800"
-                        style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, backgroundColor: "#f8fafc", padding: "8px", borderRadius: "8px" }}
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          flex: 1,
+                          backgroundColor: "#f8fafc",
+                          padding: "8px",
+                          borderRadius: "8px",
+                        }}
                       >
-                        <span style={{ fontSize: "20px", fontWeight: "bold", color: "#22c55e" }}>45K+</span>
-                        <span style={{ fontSize: "10px", color: "#64748b" }}>Traffic</span>
+                        <span
+                          style={{
+                            fontSize: "20px",
+                            fontWeight: "bold",
+                            color: "#22c55e",
+                          }}
+                        >
+                          45K+
+                        </span>
+                        <span style={{ fontSize: "10px", color: "#64748b" }}>
+                          Traffic
+                        </span>
                       </div>
                       <div
                         data-aos="fade-up"
                         data-aos-delay="900"
-                        style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1, backgroundColor: "#f8fafc", padding: "8px", borderRadius: "8px" }}
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          flex: 1,
+                          backgroundColor: "#f8fafc",
+                          padding: "8px",
+                          borderRadius: "8px",
+                        }}
                       >
-                        <span style={{ fontSize: "20px", fontWeight: "bold", color: "#a855f7" }}>150+</span>
-                        <span style={{ fontSize: "10px", color: "#64748b" }}>Keywords</span>
+                        <span
+                          style={{
+                            fontSize: "20px",
+                            fontWeight: "bold",
+                            color: "#a855f7",
+                          }}
+                        >
+                          150+
+                        </span>
+                        <span style={{ fontSize: "10px", color: "#64748b" }}>
+                          Keywords
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -278,7 +485,16 @@ export function HeroSection({
                   transition: "transform 0.3s ease",
                 }}
               >
-                <div style={{ width: "100%", height: "100%", backgroundColor: "#ffffff", borderRadius: "32px", overflow: "hidden", border: "1px solid #e2e8f0" }}>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "#ffffff",
+                    borderRadius: "32px",
+                    overflow: "hidden",
+                    border: "1px solid #e2e8f0",
+                  }}
+                >
                   {/* Phone Header */}
                   <div
                     style={{
@@ -291,25 +507,69 @@ export function HeroSection({
                       borderBottom: "1px solid #e2e8f0",
                     }}
                   >
-                    <span style={{ fontWeight: 600, color: "#0f172a" }}>9:41</span>
-                    <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-                      <div style={{ width: "16px", height: "8px", backgroundColor: "#22c55e", borderRadius: "2px" }} />
-                      <span style={{ color: "#64748b", fontWeight: 500 }}>100%</span>
+                    <span style={{ fontWeight: 600, color: "#0f172a" }}>
+                      9:41
+                    </span>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "4px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "16px",
+                          height: "8px",
+                          backgroundColor: "#22c55e",
+                          borderRadius: "2px",
+                        }}
+                      />
+                      <span style={{ color: "#64748b", fontWeight: 500 }}>
+                        100%
+                      </span>
                     </div>
                   </div>
 
                   {/* Phone Content */}
-                  <div style={{ padding: "16px", display: "flex", flexDirection: "column", gap: "24px" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}></div>
+                  <div
+                    style={{
+                      padding: "16px",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "24px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "12px",
+                      }}
+                    ></div>
 
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "8px" }}>
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(4, 1fr)",
+                        gap: "8px",
+                      }}
+                    >
                       {[
                         { icon: "🔍", label: "Search" },
                         { icon: "📊", label: "Stats" },
                         { icon: "🔗", label: "Links" },
                         { icon: "📝", label: "Content" },
                       ].map((item, i) => (
-                        <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
+                        <div
+                          key={i}
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            gap: "4px",
+                          }}
+                        >
                           <div
                             style={{
                               width: "32px",
@@ -321,20 +581,53 @@ export function HeroSection({
                               justifyContent: "center",
                             }}
                           >
-                            <span style={{ fontSize: "16px" }}>{item.icon}</span>
+                            <span style={{ fontSize: "16px" }}>
+                              {item.icon}
+                            </span>
                           </div>
-                          <span style={{ fontSize: "8px", color: "#64748b" }}>{item.label}</span>
+                          <span style={{ fontSize: "8px", color: "#64748b" }}>
+                            {item.label}
+                          </span>
                         </div>
                       ))}
                     </div>
 
-                    <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", fontSize: "10px", color: "#64748b" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "8px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          fontSize: "10px",
+                          color: "#64748b",
+                        }}
+                      >
                         <span>SEO Score</span>
-                        <span style={{ color: "#2563eb", fontWeight: "bold" }}>92%</span>
+                        <span style={{ color: "#2563eb", fontWeight: "bold" }}>
+                          92%
+                        </span>
                       </div>
-                      <div style={{ height: "4px", backgroundColor: "#f1f5f9", borderRadius: "9999px", overflow: "hidden" }}>
-                        <div style={{ height: "100%", backgroundColor: "#2563eb", width: "92%", borderRadius: "9999px" }} />
+                      <div
+                        style={{
+                          height: "4px",
+                          backgroundColor: "#f1f5f9",
+                          borderRadius: "9999px",
+                          overflow: "hidden",
+                        }}
+                      >
+                        <div
+                          style={{
+                            height: "100%",
+                            backgroundColor: "#2563eb",
+                            width: "92%",
+                            borderRadius: "9999px",
+                          }}
+                        />
                       </div>
                     </div>
                   </div>
@@ -347,23 +640,70 @@ export function HeroSection({
           <div
             data-aos="fade-right"
             data-aos-delay="200"
-            style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "600px", flex: "1 1 300px" }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "16px",
+              maxWidth: "600px",
+              flex: "1 1 300px",
+            }}
           >
-            <span className="tp-section-subtitle text-black blink-ball" data-aos="fade-down" data-aos-delay="300">
+            <span
+              className="tp-section-subtitle text-black blink-ball"
+              data-aos="fade-down"
+              data-aos-delay="300"
+            >
               SEO at Its Best
             </span>
             <div className="px-project-title-box">
-              <h4 className="px-about-title mb-20" data-aos="fade-up" data-aos-delay="400">
-                <span className="text-blue-about">Professional SEO Services in Chennai </span> That Drive Organic Growth
+              <h4
+                className="px-about-title mb-20"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <span className="text-blue-about">
+                  Professional SEO Services in Chennai{" "}
+                </span>{" "}
+                That Drive Organic Growth
               </h4>
-              <p className="text-figtree text-black mt-2" data-aos="fade-up" data-aos-delay="500">
-                Our SEO strategies are built around the keywords and search queries your potential customers use on Google and other search engines. We optimize your website to improve its relevance, authority, user experience, and organic search performance.
+              <h1
+                className="ft-23 mt-0 mb-3 text-tenor"
+                data-aos="text-reveal"
+                data-aos-delay="100"
+                style={{ lineHeight: "1.2" }}
+              >
+                SEO Company in Chennai in Chennai
+              </h1>
+              <p
+                className="text-figtree text-black mt-2"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                Our SEO strategies are built around the keywords and search
+                queries your potential customers use on Google and other search
+                engines. We optimize your website to improve its relevance,
+                authority, user experience, and organic search performance.
               </p>
-              <p className="text-figtree text-black mt-2" data-aos="fade-up" data-aos-delay="500">
-                As one of the trusted search engine optimization companies in Chennai, we focus on ethical, data-driven SEO practices rather than shortcuts. Our goal is to improve your website's visibility for valuable search terms, attract targeted visitors, increase enquiries, and support long-term business growth.
+              <p
+                className="text-figtree text-black mt-2"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                As one of the trusted search engine optimization companies in
+                Chennai, we focus on ethical, data-driven SEO practices rather
+                than shortcuts. Our goal is to improve your website's visibility
+                for valuable search terms, attract targeted visitors, increase
+                enquiries, and support long-term business growth.
               </p>
-              <p className="text-figtree text-black mt-2" data-aos="fade-up" data-aos-delay="500">
-                Whether you are a startup, local business, service provider, eCommerce company, or established organization, our SEO services in Chennai can be tailored to your industry, target audience, competition, and business objectives.
+              <p
+                className="text-figtree text-black mt-2"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                Whether you are a startup, local business, service provider,
+                eCommerce company, or established organization, our SEO services
+                in Chennai can be tailored to your industry, target audience,
+                competition, and business objectives.
               </p>
             </div>
           </div>

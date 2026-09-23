@@ -58,7 +58,7 @@ export default function AboutSection() {
             >
               <img
                 src="assets/img/social/last-bottom-.jpg"
-                alt="Social Media Marketing"
+                alt="Social Media Marketing Comapny in chennai"
                 style={{
                   width: '100%',
                   height: '100%',

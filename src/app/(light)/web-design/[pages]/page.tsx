@@ -83,7 +83,7 @@ export default async function Page({ params }: PageProps) {
       pageContent = <Landingpagedesgin />;
       break;
       // ui-ux-desgin
-    case "UI-UX-Designers-in-Chennai":
+    case "UI-UX-Companies-in-Chennai":
       pageContent = <Uiuxdesgin />;
       break;
   }

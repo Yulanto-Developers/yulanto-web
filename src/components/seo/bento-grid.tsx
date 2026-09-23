@@ -9,6 +9,7 @@ interface BentoCardProps {
   name: string;
   description: string;
   imageUrl: string;
+  alt:string;
   colClass: string;
   cardHeightClass?: string;
   animationDelay?: number;
@@ -19,6 +20,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
   name,
   description,
   imageUrl,
+  alt,
   colClass,
   cardHeightClass = "",
   animationDelay = 0,
@@ -42,7 +44,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
         >
           <img
             src={imageUrl}
-            alt={name}
+            alt={alt}
             className={`bento-center-img img-fluid rounded-3 ${
               isCenterCard ? "bento-tall-img" : ""
             }`}
@@ -74,6 +76,7 @@ export const BentoGrid: React.FC = () => {
       description:
         "Effective SEO starts with understanding what your customers are searching for. Our SEO experts in Chennai conduct detailed keyword research to identify relevant, high-value, and commercially focused search terms. We analyze search intent, competition, keyword relevance, and opportunities to create a focused SEO strategy.",
       imageUrl: "/assets/img/seo/top/SEO-Results-1.jpg",
+      alt:'seo search engine optimization',
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-tall",
       delay: 100,
@@ -83,6 +86,7 @@ export const BentoGrid: React.FC = () => {
       description:
         "We optimize important website elements, including page content, title tags, meta descriptions, headings, URLs, internal links, images, and structured data. Our on-page SEO approach helps search engines better understand your website while providing visitors with useful and engaging content.",
       imageUrl: "/assets/img/seo/top/SEO-Results-3.jpg",
+       alt:'local seo services',
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-full-tall h-100", // Ensured full height filling
       delay: 200,
@@ -92,6 +96,7 @@ export const BentoGrid: React.FC = () => {
       description:
         "Our technical SEO process focuses on improving website crawlability, indexing, mobile usability, page experience, website structure, and other technical factors that can influence search performance. A technically optimized website provides a stronger foundation for long-term SEO growth.",
       imageUrl: "/assets/img/seo/top/SEO-Results-4.jpg",
+       alt:'seo services near me',
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-short",
       delay: 300,
@@ -101,6 +106,7 @@ export const BentoGrid: React.FC = () => {
       description:
         "Quality backlinks can help strengthen your website's authority and credibility. We follow relevant and ethical link-building practices to develop a natural backlink profile and improve your website's authority within your industry.",
       imageUrl: "/assets/img/seo/top/SEO-Results-2.jpg",
+       alt:'seo search engine optimization chennai',
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-short",
       delay: 400,
@@ -110,6 +116,7 @@ export const BentoGrid: React.FC = () => {
       description:
         "We continuously analyze SEO performance to identify opportunities for improvement. We monitor keyword rankings, organic traffic, search visibility, user engagement, conversions, and other important SEO metrics to refine the strategy and maximize results.",
       imageUrl: "/assets/img/seo/top/SEO-Results-5.jpg",
+      alt:'seo services in chennai',
       colClass: "col-12 col-md-6 col-lg-4",
       cardHeightClass: "bento-card-tall",
       delay: 500,

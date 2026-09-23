@@ -70,7 +70,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
               {activeImages[0] && (
                 <img
                   src={activeImages[0]}
-                  alt="Main feature"
+                  alt="search engine optimization"
                   className="collage-img img-center animate-float-up"
                   style={{ animationDelay: '0s' }}
                 />
@@ -79,7 +79,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
               {activeImages[1] && (
                 <img
                   src={activeImages[1]}
-                  alt="Feature 2"
+                  alt="seo services"
                   className="collage-img img-top-left animate-float-up"
                   style={{ animationDelay: '-1.2s' }}
                 />
@@ -91,7 +91,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
               {activeImages[4] && (
                 <img
                   src={activeImages[4]}
-                  alt="Feature 5"
+                  alt="seo company near me"
                   className="collage-img img-far-right animate-float-up"
                   style={{ animationDelay: '-4.8s' }}
                 />
@@ -100,7 +100,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
               {activeImages[5] && (
                 <img
                   src={activeImages[5]}
-                  alt="Feature 6"
+                  alt="google search engine optimization"
                   className="collage-img img-bottom-right animate-float-up"
                   style={{ animationDelay: '-5.2s' }}
                 />
@@ -109,7 +109,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
               {activeImages[6] && (
                 <img
                   src={activeImages[6]}
-                  alt="Feature 7"
+                  alt="seo services near me"
                   className="collage-img img-far-left animate-float-up"
                   style={{ animationDelay: '-6s' }}
                 />

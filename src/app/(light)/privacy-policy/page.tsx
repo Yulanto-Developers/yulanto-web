@@ -17,7 +17,7 @@ export default function CareersPage() {
                 },
                 {
                   name: "Our Story",
-                  url: "https://yulanto-web.vercel.app/privacy",
+                  url: "https://yulanto-web.vercel.app/privacy-policy",
                 },
               ]}
             />

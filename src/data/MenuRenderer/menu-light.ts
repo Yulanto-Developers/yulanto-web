@@ -40,7 +40,7 @@ export const lightMenu: MenuItem[] = [
           { label: "Corporate Website Design", href: "/web-design/website-creation-company-in-Chennai" },
           { label: "Website Redesign", href: "/web-design/Website-Redesign-in-Chennai" },
           { label: "Landing Page Design", href: "/web-design/landing-page-design-chennai" },
-          { label: "UI/UX Design", href: "/web-design/UI-UX-Designers-in-Chennai" },
+          { label: "UI/UX Design", href: "/web-design/UI-UX-Companies-in-Chennai" },
         ]
       },
       {

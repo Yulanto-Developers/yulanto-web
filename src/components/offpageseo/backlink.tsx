@@ -16,6 +16,7 @@ export interface OffPageServiceItem {
   description: string;
   iconClass: string;
   image: string;
+  alt: string;
 }
 
 const SERVICES_DATA: OffPageServiceItem[] = [
@@ -25,6 +26,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     tag: "Backlinks",
     iconClass: "fa-solid fa-link",
     image: "assets/img/offpage/seo-Service-1.jpg",
+    alt: "Off-Page SEO in Chennai",
     description:
       "We identify relevant, authoritative, and industry-related websites to build quality backlinks that support your SEO objectives. Our approach focuses on relevance, authority, natural link placement, and long-term value rather than simply increasing backlink numbers.",
   },
@@ -34,6 +36,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     tag: "Local SEO",
     iconClass: "fa-solid fa-location-dot",
     image: "assets/img/offpage/seo-Service-2.jpg",
+    alt: "SEO company in Chennai",
     description:
       "For businesses targeting customers in Chennai, local visibility is extremely important. Our local SEO services in Chennai include business citations, local directory optimization, location-based listings, and other strategies that help strengthen your local online presence.",
   },
@@ -43,6 +46,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     tag: "Directories",
     iconClass: "fa-solid fa-folder-tree",
     image: "assets/img/offpage/seo-Service-3.jpg",
+    alt: "SEO agency in Chennai",
     description:
       "We submit and optimize business information across relevant and trustworthy directories to improve brand visibility and maintain consistent business information across online platforms.",
   },
@@ -52,6 +56,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     tag: "Content Outreach",
     iconClass: "fa-solid fa-newspaper",
     image: "assets/img/offpage/seo-Service-4.jpg",
+    alt: "seo optimization agency in Chennai",
     description:
       "Publishing useful and relevant content on authoritative websites can help establish industry expertise, generate referral traffic, and earn valuable backlinks.",
   },
@@ -61,6 +66,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     tag: "Brand Awareness",
     iconClass: "fa-solid fa-bullhorn",
     image: "assets/img/offpage/seo-Service-5.jpg",
+    alt: "best seo agency",
     description:
       "We work on increasing your brand's online visibility through relevant content, industry platforms, business profiles, and other digital channels where your target audience is active.",
   },
@@ -70,6 +76,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     tag: "Analysis",
     iconClass: "fa-solid fa-chart-bar",
     image: "assets/img/offpage/seo-Service-6.jpg",
+    alt: "best search engine optimization companies",
     description:
       "Our SEO consultant in Chennai analyzes competitor backlink profiles to identify potential link opportunities, industry-specific platforms, content opportunities, and gaps in your current SEO strategy.",
   },
@@ -79,6 +86,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     tag: "Content Marketing",
     iconClass: "fa-solid fa-share-alt",
     image: "assets/img/offpage/seo-Service-7.jpg",
+    alt: "best search engine optimisation company",
     description:
       "Creating valuable content is only part of SEO. We also focus on promoting useful website content through relevant online channels to increase its reach, visibility, and potential for earning natural backlinks.",
   },
@@ -88,6 +96,7 @@ const SERVICES_DATA: OffPageServiceItem[] = [
     tag: "Social Media",
     iconClass: "fa-solid fa-share-nodes",
     image: "assets/img/offpage/seo-Service-8.jpg",
+    alt:'search engine optimisation company chennai',
     description:
       "Social media activity can support brand awareness and content distribution. We use appropriate social platforms to promote valuable content and increase opportunities for audience engagement and brand discovery.",
   },
@@ -118,27 +127,27 @@ export default function OffPageSeoParallax() {
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 600]),
-    springConfig
+    springConfig,
   );
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -600]),
-    springConfig
+    springConfig,
   );
   const rotateX = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
+    springConfig,
   );
   const opacity = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [0.25, 1]),
-    springConfig
+    springConfig,
   );
   const rotateZ = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
+    springConfig,
   );
   const translateY = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [-400, 200]),
-    springConfig
+    springConfig,
   );
 
   // MOBILE VIEW: Stack cards vertically one after another cleanly
@@ -276,7 +285,9 @@ export function Header() {
         </h4>
 
         <p className="text-figtree text-black mt-2">
-          As one of the professional SEO agencies in Chennai, we implement ethical and sustainable off-page SEO techniques that focus on long-term growth.
+          As one of the professional SEO agencies in Chennai, we implement
+          ethical and sustainable off-page SEO techniques that focus on
+          long-term growth.
         </p>
       </div>
     </div>
@@ -315,7 +326,7 @@ export function ProductCard({
       {/* Background Image */}
       <img
         src={product.image}
-        alt={product.title}
+        alt={product.alt}
         style={{
           position: "absolute",
           top: 0,

@@ -10,6 +10,7 @@ const benefitsData = [
     role: "Identity & Design",
     avatar: "assets/img/social/Benefits-icon-1.png",
     featured: true,
+    alt:'social media agency',
   },
   {
     title: "Engage Your Target Audience",
@@ -18,6 +19,7 @@ const benefitsData = [
     role: "Community Management",
     avatar: "assets/img/social/Benefits-icon-2.png",
     wide: true,
+     alt:'social media management companies',
   },
   {
     title: "Increase Brand Recognition",
@@ -25,6 +27,7 @@ const benefitsData = [
     author: "Visibility Team",
     role: "Market Reach",
     avatar: "assets/img/social/Benefits-icon-3.png",
+     alt:'social media marketing companies',
   },
   {
     title: "Gain Real-Time Insights",
@@ -32,6 +35,7 @@ const benefitsData = [
     author: "Research Lead",
     role: "Consumer Analytics",
     avatar: "assets/img/social/Benefits-icon-4.png",
+     alt:'Social Media Marketing Agency in Chennai',
   },
   {
     title: "Improve Your Marketing Strategy",
@@ -39,6 +43,7 @@ const benefitsData = [
     author: "Performance Ops",
     role: "Strategy Optimization",
     avatar: "assets/img/social/Benefits-icon-6.png",
+    alt:'Social Media Marketing Agency',
   },
   {
     title: "Build Customer Relationships",
@@ -46,6 +51,7 @@ const benefitsData = [
     author: "Customer Success",
     role: "Relationship Management",
     avatar: "assets/img/social/Benefits-icon-5.png",
+    alt:'SMM Agency in Chennai',
   },
 ];
 
@@ -173,7 +179,7 @@ export default function SocialMediaBenefits() {
                     >
                       <img
                         src={item.avatar}
-                        alt={item.author}
+                        alt={item.alt}
                         style={{
                           width: "100%",
                           height: "100%",

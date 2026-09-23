@@ -10,21 +10,22 @@ export interface BenefitItem {
   category: string;
   iconClass: string;
   image: string;
+  alt:string;
 }
 
 const BENEFITS_DATA: BenefitItem[] = [
-  { id: "1", title: "Higher Search Engine Visibility", tag: "Visibility", category: "Reach", iconClass: "fa-solid fa-eye", image: "assets/img/offpage/Benefits-1.jpg" },
-  { id: "2", title: "Improved Website Authority", tag: "Authority", category: "Trust", iconClass: "fa-solid fa-award", image: "assets/img/offpage/Benefits-2.jpg" },
-  { id: "3", title: "Better Keyword Ranking Potential", tag: "Rankings", category: "SEO", iconClass: "fa-solid fa-chart-line", image: "assets/img/offpage/Benefits-3.jpg" },
-  { id: "4", title: "Quality Backlink Acquisition", tag: "Backlinks", category: "Authority", iconClass: "fa-solid fa-link", image: "assets/img/offpage/Benefits-4.jpg" },
-  { id: "5", title: "Increased Referral Traffic", tag: "Traffic", category: "Reach", iconClass: "fa-solid fa-chart-line-up", image: "assets/img/offpage/Benefits-5.jpg" },
-  { id: "6", title: "Improved Local Search Visibility", tag: "Local SEO", category: "Targeting", iconClass: "fa-solid fa-location-dot", image: "assets/img/offpage/Benefits-6.jpg" },
-  { id: "7", title: "Greater Brand Awareness", tag: "Awareness", category: "Branding", iconClass: "fa-solid fa-bullhorn", image: "assets/img/offpage/Benefits-7.jpg" },
-  { id: "8", title: "Stronger Online Reputation", tag: "Reputation", category: "Trust", iconClass: "fa-solid fa-star-half-stroke", image: "assets/img/offpage/Benefits-8.jpg" },
-  { id: "9", title: "Better Industry Credibility", tag: "Credibility", category: "Authority", iconClass: "fa-solid fa-user-check", image: "assets/img/offpage/Benefits-9.jpg" },
-  { id: "10", title: "More Qualified Website Visitors", tag: "Leads", category: "Conversion", iconClass: "fa-solid fa-bullseye", image: "assets/img/offpage/Benefits-10.jpg" },
-  { id: "11", title: "Long-Term Organic Growth", tag: "Growth", category: "Strategy", iconClass: "fa-solid fa-seedling", image: "assets/img/offpage/Benefits-11.jpg" },
-  { id: "12", title: "Greater Competitive Advantage", tag: "Advantage", category: "Market", iconClass: "fa-solid fa-trophy", image: "assets/img/offpage/Benefits-12.jpg" },
+  { id: "1", title: "Higher Search Engine Visibility", tag: "Visibility", category: "Reach", iconClass: "fa-solid fa-eye", image: "assets/img/offpage/Benefits-1.jpg", alt: "best seo agency" },
+  { id: "2", title: "Improved Website Authority", tag: "Authority", category: "Trust", iconClass: "fa-solid fa-award", image: "assets/img/offpage/Benefits-2.jpg", alt: "best search engine optimization companies" },
+  { id: "3", title: "Better Keyword Ranking Potential", tag: "Rankings", category: "SEO", iconClass: "fa-solid fa-chart-line", image: "assets/img/offpage/Benefits-3.jpg", alt: "best company for seo" },
+  { id: "4", title: "Quality Backlink Acquisition", tag: "Backlinks", category: "Authority", iconClass: "fa-solid fa-link", image: "assets/img/offpage/Benefits-4.jpg", alt: "best seo provider" },
+  { id: "5", title: "Increased Referral Traffic", tag: "Traffic", category: "Reach", iconClass: "fa-solid fa-chart-line-up", image: "assets/img/offpage/Benefits-5.jpg", alt: "seo top companies" },
+  { id: "6", title: "Improved Local Search Visibility", tag: "Local SEO", category: "Targeting", iconClass: "fa-solid fa-location-dot", image: "assets/img/offpage/Benefits-6.jpg", alt: "best seo agency" },
+  { id: "7", title: "Greater Brand Awareness", tag: "Awareness", category: "Branding", iconClass: "fa-solid fa-bullhorn", image: "assets/img/offpage/Benefits-7.jpg", alt: "best search engine optimization companies" },
+  { id: "8", title: "Stronger Online Reputation", tag: "Reputation", category: "Trust", iconClass: "fa-solid fa-star-half-stroke", image: "assets/img/offpage/Benefits-8.jpg", alt: "best company for seo" },
+  { id: "9", title: "Better Industry Credibility", tag: "Credibility", category: "Authority", iconClass: "fa-solid fa-user-check", image: "assets/img/offpage/Benefits-9.jpg", alt: "best seo provider" },
+  { id: "10", title: "More Qualified Website Visitors", tag: "Leads", category: "Conversion", iconClass: "fa-solid fa-bullseye", image: "assets/img/offpage/Benefits-10.jpg", alt: "seo top companies" },
+  { id: "11", title: "Long-Term Organic Growth", tag: "Growth", category: "Strategy", iconClass: "fa-solid fa-seedling", image: "assets/img/offpage/Benefits-11.jpg", alt: "best seo agency" },
+  { id: "12", title: "Greater Competitive Advantage", tag: "Advantage", category: "Market", iconClass: "fa-solid fa-trophy", image: "assets/img/offpage/Benefits-12.jpg", alt: "best search engine optimization companies" },
 ];
 
 export default function BenefitsSection() {
@@ -64,6 +65,14 @@ export default function BenefitsSection() {
               <h4 className="px-about-title mb-3">
                 <span className="text-blue-about">Benefits of </span>Off-Page SEO
               </h4>
+                <h1
+                className="ft-23 mt-0 mb-3 text-tenor"
+                data-aos="text-reveal"
+                data-aos-delay="100"
+                style={{ lineHeight: "1.2" }}
+              >
+                Seo Agencies in Chennai
+              </h1>
               <p className="text-figtree text-black mt-2">
                 A professionally implemented off-page SEO campaign can provide several long-term benefits for your business.
               </p>
@@ -92,7 +101,7 @@ export default function BenefitsSection() {
                 <motion.img
                   key={activeItem.id}
                   src={activeItem.image}
-                  alt={activeItem.title}
+                  alt={activeItem.alt}
                   initial={{ opacity: 0, scale: 1.05 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}

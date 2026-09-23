@@ -164,7 +164,7 @@ export default function OffPageSeoBanner() {
           >
             <img
               src="assets/img/googleads/bottom-1.jpg"
-              alt="Google Ads & Digital Marketing Integration"
+              alt="Google Ads Management Services in Chennai"
               style={{
                 width: "100%",
                 height: "360px",
