@@ -76,15 +76,7 @@ export default function PortfolioPage() {
                 </div>
 
 
-            </div> */}
-            <IntroContent leftTitle={'From Vision to Reality'} rightTitle1={'Real Projects.'} rightTitle2={' Creative Solutions. Real Results.'} description={'Explore our successful projects and discover how we transform ideas into engaging, innovative, and impactful digital experiences that help businesses grow and stand out online.'} />
-             
-            {/* <SectionTitle
-                    subtitle="From Vision to Reality"
-                    titleFirst="Real Projects."
-                    titleSecond="Creative Solutions. Real Results. Measurable business value."
-                    description="Explore our successful projects and discover how we transform ideas into engaging, innovative, and impactful digital experiences that help businesses grow and stand out online."
-                  /> */}
+            </div>
             {/* <InnerServiceSection/> */}
             <MajorClientService />
 

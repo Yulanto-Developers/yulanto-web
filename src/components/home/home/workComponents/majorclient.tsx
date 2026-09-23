@@ -15,6 +15,8 @@ import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "./majorclient.css";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 import img1 from '@/assets/img/case-study/naturographers-old.jpg'
 import img2 from '@/assets/img/case-study/naturographers-new.jpg'
 import img3 from '@/assets/img/case-study/core-old.jpg'
@@ -26,12 +28,7 @@ import img8 from '@/assets/img/case-study/freight-Digital-2.jpg'
 import img9 from '@/assets/img/case-study/harithams-1.jpg'
 import img10 from '@/assets/img/case-study/harithams-2.jpg'
 import img11 from '@/assets/img/case-study/veedalayam-1.jpg'
-import img12 from '@/assets/img/case-study/veedalayam-2.jpg'
-
-import "@/assets/css/style1.css";
-
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
+import img12 from '@/assets/img/case-study/veedalayam-2.jpg' 
 /* =========================================================
    LEFT NAVIGATION DATA
 ========================================================= */
@@ -53,13 +50,13 @@ export const innerClient = [
   {
     id: 1,
     url: 'https://naturographers.com/',
-
+ 
     title: "Naturographers – Wildlife Photography & Eco-Tourism Website Design",
-
+ 
     descriptions: [
       "Naturographers is a wildlife photography and eco-tourism website designed to showcase immersive safari experiences, wildlife photography workshops, and cinematic storytelling for nature enthusiasts. Our goal was to create a visually engaging and user-friendly website that reflects the brand’s passion for wildlife, adventure, nature, and photography.",
     ],
-
+ 
     challenges: [
       "Outdated website design and user interface",
       "Weak wildlife photography presentation",
@@ -70,10 +67,10 @@ export const innerClient = [
       "Limited focus on safari and photography experiences",
       "Poor overall user experience across devices",
     ],
-
+ 
     solutionIntro:
       "We redesigned Naturographers as a modern wildlife photography and eco-tourism website with a strong focus on visual storytelling, user experience, and brand presentation.",
-
+ 
     solutions: [
       "High-quality wildlife and nature photography",
       "Cinematic visual storytelling",
@@ -94,19 +91,19 @@ export const innerClient = [
       img1.src, img2.src
     ],
   },
-
+ 
   {
     id: 2,
     url: 'https://core.co.in/',
-
+ 
     title: "CORE Energy Systems – Industrial & Engineering Website Design",
-
+ 
     descriptions: [
       "CORE Energy Systems is a specialised engineering and EPC company delivering advanced solutions across Nuclear, Defence & Aerospace, Clean Energy, Oil & Gas, and critical infrastructure sectors. The objective was to create a modern, high-performance corporate website that effectively communicates CORE’s engineering expertise, technical capabilities, landmark projects, innovation, and global presence.",
-
+ 
       "The website needed to present complex engineering information in a clear, engaging, and professional manner while establishing a strong digital presence for a technology-driven and mission-critical organisation.",
     ],
-
+ 
     challenges: [
       "Complex engineering services and technical information were difficult to present simply",
       "Large number of industries, capabilities, projects, and solutions required better organisation",
@@ -117,10 +114,10 @@ export const innerClient = [
       "Important technical information needed to remain accessible without overwhelming visitors",
       "Requirement for a modern, responsive, and user-friendly digital experience",
     ],
-
+ 
     solutionIntro:
       "We developed a modern corporate website design focused on clarity, credibility, technical excellence, and user experience. The website architecture was structured around CORE’s key sectors and capabilities, allowing visitors to quickly explore its expertise in nuclear engineering, defence and aerospace, clean energy, oil & gas, EPC solutions, engineered systems, O&M, and innovation.",
-
+ 
     solutions: [
       "Modern and professional corporate website design",
       "Strong visual presentation of engineering capabilities",
@@ -142,19 +139,19 @@ export const innerClient = [
       img3.src, img4.src
     ],
   },
-
+ 
   {
     id: 3,
     url: 'https://grayt.in/',
-
+ 
     title: "GRAYT – Technology & Consumer Electronics Website Design",
-
+ 
     descriptions: [
       "GRAYT, a technology brand from Grayeye IT Systems, offers a diverse range of innovative products including laptops, smart TVs, interactive flat panels, tablets, desktops, and all-in-one PCs. The objective was to create a modern, engaging, and scalable website that presents the complete product portfolio while strengthening GRAYT’s digital brand identity.",
-
+ 
       "The new website was designed to provide a seamless user experience for consumers, businesses, educational institutions, and technology buyers while making it easier to discover products, explore features, submit enquiries, and access customer support.",
     ],
-
+ 
     challenges: [
       "Large and diverse technology product portfolio",
       "Need to present multiple product categories clearly",
@@ -167,10 +164,10 @@ export const innerClient = [
       "Multiple support services required clear categorisation",
       "Website needed to deliver a consistent experience across desktop, tablet, and mobile devices",
     ],
-
+ 
     solutionIntro:
       "We created a modern technology website design with a clean interface, strong product presentation, intuitive navigation, and a structured content architecture. The website brings together GRAYT’s product categories, corporate information, client portfolio, enquiry system, and after-sales support within a unified digital experience.",
-
+ 
     solutions: [
       "Modern and responsive website design",
       "User-friendly UI/UX for technology products",
@@ -197,17 +194,17 @@ export const innerClient = [
       img5.src, img6.src
     ],
   },
-
+ 
   {
     id: 4,
     url: 'https://freightdigitalfzc.com/',
-
+ 
     title: "Freight Digital FZC – Logistics & Freight Industry Website Design",
-
+ 
     descriptions: [
       "Freight Digital FZC is a specialised digital marketing and business promotion platform focused on the freight forwarding, logistics, shipping, customs clearance, NVOCC, transportation, and supply chain industries. The objective was to create a modern, professional, and SEO-friendly website that clearly communicates its specialised services and helps logistics companies build stronger digital visibility and generate qualified business opportunities globally.",
     ],
-
+ 
     challenges: [
       "Complex logistics and digital marketing services needed clearer presentation",
       "Multiple logistics industries and target audiences required better organisation",
@@ -220,10 +217,10 @@ export const innerClient = [
       "Customer testimonials and credibility elements needed better presentation",
       "Website required a responsive experience across desktop, tablet, and mobile devices",
     ],
-
+ 
     solutionIntro:
       "We developed a modern logistics and freight industry website focused on professional branding, intuitive navigation, service visibility, lead generation, and SEO-friendly content architecture.The website was structured around Freight Digital\'s core offerings, including global logistics advertising, digital marketing campaigns, online business promotion, logistics industry listings, newsletter advertising, and analytics & reporting.",
-
+ 
     solutions: [
       "Modern corporate website design",
       "Industry-focused UI/UX design",
@@ -252,13 +249,13 @@ export const innerClient = [
   {
     id: 5,
     url: 'https://www.harithams.com/',
-
+ 
     title: "Harithams – Real Estate & Property Website Design",
-
+ 
     descriptions: [
       "Harithams Group of Companies is a growing real estate and construction brand focused on residential properties, villa plots, gated communities, apartments, individual villas, and strategic land development. The objective of the new website was to create a premium, modern, and trustworthy digital presence that effectively showcases Harithams' projects, expertise, experience, and customer-focused approach.",
     ],
-
+ 
     challenges: [
       "Real estate projects required a more engaging digital presentation",
       "Multiple property categories needed clear organisation",
@@ -271,10 +268,10 @@ export const innerClient = [
       "The website needed to communicate Harithams' experience and credibility effectively",
       "Content needed to be structured for better search engine visibility",
     ],
-
+ 
     solutionIntro:
       "We designed and developed a modern, responsive, and SEO-friendly real estate website focused on project discovery, brand credibility, visual presentation, and lead generation. The new website presents Harithams' core capabilities, including villa plot development, gated community layouts, apartments, individual villas, strategic land and infrastructure planning, and in-house sales and marketing.",
-
+ 
     solutions: [
       "Premium real estate website design",
       "Modern UI/UX design",
@@ -302,13 +299,13 @@ export const innerClient = [
   {
     id: 6,
     url: 'https://www.vedaalayam.com/',
-
+ 
     title: "Vedaalayam – Education & Innovation Institute Website Design",
-
+ 
     descriptions: [
       "Vedaalayam – The Institute of Innovation is an education-focused initiative created to bring together the ancient Indian Gurukul system and modern scientific learning. The objective of the new website was to establish a modern, inspiring, and trustworthy digital presence that clearly communicates Vedaalayam’s educational philosophy, programs, vision, mission, and commitment to developing future innovators and leaders.",
     ],
-
+ 
     challenges: [
       "Complex educational philosophy needed to be communicated clearly",
       "Traditional Indian education concepts needed a modern digital presentation",
@@ -321,10 +318,10 @@ export const innerClient = [
       "The website needed to provide an engaging experience across desktop and mobile devices",
       "Educational content required an SEO-friendly structure for long-term organic visibility",
     ],
-
+ 
     solutionIntro:
       "We designed and developed a modern, responsive, and SEO-friendly real estate website focused on project discovery, brand credibility, visual presentation, and lead generation. The new website presents Harithams' core capabilities, including villa plot development, gated community layouts, apartments, individual villas, strategic land and infrastructure planning, and in-house sales and marketing.",
-
+ 
     solutions: [
       "Modern education website design",
       "Clean and professional UI / UX design",
@@ -353,6 +350,7 @@ export const innerClient = [
     ],
   },
 ];
+
 
 /* =========================================================
    TYPES
@@ -515,50 +513,6 @@ const MajorInnerItems = ({
                       </div>
                     )
                   )}
-
-                  {/* PROJECT RESULT SHOWS IN BOTH CHALLENGES & SOLUTIONS TABS */}
-                  {result && (
-                    <div
-                      className="cs-result-container mt-4 p-3 rounded"
-                      style={{
-                        backgroundColor: "rgba(59, 130, 246, 0.08)",
-                        borderLeft: "4px solid #53ae7d",
-                      }}
-                    >
-                      <h6 className="cs-result-title fs-4 text-white text-tenor mb-2">
-                        Project Result
-                      </h6>
-                      <p
-                        className="cs-result-text mb-0 text-white text-figtree"
-                        style={{ fontSize: "13px" }}
-                      >
-                        {result}
-                      </p>
-                    </div>
-                  )}
-
-                  {/* VISIT US BUTTON */}
-                  <div className="mt-3">
-                    <a
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={title}
-                      className="cs-visit-btn btn"
-                      style={{
-                        display: "inline-block",
-                        backgroundColor: "#53ae7d",
-                        color: "#ffffff",
-                        padding: "8px 20px",
-                        borderRadius: "6px",
-                        textDecoration: "none",
-                        fontWeight: "600",
-                        fontSize: "14px",
-                      }}
-                    >
-                      Visit Website
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>

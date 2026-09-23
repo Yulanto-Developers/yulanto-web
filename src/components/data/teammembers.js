@@ -12,6 +12,7 @@ const MEMBERS = [
       "/assets/images/our-team/skills/payrool.png",
     ],
   },
+
   {
     id: 2,
     name: "Manigandan",
@@ -31,6 +32,7 @@ const MEMBERS = [
       "/assets/images/our-team/skills/wordpress.png",
     ],
   },
+
   {
     id: 3,
     name: "Arun Kumaran",
@@ -51,6 +53,7 @@ const MEMBERS = [
       "/assets/images/our-team/skills/seo.png",
     ],
   },
+
 
   {
     id: 4,
