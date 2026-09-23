@@ -134,11 +134,11 @@ export default function ReactServicesHero() {
                                 <div className="col-lg-4 mb-30" data-aos="fade-left" style={{ padding: 0 }}>
                                     <div style={{ width: "100%", overflow: "hidden", borderRadius: "20px", boxShadow: "0 15px 40px rgba(0, 0, 0, 0.25)", border: "1px solid rgba(0, 0, 0, 0.05)", position: "relative", minHeight: "450px" }}>
                                         <Image
-                                            src="/assets/images/website-development/custom-website-development/Your-Business-1.jpg"
+                                            src="/assets/img/react/Our-React-Website-Development-Services-1.jpg"
                                             alt="React Website Development Services"
                                             fill
                                             sizes="(max-width: 768px) 100vw, 40vw"
-                                            style={{ objectFit: "cover", display: "block" }}
+                                            style={{  display: "block" }}
                                             quality={90}
                                         />
                                     </div>

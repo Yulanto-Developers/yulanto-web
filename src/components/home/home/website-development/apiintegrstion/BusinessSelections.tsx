@@ -64,6 +64,7 @@ const styles = {
     lineHeight: "1.6",
   },
 
+
   iconCircle: {
     width: "40px",
     height: "40px",
@@ -168,9 +169,9 @@ const BusinessSelections = () => {
                             />
                           </div>
 
-                          <h5 className="text-tenor fw-bold m-0">
+                          <span className="text-tenor   fw-bold m-0" style={{fontSize:"22px",color:"#000"}}>
                             {item.title}
-                          </h5>
+                          </span>
                         </div>
 
                         {/* Description */}
@@ -204,13 +205,13 @@ const BusinessSelections = () => {
         {/* Left Column (6 Columns) - Added Responsive Image */}
         <div className="col-12 col-md-6 mb-4 mb-md-0">
           <img
-            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1000&auto=format&fit=crop"
+            src="/assets/img/api/image-1.jpg"
             alt="API Integration and Business Automation"
             className="img-fluid rounded-4 shadow-lg"
             style={{
               width: '100%',
               height: '470px',
-              objectFit: 'cover',
+             
             }}
           />
         </div>

@@ -492,12 +492,12 @@ export default function AboutPhpLaravelSection() {
             </button>
 
              <img
-                src="/assets/img/googleads/img-new.jpg"
+                src="/assets/img/react/image-1.png"
                 alt="Google Ads results"
                 style={{
                   width: "100%",
                   maxWidth: "500px",
-                  height: "auto",
+                  height: "300px",
                   display: "block",
                   marginTop: "24px",
                   borderRadius: "16px",
