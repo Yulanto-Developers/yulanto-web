@@ -75,6 +75,12 @@ const defaultImages = [
   "assets/img/social/top-3.jpg",
 ];
 
+const altTexts = [
+  "best social media agency in Chennai",
+  "social media marketing in chennai",
+  "social media marketing services in Chennai",
+];
+
 export default function HeroSection({
   images = defaultImages,
 }: HeroSectionProps) {
@@ -172,7 +178,7 @@ export default function HeroSection({
               >
                 <img
                   src={src}
-                  alt={`Hero image ${i + 1}`}
+                  alt={`${altTexts[i]}`}
                   decoding="async"
                   style={{
                     height: "100%",

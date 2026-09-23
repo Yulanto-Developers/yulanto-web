@@ -100,7 +100,7 @@ export const SeoAboutSection: React.FC = () => {
                   >
                     <img
                       src="assets/img/offpage/Why-Choose-Our-SEO.jpg"
-                      alt="SEO Traffic Growth Graph and Search Engine Analytics"
+                      alt="off SEO company in Chennai"
                       className="seo-preview-image"
                     />
                     <div className="image-overlay-tag">

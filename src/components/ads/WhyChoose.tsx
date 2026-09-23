@@ -329,6 +329,7 @@ export default function AboutSection3() {
                 width="100%"
                 height="100%"
                 xlinkHref="/assets/img/googleads/image-@.jpg"
+                aria-label="Google Ads management company in Chennai"
               />
             </svg>
           </TimelineContent>
@@ -463,7 +464,7 @@ export default function AboutSection3() {
               {/* Image below CTA text */}
               <img
                 src="/assets/img/googleads/img-new.jpg"
-                alt="Google Ads results"
+                alt=" Google Ads management agency in Chennai"
                 style={{
                   width: "100%",
                   maxWidth: "500px",

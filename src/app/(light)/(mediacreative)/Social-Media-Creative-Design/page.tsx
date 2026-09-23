@@ -7,12 +7,15 @@ import Cta from "@/components/Social-Media-Creative-Design/Cta";
 import FaqSection from "@/components/Social-Media-Creative-Design/Faq";
 import Banner from "@/components/Social-Media-Creative-Design/banner";
 
+
+
 export default function Page() {
+  
   return (
     <main>
+      
       <Breadcrumbdata />
       <Banner />
-
       <Hero />
       <Services />
       <Brand />

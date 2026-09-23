@@ -9,6 +9,7 @@ interface BentoCardProps {
   name: string;
   description: string;
   imageUrl: string;
+  alt: string;
   colClass: string;
   cardHeightClass?: string;
   animationDelay?: number;
@@ -20,6 +21,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
   name,
   description,
   imageUrl,
+  alt,
   colClass,
   cardHeightClass = "",
   animationDelay = 0,
@@ -45,7 +47,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
         >
           <img
             src={imageUrl}
-            alt={name}
+            alt={alt}
             className={`bento-center-img img-fluid rounded-3 ${
               isCenterCard ? "bento-tall-img" : ""
             }`}
@@ -54,8 +56,15 @@ const BentoCard: React.FC<BentoCardProps> = ({
 
         {/* Text Area */}
         <div className="bento-card-text text-start mt-auto">
-         <h5 className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',fontSize:"20px" }}>
-{name}</h5>
+          <h5
+            className="mb-3 fw-bold"
+            style={{
+              fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
+              fontSize: "20px",
+            }}
+          >
+            {name}
+          </h5>
           <p className="bento-desc text-muted m-0">{description}</p>
         </div>
       </div>
@@ -71,7 +80,7 @@ export const BentoGrid: React.FC = () => {
     });
   }, []);
 
-   const bentoItems = [
+  const bentoItems = [
     {
       name: "Build Website Authority",
       description:
@@ -80,6 +89,7 @@ export const BentoGrid: React.FC = () => {
       colClass: "col-12",
       minHeight: "340px",
       delay: 100,
+      alt: "best search engine optimization companies",
     },
     {
       name: "Improve Search Rankings",
@@ -88,7 +98,7 @@ export const BentoGrid: React.FC = () => {
       imageUrl: "assets/img/offpage/Off-Page-3.jpg",
       colClass: "col-12",
       minHeight: "750px",
-
+      alt: "search engine optimization companies chennai",
       delay: 200,
     },
     {
@@ -98,6 +108,7 @@ export const BentoGrid: React.FC = () => {
       imageUrl: "assets/img/offpage/Off-Page-4.jpg",
       colClass: "col-12",
       minHeight: "340px",
+      alt: "search engine optimization chennai",
       delay: 300,
     },
     {
@@ -108,6 +119,7 @@ export const BentoGrid: React.FC = () => {
       colClass: "col-12",
       minHeight: "340px",
       delay: 400,
+      alt: "search engine optimization company in chennai",
     },
     {
       name: "Strengthen Brand Reputation",
@@ -117,14 +129,17 @@ export const BentoGrid: React.FC = () => {
       colClass: "col-12",
       minHeight: "340px",
       delay: 500,
+      alt: "best company for seo",
     },
   ];
 
   return (
-    <section className="px-about-6-area pt-40 pb-40 pb-lg-110 bento-grid-section" style={{
+    <section
+      className="px-about-6-area pt-40 pb-40 pb-lg-110 bento-grid-section"
+      style={{
         backgroundColor: "#ffffff",
-      
-      }}>
+      }}
+    >
       <div className="container container-1550">
         <div className="row align-items-center mb-20">
           <div className="col-xl-3">
@@ -151,12 +166,11 @@ export const BentoGrid: React.FC = () => {
 
           {/* Column 2 (Full Center Height with larger image) */}
           <div className="col-12 col-lg-4 d-flex flex-column">
-            <BentoCard  
-              {...bentoItems[1]} 
-              colClass="col-12" 
-              isCenterCard={true} 
-              customHeight="780px" 
-             
+            <BentoCard
+              {...bentoItems[1]}
+              colClass="col-12"
+              isCenterCard={true}
+              customHeight="780px"
             />
           </div>
 

@@ -87,7 +87,7 @@ Build a stronger online presence with professional social media marketing servic
    <div className="social-image-card">
         <img
           src="/assets/img/social/bottom-1.jpg"
-          alt="Social media marketing"
+          alt="Social media marketing agency in chennai"
           style={{
             width: '100%',
             height: '260px',
@@ -103,7 +103,7 @@ Build a stronger online presence with professional social media marketing servic
      <div className="social-image-card">
         <img
           src="/assets/img/social/bottom-2.jpg"
-          alt="Social media content creation"
+          alt="SMM agency in chennai"
           style={{
             width: '100%',
             height: '260px',
@@ -119,7 +119,7 @@ Build a stronger online presence with professional social media marketing servic
      <div className="social-image-card">
         <img
           src="/assets/img/social/bottom-3.jpg"
-          alt="Social media advertising"
+          alt="social media marketing company in chennai"
           style={{
             width: '100%',
             height: '260px',
@@ -315,7 +315,7 @@ Build a stronger online presence with professional social media marketing servic
       <div className="social-why-image">
         <img
           src="/assets/img/social/imge-1.jpg"
-          alt="Social Media Marketing"
+          alt="Social Media Marketing chennai"
         />
       </div>
 

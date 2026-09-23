@@ -327,7 +327,7 @@ export const faqData = {
   /* =========================================================
    ui-ux-desgin
   ========================================================= */
-  "UI-UX-Designers-in-Chennai": [
+  "UI-UX-Companies-in-Chennai": [
     {
       question: "How can I find the right UI UX design services near me?",
       answer:
@@ -402,5 +402,193 @@ export const faqDataCustomeEcommerce = [
     question: "What is dynamic website development?",
     answer:
       "Dynamic website development creates websites where content can be managed, updated and displayed dynamically based on business requirements.",
+  },
+] as const;
+
+export const faqDataSearcheagine = [
+  {
+    question: "What is SEO and why is it important for my website?",
+    answer:
+      "SEO, or Search Engine Optimization, is the process of improving a website's visibility in organic search results. Effective SEO helps search engines understand your website and can increase relevant organic traffic, brand visibility, enquiries, and business opportunities.",
+  },
+  {
+    question: "How do you optimize website content for SEO?",
+    answer:
+      "Our SEO agency in Chennai focuses on keyword research, search intent, high-quality content, optimized title tags and meta descriptions, structured headings, SEO-friendly URLs, internal linking, image optimization, technical SEO, and other relevant on-page SEO factors.",
+  },
+  {
+    question: "What role do keywords play in SEO?",
+    answer:
+      "Keywords help search engines understand the topics and search queries relevant to a webpage. Our SEO experts in Chennai identify relevant keywords based on search intent, competition, business relevance, and potential value, then incorporate them naturally throughout the website.",
+  },
+  {
+    question: "How long does SEO take to show results?",
+    answer:
+      "SEO is a long-term process, and the timeline varies depending on your website's current authority, competition, industry, technical condition, content quality, and target keywords. Consistent optimization and quality content can help build sustainable organic growth over time.",
+  },
+  {
+    question: "How can I monitor my SEO performance?",
+    answer:
+      "SEO performance can be monitored using tools such as Google Search Console, Google Analytics, and professional SEO platforms. Important metrics include organic traffic, keyword rankings, impressions, click-through rate, conversions, backlinks, and search visibility.",
+  },
+] as const;
+
+export const faqDataGoogleAds = [
+  {
+    question: "What is Google Ads?",
+    answer:
+      "Google Ads is an online advertising platform developed by Google that allows businesses to display ads on Google search results and its partner networks. Advertisers bid on keywords so their ads can appear when users search for relevant terms.",
+  },
+  {
+    question: "What is PPC advertising?",
+    answer:
+      "PPC, or Pay-Per-Click advertising, is a model where advertisers pay a fee each time their ad is clicked. It allows businesses to buy visits to their site rather than earning them organically, and is commonly used across Google Ads campaigns.",
+  },
+  {
+    question: "Why should I hire a Google Ads agency in Chennai?",
+    answer:
+      "A Google Ads agency in Chennai brings expertise in campaign strategy, keyword research, ad copywriting, bidding, and optimization. This helps businesses maximize their ad budget, reach the right audience, and achieve better returns on their advertising investment.",
+  },
+  {
+    question: "How much does Google Ads cost?",
+    answer:
+      "Google Ads costs vary depending on your industry, target keywords, competition, and campaign goals. You control your daily budget, and costs are based on clicks or impressions. The actual amount depends on bid competition and ad quality.",
+  },
+  {
+    question: "How quickly can Google Ads generate results?",
+    answer:
+      "Google Ads can generate results quickly once campaigns are live, often within days. However, optimal performance typically requires ongoing optimization, testing, and refinement over the first few weeks to improve conversion rates and reduce costs.",
+  },
+  {
+    question: "What types of Google Ads campaigns do you manage?",
+    answer:
+      "We manage Search, Display, Shopping, Video, Performance Max, and Remarketing campaigns. The right mix depends on your business goals, target audience, product type, and budget, and we tailor strategies accordingly.",
+  },
+  {
+    question: "Can Google Ads help generate leads?",
+    answer:
+      "Yes, Google Ads is highly effective for lead generation. With targeted keywords, compelling ad copy, and optimized landing pages, businesses can capture qualified leads and track conversions to measure campaign success.",
+  },
+  {
+    question: "What is the difference between Google Ads and SEO?",
+    answer:
+      "Google Ads delivers immediate paid visibility through bidding, while SEO builds organic visibility over time through website optimization. Ads provide quick results but stop when you stop paying, whereas SEO offers sustainable long-term growth.",
+  },
+  {
+    question: "How do you measure Google Ads performance?",
+    answer:
+      "Google Ads performance is measured using metrics such as impressions, clicks, click-through rate, cost per click, conversions, conversion rate, cost per acquisition, and return on ad spend, tracked through Google Ads and analytics tools.",
+  },
+  {
+    question: "Can you manage an existing Google Ads account?",
+    answer:
+      "Yes, we can audit, optimize, and manage existing Google Ads accounts. We review campaign structure, keywords, ad copy, bidding, and targeting to identify improvements and enhance overall performance.",
+  },
+] as const;
+
+export const faqDataSocialMedia = [
+  {
+    question: "Why is social media marketing important for businesses?",
+    answer:
+      "Social media marketing helps businesses build brand awareness, connect with their target audience, drive website traffic, generate leads, and foster customer engagement. It provides a direct channel to communicate with customers and build lasting relationships.",
+  },
+  {
+    question: "Which social media platforms should my business use?",
+    answer:
+      "The right platforms depend on your business goals, target audience, and industry. Platforms like Facebook, Instagram, LinkedIn, X (Twitter), and YouTube each serve different purposes. We help you choose the platforms that best align with your audience and objectives.",
+  },
+  {
+    question: "How often should I post on social media?",
+    answer:
+      "Posting frequency varies by platform and audience. Generally, consistency matters more than volume. A well-planned content calendar with regular posts, combined with engagement and monitoring, helps maintain visibility and audience interest.",
+  },
+  {
+    question: "How can I measure social media marketing performance?",
+    answer:
+      "Social media performance can be measured using metrics such as reach, impressions, engagement rate, follower growth, website clicks, conversions, and return on ad spend, tracked through platform analytics and third-party tools.",
+  },
+  {
+    question: "Should I invest in paid social media advertising?",
+    answer:
+      "Paid social media advertising can significantly amplify your reach and target specific audiences. It complements organic efforts and is effective for lead generation, brand awareness, and conversions when managed with a clear strategy and budget.",
+  },
+  {
+    question: "How can I increase audience engagement on social media?",
+    answer:
+      "Engagement can be increased by posting valuable and relevant content, using visuals and videos, asking questions, responding to comments, running contests, and maintaining a consistent brand voice that resonates with your audience.",
+  },
+  {
+    question: "Why should I choose a social media marketing agency in Chennai?",
+    answer:
+      "A social media marketing agency in Chennai brings local market knowledge, creative expertise, and proven strategies to help businesses grow their online presence. We handle strategy, content creation, advertising, and analytics to deliver measurable results.",
+  },
+  {
+    question: "How can social media marketing help generate leads?",
+    answer:
+      "Social media marketing generates leads through targeted advertising, engaging content, lead forms, call-to-action buttons, and direct messaging. It helps capture interested prospects and nurture them toward conversion.",
+  },
+] as const;
+
+
+export const faqDataOffPage = [
+  {
+    question: "What is Off-Page SEO?",
+    answer:
+      "Off-Page SEO refers to optimization activities performed outside your website to improve its search engine rankings. It primarily involves link building, social signals, brand mentions, and other external factors that build your site's authority and reputation online.",
+  },
+  {
+    question: "Why is Off-Page SEO important for my website?",
+    answer:
+      "Off-Page SEO is important because it builds your website's authority and credibility in the eyes of search engines. Quality backlinks and positive brand signals help improve rankings, increase visibility, drive referral traffic, and strengthen your overall online presence.",
+  },
+  {
+    question: "What Off-Page SEO services do you provide in Chennai?",
+    answer:
+      "We provide link building, guest posting, directory submissions, social bookmarking, business listings, local citations, influencer outreach, brand mention building, and reputation management tailored to businesses in Chennai.",
+  },
+  {
+    question: "How does link building help SEO?",
+    answer:
+      "Link building helps SEO by earning backlinks from reputable websites, which signals to search engines that your content is valuable and trustworthy. High-quality backlinks improve domain authority, boost rankings, and drive relevant referral traffic.",
+  },
+  {
+    question: "How long does Off-Page SEO take to show results?",
+    answer:
+      "Off-Page SEO is a gradual process, and results typically take a few months to become noticeable. The timeline depends on your industry competition, current authority, quality of backlinks, and consistency of your outreach and optimization efforts.",
+  },
+  {
+    question: "Can Off-Page SEO improve local rankings in Chennai?",
+    answer:
+      "Yes, Off-Page SEO can significantly improve local rankings in Chennai through local citations, Google Business Profile optimization, local directory listings, and geo-targeted link building that boosts visibility in local search results.",
+  },
+  {
+    question: "Do you provide customized SEO services?",
+    answer:
+      "Yes, we provide customized SEO services tailored to your business goals, industry, target audience, and budget. Each strategy is built after a thorough audit and research to deliver the best possible results for your website.",
+  },
+  {
+    question: "How do you build backlinks?",
+    answer:
+      "We build backlinks through guest posting, niche edits, resource link building, broken link building, influencer outreach, business directory submissions, and content promotion. We focus on high-quality, relevant, and authoritative websites.",
+  },
+  {
+    question: "Can Off-Page SEO increase website traffic?",
+    answer:
+      "Yes, Off-Page SEO can increase website traffic by improving search rankings, driving referral visits from backlinks, and boosting brand visibility across the web, which leads to more qualified visitors and potential customers.",
+  },
+  {
+    question: "How can I choose the best SEO company in Chennai?",
+    answer:
+      "To choose the best SEO company in Chennai, review their portfolio, client testimonials, case studies, service offerings, transparency in reporting, and proven results. A reliable agency should offer customized strategies and clear communication.",
+  },
+  {
+    question: "Do you offer SEO consultation in Chennai?",
+    answer:
+      "Yes, we offer SEO consultation in Chennai to help businesses understand their current SEO performance, identify opportunities, and develop actionable strategies for improving rankings, traffic, and conversions.",
+  },
+  {
+    question: "What makes your SEO service different?",
+    answer:
+      "Our SEO service stands out through customized strategies, transparent reporting, experienced professionals, ethical white-hat techniques, and a focus on measurable results. We tailor every campaign to your specific business goals and industry.",
   },
 ] as const;

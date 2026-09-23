@@ -19,12 +19,53 @@ const seoSlides: CoverflowSlide[] = [
   { src: "/assets/img/offpage/top-4.jpg", alt: "Brand Mention & Authority Building" },
   { src: "/assets/img/offpage/top-5.jpg", alt: "Social Signals & Digital PR" },
 ];
+
+import { generateSeo } from "@/lib/seo";
+import { offpageSeo } from "@/lib/seo-data";
+import { faqDataOffPage } from "@/lib/faq-data";
+import ServiceSchema from "@/components/seo-sechama/ServiceSchema";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
+import FAQSchema from "@/components/seo-sechama/FAQSchema";
+import type { Metadata } from "next";
+
+const SITE_URL = "https://yulanto-web.vercel.app";
+const SLUG = "media_marketing";
+const pageUrl = `${SITE_URL}/${SLUG}`;
+
+export const metadata: Metadata = generateSeo({
+  title: offpageSeo.title,
+  description: offpageSeo.description,
+  slug: SLUG,
+  image: offpageSeo.image,
+  imageAlt: offpageSeo.imageAlt,
+});
+
 export default function Page() {
+  const seo = offpageSeo;
+   const faq = faqDataOffPage;
   return (
     <main>
+       {/* Breadcrumb Schema */}
+            <BreadcrumbSchema
+              items={[
+                { name: "Home", url: `${SITE_URL}/` },
+                { name: seo.serviceName, url: pageUrl },
+              ]}
+            />
+      
+            {/* FAQ Schema */}
+            {faq && faq.length > 0 && <FAQSchema items={[...faq]} />}
+      
+            {/* Service Schema */}
+            <ServiceSchema
+              name={seo.serviceName}
+              description={seo.serviceDescription}
+              url={pageUrl}
+              image={seo.image}
+            />
       <Breadcrumbdata />
       <SeoCoverflowSection
-        subtitle="Off-Page SEO in Chennai"
+        subtitle="seo agencies in chennai"
         titlePrefix="Build Authority, Rankings & "
         titleSuffix="Online Visibility"
         topDescription={seoTopText}

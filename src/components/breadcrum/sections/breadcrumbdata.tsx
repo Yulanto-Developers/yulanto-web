@@ -193,7 +193,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/web-design/UI-UX-Designers-in-Chennai",
+    path: "/web-design/UI-UX-Companies-in-Chennai",
     title: " UI/UX Design",
     currentPage: "UI/UX Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
@@ -288,10 +288,10 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/privacy",
-    title: "Privacy",
+    path: "/privacy-policy",
+    title: "Privacy Policy",
  
-    currentPage: "Privacy",
+    currentPage: "Privacy Policy",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
     {
@@ -302,17 +302,17 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
     {
-    path: "/termsconditions",
-    title: "Terms Conditions",
+    path: "/terms-conditions",
+    title: "Terms & Conditions",
  
     currentPage: "Terms Conditions",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/license",
-    title: "License",
+    path: "/license-copyright",
+    title: "License & Copyright",
  
-    currentPage: "License",
+    currentPage: "License & Copyright",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
  

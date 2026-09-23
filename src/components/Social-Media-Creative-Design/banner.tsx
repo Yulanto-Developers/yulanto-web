@@ -18,19 +18,19 @@ interface CreativeCard {
 const creativeCards: CreativeCard[] = [
   {
     image: "assets/img/SocialMediaCreativeDesigns/Social-Media-Creatives-1.jpg",
-    alt: "Healthcare Creative",
+    alt: "social media marketing in chennai",
   },
   {
     image: "assets/img/SocialMediaCreativeDesigns/Social-Media-Creatives-2.jpg",
-    alt: "Real Estate Creative",
+    alt: "social media marketing agency",
   },
   {
     image: "assets/img/SocialMediaCreativeDesigns/Social-Media-Creatives-3.jpg",
-    alt: "Festival Creative",
+    alt: "social media management companies",
   },
   {
     image: "assets/img/SocialMediaCreativeDesigns/Social-Media-Creatives-4.jpg",
-    alt: "Fitness Creative",
+    alt: "social media marketing companies",
   },
 ];
 

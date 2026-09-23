@@ -114,7 +114,7 @@ export default function OffPageSeoBanner() {
             >
               <img
                 src="assets/img/offpage/Grow-Your-Online.jpg"
-                alt="Professional Off-Page SEO Services in Chennai"
+                alt="Off-Page SEO Services in Chennai"
                 style={{
                   width: "100%",
                   height: "100%",

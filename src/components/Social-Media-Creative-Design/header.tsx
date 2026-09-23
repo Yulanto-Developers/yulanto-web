@@ -21,11 +21,11 @@ interface SocialMediaHeroProps {
 }
 
 const defaultImages: ImageCard[] = [
-  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-1.jpg", alt: "Top Left Post" },
-  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-2.jpg", alt: "Bottom Left Post" },
-  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-3.jpg", alt: "Phone Mockup Center" },
-  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-4.jpg", alt: "Top Right Post" },
-  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-5.jpg", alt: "Bottom Right Post" },
+  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-1.jpg", alt: "social media marketing companies near me" },
+  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-2.jpg", alt: "social media marketing company chennai" },
+  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-3.jpg", alt: "social media marketing chennai" },
+  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-4.jpg", alt: "social media managers near me" },
+  { image: "assets/img/SocialMediaCreativeDesigns/Engaging-Social-Media-5.jpg", alt: "social media marketing companies near met" },
 ];
 
 export function PulseFitHero({
