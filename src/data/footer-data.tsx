@@ -24,9 +24,9 @@ export const socialLinks = [
 ];
 
 export const quickLinks = [
-  { label: "Terms & Conditions", href: "/termsconditions" },
-  { label: "License & Copyright", href: "/license" },
-  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms & Conditions", href: "/terms-conditions" },
+  { label: "License & Copyright", href: "/license-copyright" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Disclaimer", href: "/disclaimer" },
   
 

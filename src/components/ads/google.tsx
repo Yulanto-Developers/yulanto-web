@@ -54,6 +54,15 @@ export function HeroSection({
                 <span className="text-blue-about">Google Ads Management </span>
                 Services in Chennai
               </h4>
+
+                <h1
+                className="ft-23 mt-0 mb-3 text-tenor"
+                data-aos="text-reveal"
+                data-aos-delay="100"
+                style={{ lineHeight: "1.2" }}
+              >
+                Google Ads agency in Chennai 
+              </h1>
               <p className="text-figtree text-black mt-2 font-paragraph-cls" data-aos="fade-up" data-aos-delay="500">
                 Google is one of the most powerful platforms for businesses looking to reach customers who are actively searching for their products and services. With properly planned Google Ads campaigns, your business can appear prominently when potential customers search for relevant keywords.
               </p>

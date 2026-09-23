@@ -125,7 +125,7 @@ export const websiteDesignSeo = {
   },
 
   // ui-ux-design
-  "UI-UX-Designers-in-Chennai": {
+  "UI-UX-Companies-in-Chennai": {
     title: "UI/UX Designers in Chennai | Creative UI/UX Design Services",
 
     description:
@@ -152,5 +152,49 @@ export const customEcommerceSeo = {
   serviceName: "Dynamic Website Development",
   serviceDescription:
     "Professional dynamic website development services for businesses and organizations.",
+} as const;
+
+export const DigitalMarketingSeo = {
+  title: "SEO Company in Chennai in Chennai | Chennai seo services",
+  description:
+    "SEO Company in Chennai for better search visibility, local SEO, on-page and off-page optimization, technical SEO and qualified organic traffic growth.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+  imageAlt: "SEO Company in Chennai",
+  serviceName: "SEO Services",
+  serviceDescription:
+    "SEO Company in Chennai for better search visibility, local SEO, on-page and off-page optimization, technical SEO and qualified organic traffic growth.",
+} as const;
+
+export const googleadsSeo = {
+  title: "Google Ads Agency in Chennai  | PPC | Google Ads Services",
+  description:
+    "Google Ads Agency in Chennai for PPC campaigns, remarketing, conversion tracking & ongoing optimization that improve paid search results.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+  imageAlt: "Google Ads Agency in Chennai",
+  serviceName: "Google Ads Services",
+  serviceDescription:
+    "Google Ads Agency in Chennai for PPC campaigns, remarketing, conversion tracking & ongoing optimization that improve paid search results.",
+} as const;
+
+export const SocialmediaSeo = {
+  title: "Best Social Media Marketing Agency in Chennai | SMM Services ",
+  description:
+    "Grow your brand with Chennai's top Social Media Marketing Agency. Meta ads, Instagram & Facebook campaigns that convert. Get a free strategy call.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+  imageAlt: "Social Media Marketing Agency",
+  serviceName: "social media marketing",
+  serviceDescription:
+    "Grow your brand with Chennai's top Social Media Marketing Agency. Meta ads, Instagram & Facebook campaigns that convert. Get a free strategy call.",
+} as const;
+
+export const offpageSeo = {
+  title: "Seo Agencies in Chennai | Off Page SEO Chennai",
+  description:
+    "Seo Agencies in Chennai using SEO optimization & off-page authority. off-page SEO, link building & local citations that rank your business on Google.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+  imageAlt: "seo agencies in chennai",
+  serviceName: "Off Page Service",
+  serviceDescription:
+    "seo agencies in chennai using SEO optimization & off-page authority. off-page SEO, link building & local citations that rank your business on Google.",
 } as const;
 

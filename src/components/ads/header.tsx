@@ -19,31 +19,31 @@ const DEFAULT_ONLINE_IMAGES: ImageCard[] = [
   {
     id: "1",
     src: "assets/img/googleads/top-1.jpg",
-    alt: "Abstract Fluid Art",
+    alt: "Google Ads management agency in Chennai",
     rotation: -6,
   },
   {
     id: "2",
     src: "assets/img/googleads/top-2.jpg",
-    alt: "Oil Painting",
+    alt: "Google Ads Agency",
     rotation: 4,
   },
   {
     id: "3",
     src: "assets/img/googleads/top-3.jpg",
-    alt: "Colorful Splash",
+    alt: "Google Ads Agency in Chennai",
     rotation: -3,
   },
   {
     id: "4",
     src: "assets/img/googleads/top-4.jpg",
-    alt: "Neon Gradient",
+    alt: "google ppc management agency",
     rotation: 5,
   },
   {
     id: "5",
     src: "assets/img/googleads/top-5.jpg",
-    alt: "Neon Gradient",
+    alt: "google paid search campaign",
     rotation: 6,
   },
 ];
