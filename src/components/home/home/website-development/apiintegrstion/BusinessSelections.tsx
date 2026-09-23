@@ -6,7 +6,7 @@ import {
   RefreshCw,
   TrendingUp,
 } from "lucide-react";
-
+import { useQuoteModal } from "../../myComponents/Content/QuoteContext";
 import image1 from "@/assets/images/website-development/API-Integration/Why-Choose-Our-API-1.jpg";
 import image2 from "@/assets/images/website-development/API-Integration/Why-Choose-Our-API-2.jpg";
 import image3 from "@/assets/images/website-development/API-Integration/Why-Choose-Our-API-3.jpg";
@@ -60,6 +60,7 @@ const styles = {
 
   cardText: {
     color: "#4b5563",
+    fontSize:"15px !important",
     lineHeight: "1.6",
   },
 
@@ -86,6 +87,7 @@ const stylestwo = {
 };
 
 const BusinessSelections = () => {
+   const { openModal } = useQuoteModal();
   return (
     <>
       <style>{`
@@ -173,8 +175,8 @@ const BusinessSelections = () => {
 
                         {/* Description */}
                         <p
-                          className="card-text small"
-                          style={styles.cardText}
+                          className="card-text small" 
+                          style={styles.cardText }
                         >
                           {item.description}
                         </p>
@@ -190,54 +192,91 @@ const BusinessSelections = () => {
         </div>
       </section>
 
-      <div className="yul-st">
-        <section
-          style={stylestwo.aboutBlueSection}
-          className="about-blue-section"
-        >
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-12 col-md-12">
+     <div className="yul-st">
+  <section
+    style={stylestwo.aboutBlueSection}
+    className="about-blue-section"
+  >
+    <div className="container">
+     
+      <div className="row align-items-center">
+        
+        {/* Left Column (6 Columns) - Added Responsive Image */}
+        <div className="col-12 col-md-6 mb-4 mb-md-0">
+          <img
+            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1000&auto=format&fit=crop"
+            alt="API Integration and Business Automation"
+            className="img-fluid rounded-4 shadow-lg"
+            style={{
+              width: '100%',
+              height: '470px',
+              objectFit: 'cover',
+            }}
+          />
+        </div>
 
-                <h4
-                  className="px-about-title text-tenor"
-                  data-aos="text-reveal"
-                  data-aos-delay="200"
-                >
-                  <span className="text-white">
-                    Automate Your Business with API Integration
-                  </span>
-                </h4>
+        {/* Right Column (6 Columns) */}
+        <div className="col-12 col-md-6">
+           <h4
+            className="px-about-title text-tenor"
+            data-aos="text-reveal"
+            data-aos-delay="200" 
+          >
+            <span className="text-white">
+              Automate Your Business with API Integration
+            </span>
+          </h4>
+          <p
+            className="text-figtree text-white mb-3"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            API integration can bring your different business systems
+            together and create a connected digital ecosystem. Whether
+            you need Payment Gateway Integration, SMS Gateway
+            Integration, WhatsApp Gateway Integration, Zoho CRM
+            Integration, Chat API Integration, or Any Third Party API
+            Integration, our team can help you implement the right
+            solution.
+          </p>
 
-                <p
-                  className="text-figtree text-white"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  API integration can bring your different business systems
-                  together and create a connected digital ecosystem. Whether
-                  you need Payment Gateway Integration, SMS Gateway
-                  Integration, WhatsApp Gateway Integration, Zoho CRM
-                  Integration, Chat API Integration, or Any Third Party API
-                  Integration, our team can help you implement the right
-                  solution.
-                </p>
+          <p
+            className="text-figtree text-white"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            From planning and API connectivity to testing and deployment,
+            we provide end-to-end API integration services for websites,
+            web applications, eCommerce platforms, and custom software.
+          </p>
+           <button
+             onClick={() => openModal()}
+              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+              style={{
+                backgroundColor: '#53ae7d',
+                color: '#ffffff',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                border: '1px solid #53ae7d',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#53ae7d';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#53ae7d';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Let's Talk our Team</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+            </button>
+        </div>
 
-                <p
-                  className="text-figtree text-white"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  From planning and API connectivity to testing and deployment,
-                  we provide end-to-end API integration services for websites,
-                  web applications, eCommerce platforms, and custom software.
-                </p>
-
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
+    </div>
+  </section>
+</div>
     </>
   );
 };
