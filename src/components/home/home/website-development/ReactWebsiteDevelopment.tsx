@@ -5,7 +5,8 @@ import { useAOS } from '@/components/hooks/useAOS';
 import '@/assets/css/textAnimations.css';
 import './components/dynamicwebdesign.css';
 import ReactPageIntro from './reactpagecomponents/ReactPageIntro'
-import  ReactServicesHero  from '../myComponents/common/Floatstyle'
+import  ReactServicesHero  from './reactpagecomponents/ReactServicesHero'
+
 import CtaOne from './reactpagecomponents/CtaOne';
 import ProcessOne from './reactpagecomponents/ProcessOne';
 import ThreeColumnFeature from './reactpagecomponents/ThreeColumnFeature';

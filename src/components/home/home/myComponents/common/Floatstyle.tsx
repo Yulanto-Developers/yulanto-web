@@ -1,150 +1,269 @@
 "use client";
-
-import React, { useEffect } from "react";
-import Image from "next/image";
-import AOS from "aos";
-import "aos/dist/aos.css";
+ 
+import * as React from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import {
-  Code2,
-  Atom,
-  MonitorSmartphone,
+  Building2,
+  HardHat,
+  Sofa,
+  Ruler,
+  Factory,
+  HeartPulse,
+  GraduationCap,
+  ShoppingCart,
+  Hotel,
   BriefcaseBusiness,
-  Layout,
-  AppWindow,
-  Palette,
-  RefreshCw,
-  PlugZap,
-  CreditCard,
-  Gauge,
-  Headset,
+  Rocket,
+  Store,
+  Building,
 } from "lucide-react";
-
-interface ServiceItem {
-    title: string;
-    icon: React.ElementType;
+ 
+export interface IconProps {
+  id: number;
+  name: string;
+  icon: React.ElementType;
+  position: React.CSSProperties;
 }
-
-const featuresList: ServiceItem[] = [
-    { title: "Custom React Website Development", icon: Code2 },
-    { title: "React JS UI Development", icon: Atom },
-    { title: "Responsive React Web Design", icon: MonitorSmartphone },
-    { title: "React Business Website Development", icon: BriefcaseBusiness },
-    { title: "React Single Page Applications (SPA)", icon: Layout },
-    { title: "React Web Application Development", icon: AppWindow },
-    { title: "React UI/UX Implementation", icon: Palette },
-    { title: "React Website Redesign", icon: RefreshCw },
-    { title: "API Integration with React", icon: PlugZap },
-    { title: "Third-Party API & Payment Gateway Integration", icon: CreditCard },
-    { title: "React Performance Optimization", icon: Gauge },
-    { title: "Website Maintenance & Support", icon: Headset },
-];
-
-export default function ReactServicesHero() {
-    useEffect(() => {
-        AOS.init({
-            once: true,
-            duration: 800,
-        });
-    }, []);
-
-    return (
-        <section
-            className="px-about-6-area pt-40 pb-40 pb-lg-110"
-            style={{ 
-                backgroundColor: "#f5f5f5", 
-            
-            }}
+ 
+export const FloatingIcon = ({
+  mouseX,
+  mouseY,
+  iconData,
+  index,
+}: {
+  mouseX: React.MutableRefObject<number>;
+  mouseY: React.MutableRefObject<number>;
+  iconData: IconProps;
+  index: number;
+}) => {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = React.useState(false);
+ 
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+ 
+  const springX = useSpring(x, { stiffness: 250, damping: 22 });
+  const springY = useSpring(y, { stiffness: 250, damping: 22 });
+ 
+  React.useEffect(() => {
+    const handleMouseMove = () => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        const distance = Math.sqrt(
+          Math.pow(mouseX.current - (rect.left + rect.width / 2), 2) +
+            Math.pow(mouseY.current - (rect.top + rect.height / 2), 2)
+        );
+ 
+        if (distance < 160) {
+          const angle = Math.atan2(
+            mouseY.current - (rect.top + rect.height / 2),
+            mouseX.current - (rect.left + rect.width / 2)
+          );
+ 
+          const force = (1 - distance / 160) * 55;
+          x.set(-Math.cos(angle) * force);
+          y.set(-Math.sin(angle) * force);
+        } else {
+          x.set(0);
+          y.set(0);
+        }
+      }
+    };
+ 
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [x, y, mouseX, mouseY]);
+ 
+  const IconComponent = iconData.icon;
+ 
+  return (
+    <motion.div
+      ref={ref}
+      style={{
+        position: "absolute",
+        zIndex: 10,
+        cursor: "pointer",
+        x: springX,
+        y: springY,
+        ...iconData.position,
+      }}
+      initial={{ opacity: 0, scale: 0.6 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        delay: index * 0.05,
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <motion.div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "10px",
+          padding: "10px 16px",
+          borderRadius: "12px",
+          boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.3)",
+          backgroundColor: isHovered ? "#69b481" : "#053456",
+          border: isHovered
+            ? "1px solid #69b481"
+            : "1px solid rgba(105, 180, 129, 0.4)",
+          transition: "all 0.3s ease",
+        }}
+        animate={{ y: [0, -8, 0] }}
+        transition={{
+          duration: 3 + (index % 3),
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+      >
+        <IconComponent
+          style={{
+            width: "18px",
+            height: "18px",
+            color: isHovered ? "#053456" : "#69b481",
+            flexShrink: 0,
+            transition: "color 0.3s ease",
+          }}
+        />
+        <span
+          style={{
+            fontSize: "13px",
+            fontWeight: 600,
+            color: isHovered ? "#053456" : "#ffffff",
+            whiteSpace: "nowrap",
+            transition: "color 0.3s ease",
+          }}
         >
-            <div className="container container-1550">
-                {/* Header Title Section */}
-                <div className="row align-items-center mb-30 gx-4" data-aos="fade-up">
-                    <div className="col-xl-3">
-                        <span className="tp-section-subtitle text-black blink-ball">
-                            Our React Services
-                        </span>
-                    </div>
-
-                    <div className="col-xl-9">
-                        <div className="px-project-title-box">
-                            <h4 className="px-about-title mb-2">
-                                <span className="text-blue-about">Our React Website </span>Development Services
-                            </h4>
-                            <p className="text-figtree text-black mt-2">
-                                React JS is a powerful JavaScript library for developing dynamic and interactive web experiences. Our development approach focuses on creating clean, reusable, and scalable components that make your website easier to maintain and expand.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div style={{ width: "100%", boxSizing: "border-box" }}>
-                    <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                        <div>
-                            {/* Two-Column List on Left Side & Image on Right Side */}
-                            <div className="row align-items-center gx-4" style={{ margin: 0 }}>
-                                {/* Left Column: Two Columns List (Grid layout split over 8 grid columns) */}
-                                <div className="col-lg-8 mb-30" style={{ padding: 0 }}>
-                                    <div 
-                                        style={{ 
-                                            display: "grid", 
-                                            gridTemplateColumns: "repeat(2, minmax(0, 1fr))", 
-                                            gap: "16px",
-                                            paddingRight: "15px"
-                                        }}
-                                    >
-                                        {featuresList.map((item, index) => {
-                                            const IconComponent = item.icon;
-                                            return (
-                                                <div
-                                                    key={index}
-                                                    style={{
-                                                        display: "flex",
-                                                        alignItems: "center",
-                                                        gap: "14px",
-                                                        padding: "14px 18px",
-                                                        borderRadius: "12px",
-                                                        backgroundColor: "#053456",
-                                                        border: "1px solid rgba(105, 180, 129, 0.4)",
-                                                        boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.3)",
-                                                        cursor: "pointer",
-                                                    }}
-                                                    data-aos="fade-up"
-                                                    data-aos-delay={index * 30}
-                                                >
-                                                    <IconComponent 
-                                                        style={{ 
-                                                            width: "20px", 
-                                                            height: "20px", 
-                                                            flexShrink: 0, 
-                                                            color: "#69b481" 
-                                                        }} 
-                                                    />
-                                                    <span className="text-figtree" style={{ fontSize: "14px", fontWeight: 600, color: "#ffffff" }}>
-                                                        {item.title}
-                                                    </span>
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-
-                                {/* Right Column: Image Column (4 Grid columns) */}
-                                <div className="col-lg-4 mb-30" data-aos="fade-left" style={{ padding: 0 }}>
-                                    <div style={{ width: "100%", overflow: "hidden", borderRadius: "20px", boxShadow: "0 15px 40px rgba(0, 0, 0, 0.25)", border: "1px solid rgba(0, 0, 0, 0.05)", position: "relative", minHeight: "450px" }}>
-                                        <Image
-                                            src="/assets/images/website-development/custom-website-development/Your-Business-1.jpg"
-                                            alt="React Website Development Services"
-                                            fill
-                                            sizes="(max-width: 768px) 100vw, 40vw"
-                                            style={{ objectFit: "cover", display: "block" }}
-                                            quality={90}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+          {iconData.name}
+        </span>
+      </motion.div>
+    </motion.div>
+  );
+};
+ 
+export const defaultIndustries: IconProps[] = [
+  { id: 1, name: "Real Estate", icon: Building2, position: { top: "10%", left: "5%" } },
+  { id: 2, name: "Construction", icon: HardHat, position: { top: "8%", right: "8%" } },
+  { id: 3, name: "Interior Design", icon: Sofa, position: { top: "22%", left: "18%" } },
+  { id: 4, name: "Architecture", icon: Ruler, position: { top: "20%", right: "18%" } },
+  { id: 5, name: "Industrial", icon: Factory, position: { top: "42%", left: "4%" } },
+  { id: 6, name: "Healthcare", icon: HeartPulse, position: { top: "40%", right: "5%" } },
+  { id: 7, name: "Education", icon: GraduationCap, position: { bottom: "35%", left: "12%" } },
+  { id: 8, name: "E-commerce", icon: ShoppingCart, position: { bottom: "36%", right: "12%" } },
+  { id: 9, name: "Hospitality", icon: Hotel, position: { bottom: "18%", left: "5%" } },
+  { id: 10, name: "Professional Services", icon: BriefcaseBusiness, position: { bottom: "18%", right: "6%" } },
+  { id: 11, name: "Startups", icon: Rocket, position: { bottom: "8%", left: "22%" } },
+  { id: 12, name: "SMEs", icon: Store, position: { bottom: "8%", right: "22%" } },
+  { id: 13, name: "Corporate Businesses", icon: Building, position: { top: "6%", left: "42%" } },
+];
+ 
+export interface IndustryHeroProps extends React.HTMLAttributes<HTMLDivElement> {
+  title?: string;
+  subtitle?: string;
+  industries?: IconProps[];
 }
+ 
+export const Floatstyle = React.forwardRef<HTMLDivElement, IndustryHeroProps>(
+  (
+    {
+      style,
+      title = "Digital Solutions Built for Scale",
+      subtitle = "Our digital solutions are suitable for various dynamic sectors. Transform your operations with tailor-made web applications and platforms.",
+      industries = defaultIndustries,
+      ...props
+    },
+    ref
+  ) => {
+    const mouseX = React.useRef(0);
+    const mouseY = React.useRef(0);
+ 
+    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+      mouseX.current = event.clientX;
+      mouseY.current = event.clientY;
+    };
+ 
+    return (
+      <section
+        ref={ref}
+        onMouseMove={handleMouseMove}
+        style={{
+          position: "relative",
+          width: "100%",
+          minHeight: "450px",
+          padding: "80px 16px 20x 16px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden",
+        
+          color: "#ffffff",
+          boxSizing: "border-box",
+          ...style,
+        }}
+        {...props}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "500px",
+            height: "500px",
+            backgroundColor: "rgba(105, 180, 129, 0.15)",
+            borderRadius: "50%",
+            filter: "blur(100px)",
+            pointerEvents: "none",
+          }}
+        />
+ 
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            width: "100%",
+            height: "100%",
+            maxWidth: "1280px",
+            margin: "0 auto",
+            pointerEvents: "auto",
+          }}
+        >
+          {industries.map((iconData, index) => (
+            <FloatingIcon
+              key={iconData.id}
+              mouseX={mouseX}
+              mouseY={mouseY}
+              iconData={iconData}
+              index={index}
+            />
+          ))}
+        </div>
+ 
+        <div
+          style={{
+            position: "relative",
+            zIndex: 20,
+            textAlign: "center",
+            maxWidth: "672px",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "20px",
+          }}
+        >
+          <h1 className="px-about-title mb-20">{title}</h1>
+          <p className="text-figtree text-black">{subtitle}</p>
+        </div>
+      </section>
+    );
+  }
+);
+
+Floatstyle.displayName = "Floatstyle";

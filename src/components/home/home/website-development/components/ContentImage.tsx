@@ -151,7 +151,7 @@ const ContentImage: React.FC<ContentImageProps> = ({
                 )}
               </div>
                <button
-             onClick={openModal}
+             onClick={() => openModal()}
               className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
               style={{
                 backgroundColor: '#053456',
