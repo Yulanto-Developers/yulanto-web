@@ -78,6 +78,7 @@ const defaultFeatures: FeatureItem[] = [
         subtitle:
             "Your customers access your site from smartphones, tablets, and desktops. We ensure smooth adaptation and flawless user experiences across all screen sizes.",
         colClass: "col-lg-8 col-md-12",
+        isFeatured: true,
         imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-5.jpg",
         imageAlt: "Responsive development",
     },
@@ -110,7 +111,7 @@ const Cardsixdesg1: React.FC<CardSixDesg1Props> = ({
     }, []);
 
     return (
-        <section className="cardsixdesg1-mosaic-section py-3">
+        <section className="px-about-6-area pt-40 pb-40 pb-lg-110" style={{backgroundColor:'#f5f5f5'}}>
             <div className="container">
                 <div className="row">
                     <div className="col-xl-12 text-center">
@@ -157,7 +158,7 @@ const Cardsixdesg1: React.FC<CardSixDesg1Props> = ({
                                         alt={item.imageAlt || item.title}
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                        priority={index < 2}
+                                        priority={index < 3}
                                         quality={90}
                                     />
                                 </div>

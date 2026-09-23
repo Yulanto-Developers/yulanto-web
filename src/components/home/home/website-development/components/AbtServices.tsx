@@ -425,29 +425,7 @@ const AbtServices = () => {
             {/* =========================================
                             SERVICES - WHITE SECTION
                         ========================================= */}
-            <div className="services-section">
-                <div className="container services-content">
-                    <div className="row align-items-center justify-content-center text-center">
-                        <div className="col-lg-12 mb-4 mb-lg-0">
-                            <h4
-                                className="px-about-title text-tenor"
-                                data-aos="text-reveal"
-                                data-aos-delay="100"
-                            >
-                                Easy to  <span className="text-blue-about">Manage</span>
-                            </h4>
-
-                            <p
-                                className="mb-0 "
-                                data-aos="text-reveal-lines"
-                                data-aos-delay="200"
-                            >
-                                A professionally developed dynamic website makes it simple to manage your online content. Administrators can update pages, services, products, images, blogs, testimonials, and other information through an easy-to-use interface.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+         
         </section>
     );
 };

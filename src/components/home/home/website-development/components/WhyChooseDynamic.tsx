@@ -80,12 +80,16 @@ const WhyChooseDynamic = () => {
 
                 .section-block h2 {
                     font-weight: 700;
+                    
                     margin-bottom: 1.25rem;
                     padding-bottom: 0.5rem;
-                    font-size: 28px;
+                  
+                    font-family:Tenor Sans", "Tenor Sans Fallback";
                     color: #000000;
                 }
-
+                .text-tenor {
+                  font-size: 26px !important;
+                   }
                 .section-block p {
                     color: #333;
                     margin-bottom: 1rem;
@@ -127,8 +131,8 @@ const WhyChooseDynamic = () => {
 
                 .feature-img-wrapper img {
                     width: 100%;
-                    height: 400px;
-                    object-fit: cover;
+                    height: 300px;
+                   
                     border-radius: 12px;
                     display: block;
                 }
@@ -140,7 +144,7 @@ const WhyChooseDynamic = () => {
                     }
 
                     .section-block h2 {
-                        font-size: 22px;
+                        font-size: 22px !important;
                         margin-bottom: 0.75rem;
                     }
 
@@ -166,14 +170,33 @@ const WhyChooseDynamic = () => {
             `}</style>
 
             <div className="container px-3 px-sm-4">
+
+                <div className="row align-items-center" data-aos="fade-up">
+                    <div className="col-xl-3">
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            Easy to Manage
+                        </span>
+                    </div>
+
+                    <div className="col-xl-9">
+                        <div className="px-project-title-box">
+                            <h4 className="px-about-title mb-20">
+                                <span className="text-blue-about">Why Choose Dynamic
+                                </span>Website Development?
+                            </h4>
+                            <p className="text-figtree text-black mt-2">
+                                A professionally developed dynamic website makes it simple to manage your online content. Administrators can update pages, services, products, images, blogs, testimonials, and other information through an easy-to-use interface.                            </p>
+                        </div>
+                    </div>
+                </div>
                 {/* Title Header */}
-                <h4
+                {/* <h4
                     className="px-about-title text-tenor mb-5 text-center"
                     data-aos="fade-down"
                     data-aos-delay="100"
                 >
                     Why Choose Dynamic <span className="text-blue-about"> Website Development? </span>
-                </h4>
+                </h4> */}
 
                 {/* Alternating Rows */}
                 {sectionsData.map((item, index) => {
@@ -189,7 +212,7 @@ const WhyChooseDynamic = () => {
                             {/* Text Content Column */}
                             <div className="col-lg-6 col-12">
                                 <div className="section-block">
-                                    <h2>{item.title}</h2>
+                                    <h2 className='text-tenor'>{item.title}</h2>
                                     {item.paragraphs.map((para, pIndex) => (
                                         <p key={pIndex}>{para}</p>
                                     ))}

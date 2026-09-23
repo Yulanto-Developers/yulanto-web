@@ -1,8 +1,27 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+import { useQuoteModal } from "../../myComponents/Content/QuoteContext";
 
-const CtaOne = () => {
+interface CtaOneProps {
+    title?: string;
+    description?: string;
+    buttonText?: string;
+    actionText?: string;
+    imageUrl?: string;
+    imageAlt?: string;
+}
+
+const CtaOne: React.FC<CtaOneProps> = ({
+    title = "Looking for Website Design Chennai?",
+    description = "Whether you are launching a new website, redesigning an existing website, or developing a custom web application, our team can help you build a professional React-powered digital experience.",
+    buttonText = "Get in touch with us today",
+    actionText = "to discuss your React website design and development requirements in Chennai.",
+    imageUrl = "/assets/images/cta/cta-right-image.png",
+    imageAlt = "Website Design Chennai",
+}) => {
+      const { openModal } = useQuoteModal();
     return (
         <section className="cta-one-section">
             <div className="container mt-30 mb-40">
@@ -10,6 +29,7 @@ const CtaOne = () => {
                     <div className="cta-one-decoration"></div>
                     <div className="cta-one-decoration-two"></div>
 
+                    {/* Left/Main Content Area */}
                     <div className="cta-one-content">
                         {/* Label */}
                         <div className="cta-one-label">
@@ -18,29 +38,56 @@ const CtaOne = () => {
                             </span>
 
                             <span className="text-tenor">
-                                Looking for Website Design Chennai?
+                                {title}
                             </span>
                         </div>
 
                         {/* Description */}
                         <p className="cta-one-description">
-                            Whether you are launching a new website,
-                            redesigning an existing website, or developing a
-                            custom web application, our team can help you build
-                            a professional React-powered digital experience.
+                            {description}
                         </p>
 
                         {/* CTA */}
                         <div className="cta-one-action">
-                            <button className="cta-one-button text-tenor">
-                                Get in touch with us today
-                            </button>
+                          <button
+             onClick={openModal}
+              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+              style={{
+                backgroundColor: '#53ae7d',
+                color: '#ffffff',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                border: '1px solid #53ae7d',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#53ae7d';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#53ae7d';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Get in touch with us today</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+            </button>
 
                             <p className="cta-one-action-text">
-                                to discuss your React website design and
-                                development requirements in Chennai.
+                                {actionText}
                             </p>
                         </div>
+                    </div>
+
+                    {/* Right Side PNG Image Area */}
+                    <div className="cta-one-image-wrapper">
+                        <Image
+                            src={imageUrl}
+                            alt={imageAlt}
+                            fill
+                            sizes="(max-width: 991px) 100vw, 350px"
+                            style={{ objectFit: "contain" }}
+                            quality={90}
+                        />
                     </div>
                 </div>
             </div>
@@ -56,7 +103,9 @@ const CtaOne = () => {
                     min-height: 330px;
                     display: flex;
                     align-items: center;
-                    padding: 65px 70px;
+                    justify-content: space-between;
+                    gap: 30px;
+                    padding: 55px 60px;
                     border-radius: 24px;
                     background: #002d46;
                     isolation: isolate;
@@ -118,8 +167,17 @@ const CtaOne = () => {
                 .cta-one-content {
                     position: relative;
                     z-index: 2;
+                    flex: 1 1 60%;
+                    max-width: 750px;
+                }
+
+                /* Right Side PNG Image Container */
+                .cta-one-image-wrapper {
+                    position: relative;
+                    z-index: 2;
+                    flex: 0 0 320px;
+                    height: 260px;
                     width: 100%;
-                    max-width: 950px;
                 }
 
                 /* Label */
@@ -127,7 +185,7 @@ const CtaOne = () => {
                     display: flex;
                     align-items: center;
                     gap: 14px;
-                    margin-bottom: 25px;
+                    margin-bottom: 20px;
                     color: #ffffff;
                     font-size: 16px;
                     font-weight: 500;
@@ -149,11 +207,11 @@ const CtaOne = () => {
 
                 /* Main text */
                 .cta-one-description {
-                    max-width: 900px;
-                    margin: 0 0 32px;
+                    max-width: 720px;
+                    margin: 0 0 28px;
                     color: #ffffff;
-                    font-size: 18px;
-                    line-height: 1.75;
+                    font-size: 17px;
+                    line-height: 1.7;
                 }
 
                 /* CTA area */
@@ -161,15 +219,15 @@ const CtaOne = () => {
                     display: flex;
                     align-items: center;
                     flex-wrap: wrap;
-                    gap: 20px;
+                    gap: 18px;
                 }
 
                 .cta-one-button {
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
-                    min-height: 52px;
-                    padding: 14px 28px;
+                    min-height: 50px;
+                    padding: 14px 26px;
                     border: 0;
                     border-radius: 7px;
                     outline: none;
@@ -192,36 +250,43 @@ const CtaOne = () => {
                 }
 
                 .cta-one-action-text {
-                    max-width: 450px;
+                    max-width: 400px;
                     margin: 0;
                     color: rgba(255, 255, 255, 0.82);
-                    font-size: 15px;
-                    line-height: 1.6;
+                    font-size: 14px;
+                    line-height: 1.5;
                 }
 
                 /* Tablet */
                 @media (max-width: 991px) {
                     .cta-one-card {
-                        min-height: auto;
-                        padding: 55px 45px;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 45px 35px;
+                    }
+
+                    .cta-one-image-wrapper {
+                        width: 100%;
+                        height: 220px;
+                        margin-top: 10px;
                     }
 
                     .cta-one-description {
-                        font-size: 17px;
+                        font-size: 16px;
                     }
                 }
 
                 /* Mobile */
                 @media (max-width: 768px) {
                     .cta-one-card {
-                        margin: 40px auto;
-                        padding: 40px 30px;
+                        margin: 30px auto;
+                        padding: 35px 25px;
                         border-radius: 20px;
                     }
 
                     .cta-one-label {
                         gap: 11px;
-                        margin-bottom: 22px;
+                        margin-bottom: 18px;
                         font-size: 14px;
                     }
 
@@ -232,95 +297,29 @@ const CtaOne = () => {
                     }
 
                     .cta-one-description {
-                        margin-bottom: 27px;
-                        font-size: 16px;
-                        line-height: 1.65;
+                        margin-bottom: 22px;
+                        font-size: 15px;
+                        line-height: 1.6;
                     }
 
                     .cta-one-action {
                         align-items: flex-start;
                         flex-direction: column;
-                        gap: 15px;
-                    }
-
-                    .cta-one-button {
-                        width: auto;
-                        min-height: 50px;
-                        padding: 13px 24px;
-                    }
-
-                    .cta-one-action-text {
-                        font-size: 14px;
-                    }
-
-                    .cta-one-decoration {
-                        width: 220px;
-                        height: 220px;
-                        top: -105px;
-                        right: -80px;
-                    }
-
-                    .cta-one-decoration::after {
-                        width: 140px;
-                        height: 140px;
-                        top: 65px;
-                        right: 50px;
-                    }
-                }
-
-                /* Small Mobile */
-                @media (max-width: 480px) {
-                    .cta-one-card {
-                        margin: 30px auto;
-                        padding: 30px 22px;
-                        border-radius: 17px;
-                    }
-
-                    .cta-one-label {
-                        align-items: flex-start;
-                        font-size: 13px;
-                        line-height: 1.5;
-                    }
-
-                    .cta-one-icon {
-                        width: 40px;
-                        height: 40px;
-                        font-size: 16px;
-                    }
-
-                    .cta-one-description {
-                        font-size: 15px;
-                        line-height: 1.65;
-                    }
-
-                    .cta-one-action {
-                        width: 100%;
+                        gap: 14px;
                     }
 
                     .cta-one-button {
                         width: 100%;
-                        min-height: 50px;
-                        padding: 13px 18px;
-                        font-size: 14px;
+                        min-height: 48px;
+                        padding: 12px 20px;
                     }
 
                     .cta-one-action-text {
                         font-size: 13px;
-                        line-height: 1.6;
                     }
 
-                    .cta-one-decoration {
-                        width: 170px;
-                        height: 170px;
-                        top: -80px;
-                        right: -70px;
-                    }
-
-                    .cta-one-decoration-two {
-                        width: 120px;
-                        height: 120px;
-                        bottom: -80px;
-                        left: -55px;
+                    .cta-one-image-wrapper {
+                        height: 180px;
                     }
                 }
             `}</style>

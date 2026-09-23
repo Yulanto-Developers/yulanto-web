@@ -130,7 +130,7 @@ const WebDevCard = ({
       {/* Foreground Content */}
       <div className="web-dev-card-content">
         <div className="web-dev-card-header">
-          <h3 className="web-dev-card-title">{title}</h3>
+          <h3 className="web-dev-card-title text-tenor">{title}</h3>
 
           <div className="web-dev-card-icon-box">
             <Icon className="web-dev-card-icon" />
@@ -237,6 +237,7 @@ const DynamicWebsiteSolutions = ({
             }
 
             .web-dev-card-title {
+          
               color: #000000;
               font-weight: 700;
               font-size: 18px;
@@ -353,14 +354,10 @@ const DynamicWebsiteSolutions = ({
 
       <section className="web-dev-solutions-section">
         <div className="container">
-          <SectionTitle
-            titleFirst="Why Businesses"
-            titleSecond="Choose Us"
-            description=""
-            className="mb-0 pb-0 dyncardtitle"
-            data-aos="fade-up"
-            data-aos-duration="600"
-          />
+         <h4 className="px-about-title mb-20 text-center">
+                <span className="text-blue-about">  Why Businesses</span>
+              Choose Us
+              </h4>
 
           <div className="row mt-3 justify-content-center">
             {cards.map((card) => (

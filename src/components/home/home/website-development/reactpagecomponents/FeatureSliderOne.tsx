@@ -59,7 +59,7 @@ const FeatureSliderOne = () => {
   const [nextEl, setNextEl] = useState<HTMLButtonElement | null>(null);
 
   return (
-    <section className="feature-slider-one">
+    <section className="feature-slider-one" style={{backgroundColor:'#f5f5f5'}}>
       <div className="container">
         {/* Header with Navigation Controls */}
         <div
@@ -195,6 +195,7 @@ const FeatureSliderOne = () => {
       <style jsx>{`
         .feature-slider-one {
           padding: 40px 0;
+          bacgroundcolor:#f5f5f5;
           overflow: hidden;
         }
 

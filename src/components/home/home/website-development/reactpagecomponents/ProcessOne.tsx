@@ -56,16 +56,16 @@ const ProcessOne = () => {
     useAOS();
 
     return (
-        <section 
+        <section
             className="process-section"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-offset="200"
             data-aos-easing="ease-in-out"
-            data-aos-once="true"
+            data-aos-once="true" style={{backgroundColor:'#f5f5f5'}}
         >
             <div className="process-container container">
-                <h4 
+                <h4
                     className="px-about-title mb-20 text-center"
                     data-aos="fade-up"
                     data-aos-delay="100"
@@ -81,7 +81,7 @@ const ProcessOne = () => {
 
                         return (
                             <React.Fragment key={item.title}>
-                                <div 
+                                <div
                                     className="process-card"
                                     data-aos="fade-up"
                                     data-aos-delay={150 + (index * 100)}
@@ -99,7 +99,7 @@ const ProcessOne = () => {
                                     {/* Card Header & Content */}
                                     <h3 className="card-title">{item.title}</h3>
                                     <div className="card-divider" />
-                                    <p className="card-description">{item.description}</p>
+                                    <p className="card-description text-figtree">{item.description}</p>
 
                                     {/* Responsive Connector Arrow */}
                                     {!isLastInRowDesktop && (
@@ -141,7 +141,7 @@ const ProcessOne = () => {
 
                 .process-card:hover {
                     transform: translateY(-4px);
-                    border-color: rgba(83, 174, 125, 0.4);
+                    border-color:#53ae7d;
                     box-shadow: 0 12px 30px rgba(5, 52, 86, 0.08);
                 }
 
@@ -167,7 +167,7 @@ const ProcessOne = () => {
                     height: 48px;
                     border-radius: 50%;
                     background: #ffffff;
-                    color: #43a047;
+                    color: #53ae7d;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -177,23 +177,24 @@ const ProcessOne = () => {
                 }
 
                 .process-card:hover .icon-wrapper {
-                    background: #43a047;
+                    background: #53ae7d;
                     color: #ffffff;
                 }
 
                 /* Text & Content Elements */
-                .card-title {
-                    margin: 0 0 12px 0;
-                    font-size: 1.25rem;
-                    font-weight: 700;
-                    color: #0f2d4a;
-                    line-height: 1.3;
-                }
+               .card-title {
+    margin: 0 0 12px 0;
+    font-size: 1.25rem;
+    font-family: "Tenor Sans", "Tenor Sans Fallback", sans-serif;
+    font-weight: 700;
+    color: #0f2d4a;
+    line-height: 1.3;
+}
 
                 .card-divider {
                     width: 32px;
                     height: 2px;
-                    background-color: #43a047;
+                    background-color: #53ae7d;
                     margin-bottom: 16px;
                     border-radius: 2px;
                     transition: width 0.3s ease;
@@ -203,13 +204,13 @@ const ProcessOne = () => {
                     width: 50px;
                 }
 
-                .card-description {
-                    margin: 0;
-                    font-size: 0.95rem;
-                    color: #6c757d;
-                    line-height: 1.6;
-                }
-
+               .card-description {
+    margin: 0;
+    font-size: 15px !important;
+    font-family: "Figtree", "Figtree Fallback", sans-serif;
+    color: #6c757d;
+    line-height: 1.6;
+}
                 /* Connector Arrow */
                 .connector-arrow {
                     position: absolute;

@@ -112,7 +112,7 @@ const ProcessSection = () => {
                                         </div>
 
                                         {/* Title & Description */}
-                                        <h5 className="fw-bold mb-3">{step.title}</h5>
+                                        <h5 className="fw-bold mb-3 text-tenor">{step.title}</h5>
                                         <p className="text-muted small lh-lg mb-0">{step.description}</p>
                                     </div>
                                 </div>

@@ -148,7 +148,7 @@ export default function ServicesGrid() {
         .srv-grid-wrapper {
           width: 100%;
           padding: 10px 0 40px;
-          background-color: #ffffff;
+          background-color: #f5f5f5;
         }
 
         .mb-50 {
@@ -195,8 +195,9 @@ export default function ServicesGrid() {
 
         /* Black Item Title */
         .srv-item-title {
-          color: #000000;
+          color: #053456;
           font-size: 15px;
+          font-family:"Figtree, Figtree Fallback";
           font-weight: 600;
           margin: 0 0 12px 0;
           line-height: 1.4;

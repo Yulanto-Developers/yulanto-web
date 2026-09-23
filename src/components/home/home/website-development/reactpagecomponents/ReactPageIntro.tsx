@@ -64,7 +64,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                         <div className="col-xl-9">
                             <div className="px-project-title-box">
                                 <h4 className="px-about-title mb-20">
-                                    <span className="text-blue-about">Build Modern, Fast & Scalable </span> <br />
+                                    <span className="text-blue-about">Build Modern, Fast & Scalable </span> 
                                     Increase Traffic, Rankings & Leads
                                 </h4>
                                 <p className="text-figtree text-black mt-2">

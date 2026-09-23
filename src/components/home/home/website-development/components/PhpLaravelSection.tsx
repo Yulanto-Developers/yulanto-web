@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useQuoteModal } from "../../myComponents/Content/QuoteContext";
 
 /* ==========================================================================
    1. INLINE ANIMATION COMPONENTS
@@ -108,6 +109,7 @@ const VerticalCutReveal: React.FC<VerticalCutRevealProps> = ({
    ========================================================================== */
 
 export default function AboutPhpLaravelSection() {
+     const { openModal } = useQuoteModal();
     const heroRef = useRef<HTMLDivElement>(null);
 
     const revealVariants: Variants = {
@@ -187,6 +189,8 @@ export default function AboutPhpLaravelSection() {
         grayText: {
             color: '#4b5563',
             fontWeight: 500,
+            
+           fontFamily: "Figtree, Figtree Fallback",
         },
         mainGrid: {
             display: 'grid',
@@ -197,7 +201,8 @@ export default function AboutPhpLaravelSection() {
         leftCol: {
             gridColumn: 'span 2',
         },
-        h1: {
+        h3: {
+            fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
             fontSize: '36px',
             lineHeight: '1.2',
             fontWeight: 600,
@@ -211,14 +216,17 @@ export default function AboutPhpLaravelSection() {
         },
         blockTitle: {
             fontSize: '16px',
+            fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
             fontWeight: '700',
             color: '#111827',
             marginBottom: '6px',
         },
         paragraph: {
-            fontSize: '14px !important',
+            fontSize: '15px !important',
             lineHeight: '1.6',
             color: '#4b5563',
+            
+            fontFamily: "Figtree, Figtree Fallback",
             textAlign: 'justify',
             margin: 0,
         },
@@ -232,17 +240,21 @@ export default function AboutPhpLaravelSection() {
         brandTitle: {
             color: '#053456',
             fontSize: '24px',
+            fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
             fontWeight: 'bold',
             marginBottom: '4px',
         },
         brandSub: {
             color: '#4b5563',
             fontSize: '14px',
+            fontFamily: "Figtree, Figtree Fallback",
             marginBottom: '32px',
         },
         callToActionText: {
             color: '#111827',
             fontWeight: 500,
+            
+          fontFamily: "Figtree, Figtree Fallback",
             marginBottom: '16px',
             fontSize: '15px',
         },
@@ -266,7 +278,7 @@ export default function AboutPhpLaravelSection() {
 
     return (
         <section
-            className="px-about-6-area pt-50 pb-80 pb-lg-110"
+            className="px-about-6-area pt-40 pb-40 pb-lg-110"
             style={{ backgroundColor: '#ffffff' }}
         >
             <div className="container container-1550">
@@ -358,11 +370,11 @@ export default function AboutPhpLaravelSection() {
                 <div style={styles.mainGrid}>
                     {/* Left Column Content */}
                     <div style={styles.leftCol}>
-                        <h1 style={styles.h1}>
+                        <h3 style={styles.h3}>
                             <VerticalCutReveal splitBy="words" staggerDuration={0.08}>
                                 Our PHP & Laravel Development Process
                             </VerticalCutReveal>
-                        </h1>
+                        </h3>
 
                         <TimelineContent
                             as="div"
@@ -455,10 +467,43 @@ export default function AboutPhpLaravelSection() {
                             timelineRef={heroRef}
                             customVariants={revealVariants}
                         >
-                            <button style={styles.btn}>
-                                <span>Get Started</span>
-                                <ArrowRight size={16} />
-                            </button>
+                          
+                             <button
+             onClick={() => openModal()}
+              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+              style={{
+                backgroundColor: '#053456',
+                color: '#ffffff',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                border: '1px solid #053456',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Get Started</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+            </button>
+
+             <img
+                src="/assets/img/googleads/img-new.jpg"
+                alt="Google Ads results"
+                style={{
+                  width: "100%",
+                  maxWidth: "500px",
+                  height: "auto",
+                  display: "block",
+                  marginTop: "24px",
+                  borderRadius: "16px",
+                  objectFit: "cover",
+                }}
+              />
                         </TimelineContent>
                     </div>
                 </div>

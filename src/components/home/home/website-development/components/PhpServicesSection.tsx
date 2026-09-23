@@ -9,7 +9,6 @@ const MinimalistMatrixPhpServices = () => {
         { title: "PHP CMS Development", desc: "Tailored content management panels for total site control." },
         { title: "Custom Portal Development", desc: "Multi-tiered user portals with granular role-based permissions." },
         { title: "Laravel Web Application Development", desc: "Enterprise application architectures leveraging Laravel features." },
-        { title: "Laravel Website Development", desc: "Rapid, secure, and easily scalable web development on Laravel." },
         { title: "PHP CMS Development & Tuning", desc: "Custom plugins, theme development, and deep performance tuning." },
         { title: "API Development & Integration", desc: "Secure API interfaces for connecting web apps with mobile and external systems." },
         { title: "Payment Gateway Integration", desc: "PCI-DSS compliant payment processing for credit cards and gateways." },
@@ -84,7 +83,7 @@ const MinimalistMatrixPhpServices = () => {
         }
       `}</style>
 
-            <section className="py-5">
+            <section className="py-5" style={{backgroundColor:'#f5f5f5'}}>
                 <div className="container mt-3">
 
                     {/* EXACT UNTOUCHED HEADER */}
@@ -133,7 +132,7 @@ const MinimalistMatrixPhpServices = () => {
                             <div key={idx} className="matrix-cell-card d-flex flex-column justify-content-between">
                                 <div>
                                     <div className="matrix-accent-line"></div>
-                                    <h6 className="matrix-title fw-bold mb-2 fs-6" style={{ color: "#053456" }}>
+                                    <h6 className="matrix-title fw-bold mb-2 fs-6 text-tenor" style={{ color: "#053456" }}>
                                         {item.title}
                                     </h6>
                                 </div>

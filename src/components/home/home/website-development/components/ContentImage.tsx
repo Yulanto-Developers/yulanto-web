@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useQuoteModal } from "../../myComponents/Content/QuoteContext";
 export interface ContentImageProps {
   subtitle?: string;
   titlefirst?: string;
@@ -24,8 +24,9 @@ const ContentImage: React.FC<ContentImageProps> = ({
   imagePosition = 'right',
 }) => {
   const isImageLeft = imagePosition === 'left';
-
+  const { openModal } = useQuoteModal();
   return (
+    
     <>
       {/* Internal CSS for Blockquote */}
       <style>{`
@@ -149,6 +150,28 @@ const ContentImage: React.FC<ContentImageProps> = ({
                   </blockquote>
                 )}
               </div>
+               <button
+             onClick={openModal}
+              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+              style={{
+                backgroundColor: '#053456',
+                color: '#ffffff',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                border: '1px solid #053456',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#053456';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Let's Talk our Team</span>
+              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
+            </button>
             </div>
           </div>
 
