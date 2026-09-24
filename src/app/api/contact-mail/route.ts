@@ -3,16 +3,16 @@ import { NextRequest, NextResponse } from "next/server";
 const MAIL_API = process.env.MAIL_API;
 const MAIL_API_KEY = process.env.MAIL_API_KEY;
 
-const COMPANY_NAME = "Yulanto Web Creation";
+const COMPANY_NAME = "Yulanto Web Creations";
 // const COMPANY_EMAIL = "info@yulanto.com";
 const COMPANY_EMAIL = "yulantodevelopers@gmail.com";
 const CC_EMAIL = "yulantodevelopers@gmail.com";
-const WEBSITE_URL = "https://yulanto.com";
+const WEBSITE_URL = "https://yulanto-web.vercel.app";
 const COMPANY_PHONE = "+91 99621 57250";
 const COMPANY_WHATSAPP = "+91 99621 57250";
 const COMPANY_ADDRESS =
     "Yulanto Web Creations Pvt Ltd Web Design & Development Company in ChennaiF3, #4/608, First Floor, V.O.C Street,Kottivakkam, OMR, Chennai - 600 041, India.";
-const COMPANY_LOGO = '/assets/img/logo/yulanto-logo.png'
+const COMPANY_LOGO = `${WEBSITE_URL}/assets/img/logo/L2.png`
 
 // ==========================================
 // ESCAPE HTML
@@ -836,11 +836,15 @@ export async function POST(req: NextRequest) {
            ========================================= */
 
         .footer {
-            background: #053456;
+            background: #f5f5f5;
             padding: 42px 25px;
             text-align: center;
 
             position: relative;
+        }
+
+        .footer img{
+            height:70px;
         }
 
         .footer-title {
@@ -929,9 +933,10 @@ export async function POST(req: NextRequest) {
 
         <div class="header">
 
-            <h1>
-                ${COMPANY_NAME}
-            </h1>
+            <h3>
+                Thank you for reaching out to
+                <strong>${COMPANY_NAME}</strong>! 🎉
+            </h3>
 
         </div>
 
@@ -953,12 +958,12 @@ export async function POST(req: NextRequest) {
 
             <!-- Introduction -->
 
-            <p class="body-text">
+           <!-- <p class="body-text">
 
                 Thank you for reaching out to
                 <strong>${COMPANY_NAME}</strong>! 🎉
 
-            </p>
+            </p> -->
 
 
             <p class="body-text">
@@ -990,199 +995,6 @@ export async function POST(req: NextRequest) {
             <!-- =========================================
      ELITE CORE SPECIALIZATIONS
      ========================================= -->
-
-            <div class="specializations">
-
-                <div class="specializations-header">
-                    <h2 class="specializations-title">
-                        Our Core Specializations
-                    </h2>
-                </div>
-
-
-                <table class="specialization-grid" cellpadding="0" cellspacing="0">
-
-                    <!-- ROW 1 -->
-                    <tr>
-
-                        <!-- 01 -->
-                        <td class="specialization-cell">
-
-                            <div class="specialization-card">
-
-                                <div class="specialization-number">
-                                    01 / 06
-                                </div>
-
-                                <div class="specialization-line"></div>
-
-                                <h3 class="specialization-card-title">
-                                    Website Design &amp; Development
-                                </h3>
-
-                             <!--   <p class="specialization-card-text">
-                                    Modern, responsive and high-performing
-                                    websites built around your business goals.
-                                </p> -->
-
-                            </div>
-
-                        </td>
-
-
-                        <!-- 02 -->
-                        <td class="specialization-cell">
-
-                            <div class="specialization-card">
-
-                                <div class="specialization-number">
-                                    02 / 06
-                                </div>
-
-                                <div class="specialization-line"></div>
-
-                                <h3 class="specialization-card-title">
-                                    WordPress
-                                </h3>
-
-                              <!--  <p class="specialization-card-text">
-                                    Flexible and scalable WordPress websites
-                                    that are easy to manage and grow.
-                                </p> -->
-
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-
-                    <!-- ROW 2 -->
-                    <tr>
-
-                        <!-- 03 -->
-                        <td class="specialization-cell">
-
-                            <div class="specialization-card">
-
-                                <div class="specialization-number">
-                                    03 / 06
-                                </div>
-
-                                <div class="specialization-line"></div>
-
-                                <h3 class="specialization-card-title">
-                                    E-Commerce
-                                </h3>
-
-                             <!--   <p class="specialization-card-text">
-                                    Conversion-focused online stores designed
-                                    for seamless customer experiences.
-                                </p> -->
-
-                            </div>
-
-                        </td>
-
-
-                        <!-- 04 -->
-                        <td class="specialization-cell">
-
-                            <div class="specialization-card">
-
-                                <div class="specialization-number">
-                                    04 / 06
-                                </div>
-
-                                <div class="specialization-line"></div>
-
-                                <h3 class="specialization-card-title">
-                                    Web Portals
-                                </h3>
-
-                              <!--  <p class="specialization-card-text">
-                                    Powerful web portals tailored to connect
-                                    users, businesses and digital services.
-                                </p> -->
-
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-
-                    <!-- ROW 3 -->
-                    <tr>
-
-                        <!-- 05 -->
-                        <td class="specialization-cell">
-
-                            <div class="specialization-card">
-
-                                <div class="specialization-number">
-                                    05 / 06
-                                </div>
-
-                                <div class="specialization-line"></div>
-
-                                <h3 class="specialization-card-title">
-                                    SEO
-                                </h3>
-
-                               <!-- <p class="specialization-card-text">
-                                    Search-focused strategies to improve
-                                    visibility, reach and organic growth.
-                                </p> -->
-
-                            </div>
-
-                        </td>
-
-
-                        <!-- 06 -->
-                        <td class="specialization-cell">
-
-                            <div class="specialization-card">
-
-                                <div class="specialization-number">
-                                    06 / 06
-                                </div>
-
-                                <div class="specialization-line"></div>
-
-                                <h3 class="specialization-card-title">
-                                    Digital Marketing
-                                </h3>
-
-                              <!--  <p class="specialization-card-text">
-                                    Data-driven digital campaigns designed
-                                    to reach and engage your target audience.
-                                </p> -->
-
-                            </div>
-
-                        </td>
-
-                    </tr>
-
-                </table>
-
-
-                <div class="specializations-footer">
-
-                    <p class="specializations-footer-text">
-                        <span>06 SPECIALIZATIONS</span>
-                        &nbsp;&nbsp; Built for digital growth.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-        </div>
 
 
 
@@ -1357,7 +1169,7 @@ Chennai - 600 041, India.
         </div>
         <div class="footer">
 
-            <img src="${COMPANY_LOGO}" alt='yulanto-logo' </div>
+            <img src="${COMPANY_LOGO}" alt='yulanto-logo'  </div>
 
 
         </div>

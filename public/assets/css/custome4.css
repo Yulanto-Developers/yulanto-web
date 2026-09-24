@@ -1,0 +1,328 @@
+/* ==========================================================================
+   1. COLOR PALETTE VARIABLES & UTILITY CLASSES
+   ========================================================================== */
+:root {
+  --primary-color: #053456;
+  --primary-dark: #03233b;
+  --accent-color: #53AE7D;
+  --accent-dark: #45966a;
+}
+
+/* Text Colors */
+.text-primaryss {
+  color: #053456 !important;
+}
+
+.text-accent-color {
+  color: #53AE7D !important;
+}
+
+.text-slate-700 {
+  color: #334155 !important;
+}
+
+/* Background Colors */
+.bg-primaryss {
+  background-color: #053456 !important;
+}
+
+.bg-accent-tag {
+  background-color: #53AE7D !important;
+}
+
+.bg-slate-200 {
+  background-color: #e2e8f0 !important;
+}
+
+/* ==========================================================================
+   2. BUTTON VARIANTS & TOGGLES
+   ========================================================================== */
+/* Active / Primary Button */
+.btn-primaryss {
+  background-color: #053456 !important;
+  border-color: #053456 !important;
+  color: #ffffff !important;
+  transition: all 0.3s ease;
+}
+
+.btn-primaryss:hover,
+.btn-primaryss:focus,
+.btn-primaryss:active {
+  background-color: #03233b !important;
+  border-color: #03233b !important;
+  color: #ffffff !important;
+}
+
+/* Inactive / Accent Button (#53AE7D) */
+.btn-inactive {
+  background-color: #53AE7D !important;
+  border-color: #53AE7D !important;
+  color: #ffffff !important;
+  transition: all 0.3s ease;
+}
+
+.btn-inactive:hover {
+  background-color: #45966a !important;
+  border-color: #45966a !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   3. TYPOGRAPHY & INDICATORS
+   ========================================================================== */
+.text-tenor {
+  font-family: "Tenor Sans", "Tenor Sans Fallback", sans-serif;
+}
+
+.text-figtree {
+  font-family: "Figtree", sans-serif;
+}
+
+.tracking-wider {
+  letter-spacing: 1.5px;
+}
+
+.fs-7 {
+  font-size: 0.75rem;
+}
+
+.aeo-q-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #053456;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.dot-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   4. FEATURED HERO & STRATEGY BANNERS
+   ========================================================================== */
+.aeo-strategy-hero-box {
+  border-left: 4px solid #053456 !important;
+  background-color: rgba(5, 52, 86, 0.02) !important;
+}
+
+.aeo-highlight-banner {
+  background-color: rgba(5, 52, 86, 0.03) !important;
+  border-left-color: #053456 !important;
+}
+
+.aeo-ecosystem-banner {
+  background-color: rgba(5, 52, 86, 0.02);
+  border-color: rgba(83, 174, 125, 0.3) !important;
+}
+
+.aeo-featured-card {
+  border-color: #e2e8f0 !important;
+  background-color: #f8fafc !important;
+}
+
+.aeo-img-frame img {
+  transition: transform 0.4s ease;
+}
+
+.aeo-featured-card:hover .aeo-img-frame img {
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   5. CARDS & MEDIA GRID STYLES
+   ========================================================================== */
+/* Standard Cluster Cards */
+.aeo-cluster-card {
+  border: 1px solid #e2e8f0 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.aeo-cluster-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(5, 52, 86, 0.1) !important;
+  border-color: #53AE7D !important;
+}
+
+.aeo-question-item {
+  background-color: #f8fafc;
+  border: 1px solid #f1f5f9;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.aeo-question-item:hover {
+  background-color: rgba(83, 174, 125, 0.08);
+  border-color: rgba(83, 174, 125, 0.3);
+  transform: translateX(4px);
+}
+
+/* Media Cards */
+.aeo-media-card {
+  border: 1px solid #e2e8f0 !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.aeo-media-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(5, 52, 86, 0.12) !important;
+  border-color: #053456 !important;
+}
+
+.aeo-card-img-wrap {
+  height: 220px;
+  overflow: hidden;
+}
+
+.aeo-card-img {
+  transition: transform 0.5s ease;
+}
+
+.aeo-media-card:hover .aeo-card-img {
+  transform: scale(1.06);
+}
+
+.aeo-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 52, 86, 0.1) 0%, rgba(5, 52, 86, 0.85) 100%);
+}
+
+/* Process Grid Cards */
+.aeo-grid-card {
+  border-color: #e2e8f0 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.aeo-grid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(5, 52, 86, 0.08) !important;
+  border-color: #053456 !important;
+}
+
+.aeo-grid-img-wrap {
+  min-height: 180px;
+  background-color: #f1f5f9;
+}
+
+.aeo-grid-img-wrap img {
+  transition: transform 0.4s ease;
+}
+
+.aeo-grid-card:hover .aeo-grid-img-wrap img {
+  transform: scale(1.05);
+}
+
+/* Query Stack / Deliverables Pills */
+.aeo-query-pill {
+  background-color: #f8fafc;
+  border-color: #e2e8f0 !important;
+  transition: all 0.25s ease;
+}
+
+.aeo-query-pill:hover {
+  background-color: rgba(83, 174, 125, 0.08);
+  border-color: #53AE7D !important;
+  transform: translateX(3px);
+}
+
+/* Header Icon Badges */
+.head-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   6. CUSTOM COMPARISON TABLES
+   ========================================================================== */
+.bg-seo-head {
+  background-color: #f8fafc !important;
+  border-bottom: 2px solid #cbd5e1 !important;
+}
+
+.bg-aeo-head {
+  background-color: rgba(5, 52, 86, 0.05) !important;
+  border-bottom: 2px solid #053456 !important;
+}
+
+.aeo-table-wrapper {
+  border-color: #e2e8f0 !important;
+  transition: all 0.3s ease;
+}
+
+.custom-aeo-table tbody tr {
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.custom-aeo-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.custom-aeo-table tbody tr:hover .aeo-col-cell {
+  background-color: rgba(5, 52, 86, 0.04);
+}
+
+.custom-aeo-table tbody tr:hover .seo-col-cell {
+  background-color: rgba(241, 245, 249, 0.5);
+}
+
+.aeo-col-cell,
+.seo-col-cell {
+  transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 768px) {
+  .aeo-toggle-pill {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .custom-aeo-table {
+    min-width: 600px;
+  }
+}
+
+.pDiv {
+  position: relative;
+  /* Needed to anchor the absolute overlay */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Create an overlay layer directly over the image */
+.pDiv::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  /* Matches container rounding */
+  box-shadow: inset -1px -15px 20px #000000cf;
+  /* Adjust shadow spread & darkness here */
+  pointer-events: none;
+  /* Allows hover/clicks to pass through to the image underneath */
+  z-index: 2;
+}
+
+.pDiv img {
+  transition: transform 0.3s ease;
+  width: 100%;
+  display: block;
+}
+
+.pDiv:hover img {
+  transform: scale(1.05);
+}

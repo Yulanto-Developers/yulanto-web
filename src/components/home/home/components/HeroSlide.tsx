@@ -8,12 +8,12 @@ import { useQuoteModal } from "../myComponents/Content/QuoteContext";
 import Link from "next/link";
 
 export const heroSlides = [
-    { title: "We start by listening closely to your goals, ensuring you feel understood from day one.", subtitle: "Leading Web Design Company in Chennai for Business Growth.", img: "/assets/img/banner/hero-img-1.webp", head: "Make an Enquiry" },
-    { title: "Every detail is noted and aligned with your vision, so nothing important is ever missed.", subtitle: "Awesome Website Creation in Chennai For Your Business", img: "/assets/img/banner/hero-img-2.webp", head: "Increase Sales" },
-    { title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.", img: "/assets/img/banner/hero-img-3.webp", head: "Gather Requirements" },
-    { title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.", img: "/assets/img/banner/hero-img-4.webp", head: "Write the code" },
-    { title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.", img: "/assets/img/banner/hero-img-5.webp", head: "Design the website" },
-    { title: "Our commitment is to a long-term partnership that supports your business growth.", subtitle: "Custom Website creations company for Growing Businesses in Chennai", img: "/assets/img/banner/hero-img-6.webp", head: "Continuous Success" },
+    { title: "We start by listening closely to your goals, ensuring you feel understood from day one.", subtitle: "Leading Web Design Company in Chennai for Business Growth.", img: "/assets/img/banner/mobile/img-1.jpg", head: "Make an Enquiry" },
+    { title: "Every detail is noted and aligned with your vision, so nothing important is ever missed.", subtitle: "Awesome Website Creation in Chennai For Your Business", img: "/assets/img/banner/mobile/img-2.jpg", head: "Increase Sales" },
+    { title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.", img: "/assets/img/banner/mobile/img-3.jpg", head: "Gather Requirements" },
+    { title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.", img: "/assets/img/banner/mobile/img-4.jpg", head: "Write the code" },
+    { title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.", img: "/assets/img/banner/mobile/img-5.jpg", head: "Design the website" },
+    { title: "Our commitment is to a long-term partnership that supports your business growth.", subtitle: "Custom Website creations company for Growing Businesses in Chennai", img: "/assets/img/banner/mobile/img-6.jpg", head: "Continuous Success" },
 ];
 
 const HeroSlide = () => {
@@ -36,7 +36,7 @@ const HeroSlide = () => {
                         centeredSlides={true}
                         loop={false}
                         autoplay={{
-                            delay: 600000,
+                            delay: 6000,
                             disableOnInteraction: false,
                         }}
                         navigation={{
@@ -54,7 +54,7 @@ const HeroSlide = () => {
                         {heroSlides.map((slide, index) => (
                             <SwiperSlide key={`${slide.title}-${index}`}>
                                 <div className="px-hero-2-contents text-center z-index-1">
-                                     <div className="fix">
+                                    <div className="fix">
                                         <span style={{ fontWeight: 300, fontSize: '18px', paddingTop: '8px' }}>{slide.head}</span>
                                     </div>
                                     <div className="fix">

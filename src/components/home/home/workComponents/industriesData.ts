@@ -335,14 +335,6 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       {
         id: 'Core',
         name: 'Core',
-        logo: '',
-        location: 'Maharashtra, India.',
-        url: 'https://core.co.in/',
-        borderClass: 'brb'
-      },
-      {
-        id: 'Core',
-        name: 'Core',
         logo: '/assets/img/all-works/new/core.png',
         location: 'Maharashtra, India.',
         url: 'https://core.co.in/',
@@ -452,7 +444,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       },
     ],
   },
-  marine: {
+  engineering: {
     bannerImg: '/assets/img/all-works/head-img/real-estate.jpg',
     projects: [
       {
@@ -559,6 +551,75 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         location: 'Kuwait.',
         url: 'http://hitcokuwait.com/',
         borderClass: 'brl'
+      }
+    ]
+  },
+  marine: {
+    bannerImg: '/assets/img/all-works/head-img/marine.jpg',
+    projects: [
+      {
+        id: 'blueanchor',
+        name: 'Blue Anchor',
+        logo: '/assets/img/all-works/2026/blue-anchor.png',
+        location: 'USA',
+        url: 'https://blueanchor.llc/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'safetymerchant',
+        name: 'Safety Merchant',
+        logo: '/assets/img/all-works/2026/safety-merchant.png',
+        location: 'Singapore',
+        url: 'https://safety-merchant.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'preservemetalsmarine',
+        name: 'Preserve Metals',
+        logo: '/assets/img/all-works/2026/preserved-materials.png',
+        location: 'Singapore',
+        url: 'https://preservemetals.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'asianic',
+        name: 'Asianic',
+        logo: '/assets/img/all-works/2026/ams.png',
+        location: 'Singapore',
+        url: 'https://www.asianic.sg/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'altisclaservmarine',
+        name: 'Altis Claserv',
+        logo: '/assets/img/all-works/2026/Altis-claserv.png',
+        location: 'Singapore',
+        url: 'https://altiscalserv.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'ddcmaritime',
+        name: 'DDC Maritime',
+        logo: '/assets/img/all-works/2026/dcc.png',
+        location: 'Singapore',
+        url: 'https://www.ddcmaritime.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'blackstormenergy',
+        name: 'Blackstorm Energy LLC',
+        logo: '/assets/img/all-works/2026/black-storm.png',
+        location: 'Sharjah, UAE',
+        url: 'https://blackstormenergy.com/',
+        borderClass: 'brb'
+      },
+      {
+        id: 'newshipping',
+        name: 'New Shipping',
+        logo: '/assets/img/all-works/2026/new-shipping.png',
+        location: 'Japan',
+        url: 'https://www.newshipping.co.jp/',
+        borderClass: 'brlb'
       }
     ]
   },

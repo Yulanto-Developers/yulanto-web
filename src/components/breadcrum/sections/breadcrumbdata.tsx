@@ -282,9 +282,9 @@ const data = [
   },
   {
     path: "/AI-assisted-website",
-    title: "AI Web Design & Development",
+    title: "AI-Enhanced Web Design",
  
-    currentPage: "AI Web Design & Development",
+    currentPage: "AI-Enhanced Web Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
@@ -313,6 +313,13 @@ const data = [
     title: "License & Copyright",
  
     currentPage: "License & Copyright",
+    backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
+  },
+  {
+    path: "/aeo",
+    title: "Answer Engine Optimization (AEO)",
+ 
+    currentPage: "Answer Engine Optimization (AEO)",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
  

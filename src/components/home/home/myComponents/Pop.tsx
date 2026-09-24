@@ -102,8 +102,8 @@ export default function QuoteModal() {
 
             throw new Error(
                 result?.message ||
-                    result?.error ||
-                    "Failed to send contact request."
+                result?.error ||
+                "Failed to send contact request."
             );
         }
 
@@ -132,7 +132,7 @@ export default function QuoteModal() {
 
             toast.success(
                 data?.message ||
-                    "Email sent successfully.",
+                "Email sent successfully.",
                 {
                     position: "top-right",
                     autoClose: 3000,
@@ -413,8 +413,8 @@ export default function QuoteModal() {
     const handleChange = (
         e: React.ChangeEvent<
             HTMLInputElement |
-                HTMLTextAreaElement |
-                HTMLSelectElement
+            HTMLTextAreaElement |
+            HTMLSelectElement
         >
     ) => {
         const {
@@ -509,7 +509,7 @@ export default function QuoteModal() {
         if (
             parseInt(val, 10) ===
             captcha.num1 +
-                captcha.num2
+            captcha.num2
         ) {
             setCaptchaStatus(
                 "correct"
@@ -637,9 +637,9 @@ export default function QuoteModal() {
                                 ) => {
                                     if (
                                         e.key ===
-                                            "Enter" &&
+                                        "Enter" &&
                                         formData.name.trim() !==
-                                            ""
+                                        ""
                                     ) {
                                         e.preventDefault();
 
@@ -665,7 +665,16 @@ export default function QuoteModal() {
                                         setShowRestForm(
                                             true
                                         );
-                                    }
+                                    } 
+                                    // else {
+                                    //     toast.error(
+                                    //         "Please Enter Name",
+                                    //         {
+                                    //             position: "top-right",
+                                    //             autoClose: 3000,
+                                    //         }
+                                    //     );
+                                    // }
                                 }}
                                 style={{
                                     fontSize:
@@ -689,7 +698,7 @@ export default function QuoteModal() {
 
                         {!showRestForm &&
                             openType ===
-                                "auto" && (
+                            "auto" && (
                                 <div
                                     style={{
                                         display:
@@ -979,12 +988,12 @@ export default function QuoteModal() {
                                             style={{
                                                 borderColor:
                                                     captchaStatus ===
-                                                    "correct"
+                                                        "correct"
                                                         ? "#22c55e"
                                                         : captchaStatus ===
                                                             "incorrect"
-                                                          ? "#ef4444"
-                                                          : undefined,
+                                                            ? "#ef4444"
+                                                            : undefined,
                                             }}
                                         />
 
@@ -998,20 +1007,20 @@ export default function QuoteModal() {
 
                                 {captchaStatus ===
                                     "correct" && (
-                                    <p className="verify">
-                                        ✓ Verified
-                                    </p>
-                                )}
+                                        <p className="verify">
+                                            ✓ Verified
+                                        </p>
+                                    )}
 
                                 {/* CAPTCHA ERROR */}
 
                                 {captchaStatus ===
                                     "incorrect" && (
-                                    <p className="incorrect">
-                                        ✕ Incorrect answer,
-                                        please try again.
-                                    </p>
-                                )}
+                                        <p className="incorrect">
+                                            ✕ Incorrect answer,
+                                            please try again.
+                                        </p>
+                                    )}
 
                                 {/* =================================
                                     SUBMIT
@@ -1052,7 +1061,7 @@ export default function QuoteModal() {
 
                 <div className="quote-modal-right">
                     <div className="blue-section-content">
-                        <div className="contact-info py-4">
+                        <div className="contact-info pt-4">
                             {showRestForm ? (
                                 <>
                                     {/* =================================
