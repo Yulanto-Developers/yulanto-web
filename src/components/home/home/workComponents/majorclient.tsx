@@ -87,6 +87,7 @@ export const innerClient = [
     ],
     result: 'The redesigned Naturographers website delivers a premium, immersive, and SEO-friendly digital experience that combines wildlife photography, eco-tourism, safari adventures, and cinematic storytelling.',
     tech: ['Web Design | UI/UX Design | Admin Panel Development | Responsive Design | SEO Optimization | Image Gallery Integration | Tour Booking System | Rental Camera | Eco-Tourism Solutions | Performance Optimization'],
+   
     images: [
       img1.src, img2.src
     ],
@@ -513,6 +514,49 @@ const MajorInnerItems = ({
                       </div>
                     )
                   )}
+
+                  {/* PROJECT RESULT SHOWS IN BOTH CHALLENGES & SOLUTIONS TABS */}
+                  {result && (
+                    <div
+                      className="cs-result-container mt-4 p-3 rounded"
+                      style={{
+                        backgroundColor: "rgba(59, 130, 246, 0.08)",
+                        borderLeft: "4px solid #53ae7d",
+                      }}
+                    >
+                      <h6 className="cs-result-title fs-4 text-white text-tenor mb-2">
+                        Project Result
+                      </h6>
+                      <p
+                        className="cs-result-text mb-0 text-white text-figtree"
+                        style={{ fontSize: "13px" }}
+                      >
+                        {result}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* VISIT US BUTTON */}
+                  <div className="mt-3">
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cs-visit-btn btn"
+                      style={{
+                        display: "inline-block",
+                        backgroundColor: "#53ae7d",
+                        color: "#ffffff",
+                        padding: "8px 20px",
+                        borderRadius: "6px",
+                        textDecoration: "none",
+                        fontWeight: "600",
+                        fontSize: "14px",
+                      }}
+                    >
+                      Visit Website
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
