@@ -592,3 +592,137 @@ export const faqDataOffPage = [
       "Our SEO service stands out through customized strategies, transparent reporting, experienced professionals, ethical white-hat techniques, and a focus on measurable results. We tailor every campaign to your specific business goals and industry.",
   },
 ] as const;
+
+export const faqDatalogoPage = [
+  {
+    question: "What is logo design and why is it important?",
+    answer:
+      "Logo design is the process of creating a visual symbol that represents a business or brand. A professional logo helps customers recognize your business and creates consistency across your marketing and communication materials.",
+  },
+  {
+    question: "How much does logo design in Chennai cost?",
+    answer:
+      "The cost of logo design depends on factors such as the complexity of the concept, number of design options, revisions, branding requirements, and deliverables. Contact us with your requirements to receive a suitable quotation.",
+  },
+  {
+    question: "What information should I provide to a logo designer?",
+    answer:
+      "You can provide information about your business, industry, target audience, preferred colors, competitors, brand personality, existing branding, and any design ideas you may have. This helps the designer create a logo that aligns with your business.",
+  },
+  {
+    question: "What file formats will I receive?",
+    answer:
+      "Depending on your project requirements, final logo files can be provided in commonly used formats such as AI, EPS, SVG, PDF, PNG, and JPG. Vector formats are particularly useful for scaling your logo for large-format printing.",
+  },
+  {
+    question: "Can I request changes to the logo?",
+    answer:
+      "Yes. Logo projects can include revisions based on the agreed scope of work. Your feedback helps the designer refine the concept and move toward the final design.",
+  },
+  {
+    question: "Can I use the logo on my website and social media?",
+    answer:
+      "Yes. A professionally designed logo can be optimized for websites, social media profiles, digital advertising, business cards, brochures, signage, packaging, and other brand communication materials.",
+  },
+  {
+    question: "Can I trademark my logo?",
+    answer:
+      "A logo may be eligible for trademark protection depending on its originality and applicable legal requirements. If trademark protection is important for your business, it is advisable to consult an intellectual-property professional.",
+  },
+  {
+    question: "What if I already have a logo but want to improve it?",
+    answer:
+      "We can help with logo redesign and brand refresh projects. We can retain valuable elements of your existing identity while creating a cleaner, more modern, and professional design.",
+  },
+] as const;
+
+export const faqDatabrocherPage = [
+  {
+    question: "What graphic design services do you provide in Chennai?",
+    answer:
+      "We provide a range of graphic design services, including brochure design, flyer design, company profile design, catalogue design, presentation design, poster design, social media creatives, advertisement designs, business cards, and other marketing materials.",
+  },
+  {
+    question: "Why should I hire a professional graphic design company?",
+    answer:
+      "A professional graphic design company can help you create visually consistent and strategically designed marketing materials that communicate your business message clearly and create a stronger brand impression.",
+  },
+  {
+    question: "Do you provide brochure design services for startups?",
+    answer:
+      "Yes. We create customized brochure designs for startups, SMEs, corporates, and businesses across different industries. The design can be developed according to your brand identity, content, budget, and marketing requirements.",
+  },
+  {
+    question: "What types of brochures can you design?",
+    answer:
+      "We design bi-fold, tri-fold, gate-fold, single-fold, Z-fold, and other customized brochure formats based on your content and communication requirements.",
+  },
+  {
+    question: "How much does brochure design cost?",
+    answer:
+      "Brochure design pricing depends on factors such as the number of pages or panels, design complexity, content requirements, number of concepts, revisions, and final deliverables. We can provide a customized quotation based on your requirements.",
+  },
+  {
+    question: "What information do you need to start a brochure design?",
+    answer:
+      "We generally require your company information, logo, brand guidelines, product or service details, images, contact information, target audience, and any specific design preferences you may have.",
+  },
+  {
+    question: "Can you design brochures for different industries?",
+    answer:
+      "Yes. We create customized designs for businesses across industries, including real estate, construction, manufacturing, education, healthcare, technology, professional services, retail, and more.",
+  },
+  {
+    question: "Can I request changes to the design?",
+    answer:
+      "Yes. We consider client feedback as part of the design process and make revisions based on the agreed project scope to ensure the final design meets your expectations.",
+  },
+  {
+    question: "Do you provide brochure printing services?",
+    answer:
+      "We focus on brochure design and provide the final artwork files. Once the design is approved, you can use the print-ready files with your preferred printing partner.",
+  },
+  {
+    question: "What file formats will I receive?",
+    answer:
+      "Depending on your requirement, we can provide suitable final files such as PDF and other commonly required digital or print-ready formats.",
+  },
+  {
+    question: "How do I get started with your graphic design services?",
+    answer:
+      "Simply share your design requirements, business details, content, and any reference materials with us. Our team will understand your requirements and suggest a suitable design approach for your project.",
+  },
+] as const;
+
+export const faqDataSocialMediaPage = [
+  {
+    question: "What is social media creative design?",
+    answer:
+      "Social media creative design is the process of creating visually engaging graphics and visuals tailored for social media platforms. It helps businesses communicate their message, promote products or services, and build a consistent brand presence across their social channels.",
+  },
+  {
+    question: "Do you design creatives for Instagram and Facebook?",
+    answer:
+      "Yes. We design creatives for Instagram, Facebook, and other social media platforms. Each design is optimized for the specific platform's format, dimensions, and audience to ensure maximum engagement.",
+  },
+  {
+    question: "Can you follow our existing brand guidelines?",
+    answer:
+      "Yes. We can follow your existing brand guidelines, including your logo, color palette, typography, and visual style, to ensure all social media creatives remain consistent with your overall brand identity.",
+  },
+  {
+    question: "Do you create promotional and festival creatives?",
+    answer:
+      "Yes. We create promotional creatives for offers, launches, and campaigns, as well as festival and occasion-based creatives to help your brand stay relevant and connected with your audience throughout the year.",
+  },
+  {
+    question: "Can social media creatives be used for paid advertising?",
+    answer:
+      "Yes. Social media creatives can be designed for both organic posts and paid advertising campaigns. We can create ad-optimized visuals that align with your campaign objectives and platform requirements.",
+  },
+  {
+    question: "Do you provide customized social media designs?",
+    answer:
+      "Yes. All our social media designs are customized based on your brand, industry, target audience, campaign goals, and content requirements. We do not use generic templates.",
+  },
+] as const;
