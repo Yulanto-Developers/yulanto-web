@@ -33,10 +33,10 @@ export function AeoContentStrategy() {
       image: "/assets/img/aeo/aeos1.jpg",
       description: "Addressing core fundamentals and cost transparency for prospective clients.",
       questions: [
-        "What is AEO?",
-        "Can AEO help my website appear in AI search results?",
-        "Does schema markup guarantee AEO results?",
-        "How long does AEO take to show results?",
+        "What is website design?",
+        "How much does website design cost?",
+        "How long does website design take?",
+        "What makes a good business website?",
       ],
     },
     {
