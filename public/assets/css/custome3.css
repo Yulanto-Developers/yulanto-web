@@ -807,6 +807,7 @@
     border: 1px solid #e8e3d9;
     border-radius: 20px;
     background: #fff;
+    /* background: #; */
     transition: all 0.4s ease;
 }
 
@@ -2589,4 +2590,13 @@
     .portal-contact-content h2 {
         font-size: 30px;
     }
+}
+
+.aeo-1{
+    border: 1px solid #053456;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }

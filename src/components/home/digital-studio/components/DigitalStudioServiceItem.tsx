@@ -16,7 +16,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({
         <div className="col-lg-4">
           <div className="bf-service-item-3-wrap d-flex align-items-center">
             <div className="bf-service-item-3-thumb">
-              <SmartLink href="/service-1">
+              <SmartLink href="/">
                 <Image
                   className="img-fluid"
                   width={290}

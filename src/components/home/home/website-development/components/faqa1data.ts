@@ -683,6 +683,62 @@ const faqa1Data: FAQItem[] = [
     ],
     meta: "UI UX Redesign",
   },
+  {
+    id: 77,
+    question: "What is AEO?",
+    answer: [
+      "AEO stands for Answer Engine Optimization. It is the process of creating and structuring website content so search engines and answer systems can better understand and use the information when responding to relevant questions.",
+    ],
+    meta: "AEO Overview",
+  },
+  {
+    id: 78,
+    question: "Is AEO the same as SEO?",
+    answer: [
+      "No. AEO and SEO overlap, but they have different focuses. SEO broadly improves search visibility, while AEO emphasizes clear answers to questions and making information easy for answer systems to understand.",
+    ],
+    meta: "AEO vs SEO",
+  },
+  {
+    id: 79,
+    question: "Does AEO replace SEO?",
+    answer: [
+      "No. AEO should generally be implemented alongside SEO. Technical SEO, useful content, internal links, authority and other SEO fundamentals remain important.",
+    ],
+    meta: "AEO Integration",
+  },
+  {
+    id: 80,
+    question: "Can AEO help my website appear in AI search results?",
+    answer: [
+      "AEO can make your content easier for AI-powered search systems to understand and potentially reference. However, no agency can guarantee that a particular website will be cited or selected by an AI system.",
+    ],
+    meta: "AI Search Visibility",
+  },
+  {
+    id: 81,
+    question: "Do I need FAQ pages for AEO?",
+    answer: [
+      "FAQs can be useful when they answer genuine customer questions. However, AEO is broader than FAQs and includes content structure, search intent, entities, internal linking, structured data, expertise and technical accessibility.",
+    ],
+    meta: "AEO Strategy & FAQs",
+  },
+  {
+    id: 82,
+    question: "Does schema markup guarantee AEO results?",
+    answer: [
+      "No. Structured data helps search engines understand eligible content, but it does not guarantee rankings, AI citations or specific search features.",
+    ],
+    meta: "Schema Markup & AEO",
+  },
+  {
+    id: 83,
+    question: "How long does AEO take to show results?",
+    answer: [
+      "There is no fixed timeframe. Results depend on factors such as website authority, competition, content quality, technical health, search demand and how frequently search systems crawl and update information.",
+    ],
+    meta: "AEO Timeline & Results",
+  },
 ];
 
 export default faqa1Data;

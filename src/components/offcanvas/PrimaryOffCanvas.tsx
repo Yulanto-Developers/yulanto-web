@@ -94,6 +94,8 @@ const PrimaryOffCanvas = () => {
                   display: "block",
                   overflow: "hidden",
                   borderRadius: "20px",
+                  boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.2)",
+                  position: "relative",
                 }}
               >
                 <Image
@@ -105,9 +107,14 @@ const PrimaryOffCanvas = () => {
                   style={{
                     objectFit: "cover",
                     display: "block",
+                    width: "100%",
+                    height: "auto",
                     transition: "transform 0.4s ease-in-out",
                   }}
                 />
+                <div className="map-overlay">
+                  <span>Get Direction</span>
+                </div>
               </a>
             </div>
 
@@ -168,7 +175,7 @@ const PrimaryOffCanvas = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div >
       {/* overlay */}
       <button
         type="button"

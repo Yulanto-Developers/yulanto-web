@@ -119,7 +119,7 @@ const FAQA1: React.FC<NewProps> = ({
       <section
         className="px-about-6-area pt-30 pb-80 pb-lg-110"
         style={{
-          backgroundColor: "#f5f5f5",
+          backgroundColor: "#ffff",
         }}
       >
         <div className="container container-1550">

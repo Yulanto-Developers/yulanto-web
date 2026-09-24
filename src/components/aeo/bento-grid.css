@@ -1,0 +1,82 @@
+/* Card Base Design */
+.bento-card-custom {
+  background-color: #ffffff;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-card-custom:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+}
+
+/* Height Variations matching Image Layout */
+.bento-card-short {
+  min-height: 220px;
+}
+
+.bento-card-tall {
+  min-height: 340px;
+}
+
+.bento-card-full-tall {
+  min-height: 830px;
+}
+
+/* Centered Image Placement */
+.bento-image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bento-center-img {
+  max-height: 220px;
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.bento-card-custom:hover .bento-center-img {
+  transform: scale(1.03);
+}
+
+/* Typography Matching Screenshot */
+.bento-title {
+  font-size: 1.2rem;
+  color: #2d3748;
+}
+
+.bento-desc {
+  font-size: 0.9rem !important;
+  color: #718096 !important;
+  line-height: 1.5;
+}
+/* Ensure center column takes full height of the adjacent two cards */
+.bento-card-full-tall {
+  height: 100%;
+  min-height: 830px; /* Minimum fallback height for desktop */
+}
+@media (max-width: 767px) {
+  .bento-card-full-tall {
+  height: 100%;
+  min-height: 280px !important; /* Minimum fallback height for desktop */
+}
+.bento-tall-img{
+ max-height: 220px !important; 
+}
+}
+
+/* Allow center image wrapper to take all available space */
+.bento-center-card-img-wrapper {
+  min-height: 280px;
+  height: 100%;
+}
+
+/* Make center image fill its parent vertically without stretching aspect ratio */
+.bento-tall-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 600px; /* Adjust this value if you want it taller or shorter */
+}

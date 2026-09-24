@@ -1,19 +1,16 @@
-// import { withNextVideo } from "next-video/process";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-   /* config options here */
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
       },
-    ], // <-- This closes the remotePatterns array
-  }, // <-- This closes the images object (YOU WERE MISSING THIS)
-  
+    ],
+  },
+  allowedDevOrigins: ["192.168.29.207"],
 };
 
-export default (nextConfig);
+export default nextConfig;
