@@ -198,3 +198,57 @@ export const offpageSeo = {
     "seo agencies in chennai using SEO optimization & off-page authority. off-page SEO, link building & local citations that rank your business on Google.",
 } as const;
 
+export const logopageSeo = {
+  title: "logo designers in chennai | Logo Design Company | Logo Design Firms",
+  description:
+    "Company logo design company and logo design firms in Chennai offering branding & logo design and professional logo designers in chennai for businesses.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+  imageAlt: "seo agencies in chennai",
+  serviceName: "Off Page Service",
+  serviceDescription:
+    "Company logo design company and logo design firms in Chennai offering branding & logo design and professional logo designers in chennai for businesses.",
+} as const;
+
+export const BrochurepageSeo = {
+  title: "Graphic Design Company and Brochure Design Company | Yulanto",
+  description:
+    "Graphic Design Company in Chennai for standout branding. As a brochure design company, we craft visuals that help your business grow. Get a free quote today.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+  imageAlt: "seo agencies in chennai",
+  serviceName: "Off Page Service",
+  serviceDescription:
+    "Graphic Design Company in Chennai for standout branding. As a brochure design company, we craft visuals that help your business grow. Get a free quote today.",
+} as const;
+
+export const posterpageSeo = {
+  title: "Graphic Design Company | Advertisement Poster Design | Flyers Maker",
+  description:
+    "Looking for advertisement poster design or a reliable flyers maker? Our graphic design company creates posters, flyers & brochures that help your brand stand out.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+  imageAlt: "seo agencies in chennai",
+  serviceName: "Off Page Service",
+  serviceDescription:
+    "Looking for advertisement poster design or a reliable flyers maker? Our graphic design company creates posters, flyers & brochures that help your brand stand out.",
+} as const;
+
+export const packagingpageSeo = {
+  title: "Packaging Design Agency | Design Packaging for Product | Yulanto",
+  description:
+    "Need packaging design for your product? Our packaging design agency creates brand & packaging design that helps your product sell. Get a quote.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+  imageAlt: "seo agencies in chennai",
+  serviceName: "Off Page Service",
+  serviceDescription:
+    "Need packaging design for your product? Our packaging design agency creates brand & packaging design that helps your product sell. Get a quote.",
+} as const;
+
+export const socialmediacerpageSeo = {
+  title: "Creative Social Media Post Design | Graphic Design Company  ",
+  description:
+    "Need creative social media post design? Our graphic design company delivers social media creative design that helps your brand stand out. Get a free quote.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+  imageAlt: "seo agencies in chennai",
+  serviceName: "Off Page Service",
+  serviceDescription:
+    "Need creative social media post design? Our graphic design company delivers social media creative design that helps your brand stand out. Get a free quote.",
+} as const;

@@ -9,6 +9,26 @@ import Show from "@/components/company-profile/interactive-book-showcase";
 import { GraphicDesignSection } from "@/components/company-profile/brochuredesign";
 import Faq, { FaqSectionData } from "@/components/company-profile/faq";
 
+import type { Metadata } from "next";
+import { generateSeo } from "@/lib/seo";
+import { BrochurepageSeo } from "@/lib/seo-data";
+import { faqDatabrocherPage } from "@/lib/faq-data";
+import ServiceSchema from "@/components/seo-sechama/ServiceSchema";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
+import FAQSchema from "@/components/seo-sechama/FAQSchema";
+
+const SITE_URL = "https://yulanto-web.vercel.app";
+const SLUG = "company-profile-design";
+const pageUrl = `${SITE_URL}/${SLUG}`;
+
+export const metadata: Metadata = generateSeo({
+  title: BrochurepageSeo.title,
+  description: BrochurepageSeo.description,
+  slug: SLUG,
+  image: BrochurepageSeo.image,
+  imageAlt: BrochurepageSeo.imageAlt,
+});
+
 const faqData: FaqSectionData = {
   mainTitleBlue: "Frequently Asked ",
   mainTitleBlack: "Questions",
@@ -97,8 +117,28 @@ const faqData: FaqSectionData = {
 };
 
 export default function Page() {
+  const seo = BrochurepageSeo;
+  const faq = faqDatabrocherPage;
   return (
     <main>
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: `${SITE_URL}/` },
+          { name: seo.serviceName, url: pageUrl },
+        ]}
+      />
+
+      {/* FAQ Schema */}
+      {faq && faq.length > 0 && <FAQSchema items={[...faq]} />}
+
+      {/* Service Schema */}
+      <ServiceSchema
+        name={seo.serviceName}
+        description={seo.serviceDescription}
+        url={pageUrl}
+        image={seo.image}
+      />
       <Breadcrumbdata />
       <Header />
       <Second
