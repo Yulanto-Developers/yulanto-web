@@ -47,3 +47,4 @@ function IntroContent({ leftTitle, rightTitle1, rightTitle2, description, css }:
 }
 
 export default IntroContent;
+        
