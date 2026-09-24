@@ -94,7 +94,7 @@ const processList: ProcessStep[] = [
       "Website development does not end after launch. Regular updates keep your website secure, functional, and up to date. We provide ongoing website maintenance, security updates, backups, content edits, and performance enhancements."
     ],
     imageUrl: "/assets/img/customwebsite/A-Structured-Approach-7.jpg",
-    imageAlt: "Maintenance and updatess",
+    imageAlt: "Maintenance and updates",
   }
 ];
 

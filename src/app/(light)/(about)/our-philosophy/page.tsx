@@ -34,7 +34,7 @@ const HomePage = () => {
       <Breadcrumbdata />
       <GradientCardDemo />
       
-      <GradientCardDemo />
+     
       
     </>
   );
