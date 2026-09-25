@@ -114,7 +114,7 @@ export default function Hero() {
                   <div style={imageContainerStyle}>
                     <img
                       src="/assets/img/aeo/why-aeo.jpg" // Replace with your image path
-                      alt="Graphic Design Services"
+                      alt="Answer Engine Optimization in Chennai"
                       style={imageStyle}
                     />
                   </div>

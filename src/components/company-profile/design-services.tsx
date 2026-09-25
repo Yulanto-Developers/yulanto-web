@@ -117,7 +117,7 @@ export default function Hero() {
                                     <div style={imageContainerStyle}>
                                         <img
                                             src="/assets/img/company-profile/Creative-Visual.jpg" // Replace with your image path
-                                            alt="Graphic Design Services"
+                                            alt="graphic design company in chennai"
                                             style={imageStyle}
                                         />
                                     </div>

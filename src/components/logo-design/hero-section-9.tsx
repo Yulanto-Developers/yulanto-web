@@ -101,7 +101,7 @@ const HeroSection = ({
                 >
                   <img
                     src={imgUrl}
-                    alt={`Logo concept ${index + 1}`}
+                    alt={`logo design service ${index + 1}`}
                     style={{
                       height: "100%",
                       width: "100%",

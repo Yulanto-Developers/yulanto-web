@@ -8,6 +8,7 @@ interface FeatureCardProps {
   badgeColor: string;
   iconClass: string;
   imageUrl: string;
+  alt?:string;
 }
 
 const featuresData: FeatureCardProps[] = [
@@ -17,6 +18,7 @@ const featuresData: FeatureCardProps[] = [
     badgeColor: "#53ae7d", // Forest Green
     iconClass: "fa-solid fa-copyright",
     imageUrl: "assets/img/package/Why-Choose-Our-Packaging-1.jpg",
+    alt:"graphic designer",
   },
   {
     title: "Creative & Modern Concepts",
@@ -24,6 +26,7 @@ const featuresData: FeatureCardProps[] = [
     badgeColor: "#053456", // Warm Amber
     iconClass: "fa-solid fa-lightbulb",
     imageUrl: "assets/img/package/Why-Choose-Our-Packaging-2.jpg",
+    alt:'graphic design company in chennai'
   },
   {
     title: "Customer-Centric Approach",
@@ -31,6 +34,7 @@ const featuresData: FeatureCardProps[] = [
     badgeColor: "#53ae7d", // Deep Blue
     iconClass: "fa-solid fa-users",
     imageUrl: "assets/img/package/Why-Choose-Our-Packaging-3.jpg",
+    alt:"graphic design agency",
   },
   {
     title: "Print-Ready Artwork",
@@ -38,6 +42,7 @@ const featuresData: FeatureCardProps[] = [
     badgeColor: "#053456", // Purple
     iconClass: "fa-solid fa-print",
     imageUrl: "assets/img/package/Why-Choose-Our-Packaging-4.jpg",
+    alt:"graphic design agency chennai",
   },
   {
     title: "Multiple Packaging Formats",
@@ -45,6 +50,7 @@ const featuresData: FeatureCardProps[] = [
     badgeColor: "#53ae7d", // Custom Brand Green
     iconClass: "fa-solid fa-boxes-stacked",
     imageUrl: "assets/img/package/Why-Choose-Our-Packaging-5.jpg",
+    alt:'graphic design company near me'
   },
 ];
 
@@ -92,7 +98,7 @@ export function PackagingFeaturesSection() {
       >
         <img
           src={item.imageUrl}
-          alt={item.title}
+          alt={item.alt}
           style={{
             width: "100%",
             height: "100%",

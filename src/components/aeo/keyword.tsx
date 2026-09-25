@@ -134,7 +134,7 @@ export function AeoContentStrategy() {
                 <div className="position-relative aeo-card-img-wrap">
                   <Image
                     src={pillar.image}
-                    alt={pillar.topic}
+                    alt='Answer Engine Optimization (AEO) Services'
                     fill
                     className="object-fit-cover aeo-card-img"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -18,11 +18,11 @@ interface CreativeCard {
 const creativeCards: CreativeCard[] = [
   {
     image: "assets/img/SocialMediaCreativeDesigns/Social-Media-Creatives-1.jpg",
-    alt: "social media marketing in chennai",
+    alt: "social media Creative in chennai",
   },
   {
     image: "assets/img/SocialMediaCreativeDesigns/Social-Media-Creatives-2.jpg",
-    alt: "social media marketing agency",
+    alt: "social media Poster agency",
   },
   {
     image: "assets/img/SocialMediaCreativeDesigns/Social-Media-Creatives-3.jpg",
@@ -48,9 +48,7 @@ export function SocialMediaCreativeHeader() {
         {/* Top Content Row */}
         <div className="row align-items-center mb-5" data-aos="fade-up">
           <div className="col-xl-3">
-            <span
-              className="tp-section-subtitle text-black blink-ball"
-            >
+            <span className="tp-section-subtitle text-black blink-ball">
               Social Media Creative Design in Chennai
             </span>
           </div>
@@ -61,13 +59,17 @@ export function SocialMediaCreativeHeader() {
                 <span className="text-blue-about">
                   Creative Social Media Designs That{" "}
                 </span>
-                <span>
-                  Make Your Brand Stand Out
-                </span>
+                <span>Make Your Brand Stand Out</span>
               </h4>
-              <p
-                className="text-figtree text-black mt-2"
+              <h1
+                className="ft-23 mt-0 mb-3 text-tenor"
+                data-aos="text-reveal"
+                data-aos-delay="100"
+                style={{ lineHeight: "1.2" }}
               >
+                Creative Social Media Post Design Company
+              </h1>
+              <p className="text-figtree text-black mt-2">
                 In a fast-moving digital world, your social media visuals are
                 often the first interaction customers have with your brand. At
                 Yulanto Web Creations, we create engaging, professional, and
@@ -80,11 +82,7 @@ export function SocialMediaCreativeHeader() {
         </div>
 
         {/* Image Scroll / Swiper Slider Display Replacing Orbit Graphic */}
-        <div
-          className="mb-4"
-          data-aos="fade-up"
-          data-aos-delay="150"
-        >
+        <div className="mb-4" data-aos="fade-up" data-aos-delay="150">
           <Swiper
             modules={[Autoplay, Pagination]}
             spaceBetween={20}
@@ -136,15 +134,10 @@ export function SocialMediaCreativeHeader() {
           </Swiper>
         </div>
 
-        <p
-          className="text-figtree text-black mt-2 "
-          data-aos="fade-up"
-        
-        >
-          As a creative design company in Chennai, we design social media
-          posts that combine compelling visuals, clear messaging, and your
-          brand identity to create content that connects with your target
-          audience.
+        <p className="text-figtree text-black mt-2 " data-aos="fade-up">
+          As a creative design company in Chennai, we design social media posts
+          that combine compelling visuals, clear messaging, and your brand
+          identity to create content that connects with your target audience.
         </p>
       </div>
 

@@ -98,7 +98,7 @@ export default function Hero({ imageSrc }: HeroProps) {
             <div style={imageWrapperStyle} data-aos="fade-up" data-aos-delay="300">
               <img
                 src={currentSrc}
-                alt="Social Media Marketing"
+                alt="business logo design"
                 style={imageStyle}
                 onError={() => {
                   if (currentSrc !== FALLBACK_IMAGE) {

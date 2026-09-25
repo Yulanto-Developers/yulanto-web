@@ -91,7 +91,7 @@ export default function HeroSection04() {
                                 >
                                     <img
                                         src="assets/img/company-profile/first-img.jpg"
-                                        alt="Designer portrait"
+                                        alt="company brochure design"
                                         style={{
                                             width: "100%",
                                             height: "100%",

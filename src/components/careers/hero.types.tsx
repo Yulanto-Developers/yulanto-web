@@ -4,5 +4,6 @@ export interface HeroProps {
   titleBlack?: string;
   description?: string;
   images: string[];
+  alt?:string[];
   className?: string;
 }

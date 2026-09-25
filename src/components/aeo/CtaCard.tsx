@@ -13,6 +13,7 @@ interface ProcessStep {
   additionalText?: string;
   examples?: string[];
   imageUrl: string;
+  alt?: string;
 }
 
 export function AeoProcessAlt() {
@@ -38,6 +39,7 @@ export function AeoProcessAlt() {
       
     ],
     imageUrl: "/assets/img/aeo/img-1.jpg",
+    alt:"AEO Company in Chennai",
   };
 
   const rowOneSteps: ProcessStep[] = [
@@ -50,6 +52,7 @@ export function AeoProcessAlt() {
       additionalText:
         "The goal is to make important information easy to understand for both visitors and search systems.",
        imageUrl: "/assets/img/aeo/img-2.jpg",
+       alt:"AEO Company",
     },
     {
       id: "step-3",
@@ -60,6 +63,7 @@ export function AeoProcessAlt() {
       additionalText:
         "Each question is answered clearly without unnecessary marketing language.",
        imageUrl: "/assets/img/aeo/img-3.jpg",
+       alt:"AEO Services",
     },
     {
       id: "step-4",
@@ -68,6 +72,7 @@ export function AeoProcessAlt() {
       description:
         "Where appropriate, we implement relevant structured data to help search engines understand information such as your organization, services, articles, breadcrumbs and other supported content types.",
        imageUrl: "/assets/img/aeo/img-4.jpg",
+       alt:"AEO Services in chennai",
     },
   ];
 
@@ -79,6 +84,7 @@ export function AeoProcessAlt() {
       description:
         "We connect related service pages, FAQs, blogs and supporting resources so that users and search engines can understand the relationship between different topics on your website.",
        imageUrl: "/assets/img/aeo/img-5.jpg",
+        alt:"AEO Services in chennai",
     },
     {
       id: "step-6",
@@ -87,6 +93,7 @@ export function AeoProcessAlt() {
       description:
         "We strengthen important pages with genuine business information, service details, case studies, project examples, experience, author information and other relevant evidence.",
        imageUrl: "/assets/img/aeo/last-img.jpg",
+       alt:"AEO Services agency",
     },
   ];
 
@@ -152,7 +159,7 @@ export function AeoProcessAlt() {
               <div className="aeo-img-frame rounded-4 overflow-hidden shadow-sm">
                 <img
                   src={featuredStep.imageUrl}
-                  alt={featuredStep.title}
+                  alt='Answer Engine Optimization Services in Chennai'
                   className="img-fluid w-100 object-fit-cover"
                   style={{ maxHeight: "360px" }}
                 />
@@ -176,7 +183,7 @@ export function AeoProcessAlt() {
                 <div className="aeo-grid-img-wrap col-12" style={{ height: "200px" }}>
                   <img
                     src={step.imageUrl}
-                    alt={step.title}
+                    alt={step.alt}
                     className="w-100 h-100 object-fit-cover"
                   />
                 </div>
@@ -220,7 +227,7 @@ export function AeoProcessAlt() {
                 <div className="aeo-grid-img-wrap col-12" style={{ height: "220px" }}>
                   <img
                     src={step.imageUrl}
-                    alt={step.title}
+                    alt={step.alt}
                     className="w-100 h-100 object-fit-cover"
                   />
                 </div>
