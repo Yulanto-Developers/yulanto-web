@@ -8,12 +8,15 @@ import '@/assets/css/textAnimations.css';
 import "@/assets/css/style.css";
 import "@/assets/css/style1.css";
 import "glightbox/dist/css/glightbox.css";
+import { QuoteProvider } from "@/components/home/home/myComponents/Content/QuoteContext";
+import FloatingActionsWrapper from "@/components/home/home/components/FloatingIcon";
 
 export default function AboutUsLayout({ children }: {
 
     children: React.ReactNode;
 }) {
     return (
+        <QuoteProvider>
         <ClientProviders>
             <PersonalPortfolioHeader />
             <div id="smooth-wrapper">
@@ -23,6 +26,8 @@ export default function AboutUsLayout({ children }: {
                     <MainFooter />
                 </div>
             </div>
+            <FloatingActionsWrapper></FloatingActionsWrapper>
         </ClientProviders>
+        </QuoteProvider>
     );
 }

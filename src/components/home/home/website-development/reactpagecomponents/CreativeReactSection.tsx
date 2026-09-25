@@ -9,7 +9,7 @@ import image3 from "@/assets/images/website-development/React-website/Creative-W
 
 const CreativeReactSection = () => {
     return (
-        <section className="creative-react-section">
+        <section className="creative-react-section" style={{overflowX:"hidden",OverflowY:"hidden"}}>
             <div className="container container-1550">
                 <div className="row align-items-center">
                     {/* LEFT CONTENT */}

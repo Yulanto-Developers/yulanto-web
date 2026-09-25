@@ -51,7 +51,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
             <section
                 ref={ref}
                 className={`px-about-6-area pt-50 pb-30 pb-lg-40 ${className}`}
-                {...props}
+                {...props} style={{overflowX:"hidden",overflowY:"hidden"}}
             >
                 <div className="container container-1550">
                     <div className="row align-items-center mb-5" data-aos="fade-up">

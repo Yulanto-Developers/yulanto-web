@@ -21,7 +21,8 @@ const CtaOne: React.FC<CtaOneProps> = ({
     imageUrl = "/assets/img/react/vetor-1.png",
     imageAlt = "Website Design Chennai",
 }) => {
-      const { openModal } = useQuoteModal();
+    const { openModal } = useQuoteModal();
+    
     return (
         <section className="cta-one-section">
             <div className="container mt-30 mb-40">
@@ -36,7 +37,6 @@ const CtaOne: React.FC<CtaOneProps> = ({
                             <span className="cta-one-icon">
                                 <i className="fa-regular fa-file-lines"></i>
                             </span>
-
                             <span className="text-tenor">
                                 {title}
                             </span>
@@ -49,28 +49,28 @@ const CtaOne: React.FC<CtaOneProps> = ({
 
                         {/* CTA */}
                         <div className="cta-one-action">
-                          <button
-             onClick={() => openModal()}
-              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
-              style={{
-                backgroundColor: '#53ae7d',
-                color: '#ffffff',
-                fontSize: '15px',
-                transition: 'all 0.3s ease',
-                border: '1px solid #53ae7d',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#53ae7d';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#53ae7d';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Get in touch with us today</span>
-              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
-            </button>
+                            <button
+                                onClick={() => openModal()}
+                                className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+                                style={{
+                                    backgroundColor: '#53ae7d',
+                                    color: '#ffffff',
+                                    fontSize: '15px',
+                                    transition: 'all 0.3s ease',
+                                    border: '1px solid #53ae7d',
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#53ae7d';
+                                    e.currentTarget.style.transform = 'translateY(-2px)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#53ae7d';
+                                    e.currentTarget.style.transform = 'translateY(0)';
+                                }}
+                            >
+                                <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Get in touch with us today</span>
+                                <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
+                            </button>
 
                             <p className="cta-one-action-text">
                                 {actionText}
@@ -78,14 +78,15 @@ const CtaOne: React.FC<CtaOneProps> = ({
                         </div>
                     </div>
 
-                    {/* Right Side PNG Image Area */}
+                    {/* Right Side PNG Image Area - Fixed with explicit standard sizing to prevent render glitch */}
                     <div className="cta-one-image-wrapper">
                         <Image
                             src={imageUrl}
                             alt={imageAlt}
-                            fill
-                            sizes="(max-width: 991px) 100vw, 350px"
-                            style={{ objectFit: "contain" }}
+                            width={340}
+                            height={250}
+                            priority
+                            style={{ width: "100%", height: "auto", objectFit: "contain" }}
                             quality={90}
                         />
                     </div>
@@ -95,12 +96,13 @@ const CtaOne: React.FC<CtaOneProps> = ({
             <style jsx>{`
                 .cta-one-section {
                     width: 100%;
+                    position: relative;
+                    overflow-x: hidden; /* Fixes bottom horizontal scrollbar */
                 }
 
                 .cta-one-card {
                     position: relative;
-                    overflow: hidden;
-                    min-height: 330px;
+                    overflow: hidden; /* Contains background decorations properly */
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -109,9 +111,7 @@ const CtaOne: React.FC<CtaOneProps> = ({
                     border-radius: 24px;
                     background: #002d46;
                     isolation: isolate;
-                    transition:
-                        transform 0.4s ease,
-                        box-shadow 0.4s ease;
+                    transition: transform 0.4s ease, box-shadow 0.4s ease;
                 }
 
                 .cta-one-card:hover {
@@ -119,7 +119,7 @@ const CtaOne: React.FC<CtaOneProps> = ({
                     box-shadow: 0 30px 65px rgba(0, 45, 70, 0.25);
                 }
 
-                /* Decorative circle */
+                /* Decorative circle constrained inside overflow hidden */
                 .cta-one-decoration {
                     position: absolute;
                     width: 360px;
@@ -128,8 +128,8 @@ const CtaOne: React.FC<CtaOneProps> = ({
                     right: -110px;
                     border-radius: 50%;
                     background: rgba(255, 255, 255, 0.07);
-                    z-index: -1;
-                    transition: transform 0.7s ease;
+                    z-index: 1;
+                    pointer-events: none;
                 }
 
                 .cta-one-decoration::after {
@@ -151,33 +151,26 @@ const CtaOne: React.FC<CtaOneProps> = ({
                     left: -80px;
                     border-radius: 50%;
                     border: 1px solid rgba(255, 255, 255, 0.08);
-                    z-index: -1;
-                    transition: transform 0.7s ease;
-                }
-
-                .cta-one-card:hover .cta-one-decoration {
-                    transform: scale(1.12);
-                }
-
-                .cta-one-card:hover .cta-one-decoration-two {
-                    transform: scale(1.15);
+                    z-index: 1;
+                    pointer-events: none;
                 }
 
                 /* Content */
                 .cta-one-content {
                     position: relative;
                     z-index: 2;
-                    flex: 1 1 60%;
-                    max-width: 750px;
+                    flex: 1;
+                    max-width: 700px;
                 }
 
-                /* Right Side PNG Image Container */
+                /* Right Side Image Container */
                 .cta-one-image-wrapper {
                     position: relative;
                     z-index: 2;
                     flex: 0 0 320px;
-                    height: 260px;
-                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
 
                 /* Label */
@@ -222,33 +215,6 @@ const CtaOne: React.FC<CtaOneProps> = ({
                     gap: 18px;
                 }
 
-                .cta-one-button {
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    min-height: 50px;
-                    padding: 14px 26px;
-                    border: 0;
-                    border-radius: 7px;
-                    outline: none;
-                    background: #ffffff;
-                    color: #002d46;
-                    cursor: pointer;
-                    font-size: 15px;
-                    font-weight: 600;
-                    white-space: nowrap;
-                    transition:
-                        transform 0.3s ease,
-                        background 0.3s ease,
-                        box-shadow 0.3s ease;
-                }
-
-                .cta-one-button:hover {
-                    transform: translateY(-3px);
-                    background: #f5f5f5;
-                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-                }
-
                 .cta-one-action-text {
                     max-width: 400px;
                     margin: 0;
@@ -257,26 +223,20 @@ const CtaOne: React.FC<CtaOneProps> = ({
                     line-height: 1.5;
                 }
 
-                /* Tablet */
+                /* Tablet & Mobile Responsiveness */
                 @media (max-width: 991px) {
                     .cta-one-card {
                         flex-direction: column;
-                        align-items: flex-start;
+                        align-items: stretch;
                         padding: 45px 35px;
                     }
 
                     .cta-one-image-wrapper {
                         width: 100%;
-                        height: 220px;
-                        margin-top: 10px;
-                    }
-
-                    .cta-one-description {
-                        font-size: 16px;
+                        margin-top: 15px;
                     }
                 }
 
-                /* Mobile */
                 @media (max-width: 768px) {
                     .cta-one-card {
                         margin: 30px auto;
@@ -290,12 +250,6 @@ const CtaOne: React.FC<CtaOneProps> = ({
                         font-size: 14px;
                     }
 
-                    .cta-one-icon {
-                        width: 42px;
-                        height: 42px;
-                        font-size: 17px;
-                    }
-
                     .cta-one-description {
                         margin-bottom: 22px;
                         font-size: 15px;
@@ -306,20 +260,6 @@ const CtaOne: React.FC<CtaOneProps> = ({
                         align-items: flex-start;
                         flex-direction: column;
                         gap: 14px;
-                    }
-
-                    .cta-one-button {
-                        width: 100%;
-                        min-height: 48px;
-                        padding: 12px 20px;
-                    }
-
-                    .cta-one-action-text {
-                        font-size: 13px;
-                    }
-
-                    .cta-one-image-wrapper {
-                        height: 180px;
                     }
                 }
             `}</style>
