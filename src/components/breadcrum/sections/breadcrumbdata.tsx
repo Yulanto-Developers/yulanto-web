@@ -49,7 +49,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/tocontact",
+    path: "/contact-us",
     title: "Contact Us",
     currentPage: "Contact Us",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",

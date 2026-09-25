@@ -15,9 +15,45 @@ const heroImages = [
     
 ];
 
+
+import type { Metadata } from "next";
+import { generateSeo } from "@/lib/seo";
+import { posterpageSeo } from "@/lib/seo-data";
+import ServiceSchema from "@/components/seo-sechama/ServiceSchema";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
+import FAQSchema from "@/components/seo-sechama/FAQSchema";
+
+const SITE_URL = "https://yulanto-web.vercel.app";
+const SLUG = "flyer-poster-design";
+const pageUrl = `${SITE_URL}/${SLUG}`;
+
+export const metadata: Metadata = generateSeo({
+  title: posterpageSeo.title,
+  description: posterpageSeo.description,
+  slug: SLUG,
+  image: posterpageSeo.image,
+  imageAlt: posterpageSeo.imageAlt,
+});
+
 export default function Page() {
+    const seo = posterpageSeo;
     return (
         <main>
+            {/* Breadcrumb Schema */}
+                  <BreadcrumbSchema
+                    items={[
+                      { name: "Home", url: `${SITE_URL}/` },
+                      { name: seo.serviceName, url: pageUrl },
+                    ]}
+                  />
+        
+                  {/* Service Schema */}
+                  <ServiceSchema
+                    name={seo.serviceName}
+                    description={seo.serviceDescription}
+                    url={pageUrl}
+                    image={seo.image}
+                  />
             <Breadcrumbdata />
             <Head
                 subtitle="Flyer & Poster Design Company in Chennai"

@@ -1497,6 +1497,11 @@
     z-index: 999999;
     padding: 20px;
     animation: fadeIn 0.25s ease-out;
+    flex-direction: column;
+}
+
+.quote-modal-overlay img {
+    width: 300px;
 }
 
 /* Modal Wrapper Container */
@@ -1511,6 +1516,7 @@
     position: relative;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     animation: popup 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    top: -10px;
 }
 
 /* Close Button */
@@ -3232,8 +3238,8 @@ input[name="name"].has-value+.name-next-btn {
     font-size: 1rem;
     font-weight: 600;
     padding: 8px 16px;
-    
-   
+
+
 }
 
 .map-image-wrapper:hover .map-overlay {

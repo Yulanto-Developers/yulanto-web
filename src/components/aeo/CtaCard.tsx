@@ -31,12 +31,11 @@ export function AeoProcessAlt() {
     description:
       "We identify questions related to your products, services, industry and target location.",
     examples: [
-      "What is website development?",
-      "How much does website design cost?",
-      "How long does website development take?",
-      "Which CMS is best for a business website?",
-      "What should a corporate website include?",
-      "How can SEO improve website visibility?",
+      "What is AEO?",
+      "Can AEO help my website appear in AI search results?",
+      "Does schema markup guarantee AEO results?",
+      "How long does AEO take to show results?",
+      
     ],
     imageUrl: "/assets/img/aeo/img-1.jpg",
   };
@@ -106,7 +105,7 @@ export function AeoProcessAlt() {
           <div className="col-xl-9">
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about"> How Does</span>AEO Work?
+                <span className="text-blue-about"> How Does </span>AEO Work?
               </h4>
               <p className="text-figtree text-black mt-2">
                 AEO focuses on understanding the questions your potential customers ask and creating useful content that directly addresses those questions.
