@@ -19,31 +19,31 @@ const CLIENTS: ClientFlag[] = [
     code: "US",
     flag: "/assets/img/flags/flag-usa.jpg",
     label: "USA",
-    url: "/clients/usa",
+    url: "/our-clients/web-design-services-for-usa",
   },
   {
     code: "SG",
     flag: "/assets/img/flags/flag-singapore.jpg",
     label: "Singapore & Malaysia",
-    url: "/clients/singapore",
+    url: "/our-clients/web-design-services-for-singapore-and-malaysia",
   },
   {
     code: "AE",
     flag: "/assets/img/flags/flag-uae.jpg",
     label: "UAE",
-    url: "/clients/uae",
+    url: "/our-clients/web-design-services-for-uae",
   },
   {
     code: "EU",
     flag: "/assets/img/flags/flag-europe.jpg",
     label: "Europe & East Windsor",
-    url: "/clients/europe",
+    url: "/our-clients/web-design-services-for-europe",
   },
   {
     code: "GB",
     flag: "/assets/img/flags/flag-uk.jpg",
     label: "UK - London",
-    url: "/clients/uk",
+    url: "/our-clients/web-design-services-for-uk",
   },
 ];
 

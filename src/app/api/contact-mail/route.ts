@@ -1126,7 +1126,7 @@ export async function POST(req: NextRequest) {
 
                        Yulanto Web Creations Pvt Ltd <br/>
 Web Design & Development Company in Chennai <br/>
-F3, #4/608, First Floor, V.O.C Street, <br/> Kottivakkam, OMR,
+F3, #4/608, First Floor, V.O.C Street, <br/> Kottivakkam,
 Chennai - 600 041, India.
 
                     </td>

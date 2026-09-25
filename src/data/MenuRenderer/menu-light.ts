@@ -121,7 +121,7 @@ export const lightMenu: MenuItem[] = [
     mobileV: false,
     sublinkTrue: false,
     label: "Our Clients",
-    href: "/clients",
+    href: "/our-clients",
     active: true,
   },
   {
