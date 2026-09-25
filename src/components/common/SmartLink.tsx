@@ -10,15 +10,38 @@ type Props = {
     children: React.ReactNode;
 };
 
-export default function SmartLink({ className, href, children, onClick }: Props) {
+export default function SmartLink({
+    className,
+    href,
+    children,
+    onClick,
+}: Props) {
     const pathname = usePathname() || "";
+
     const isDark = pathname.startsWith("/dark");
 
-    if (href.startsWith("http")) {
-        return <a href={href}>{children}</a>;
+    // External links
+    if (
+        href.startsWith("http://") ||
+        href.startsWith("https://") ||
+        href.startsWith("tel:") ||
+        href.startsWith("mailto:")
+    ) {
+        return (
+            <a
+                href={href}
+                className={className}
+                onClick={onClick}
+            >
+                {children}
+            </a>
+        );
     }
 
-    const cleanHref = href.startsWith("/") ? href : `/${href}`;
+    // Internal links
+    const cleanHref = href.startsWith("/")
+        ? href
+        : `/${href}`;
 
     const finalHref = isDark
         ? cleanHref.startsWith("/dark")
@@ -26,5 +49,13 @@ export default function SmartLink({ className, href, children, onClick }: Props)
             : `/dark${cleanHref}`
         : cleanHref.replace(/^\/dark/, "");
 
-    return <Link className={className} href={finalHref} onClick={onClick}>{children}</Link>;
+    return (
+        <Link
+            className={className}
+            href={finalHref}
+            onClick={onClick}
+        >
+            {children}
+        </Link>
+    );
 }

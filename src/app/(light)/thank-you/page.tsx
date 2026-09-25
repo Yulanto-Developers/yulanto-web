@@ -12,7 +12,7 @@ export default function Page() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       router.push('/');
-    }, 5000);
+    }, 15000);
 
     return () => clearTimeout(timeout);
   }, [router]);
