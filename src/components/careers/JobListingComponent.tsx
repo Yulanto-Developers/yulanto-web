@@ -367,6 +367,7 @@ export default function JobListingComponent({
                   color: "#053456",
                   fontWeight: 700,
                   fontSize: "15px",
+                  fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' ,
                   wordBreak: "break-word",
                   width: "100%",
                 }}
@@ -380,6 +381,7 @@ export default function JobListingComponent({
                 style={{
                   color: "#53ae7d",
                   fontSize: "13px",
+                  fontFamily: "Figtree, Figtree Fallback",
                   fontWeight: 600,
                   wordBreak: "break-word",
                   width: "100%",
@@ -397,6 +399,7 @@ export default function JobListingComponent({
                   flexDirection: "row",
                   gap: "8px",
                   fontSize: "12px",
+                  fontFamily: "Figtree, Figtree Fallback",
                   opacity: 0.85,
                   flexWrap: "wrap",
                   width: "100%",
@@ -418,6 +421,7 @@ export default function JobListingComponent({
                 style={{
                   color: "#53ae7d",
                   fontSize: "13px",
+                  fontFamily: "Figtree, Figtree Fallback",
                   fontWeight: 700,
                   marginTop: "4px",
                   display: "inline-flex",

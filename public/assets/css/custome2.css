@@ -1,6 +1,6 @@
 .ecommerce-hero-animation {
     width: 100%;
-   
+
     overflow: hidden;
 }
 
@@ -352,7 +352,7 @@
     height: 100%;
     padding: 28px 24px;
     background: #ffffff;
-    border: 1px solid #e8edf5;
+    overlay: black;
     border-radius: 18px;
     transition: all 0.4s ease;
     position: relative;
@@ -363,12 +363,13 @@
 
 .ecommerce-design-card:hover {
     transform: translateY(-10px);
-  
+
     box-shadow: 0 18px 45px rgba(23, 105, 255, 0.12);
 }
 
 .ecommerce-design-card:hover::before {
     transform: scale(2);
+    background: rgba(0, 0, 0, 0.75); /* Darker black shade when hovered */
 }
 
 .ecommerce-card-icon {
@@ -612,7 +613,7 @@
 
 .product-page-features {
     margin-top: 25px;
-   
+
 }
 
 .product-feature-item {
@@ -738,7 +739,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0 25px;
-  
+
 }
 
 .product-feature-item {
@@ -1473,7 +1474,7 @@
 }
 
 .ecommerce-chennai-content p {
-  
+
     font-size: 20px;
     line-height: 1.75;
     margin-bottom: 16px;
@@ -2107,7 +2108,7 @@
 
 .ecommerce-cta-content>p {
     max-width: 780px;
- 
+
     font-size: 16px;
     line-height: 1.75;
     margin-bottom: 15px;
@@ -2126,7 +2127,7 @@
 }
 
 .ecommerce-cta-company span {
-   
+
     font-size: 16px;
 }
 
@@ -2449,7 +2450,7 @@
     font-size: 20px;
     line-height: 1.8;
     margin-bottom: 22px;
-   
+
 }
 
 .ecom-process-intro p:last-child {
@@ -2658,7 +2659,7 @@
         padding: 70px 0;
     }
 
-   
+
     .ecom-process-intro {
         position: static;
         max-width: 100%;
@@ -2784,6 +2785,7 @@
         font-size: 14px;
     }
 }
+
 /***************** cusotom********************/
 /* =========================================================
    UNIQUE E-COMMERCE HOMEPAGE HOVER CARDS SECTION
@@ -2804,62 +2806,52 @@
     height: 350px;
     text-align: center;
     color: #f8fafc;
-    background-color: #0b1329;
+   
     border-radius: 14px;
     box-shadow: 0 12px 35px rgba(5, 52, 86, 0.12);
-    background-size: cover;
+   background-size: cover;
     background-position: center;
     transition: transform calc(var(--card-anim-duration) * 1.5) var(--card-anim-easing);
 }
 
-/* Dynamic background images per card column */
-.unique-ecom-cards-section .col-lg-3:nth-child(1) .ecommerce-design-card {
-    background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?q=80&w=400&fit=max);
-}
-.unique-ecom-cards-section .col-lg-3:nth-child(2) .ecommerce-design-card {
-    background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?q=80&w=400&fit=max);
-}
-.unique-ecom-cards-section .col-lg-3:nth-child(3) .ecommerce-design-card {
-    background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?q=80&w=400&fit=max);
-}
-.unique-ecom-cards-section .col-lg-3:nth-child(4) .ecommerce-design-card {
-    background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?q=80&w=400&fit=max);
-}
-
-/* Dark Gradient Overlay */
-.unique-ecom-cards-section .ecommerce-design-card::after {
+/*/* Base black overlay for better text readability */
+.unique-ecom-cards-section .ecommerce-design-card::before {
     content: '';
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 200%;
-    pointer-events: none;
-    background-image: linear-gradient(
-        to bottom,
-        hsla(215, 30%, 10%, 0) 0%,
-        hsla(215, 30%, 10%, 0.05) 20%,
-        hsla(215, 30%, 10%, 0.45) 55%,
-        hsla(215, 30%, 10%, 0.9) 100%
-    );
-    transform: translateY(0);
-    transition: transform calc(var(--card-anim-duration) * 2) var(--card-anim-easing);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* Adjust opacity here (0.4 to 0.7) for desired darkness */
+    transition: background 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
     z-index: 1;
+    pointer-events: none;
 }
 
+/* Darker black overlay and optional scale effect on hover */
+.unique-ecom-cards-section .ecommerce-design-card:hover::before {
+    background: rgba(0, 0, 0, 0.75); /* Darker black shade when hovered */
+    transform: scale(1.05); /* Optional subtle zoom effect on the background image/overlay */
+}
+
+/* Ensure card content stays above the black overlay */
+.unique-ecom-cards-section .ecommerce-card-content {
+    position: relative;
+    z-index: 2;
+}
 .unique-ecom-cards-section .ecommerce-card-content {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Changed from center to left-align items */
+    align-items: flex-start;
+    /* Changed from center to left-align items */
     width: 100%;
     z-index: 2;
     transition: transform var(--card-anim-duration) var(--card-anim-easing);
     transform: translateY(calc(100% - 4.8rem));
 }
 
-.unique-ecom-cards-section .ecommerce-card-content > * + * {
+.unique-ecom-cards-section .ecommerce-card-content>*+* {
     margin-top: 0.85rem;
 }
 
@@ -2874,7 +2866,8 @@
     line-height: 1.3;
     color: #ffffff !important;
     margin: 0;
-    text-align: left; /* Ensure title text starts from the left */
+    text-align: left;
+    /* Ensure title text starts from the left */
     width: 100%;
 }
 
@@ -2893,7 +2886,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 7px;
-    color: #cbd5e1;
+    color: #fff;
 }
 
 .unique-ecom-cards-section .ecommerce-list-icon {
@@ -2904,11 +2897,11 @@
 
 /* Hover reveal interactions */
 @media (hover: hover) {
-    .unique-ecom-cards-section .ecommerce-card-content > *:not(.ecommerce-card-title) {
+    .unique-ecom-cards-section .ecommerce-card-content>*:not(.ecommerce-card-title) {
         opacity: 0;
         transform: translateY(1rem);
-        transition: transform var(--card-anim-duration) var(--card-anim-easing), 
-                    opacity var(--card-anim-duration) var(--card-anim-easing);
+        transition: transform var(--card-anim-duration) var(--card-anim-easing),
+            opacity var(--card-anim-duration) var(--card-anim-easing);
     }
 
     .unique-ecom-cards-section .ecommerce-design-card:hover,
@@ -2921,8 +2914,8 @@
         transform: translateY(0);
     }
 
-    .unique-ecom-cards-section .ecommerce-design-card:hover .ecommerce-card-content > *:not(.ecommerce-card-title),
-    .unique-ecom-cards-section .ecommerce-design-card:focus-within .ecommerce-card-content > *:not(.ecommerce-card-title) {
+    .unique-ecom-cards-section .ecommerce-design-card:hover .ecommerce-card-content>*:not(.ecommerce-card-title),
+    .unique-ecom-cards-section .ecommerce-design-card:focus-within .ecommerce-card-content>*:not(.ecommerce-card-title) {
         opacity: 1;
         transform: translateY(0);
         transition-delay: calc(var(--card-anim-duration) / 8);
@@ -2955,7 +2948,8 @@
 
 @media (max-width: 576px) {
     .unique-split-layout-section .product-page-features {
-        grid-template-columns: 1fr; /* Fallback to 1 column on very small screens */
+        grid-template-columns: 1fr;
+        /* Fallback to 1 column on very small screens */
     }
 }
 
@@ -2996,10 +2990,10 @@
 
 
 
- .split-showcase-image {
+.split-showcase-image {
     width: 100%;
     height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&fit=max');
+    background-image: url('/assets/img/Ecommerce/product-page-design.jpg');
     background-size: cover;
     background-position: center;
     transition: transform 600ms cubic-bezier(0.19, 1, 0.22, 1);

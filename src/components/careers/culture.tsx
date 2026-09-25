@@ -182,6 +182,7 @@ const CultureCard = ({
             style={{
               fontSize: "18px",
               fontWeight: "600",
+              fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
               color: "#1f2937",
               lineHeight: "1.3",
               margin: "0 0 8px 0",
@@ -193,7 +194,7 @@ const CultureCard = ({
           <p
             style={{
               color: "#6b7280",
-              fontSize: "14px",
+              fontSize: "15px !important",
               lineHeight: "1.5",
               margin: 0,
             }}

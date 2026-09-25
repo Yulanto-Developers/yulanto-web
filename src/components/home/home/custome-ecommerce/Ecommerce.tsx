@@ -1227,86 +1227,85 @@ function Ecommerce() {
                     </div>
                 </div>
             </div>
-            <div
-                data-aos="fade-right"
-                data-aos-delay={400}
-                data-aos-once={true}
-                className="px-about-6-area pt-40 pb-40 pb-lg-110 unique-ecom-cards-section"
-            >
-                <div className="container container-1550">
-                    <div className="row">
-
-                        <div className="col-12 mb-4">
-                            <span className="tp-section-subtitle text-black blink-ball">
-                                High-Converting E-commerce Homepage Design
+          <div
+            data-aos="fade-right"
+            data-aos-delay={400}
+            data-aos-once={true}
+            className="px-about-6-area pt-40 pb-40 pb-lg-110 unique-ecom-cards-section"
+        >
+            <div className="container container-1550">
+                <div className="row">
+                    <div className="col-12 mb-4">
+                        <span className="tp-section-subtitle text-black blink-ball">
+                            High-Converting E-commerce Homepage Design
+                        </span>
+                        <h4 className="px-about-title">
+                            <span className="text-blue-about">
+                                Ecommerce Homepage Design{" "}
                             </span>
-                            <h4 className="px-about-title">
-                                <span className="text-blue-about">
-                                    Ecommerce Homepage Design{" "}
-                                </span>
-                                That Makes a Strong First Impression
-                            </h4>
-                        </div>
+                            That Makes a Strong First Impression
+                        </h4>
+                    </div>
 
-                        <div className="col-md-12">
-                            <p className="text-figtree mb-5">
-                                Your homepage is often the first interaction customers
-                                have with your brand. Our ecommerce homepage design
-                                combines strong visuals, product highlights, promotional
-                                sections, trust elements, and clear calls-to-action to
-                                encourage visitors to explore your store.
-                            </p>
-                        </div>
+                    <div className="col-md-12">
+                        <p className="text-figtree mb-5">
+                            Your homepage is often the first interaction customers
+                            have with your brand. Our ecommerce homepage design
+                            combines strong visuals, product highlights, promotional
+                            sections, trust elements, and clear calls-to-action to
+                            encourage visitors to explore your store.
+                        </p>
+                    </div>
 
-                        {/* Homepage Design Cards */}
-                        {ecommerceHomepageCards.map((card, index) => (
-                            <div
-                                className="col-lg-3 col-md-6 mt-4"
-                                data-aos="fade-up"
-                                data-aos-delay={(index + 1) * 100}
-                                data-aos-once={true}
-                                key={card.title}
+                    {/* Homepage Design Cards */}
+                    {ecommerceHomepageCards.map((card, index) => (
+                        <div
+                            className="col-lg-3 col-md-6 mt-4"
+                            data-aos="fade-up"
+                            data-aos-delay={(index + 1) * 100}
+                            data-aos-once={true}
+                            key={card.title}
+                        >
+                            {/* Dynamically bind bgImage using inline style */}
+                            <div 
+                                className="ecommerce-design-card"
+                                style={{ backgroundImage: `url(${card.bgImage})` }}
                             >
-                                <div className="ecommerce-design-card">
-                                    <div className="ecommerce-card-content">
-                                        {/* Icon */}
+                                <div className="ecommerce-card-content">
+                                    {/* Title */}
+                                    <h5 className="ecommerce-card-title text-figtree">
+                                        {card.title}
+                                    </h5>
 
+                                    {/* Hover Image Preview Placeholder */}
+                                    <div className="ecommerce-card-image"></div>
 
-                                        {/* Title */}
-                                        <h5 className="ecommerce-card-title text-figtree">
-                                            {card.title}
-                                        </h5>
-
-                                        {/* Hover Image Preview (Appears smoothly between title and list) */}
-                                        <div className="ecommerce-card-image"></div>
-
-                                        {/* Items / Bullet Points */}
-                                        <ul className="ecommerce-card-list">
-                                            {card.items.map((item) => (
-                                                <li className="text-figtree" key={item}>
-                                                    <span className="ecommerce-list-icon">✓</span>
-                                                    {item}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
+                                    {/* Items / Bullet Points */}
+                                    <ul className="ecommerce-card-list">
+                                        {card.items.map((item) => (
+                                            <li className="text-figtree" key={item}>
+                                                <span className="ecommerce-list-icon">✓</span>
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
-                        ))}
-
-                        {/* Bottom Content */}
-                        <div className="col-12 mt-20">
-                            <p className="text-figtree">
-                                Our homepage design for ecommerce is structured to
-                                provide customers with a clear path from discovering
-                                your brand to browsing products and completing a
-                                purchase.
-                            </p>
                         </div>
+                    ))}
 
+                    {/* Bottom Content */}
+                    <div className="col-12 mt-20">
+                        <p className="text-figtree">
+                            Our homepage design for ecommerce is structured to
+                            provide customers with a clear path from discovering
+                            your brand to browsing products and completing a
+                            purchase.
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
             <div
                 data-aos="fade-right"
                 data-aos-delay={400}
@@ -1636,7 +1635,7 @@ function Ecommerce() {
 
                             <div className="portal-cta-image text-center">
                                 <img
-                                    src="assets/img/portal/8.Looking-for-a-Web-Portal-Development.jpg"
+                                    src="assets/img/Ecommerce/Responsive-E-commerce-Website-Design.jpg"
                                     alt="Web Portal Development Chennai"
                                     className="img-fluid w-100 "
                                     style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '450px', marginBottom: '20px' }}
@@ -1712,7 +1711,7 @@ function Ecommerce() {
                         <div className="col-lg-6">
                             <div className="portal-cta-image text-center">
                                 <img
-                                    src="assets/img/portal/8.Looking-for-a-Web-Portal-Development.jpg"
+                                    src="assets/img/Ecommerce/E-commerce-Website-Design.jpg"
                                     alt="Web Portal Development Chennai"
                                     className="img-fluid w-100"
                                     style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '450px' }}
@@ -2615,7 +2614,7 @@ function Ecommerce() {
 
                             <div className="portal-cta-image text-center">
                                 <img
-                                    src="assets/img/portal/8.Looking-for-a-Web-Portal-Development.jpg"
+                                    src="assets/img/Ecommerce/Build-an-e-Ecommerce-website.jpg"
                                     alt="Web Portal Development Chennai"
                                     className="img-fluid w-150 shadow-sm"
                                     style={{

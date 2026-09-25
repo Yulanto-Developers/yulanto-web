@@ -156,45 +156,10 @@ export const ecommerceDesignCards = [
 
 
 
-
 export const ecommerceHomepageCards = [
     {
         title: "Storefront Essentials",
-        bgImage: "/assets/img/about/portal-feature-img.png", // Unique background image for card 1
-        icon: React.createElement(
-            "svg",
-            {
-                width: 28,
-                height: 28,
-                viewBox: "0 0 24 24",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-            },
-            React.createElement("path", {
-                d: "M4 10L5.5 4H18.5L20 10",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-            }),
-            React.createElement("path", {
-                d: "M4 10V19H20V10",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-                strokeLinejoin: "round",
-            }),
-            React.createElement("path", {
-                d: "M3 10C3 11.7 4.3 13 6 13C7.7 13 9 11.7 9 10C9 11.7 10.3 13 12 13C13.7 13 15 11.7 15 10C15 11.7 16.3 13 18 13C19.7 13 21 11.7 21 10",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-                strokeLinecap: "round",
-            }),
-            React.createElement("path", {
-                d: "M9 19V15H15V19",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-            })
-        ),
+        bgImage: "/assets/img/Ecommerce/Build-an-e-Ecommerce-website.jpg",
         items: [
             "Hero banners",
             "Featured products",
@@ -203,42 +168,7 @@ export const ecommerceHomepageCards = [
     },
     {
         title: "Product Discovery",
-        bgImage: "/assets/img/about/directory-portal.png", // Unique background image for card 2
-        icon: React.createElement(
-            "svg",
-            {
-                width: 28,
-                height: 28,
-                viewBox: "0 0 24 24",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-            },
-            React.createElement("circle", {
-                cx: 10.5,
-                cy: 10.5,
-                r: 6.5,
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-            }),
-            React.createElement("path", {
-                d: "M16 16L21 21",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-                strokeLinecap: "round",
-            }),
-            React.createElement("path", {
-                d: "M7.5 10.5H13.5",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-                strokeLinecap: "round",
-            }),
-            React.createElement("path", {
-                d: "M10.5 7.5V13.5",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-                strokeLinecap: "round",
-            })
-        ),
+        bgImage: "/assets/img/Ecommerce/2.Product-Discovery.jpg",
         items: [
             "Best-selling products",
             "Category navigation",
@@ -247,30 +177,7 @@ export const ecommerceHomepageCards = [
     },
     {
         title: "Brand & Trust",
-        bgImage: "/assets/img/about/real-estate-portal.png", // Unique background image for card 3
-        icon: React.createElement(
-            "svg",
-            {
-                width: 28,
-                height: 28,
-                viewBox: "0 0 24 24",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-            },
-            React.createElement("path", {
-                d: "M12 3L19 6V11C19 15.5 16.2 19 12 21C7.8 19 5 15.5 5 11V6L12 3Z",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-                strokeLinejoin: "round",
-            }),
-            React.createElement("path", {
-                d: "M8.5 12L11 14.5L15.5 9.5",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-            })
-        ),
+        bgImage: "/assets/img/Ecommerce/3.Brand-Trust.jpg",
         items: [
             "Customer reviews",
             "Brand highlights",
@@ -279,35 +186,7 @@ export const ecommerceHomepageCards = [
     },
     {
         title: "Engagement & Promotion",
-        bgImage: "/assets/img/about/portal-cta.png", // Unique background image for card 4
-        icon: React.createElement(
-            "svg",
-            {
-                width: 28,
-                height: 28,
-                viewBox: "0 0 24 24",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-            },
-            React.createElement("path", {
-                d: "M4 4H20V16H14L10 20V16H4V4Z",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-                strokeLinejoin: "round",
-            }),
-            React.createElement("path", {
-                d: "M8 9H16",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-                strokeLinecap: "round",
-            }),
-            React.createElement("path", {
-                d: "M8 12H13",
-                stroke: "currentColor",
-                strokeWidth: 1.8,
-                strokeLinecap: "round",
-            })
-        ),
+        bgImage: "/assets/img/Ecommerce/4.Engagement-Promotion.jpg",
         items: [
             "Promotional sections",
             "Newsletter signup",
