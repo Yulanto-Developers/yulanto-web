@@ -206,7 +206,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/Brochure-Design-Company",
+    path: "/brochure-design-company",
     title: "Brochure & Company Profile Design",
  
     currentPage: "Brochure & Company Profile Design",
@@ -228,7 +228,7 @@ const data = [
   },
  
   {
-    path: "/Packaging-Design-Agency",
+    path: "/packaging-design-agency",
     title: " Packaging Design",
  
     currentPage: " Packaging Design",
@@ -236,7 +236,7 @@ const data = [
   },
  
   {
-    path: "/Creative-Social-Media-Post-Design-Company",
+    path: "/creative-social-media-post-design-company",
     title: "Social Media Creative Designs",
  
     currentPage: "Social Media Creative Designs",
