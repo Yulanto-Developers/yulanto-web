@@ -7,12 +7,14 @@ import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import web_development from '@/assets/img/pop/vetor-1.png'
+import web_development from "@/assets/img/pop/vetor-1.png";
 
 import {
     faEnvelope,
     faPhone,
     faLocationDot,
+    faCircleExclamation,
+    faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 import PhoneInput from "react-phone-input-2";
@@ -28,7 +30,7 @@ export default function QuoteModal() {
 
     /* =========================================
        FORM STATE
-       ========================================= */
+    ========================================= */
 
     const [showRestForm, setShowRestForm] =
         useState(false);
@@ -38,6 +40,15 @@ export default function QuoteModal() {
         phone: false,
         email: false,
     });
+
+    const [shakeFields, setShakeFields] =
+        useState({
+            name: false,
+            phone: false,
+            email: false,
+            lookingFor: false,
+            captcha: false,
+        });
 
     const [formData, setFormData] = useState({
         name: "",
@@ -49,13 +60,13 @@ export default function QuoteModal() {
 
     /* =========================================
        DND STATE
-       ========================================= */
+    ========================================= */
 
     const [dnd, setDnd] = useState(false);
 
     /* =========================================
        CAPTCHA STATE
-       ========================================= */
+    ========================================= */
 
     const [captcha, setCaptcha] = useState({
         num1: 0,
@@ -71,8 +82,84 @@ export default function QuoteModal() {
         >("idle");
 
     /* =========================================
+       EMAIL VALIDATION
+    ========================================= */
+
+    const isValidEmail = (email: string) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(
+            email
+        );
+    };
+
+    /* =========================================
+       PHONE VALIDATION
+    ========================================= */
+
+    const isValidPhone = (phone: string) => {
+        const digits = phone.replace(/\D/g, "");
+
+        /*
+         * India +91
+         *
+         * Example:
+         * 919876543210
+         *
+         * Remove 91 and validate
+         * exactly 10 digits.
+         */
+
+        if (digits.startsWith("91")) {
+            const indianNumber =
+                digits.substring(2);
+
+            return /^[6-9]\d{9}$/.test(
+                indianNumber
+            );
+        }
+
+        return false;
+    };
+
+    /* =========================================
+       SHAKE FIELD
+    ========================================= */
+
+    const triggerShake = (
+        field:
+            | "name"
+            | "phone"
+            | "email"
+            | "lookingFor"
+            | "captcha"
+    ) => {
+        /*
+         * Reset first so animation can
+         * restart every time.
+         */
+
+        setShakeFields((prev) => ({
+            ...prev,
+            [field]: false,
+        }));
+
+        requestAnimationFrame(() => {
+            setShakeFields((prev) => ({
+                ...prev,
+                [field]: true,
+            }));
+        });
+
+        setTimeout(() => {
+            setShakeFields((prev) => ({
+                ...prev,
+                [field]: false,
+            }));
+        }, 450);
+    };
+
+    /* =========================================
        MAIL REQUEST
-       ========================================= */
+    ========================================= */
 
     const mailRequest = async (
         data: typeof formData
@@ -119,7 +206,7 @@ export default function QuoteModal() {
 
     /* =========================================
        MAIL MUTATION
-       ========================================= */
+    ========================================= */
 
     const {
         mutate,
@@ -129,7 +216,7 @@ export default function QuoteModal() {
 
         /* =====================================
            SUCCESS
-           ===================================== */
+        ===================================== */
 
         onSuccess: (data) => {
             console.log(
@@ -166,12 +253,20 @@ export default function QuoteModal() {
                 email: false,
             });
 
+            setShakeFields({
+                name: false,
+                phone: false,
+                email: false,
+                lookingFor: false,
+                captcha: false,
+            });
+
             setCaptchaStatus("idle");
         },
 
         /* =====================================
            ERROR
-           ===================================== */
+        ===================================== */
 
         onError: (error) => {
             console.error(
@@ -193,7 +288,7 @@ export default function QuoteModal() {
 
     /* =========================================
        GENERATE CAPTCHA
-       ========================================= */
+    ========================================= */
 
     const generateCaptcha = () => {
         const n1 =
@@ -218,7 +313,7 @@ export default function QuoteModal() {
 
     /* =========================================
        GENERATE CAPTCHA WHEN FULL FORM OPENS
-       ========================================= */
+    ========================================= */
 
     useEffect(() => {
         if (showRestForm) {
@@ -228,7 +323,7 @@ export default function QuoteModal() {
 
     /* =========================================
        LOAD DND + CHECK 2 HOUR EXPIRY
-       ========================================= */
+    ========================================= */
 
     useEffect(() => {
         const savedDnd =
@@ -299,7 +394,7 @@ export default function QuoteModal() {
 
     /* =========================================
        AUTO POPUP
-       ========================================= */
+    ========================================= */
 
     useEffect(() => {
         /*
@@ -402,7 +497,7 @@ export default function QuoteModal() {
 
     /* =========================================
        GREETING
-       ========================================= */
+    ========================================= */
 
     const getGreeting = () => {
         const hour =
@@ -421,7 +516,7 @@ export default function QuoteModal() {
 
     /* =========================================
        HANDLE FORM CHANGE
-       ========================================= */
+    ========================================= */
 
     const handleChange = (
         e: React.ChangeEvent<
@@ -440,18 +535,41 @@ export default function QuoteModal() {
             [name]: value,
         }));
 
-        // Remove only this field's error when the user enters a value.
-        if (value.trim() !== "" && (name === "email")) {
+        /*
+         * NAME
+         */
+
+        if (
+            name === "name" &&
+            value.trim() !== ""
+        ) {
             setErrors((prev) => ({
                 ...prev,
-                [name]: false,
+                name: false,
             }));
+        }
+
+        /*
+         * EMAIL
+         */
+
+        if (name === "email") {
+            if (
+                isValidEmail(
+                    value.trim()
+                )
+            ) {
+                setErrors((prev) => ({
+                    ...prev,
+                    email: false,
+                }));
+            }
         }
     };
 
     /* =========================================
        PHONE CHANGE
-       ========================================= */
+    ========================================= */
 
     const handlePhoneChange = (
         value: string
@@ -461,8 +579,12 @@ export default function QuoteModal() {
             phone: value,
         }));
 
-        // Remove phone error as soon as the user enters a value.
-        if (value.trim() !== "") {
+        /*
+         * Only remove the error when
+         * the phone number is actually valid.
+         */
+
+        if (isValidPhone(value)) {
             setErrors((prev) => ({
                 ...prev,
                 phone: false,
@@ -472,7 +594,7 @@ export default function QuoteModal() {
 
     /* =========================================
        DND HANDLER
-       ========================================= */
+    ========================================= */
 
     const handleDndChange = (
         e: React.ChangeEvent<HTMLInputElement>
@@ -520,7 +642,7 @@ export default function QuoteModal() {
 
     /* =========================================
        CAPTCHA CHANGE
-       ========================================= */
+    ========================================= */
 
     const handleCaptchaChange = (
         e: React.ChangeEvent<HTMLInputElement>
@@ -547,12 +669,18 @@ export default function QuoteModal() {
             setCaptchaStatus(
                 "incorrect"
             );
+
+            /*
+             * SHAKE CAPTCHA WHEN INCORRECT
+             */
+
+            triggerShake("captcha");
         }
     };
 
     /* =========================================
        FORM SUBMIT
-       ========================================= */
+    ========================================= */
 
     const handleSubmit = (
         e: React.FormEvent
@@ -563,19 +691,59 @@ export default function QuoteModal() {
          * REQUIRED FIELD VALIDATION
          */
 
+        const nameInvalid =
+            formData.name.trim() === "";
+
+        const phoneInvalid =
+            !isValidPhone(
+                formData.phone
+            );
+
+        const emailInvalid =
+            !isValidEmail(
+                formData.email.trim()
+            );
+
+        const lookingForInvalid =
+            formData.lookingFor.trim() === "";
+
         const newErrors = {
-            name: formData.name.trim() === "",
-            phone: formData.phone.trim() === "",
-            email: formData.email.trim() === "",
+            name: nameInvalid,
+            phone: phoneInvalid,
+            email: emailInvalid,
         };
 
         setErrors(newErrors);
 
-        // Stop submission when any required field is empty.
+        /*
+         * SHAKE INVALID FIELDS
+         */
+
+        if (nameInvalid) {
+            triggerShake("name");
+        }
+
+        if (phoneInvalid) {
+            triggerShake("phone");
+        }
+
+        if (emailInvalid) {
+            triggerShake("email");
+        }
+
+        if (lookingForInvalid) {
+            triggerShake("lookingFor");
+        }
+
+        /*
+         * STOP SUBMISSION
+         */
+
         if (
-            newErrors.name ||
-            newErrors.phone ||
-            newErrors.email
+            nameInvalid ||
+            phoneInvalid ||
+            emailInvalid ||
+            lookingForInvalid
         ) {
             return;
         }
@@ -591,6 +759,8 @@ export default function QuoteModal() {
             setCaptchaStatus(
                 "incorrect"
             );
+
+            triggerShake("captcha");
 
             toast.error(
                 "Please enter the correct security answer.",
@@ -612,7 +782,7 @@ export default function QuoteModal() {
 
     /* =========================================
        DON'T RENDER WHEN CLOSED
-       ========================================= */
+    ========================================= */
 
     if (!open) {
         return null;
@@ -620,15 +790,21 @@ export default function QuoteModal() {
 
     /* =========================================
        UI
-       ========================================= */
+    ========================================= */
 
     return (
         <div
             className="quote-modal-overlay"
             onClick={closeModal}
         >
-            {!showRestForm &&
-                <img src={web_development.src} className="" alt="web-desgin company in chennai" />}
+            {!showRestForm && (
+                <img
+                    src={web_development.src}
+                    className=""
+                    alt="web-desgin company in chennai"
+                />
+            )}
+
             <div
                 className="quote-modal-container"
                 onClick={(e) =>
@@ -671,7 +847,15 @@ export default function QuoteModal() {
                             NAME
                         ================================= */}
 
-                        <div className="floating-input name-input-wrapper">
+                        <div
+                            className={`floating-input name-input-wrapper ${errors.name
+                                    ? "input-error"
+                                    : ""
+                                } ${shakeFields.name
+                                    ? "input-shake"
+                                    : ""
+                                }`}
+                        >
                             <input
                                 id="name"
                                 name="name"
@@ -684,31 +868,50 @@ export default function QuoteModal() {
                                     handleChange
                                 }
                                 onFocus={() => {
-                                    setErrors((prev) => ({
-                                        ...prev,
-                                        name: false,
-                                    }));
+                                    setErrors(
+                                        (prev) => ({
+                                            ...prev,
+                                            name: false,
+                                        })
+                                    );
                                 }}
                                 onKeyDown={(
                                     e
                                 ) => {
-                                    if (e.key === "Enter") {
+                                    if (
+                                        e.key ===
+                                        "Enter"
+                                    ) {
                                         e.preventDefault();
 
-                                        if (formData.name.trim() === "") {
-                                            setErrors((prev) => ({
-                                                ...prev,
-                                                name: true,
-                                            }));
+                                        if (
+                                            formData.name.trim() ===
+                                            ""
+                                        ) {
+                                            setErrors(
+                                                (prev) => ({
+                                                    ...prev,
+                                                    name: true,
+                                                })
+                                            );
+
+                                            triggerShake(
+                                                "name"
+                                            );
+
                                             return;
                                         }
 
-                                        setErrors((prev) => ({
-                                            ...prev,
-                                            name: false,
-                                        }));
+                                        setErrors(
+                                            (prev) => ({
+                                                ...prev,
+                                                name: false,
+                                            })
+                                        );
 
-                                        setShowRestForm(true);
+                                        setShowRestForm(
+                                            true
+                                        );
                                     }
                                 }}
                             />
@@ -717,24 +920,47 @@ export default function QuoteModal() {
                                 Enter Your Name
                             </label>
 
+                            {errors.name && (
+                                <FontAwesomeIcon
+                                    icon={
+                                        faCircleExclamation
+                                    }
+                                    className="input-danger-icon"
+                                />
+                            )}
+
                             <button
                                 type="button"
                                 className="name-next-btn"
                                 onClick={() => {
-                                    if (formData.name.trim() === "") {
-                                        setErrors((prev) => ({
-                                            ...prev,
-                                            name: true,
-                                        }));
+                                    if (
+                                        formData.name.trim() ===
+                                        ""
+                                    ) {
+                                        setErrors(
+                                            (prev) => ({
+                                                ...prev,
+                                                name: true,
+                                            })
+                                        );
+
+                                        triggerShake(
+                                            "name"
+                                        );
+
                                         return;
                                     }
 
-                                    setErrors((prev) => ({
-                                        ...prev,
-                                        name: false,
-                                    }));
+                                    setErrors(
+                                        (prev) => ({
+                                            ...prev,
+                                            name: false,
+                                        })
+                                    );
 
-                                    setShowRestForm(true);
+                                    setShowRestForm(
+                                        true
+                                    );
                                 }}
                                 style={{
                                     fontSize:
@@ -749,20 +975,6 @@ export default function QuoteModal() {
                             >
                                 Enter
                             </button>
-
-                            {errors.name && (
-                                <span
-                                    className="field-error"
-                                    style={{
-                                        display: "block",
-                                        marginTop: "4px",
-                                        color: "#ef4444",
-                                        fontSize: "12px",
-                                    }}
-                                >
-                                    Please fill the details
-                                </span>
-                            )}
                         </div>
 
                         {/* =================================
@@ -849,7 +1061,15 @@ export default function QuoteModal() {
                                     PHONE
                                 ================================= */}
 
-                                <div className="floating-input phone-input-wrapper">
+                                <div
+                                    className={`floating-input phone-input-wrapper ${errors.phone
+                                            ? "input-error"
+                                            : ""
+                                        } ${shakeFields.phone
+                                            ? "input-shake"
+                                            : ""
+                                        }`}
+                                >
                                     <PhoneInput
                                         country="in"
                                         value={
@@ -859,21 +1079,22 @@ export default function QuoteModal() {
                                             handlePhoneChange
                                         }
                                         inputProps={{
-                                            required: false,
+                                            required:
+                                                false,
                                             name: "phone",
                                             id: "phone",
                                         }}
                                         onFocus={() => {
-                                            setErrors((prev) => ({
-                                                ...prev,
-                                                phone: false,
-                                            }));
+                                            setErrors(
+                                                (prev) => ({
+                                                    ...prev,
+                                                    phone: false,
+                                                })
+                                            );
                                         }}
-
                                         enableSearch
                                         placeholder="Enter Phone Number"
                                         inputStyle={{
-
                                             width:
                                                 "100%",
                                             height:
@@ -892,17 +1113,12 @@ export default function QuoteModal() {
                                     />
 
                                     {errors.phone && (
-                                        <span
-                                            className="field-error"
-                                            style={{
-                                                display: "block",
-                                                marginTop: "4px",
-                                                color: "#ef4444",
-                                                fontSize: "12px",
-                                            }}
-                                        >
-                                            Please fill the details
-                                        </span>
+                                        <FontAwesomeIcon
+                                            icon={
+                                                faCircleExclamation
+                                            }
+                                            className="input-danger-icon phone-danger-icon"
+                                        />
                                     )}
                                 </div>
 
@@ -910,7 +1126,15 @@ export default function QuoteModal() {
                                     EMAIL
                                 ================================= */}
 
-                                <div className="floating-input">
+                                <div
+                                    className={`floating-input ${errors.email
+                                            ? "input-error"
+                                            : ""
+                                        } ${shakeFields.email
+                                            ? "input-shake"
+                                            : ""
+                                        }`}
+                                >
                                     <input
                                         type="email"
                                         id="email"
@@ -923,10 +1147,12 @@ export default function QuoteModal() {
                                             handleChange
                                         }
                                         onFocus={() => {
-                                            setErrors((prev) => ({
-                                                ...prev,
-                                                email: false,
-                                            }));
+                                            setErrors(
+                                                (prev) => ({
+                                                    ...prev,
+                                                    email: false,
+                                                })
+                                            );
                                         }}
                                     />
 
@@ -935,17 +1161,12 @@ export default function QuoteModal() {
                                     </label>
 
                                     {errors.email && (
-                                        <span
-                                            className="field-error"
-                                            style={{
-                                                display: "block",
-                                                marginTop: "4px",
-                                                color: "#ef4444",
-                                                fontSize: "12px",
-                                            }}
-                                        >
-                                            Please fill the details
-                                        </span>
+                                        <FontAwesomeIcon
+                                            icon={
+                                                faCircleExclamation
+                                            }
+                                            className="input-danger-icon"
+                                        />
                                     )}
                                 </div>
 
@@ -953,7 +1174,14 @@ export default function QuoteModal() {
                                     LOOKING FOR
                                 ================================= */}
 
-                                <div className="floating-input">
+                                <div
+                                    className={`floating-input ${
+                                        !formData.lookingFor &&
+                                        shakeFields.lookingFor
+                                            ? "input-error input-shake"
+                                            : ""
+                                    }`}
+                                >
                                     <select
                                         id="lookingFor"
                                         name="lookingFor"
@@ -973,16 +1201,12 @@ export default function QuoteModal() {
                                             Select Option
                                         </option>
 
+                                        <option value="Website Deign">
+                                            Website Deign
+                                        </option>
+
                                         <option value="Landing Page">
                                             Landing Page
-                                        </option>
-
-                                        <option value="Website Re-Design">
-                                            Website Re-Design
-                                        </option>
-
-                                        <option value="Website Maintenance">
-                                            Website Maintenance
                                         </option>
 
                                         <option value="Web Development">
@@ -1011,6 +1235,14 @@ export default function QuoteModal() {
 
                                         <option value="Google Ads">
                                             Google Ads
+                                        </option>
+
+                                        <option value="Website Re-Design">
+                                            Website Re-Design
+                                        </option>
+
+                                        <option value="Website Maintenance">
+                                            Website Maintenance
                                         </option>
                                     </select>
 
@@ -1087,7 +1319,15 @@ export default function QuoteModal() {
                                     </label>
 
                                     <div
-                                        className="floating-input captcha-input"
+                                        className={`floating-input captcha-input ${
+                                            captchaStatus ===
+                                            "incorrect"
+                                                ? "input-error input-shake"
+                                                : captchaStatus ===
+                                                    "correct"
+                                                    ? "input-success"
+                                                    : ""
+                                        }`}
                                         style={{
                                             marginBottom:
                                                 "0",
@@ -1116,6 +1356,26 @@ export default function QuoteModal() {
                                                             : undefined,
                                             }}
                                         />
+
+                                        {captchaStatus ===
+                                            "correct" && (
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faCircleCheck
+                                                    }
+                                                    className="input-success-icon"
+                                                />
+                                            )}
+
+                                        {captchaStatus ===
+                                            "incorrect" && (
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faCircleExclamation
+                                                    }
+                                                    className="input-danger-icon captcha-danger-icon"
+                                                />
+                                            )}
 
                                         <label htmlFor="mathCaptcha">
                                             Enter Answer
@@ -1329,9 +1589,8 @@ export default function QuoteModal() {
                             Your Digital Success
                             Starts Here
                         </h2>
-                        {
-                            showRestForm &&
 
+                        {showRestForm && (
                             <p className="text-figtree text-white mt-2 opacity-75">
                                 Tell us about your project
                                 or business requirements.
@@ -1339,7 +1598,7 @@ export default function QuoteModal() {
                                 team will contact you
                                 within 24 hours.
                             </p>
-                        }
+                        )}
                     </div>
                 </div>
             </div>
