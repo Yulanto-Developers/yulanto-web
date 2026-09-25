@@ -8,6 +8,7 @@ interface ServiceCard {
   title: string;
   description: string;
   imageUrl: string;
+  alt?:string;
 }
 
 const servicesData: ServiceCard[] = [
@@ -17,6 +18,7 @@ const servicesData: ServiceCard[] = [
       "Corporate and company websites designed to establish credibility and generate enquiries.",
     imageUrl:
       "/assets/img/AI/AI-Assisted-Websites-1.jpg",
+      alt:'AI Website Creator'
   },
   {
     title: "Landing Pages",
@@ -24,6 +26,7 @@ const servicesData: ServiceCard[] = [
       "High-converting landing pages for campaigns, products and services.",
     imageUrl:
       "/assets/img/AI/AI-Assisted-Websites-2.jpg",
+      alt:'AI Website Builder'
   },
   {
     title: "Portfolio Websites",
@@ -31,6 +34,7 @@ const servicesData: ServiceCard[] = [
       "Modern websites for agencies, creatives, professionals and personal brands.",
     imageUrl:
       "/assets/img/AI/AI-Assisted-Websites-3.jpg",
+      alt:'ai powered website builder'
   },
   {
     title: "Startup Websites",
@@ -38,6 +42,7 @@ const servicesData: ServiceCard[] = [
       "Fast-moving websites for startups that need to launch and iterate quickly.",
     imageUrl:
       "/assets/img/AI/AI-Assisted-Websites-4.jpg",
+       alt:'AI Website Builder chennai'
   },
   {
     title: "Service Websites",
@@ -45,6 +50,7 @@ const servicesData: ServiceCard[] = [
       "Conversion-focused websites for businesses offering multiple services.",
     imageUrl:
       "/assets/img/AI/AI-Assisted-Websites-5.jpg",
+      alt:'AI Website Creator Company'
   },
   {
     title: "Campaign Websites",
@@ -52,6 +58,7 @@ const servicesData: ServiceCard[] = [
       "Short-term campaign and promotional websites that need to go live quickly.",
     imageUrl:
       "/assets/img/AI/AI-Assisted-Websites-6.jpg",
+       alt:'AI Website Creator Company chennai'
   },
 ];
 
@@ -171,7 +178,7 @@ export const BusinessWebsitesSection: React.FC = () => {
             >
               <img
                 src={card.imageUrl}
-                alt={card.title}
+                alt={card.alt}
                 className="service-card-image"
               />
               <div className="service-card-overlay">

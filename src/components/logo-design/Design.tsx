@@ -100,6 +100,12 @@ export const LogoTypesSection = () => {
                 <span className="text-blue-about">Choose a Logo Style </span>
                 That Fits Your Brand
               </h4>
+               <h1 className="ft-23 mt-0 mb-3 text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"  style={{ lineHeight: "1.2" }}
+                >
+                logo designers in chennai 
+                </h1>
               <p className="text-figtree text-black mt-2">
                 Different businesses require different visual identities. Our logo designers in Chennai can help you select a logo style that suits your business and branding objectives.
               </p>

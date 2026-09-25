@@ -8,6 +8,7 @@ interface FeatureItem {
   description: string;
   icon: string;
   image: string;
+  alt: string;
 }
 
 const featuresList: FeatureItem[] = [
@@ -18,6 +19,7 @@ const featuresList: FeatureItem[] = [
       "We develop designs that are visually appealing while keeping your business objectives in focus.",
     icon: "fa-solid fa-lightbulb",
     image: "/assets/img/flyerposter/Flyers-&-Posters-1.jpg",
+    alt: "poster design company in chennai",
   },
   {
     id: 1,
@@ -26,6 +28,7 @@ const featuresList: FeatureItem[] = [
       "Your logo, brand colors, typography, images, and messaging are incorporated consistently across every design.",
     icon: "fa-solid fa-palette",
     image: "/assets/img/flyerposter/Flyers-&-Posters-2.jpg",
+    alt: "poster design company chennai",
   },
   {
     id: 2,
@@ -34,6 +37,7 @@ const featuresList: FeatureItem[] = [
       "We organize content strategically so your audience can understand your message quickly.",
     icon: "fa-solid fa-bullhorn",
     image: "/assets/img/flyerposter/Flyers-&-Posters-3.jpg",
+    alt: "flyers and brochures design company",
   },
   {
     id: 3,
@@ -42,6 +46,7 @@ const featuresList: FeatureItem[] = [
       "Our designs are created with attention to layout, typography, imagery, spacing, and visual hierarchy.",
     icon: "fa-solid fa-award",
     image: "/assets/img/flyerposter/Flyers-&-Posters-3.jpg",
+    alt: "flyers design company",
   },
   {
     id: 4,
@@ -50,6 +55,7 @@ const featuresList: FeatureItem[] = [
       "Get designs optimized for printing, websites, social media, WhatsApp, email campaigns, and other digital platforms.",
     icon: "fa-solid fa-layer-group",
     image: "/assets/img/flyerposter/Flyers-&-Posters-1.jpg",
+    alt: "brochures design company",
   },
 ];
 
@@ -117,7 +123,7 @@ export default function WhyChooseFlyerPoster() {
                   >
                     <img
                       src={featuresList[2].image}
-                      alt={featuresList[2].title}
+                      alt={featuresList[2].alt}
                       style={{
                         width: "100%",
                         height: "100%",

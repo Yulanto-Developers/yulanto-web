@@ -175,7 +175,7 @@ export function RotatingIndustriesSection() {
                   <img
                     key={index}
                     src={imgUrl}
-                    alt={`Center Slide ${index + 1}`}
+                    alt={`Packaging Design Agency ${index + 1}`}
                     style={{
                       width: "100%",
                       height: "100%",

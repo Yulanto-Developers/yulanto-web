@@ -726,3 +726,90 @@ export const faqDataSocialMediaPage = [
       "Yes. All our social media designs are customized based on your brand, industry, target audience, campaign goals, and content requirements. We do not use generic templates.",
   },
 ] as const;
+
+export const faqDataaeoPage = [
+  {
+    question: "What is AEO?",
+    answer:
+      "AEO stands for Answer Engine Optimization. It is the process of creating and structuring website content so search engines and answer systems can better understand and use the information when responding to relevant questions.",
+  },
+  {
+    question: "Is AEO the same as SEO?",
+    answer:
+      "No. AEO and SEO overlap, but they have different focuses. SEO broadly improves search visibility, while AEO emphasizes clear answers to questions and making information easy for answer systems to understand.",
+  },
+  {
+    question: "Does AEO replace SEO?",
+    answer:
+      "No. AEO should generally be implemented alongside SEO. Technical SEO, useful content, internal links, authority and other SEO fundamentals remain important.",
+  },
+  {
+    question: "Can AEO help my website appear in AI search results?",
+    answer:
+      "AEO can make your content easier for AI-powered search systems to understand and potentially reference. However, no agency can guarantee that a particular website will be cited or selected by an AI system.",
+  },
+  {
+    question: "Do I need FAQ pages for AEO?",
+    answer:
+      "FAQs can be useful when they answer genuine customer questions. However, AEO is broader than FAQs and includes content structure, search intent, entities, internal linking, structured data, expertise and technical accessibility.",
+  },
+  {
+    question: "Does schema markup guarantee AEO results?",
+    answer:
+      "No. Structured data helps search engines understand eligible content, but it does not guarantee rankings, AI citations or specific search features.",
+  },
+  {
+    question: "How long does AEO take to show results?",
+    answer:
+      "There is no fixed timeframe. Results depend on factors such as website authority, competition, content quality, technical health, search demand and how frequently search systems crawl and update information.",
+  },
+] as const;
+
+
+export const faqDataAIAssPage = [
+  {
+    question: "Is the website completely created by AI?",
+    answer:
+      "No. We use AI-assisted tools throughout the workflow, but our designers and developers control the creative direction, implementation and final quality.",
+  },
+  {
+    question: "Will my website look like an AI-generated template?",
+    answer:
+      "No. AI is used to accelerate exploration and production. The final design is customized around your brand, audience and business objectives.",
+  },
+  {
+    question: "Can you use my existing branding?",
+    answer:
+      "Yes. We can work with your existing logo, colors, typography, imagery and brand guidelines.",
+  },
+  {
+    question: "Will the website be mobile responsive?",
+    answer:
+      "Yes. Responsive design is part of our standard website development process.",
+  },
+  {
+    question: "Will my website be SEO friendly?",
+    answer:
+      "We build websites with SEO-friendly structure and technical best practices. SEO performance itself also depends on content, competition and ongoing optimization.",
+  },
+  {
+    question: "Will AI write all of my website content?",
+    answer:
+      "AI can assist with content ideation and drafts, but we refine the content to match your brand, audience and goals.",
+  },
+  {
+    question: "Can you redesign my existing website using AI?",
+    answer:
+      "Yes. AI-assisted tools can help us analyze, explore and redesign existing websites while preserving the important parts of your brand and business.",
+  },
+  {
+    question: "How quickly can you build an AI-assisted website?",
+    answer:
+      "The timeline depends on the scope, number of pages, content requirements and functionality. AI can significantly reduce repetitive production time, but quality and complexity still determine the final timeline.",
+  },
+  {
+    question: "Can I request changes?",
+    answer:
+      "Absolutely. Your website goes through the same review and revision process as our other website projects.",
+  },
+] as const;

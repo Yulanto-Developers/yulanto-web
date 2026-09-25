@@ -51,6 +51,7 @@ export default function Services() {
               <h4 className="px-about-title mb-20 text-center">
                 <span className="text-blue-about">How We Implement AEO </span>on Your Website
               </h4>
+              
             </div>
           </div>
         </div>
@@ -129,7 +130,7 @@ export default function Services() {
             <div className="px-about-img-box mb-3 pDiv">
               <img
                 src="/assets/img/aeo/cricle.jpg"
-                alt="AEO Implementation"
+                alt="AEO Implementation appears in AI search results"
                 className="img-fluid"
               />
             </div>

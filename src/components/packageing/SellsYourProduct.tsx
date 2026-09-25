@@ -125,7 +125,7 @@ export function SingleImagePackagingSection() {
             <div className="single-image-wrapper">
               <img
                 src="assets/img/package/last-img.jpg"
-                alt="Package Design Showcase"
+                alt="Package Design Company in Chennai"
               />
             </div>
           </div>

@@ -72,6 +72,12 @@ export function AeoVsSeoTable() {
               <h4 className="px-about-title mb-20">
                 <span className="text-blue-about">SEO vs AEO: What's </span>the Difference?
               </h4>
+               <h1 className="ft-23 mt-0 mb-3 text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"  style={{ lineHeight: "1.2" }}
+                >
+                Answer Engine Optimization Services
+                </h1>
               <p className="text-figtree text-black mt-2">
                While traditional SEO drives website discoverability through rankings, Answer Engine Optimization (AEO) ensures your brand directly delivers exact answers across modern AI platforms and zero-click search systems.
               </p>

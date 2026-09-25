@@ -144,7 +144,7 @@ As a logo design company in Chennai, we combine creativity, strategic thinking, 
                 >
                   <img
                     src={card.image}
-                    alt={`Card ${card.id}`}
+                    alt={`logo design company`}
                     style={imageStyle}
                   />
                 </div>

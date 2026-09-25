@@ -14,7 +14,7 @@ export default function FutureSearchSection() {
             <div className="px-about-img-box rounded-4 overflow-hidden">
               <img
                 src="/assets/img/aeo/aeo-work.jpg"
-                alt="Make Your Website Ready for the Future of Search"
+                alt="Answer Engine Optimization Services in chennai"
                 className="img-fluid w-100 object-fit-cover"
                 style={{ borderRadius: '16px', height: '350px' }}
               />

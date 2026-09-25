@@ -15,6 +15,17 @@ const heroImages = [
     
 ];
 
+const heroAlt = [
+    'flyers and brochures design',
+    'brochure flyer design',
+    'catalog flyer',
+    'design flyer brochure business card banner design',
+    'digital printing flyer',
+    'flyers and brochures design company',
+    'flyers and brochures design company in chennai',
+    
+];
+
 
 import type { Metadata } from "next";
 import { generateSeo } from "@/lib/seo";
@@ -63,7 +74,8 @@ export default function Page() {
 
 As a creative graphic design company in Chennai, we design flyers and posters that combine attractive visuals, clear messaging, strong branding, and compelling layouts to capture attention and encourage action."
 
-                images={heroImages}
+                images={heroImages} alt={heroAlt}
+
             />
             <PackagingServices />
            

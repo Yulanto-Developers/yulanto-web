@@ -48,6 +48,12 @@ export default function FlyerPosterServices() {
                   <span className="text-blue-about">Creative Flyer Design </span>
                   for Powerful Promotions
                 </h4>
+                 <h1 className="ft-23 mt-0 mb-3 text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"  style={{ lineHeight: "1.2" }}
+                >
+                Advertisement Poster Design And Flyers Maker
+                </h1>
                 <p className="text-figtree mt-2 ">
                   A well-designed flyer can communicate your offer quickly and effectively. Our flyer designers in Chennai create customized designs for digital promotions, print campaigns, product launches, business offers, events, and marketing campaigns.
                   <br /><br />
@@ -98,7 +104,7 @@ export default function FlyerPosterServices() {
                 >
                   <img
                     src="/assets/img/flyerposter/Creative-Flyer-Design.jpg"
-                    alt="Creative Flyer Design Showcase"
+                    alt="Flyer Design Company in Chennai"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -165,7 +171,7 @@ export default function FlyerPosterServices() {
                 >
                   <img
                     src="/assets/img/flyerposter/Professional-Poster.jpg"
-                    alt="Professional Poster Design Showcase"
+                    alt="graphic design agency"
                     style={{
                       width: "100%",
                       height: "100%",
