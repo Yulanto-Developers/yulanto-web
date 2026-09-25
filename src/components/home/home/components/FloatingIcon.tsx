@@ -38,7 +38,7 @@ function FloatingActions({
       `}</style>
       {/* WhatsApp Button */}
       <a
-        href='tel:+919962157250'
+        href='https://wa.me/919962157250'
         target="_blank"
         rel="noopener noreferrer"
         className="btn btn-success d-flex align-items-center justify-content-center rounded-circle shadow-lg border-0"

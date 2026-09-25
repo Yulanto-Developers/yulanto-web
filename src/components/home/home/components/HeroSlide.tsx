@@ -11,8 +11,8 @@ export const heroSlides = [
     { title: "We start by listening closely to your goals, ensuring you feel understood from day one.", subtitle: "Leading Web Design Company in Chennai for Business Growth.", img: "/assets/img/banner/mobile/img-1.jpg", head: "Make an Enquiry" },
     { title: "Every detail is noted and aligned with your vision, so nothing important is ever missed.", subtitle: "Awesome Website Creation in Chennai For Your Business", img: "/assets/img/banner/mobile/img-2.jpg", head: "Increase Sales" },
     { title: "Our experts turn your ideas into seamless web solutions that drive your business success.", subtitle: "Website Development Company in Chennai for Startups, SMEs & Corporates.", img: "/assets/img/banner/mobile/img-3.jpg", head: "Gather Requirements" },
-    { title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.", img: "/assets/img/banner/mobile/img-4.jpg", head: "Write the code" },
-    { title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.", img: "/assets/img/banner/mobile/img-5.jpg", head: "Design the website" },
+    { title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Top-Rated Web Design Company in Chennai for Every Business.", img: "/assets/img/banner/mobile/img-4.jpg", head: "Write the Code" },
+    { title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.", img: "/assets/img/banner/mobile/img-5.jpg", head: "Design the Website" },
     { title: "Our commitment is to a long-term partnership that supports your business growth.", subtitle: "Custom Website creations company for Growing Businesses in Chennai", img: "/assets/img/banner/mobile/img-6.jpg", head: "Continuous Success" },
 ];
 
