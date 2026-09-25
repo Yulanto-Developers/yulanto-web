@@ -54,7 +54,7 @@ export default function ReactServicesHero() {
         <section
             className="px-about-6-area pt-40 pb-40 pb-lg-110"
             style={{ 
-                backgroundColor: "#f5f5f5", overflowX:"hidden",OverflowY:"hidden"
+                backgroundColor: "#f5f5f5", overflowX:"hidden",overflowY:"hidden"
             
             }}
         >
