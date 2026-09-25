@@ -60,36 +60,36 @@ export const lightMenu: MenuItem[] = [
         label: "CMS & E-commerce", href: "/",
         sublabel: 'CMS & E-commerce Development',
         subLinks: [
-          { label: "WordPress Development", href: "/WordPress-Development" },
-          { label: "WooCommerce Development", href: "/WooCommerce-Development" },
-          { label: "Shopify E-commerce Development", href: "/Shopify-E-commerce-Development" },
-          { label: "Portal Web Development", href: "/portal-web-development" },
-          { label: "Custom E-commerce Development", href: "/custome-ecommerce-development" },
+          { label: "WordPress Development", href: "/wordpress-development-company-in-Chennai" },
+          { label: "WooCommerce Development", href: "/e-commerce-website-development-in-chennai" },
+          { label: "Shopify E-commerce Development", href: "/shopify-development-company-in-chennai" },
+          { label: "Portal Web Development", href: "/portal-development-services" },
+          { label: "Custom E-commerce Development", href: "/ecommerce-website-development-company" },
         ]
       },
       {
         label: "Graphic Design", href: "/",
         subLinks: [
-          { label: "Logo Design & Branding", href: "/logo-design&branding" },
-          { label: "Brochure & Company Profile Design", href: "/company-profile-design" },
+          { label: "Logo Design & Branding", href: "/logo-design-branding" },
+          { label: "Brochure & Company Profile Design", href: "/Brochure-Design-Company" },
           { label: "Flyer & Poster Design", href: "/flyer-poster-design" },
-          { label: "Packaging Design", href: "/Packaging-Design" },
-          { label: "Social Media Creative Design", href: "/Social-Media-Creative-Design" },
+          { label: "Packaging Design", href: "/Packaging-Design-Agency" },
+          { label: "Social Media Creative Design", href: "/Creative-Social-Media-Post-Design-Company" },
 
         ]
       },
       {
         label: "Digital Marketing", href: "/",
         subLinks: [
-          { label: "Search Engine Optimization (SEO)", href: "/seo" },
-          { label: "Google Ads Management (PPC)", href: "/ads" },
-          { label: "Social Media Marketing", href: "/media_marketing" },
-          { label: "OFF Page SEO", href: "/offpageseo" },
-          { label: "Answer Engine Optimization (AEO)", href: "/aeo" },
+          { label: "Search Engine Optimization (SEO)", href: "/seo-company-in-chennai" },
+          { label: "Google Ads Management (PPC)", href: "/google-ads-agency-in-chennai" },
+          { label: "Social Media Marketing", href: "/social-media-marketing-agency-in-chennai" },
+          { label: "OFF Page SEO", href: "/seo-agencies-in-chennai" },
+          { label: "Answer Engine Optimization (AEO)", href: "/answer-engine-optimization-services" },
         ]
       },
       {
-        label: "AI-Enhanced Web Design", href: "/AI-assisted-website",
+        label: "AI-Enhanced Web Design", href: "/create-website-using-ai",
         // subLinks: [
         //   { label: "Search Engine Optimization (SEO)", href: "/seo" },
         //   { label: "Google Ads Management (PPC)", href: "/ads" },
@@ -108,10 +108,10 @@ export const lightMenu: MenuItem[] = [
     href: "#",
     active: false,
     links: [
-      { label: "Recent Projects", href: "/recent-project" },
-      { label: "Portfolio", href: "/portfolio" },
+      { label: "Recent Projects", href: "/recent-projects" },
+      { label: "Portfolio", href: "/our-portfolio" },
       { label: "Case Studies", href: "/case-studies" },
-      { label: "Industries We Serve", href: "/industry-we-serve" },
+      { label: "Industries We Serve", href: "/yulanto-works" },
       // { label: "Industry Wise", href: "/" },
     ],
   },

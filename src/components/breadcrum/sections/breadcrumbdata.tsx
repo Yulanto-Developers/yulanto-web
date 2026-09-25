@@ -37,7 +37,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/clients",
+    path: "/our-clients",
     title: "Our Clients",
     currentPage: "Our Clients",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
@@ -55,20 +55,20 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/recent-project",
+    path: "/recent-projects",
     title: "Recent Projects",
     currentPage: "Recent Projects",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg", // Change to your image
  
   },
   {
-    path: "/portfolio",
+    path: "/our-portfolio",
     title: "Portfolio",
     currentPage: "Portfolio",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/industry-we-serve",
+    path: "/yulanto-works",
     title: "Industry We Serve",
     currentPage: "Industry We Serve",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
@@ -80,20 +80,20 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/seo",
+    path: "/seo-company-in-chennai",
     title: "Search Engine Optimization",
     currentPage: "SEO",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
  
   {
-    path: "/offpageseo",
+    path: "/seo-agencies-in-chennai",
     title: "Off Page Seo",
     currentPage: "Off Page Seo",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/ads",
+    path: "/google-ads-agency-in-chennai",
     title: "Google Ads Management",
     currentPage: "Google Ads Management",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
@@ -111,7 +111,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/media_marketing",
+    path: "/social-media-marketing-agency-in-chennai",
     title: " Social Media Marketing",
     currentPage: " Social Media Marketing",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
@@ -199,14 +199,14 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/logo-design&branding",
+    path: "/logo-design-branding",
     title: " Logo Design & Branding",
  
     currentPage: "Logo Design & Branding",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/company-profile-design",
+    path: "/Brochure-Design-Company",
     title: "Brochure & Company Profile Design",
  
     currentPage: "Brochure & Company Profile Design",
@@ -228,7 +228,7 @@ const data = [
   },
  
   {
-    path: "/Packaging-Design",
+    path: "/Packaging-Design-Agency",
     title: " Packaging Design",
  
     currentPage: " Packaging Design",
@@ -236,7 +236,7 @@ const data = [
   },
  
   {
-    path: "/Social-Media-Creative-Design",
+    path: "/Creative-Social-Media-Post-Design-Company",
     title: "Social Media Creative Designs",
  
     currentPage: "Social Media Creative Designs",
@@ -245,14 +245,14 @@ const data = [
  
  
   {
-    path: "/WordPress-Development",
+    path: "/wordpress-development-company-in-Chennai",
     title: "WordPress Development",
  
     currentPage: "WordPress Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/WooCommerce-Development",
+    path: "/e-commerce-website-development-in-chennai",
  
     title: "WooCommerce Development",
  
@@ -261,27 +261,27 @@ const data = [
   },
  
   {
-    path: "/custome-ecommerce-development",
+    path: "/ecommerce-website-development-company",
     title: "Custome Ecommerce Development",
     currentPage: "Custome Ecommerce Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
  
-    path: "/portal-web-development",
+    path: "/portal-development-services",
     title: "Portal Web Development",
     currentPage: "Portal Web Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/Shopify-E-commerce-Development",
+    path: "/shopify-development-company-in-chennai",
     title: "Shopify E-commerce Development",
  
     currentPage: "Shopify E-commerce Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/AI-assisted-website",
+    path: "/create-website-using-ai",
     title: "AI-Enhanced Web Design",
  
     currentPage: "AI-Enhanced Web Design",
@@ -316,7 +316,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/aeo",
+    path: "/answer-engine-optimization-services",
     title: "Answer Engine Optimization (AEO)",
  
     currentPage: "Answer Engine Optimization (AEO)",
