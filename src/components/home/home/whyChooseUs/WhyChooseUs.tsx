@@ -45,7 +45,7 @@ const features: FeatureCard[] = [
     id: "quality",
     title: "Quality Design",
     description: "Quality is at the heart of everything we do. Every website we create reflects our commitment to modern design, usability, performance, and attention to detail.",
-    centerImage: "/images/quality-design.png", // Update with your image path
+    centerImage: "/assets/img/whychoose/icon-1.png", // Update with your image path
     icons: [Sparkles, Layout, Code2],
     xValues: [120, 440, 282],
     yValues: [95, 85, 345],
@@ -60,7 +60,7 @@ const features: FeatureCard[] = [
     id: "innovative",
     title: "Innovative Approach",
     description: "We continuously explore new ideas, technologies, and creative approaches throughout every stage of development. Our innovative mindset helps us create distinctive digital experiences that make your brand stand out.",
-    centerImage: "/images/innovative-approach.png",
+    centerImage: "/assets/img/whychoose/icon-2.png",
     icons: [Zap, Compass, Rocket],
     xValues: [140, 440, 282],
     yValues: [215, 215, 345],
@@ -75,7 +75,7 @@ const features: FeatureCard[] = [
     id: "customized",
     title: "Customized Solutions",
     description: "We take the time to understand your business, objectives, and unique requirements. Our customized solutions are thoughtfully designed to address your specific needs and deliver meaningful results.",
-    centerImage: "/images/customized-solutions.png",
+    centerImage: "/assets/img/whychoose/icon-3.png",
     icons: [Target, Cpu, Layers],
     xValues: [120, 440, 440],
     yValues: [95, 95, 335],
@@ -90,7 +90,7 @@ const features: FeatureCard[] = [
     id: "team",
     title: "Professional Team",
     description: "Our team of skilled and experienced web designers and developers combines creativity, technical expertise, and industry knowledge to build professional websites that perform effectively.",
-    centerImage: "/images/professional-team.png",
+    centerImage: "/assets/img/whychoose/icon-4.png",
     icons: [UserCheck, Award, ShieldCheck],
     xValues: [140, 440, 282],
     yValues: [215, 215, 345],
@@ -105,7 +105,7 @@ const features: FeatureCard[] = [
     id: "delivery",
     title: "On-Time Delivery",
     description: "We understand the importance of deadlines in business. Our structured approach to project management helps us maintain timelines and deliver projects efficiently, with a commitment to promise less and deliver more.",
-    centerImage: "/images/on-time-delivery.png",
+    centerImage: "/assets/img/whychoose/icon-5.png",
     icons: [Calendar, CheckCircle2, Zap],
     xValues: [120, 440, 440],
     yValues: [95, 95, 215],
@@ -120,7 +120,7 @@ const features: FeatureCard[] = [
     id: "support",
     title: "Reliable Support",
     description: "Our relationship with you doesn't end after your website goes live. Our dedicated technical support team is always ready to assist with maintenance, updates, troubleshooting, and ongoing website requirements.",
-    centerImage: "/images/reliable-support.png",
+    centerImage: "/assets/img/whychoose/icon-6.png",
     icons: [LifeBuoy, Wrench, ShieldCheck],
     xValues: [140, 282, 440],
     yValues: [215, 345, 335],
@@ -262,8 +262,8 @@ export default function WhyChooseUsGrid() {
                       left: "50%",
                       zIndex: 20,
                       display: "flex",
-                      height: "72px",
-                      width: "72px",
+                      height: "90px",
+                      width: "90px",
                       transform: "translate(-50%, -50%)",
                       alignItems: "center",
                       justifyContent: "center",
@@ -272,7 +272,7 @@ export default function WhyChooseUsGrid() {
                       backgroundColor: "#ffffff",
                       boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
                       overflow: "hidden",
-                      padding: "10px"
+                     
                     }}
                   >
                     <img 
