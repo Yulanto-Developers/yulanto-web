@@ -32,7 +32,7 @@ interface FeatureCard {
   id: string;
   title: string;
   description: string;
-  centerImage: string; // Replaced centerIcon with image path/URL
+  centerImage: string;
   icons: LucideIcon[];
   xValues: number[];
   yValues: number[];
@@ -45,7 +45,7 @@ const features: FeatureCard[] = [
     id: "quality",
     title: "Quality Design",
     description: "Quality is at the heart of everything we do. Every website we create reflects our commitment to modern design, usability, performance, and attention to detail.",
-    centerImage: "/assets/img/whychoose/icon-1.png", // Update with your image path
+    centerImage: "/assets/img/whychoose/icon-1.png",
     icons: [Sparkles, Layout, Code2],
     xValues: [120, 440, 282],
     yValues: [95, 85, 345],
@@ -135,7 +135,7 @@ const features: FeatureCard[] = [
 
 const AnimatedPath = ({ d, id }: { d: string; id: string }) => (
   <>
-    <path d={d} stroke="currentColor" strokeWidth="1" fill="none" style={{ stroke: "#e5e7eb" }} />
+    <path d={d} stroke="currentColor" strokeWidth="1" fill="none" style={{ stroke: "rgba(255, 255, 255, 0.1)" }} />
     <motion.path
       d={d}
       stroke={`url(#${id})`}
@@ -149,7 +149,7 @@ const AnimatedPath = ({ d, id }: { d: string; id: string }) => (
     <defs>
       <linearGradient id={id} gradientUnits="userSpaceOnUse">
         <stop offset="0%" stopColor="transparent" />
-        <stop offset="50%" stopColor="#53ae7d" stopOpacity="0.5" />
+        <stop offset="50%" stopColor="#fff" stopOpacity="0.8" />
         <stop offset="100%" stopColor="transparent" />
       </linearGradient>
     </defs>
@@ -196,15 +196,19 @@ export default function WhyChooseUsGrid() {
                 key={item.id}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
-                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0, 0, 0, 0.08)" }}
+                whileHover={{ 
+                  y: -8, 
+                  borderColor: "#53ae7d", 
+                  boxShadow: "0 20px 40px rgba(83, 174, 125, 0.2)" 
+                }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 style={{
                   width: "100%",
-                  backgroundColor: "#ffffff",
-                  border: "1px solid #eaeaea",
+                  backgroundColor: "#053456",
+                  border: "1px solid rgba(255, 255, 255, 0.1)",
                   borderRadius: "20px",
                   overflow: "hidden",
-                  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.03)",
+                  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
                   display: "flex",
                   flexDirection: "column",
                 }}
@@ -215,7 +219,7 @@ export default function WhyChooseUsGrid() {
                     position: "relative",
                     aspectRatio: "564 / 360",
                     width: "100%",
-                    backgroundColor: "rgba(248, 249, 250, 0.5)",
+                    backgroundColor: "rgba(3, 28, 48, 0.6)",
                     overflow: "hidden",
                     display: "flex",
                     alignItems: "center",
@@ -227,8 +231,8 @@ export default function WhyChooseUsGrid() {
                     style={{
                       position: "absolute",
                       inset: 0,
-                      opacity: 0.2,
-                      backgroundImage: "radial-gradient(circle, #002d46 1px, transparent 1px)",
+                      opacity: 0.15,
+                      backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)",
                       backgroundSize: "32px 32px",
                     }}
                   />
@@ -239,7 +243,7 @@ export default function WhyChooseUsGrid() {
                       position: "absolute",
                       inset: 0,
                       pointerEvents: "none",
-                      background: "linear-gradient(to bottom, rgba(255,255,255,0.6) 10%, transparent 50%, rgba(255,255,255,0.6) 90%)",
+                      background: "linear-gradient(to bottom, rgba(5, 52, 86, 0.6) 10%, transparent 50%, rgba(5, 52, 86, 0.6) 90%)",
                     }}
                   />
 
@@ -268,11 +272,10 @@ export default function WhyChooseUsGrid() {
                       alignItems: "center",
                       justifyContent: "center",
                       borderRadius: "20px",
-                      border: "1px solid #eaeaea",
+                      border: "1px solid rgba(83, 174, 125, 0.4)",
                       backgroundColor: "#ffffff",
-                      boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+                      boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
                       overflow: "hidden",
-                     
                     }}
                   >
                     <img 
@@ -285,10 +288,10 @@ export default function WhyChooseUsGrid() {
                         position: "absolute",
                         inset: 0,
                         borderRadius: "20px",
-                        border: "2px solid rgba(83, 174, 125, 0.2)",
+                        border: "2px solid rgba(83, 174, 125, 0.4)",
                         pointerEvents: "none",
                       }}
-                      animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0, 0.3] }}
+                      animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0, 0.4] }}
                       transition={{ duration: 3, repeat: Infinity }}
                     />
                   </div>
@@ -313,9 +316,9 @@ export default function WhyChooseUsGrid() {
                         alignItems: "center",
                         justifyContent: "center",
                         borderRadius: "12px",
-                        border: "1px solid #eaeaea",
+                        border: "1px solid rgba(83, 174, 125, 0.3)",
                         backgroundColor: "#ffffff",
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.04)",
+                        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
                         color: "#53ae7d",
                       }}
                     >
@@ -327,10 +330,10 @@ export default function WhyChooseUsGrid() {
                 {/* Card Content Section */}
                 <div style={{ padding: "28px", display: "flex", flexDirection: "column", gap: "16px", flexGrow: 1, justifyContent: "space-between" }}>
                   <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                    <h3 style={{ fontSize: "20px", fontWeight: "600", fontFamily: '"Tenor Sans", "Tenor Sans Fallback"', color: "#002d46", margin: 0, letterSpacing: "-0.01em" }}>
+                    <h3 style={{ fontSize: "20px", fontWeight: "600", fontFamily: '"Tenor Sans", "Tenor Sans Fallback"', color: "#ffffff", margin: 0, letterSpacing: "-0.01em" }}>
                       {item.title}
                     </h3>
-                    <span style={{ fontSize: "14px !important", fontFamily: "Figtree, Figtree Fallback", lineHeight: "1.6", color: "$666666", margin: 0 }}>
+                    <span style={{ fontSize: "14px", fontFamily: "Figtree, Figtree Fallback", lineHeight: "1.6", color: "#cbd5e1", margin: 0 }}>
                       {item.description}
                     </span>
                   </div>
