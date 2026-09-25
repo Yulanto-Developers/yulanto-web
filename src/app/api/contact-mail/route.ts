@@ -4,14 +4,14 @@ const MAIL_API = process.env.MAIL_API;
 const MAIL_API_KEY = process.env.MAIL_API_KEY;
 
 const COMPANY_NAME = "Yulanto Web Creations";
-// const COMPANY_EMAIL = "info@yulanto.com";
-const COMPANY_EMAIL = "yulantodevelopers@gmail.com";
+const COMPANY_EMAIL = "info@yulanto.com";
+// const COMPANY_EMAIL = "yulantodevelopers@gmail.com";
 const CC_EMAIL = "yulantodevelopers@gmail.com";
 const WEBSITE_URL = "https://yulanto-web.vercel.app";
 const COMPANY_PHONE = "+91 99621 57250";
 const COMPANY_WHATSAPP = "+91 99621 57250";
 const COMPANY_ADDRESS =
-    "Yulanto Web Creations Pvt Ltd Web Design & Development Company in ChennaiF3, #4/608, First Floor, V.O.C Street,Kottivakkam, OMR, Chennai - 600 041, India.";
+    "Yulanto Web Creations Pvt Ltd, F3, #4/608, First Floor, V.O.C Street,Kottivakkam, OMR, Chennai - 600 041, India.";
 const COMPANY_LOGO = `${WEBSITE_URL}/assets/img/logo/L2.png`
 
 // ==========================================
@@ -104,7 +104,7 @@ export async function POST(req: NextRequest) {
         const phone = escapeHtml(rawPhone.trim());
         const customerEmail = escapeHtml(rawEmail.trim());
         const lookingFor = escapeHtml(rawLookingFor?.trim() || "Not specified");
-        const message = escapeHtml(rawMessage?.trim() || "No message provided");
+        const message = escapeHtml(rawMessage?.trim() || " ");
 
         // ==========================================
         // DATE & TIME
@@ -1006,7 +1006,7 @@ export async function POST(req: NextRequest) {
 
 
             <div class="contact-title">
-                Get in Touch Directly
+                Get in Touch with us
             </div>
 
 
@@ -1124,9 +1124,8 @@ export async function POST(req: NextRequest) {
                             Address:
                         </strong>
 
-                       Yulanto Web Creations Pvt Ltd <br/>
-Web Design & Development Company in Chennai <br/>
-F3, #4/608, First Floor, V.O.C Street, <br/> Kottivakkam, OMR,
+                       Yulanto Web Creations Pvt Ltd, <br/>
+F3, #4/608, First Floor, V.O.C Street, <br/> Kottivakkam,
 Chennai - 600 041, India.
 
                     </td>

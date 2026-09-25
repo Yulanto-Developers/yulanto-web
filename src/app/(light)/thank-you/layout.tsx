@@ -3,18 +3,11 @@ import PersonalPortfolioHeader from "@/components/layout/headers/PersonalPortfol
 import { ClientProviders } from "@/providers";
 // CHANGED: Imported directly from FloatingIcon where our wrapper now lives safely
 import FloatingActionsWrapper from "@/components/home/home/components/FloatingIcon";
-import "@/assets/css/style.css";
-import "../../../../components/ourclients/clientpage.css";
-
-import { generateSeo } from "@/lib/seo";
 import { QuoteProvider } from "@/components/home/home/myComponents/Content/QuoteContext";
 import QuoteModal from "@/components/home/home/myComponents/tpop";
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
-export const metadata = generateSeo({
-  title: "Our Clients | Global Website Design & Development Services | Yulanto",
-  description:
-    "We serve clients across the USA, UAE, Singapore, UK, Europe and Worldwide with professional website design, development and digital solutions.",
-});
+import "@/assets/css/style.css";
+import "@/assets/css/custome.css";
 export default function DesignStudioLayout({
   children,
 }: {
@@ -28,14 +21,16 @@ export default function DesignStudioLayout({
         <div id="smooth-wrapper" style={{ backgroundColor: "#f5f5f5" }}>
           <div id="smooth-content">
             {children}
+
+
             <MainFooter />
           </div>
         </div>
 
         {/* Renders perfectly outside the scroll wrapper track */}
-        <FloatingActionsWrapper />
+        {/* <FloatingActionsWrapper />
         <QuoteModal />
-        <FloatingQuoteButton />
+        <FloatingQuoteButton /> */}
       </ClientProviders>
     </QuoteProvider>
   );

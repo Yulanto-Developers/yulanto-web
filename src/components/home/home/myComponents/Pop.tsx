@@ -1,1256 +1,3 @@
-// "use client";
-
-// import { useState, useEffect } from "react";
-// import { useQuoteModal } from "./Content/QuoteContext";
-// import { useMutation } from "@tanstack/react-query";
-
-// import { toast } from "react-toastify";
-
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import web_development from '@/assets/img/pop/vetor-1.png'
-
-// import {
-//     faEnvelope,
-//     faPhone,
-//     faLocationDot,
-// } from "@fortawesome/free-solid-svg-icons";
-
-// import PhoneInput from "react-phone-input-2";
-// import "react-phone-input-2/lib/style.css";
-// import ThankYou from "./common/ThankYou";
-
-// export default function QuoteModal() {
-//     const {
-//         open,
-//         closeModal,
-//         openModal,
-//         openType,
-//     } = useQuoteModal();
-
-//     /* =========================================
-//        FORM STATE
-//        ========================================= */
-
-//     const [showRestForm, setShowRestForm] =
-//         useState(false);
-
-//     const [showThankyou, setShowThankyou] =
-//         useState(false);
-
-//     const [formData, setFormData] = useState({
-//         name: "",
-//         email: "",
-//         phone: "",
-//         lookingFor: "",
-//         message: "",
-//     });
-
-//     /* =========================================
-//        DND STATE
-//        ========================================= */
-
-//     const [dnd, setDnd] = useState(false);
-
-//     /* =========================================
-//        CAPTCHA STATE
-//        ========================================= */
-
-//     const [captcha, setCaptcha] = useState({
-//         num1: 0,
-//         num2: 0,
-//     });
-
-//     const [userCaptcha, setUserCaptcha] =
-//         useState("");
-
-//     const [captchaStatus, setCaptchaStatus] =
-//         useState<
-//             "idle" | "correct" | "incorrect"
-//         >("idle");
-
-//     /* =========================================
-//        MAIL REQUEST
-//        ========================================= */
-
-//     const mailRequest = async (
-//         data: typeof formData
-//     ) => {
-//         const response = await fetch(
-//             "/api/contact-mail",
-//             {
-//                 method: "POST",
-
-//                 headers: {
-//                     "Content-Type":
-//                         "application/json",
-//                 },
-
-//                 body: JSON.stringify(data),
-//             }
-//         );
-
-//         let result;
-
-//         try {
-//             result = await response.json();
-//         } catch {
-//             throw new Error(
-//                 "Invalid response from server."
-//             );
-//         }
-
-//         if (!response.ok) {
-//             console.error(
-//                 "Contact API Error:",
-//                 result
-//             );
-
-//             throw new Error(
-//                 result?.message ||
-//                 result?.error ||
-//                 "Failed to send contact request."
-//             );
-//         }
-
-//         return result;
-//     };
-
-//     /* =========================================
-//        MAIL MUTATION
-//        ========================================= */
-
-//     const {
-//         mutate,
-//         isPending,
-//     } = useMutation({
-//         mutationFn: mailRequest,
-
-//         /* =====================================
-//            SUCCESS
-//            ===================================== */
-
-//         onSuccess: (data) => {
-//             console.log(
-//                 "Mail sent successfully:",
-//                 data
-//             );
-
-//             // toast.success(
-//             //     data?.message ||
-//             //     "Email sent successfully.",
-//             //     {
-//             //         position: "top-right",
-//             //         autoClose: 3000,
-//             //     }
-//             // );
-
-
-//             setShowThankyou(true);
-
-//             setShowRestForm(false);
-
-//             setFormData({
-//                 name: "",
-//                 email: "",
-//                 phone: "",
-//                 lookingFor: "",
-//                 message: "",
-//             });
-
-//             setUserCaptcha("");
-
-//             setCaptchaStatus("idle");
-//         },
-
-//         /* =====================================
-//            ERROR
-//            ===================================== */
-
-//         onError: (error) => {
-//             console.error(
-//                 "Mail Error:",
-//                 error
-//             );
-
-//             toast.error(
-//                 error instanceof Error
-//                     ? error.message
-//                     : "Failed to send email. Please try again.",
-//                 {
-//                     position: "top-right",
-//                     autoClose: 4000,
-//                 }
-//             );
-//         },
-//     });
-
-//     /* =========================================
-//        GENERATE CAPTCHA
-//        ========================================= */
-
-//     const generateCaptcha = () => {
-//         const n1 =
-//             Math.floor(
-//                 Math.random() * 9
-//             ) + 1;
-
-//         const n2 =
-//             Math.floor(
-//                 Math.random() * 9
-//             ) + 1;
-
-//         setCaptcha({
-//             num1: n1,
-//             num2: n2,
-//         });
-
-//         setUserCaptcha("");
-
-//         setCaptchaStatus("idle");
-//     };
-
-//     /* =========================================
-//        GENERATE CAPTCHA WHEN FULL FORM OPENS
-//        ========================================= */
-
-//     useEffect(() => {
-//         if (showRestForm) {
-//             generateCaptcha();
-//         }
-//     }, [showRestForm]);
-
-//     /* =========================================
-//        LOAD DND + CHECK 2 HOUR EXPIRY
-//        ========================================= */
-
-//     useEffect(() => {
-//         const savedDnd =
-//             localStorage.getItem(
-//                 "autopop_dnd"
-//             );
-
-//         const dndTime =
-//             localStorage.getItem(
-//                 "autopop_dnd_time"
-//             );
-
-//         /*
-//          * DND IS ENABLED
-//          */
-
-//         if (
-//             savedDnd === "true" &&
-//             dndTime
-//         ) {
-//             const elapsedTime =
-//                 Date.now() -
-//                 Number(dndTime);
-
-//             const twoHours =
-//                 2 *
-//                 60 *
-//                 60 *
-//                 1000;
-
-//             /*
-//              * 2 HOURS COMPLETED
-//              */
-
-//             if (
-//                 elapsedTime >=
-//                 twoHours
-//             ) {
-//                 localStorage.setItem(
-//                     "autopop_dnd",
-//                     "false"
-//                 );
-
-//                 localStorage.removeItem(
-//                     "autopop_dnd_time"
-//                 );
-
-//                 setDnd(false);
-//             }
-
-//             /*
-//              * STILL INSIDE 2 HOURS
-//              */
-
-//             else {
-//                 setDnd(true);
-//             }
-//         }
-
-//         /*
-//          * DND IS NOT ENABLED
-//          */
-
-//         else {
-//             setDnd(false);
-//         }
-//     }, []);
-
-//     /* =========================================
-//        AUTO POPUP
-//        ========================================= */
-
-//     useEffect(() => {
-//         /*
-//          * CHECK DND STATUS
-//          */
-
-//         const checkDnd = () => {
-//             const currentDnd =
-//                 localStorage.getItem(
-//                     "autopop_dnd"
-//                 );
-
-//             const dndTime =
-//                 localStorage.getItem(
-//                     "autopop_dnd_time"
-//                 );
-
-//             /*
-//              * DND IS ACTIVE
-//              */
-
-//             if (
-//                 currentDnd === "true" &&
-//                 dndTime
-//             ) {
-//                 const elapsedTime =
-//                     Date.now() -
-//                     Number(dndTime);
-
-//                 const twoHours =
-//                     2 *
-//                     60 *
-//                     60 *
-//                     1000;
-
-//                 /*
-//                  * DND EXPIRED
-//                  */
-
-//                 if (
-//                     elapsedTime >=
-//                     twoHours
-//                 ) {
-//                     localStorage.setItem(
-//                         "autopop_dnd",
-//                         "false"
-//                     );
-
-//                     localStorage.removeItem(
-//                         "autopop_dnd_time"
-//                     );
-
-//                     setDnd(false);
-
-//                     return false;
-//                 }
-
-//                 /*
-//                  * DND STILL ACTIVE
-//                  */
-
-//                 return true;
-//             }
-
-//             return false;
-//         };
-
-//         /*
-//          * IF DND IS ACTIVE,
-//          * DON'T CREATE POPUP TIMER
-//          */
-
-//         if (checkDnd()) {
-//             return;
-//         }
-
-//         /*
-//          * AUTO POPUP AFTER 6 SECONDS
-//          */
-
-//         const timer = setTimeout(() => {
-//             /*
-//              * CHECK DND AGAIN
-//              * BEFORE OPENING
-//              */
-
-//             if (!checkDnd()) {
-//                 openModal("auto");
-//             }
-//         }, 6000);
-
-//         /*
-//          * CLEANUP
-//          */
-
-//         return () => {
-//             clearTimeout(timer);
-//         };
-//     }, [openModal]);
-
-//     /* =========================================
-//        GREETING
-//        ========================================= */
-
-//     const getGreeting = () => {
-//         const hour =
-//             new Date().getHours();
-
-//         if (hour < 12) {
-//             return "Good Morning";
-//         }
-
-//         if (hour < 17) {
-//             return "Good Afternoon";
-//         }
-
-//         return "Good Evening";
-//     };
-
-//     /* =========================================
-//        HANDLE FORM CHANGE
-//        ========================================= */
-
-//     const handleChange = (
-//         e: React.ChangeEvent<
-//             HTMLInputElement |
-//             HTMLTextAreaElement |
-//             HTMLSelectElement
-//         >
-//     ) => {
-//         const {
-//             name,
-//             value,
-//         } = e.target;
-
-//         setFormData((prev) => ({
-//             ...prev,
-//             [name]: value,
-//         }));
-//     };
-
-//     /* =========================================
-//        PHONE CHANGE
-//        ========================================= */
-
-//     const handlePhoneChange = (
-//         value: string
-//     ) => {
-//         setFormData((prev) => ({
-//             ...prev,
-//             phone: value,
-//         }));
-//     };
-
-//     /* =========================================
-//        DND HANDLER
-//        ========================================= */
-
-//     const handleDndChange = (
-//         e: React.ChangeEvent<HTMLInputElement>
-//     ) => {
-//         const checked =
-//             e.target.checked;
-
-//         setDnd(checked);
-
-//         /*
-//          * ENABLE DND
-//          */
-
-//         if (checked) {
-//             localStorage.setItem(
-//                 "autopop_dnd",
-//                 "true"
-//             );
-
-//             /*
-//              * SAVE EXACT TIME
-//              */
-
-//             localStorage.setItem(
-//                 "autopop_dnd_time",
-//                 Date.now().toString()
-//             );
-//         }
-
-//         /*
-//          * DISABLE DND
-//          */
-
-//         else {
-//             localStorage.setItem(
-//                 "autopop_dnd",
-//                 "false"
-//             );
-
-//             localStorage.removeItem(
-//                 "autopop_dnd_time"
-//             );
-//         }
-//     };
-
-//     /* =========================================
-//        CAPTCHA CHANGE
-//        ========================================= */
-
-//     const handleCaptchaChange = (
-//         e: React.ChangeEvent<HTMLInputElement>
-//     ) => {
-//         const val =
-//             e.target.value;
-
-//         setUserCaptcha(val);
-
-//         if (val === "") {
-//             setCaptchaStatus("idle");
-//             return;
-//         }
-
-//         if (
-//             parseInt(val, 10) ===
-//             captcha.num1 +
-//             captcha.num2
-//         ) {
-//             setCaptchaStatus(
-//                 "correct"
-//             );
-//         } else {
-//             setCaptchaStatus(
-//                 "incorrect"
-//             );
-//         }
-//     };
-
-//     /* =========================================
-//        FORM SUBMIT
-//        ========================================= */
-
-//     const handleSubmit = (
-//         e: React.FormEvent
-//     ) => {
-//         e.preventDefault();
-
-//         /*
-//          * CAPTCHA VALIDATION
-//          */
-
-//         if (
-//             captchaStatus !==
-//             "correct"
-//         ) {
-//             setCaptchaStatus(
-//                 "incorrect"
-//             );
-
-//             toast.error(
-//                 "Please enter the correct security answer.",
-//                 {
-//                     position: "top-right",
-//                     autoClose: 3000,
-//                 }
-//             );
-
-//             return;
-//         }
-
-//         /*
-//          * SEND EMAIL
-//          */
-
-//         mutate(formData);
-//     };
-
-//     /* =========================================
-//        DON'T RENDER WHEN CLOSED
-//        ========================================= */
-
-//     if (!open) {
-//         return null;
-//     }
-
-//     /* =========================================
-//        UI
-//        ========================================= */
-
-//     return (
-//         <div
-//             className="quote-modal-overlay"
-//             onClick={closeModal}
-//         >
-//             {showThankyou ? (
-//                 <ThankYou />
-//             ) : (
-//                 <>
-//                     {!showRestForm &&
-//                         <img src={web_development.src} className="" alt="web-desgin company in chennai" />}
-//                     <div
-//                         className="quote-modal-container"
-//                         onClick={(e) =>
-//                             e.stopPropagation()
-//                         }
-//                     >
-//                         {/* =====================================
-//                     CLOSE BUTTON
-//                 ===================================== */}
-
-//                         <button
-//                             className="close-btn"
-//                             onClick={closeModal}
-//                             aria-label="Close modal"
-//                         >
-//                             ✕
-//                         </button>
-
-//                         {/* =====================================
-//                     LEFT SIDE
-//                 ===================================== */}
-
-//                         <div className="quote-modal-left">
-//                             <div className="form-header">
-//                                 <h3 className="text-tenor">
-//                                     Get a Free Quote
-//                                 </h3>
-
-//                                 <p className="subheading text-figtree">
-//                                     Tell us a bit about yourself
-//                                     to get started.
-//                                 </p>
-//                             </div>
-
-//                             <form
-//                                 onSubmit={handleSubmit}
-//                                 className="quote-form"
-//                             >
-//                                 {/* =================================
-//                             NAME
-//                         ================================= */}
-
-//                                 <div className="floating-input name-input-wrapper">
-//                                     <input
-//                                         id="name"
-//                                         name="name"
-//                                         type="text"
-//                                         value={
-//                                             formData.name
-//                                         }
-//                                         placeholder=" "
-//                                         onChange={
-//                                             handleChange
-//                                         }
-//                                         required
-//                                         onKeyDown={(
-//                                             e
-//                                         ) => {
-//                                             if (
-//                                                 e.key ===
-//                                                 "Enter" &&
-//                                                 formData.name.trim() !==
-//                                                 ""
-//                                             ) {
-//                                                 e.preventDefault();
-
-//                                                 setShowRestForm(
-//                                                     true
-//                                                 );
-//                                             }
-//                                         }}
-//                                     />
-
-//                                     <label htmlFor="name">
-//                                         Enter Your Name
-//                                     </label>
-
-//                                     <button
-//                                         type="button"
-//                                         className="name-next-btn"
-//                                         onClick={() => {
-//                                             if (
-//                                                 formData.name.trim() !==
-//                                                 ""
-//                                             ) {
-//                                                 setShowRestForm(
-//                                                     true
-//                                                 );
-//                                             }
-
-//                                         }}
-//                                         style={{
-//                                             fontSize:
-//                                                 "13px",
-//                                             fontWeight:
-//                                                 "600",
-//                                             padding:
-//                                                 "4px 12px",
-//                                             borderRadius:
-//                                                 "6px",
-//                                         }}
-//                                     >
-//                                         Enter
-//                                     </button>
-//                                 </div>
-
-//                                 {/* =================================
-//                             DND
-//                             ONLY AUTO POPUP
-//                         ================================= */}
-
-//                                 {!showRestForm &&
-//                                     openType ===
-//                                     "auto" && (
-//                                         <div
-//                                             style={{
-//                                                 display:
-//                                                     "flex",
-//                                                 alignItems:
-//                                                     "center",
-//                                                 gap: "8px",
-//                                                 marginTop:
-//                                                     "10px",
-//                                                 marginBottom:
-//                                                     "12px",
-//                                             }}
-//                                         >
-//                                             <input
-//                                                 type="checkbox"
-//                                                 id="dnd"
-//                                                 checked={
-//                                                     dnd
-//                                                 }
-//                                                 onChange={
-//                                                     handleDndChange
-//                                                 }
-//                                                 style={{
-//                                                     width:
-//                                                         "16px",
-//                                                     height:
-//                                                         "16px",
-//                                                     margin: 0,
-//                                                     cursor:
-//                                                         "pointer",
-//                                                 }}
-//                                             />
-
-//                                             <label
-//                                                 htmlFor="dnd"
-//                                                 style={{
-//                                                     fontSize:
-//                                                         "13px",
-//                                                     color:
-//                                                         "#475569",
-//                                                     cursor:
-//                                                         "pointer",
-//                                                     margin: 0,
-//                                                     userSelect:
-//                                                         "none",
-//                                                 }}
-//                                             >
-//                                                 Don't Show
-//                                                 Again
-//                                             </label>
-//                                         </div>
-//                                     )}
-
-//                                 {/* =================================
-//                             REST OF FORM
-//                         ================================= */}
-
-//                                 {showRestForm && (
-//                                     <div className="quote-rest-form">
-//                                         {/* Greeting */}
-
-//                                         <h4 className="welcome-text">
-//                                             {getGreeting()}
-//                                             {", "}
-//                                             <span>
-//                                                 {
-//                                                     formData.name
-//                                                 }
-//                                             </span>
-//                                             {" "}👋
-//                                         </h4>
-
-//                                         {/* =================================
-//                                     PHONE
-//                                 ================================= */}
-
-//                                         <div className="floating-input phone-input-wrapper">
-//                                             <PhoneInput
-//                                                 country="in"
-//                                                 value={
-//                                                     formData.phone
-//                                                 }
-//                                                 onChange={
-//                                                     handlePhoneChange
-//                                                 }
-//                                                 inputProps={{
-//                                                     required: true,
-
-
-//                                                 }}
-
-//                                                 enableSearch
-//                                                 placeholder="Enter Phone Number"
-//                                                 inputStyle={{
-
-//                                                     width:
-//                                                         "100%",
-//                                                     height:
-//                                                         "54px",
-//                                                     borderRadius:
-//                                                         "10px",
-//                                                     border:
-//                                                         "1px solid #ddd",
-//                                                 }}
-//                                                 buttonStyle={{
-//                                                     borderTopLeftRadius:
-//                                                         "10px",
-//                                                     borderBottomLeftRadius:
-//                                                         "10px",
-//                                                 }}
-//                                             />
-//                                         </div>
-
-//                                         {/* =================================
-//                                     EMAIL
-//                                 ================================= */}
-
-//                                         <div className="floating-input">
-//                                             <input
-//                                                 type="email"
-//                                                 id="email"
-//                                                 name="email"
-//                                                 value={
-//                                                     formData.email
-//                                                 }
-//                                                 placeholder=" "
-//                                                 onChange={
-//                                                     handleChange
-//                                                 }
-//                                                 required
-//                                             />
-
-//                                             <label htmlFor="email">
-//                                                 Email Address
-//                                             </label>
-//                                         </div>
-
-//                                         {/* =================================
-//                                     LOOKING FOR
-//                                 ================================= */}
-
-//                                         <div className="floating-input">
-//                                             <select
-//                                                 id="lookingFor"
-//                                                 name="lookingFor"
-//                                                 value={
-//                                                     formData.lookingFor
-//                                                 }
-//                                                 onChange={
-//                                                     handleChange
-//                                                 }
-//                                                 className={
-//                                                     formData.lookingFor
-//                                                         ? ""
-//                                                         : "placeholder-select"
-//                                                 }
-//                                             >
-//                                                 <option value="">
-//                                                     Select Option
-//                                                 </option>
-
-//                                                 <option value="Website Deign">
-//                                                     Website Deign
-//                                                 </option>
-
-
-
-
-//                                                 <option value="Landing Page">
-//                                                     Landing Page
-//                                                 </option>
-
-//                                                 <option value="Web Development">
-//                                                     Web Development
-//                                                 </option>
-
-//                                                 <option value="CMS Development">
-//                                                     CMS Development
-//                                                 </option>
-
-//                                                 <option value="Ecommerce">
-//                                                     Ecommerce
-//                                                 </option>
-
-//                                                 <option value="Logo Design">
-//                                                     Logo Design
-//                                                 </option>
-
-//                                                 <option value="SEO">
-//                                                     SEO
-//                                                 </option>
-
-//                                                 <option value="Social Media Marketing">
-//                                                     Social Media Marketing
-//                                                 </option>
-
-//                                                 <option value="Google Ads">
-//                                                     Google Ads
-//                                                 </option>
-//                                                 <option value="Website Re-Design">
-//                                                     Website Re-Design
-//                                                 </option>
-//                                                 <option value="Website Maintenance">
-//                                                     Website Maintenance
-//                                                 </option>
-//                                             </select>
-
-//                                             <label htmlFor="lookingFor">
-//                                                 Looking For
-//                                             </label>
-
-//                                         </div>
-
-//                                         {/* =================================
-//                                     MESSAGE
-//                                 ================================= */}
-
-//                                         <div className="floating-input">
-//                                             <textarea
-//                                                 id="message"
-//                                                 name="message"
-//                                                 rows={3}
-//                                                 value={
-//                                                     formData.message
-//                                                 }
-//                                                 placeholder=" "
-//                                                 onChange={
-//                                                     handleChange
-//                                                 }
-//                                             />
-
-//                                             <label htmlFor="message">
-//                                                 Message
-//                                             </label>
-//                                         </div>
-
-//                                         {/* =================================
-//                                     CAPTCHA
-//                                 ================================= */}
-
-//                                         <div
-//                                             className="captcha-container d-flex justify-content-start gap-4 align-items-center"
-//                                             style={{
-//                                                 marginBottom:
-//                                                     "10px",
-//                                             }}
-//                                         >
-//                                             <label
-//                                                 htmlFor="mathCaptcha"
-//                                                 style={{
-//                                                     display:
-//                                                         "block",
-//                                                     fontSize:
-//                                                         "14px",
-//                                                     fontWeight:
-//                                                         "600",
-//                                                     color:
-//                                                         "#334155",
-//                                                     marginBottom:
-//                                                         "6px",
-//                                                 }}
-//                                             >
-//                                                 Security Check:{" "}
-//                                                 <span
-//                                                     style={{
-//                                                         color:
-//                                                             "#2563eb",
-//                                                     }}
-//                                                 >
-//                                                     {
-//                                                         captcha.num1
-//                                                     }{" "}
-//                                                     +{" "}
-//                                                     {
-//                                                         captcha.num2
-//                                                     }{" "}
-//                                                     = ?
-//                                                 </span>
-//                                             </label>
-
-//                                             <div
-//                                                 className="floating-input captcha-input"
-//                                                 style={{
-//                                                     marginBottom:
-//                                                         "0",
-//                                                 }}
-//                                             >
-//                                                 <input
-//                                                     type="number"
-//                                                     id="mathCaptcha"
-//                                                     name="mathCaptcha"
-//                                                     value={
-//                                                         userCaptcha
-//                                                     }
-//                                                     placeholder=" "
-//                                                     onChange={
-//                                                         handleCaptchaChange
-//                                                     }
-//                                                     required
-//                                                     style={{
-//                                                         borderColor:
-//                                                             captchaStatus ===
-//                                                                 "correct"
-//                                                                 ? "#22c55e"
-//                                                                 : captchaStatus ===
-//                                                                     "incorrect"
-//                                                                     ? "#ef4444"
-//                                                                     : undefined,
-//                                                     }}
-//                                                 />
-
-//                                                 <label htmlFor="mathCaptcha">
-//                                                     Enter Answer
-//                                                 </label>
-//                                             </div>
-//                                         </div>
-
-//                                         {/* CAPTCHA SUCCESS */}
-
-//                                         {captchaStatus ===
-//                                             "correct" && (
-//                                                 <p className="verify">
-//                                                     ✓ Verified
-//                                                 </p>
-//                                             )}
-
-//                                         {/* CAPTCHA ERROR */}
-
-//                                         {captchaStatus ===
-//                                             "incorrect" && (
-//                                                 <p className="incorrect">
-//                                                     ✕ Incorrect answer,
-//                                                     please try again.
-//                                                 </p>
-//                                             )}
-
-//                                         {/* =================================
-//                                     SUBMIT
-//                                 ================================= */}
-
-//                                         <button
-//                                             type="submit"
-//                                             className="submit-btn"
-//                                             disabled={
-//                                                 isPending
-//                                             }
-//                                         >
-//                                             {isPending
-//                                                 ? "Submitting..."
-//                                                 : "Submit Request"}
-//                                         </button>
-
-//                                         <div
-//                                             style={{
-//                                                 marginTop:
-//                                                     "10px",
-//                                                 fontSize:
-//                                                     "12px",
-//                                             }}
-//                                         >
-//                                             🔒 Your information
-//                                             is secure and
-//                                             confidential.
-//                                         </div>
-//                                     </div>
-//                                 )}
-//                             </form>
-//                         </div>
-
-//                         {/* =========================================
-//                     RIGHT SIDE
-//                 ========================================= */}
-
-//                         <div className="quote-modal-right">
-//                             <div className="blue-section-content">
-//                                 <div className="contact-info pt-4">
-//                                     {showRestForm ? (
-//                                         <>
-//                                             {/* =================================
-//                                         DESKTOP REACH US
-//                                     ================================= */}
-
-//                                             <div className="desktop-reach-us">
-//                                                 <p className="text-tenor">
-//                                                     Reach Us
-//                                                 </p>
-
-//                                                 {/* EMAIL */}
-
-//                                                 <a
-//                                                     href="mailto:info@yulanto.com"
-//                                                     className="contact-card"
-//                                                 >
-//                                                     <div className="contact-icon">
-//                                                         <FontAwesomeIcon
-//                                                             icon={
-//                                                                 faEnvelope
-//                                                             }
-//                                                         />
-//                                                     </div>
-
-//                                                     <p>
-//                                                         info@yulanto.com
-//                                                     </p>
-//                                                 </a>
-
-//                                                 {/* PHONE */}
-
-//                                                 <a
-//                                                     href="tel:+919962157250"
-//                                                     className="contact-card"
-//                                                 >
-//                                                     <div className="contact-icon">
-//                                                         <FontAwesomeIcon
-//                                                             icon={
-//                                                                 faPhone
-//                                                             }
-//                                                         />
-//                                                     </div>
-
-//                                                     <p>
-//                                                         +91 99621
-//                                                         57250
-//                                                     </p>
-//                                                 </a>
-
-//                                                 {/* LOCATION */}
-
-//                                                 <a
-//                                                     href="https://maps.app.goo.gl/sHp8T3KXGXav9GuT9"
-//                                                     target="_blank"
-//                                                     rel="noopener noreferrer"
-//                                                     className="contact-card"
-//                                                 >
-//                                                     <div className="contact-icon">
-//                                                         <FontAwesomeIcon
-//                                                             icon={
-//                                                                 faLocationDot
-//                                                             }
-//                                                         />
-//                                                     </div>
-
-//                                                     <p>
-//                                                         F3, #4/608,
-//                                                         First Floor,
-//                                                         <br />
-//                                                         VOC St,
-//                                                         near Turyaa
-//                                                         Hotel,
-//                                                         <br />
-//                                                         Kottivakkam,
-//                                                         <br />
-//                                                         OMR, Chennai,
-//                                                         Tamil Nadu -
-//                                                         600041
-//                                                     </p>
-//                                                 </a>
-//                                             </div>
-
-//                                             {/* =================================
-//                                         MOBILE / TABLET
-//                                     ================================= */}
-
-//                                             <div className="mobile-get-started d-block d-lg-none">
-//                                                 <div className="badge text-tenor">
-//                                                     Let's Get
-//                                                     Started
-//                                                 </div>
-
-//                                                 <h2 className="text-tenor text-white mt-1">
-//                                                     Your Digital
-//                                                     Success
-//                                                     Starts Here
-//                                                 </h2>
-
-//                                                 <p className="text-figtree text-white mt-2 opacity-75 d-md-block hidden">
-//                                                     Tell us about
-//                                                     your project
-//                                                     or business
-//                                                     requirements.
-//                                                     Fill out the
-//                                                     form, and our
-//                                                     team will
-//                                                     contact you
-//                                                     within 24
-//                                                     hours.
-//                                                 </p>
-//                                             </div>
-//                                         </>
-//                                     ) : (
-//                                         /* =================================
-//                                            INITIAL MOBILE / TABLET
-//                                         ================================= */
-
-//                                         <div className="initial-get-started d-block d-lg-none">
-//                                             <div className="badge text-tenor">
-//                                                 Let's Get
-//                                                 Started
-//                                             </div>
-
-//                                             <h2 className="text-tenor text-white">
-//                                                 Your Digital
-//                                                 Success
-//                                                 Starts Here
-//                                             </h2>
-//                                         </div>
-//                                     )}
-//                                 </div>
-//                             </div>
-
-//                             {/* =====================================
-//                         DESKTOP VIEW
-//                     ===================================== */}
-
-//                             <div className="blue-section-content desktop-only-content d-none d-lg-block">
-//                                 <div className="badge text-tenor">
-//                                     Let's Get Started
-//                                 </div>
-
-//                                 <h2 className="text-tenor text-white mt-1">
-//                                     Your Digital Success
-//                                     Starts Here
-//                                 </h2>
-//                                 {
-//                                     showRestForm &&
-
-//                                     <p className="text-figtree text-white mt-2 opacity-75">
-//                                         Tell us about your project
-//                                         or business requirements.
-//                                         Fill out the form, and our
-//                                         team will contact you
-//                                         within 24 hours.
-//                                     </p>
-//                                 }
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </>
-//             )}
-//         </div>
-//     );
-// }
-
-
-
-
-
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -1260,16 +7,19 @@ import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import web_development from '@/assets/img/pop/vetor-1.png'
+import web_development from "@/assets/img/pop/vetor-1.png";
 
 import {
     faEnvelope,
     faPhone,
     faLocationDot,
+    faCircleExclamation,
+    faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useRouter } from "next/navigation";
 
 export default function QuoteModal() {
     const {
@@ -1281,7 +31,7 @@ export default function QuoteModal() {
 
     /* =========================================
        FORM STATE
-       ========================================= */
+    ========================================= */
 
     const [showRestForm, setShowRestForm] =
         useState(false);
@@ -1291,6 +41,15 @@ export default function QuoteModal() {
         phone: false,
         email: false,
     });
+    const naviate = useRouter();
+    const [shakeFields, setShakeFields] =
+        useState({
+            name: false,
+            phone: false,
+            email: false,
+            lookingFor: false,
+            captcha: false,
+        });
 
     const [formData, setFormData] = useState({
         name: "",
@@ -1302,13 +61,13 @@ export default function QuoteModal() {
 
     /* =========================================
        DND STATE
-       ========================================= */
+    ========================================= */
 
     const [dnd, setDnd] = useState(false);
 
     /* =========================================
        CAPTCHA STATE
-       ========================================= */
+    ========================================= */
 
     const [captcha, setCaptcha] = useState({
         num1: 0,
@@ -1324,8 +83,73 @@ export default function QuoteModal() {
         >("idle");
 
     /* =========================================
+       EMAIL VALIDATION
+    ========================================= */
+
+    const isValidEmail = (email: string) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(
+            email
+        );
+    };
+
+    /* =========================================
+       PHONE VALIDATION
+    ========================================= */
+
+    const isValidPhone = (phone: string) => {
+        const digits = phone.replace(/\D/g, "");
+
+        // React Phone Input includes India country code 91
+        if (digits.startsWith("91")) {
+            const indianNumber = digits.substring(2);
+
+            return /^\d{10}$/.test(indianNumber);
+        }
+
+        // Exactly 10 digits
+        return /^\d{10}$/.test(digits);
+    };
+
+    /* =========================================
+       SHAKE FIELD
+    ========================================= */
+
+    const triggerShake = (
+        field:
+            | "name"
+            | "phone"
+            | "email"
+            | "lookingFor"
+            | "captcha"
+    ) => {
+        /*
+         * Reset first so animation can
+         * restart every time.
+         */
+
+        setShakeFields((prev) => ({
+            ...prev,
+            [field]: false,
+        }));
+
+        requestAnimationFrame(() => {
+            setShakeFields((prev) => ({
+                ...prev,
+                [field]: true,
+            }));
+        });
+
+        setTimeout(() => {
+            setShakeFields((prev) => ({
+                ...prev,
+                [field]: false,
+            }));
+        }, 450);
+    };
+
+    /* =========================================
        MAIL REQUEST
-       ========================================= */
+    ========================================= */
 
     const mailRequest = async (
         data: typeof formData
@@ -1372,7 +196,7 @@ export default function QuoteModal() {
 
     /* =========================================
        MAIL MUTATION
-       ========================================= */
+    ========================================= */
 
     const {
         mutate,
@@ -1382,22 +206,26 @@ export default function QuoteModal() {
 
         /* =====================================
            SUCCESS
-           ===================================== */
+        ===================================== */
 
         onSuccess: (data) => {
-            console.log(
-                "Mail sent successfully:",
-                data
-            );
+            //             if(data.status){
+            // naviate.push('/thank-you');
+            // }
+            naviate.push('/thank-you');
+            // console.log(
+            //     "Mail sent successfully:",
+            //     data
+            // );
 
-            toast.success(
-                data?.message ||
-                "Email sent successfully.",
-                {
-                    position: "top-right",
-                    autoClose: 3000,
-                }
-            );
+            // toast.success(
+            //     data?.message ||
+            //     "Email sent successfully.",
+            //     {
+            //         position: "top-right",
+            //         autoClose: 3000,
+            //     }
+            // );
 
             closeModal();
 
@@ -1419,34 +247,42 @@ export default function QuoteModal() {
                 email: false,
             });
 
+            setShakeFields({
+                name: false,
+                phone: false,
+                email: false,
+                lookingFor: false,
+                captcha: false,
+            });
+
             setCaptchaStatus("idle");
         },
 
         /* =====================================
            ERROR
-           ===================================== */
+        ===================================== */
 
         onError: (error) => {
-            console.error(
-                "Mail Error:",
-                error
-            );
+            // console.error(
+            //     "Mail Error:",
+            //     error
+            // );
 
-            toast.error(
-                error instanceof Error
-                    ? error.message
-                    : "Failed to send email. Please try again.",
-                {
-                    position: "top-right",
-                    autoClose: 4000,
-                }
-            );
+            // toast.error(
+            //     error instanceof Error
+            //         ? error.message
+            //         : "Failed to send email. Please try again.",
+            //     {
+            //         position: "top-right",
+            //         autoClose: 4000,
+            //     }
+            // );
         },
     });
 
     /* =========================================
        GENERATE CAPTCHA
-       ========================================= */
+    ========================================= */
 
     const generateCaptcha = () => {
         const n1 =
@@ -1471,7 +307,7 @@ export default function QuoteModal() {
 
     /* =========================================
        GENERATE CAPTCHA WHEN FULL FORM OPENS
-       ========================================= */
+    ========================================= */
 
     useEffect(() => {
         if (showRestForm) {
@@ -1481,7 +317,7 @@ export default function QuoteModal() {
 
     /* =========================================
        LOAD DND + CHECK 2 HOUR EXPIRY
-       ========================================= */
+    ========================================= */
 
     useEffect(() => {
         const savedDnd =
@@ -1552,7 +388,7 @@ export default function QuoteModal() {
 
     /* =========================================
        AUTO POPUP
-       ========================================= */
+    ========================================= */
 
     useEffect(() => {
         /*
@@ -1642,7 +478,7 @@ export default function QuoteModal() {
             if (!checkDnd()) {
                 openModal("auto");
             }
-        }, 6000);
+        }, 30000);
 
         /*
          * CLEANUP
@@ -1655,7 +491,7 @@ export default function QuoteModal() {
 
     /* =========================================
        GREETING
-       ========================================= */
+    ========================================= */
 
     const getGreeting = () => {
         const hour =
@@ -1674,7 +510,7 @@ export default function QuoteModal() {
 
     /* =========================================
        HANDLE FORM CHANGE
-       ========================================= */
+    ========================================= */
 
     const handleChange = (
         e: React.ChangeEvent<
@@ -1693,18 +529,41 @@ export default function QuoteModal() {
             [name]: value,
         }));
 
-        // Remove only this field's error when the user enters a value.
-        if (value.trim() !== "" && (name === "email")) {
+        /*
+         * NAME
+         */
+
+        if (
+            name === "name" &&
+            value.trim() !== ""
+        ) {
             setErrors((prev) => ({
                 ...prev,
-                [name]: false,
+                name: false,
             }));
+        }
+
+        /*
+         * EMAIL
+         */
+
+        if (name === "email") {
+            if (
+                isValidEmail(
+                    value.trim()
+                )
+            ) {
+                setErrors((prev) => ({
+                    ...prev,
+                    email: false,
+                }));
+            }
         }
     };
 
     /* =========================================
        PHONE CHANGE
-       ========================================= */
+    ========================================= */
 
     const handlePhoneChange = (
         value: string
@@ -1714,8 +573,12 @@ export default function QuoteModal() {
             phone: value,
         }));
 
-        // Remove phone error as soon as the user enters a value.
-        if (value.trim() !== "") {
+        /*
+         * Only remove the error when
+         * the phone number is actually valid.
+         */
+
+        if (isValidPhone(value)) {
             setErrors((prev) => ({
                 ...prev,
                 phone: false,
@@ -1725,7 +588,7 @@ export default function QuoteModal() {
 
     /* =========================================
        DND HANDLER
-       ========================================= */
+    ========================================= */
 
     const handleDndChange = (
         e: React.ChangeEvent<HTMLInputElement>
@@ -1773,7 +636,7 @@ export default function QuoteModal() {
 
     /* =========================================
        CAPTCHA CHANGE
-       ========================================= */
+    ========================================= */
 
     const handleCaptchaChange = (
         e: React.ChangeEvent<HTMLInputElement>
@@ -1800,12 +663,18 @@ export default function QuoteModal() {
             setCaptchaStatus(
                 "incorrect"
             );
+
+            /*
+             * SHAKE CAPTCHA WHEN INCORRECT
+             */
+
+            triggerShake("captcha");
         }
     };
 
     /* =========================================
        FORM SUBMIT
-       ========================================= */
+    ========================================= */
 
     const handleSubmit = (
         e: React.FormEvent
@@ -1816,19 +685,59 @@ export default function QuoteModal() {
          * REQUIRED FIELD VALIDATION
          */
 
+        const nameInvalid =
+            formData.name.trim() === "";
+
+        const phoneInvalid =
+            !isValidPhone(
+                formData.phone
+            );
+
+        const emailInvalid =
+            !isValidEmail(
+                formData.email.trim()
+            );
+
+        const lookingForInvalid =
+            formData.lookingFor.trim() === "";
+
         const newErrors = {
-            name: formData.name.trim() === "",
-            phone: formData.phone.trim() === "",
-            email: formData.email.trim() === "",
+            name: nameInvalid,
+            phone: phoneInvalid,
+            email: emailInvalid,
         };
 
         setErrors(newErrors);
 
-        // Stop submission when any required field is empty.
+        /*
+         * SHAKE INVALID FIELDS
+         */
+
+        if (nameInvalid) {
+            triggerShake("name");
+        }
+
+        if (phoneInvalid) {
+            triggerShake("phone");
+        }
+
+        if (emailInvalid) {
+            triggerShake("email");
+        }
+
+        if (lookingForInvalid) {
+            triggerShake("lookingFor");
+        }
+
+        /*
+         * STOP SUBMISSION
+         */
+
         if (
-            newErrors.name ||
-            newErrors.phone ||
-            newErrors.email
+            nameInvalid ||
+            phoneInvalid ||
+            emailInvalid ||
+            lookingForInvalid
         ) {
             return;
         }
@@ -1845,13 +754,15 @@ export default function QuoteModal() {
                 "incorrect"
             );
 
-            toast.error(
-                "Please enter the correct security answer.",
-                {
-                    position: "top-right",
-                    autoClose: 3000,
-                }
-            );
+            triggerShake("captcha");
+
+            // toast.error(
+            //     "Please enter the correct security answer.",
+            //     {
+            //         position: "top-right",
+            //         autoClose: 3000,
+            //     }
+            // );
 
             return;
         }
@@ -1865,7 +776,7 @@ export default function QuoteModal() {
 
     /* =========================================
        DON'T RENDER WHEN CLOSED
-       ========================================= */
+    ========================================= */
 
     if (!open) {
         return null;
@@ -1873,15 +784,21 @@ export default function QuoteModal() {
 
     /* =========================================
        UI
-       ========================================= */
+    ========================================= */
 
     return (
         <div
             className="quote-modal-overlay"
             onClick={closeModal}
         >
-            {!showRestForm &&
-                <img src={web_development.src} className="" alt="web-desgin company in chennai" />}
+            {!showRestForm && (
+                <img
+                    src={web_development.src}
+                    className=""
+                    alt="web-desgin company in chennai"
+                />
+            )}
+
             <div
                 className="quote-modal-container"
                 onClick={(e) =>
@@ -1924,7 +841,15 @@ export default function QuoteModal() {
                             NAME
                         ================================= */}
 
-                        <div className="floating-input name-input-wrapper">
+                        <div
+                            className={`floating-input name-input-wrapper ${errors.name
+                                ? "input-error"
+                                : ""
+                                } ${shakeFields.name
+                                    ? "input-shake"
+                                    : ""
+                                }`}
+                        >
                             <input
                                 id="name"
                                 name="name"
@@ -1937,31 +862,50 @@ export default function QuoteModal() {
                                     handleChange
                                 }
                                 onFocus={() => {
-                                    setErrors((prev) => ({
-                                        ...prev,
-                                        name: false,
-                                    }));
+                                    setErrors(
+                                        (prev) => ({
+                                            ...prev,
+                                            name: false,
+                                        })
+                                    );
                                 }}
                                 onKeyDown={(
                                     e
                                 ) => {
-                                    if (e.key === "Enter") {
+                                    if (
+                                        e.key ===
+                                        "Enter"
+                                    ) {
                                         e.preventDefault();
 
-                                        if (formData.name.trim() === "") {
-                                            setErrors((prev) => ({
-                                                ...prev,
-                                                name: true,
-                                            }));
+                                        if (
+                                            formData.name.trim() ===
+                                            ""
+                                        ) {
+                                            setErrors(
+                                                (prev) => ({
+                                                    ...prev,
+                                                    name: true,
+                                                })
+                                            );
+
+                                            triggerShake(
+                                                "name"
+                                            );
+
                                             return;
                                         }
 
-                                        setErrors((prev) => ({
-                                            ...prev,
-                                            name: false,
-                                        }));
+                                        setErrors(
+                                            (prev) => ({
+                                                ...prev,
+                                                name: false,
+                                            })
+                                        );
 
-                                        setShowRestForm(true);
+                                        setShowRestForm(
+                                            true
+                                        );
                                     }
                                 }}
                             />
@@ -1970,24 +914,47 @@ export default function QuoteModal() {
                                 Enter Your Name
                             </label>
 
+                            {errors.name && (
+                                <FontAwesomeIcon
+                                    icon={
+                                        faCircleExclamation
+                                    }
+                                    className="input-danger-icon"
+                                />
+                            )}
+
                             <button
                                 type="button"
                                 className="name-next-btn"
                                 onClick={() => {
-                                    if (formData.name.trim() === "") {
-                                        setErrors((prev) => ({
-                                            ...prev,
-                                            name: true,
-                                        }));
+                                    if (
+                                        formData.name.trim() ===
+                                        ""
+                                    ) {
+                                        setErrors(
+                                            (prev) => ({
+                                                ...prev,
+                                                name: true,
+                                            })
+                                        );
+
+                                        triggerShake(
+                                            "name"
+                                        );
+
                                         return;
                                     }
 
-                                    setErrors((prev) => ({
-                                        ...prev,
-                                        name: false,
-                                    }));
+                                    setErrors(
+                                        (prev) => ({
+                                            ...prev,
+                                            name: false,
+                                        })
+                                    );
 
-                                    setShowRestForm(true);
+                                    setShowRestForm(
+                                        true
+                                    );
                                 }}
                                 style={{
                                     fontSize:
@@ -2002,20 +969,6 @@ export default function QuoteModal() {
                             >
                                 Enter
                             </button>
-
-                            {errors.name && (
-                                <span
-                                    className="field-error"
-                                    style={{
-                                        display: "block",
-                                        marginTop: "4px",
-                                        color: "#ef4444",
-                                        fontSize: "12px",
-                                    }}
-                                >
-                                    Please fill the details
-                                </span>
-                            )}
                         </div>
 
                         {/* =================================
@@ -2102,7 +1055,15 @@ export default function QuoteModal() {
                                     PHONE
                                 ================================= */}
 
-                                <div className="floating-input phone-input-wrapper">
+                                <div
+                                    className={`floating-input phone-input-wrapper ${errors.phone
+                                        ? "input-error"
+                                        : ""
+                                        } ${shakeFields.phone
+                                            ? "input-shake"
+                                            : ""
+                                        }`}
+                                >
                                     <PhoneInput
                                         country="in"
                                         value={
@@ -2112,21 +1073,22 @@ export default function QuoteModal() {
                                             handlePhoneChange
                                         }
                                         inputProps={{
-                                            required: false,
+                                            required:
+                                                false,
                                             name: "phone",
                                             id: "phone",
                                         }}
                                         onFocus={() => {
-                                            setErrors((prev) => ({
-                                                ...prev,
-                                                phone: false,
-                                            }));
+                                            setErrors(
+                                                (prev) => ({
+                                                    ...prev,
+                                                    phone: false,
+                                                })
+                                            );
                                         }}
-
                                         enableSearch
                                         placeholder="Enter Phone Number"
                                         inputStyle={{
-
                                             width:
                                                 "100%",
                                             height:
@@ -2145,17 +1107,12 @@ export default function QuoteModal() {
                                     />
 
                                     {errors.phone && (
-                                        <span
-                                            className="field-error"
-                                            style={{
-                                                display: "block",
-                                                marginTop: "4px",
-                                                color: "#ef4444",
-                                                fontSize: "12px",
-                                            }}
-                                        >
-                                            Please fill the details
-                                        </span>
+                                        <FontAwesomeIcon
+                                            icon={
+                                                faCircleExclamation
+                                            }
+                                            className="input-danger-icon phone-danger-icon"
+                                        />
                                     )}
                                 </div>
 
@@ -2163,7 +1120,15 @@ export default function QuoteModal() {
                                     EMAIL
                                 ================================= */}
 
-                                <div className="floating-input">
+                                <div
+                                    className={`floating-input ${errors.email
+                                        ? "input-error"
+                                        : ""
+                                        } ${shakeFields.email
+                                            ? "input-shake"
+                                            : ""
+                                        }`}
+                                >
                                     <input
                                         type="email"
                                         id="email"
@@ -2176,10 +1141,12 @@ export default function QuoteModal() {
                                             handleChange
                                         }
                                         onFocus={() => {
-                                            setErrors((prev) => ({
-                                                ...prev,
-                                                email: false,
-                                            }));
+                                            setErrors(
+                                                (prev) => ({
+                                                    ...prev,
+                                                    email: false,
+                                                })
+                                            );
                                         }}
                                     />
 
@@ -2188,17 +1155,12 @@ export default function QuoteModal() {
                                     </label>
 
                                     {errors.email && (
-                                        <span
-                                            className="field-error"
-                                            style={{
-                                                display: "block",
-                                                marginTop: "4px",
-                                                color: "#ef4444",
-                                                fontSize: "12px",
-                                            }}
-                                        >
-                                            Please fill the details
-                                        </span>
+                                        <FontAwesomeIcon
+                                            icon={
+                                                faCircleExclamation
+                                            }
+                                            className="input-danger-icon"
+                                        />
                                     )}
                                 </div>
 
@@ -2206,7 +1168,13 @@ export default function QuoteModal() {
                                     LOOKING FOR
                                 ================================= */}
 
-                                <div className="floating-input">
+                                <div
+                                    className={`floating-input ${!formData.lookingFor &&
+                                        shakeFields.lookingFor
+                                        ? "input-error input-shake"
+                                        : ""
+                                        }`}
+                                >
                                     <select
                                         id="lookingFor"
                                         name="lookingFor"
@@ -2227,14 +1195,11 @@ export default function QuoteModal() {
                                         </option>
 
                                         <option value="Website Deign">
-                                            Website Deign
+                                            Website Design
                                         </option>
 
-
-
-
-                                        <option value="Landing Page">
-                                            Landing Page
+                                        <option value="Website Re-Design">
+                                            Website Re-Design
                                         </option>
 
                                         <option value="Web Development">
@@ -2264,9 +1229,11 @@ export default function QuoteModal() {
                                         <option value="Google Ads">
                                             Google Ads
                                         </option>
-                                        <option value="Website Re-Design">
-                                            Website Re-Design
+                                        <option value="Landing Page">
+                                            Landing Page
                                         </option>
+
+
                                         <option value="Website Maintenance">
                                             Website Maintenance
                                         </option>
@@ -2345,14 +1312,21 @@ export default function QuoteModal() {
                                     </label>
 
                                     <div
-                                        className="floating-input captcha-input"
+                                        className={`floating-input captcha-input ${captchaStatus ===
+                                            "incorrect"
+                                            ? "input-error input-shake"
+                                            : captchaStatus ===
+                                                "correct"
+                                                ? "input-success"
+                                                : ""
+                                            }`}
                                         style={{
                                             marginBottom:
                                                 "0",
                                         }}
                                     >
                                         <input
-                                            type="number"
+                                            type="text"
                                             id="mathCaptcha"
                                             name="mathCaptcha"
                                             value={
@@ -2375,6 +1349,26 @@ export default function QuoteModal() {
                                             }}
                                         />
 
+                                        {captchaStatus ===
+                                            "correct" && (
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faCircleCheck
+                                                    }
+                                                    className="input-success-icon"
+                                                />
+                                            )}
+
+                                        {captchaStatus ===
+                                            "incorrect" && (
+                                                <FontAwesomeIcon
+                                                    icon={
+                                                        faCircleExclamation
+                                                    }
+                                                    className="input-danger-icon captcha-danger-icon"
+                                                />
+                                            )}
+
                                         <label htmlFor="mathCaptcha">
                                             Enter Answer
                                         </label>
@@ -2383,22 +1377,22 @@ export default function QuoteModal() {
 
                                 {/* CAPTCHA SUCCESS */}
 
-                                {captchaStatus ===
+                                {/* {captchaStatus ===
                                     "correct" && (
                                         <p className="verify">
                                             ✓ Verified
                                         </p>
-                                    )}
+                                    )} */}
 
                                 {/* CAPTCHA ERROR */}
 
-                                {captchaStatus ===
+                                {/* {captchaStatus ===
                                     "incorrect" && (
                                         <p className="incorrect">
                                             ✕ Incorrect answer,
                                             please try again.
                                         </p>
-                                    )}
+                                    )} */}
 
                                 {/* =================================
                                     SUBMIT
@@ -2587,9 +1581,8 @@ export default function QuoteModal() {
                             Your Digital Success
                             Starts Here
                         </h2>
-                        {
-                            showRestForm &&
 
+                        {showRestForm && (
                             <p className="text-figtree text-white mt-2 opacity-75">
                                 Tell us about your project
                                 or business requirements.
@@ -2597,7 +1590,7 @@ export default function QuoteModal() {
                                 team will contact you
                                 within 24 hours.
                             </p>
-                        }
+                        )}
                     </div>
                 </div>
             </div>

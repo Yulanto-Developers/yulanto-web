@@ -4,7 +4,7 @@ import { ClientProviders } from "@/providers";
 // CHANGED: Imported directly from FloatingIcon where our wrapper now lives safely
 import FloatingActionsWrapper from "@/components/home/home/components/FloatingIcon";
 import { QuoteProvider } from "@/components/home/home/myComponents/Content/QuoteContext";
-import QuoteModal from "@/components/home/home/myComponents/Pop";
+import QuoteModal from "@/components/home/home/myComponents/tpop";
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
 
 import "@/assets/css/style.css";
@@ -20,8 +20,8 @@ export default function DesignStudioLayout({
       <ClientProviders>
         <PersonalPortfolioHeader />
 
-        <div 
-          id="smooth-wrapper" 
+        <div
+          id="smooth-wrapper"
           style={{ backgroundColor: "#f5f5f5", overflowX: "hidden", width: "100%" }}
         >
           <div id="smooth-content" style={{ overflowX: "hidden", width: "100%" }}>
