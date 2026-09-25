@@ -1466,8 +1466,8 @@
 .name-next-btn {
     position: absolute;
     right: 8px;
-    top: 60%;
-    transform: translateY(-65%);
+    top: 7%;
+    /* transform: translateY(-65%); */
     width: 60px;
     height: 40px;
     border: none;
@@ -1983,6 +1983,255 @@ input[name="name"].has-value+.name-next-btn {
         font-size: 13px;
     }
 }
+
+
+/* =========================================
+   NEW VALIDATION ERROR STYLES
+========================================= */
+
+
+/* =========================================
+   RED ERROR BORDER
+========================================= */
+
+.floating-input.input-error input,
+.floating-input.input-error textarea,
+.floating-input.input-error select {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.08) !important;
+}
+
+
+/* =========================================
+   SHAKE ANIMATION
+========================================= */
+
+.input-shake {
+    -webkit-animation: inputDangerShake 0.42s ease-in-out;
+    -moz-animation: inputDangerShake 0.42s ease-in-out;
+    -ms-animation: inputDangerShake 0.42s ease-in-out;
+    -o-animation: inputDangerShake 0.42s ease-in-out;
+    animation: inputDangerShake 0.42s ease-in-out;
+}
+
+@keyframes inputDangerShake {
+    0% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    20% {
+        -webkit-transform: translateX(-7px);
+        -moz-transform: translateX(-7px);
+        -ms-transform: translateX(-7px);
+        -o-transform: translateX(-7px);
+        transform: translateX(-7px);
+    }
+
+    40% {
+        -webkit-transform: translateX(7px);
+        -moz-transform: translateX(7px);
+        -ms-transform: translateX(7px);
+        -o-transform: translateX(7px);
+        transform: translateX(7px);
+    }
+
+    60% {
+        -webkit-transform: translateX(-5px);
+        -moz-transform: translateX(-5px);
+        -ms-transform: translateX(-5px);
+        -o-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+
+    80% {
+        -webkit-transform: translateX(5px);
+        -moz-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+        -o-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================
+   DANGER ICON
+========================================= */
+
+.input-danger-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #ef4444;
+    font-size: 17px;
+    z-index: 10;
+    pointer-events: none;
+    -webkit-animation: dangerIconPop 0.2s ease-out;
+    -moz-animation: dangerIconPop 0.2s ease-out;
+    -ms-animation: dangerIconPop 0.2s ease-out;
+    -o-animation: dangerIconPop 0.2s ease-out;
+    animation: dangerIconPop 0.2s ease-out;
+}
+
+
+/* =========================================
+   DANGER ICON POP ANIMATION
+========================================= */
+
+@keyframes dangerIconPop {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-50%) scale(0.7);
+        -moz-transform: translateY(-50%) scale(0.7);
+        -ms-transform: translateY(-50%) scale(0.7);
+        -o-transform: translateY(-50%) scale(0.7);
+        transform: translateY(-50%) scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(-50%) scale(1);
+        -moz-transform: translateY(-50%) scale(1);
+        -ms-transform: translateY(-50%) scale(1);
+        -o-transform: translateY(-50%) scale(1);
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+
+/* =========================================
+   NAME INPUT
+   ICON BEFORE ENTER BUTTON
+========================================= */
+
+.name-input-wrapper .input-danger-icon {
+    right: 78px;
+}
+
+
+/* =========================================
+   PHONE ERROR
+========================================= */
+
+.phone-input-wrapper.input-error .form-control {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.08) !important;
+}
+
+
+/* =========================================
+   PHONE DANGER ICON
+========================================= */
+
+.phone-input-wrapper .phone-danger-icon {
+    right: 15px;
+}
+
+
+/* =========================================
+   SELECT ERROR
+   ========================================= */
+
+.floating-input.input-error select {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.08) !important;
+}
+
+
+/* =========================================
+   CAPTCHA SUCCESS
+   ========================================= */
+
+.captcha-input.input-success input {
+    border-color: #22c55e !important;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.08) !important;
+}
+
+.captcha-input.input-success label,
+.floating-input.input-error label {
+    color: #198754;
+    background-color: #f5f5f5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    padding: 0 7px;
+    font-size: 11px;
+    font-weight: 600;
+    top: -12px;
+}
+
+/* =========================================
+   CAPTCHA SUCCESS ICON
+   ========================================= */
+
+.input-success-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #22c55e;
+    font-size: 17px;
+    z-index: 10;
+    pointer-events: none;
+    -webkit-animation: successIconPop 0.2s ease-out;
+    -moz-animation: successIconPop 0.2s ease-out;
+    -ms-animation: successIconPop 0.2s ease-out;
+    -o-animation: successIconPop 0.2s ease-out;
+    animation: successIconPop 0.2s ease-out;
+}
+
+@keyframes successIconPop {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-50%) scale(0.7);
+        -moz-transform: translateY(-50%) scale(0.7);
+        -ms-transform: translateY(-50%) scale(0.7);
+        -o-transform: translateY(-50%) scale(0.7);
+        transform: translateY(-50%) scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(-50%) scale(1);
+        -moz-transform: translateY(-50%) scale(1);
+        -ms-transform: translateY(-50%) scale(1);
+        -o-transform: translateY(-50%) scale(1);
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+
+/* =========================================
+   CAPTCHA ERROR ICON
+   ========================================= */
+
+.captcha-input .captcha-danger-icon {
+    right: 15px;
+}
+
+
 
 /* Desktop */
 

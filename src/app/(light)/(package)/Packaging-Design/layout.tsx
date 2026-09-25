@@ -6,7 +6,7 @@ import PersonalPortfolioHeader from "@/components/layout/headers/PersonalPortfol
 import { ClientProviders } from "@/providers";
 import FloatingActionsWrapper from "@/components/home/home/components/FloatingIcon";
 import { QuoteProvider } from "@/components/home/home/myComponents/Content/QuoteContext";
-import QuoteModal from "@/components/home/home/myComponents/Pop";
+import QuoteModal from "@/components/home/home/myComponents/tpop";
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
 import "@/assets/css/style.css";
 import "@/assets/css/custome.css";
@@ -22,22 +22,22 @@ export default function DesignStudioLayout({
         <PersonalPortfolioHeader />
 
         {/* FIXED: Added overflow: hidden / position relative to wrapper to prevent height collapsing */}
-        <div 
-          id="smooth-wrapper" 
-          style={{ 
-            backgroundColor: "#f5f5f5", 
-            overflow: "hidden", 
+        <div
+          id="smooth-wrapper"
+          style={{
+            backgroundColor: "#f5f5f5",
+            overflow: "hidden",
             position: "relative",
-            width: "100%" 
+            width: "100%"
           }}
         >
           {/* FIXED: Added minHeight and padding-bottom so content length is fully measured */}
-          <div 
-            id="smooth-content" 
-            style={{ 
-              overflow: "visible", 
+          <div
+            id="smooth-content"
+            style={{
+              overflow: "visible",
               minHeight: "100vh",
-              position: "relative" 
+              position: "relative"
             }}
           >
             {children}
