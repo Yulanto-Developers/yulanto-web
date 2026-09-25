@@ -83,7 +83,7 @@ export function BuildPresenceSection() {
               <div className="position-relative d-inline-block">
                 <img
                   src="assets/img/SocialMediaCreativeDesigns/last.jpg"
-                  alt="Build Social Media Presence"
+                  alt="graphic design companies near me"
                   className="img-fluid rounded-4 shadow"
                   style={{
                     maxHeight: "360px",

@@ -11,6 +11,7 @@ interface StepData {
   title: string;
   description: string;
   spreadImage: string;
+  alt:string;
 }
 
 const bookSteps: StepData[] = [
@@ -19,30 +20,35 @@ const bookSteps: StepData[] = [
     description:
       "We begin by understanding your business, target audience, objectives, content, and design expectations.",
     spreadImage: "assets/img/company-profile/book-design-1.jpg",
+    alt:'best graphic company',
   },
   {
     title: "Content & Brand Review",
     description:
       "We review your content, logo, brand guidelines, images, colors, and other materials required for the design.",
     spreadImage: "assets/img/company-profile/book-design-2.jpg",
+     alt:'best graphic design brands',
   },
   {
     title: "Design Concept",
     description:
       "Our designers develop a creative concept and layout that reflects your brand and communicates your message effectively.",
     spreadImage: "assets/img/company-profile/book-design-3.jpg",
+    alt:'best graphic design brands',
   },
   {
     title: "Review & Revisions",
     description:
       "We share the design for your feedback and make the required revisions to refine the final output.",
     spreadImage: "assets/img/company-profile/book-design-4.jpg",
+    alt:'graphic design company',
   },
   {
     title: "Final Artwork",
     description:
       "After approval, we prepare the final files in suitable formats for digital use or professional printing.",
     spreadImage: "assets/img/company-profile/book-design-5.jpg",
+    alt:'graphic design agency',
   },
 ];
 
@@ -194,7 +200,7 @@ export default function StPageFlipBook() {
                     >
                       <img
                         src={step.spreadImage}
-                        alt="Previous Page Stack"
+                        alt="graphic design company chennai"
                         style={{
                           width: "550px",
                           height: "100%",
@@ -237,7 +243,7 @@ export default function StPageFlipBook() {
                   >
                     <img
                       src={step.spreadImage}
-                      alt={step.title}
+                      alt={step.alt}
                       style={{
                         position: "absolute",
                         left: 0,
@@ -306,7 +312,7 @@ export default function StPageFlipBook() {
                     >
                       <img
                         src={step.spreadImage}
-                        alt={step.title}
+                        alt={step.alt}
                         style={{
                           position: "absolute",
                           left: 0,
@@ -345,7 +351,7 @@ export default function StPageFlipBook() {
                     >
                       <img
                         src={step.spreadImage}
-                        alt={step.title}
+                        alt={step.alt}
                         style={{
                           position: "absolute",
                           right: 0,

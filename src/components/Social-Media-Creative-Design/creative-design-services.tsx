@@ -8,24 +8,24 @@ interface ServiceItem {
   icon: string;
   title: string;
   subtitle?: string;
+  alt?: string;
 }
 
 const servicesList: ServiceItem[] = [
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-1.png", title: "Instagram", subtitle: "Posts & Creatives" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-2.png", title: "Facebook", subtitle: "Post Designs" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-3.png", title: "LinkedIn", subtitle: "Creative Designs" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-4.png", title: "Instagram", subtitle: "Stories" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-5.png", title: "Facebook", subtitle: "Stories" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-6.png", title: "Promotional", subtitle: "Campaign Creatives" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-7.png", title: "Product & Service", subtitle: "Promotions" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-8.png", title: "Festival &", subtitle: "Seasonal Creatives" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-9.png", title: "Offer & Discount", subtitle: "Posts" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-10.png", title: "Corporate Social", subtitle: "Media Designs" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-11.png", title: "Event & Announcement", subtitle: "Creatives" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-12.png", title: "Brand Awareness", subtitle: "Posts" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-13.png", title: "Infographics &", subtitle: "Informative Posts" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-14.png", title: "Quote & Engagement", subtitle: "Posts" },
-  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-15.png", title: "Social Media Ad", subtitle: "Creatives" },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-1.png", title: "Instagram", subtitle: "Posts & Creatives",alt:'best graphic designers' },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-2.png", title: "Facebook", subtitle: "Post Designs",alt:'best graphic designers in chennai' },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-3.png", title: "LinkedIn", subtitle: "Creative Designs",alt:'graphic design agency' },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-4.png", title: "Instagram", subtitle: "Stories",alt:'graphic design agency chennai' },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-5.png", title: "Facebook", subtitle: "Stories",alt:'Poster design agency chennai' },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-6.png", title: "Promotional", subtitle: "Campaign Creatives" ,alt:'Social Media Poster design agency chennai' },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-7.png", title: "Product & Service", subtitle: "Promotions" ,alt:'Social Media Poster design agency'},
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-8.png", title: "Festival &", subtitle: "Seasonal Creatives",alt:'Social Media Creative design agency chennai' },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-9.png", title: "Offer & Discount", subtitle: "Posts" ,alt:'Social Media Creative design company chennai'},
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-10.png", title: "Corporate Social", subtitle: "Media Designs",alt:'Social Media Creative design  chennai' },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-11.png", title: "Event & Announcement", subtitle: "Creatives",alt:'Social Media Creative design company' },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-13.png", title: "Infographics &", subtitle: "Informative Posts" ,alt:'Social Media Creative design company in chennai' },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-14.png", title: "Quote & Engagement", subtitle: "Posts",alt:'Poster design agency chennai' },
+  { icon: "/assets/img/SocialMediaCreativeDesigns/Our-social-media-15.png", title: "Social Media Ad", subtitle: "Creatives",alt:'design agency chennai' },
 ];
 
 export function SocialMediaServicesSection() {
@@ -75,7 +75,7 @@ export function SocialMediaServicesSection() {
                 >
                   <img 
                     src={item.icon} 
-                    alt={item.title} 
+                    alt={item.alt} 
                     style={{ width: "32px", height: "32px", objectFit: "contain" }} 
                   />
                 </div>

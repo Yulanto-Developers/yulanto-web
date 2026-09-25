@@ -243,7 +243,7 @@ export const packagingpageSeo = {
 } as const;
 
 export const socialmediacerpageSeo = {
-  title: "Creative Social Media Post Design | Graphic Design Company  ",
+  title: "Creative Social Media Post Design | Graphic Design Company",
   description:
     "Need creative social media post design? Our graphic design company delivers social media creative design that helps your brand stand out. Get a free quote.",
   image: "/assets/img/sample/gallery/img- (1).jpg",
@@ -251,4 +251,27 @@ export const socialmediacerpageSeo = {
   serviceName: "Off Page Service",
   serviceDescription:
     "Need creative social media post design? Our graphic design company delivers social media creative design that helps your brand stand out. Get a free quote.",
+} as const;
+
+
+export const aeopageSeo = {
+  title: "Answer Engine Optimization Services | AEO Company in Chennai",
+  description:
+    "Answer engine optimization services (AEO) to improve how your business content appears in AI search results, answer engines, and search platforms.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+  imageAlt: "seo agencies in chennai",
+  serviceName: "Off Page Service",
+  serviceDescription:
+    "Answer engine optimization services (AEO) to improve how your business content appears in AI search results, answer engines, and search platforms.",
+} as const;
+
+export const AIwebsitepageSeo = {
+  title: "AI Web Design & Create Website using ai | Yulanto",
+  description:
+    "Create website using AI with a website designer ai from a web design and development company in Chennai for modern business websites.",
+  image: "/assets/img/sample/gallery/img- (1).jpg",
+  imageAlt: "seo agencies in chennai",
+  serviceName: "Off Page Service",
+  serviceDescription:
+    "Create website using AI with a website designer ai from a web design and development company in Chennai for modern business websites.",
 } as const;

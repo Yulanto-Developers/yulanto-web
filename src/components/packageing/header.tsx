@@ -67,6 +67,12 @@ export function PulseFitHero({
               <h4 className="px-about-title mb-20">
                 <span className="text-blue-about">Packaging Designs That Make</span> Your Brand Stand Out 
               </h4>
+               <h1 className="ft-23 mt-0 mb-3 text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"  style={{ lineHeight: "1.2" }}
+                >
+                Packaging Design Agency for Product Packaging
+                </h1>
               <p className="text-figtree text-black mt-2">
                 Your packaging is often the first physical interaction customers have with your brand. At Yulanto Web Creations, we create attractive, practical, and brand-focused packaging designs that help products stand out on shelves and digital marketplaces.
 
@@ -126,7 +132,7 @@ export function PulseFitHero({
                 >
                   <img
                     src={program.image}
-                  
+                  alt="Packaging Design Agency"
                     style={{
                       width: "100%",
                       height: "100%",

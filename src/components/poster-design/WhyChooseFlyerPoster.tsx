@@ -8,6 +8,7 @@ interface FeatureItem {
   description: string;
   icon: string;
   image: string;
+  alt: string;
 }
 
 const featuresList: FeatureItem[] = [
@@ -18,6 +19,7 @@ const featuresList: FeatureItem[] = [
       "We develop designs that are visually appealing while keeping your business objectives in focus.",
     icon: "fa-solid fa-lightbulb",
     image: "/assets/img/flyerposter/Why-Choose-Our-Flyer-1.jpg",
+    alt: "flyers and poster design company",
   },
   {
     id: 1,
@@ -26,6 +28,7 @@ const featuresList: FeatureItem[] = [
       "Your logo, brand colors, typography, images, and messaging are incorporated consistently across every design.",
     icon: "fa-solid fa-palette",
     image: "/assets/img/flyerposter/Why-Choose-Our-Flyer-2.jpg",
+    alt: "flyers and brochures design",
   },
   {
     id: 2,
@@ -34,6 +37,7 @@ const featuresList: FeatureItem[] = [
       "We organize content strategically so your audience can understand your message quickly.",
     icon: "fa-solid fa-bullhorn",
     image: "/assets/img/flyerposter/Why-Choose-Our-Flyer-3.jpg",
+    alt: "flyers and brochures design company",
   },
   {
     id: 3,
@@ -42,6 +46,7 @@ const featuresList: FeatureItem[] = [
       "Our designs are created with attention to layout, typography, imagery, spacing, and visual hierarchy.",
     icon: "fa-solid fa-award",
     image: "/assets/img/flyerposter/Why-Choose-Our-Flyer-4.jpg",
+    alt: "flyers and brochures design company in chennai",
   },
   {
     id: 4,
@@ -50,6 +55,7 @@ const featuresList: FeatureItem[] = [
       "Get designs optimized for printing, websites, social media, WhatsApp, email campaigns, and other digital platforms.",
     icon: "fa-solid fa-layer-group",
     image: "/assets/img/flyerposter/Why-Choose-Our-Flyer-5.jpg",
+    alt: "brochures design company in chennai",
   },
 ];
 
@@ -88,10 +94,11 @@ export default function WhyChooseFlyerPoster() {
                 Print & Digital Marketing
               </h4>
               <p className="text-figtree text-black mt-2">
-                We design creative assets suitable for both offline and online marketing.
-                Whether you need a high-resolution flyer for printing or a social media
-                poster for your digital campaign, our designs are prepared according to
-                the required size, format, and platform specifications.
+                We design creative assets suitable for both offline and online
+                marketing. Whether you need a high-resolution flyer for printing
+                or a social media poster for your digital campaign, our designs
+                are prepared according to the required size, format, and
+                platform specifications.
               </p>
             </div>
           </div>
@@ -215,7 +222,7 @@ export default function WhyChooseFlyerPoster() {
               <img
                 key={activeFeature.id}
                 src={activeFeature.image}
-                alt={activeFeature.title}
+                alt={activeFeature.alt}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -238,9 +245,9 @@ export default function WhyChooseFlyerPoster() {
             margin-top: -30px;
             margin-bottom: -30px;
           }
-            .text-muted{
+          .text-muted {
             font-size: 15px !important;
-            }
+          }
         }
       `}</style>
     </section>

@@ -30,8 +30,8 @@ const item: Variants = {
 function ArtCollage({
     primaryImage,
     secondaryImage,
-    primaryAlt = '',
-    secondaryAlt = '',
+    primaryAlt = 'best brochure design',
+    secondaryAlt = 'brochure design agency',
 }: {
     primaryImage: string
     secondaryImage: string
@@ -107,8 +107,8 @@ export function Hero04({
     washImage,
     primaryImage,
     secondaryImage,
-    primaryAlt = '',
-    secondaryAlt = '',
+    primaryAlt = 'brochure design companies near me',
+    secondaryAlt = 'brochure design agency ',
     animation = 'subtle',
 }: Readonly<Hero04Props>) {
     const reduce = useReducedMotion()
@@ -146,7 +146,7 @@ export function Hero04({
                 >
                     <img
                         src={washImage}
-                        alt=""
+                        alt="agency brochure design"
                         style={{
                             width: '100%',
                             height: '100%',

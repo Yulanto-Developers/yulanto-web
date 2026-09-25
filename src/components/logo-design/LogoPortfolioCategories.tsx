@@ -158,7 +158,7 @@ export const LogoPortfolioCategories = () => {
             >
               <img
                 src="assets/img/logodesign/all-Logo-img.jpg"
-                alt="Multiple Logo Designs Showcase"
+                alt="best logo design company and yulanto clients logos"
                 style={{
                   width: "100%",
                   height: "100%",

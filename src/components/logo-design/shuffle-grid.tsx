@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const squareData = [
-  { id: 1, src: "assets/img/logodesign/Logo-1.jpg" },
+  { id: 1, src: "assets/img/logodesign/Logo-1.jpg", },
   { id: 2, src: "assets/img/logodesign/Logo-2.jpg" },
   { id: 3, src: "assets/img/logodesign/Logo-3.jpg" },
   { id: 4, src: "assets/img/logodesign/Logo-4.jpg" },

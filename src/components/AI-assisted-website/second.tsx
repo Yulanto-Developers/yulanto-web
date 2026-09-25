@@ -46,7 +46,7 @@ export const AIAcceleratedDesign: React.FC = () => {
             >
               <Image
                 src="/assets/img/AI/top-1.jpg"
-                alt="AI Doesn't Replace Great Design. It Accelerates It."
+                alt="AI Website Builder"
                 fill
                 priority
                 sizes="(max-width: 991px) 100vw, 45vw"
