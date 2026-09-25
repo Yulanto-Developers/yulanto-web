@@ -3,20 +3,34 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import '@/assets/css/ThankYou.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Page() {
-
   const router = useRouter();
+  const [countdown, setCountdown] = useState(15);
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      router.push('/');
-    }, 5000);
+    const interval = setInterval(() => {
+      setCountdown((prev) => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          router.push('/');
+          return 1;
+        }
 
-    return () => clearTimeout(timeout);
+        setAnimate(true);
+
+        setTimeout(() => {
+          setAnimate(false);
+        }, 300);
+
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
   }, [router]);
-
 
   return (
     <main className="thankyou-page">
@@ -51,26 +65,37 @@ export default function Page() {
                 Reaching Us
               </h4>
 
-              <p className='text-black'>
+              <p className="text-black">
                 Thank you for reaching out to us. We have received your
                 enquiry successfully.
               </p>
 
-              <p className='text-black'>
+              <p className="text-black">
                 Our team will review your request and get in touch with you
                 soon.
               </p>
 
               <div className="thankyou-line"></div>
 
-              {/* Processing Message */}
+              {/* Countdown */}
               <div className="processing-message">
+
                 <span className="loading-spinner"></span>
 
                 <span className="contact-text">
-                  Please do not refresh or close this page. Your request is
-                  being processed.
+                  Back to Home in{' '}
+
+                  <span
+                    className={`countdown-number ${
+                      animate ? 'countdown-animate' : ''
+                    }`}
+                  >
+                    {countdown}
+                  </span>
+
+                  {' '}seconds
                 </span>
+
               </div>
 
             </div>

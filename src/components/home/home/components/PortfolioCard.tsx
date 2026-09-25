@@ -64,12 +64,12 @@ const PortfolioCard = ({
                                         {portFolio.map((item, idx) => {
                                             const chosenIcon = typeof item.icon === "string" ? iconMap[item.icon] : item.icon;
                                             return (
-                                                <li key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "12px", textAlign: 'left',marginTop:'10px' }} className="text-figtree font-paragraph-cls">
+                                                <li key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "12px", textAlign: 'left', marginTop: '10px' }} className="text-figtree font-paragraph-cls">
                                                     {chosenIcon && (
                                                         <FontAwesomeIcon icon={chosenIcon} style={{ width: "20px", height: "20px", marginTop: "3px", flexShrink: 0, color: "#53AE7D" }} />
                                                     )}
                                                     <span className="text-white text-figtree fs-6 d-flex align-items-start">
-                                                    
+
                                                         <span dangerouslySetInnerHTML={{ __html: item.text }}></span>
                                                     </span>
                                                 </li>
@@ -180,7 +180,7 @@ const PortfolioCard = ({
                                             )}
                                             <span className="text-white text-figtree" style={{ fontSize: '14px' }}>
                                                 <strong className="d-block text-white">{item.key}</strong>
-                                                <span style={{ color: '#ccc' }}>{item.text}</span>
+                                                <span style={{ color: '#ccc' }} dangerouslySetInnerHTML={{ __html: item.text }}></span>
                                             </span>
                                         </li>
                                     );
@@ -198,12 +198,12 @@ const PortfolioCard = ({
                                             style={{ cursor: "pointer", color: "#fff", fontWeight: 600, fontSize: '15px' }}
                                             className="text-tenor"
                                         >
-                                             {item.ques}
+                                            {item.ques}
                                         </div>
                                         {activeFaq === index && (
                                             <div style={{ marginTop: "8px", color: "#fff", fontSize: "14px" }}>
                                                 {Object.entries(item).filter(([key]) => key.startsWith("ans")).sort(([a], [b]) => a.localeCompare(b)).map(([key, value]) => (
-                                                    <p key={key} className="text-figtree" style={{ marginBottom: "5px" }}>{value as string}</p>
+                                                    <p key={key} className="text-figtree text-white" style={{ marginBottom: "5px", fontSize: '14px !important' }} dangerouslySetInnerHTML={{ __html: value as string }}></p>
                                                 ))}
                                             </div>
                                         )}

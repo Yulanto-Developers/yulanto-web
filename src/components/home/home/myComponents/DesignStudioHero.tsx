@@ -435,7 +435,7 @@ const heroContent = [
         col: "col-lg-3", img: "/assets/img/banner/hero-img-3.webp",
         title: "We craft a web presence that reflects your brand’s strength and professionalism.", subtitle: "Build a Powerful Business Website design with Experts in Chennai.",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: " Write the code",
+        head: " Write the Code",
         alt: "website design company in chennai"
     },
     {
@@ -443,7 +443,7 @@ const heroContent = [
         col: "col-lg-3", img: "/assets/img/banner/hero-img-4.webp",
         title: "The result is a platform built to attract opportunities and drive your business forward.", subtitle: "Custom Website creations company for Growing Businesses in Chennai",
         spacingCls: "pl-10", alignCls: "justify-content-start",
-        head: "Design the website",
+        head: "Design the Website",
         alt: "web designers near me"
     },
     {
@@ -601,7 +601,7 @@ const Hero = () => {
 
                                         <div className="px-hero-2-content text-center z-index-1">
                                             <div className="fix">
-                                                <span className="desc desc-cls" style={{ fontWeight: 600, color: '#053456' }} dangerouslySetInnerHTML={{
+                                                <span className="desc desc-cls" style={{ fontWeight: 600, color: '#000' }} dangerouslySetInnerHTML={{
                                                     __html: item.head,
                                                 }}></span>
                                             </div>
