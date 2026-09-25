@@ -10,11 +10,8 @@ import "@/assets/css/style1.css";
 import "glightbox/dist/css/glightbox.css";
 import { QuoteProvider } from "@/components/home/home/myComponents/Content/QuoteContext";
 import FloatingActionsWrapper from "@/components/home/home/components/FloatingIcon";
-<<<<<<< Updated upstream
-=======
 import QuoteModal from "@/components/home/home/myComponents/tpop";
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
->>>>>>> Stashed changes
 
 export default function AboutUsLayout({ children }: {
 
@@ -22,19 +19,6 @@ export default function AboutUsLayout({ children }: {
 }) {
     return (
         <QuoteProvider>
-<<<<<<< Updated upstream
-        <ClientProviders>
-            <PersonalPortfolioHeader />
-            <div id="smooth-wrapper">
-                <div id="smooth-content">
-                    <AOSInit />  
-                    {children}
-                    <MainFooter />
-                </div>
-            </div>
-            <FloatingActionsWrapper></FloatingActionsWrapper>
-        </ClientProviders>
-=======
             <ClientProviders>
 
                 <PersonalPortfolioHeader />
@@ -58,7 +42,6 @@ export default function AboutUsLayout({ children }: {
                 <FloatingQuoteButton />
 
             </ClientProviders>
->>>>>>> Stashed changes
         </QuoteProvider>
     );
 }
