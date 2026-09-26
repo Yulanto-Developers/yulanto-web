@@ -21,11 +21,11 @@
     padding: 5rem 1.5rem;
     background-color: var(--ind-bg);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    border-radius: 30px ;
-    -webkit-border-radius: 30px ;
-    -moz-border-radius: 30px ;
-    -ms-border-radius: 30px ;
-    -o-border-radius: 30px ;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 
 .industry-container {
@@ -57,7 +57,7 @@
     line-height: 1.2;
 }
 
-.content-col{
+.content-col {
     color: #053456;
 }
 
@@ -67,9 +67,11 @@
     margin-top: 0.5rem;
     max-width: 600px;
 }
-.industry-desc-text{
+
+.industry-desc-text {
     font-size: 1.2rem !important;
 }
+
 /* Main Grid Layout */
 .industry-layout {
     display: grid;
@@ -378,4 +380,357 @@
     inset: 0;
     background: linear-gradient(to top, rgba(15, 23, 42, 0.4), transparent);
     pointer-events: none;
+}
+
+
+/* ==========================================================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================================================== */
+
+.mobile-industry-select {
+    display: none;
+}
+
+@media (max-width: 991px) {
+
+    /* ---------------------------------------------------------
+       Main section
+    --------------------------------------------------------- */
+
+    .industry-section {
+        padding: 2.5rem 1rem;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        border-radius: 20px;
+        overflow-x: hidden;
+    }
+
+    .industry-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* ---------------------------------------------------------
+       Change layout to single column
+    --------------------------------------------------------- */
+
+    .industry-layout {
+        display: block;
+        width: 100%;
+    }
+
+    .filter-sidebar {
+        width: 100%;
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
+    /* ---------------------------------------------------------
+       Hide desktop filter
+    --------------------------------------------------------- */
+
+    .desktop-filter {
+        display: none;
+    }
+
+    /* ---------------------------------------------------------
+       Mobile select
+    --------------------------------------------------------- */
+
+    .mobile-industry-select {
+        display: block;
+        width: 100%;
+    }
+
+    .mobile-industry-select label {
+        display: block;
+        margin-bottom: 0.5rem;
+
+        color: #053456;
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .mobile-industry-select select {
+        display: block;
+
+        width: 100%;
+        height: 52px;
+
+        padding: 0 42px 0 15px;
+
+        border: 1px solid #dfe6ec;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+        border-radius: 12px;
+
+        background-color: #ffffff;
+        color: #053456;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+
+        outline: none;
+
+        box-shadow:
+            0 5px 18px rgba(5, 52, 86, 0.06);
+
+        -webkit-appearance: auto;
+        -moz-appearance: auto;
+        appearance: auto;
+    }
+
+    .mobile-industry-select select:focus {
+        border-color: #53ae7d;
+
+        box-shadow:
+            0 0 0 3px rgba(83, 174, 125, 0.12);
+    }
+
+
+    /* ---------------------------------------------------------
+       Content
+    --------------------------------------------------------- */
+
+    .content-area {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* ---------------------------------------------------------
+       Heading
+    --------------------------------------------------------- */
+
+    .category-title-header {
+        width: 100%;
+    }
+
+    .category-heading {
+        font-size: 28px;
+        line-height: 1.25;
+        margin-bottom: 10px;
+    }
+
+    .industry-desc-text {
+        font-size: 1rem !important;
+        line-height: 1.6;
+    }
+
+
+    /* ---------------------------------------------------------
+       Projects
+    --------------------------------------------------------- */
+
+    .projects-grid {
+        width: 100%;
+
+        display: grid;
+
+        /*
+         * One card per row on mobile.
+         * This prevents the cards from becoming too narrow.
+         */
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+        margin-top: 28px !important;
+    }
+
+
+    /* ---------------------------------------------------------
+       Project Card
+    --------------------------------------------------------- */
+
+    .project-card {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+
+        padding: 1rem;
+
+        -webkit-border-radius: 14px;
+        -moz-border-radius: 14px;
+        -ms-border-radius: 14px;
+        -o-border-radius: 14px;
+        border-radius: 14px;
+    }
+
+    .project-meta {
+        width: 100%;
+        min-width: 0;
+
+        gap: 0.65rem;
+    }
+
+    .logo-box {
+        width: 42px;
+        height: 42px;
+
+        flex-shrink: 0;
+    }
+
+    .project-title {
+        min-width: 0;
+
+        font-size: 0.9rem;
+        line-height: 1.35;
+
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    .location-badge {
+        max-width: 100%;
+
+        font-size: 0.72rem;
+
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* ---------------------------------------------------------
+       View Website
+    --------------------------------------------------------- */
+
+    .card-action {
+        width: 100%;
+    }
+
+    .btn-view-project {
+        width: 100%;
+
+        padding: 0.7rem 0.75rem;
+
+        font-size: 0.8rem;
+    }
+
+
+    /* ---------------------------------------------------------
+       Banner / Image
+    --------------------------------------------------------- */
+
+    .banner-frame {
+        width: 100%;
+
+        max-height: none;
+
+        margin-top: 1.5rem;
+
+        -webkit-border-radius: 14px;
+        -moz-border-radius: 14px;
+        -ms-border-radius: 14px;
+        -o-border-radius: 14px;
+        border-radius: 14px;
+    }
+
+    .banner-img {
+        width: 100%;
+        height: 210px;
+
+        object-fit: cover;
+    }
+
+
+    /* ---------------------------------------------------------
+       Description
+    --------------------------------------------------------- */
+
+    .industry-description {
+        width: 100%;
+
+        margin-top: 1.5rem !important;
+    }
+
+    .industry-description p {
+        width: 100%;
+
+        margin-bottom: 1rem;
+
+        font-size: 15px !important;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* ==========================================================================
+   SMALL MOBILE
+   ========================================================================== */
+
+@media (max-width: 575px) {
+
+    .industry-section {
+        padding: 2rem 12px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+        border-radius: 16px;
+    }
+
+    .category-heading {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    .industry-desc-text {
+        font-size: 15px !important;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .project-card {
+        padding: 14px;
+    }
+
+    .project-meta {
+        gap: 9px;
+    }
+
+    .logo-box {
+        width: 40px;
+        height: 40px;
+    }
+
+    .project-title {
+        font-size: 14px;
+    }
+
+    .location-badge {
+        margin-bottom: 1rem;
+    }
+
+    .banner-img {
+        height: 190px;
+    }
+
+}
+
+
+/* ==========================================================================
+   TABLET - TWO PROJECT CARDS
+   ========================================================================== */
+
+@media (min-width: 600px) and (max-width: 991px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
 }

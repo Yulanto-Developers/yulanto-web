@@ -69,7 +69,7 @@ export default function Industry() {
                     {/* LEFT SIDEBAR: FILTERS   */}
                     {/* ======================= */}
 
-                    <aside className="filter-sidebar">
+                    {/* <aside className="filter-sidebar">
                         <div className="filter-card">
 
                             <nav
@@ -112,8 +112,74 @@ export default function Industry() {
                             </nav>
 
                         </div>
-                    </aside>
+                    </aside> */}
+                    <aside className="filter-sidebar">
 
+                        {/* Desktop */}
+                        <div className="filter-card desktop-filter">
+                            <nav
+                                className="filter-nav"
+                                role="tablist"
+                            >
+                                {INDUSTRIES.map((industry) => {
+                                    const IconComponent = industry.icon;
+
+                                    const isActive =
+                                        activeIndustry === industry.id;
+
+                                    return (
+                                        <button
+                                            key={industry.id}
+                                            role="tab"
+                                            aria-selected={isActive}
+                                            onClick={() =>
+                                                handleIndustryClick(industry.id)
+                                            }
+                                            className={`filter-btn ${isActive ? 'active' : ''
+                                                }`}
+                                        >
+                                            <span className="filter-icon">
+                                                <IconComponent size={18} />
+                                            </span>
+
+                                            <span className="filter-label">
+                                                {industry.label}
+                                            </span>
+
+                                            <span className="active-dot" />
+                                        </button>
+                                    );
+                                })}
+                            </nav>
+                        </div>
+
+                        {/* Mobile */}
+                        <div className="mobile-industry-select">
+
+                            <label htmlFor="industry-select">
+                                Select Industry
+                            </label>
+
+                            <select
+                                id="industry-select"
+                                value={activeIndustry}
+                                onChange={(e) =>
+                                    handleIndustryClick(e.target.value)
+                                }
+                            >
+                                {INDUSTRIES.map((industry) => (
+                                    <option
+                                        key={industry.id}
+                                        value={industry.id}
+                                    >
+                                        {industry.label}
+                                    </option>
+                                ))}
+                            </select>
+
+                        </div>
+
+                    </aside>
 
                     {/* ======================= */}
                     {/* RIGHT CONTENT: PROJECTS */}

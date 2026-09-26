@@ -2,14 +2,18 @@ import { NextRequest, NextResponse } from "next/server";
 
 const MAIL_API = process.env.MAIL_API;
 const MAIL_API_KEY = process.env.MAIL_API_KEY;
-
+const noreplymail = '';
 const COMPANY_NAME = "Yulanto Web Creations";
+const SENDER_NAME = "Noreply - Yulanto";
+const SENDER_EMAIL = "enquiry@yulanto.in";
+
+// const COMPANY_NAME = "Yulanto Web Creations";
 const COMPANY_EMAIL = "info@yulanto.com";
-// const COMPANY_EMAIL = "yulantodevelopers@gmail.com";
 const CC_EMAIL = "yulantodevelopers@gmail.com";
 const WEBSITE_URL = "https://yulanto-web.vercel.app";
 const COMPANY_PHONE = "+91 99621 57250";
 const COMPANY_WHATSAPP = "+91 99621 57250";
+// const COMPANY_EMAIL = "yulantodevelopers@gmail.com";
 const COMPANY_ADDRESS =
     "Yulanto Web Creations Pvt Ltd, F3, #4/608, First Floor, V.O.C Street,Kottivakkam, OMR, Chennai - 600 041, India.";
 const COMPANY_LOGO = `${WEBSITE_URL}/assets/img/logo/L2.png`
@@ -125,7 +129,7 @@ export async function POST(req: NextRequest) {
         // ==========================================
 
         const adminMail = `
-      <!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 
 <head>
@@ -284,6 +288,10 @@ export async function POST(req: NextRequest) {
 
             <table class="info-table">
                 <tr>
+                    <td class="label-cell">Date & Time</td>
+                    <td class="value-cell">${datetime}</td>
+                </tr>
+                <tr>
                     <td class="label-cell">Name</td>
                     <td class="value-cell">${name}</td>
                 </tr>
@@ -295,27 +303,19 @@ export async function POST(req: NextRequest) {
                     <td class="label-cell">Phone</td>
                     <td class="value-cell"><a href="tel:${phone}">${phone}</a></td>
                 </tr>
-                <tr>
-                    <td class="label-cell">Date & Time</td>
-                    <td class="value-cell">${datetime}</td>
-                </tr>
-            </table>
 
-            <!-- Enquiry Details Section -->
-            <div class="section-title">🌐 Enquiry Details</div>
 
-            <table class="info-table">
                 <tr>
                     <td class="label-cell">Looking For</td>
                     <td class="value-cell"><strong>${lookingFor}</strong></td>
                 </tr>
-            </table>
+                <tr>
+                    <td class="label-cell">Message Details</td>
+                    <td class="value-cell"><strong>${message}</strong></td>
+                </tr>
 
-            <!-- Message Details Section -->
-            <div class="section-title">💬 Message Details</div>
-            <div class="message-box">${message}</div>
 
-            <div class="note">⚠ Note: Do not reply directly to this automated notification.</div>
+                <div class="note">⚠ Note: Do not reply directly to this automated notification.</div>
         </div>
 
         <!-- Footer -->
@@ -1194,8 +1194,8 @@ Chennai - 600 041, India.
 
         const adminData = {
             sender: {
-                name: COMPANY_NAME,
-                email: COMPANY_EMAIL,
+                name: SENDER_NAME,
+                email: SENDER_EMAIL,
             },
             to: [
                 {
@@ -1207,7 +1207,7 @@ Chennai - 600 041, India.
                     email: CC_EMAIL,
                 },
             ],
-            subject: `New Enquiry from ${name}`,
+            subject: `New Enquiry from Yulanto Website`,
             htmlContent: adminMail,
         };
 
@@ -1217,15 +1217,15 @@ Chennai - 600 041, India.
 
         const customerData = {
             sender: {
-                name: COMPANY_NAME,
-                email: COMPANY_EMAIL,
+                name: SENDER_NAME,
+                email: SENDER_EMAIL,
             },
             to: [
                 {
                     email: rawEmail.trim(),
                 },
             ],
-            subject: `Thank You for Your Enquiry  – ${COMPANY_NAME} `,
+            subject: `Thank You for Your Enquiry – ${COMPANY_NAME}`,
             htmlContent: thankMail,
         };
 
