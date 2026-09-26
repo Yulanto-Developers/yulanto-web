@@ -35,7 +35,7 @@ export default function Page() {
   return (
     <main className="thankyou-page">
       <div className="container thankyou-container">
-        <div className="row align-items-center min-vh-100">
+        <div className="row align-items-center">
 
           {/* Left - Image */}
           <div className="col-lg-6 col-md-6">

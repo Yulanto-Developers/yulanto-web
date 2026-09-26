@@ -28,7 +28,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({
             </div>
             <div className="bf-service-item-3-text left-title">
               <h4 className="bf-service-item-3-title">
-                <SmartLink className="common-underline" href="/service-1">
+                <SmartLink className="common-underline" href="/">
                   {title}
                 </SmartLink>
               </h4>
@@ -49,8 +49,8 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({
                 <div className="bf-service-item-3-text">
                   <h4 className="bf-service-item-3-title">
                     <SmartLink
-                      className="common-underline pointer-event"
-                      href=""
+                      className="common-underline"
+                      href="/"
                     >
                       {title}{" "}
                       <span className="servicearrow">

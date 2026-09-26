@@ -63,7 +63,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#053456", copyr
                                 </div>
                                 <div className="px-footer-widget-social mt-3">
                                     <a
-                                        href="/pdf/company-profile.pdf"
+                                        href="assets/brochure/Yulanto-Corporate-Profile.pdf"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="pdf-link d-flex gap-2 align-items-center"
