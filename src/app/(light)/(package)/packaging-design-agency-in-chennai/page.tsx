@@ -15,7 +15,7 @@ import { packagingpageSeo } from "@/lib/seo-data";
 import ServiceSchema from "@/components/seo-sechama/ServiceSchema";
 import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 
-const SITE_URL = "https://yulanto-web.vercel.app";
+const SITE_URL = "https://yulanto.com";
 const SLUG = "Packaging-Design";
 const pageUrl = `${SITE_URL}/${SLUG}`;
 

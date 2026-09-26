@@ -23,11 +23,11 @@ export default function SingaporeMalaysiaClientsPage() {
                 items={[
                   {
                     name: "Home",
-                    url: "https://yulanto-web.vercel.app/",
+                    url: "https://yulanto.com/",
                   },
                   {
                     name: "Our Clients",
-                    url: "https://yulanto-web.vercel.app/singapore",
+                    url: "https://yulanto.com/singapore",
                   },
                 ]}
               />

@@ -37,7 +37,7 @@ const tenor = Tenor_Sans({
 // SITE URL
 // ===============================
 
-const SITE_URL = "https://yulanto-web.vercel.app";
+const SITE_URL = "https://yulanto.com";
 
 // ===============================
 // GLOBAL SEO METADATA

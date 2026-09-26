@@ -18,11 +18,11 @@ export default function DesignStudioLayout({
         items={[
           {
             name: "Home",
-            url: "https://yulanto-web.vercel.app/",
+            url: "https://yulanto.com/",
           },
           {
             name: "Our Mission & Vision",
-            url: "https://yulanto-web.vercel.app/case-studies",
+            url: "https://yulanto.com/case-studies",
           },
         ]}
       />

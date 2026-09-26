@@ -66,7 +66,7 @@ export default async function Page({
   const faq = faqData[pages as keyof typeof faqData];
  
   const pageUrl =
-    `https://yulanto-web.vercel.app/website-development/${pages}`;
+    `https://yulanto.com/website-development/${pages}`;
  
   let pageContent;
  
@@ -102,7 +102,7 @@ export default async function Page({
         items={[
           {
             name: "Home",
-            url: "https://yulanto-web.vercel.app/",
+            url: "https://yulanto.com/",
           },
           {
             name: seo.serviceName,
