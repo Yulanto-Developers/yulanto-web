@@ -268,15 +268,17 @@ export default function QuoteModal() {
             //     error
             // );
 
-            // toast.error(
-            //     error instanceof Error
-            //         ? error.message
-            //         : "Failed to send email. Please try again.",
-            //     {
-            //         position: "top-right",
-            //         autoClose: 4000,
-            //     }
-            // );
+            closeModal();
+
+            toast.error(
+                error instanceof Error
+                    ? error.message
+                    : "Failed to send email. Please try again.",
+                {
+                    position: "top-right",
+                    autoClose: 4000,
+                }
+            );
         },
     });
 
