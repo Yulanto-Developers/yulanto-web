@@ -22,11 +22,11 @@ const HomePage = () => {
         items={[
           {
             name: "Home",
-            url: "https://yulanto-web.vercel.app/",
+            url: "https://yulanto.com/",
           },
           {
             name: "Why Choose us",
-            url: "https://yulanto-web.vercel.app/why-choose-us",
+            url: "https://yulanto.com/why-choose-us",
           },
         ]}
       />

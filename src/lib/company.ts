@@ -1,10 +1,10 @@
 export const company = {
   name: "Yulanto Web Creations",
 
-  url: "https://yulanto-web.vercel.app",
+  url: "https://yulanto.com",
 
   logo:
-    "https://yulanto-web.vercel.app/home-assets/img/logo/yulanto-logo-green.png",
+    "https://yulanto.com/home-assets/img/logo/yulanto-logo-green.png",
 
   email: [
     "info@yulanto.com",

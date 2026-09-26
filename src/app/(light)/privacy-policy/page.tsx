@@ -13,11 +13,11 @@ export default function CareersPage() {
               items={[
                 {
                   name: "Home",
-                  url: "https://yulanto-web.vercel.app/",
+                  url: "https://yulanto.com/",
                 },
                 {
                   name: "Our Story",
-                  url: "https://yulanto-web.vercel.app/privacy-policy",
+                  url: "https://yulanto.com/privacy-policy",
                 },
               ]}
             />

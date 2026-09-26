@@ -24,11 +24,11 @@ export default function USAClientsPage() {
         items={[
           {
             name: "Home",
-            url: "https://yulanto-web.vercel.app/",
+            url: "https://yulanto.com/",
           },
           {
             name: "Our Story",
-            url: "https://yulanto-web.vercel.app/usa",
+            url: "https://yulanto.com/usa",
           },
         ]}
       />

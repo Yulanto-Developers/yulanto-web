@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_URL = "https://yulanto-web.vercel.app";
+const SITE_URL = "https://yulanto.com";
 const SITE_NAME = "Yulanto Web Creations";
 
 interface SEOProps {

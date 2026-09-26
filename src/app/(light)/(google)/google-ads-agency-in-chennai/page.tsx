@@ -17,7 +17,7 @@ import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 import FAQSchema from "@/components/seo-sechama/FAQSchema";
 import type { Metadata } from "next";
 
-const SITE_URL = "https://yulanto-web.vercel.app";
+const SITE_URL = "https://yulanto.com";
 const SLUG = "ads";
 const pageUrl = `${SITE_URL}/${SLUG}`;
 

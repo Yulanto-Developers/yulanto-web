@@ -27,9 +27,9 @@ export default function ServiceSchema({
 
     provider: {
       "@type": "Organization",
-      "@id": "https://yulanto-web.vercel.app/#organization",
+      "@id": "https://yulanto.com/#organization",
       name: "Yulanto Web Creations",
-      url: "https://yulanto-web.vercel.app",
+      url: "https://yulanto.com/",
     },
 
     areaServed: {
@@ -41,7 +41,7 @@ export default function ServiceSchema({
       ? {
           image: image.startsWith("http")
             ? image
-            : `https://yulanto-web.vercel.app${image}`,
+            : `https://yulanto.com/${image}`,
         }
       : {}),
   };
