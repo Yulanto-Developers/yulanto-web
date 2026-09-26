@@ -70,11 +70,11 @@ export const lightMenu: MenuItem[] = [
       {
         label: "Graphic Design", href: "/",
         subLinks: [
-          { label: "Logo Design & Branding", href: "/logo-design-branding" },
-          { label: "Brochure & Company Profile Design", href: "/brochure-design-company" },
-          { label: "Flyer & Poster Design", href: "/flyer-poster-design" },
-          { label: "Packaging Design", href: "/packaging-design-agency" },
-          { label: "Social Media Creative Design", href: "/creative-social-media-post-design-company" },
+          { label: "Logo Design & Branding", href: "/logo-designers-in-chennai" },
+          { label: "Brochure & Company Profile Design", href: "/brochure-design-company-in-chennai" },
+          { label: "Flyer & Poster Design", href: "/flyer-poster-designers-in-chennai" },
+          { label: "Packaging Design", href: "/packaging-design-agency-in-chennai" },
+          { label: "Social Media Creative Design", href: "/creative-social-media-post-design-company-in-chennai" },
 
         ]
       },
@@ -85,11 +85,11 @@ export const lightMenu: MenuItem[] = [
           { label: "Google Ads Management (PPC)", href: "/google-ads-agency-in-chennai" },
           { label: "Social Media Marketing", href: "/social-media-marketing-agency-in-chennai" },
           { label: "OFF Page SEO", href: "/seo-agencies-in-chennai" },
-          { label: "Answer Engine Optimization (AEO)", href: "/answer-engine-optimization-services" },
+          { label: "Answer Engine Optimization (AEO)", href: "/aeo-services-in-chennai" },
         ]
       },
       {
-        label: "AI-Enhanced Web Design", href: "/create-website-using-ai",
+        label: "AI-Enhanced Web Design", href: "/create-website-using-ai-in-chennai",
         // subLinks: [
         //   { label: "Search Engine Optimization (SEO)", href: "/seo" },
         //   { label: "Google Ads Management (PPC)", href: "/ads" },

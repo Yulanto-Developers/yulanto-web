@@ -199,14 +199,14 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/logo-design-branding",
+    path: "/logo-designers-in-chennai",
     title: " Logo Design & Branding",
  
     currentPage: "Logo Design & Branding",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/brochure-design-company",
+    path: "/brochure-design-company-in-chennai",
     title: "Brochure & Company Profile Design",
  
     currentPage: "Brochure & Company Profile Design",
@@ -220,7 +220,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/flyer-poster-design",
+    path: "/flyer-poster-designers-in-chennai",
     title: "Flyer & Poster Design",
  
     currentPage: "Flyer & Poster Design",
@@ -228,7 +228,7 @@ const data = [
   },
  
   {
-    path: "/packaging-design-agency",
+    path: "/packaging-design-agency-in-chennai",
     title: " Packaging Design",
  
     currentPage: " Packaging Design",
@@ -236,7 +236,7 @@ const data = [
   },
  
   {
-    path: "/creative-social-media-post-design-company",
+    path: "/creative-social-media-post-design-company-in-chennai",
     title: "Social Media Creative Designs",
  
     currentPage: "Social Media Creative Designs",
@@ -281,7 +281,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/create-website-using-ai",
+    path: "/create-website-using-ai-in-chennai",
     title: "AI-Enhanced Web Design",
  
     currentPage: "AI-Enhanced Web Design",
@@ -316,7 +316,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/answer-engine-optimization-services",
+    path: "/aeo-services-in-chennai",
     title: "Answer Engine Optimization (AEO)",
  
     currentPage: "Answer Engine Optimization (AEO)",
