@@ -160,7 +160,7 @@ export default function WordpressBenefits() {
                   <div className="d-flex flex-column flex-md-row gap-4 align-items-start">
                     <Image
                       src={section.image}
-                      alt="WordPress Capability Illustration"
+                      alt="wordpress development company chennai"
                       width={300}
                       height={400}
                       className="img-fluid rounded-4 object-fit-cover shadow-sm border flex-shrink-0"
@@ -221,7 +221,7 @@ export default function WordpressBenefits() {
                       <div className="mt-2">
                         <Image
                           src={section.sideImage}
-                          alt="WordPress Integration Illustration"
+                          alt="wordpress web development company"
                           width={500}
                           height={280}
                           className="img-fluid rounded-4 object-fit-cover shadow-sm border w-100"

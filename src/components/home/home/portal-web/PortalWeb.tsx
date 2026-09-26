@@ -917,7 +917,7 @@ function PortalWeb() {
                             <div className="portal-services-visual text-center">
                                 <img
                                     src="/assets/img/portal/1.Professional-Web-Portal-Development-Services.jpg"
-                                    alt="Web portal development illustration"
+                                    alt="Web portal development companyin chennai"
                                     className="img-fluid"
                                 />
                             </div>
@@ -1012,7 +1012,7 @@ function PortalWeb() {
                             <div className="portal-services-visual text-center ps-lg-4 w-100 d-flex flex-column justify-content-center">
                                 <img
                                     src="/assets/img/portal/2.Our-Portal-Development.jpg"
-                                    alt="Portal Development Solutions"
+                                    alt="Portal Development company in chennai"
                                     className="img-fluid w-100 shadow-sm"
                                     style={{
                                         height: "100%",
@@ -1212,7 +1212,7 @@ function PortalWeb() {
                             <div className="directory-left-image-box text-center h-100 d-flex flex-column">
                                 <img
                                     src="/assets/img/portal/3.Build-a-Powerful-Online.jpg"
-                                    alt="Directory Portal Development"
+                                    alt="web Portal Development company"
                                     className="img-fluid w-100 shadow-sm"
                                     style={{
                                         borderRadius: '16px',
@@ -1364,7 +1364,7 @@ function PortalWeb() {
                                         <div className="position-relative overflow-hidden text-center" style={{ borderRadius: '12px', minHeight: '300px', maxHeight: '380px' }}>
                                             <img
                                                 src="/assets/img/portal/4.Create-an-Engaging.jpg"
-                                                alt="Digital Magazine Portal Development"
+                                                alt="web development company in chennai"
                                                 className="w-100 h-100"
                                                 style={{ borderRadius: '12px', transition: 'transform 0.5s ease' }}
                                             />
@@ -1553,7 +1553,7 @@ function PortalWeb() {
                                 <div className="directory-left-image-box text-center">
                                     <img
                                         src="/assets/img/portal/5.Real-Estate-Portal.jpg"
-                                        alt="Real Estate Portal Development"
+                                        alt="Real Estate Portal Development company in chennai"
                                         className="img-fluid w-100"
                                         style={{ borderRadius: '16px', objectFit: 'cover', maxHeight: '480px', boxShadow: '0 10px 30px rgba(5, 52, 86, 0.08)' }}
                                     />
@@ -1773,7 +1773,7 @@ function PortalWeb() {
                                 <div className="restaurant-portal-side-image text-center">
                                     <img
                                         src="/assets/img/portal/6.Our-restaurant-portal.jpg"
-                                        alt="restaurant Portal Development"
+                                        alt="restaurant Portal Development company"
                                         className="img-fluid w-100 shadow-sm"
                                         style={{
                                             borderRadius: '16px',
@@ -2070,7 +2070,7 @@ function PortalWeb() {
                             >
                                 <img
                                     src="/assets/img/portal/7.Grow-Your-Online.jpg"
-                                    alt="Shopify Development"
+                                    alt="Shopify Development company"
                                     className="img-fluid"
                                     style={{
                                         width: "100%",

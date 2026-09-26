@@ -49,7 +49,7 @@ export default function WooCommerceSection(): JSX.Element {
             <div className="about-image-wrap text-center mb-4 mb-lg-0">
               <img
                 src="/assets/img/WooCommerce-Development/Flexible-Features-Built-1.png"
-                alt="WooCommerce Custom Development"
+                alt="ecommerce website design company in chennai"
                 className="img-fluid"
                 style={{ maxWidth: '400px', height: 'auto' }}
               />

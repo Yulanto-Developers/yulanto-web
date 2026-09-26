@@ -421,23 +421,23 @@ TextRotate.displayName = "TextRotate"
 const shopifyImages = [
   {
     url: "assets/img/Shopify E-commerce Development/top-1.jpg",
-    title: "E-commerce checkout experience",
+    title: "ecommerce website development company in chennai",
   },
   {
     url: "assets/img/Shopify E-commerce Development/top-2.jpg",
-    title: "Online Store Display",
+    title: "ecommerce website development company chennai",
   },
   {
     url: "assets/img/Shopify E-commerce Development/top-3.jpg",
-    title: "Modern Product Showcase",
+    title: "ecommerce development company in chennai",
   },
   {
     url: "assets/img/Shopify E-commerce Development/top-4.jpg",
-    title: "Online Shopping App",
+    title: "ecommerce development company",
   },
   {
     url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
-    title: "Digital Analytics Dashboard",
+    title: "ecommerce development company in chennai",
   },
 ]
 
@@ -465,6 +465,13 @@ export default function ShopifyHero() {
               <h4 className="px-about-title mb-20">
                 <span className="text-blue-about">Build a High-Performing </span>Online Store with Shopify
               </h4>
+              <h1 className="ft-23 mt-0 mb-3 text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"  style={{ lineHeight: "1.2" }}
+                >
+                Shopify Development Company in Chennai
+
+                </h1>
               <p className="text-figtree text-black mt-2">
                 Turn your business idea into a powerful online store with professional Shopify website development services. As a Shopify development company in Chennai, we help businesses create modern, responsive, user-friendly, and conversion-focused Shopify stores designed to support long-term growth.
               </p>

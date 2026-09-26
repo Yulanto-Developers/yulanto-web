@@ -65,7 +65,7 @@ export function FocusSection() {
               >
                 <img 
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" 
-                  alt="WordPress Logo" 
+                  alt="wordpress development company chennai" 
                   style={{ width: "36px", height: "36px" }}
                 />
               </div>
@@ -162,7 +162,7 @@ export function FocusSection() {
                       <div className="col-6">
                         <img 
                           src="/assets/img/WordPress-Development/Professional-WordPress-2.jpg" 
-                          alt="WordPress Design Team" 
+                          alt="WordPress Design in chennai" 
                           className="img-fluid rounded border shadow-sm" 
                           style={{ height: "85px", objectFit: "cover", width: "100%" }}
                         />

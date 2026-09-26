@@ -9,6 +9,27 @@ import Faq, { FaqSectionData } from "@/components/company-profile/faq";
 import Website from "@/components/WordPress-Development/WordPress-Website";
 import DevlopmentCompany from "@/components/WordPress-Development/Development-Company";
 
+import { generateSeo } from "@/lib/seo";
+import { wordpresspageSeo } from "@/lib/seo-data";
+import { faqDatawordpressPage } from "@/lib/faq-data";
+import ServiceSchema from "@/components/seo-sechama/ServiceSchema";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
+import FAQSchema from "@/components/seo-sechama/FAQSchema";
+import type { Metadata } from "next";
+
+const SITE_URL = "https://yulanto.com";
+const SLUG = "wordpress-development-company-in-Chennai";
+const pageUrl = `${SITE_URL}/${SLUG}`;
+
+export const metadata: Metadata = generateSeo({
+  title: wordpresspageSeo.title,
+  description: wordpresspageSeo.description,
+  slug: SLUG,
+  image: wordpresspageSeo.image,
+  imageAlt: wordpresspageSeo.imageAlt,
+});
+
+
 const wordpressFaqData: FaqSectionData = {
   mainTitleBlue: "Frequently Asked ",
   mainTitleBlack: "Questions",
@@ -73,8 +94,28 @@ const wordpressFaqData: FaqSectionData = {
 };
 
 export default function Page() {
+  const seo = wordpresspageSeo;
+  const faq = faqDatawordpressPage;
   return (
     <main>
+       {/* Breadcrumb Schema */}
+            <BreadcrumbSchema
+              items={[
+                { name: "Home", url: `${SITE_URL}/` },
+                { name: seo.serviceName, url: pageUrl },
+              ]}
+            />
+      
+            {/* FAQ Schema */}
+            {faq && faq.length > 0 && <FAQSchema items={[...faq]} />}
+      
+            {/* Service Schema */}
+            <ServiceSchema
+              name={seo.serviceName}
+              description={seo.serviceDescription}
+              url={pageUrl}
+              image={seo.image}
+            />
       <Breadcrumbdata />
       <Banner />
       <Header />
