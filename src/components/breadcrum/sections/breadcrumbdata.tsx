@@ -105,7 +105,7 @@ const data = [
   //   backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   // },
    {
-    path: "/web-design/Web-Designing-Company-in-Chennai",
+    path: "/web-design/web-designing-company-in-chennai",
     title: "Startup Website Design",
     currentPage: "Startup Website Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
@@ -117,33 +117,33 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/website-development/dynamic-website-development",
+    path: "/website-development/web-development-company-in-chennai",
     title: "Dynamic Website Development",
     currentPage: "Dynamic Website Development ",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/website-development/custom-website-development",
+    path: "/website-development/website-development-company-in-chennai",
     title: "Custom Website Development",
     currentPage: "Custom Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
  
   {
-    path: "/website-development/php-website-development",
+    path: "/website-development/web-design-and-development-companies-in-chennai",
     title: "PHP Website Development",
     currentPage: "PHP Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
  
   {
-    path: "/website-development/react-website-development",
+    path: "/website-development/web-development-services-in-chennai",
     title: "React Website Development",
     currentPage: "React Website Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/website-development/api-integration",
+    path: "/website-development/api-integration-services",
     title: "API Integration",
     currentPage: "API Integration",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
@@ -187,7 +187,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/web-design/Website-Redesign-in-Chennai",
+    path: "/web-design/website-redesign-in-chennai",
     title: "Website Redesign",
     currentPage: "Website Redesign ",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",

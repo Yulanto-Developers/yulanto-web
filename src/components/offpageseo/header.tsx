@@ -31,11 +31,11 @@ export interface CoverflowCarouselProps {
 }
 
 const DEFAULT_SLIDES: CoverflowSlide[] = [
-  { src: "assets/img/offpage/top-1.jpg", alt: "search engine optimization in digital marketing" },
-  { src: "assets/img/offpage/top-2.jpg", alt: "search engine optimization services near me" },
-  { src: "assets/img/offpage/top-3.jpg", alt: "seo agencies in chennai" },
-  { src: "assets/img/offpage/top-4.jpg", alt: "seo agencies chennai" },
-  { src: "assets/img/offpage/top-5.jpg", alt: "search engine optimization agencies chennai" },
+  { src: "assets/img/offpage/top-1.jpg", alt: "best website development companies in chennai" },
+  { src: "assets/img/offpage/top-2.jpg", alt: "top website development companies in chennai" },
+  { src: "assets/img/offpage/top-3.jpg", alt: "leading website design company in chennai" },
+  { src: "assets/img/offpage/top-4.jpg", alt: "website design company" },
+  { src: "assets/img/offpage/top-5.jpg", alt: "web design company" },
 ];
 
 const useIsoLayoutEffect =

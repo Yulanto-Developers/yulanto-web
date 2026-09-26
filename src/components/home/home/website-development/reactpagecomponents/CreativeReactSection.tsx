@@ -24,7 +24,12 @@ const CreativeReactSection = () => {
                                 </span>{" "}
                                 Meets React Development
                             </h4>
-
+ <h1 className="ft-23 mt-0 mb-3 text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"  style={{ lineHeight: "1.2" }}
+                >
+                web development services in chennai
+                </h1>
                             <p className="text-figtree text-black mt-2">
                                 Great websites need more than just technology.
                                 They need a clear structure, attractive design,
@@ -83,7 +88,7 @@ const CreativeReactSection = () => {
                             <div className="gallery-image gallery-image-main">
                                 <Image
                                     src={image1}
-                                    alt="Creative website design"
+                                    alt="react website design company"
                                     fill
                                     sizes="400px"
                                 />
@@ -97,7 +102,7 @@ const CreativeReactSection = () => {
                             <div className="gallery-image gallery-image-bottom">
                                 <Image
                                     src={image3}
-                                    alt="Modern React development"
+                                    alt="React development company chennai"
                                     fill
                                     sizes="230px"
                                 />

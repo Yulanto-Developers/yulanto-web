@@ -71,23 +71,23 @@ export default async function Page({
   let pageContent;
  
   switch (pages) {
-    case "dynamic-website-development":
+    case "web-development-company-in-chennai":
       pageContent = <DynamicWebsiteDevelopment />;
       break;
  
-    case "custom-website-development":
+    case "website-development-company-in-chennai":
       pageContent = <CustomWebsiteDevelopment />;
       break;
  
-    case "php-website-development":
+    case "web-design-and-development-companies-in-chennai":
       pageContent = <PHPWebsiteDevelopment />;
       break;
  
-    case "react-website-development":
+    case "web-development-services-in-chennai":
       pageContent = <ReactWebsiteDevelopment />;
       break;
  
-    case "api-integration":
+    case "api-integration-services-in-chennai":
       pageContent = <ApiIntegration />;
       break;
  

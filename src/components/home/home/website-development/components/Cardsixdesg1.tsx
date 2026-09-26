@@ -30,7 +30,7 @@ const defaultFeatures: FeatureItem[] = [
         colClass: "col-lg-8 col-md-12",
         isFeatured: true,
         imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-1.jpg",
-        imageAlt: "Bespoke branding design",
+        imageAlt: "leading website development in chennai",
     },
     // Compact Side Feature Block
     {
@@ -42,7 +42,7 @@ const defaultFeatures: FeatureItem[] = [
             "We create customized landing pages designed around your marketing objectives, structured around your target audience to maximize conversion rates.",
         colClass: "col-lg-4 col-md-6",
         imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-2.jpg",
-        imageAlt: "Landing page design",
+        imageAlt: "Landing page design in chennai",
     },
     // Compact Feature Block
     {
@@ -54,7 +54,7 @@ const defaultFeatures: FeatureItem[] = [
             "From enquiry forms, APIs, and customer portals to payment gateways and eCommerce, built around your business needs.",
         colClass: "col-lg-4 col-md-6",
         imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-3.jpg",
-        imageAlt: "Custom functionality",
+        imageAlt: "Custom website development chennai",
     },
     // Large Featured SEO Block
     {
@@ -67,7 +67,7 @@ const defaultFeatures: FeatureItem[] = [
         colClass: "col-lg-8 col-md-12",
         isFeatured: true,
         imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-4.jpg",
-        imageAlt: "SEO optimization",
+        imageAlt: "SEO optimization chennnai",
     },
     // Split Equal Bottom Row Blocks
     {
@@ -80,7 +80,7 @@ const defaultFeatures: FeatureItem[] = [
         colClass: "col-lg-8 col-md-12",
         isFeatured: true,
         imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-5.jpg",
-        imageAlt: "Responsive development",
+        imageAlt: "top web development chennai",
     },
     {
         id: "06",
@@ -91,7 +91,7 @@ const defaultFeatures: FeatureItem[] = [
             "Security and scalability are paramount for long-term growth. We follow enterprise-grade development practices that scale effortlessly alongside your expanding business.",
         colClass: "col-lg-4 col-md-6",
         imageUrl: "/assets/images/website-development/custom-website-development/Your-Business-6.jpg",
-        imageAlt: "Secure and scalable websites",
+        imageAlt: "best website development chennai",
     },
 ];
 

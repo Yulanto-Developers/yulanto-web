@@ -2,112 +2,216 @@ export const faqData = {
   /* =========================================================
      DYNAMIC WEBSITE DEVELOPMENT
   ========================================================= */
-  "dynamic-website-development": [
+  "web-development-company-in-chennai": [
     {
-      question: "What is dynamic website development?",
+      question: "How does a dynamic website differ from a static website?",
       answer:
-        "Dynamic website development creates websites where content can be managed, updated and displayed dynamically based on business requirements.",
+        "A static website generally consists of fixed HTML pages where the content remains largely unchanged unless the underlying files are manually edited. A dynamic website can generate and display content using server-side technologies and databases. Dynamic websites are particularly useful when businesses need regular content updates, user interaction, database functionality, e-commerce, booking systems, or other advanced features.",
     },
     {
-      question: "Can you develop dynamic websites in Chennai?",
+      question: "What are the advantages of a dynamic website?",
       answer:
-        "Yes. Yulanto Web Creations provides dynamic website development services for businesses in Chennai and other locations.",
+        "Dynamic websites provide greater flexibility and functionality. Key advantages include easy content management, database integration, interactive features, scalability, personalized functionality, e-commerce capabilities, regular content updates, analytics integration, and compatibility with various digital marketing requirements.",
     },
     {
-      question: "Can dynamic websites be customized?",
+      question: "What types of websites can use dynamic functionality?",
       answer:
-        "Yes. Dynamic websites can be customized with features, content management systems, integrations and functionality based on business requirements.",
+        "Almost any business website can benefit from dynamic functionality when its requirements demand it. Common examples include: Corporate websites, Business websites, E-commerce websites, News and media portals, Blogs, Educational websites, Booking websites, Membership websites, Business directories, Customer portals, Real estate websites, Service-based websites, and Custom web applications.",
+    },
+    {
+      question: "How is content managed on a dynamic website?",
+      answer:
+        "Content is generally managed through a CMS or database-driven administration panel. Authorized users can log in and update pages, products, services, images, blogs, testimonials, and other website information through a user-friendly interface. This eliminates the need to manually edit individual HTML files for every content update.",
+    },
+    {
+      question: "Do you provide post-development maintenance and support?",
+      answer:
+        "Yes. We provide post-development support for our websites for a limited period after the project goes live. Extended website maintenance and support can also be provided based on your requirements and mutually agreed terms. Our support services can include content updates, technical assistance, website maintenance, troubleshooting, security updates, backups, and other website-related requirements.",
+    },
+    {
+      question: "How much does website development cost in Chennai?",
+      answer:
+        "The cost of website development depends on factors such as the number of pages, design requirements, CMS platform, functionality, integrations, database requirements, e-commerce features, and customization. Contact our team to discuss your requirements and receive a suitable website development proposal.",
+    },
+    {
+      question:
+        "Why should I choose a professional web development company in Chennai?",
+      answer:
+        "A professional development team can help you build a website that is not only visually appealing but also responsive, user-friendly, scalable, secure, and aligned with your business objectives. By working with experienced web developers in Chennai, you can get a website designed around your specific business requirements rather than relying on a generic template-based solution.",
     },
   ],
 
   /* =========================================================
      CUSTOM WEBSITE DEVELOPMENT
   ========================================================= */
-  "custom-website-development": [
+  "website-development-company-in-chennai": [
     {
-      question: "What is custom website development?",
+      question:
+        "Are custom websites better than generic websites for businesses?",
       answer:
-        "Custom website development involves creating a website specifically according to your business requirements, goals and functionality.",
+        "Custom websites can provide greater flexibility and control over design, functionality, branding, and user experience. Unlike generic websites that may look similar to many others, a customized website can be developed specifically around your business requirements and target audience.",
     },
     {
-      question: "Can you build a custom website for my business?",
+      question: "How long does it take to develop a custom website?",
       answer:
-        "Yes. Yulanto Web Creations develops customized websites based on your business requirements, target audience and project goals.",
+        "The development timeline depends on the website's size, number of pages, design requirements, functionality, integrations, content, and technology. A typical custom business website may take around 4 to 6 weeks, while larger projects may require additional time.",
     },
     {
-      question: "Can custom websites be integrated with third-party services?",
+      question: "Does custom website development cost more?",
       answer:
-        "Yes. Custom websites can be integrated with payment gateways, CRM systems, APIs, WhatsApp, shipping platforms and other third-party services.",
+        "Custom website development can cost more than using a basic template because it involves customized design, development, functionality, testing, and technical expertise. However, the investment provides greater flexibility and allows the website to be built around your specific business requirements.",
+    },
+    {
+      question: "Is custom website development good for SEO?",
+      answer:
+        "Yes. A properly developed custom website can provide a strong technical foundation for SEO. Clean structure, responsive design, page speed, proper heading hierarchy, metadata, mobile usability, and SEO-friendly content organization can all support better search-engine visibility.",
+    },
+    {
+      question: "Can you integrate third-party tools into a custom website?",
+      answer:
+        "Yes. Depending on your requirements, we can integrate payment gateways, CRM systems, APIs, enquiry management tools, analytics platforms, email services, WhatsApp solutions, and other third-party applications.",
+    },
+    {
+      question: "Can the website be upgraded in the future?",
+      answer:
+        "Yes. One of the major advantages of custom website development is scalability. New pages, features, integrations, business modules, and functionality can be added as your business requirements evolve.",
+    },
+    {
+      question: "Do you provide website maintenance after development?",
+      answer:
+        "Yes. We provide ongoing website maintenance and support services, including content updates, technical assistance, security updates, backups, performance improvements, and other website management requirements.",
     },
   ],
 
   /* =========================================================
      PHP WEBSITE DEVELOPMENT
   ========================================================= */
-  "php-website-development": [
+  "web-design-and-development-companies-in-chennai": [
     {
-      question: "What is PHP website development?",
+      question: "What is PHP web development?",
       answer:
-        "PHP website development uses PHP to create dynamic websites, business websites, web applications and custom backend solutions.",
+        "PHP web development is the process of building dynamic, database-driven websites and web applications using PHP. It is commonly used for business websites, eCommerce platforms, custom web portals, and content management systems.",
     },
     {
-      question: "Do you provide PHP website development services in Chennai?",
+      question: "What PHP web development services are available in Chennai?",
       answer:
-        "Yes. Yulanto Web Creations provides PHP website development services for businesses in Chennai and other locations.",
+        "PHP web development services in Chennai include custom PHP website development, PHP web application development, eCommerce development, CMS development, API integration, database integration, website maintenance, and PHP migration services.",
     },
     {
-      question: "Can you develop custom PHP websites?",
+      question: "Why choose PHP for website development?",
       answer:
-        "Yes. Custom PHP websites can be developed according to your business requirements, features and application needs.",
+        "PHP is widely used for website development because it supports dynamic websites, database connectivity, API integration, and custom web applications. It also works with popular frameworks and content management systems.",
+    },
+    {
+      question: "How much does PHP website development cost in Chennai?",
+      answer:
+        "The cost of PHP website development in Chennai depends on the website type, number of pages, design requirements, features, database integration, API integrations, and custom functionality required.",
+    },
+    {
+      question: "Can PHP developers build custom web applications?",
+      answer:
+        "Yes, PHP developers can build custom web applications based on specific business requirements, including customer portals, admin dashboards, booking systems, eCommerce platforms, and database-driven applications.",
+    },
+    {
+      question: "Can PHP be used for eCommerce website development?",
+      answer:
+        "Yes, PHP can be used to develop eCommerce websites with product management, shopping carts, payment gateway integration, customer accounts, order management, and database functionality.",
+    },
+    {
+      question: "Do PHP development companies provide API integration?",
+      answer:
+        "Yes, PHP development companies can integrate APIs for payment gateways, CRM systems, shipping services, social platforms, third-party applications, and other business systems.",
+    },
+    {
+      question:
+        "What is the difference between PHP web development and web design?",
+      answer:
+        "Web design focuses on the visual appearance, layout, and user experience of a website, while PHP web development focuses on server-side functionality, database connectivity, dynamic content, and custom website features.",
     },
   ],
 
   /* =========================================================
      REACT WEBSITE DEVELOPMENT
   ========================================================= */
-  "react-website-development": [
+  "web-development-services-in-chennai": [
     {
-      question: "What is React website development?",
+      question: "What is React JS development?",
       answer:
-        "React website development uses the React library to build modern, interactive and scalable websites and web applications.",
+        "React JS development is the process of building interactive and dynamic websites and web applications using React JS. It is commonly used for modern business websites, web applications, dashboards, and custom digital platforms.",
     },
     {
-      question: "Do you provide React development services in Chennai?",
+      question: "What React JS development services are available in Chennai?",
       answer:
-        "Yes. Yulanto Web Creations provides React website and web application development services in Chennai and other locations.",
+        "React JS development services in Chennai include React website development, custom React JS development, React web application development, UI development, API integration, database integration, and React website maintenance.",
     },
     {
-      question: "Can React websites be integrated with APIs?",
+      question: "Why choose React JS for web development?",
       answer:
-        "Yes. React websites can be integrated with REST APIs, third-party services, payment gateways, CRM systems and other backend applications.",
+        "React JS is widely used for web development because it supports reusable components, dynamic user interfaces, fast updates, and scalable web applications. It can also integrate with APIs and other web technologies.",
+    },
+    {
+      question: "Can React JS be used for business website development?",
+      answer:
+        "Yes, React JS can be used to develop business websites with interactive interfaces, dynamic content, custom features, API integrations, and responsive user experiences.",
+    },
+    {
+      question: "Can React JS developers build custom web applications?",
+      answer:
+        "Yes, React JS developers can build custom web applications such as dashboards, customer portals, booking platforms, eCommerce interfaces, and other interactive business applications.",
+    },
+    {
+      question: "Can React JS integrate with APIs?",
+      answer:
+        "Yes, React JS can integrate with APIs to connect websites and web applications with databases, payment gateways, CRM systems, third-party services, and other backend systems.",
+    },
+    {
+      question: "How much does React JS website development cost in Chennai?",
+      answer:
+        "The cost of React JS website development in Chennai depends on the website size, design requirements, functionality, API integrations, database requirements, and level of customization.",
+    },
+    {
+      question:
+        "What is the difference between React JS and traditional web development?",
+      answer:
+        "React JS uses reusable components to create dynamic and interactive user interfaces, while traditional web development may rely more on separate page-based HTML, CSS, and JavaScript structures.",
     },
   ],
 
   /* =========================================================
      API INTEGRATION
   ========================================================= */
-  "api-integration": [
+  "api-integration-services-in-chennai": [
     {
-      question: "What is API integration?",
+      question: "What is API Integration?",
       answer:
         "API integration connects two or more software applications or platforms so they can exchange information and work together automatically.",
     },
     {
       question: "What types of APIs can you integrate?",
       answer:
-        "We can integrate payment, SMS, WhatsApp, CRM, chat, shipping, accounting, booking, marketing and other third-party APIs based on your technical and business requirements.",
+        "We can integrate payment, SMS, WhatsApp, CRM, chat, shipping, accounting, booking, marketing, and other third-party APIs based on your technical and business requirements.",
     },
     {
       question: "Can you integrate APIs into an existing website?",
       answer:
-        "Yes. APIs can be integrated into existing websites, eCommerce platforms, web applications and custom software systems.",
+        "Yes. We can integrate APIs into existing websites, WordPress websites, eCommerce platforms, PHP applications, and custom web applications.",
+    },
+    {
+      question: "Can API integration automate business processes?",
+      answer:
+        "Yes. API integration can automate tasks such as lead capture, payment processing, customer notifications, CRM updates, order processing, and data synchronization.",
+    },
+    {
+      question: "Connect. Automate. Grow.",
+      answer:
+        "Transform disconnected systems into a connected business platform with professional API Integration Services in Chennai. Get in touch with our team to discuss your API requirements and build a solution that works seamlessly with your existing technology.",
     },
   ],
 
   /* =========================================================
      Startup Website Design
   ========================================================= */
-  "Web-Designing-Company-in-Chennai": [
+  "web-designing-company-in-chennai": [
     {
       question: "What is startup website design?",
       answer:
@@ -219,7 +323,7 @@ export const faqData = {
   /* =========================================================
     website-redesign
   ========================================================= */
-  "Website-Redesign-in-Chennai": [
+  "website-redesign-in-chennai": [
     {
       question: "How much does website redesign cost in Chennai?",
       answer:
@@ -327,7 +431,7 @@ export const faqData = {
   /* =========================================================
    ui-ux-desgin
   ========================================================= */
-  "UI-UX-Companies-in-Chennai": [
+  "ui-ux-companies-in-chennai": [
     {
       question: "How can I find the right UI UX design services near me?",
       answer:
@@ -528,7 +632,6 @@ export const faqDataSocialMedia = [
       "Social media marketing generates leads through targeted advertising, engaging content, lead forms, call-to-action buttons, and direct messaging. It helps capture interested prospects and nurture them toward conversion.",
   },
 ] as const;
-
 
 export const faqDataOffPage = [
   {
@@ -764,7 +867,6 @@ export const faqDataaeoPage = [
       "There is no fixed timeframe. Results depend on factors such as website authority, competition, content quality, technical health, search demand and how frequently search systems crawl and update information.",
   },
 ] as const;
-
 
 export const faqDataAIAssPage = [
   {
