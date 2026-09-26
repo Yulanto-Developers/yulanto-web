@@ -120,11 +120,11 @@ const organizationSchema = {
       telephone: "+919962157250",
       contactType: "customer service",
     },
-    {
-      "@type": "ContactPoint",
-      telephone: "+914431000651",
-      contactType: "customer service",
-    },
+    // {
+    //   "@type": "ContactPoint",
+    //   telephone: "+914431000651",
+    //   contactType: "customer service",
+    // },
   ],
 
   email: company.email,
