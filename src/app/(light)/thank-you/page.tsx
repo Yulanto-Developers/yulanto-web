@@ -15,7 +15,7 @@ export default function Page() {
       setCountdown((prev) => {
         if (prev <= 1) {
           clearInterval(interval);
-          router.push('/');
+          router.push('/home');
           return 1;
         }
 

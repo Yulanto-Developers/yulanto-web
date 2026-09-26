@@ -10,7 +10,7 @@ import "@/assets/css/style1.css";
 import "glightbox/dist/css/glightbox.css";
 import { QuoteProvider } from "@/components/home/home/myComponents/Content/QuoteContext";
 import FloatingActionsWrapper from "@/components/home/home/components/FloatingIcon";
-import QuoteModal from "@/components/home/home/myComponents/tpop";
+import QuoteModal from "@/components/home/home/myComponents/Pop";
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
 
 export default function AboutUsLayout({ children }: {

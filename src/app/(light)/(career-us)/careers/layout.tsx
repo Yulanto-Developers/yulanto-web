@@ -2,7 +2,7 @@ import { DesignStudioHeader, MainFooter } from "@/components/layout";
 import PersonalPortfolioHeader from "@/components/layout/headers/PersonalPortfolioHeader";
 import { ClientProviders } from "@/providers";
 import FloatingActionsWrapper from "@/components/home/home/components/FloatingIcon";
-import QuoteModal from "@/components/home/home/myComponents/tpop";
+import QuoteModal from "@/components/home/home/myComponents/Pop";
 import "@/assets/css/style.css";
 import "@/assets/css/custome.css";
 import { generateSeo } from "@/lib/seo";

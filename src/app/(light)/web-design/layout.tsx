@@ -7,7 +7,7 @@ import FloatingActionsWrapper from "@/components/home/home/components/FloatingIc
 
 import { QuoteProvider } from "@/components/home/home/myComponents/Content/QuoteContext";
 
-import QuoteModal from "@/components/home/home/myComponents/tpop";
+import QuoteModal from "@/components/home/home/myComponents/Pop";
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
 
 import "aos/dist/aos.css";

@@ -8,7 +8,7 @@ import "../../../../components/ourclients/clientpage.css";
 
 import { generateSeo } from "@/lib/seo";
 import { QuoteProvider } from "@/components/home/home/myComponents/Content/QuoteContext";
-import QuoteModal from "@/components/home/home/myComponents/tpop";
+import QuoteModal from "@/components/home/home/myComponents/Pop";
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
 export const metadata = generateSeo({
   title: "Our Clients | Global Website Design & Development Services | Yulanto",
