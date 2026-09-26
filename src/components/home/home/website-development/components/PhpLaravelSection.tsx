@@ -493,7 +493,7 @@ export default function AboutPhpLaravelSection() {
 
              <img
                 src="/assets/img/react/image-1.png"
-                alt="Google Ads results"
+                alt="web development company in chennai"
                 style={{
                   width: "100%",
                   maxWidth: "500px",

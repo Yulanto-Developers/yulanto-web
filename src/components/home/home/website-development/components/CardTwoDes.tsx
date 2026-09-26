@@ -24,7 +24,7 @@ const processList: ProcessStep[] = [
       "This helps our website developers create a clear development strategy based on your business needs."
     ],
     imageUrl: "/assets/img/customwebsite/A-Structured-Approach-1.jpg",
-    imageAlt: "Requirement gathering strategy",
+    imageAlt: "web dev agency",
   },
   {
     stepNum: "02",
@@ -35,7 +35,7 @@ const processList: ProcessStep[] = [
       "Wireframes may also be prepared to establish the page structure and user journey before moving into the design stage."
     ],
     imageUrl: "/assets/img/customwebsite/A-Structured-Approach-2.jpg",
-    imageAlt: "Planning and architecture",
+    imageAlt: "website development agencies",
   },
   {
     stepNum: "03",
@@ -46,7 +46,7 @@ const processList: ProcessStep[] = [
       "The objective is to create a website that not only looks professional but also makes it easy for visitors to find information and take action."
     ],
     imageUrl: "/assets/img/customwebsite/A-Structured-Approach-3.jpg",
-    imageAlt: "UI/UX design process",
+    imageAlt: "UI/UX design company",
   },
   {
     stepNum: "04",
@@ -57,7 +57,7 @@ const processList: ProcessStep[] = [
       "Depending on your requirements, we can work with technologies such as HTML, CSS, JavaScript, PHP, WordPress, Next.js, Laravel, and WooCommerce."
     ],
     imageUrl: "/assets/img/customwebsite/A-Structured-Approach-4.jpg",
-    imageAlt: "Website development code",
+    imageAlt: "Website development chennai",
   },
   {
     stepNum: "05",
@@ -74,7 +74,7 @@ const processList: ProcessStep[] = [
       "Forms, links & SEO setup"
     ],
     imageUrl: "/assets/img/customwebsite/A-Structured-Approach-5.jpg",
-    imageAlt: "Testing and quality assurance",
+    imageAlt: "website development agencies",
   },
   {
     stepNum: "06",
@@ -84,7 +84,7 @@ const processList: ProcessStep[] = [
       "Once testing is completed and the website receives final approval, we deploy the website to the live server. Our team assists with domain, hosting, SSL configuration, and deployment requirements to ensure a smooth launch.",
     ],
     imageUrl: "/assets/img/customwebsite/A-Structured-Approach-6.jpg",
-    imageAlt: "Deployment and live launch",
+    imageAlt: "best website development chennai",
   },
   {
     stepNum: "07",
@@ -94,7 +94,7 @@ const processList: ProcessStep[] = [
       "Website development does not end after launch. Regular updates keep your website secure, functional, and up to date. We provide ongoing website maintenance, security updates, backups, content edits, and performance enhancements."
     ],
     imageUrl: "/assets/img/customwebsite/A-Structured-Approach-7.jpg",
-    imageAlt: "Maintenance and updates",
+    imageAlt: " web development chennai",
   }
 ];
 

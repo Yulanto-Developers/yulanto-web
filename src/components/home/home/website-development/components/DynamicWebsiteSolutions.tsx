@@ -354,10 +354,19 @@ const DynamicWebsiteSolutions = ({
 
       <section className="web-dev-solutions-section">
         <div className="container">
-         <h4 className="px-about-title mb-20 text-center">
-                <span className="text-blue-about">  Why Businesses</span>
-              Choose Us
-              </h4>
+          <h4 className="px-about-title mb-20 text-center">
+            <span className="text-blue-about"> Why Businesses </span>
+            Choose Us
+          </h4>
+
+          <h1
+            className="ft-23 mt-0 mb-3 text-center text-tenor"
+            data-aos="text-reveal"
+            data-aos-delay="100"
+            style={{ lineHeight: "1.2" }}
+          >
+            Website Development Company in Chennai
+          </h1>
 
           <div className="row mt-3 justify-content-center">
             {cards.map((card) => (

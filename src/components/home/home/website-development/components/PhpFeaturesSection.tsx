@@ -19,6 +19,7 @@ interface FeatureItem {
   description: string;
   image: string;
   icon: LucideIcon;
+  alt?:string;
 }
 
 export default function PhpFeaturesSection() {
@@ -31,6 +32,7 @@ export default function PhpFeaturesSection() {
       image:
         '/assets/images/website-development/php-website-development/key-features-1.jpg',
       icon: Smartphone,
+      alt:'website development company chennai',
     },
     {
       id: 2,
@@ -40,6 +42,7 @@ export default function PhpFeaturesSection() {
       image:
         '/assets/images/website-development/php-website-development/key-features-2.jpg',
       icon: Layers,
+ alt:'php website development company chennai',      
     },
     {
       id: 3,
@@ -49,6 +52,7 @@ export default function PhpFeaturesSection() {
       image:
         '/assets/images/website-development/php-website-development/key-features-3.jpg',
       icon: Sliders,
+      alt:'php web development company chennai',    
     },
     {
       id: 4,
@@ -58,6 +62,7 @@ export default function PhpFeaturesSection() {
       image:
         '/assets/images/website-development/php-website-development/key-features-4.jpg',
       icon: Database,
+       alt:'php web development company',    
     },
     {
       id: 5,
@@ -67,6 +72,7 @@ export default function PhpFeaturesSection() {
       image:
         '/assets/images/website-development/php-website-development/key-features-5.jpg',
       icon: Share2,
+      alt:'php web development company in chennai',     
     },
     {
       id: 6,
@@ -76,6 +82,7 @@ export default function PhpFeaturesSection() {
       image:
         '/assets/images/website-development/php-website-development/key-features-6.jpg',
       icon: ShieldCheck,
+       alt:'web development company chennai',    
     },
     {
       id: 7,
@@ -85,6 +92,7 @@ export default function PhpFeaturesSection() {
       image:
         '/assets/images/website-development/php-website-development/key-features-7.jpg',
       icon: TrendingUp,
+       alt:'development company in chennai',    
     },
     {
       id: 8,
@@ -94,6 +102,7 @@ export default function PhpFeaturesSection() {
       image:
         '/assets/images/website-development/php-website-development/key-features-8.jpg',
       icon: Zap,
+       alt:'web dev company chennai',    
     },
   ];
 
@@ -122,6 +131,14 @@ export default function PhpFeaturesSection() {
                 Powerful Features for{' '}
                 <span className="text-black">Modern PHP Websites</span>
               </h4>
+              <h1
+                className="ft-23 mt-0 mb-3 text-tenor"
+                data-aos="text-reveal"
+                data-aos-delay="100"
+                style={{ lineHeight: "1.2" }}
+              >
+                Web Design & Development Companies in Chennai
+              </h1>
               <p
                 className="mb-3 text-secondary"
                 data-aos="text-reveal-lines"
@@ -162,7 +179,7 @@ export default function PhpFeaturesSection() {
                   {/* Background Image */}
                   <img
                     src={feature.image}
-                    alt={feature.title}
+                    alt={feature.alt}
                     className="card-bg-img w-100 h-100 position-absolute top-0 start-0"
                   />
 

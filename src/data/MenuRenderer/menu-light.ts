@@ -36,22 +36,22 @@ export const lightMenu: MenuItem[] = [
           // { label: "Landing Page Design", href: "/web-design/landing-page-desgin" },
           // { label: "UI/UX Design", href: "/web-design/ui-ux-desgin" },
           // url change for seo
-          { label: "Startup Website Design", href: "/web-design/Web-Designing-Company-in-Chennai" },
+          { label: "Startup Website Design", href: "/web-design/web-designing-company-in-chennai" },
           { label: "Corporate Website Design", href: "/web-design/website-creation-company-in-Chennai" },
-          { label: "Website Redesign", href: "/web-design/Website-Redesign-in-Chennai" },
+          { label: "Website Redesign", href: "/web-design/website-redesign-in-chennai" },
           { label: "Landing Page Design", href: "/web-design/landing-page-design-chennai" },
-          { label: "UI/UX Design", href: "/web-design/UI-UX-Companies-in-Chennai" },
+          { label: "UI/UX Design", href: "/web-design/ui-ux-companies-in-chennai" },
         ]
       },
       {
         label: "Website Development", href: "/",
         subLinks: [
-          { label: "Dynamic Website Development", href: "/website-development/dynamic-website-development" },
-          { label: "Custom Website Development", href: "/website-development/custom-website-development" },
-          { label: "PHP Website Development", href: "/website-development/php-website-development" },
+          { label: "Dynamic Website Development", href: "/website-development/web-development-company-in-chennai" },
+          { label: "Custom Website Development", href: "/website-development/website-development-company-in-chennai" },
+          { label: "PHP Website Development", href: "/website-development/web-design-and-development-companies-in-chennai" },
 
-          { label: "React Website Development", href: "/website-development/react-website-development" },
-          { label: "API Integration", href: "/website-development/api-integration" },
+          { label: "React Website Development", href: "/website-development/web-development-services-in-chennai" },
+          { label: "API Integration", href: "/website-development/api-integration-services-in-chennai" },
           // {label: "AI Assisted Website Development", href: "/AI-assisted-website" }
 
         ]

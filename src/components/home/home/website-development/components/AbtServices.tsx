@@ -1,30 +1,36 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react';
-import { useAOS } from '@/components/hooks/useAOS';
-import '@/components/home/home/aboutcomponents/ourStory.css';
-import '@/assets/css/textAnimations.css';
-import CreativeAgencyFunfact from './CreativeAgencyFunfact';
-
+import React, { useEffect } from "react";
+import { useAOS } from "@/components/hooks/useAOS";
+import "@/components/home/home/aboutcomponents/ourStory.css";
+import "@/assets/css/textAnimations.css";
+import CreativeAgencyFunfact from "./CreativeAgencyFunfact";
 
 const galleryImages = [
-    "/assets/images/website-development/dynamic-website-development/top-1.jpg",
-    "/assets/images/website-development/dynamic-website-development/top-2.jpg",
-    "/assets/images/website-development/dynamic-website-development/top-3.jpg",
-    "/assets/images/website-development/dynamic-website-development/top-4.jpg",
-    "/assets/images/website-development/dynamic-website-development/top-5.jpg",
+  "/assets/images/website-development/dynamic-website-development/top-1.jpg",
+  "/assets/images/website-development/dynamic-website-development/top-2.jpg",
+  "/assets/images/website-development/dynamic-website-development/top-3.jpg",
+  "/assets/images/website-development/dynamic-website-development/top-4.jpg",
+  "/assets/images/website-development/dynamic-website-development/top-5.jpg",
+];
+
+const AltText = [
+  "website developers in chennai",
+  "web development company in chennai",
+  "website development company chennai",
+  "web developers in chennai",
+  "website development chennai",
 ];
 
 const AbtServices = () => {
-    useAOS();
-    return (
-        <section className="yul-st">
-            {/* =========================================
+  useAOS();
+  return (
+    <section className="yul-st">
+      {/* =========================================
                 INTRO - WHITE SECTION
             ========================================= */}
-            <style>
-                {
-                    `.yul-st .services-section {
+      <style>
+        {`.yul-st .services-section {
                      background: #fff;
                      width: 100%;
                      padding: 30px 0px 30px;
@@ -283,86 +289,97 @@ const AbtServices = () => {
         flex-basis: 165px;
     }
 }
-                     `
-
-
-                }
-            </style>
-            <div className="services-section">
-                <div className="container services-content mt-3">
-
-                    <div className="row">
-                        <div className="col-xl-3">
-                            <span
-                                className="tp-section-subtitle text-black blink-ball mt-40"
-                                style={{ lineHeight: "25px" }} data-aos="text-reveal"
-                                data-aos-delay="100"
-                            >
-                                Web Development <br />
-                                Company in Chennai
-                            </span>
-                        </div>
-
-                        <div className="col-xl-9">
-                            <div className="px-project-title-box">
-
-                                <h4
-                                    className="px-about-title text-tenor"
-                                    data-aos="text-reveal"
-                                    data-aos-delay="100"
-                                >
-                                    Dynamic Website Development Services  <br /> <span className="text-blue-about"> for Growing Businesses </span>
-                                </h4>
-                                <p
-                                    className="mb-0"
-                                    data-aos="text-reveal-lines"
-                                    data-aos-delay="200"
-                                >
-                                    Looking for a reliable web development company in Chennai to build a powerful, scalable, and professional website for your business? At Yulanto Web Creations, we provide result-oriented web development services in Chennai designed to help businesses establish a strong digital presence, engage customers, and achieve their online goals.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                     `}
+      </style>
+      <div className="services-section">
+        <div className="container services-content mt-3">
+          <div className="row">
+            <div className="col-xl-3">
+              <span
+                className="tp-section-subtitle text-black blink-ball mt-40"
+                style={{ lineHeight: "25px" }}
+                data-aos="text-reveal"
+                data-aos-delay="100"
+              >
+                Web Development <br />
+                Company in Chennai
+              </span>
             </div>
 
-            <section className="overlap-gallery container mt-3">
-                <div className="overlap-gallery-track">
-                    {galleryImages.map((image, index) => (
-                        <div
-                            className={`overlap-gallery-item item-${index + 1}`}
-                            key={index}
-                            data-aos="fade-up"
-                            data-aos-delay={index * 100}
-                            data-aos-duration="800"
-                        >
-                            <img src={image} alt={`Gallery ${index + 1}`} />
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            <div className="container">
-                <p
-                    className="mt-2"
-                    data-aos="text-reveal-lines"
-                    data-aos-delay="200"
+            <div className="col-xl-9">
+              <div className="px-project-title-box">
+                <h4
+                  className="px-about-title text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"
                 >
-                    As one of the experienced web design and development companies in Chennai, we create dynamic, responsive, database-driven, and easy-to-manage websites tailored to your business requirements. Whether you need a corporate website, business portal, e-commerce website, booking platform, content management system, or custom web application, our experienced web developers in Chennai can develop a solution that fits your needs.
+                  Dynamic Website Development Services <br />{" "}
+                  <span className="text-blue-about">
+                    {" "}
+                    for Growing Businesses{" "}
+                  </span>
+                </h4>
+                <p
+                  className="mb-0"
+                  data-aos="text-reveal-lines"
+                  data-aos-delay="200"
+                >
+                  Looking for a reliable web development company in Chennai to
+                  build a powerful, scalable, and professional website for your
+                  business? At Yulanto Web Creations, we provide result-oriented
+                  web development services in Chennai designed to help
+                  businesses establish a strong digital presence, engage
+                  customers, and achieve their online goals.
                 </p>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <CreativeAgencyFunfact num1={0} num2={4} titleFirst="Dynamic"
-                titleHighlight="Website"
-                titleSecond="Development" />
+      <section className="overlap-gallery container mt-3">
+        <div className="overlap-gallery-track">
+          {galleryImages.map((image, index) => (
+            <div
+              className={`overlap-gallery-item item-${index + 1}`}
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              data-aos-duration="800"
+            >
+              <img src={image} alt={AltText[index]} />
+            </div>
+          ))}
+        </div>
+      </section>
 
-            {/* =========================================
+      <div className="container">
+        <p className="mt-2" data-aos="text-reveal-lines" data-aos-delay="200">
+          As one of the experienced web design and development companies in
+          Chennai, we create dynamic, responsive, database-driven, and
+          easy-to-manage websites tailored to your business requirements.
+          Whether you need a corporate website, business portal, e-commerce
+          website, booking platform, content management system, or custom web
+          application, our experienced web developers in Chennai can develop a
+          solution that fits your needs.
+        </p>
+      </div>
+
+      <CreativeAgencyFunfact
+        num1={0}
+        num2={4}
+        titleFirst="Dynamic"
+        titleHighlight="Website"
+        titleSecond="Development"
+      />
+
+      {/* =========================================
                 ABOUT SECTION - BLUE
             ========================================= */}
-            <section className="about-blue-section">
-                <div className="container-fuild">
-                    <div className="row align-items-center">
-                        {/* <div className="col-lg-4 mb-4 mb-lg-0">
+      <section className="about-blue-section">
+        <div className="container-fuild">
+          <div className="row align-items-center">
+            {/* <div className="col-lg-4 mb-4 mb-lg-0">
                             <div
                                 className="about-img-wrap"
                                 data-aos="image-zoom"
@@ -378,56 +395,77 @@ const AbtServices = () => {
                             </div>
                         </div> */}
 
-                        <div className="col-lg-12">
-                            <div className="about-content-side">
-                                <span className="tp-section-subtitle text-white blink-ball">
-                                    We Are a Creative Web Development Agency
-                                </span>
-                                <h4
-                                    className="px-about-title text-tenor"
-                                    data-aos="text-reveal"
-                                    data-aos-delay="200"
-                                >
-                                    <span className="text-white">Content Management Systems (CMS) & Dynamic Web Development </span>
-                                </h4>
+            <div className="col-lg-12">
+              <div className="about-content-side">
+                <span className="tp-section-subtitle text-white blink-ball">
+                  We Are a Creative Web Development Agency
+                </span>
+                <h4
+                  className="px-about-title text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="200"
+                >
+                  <span className="text-white">
+                    Content Management Systems (CMS) & Dynamic Web
+                    Development{" "}
+                  </span>
+                </h4>
+                <h1
+                  className="ft-23 mt-0 mb-3 text-white text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"
+                  style={{ lineHeight: "1.2" }}
+                >
+                  Web Development Company in Chennai
+                </h1>
 
-                                <p
-                                    className="text-figtree "
-                                    data-aos="fade-up"
-                                    data-aos-delay="300"
-                                >
-                                    Dynamic websites offer greater flexibility, functionality, and scalability compared with basic static websites. They allow businesses to manage website content, products, services, images, blogs, users, and other information through a convenient content management system.
-                                </p>
+                <p
+                  className="text-figtree "
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  Dynamic websites offer greater flexibility, functionality, and
+                  scalability compared with basic static websites. They allow
+                  businesses to manage website content, products, services,
+                  images, blogs, users, and other information through a
+                  convenient content management system.
+                </p>
 
-                                <p
-                                    className="text-figtree mb-0 "
-                                    data-aos="fade-up"
-                                    data-aos-delay="400"
-                                >
-                                    Our web development services in Chennai include CMS-based development using popular platforms such as WordPress, WooCommerce, and other suitable technologies. A CMS enables business owners and administrators to add, edit, or remove website content without requiring extensive technical knowledge.
-                                </p>
+                <p
+                  className="text-figtree mb-0 "
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  Our web development services in Chennai include CMS-based
+                  development using popular platforms such as WordPress,
+                  WooCommerce, and other suitable technologies. A CMS enables
+                  business owners and administrators to add, edit, or remove
+                  website content without requiring extensive technical
+                  knowledge.
+                </p>
 
+                <p
+                  className="text-figtree mt-2 "
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  Dynamic websites can also connect with databases to store and
+                  retrieve information efficiently. Depending on project
+                  requirements, our web developers in Chennai can work with
+                  technologies and databases such as PHP, MySQL, Laravel,
+                  CodeIgniter, and other modern web development frameworks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                                <p
-                                    className="text-figtree mt-2 "
-                                    data-aos="fade-up"
-                                    data-aos-delay="400"
-                                >
-                                    Dynamic websites can also connect with databases to store and retrieve information efficiently. Depending on project requirements, our web developers in Chennai can work with technologies and databases such as PHP, MySQL, Laravel, CodeIgniter, and other modern web development frameworks.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            {/* =========================================
+      {/* =========================================
                             SERVICES - WHITE SECTION
                         ========================================= */}
-         
-        </section>
-    );
+    </section>
+  );
 };
 
 export default AbtServices;

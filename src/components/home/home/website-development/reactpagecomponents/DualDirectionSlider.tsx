@@ -15,20 +15,35 @@ import image8 from "@/assets/images/website-development/React-website/@Healthcar
 import image9 from "@/assets/images/website-development/React-website/@E-commerce-&-Online-Businesses.jpg";
 import image10 from "@/assets/images/website-development/React-website/@Custom-Web-Applications.jpg";
 
+// const rowOneItems = [
+//     { id: 1, title: "Corporate & Business Websites", image: image1 },
+//     { id: 2, title: "Startups & New Businesses", image: image2 },
+//     { id: 3, title: "Real Estate Companies", image: image3 },
+//     { id: 4, title: "Construction & Infrastructure", image: image4 },
+//     { id: 5, title: "Manufacturing & Industrial Businesses", image: image5 },
+// ];
+
+// const rowTwoItems = [
+//     { id: 6, title: "Educational Institutions", image: image6 },
+//     { id: 7, title: "Professional Services", image: image7 },
+//     { id: 8, title: "Healthcare & Service Businesses", image: image8 },
+//     { id: 9, title: "E-commerce & Online Businesses", image: image9 },
+//     { id: 10, title: "Custom Web Applications", image: image10 },
+// ];
 const rowOneItems = [
-    { id: 1, title: "Corporate & Business Websites", image: image1 },
-    { id: 2, title: "Startups & New Businesses", image: image2 },
-    { id: 3, title: "Real Estate Companies", image: image3 },
-    { id: 4, title: "Construction & Infrastructure", image: image4 },
-    { id: 5, title: "Manufacturing & Industrial Businesses", image: image5 },
+    { id: 1, title: "Corporate & Business Websites", image: image1, alt: "web development in chennai" },
+    { id: 2, title: "Startups & New Businesses", image: image2, alt: "web development with react native" },
+    { id: 3, title: "Real Estate Companies", image: image3, alt: "web development chennai" },
+    { id: 4, title: "Construction & Infrastructure", image: image4, alt: "web development in chennai" },
+    { id: 5, title: "Manufacturing & Industrial Businesses", image: image5, alt: "web development with react js" },
 ];
 
 const rowTwoItems = [
-    { id: 6, title: "Educational Institutions", image: image6 },
-    { id: 7, title: "Professional Services", image: image7 },
-    { id: 8, title: "Healthcare & Service Businesses", image: image8 },
-    { id: 9, title: "E-commerce & Online Businesses", image: image9 },
-    { id: 10, title: "Custom Web Applications", image: image10 },
+    { id: 6, title: "Educational Institutions", image: image6, alt: "web development chennai" },
+    { id: 7, title: "Professional Services", image: image7, alt: "react js development in chennai" },
+    { id: 8, title: "Healthcare & Service Businesses", image: image8, alt: "web deve with react native" },
+    { id: 9, title: "E-commerce & Online Businesses", image: image9, alt: "website development company chennai" },
+    { id: 10, title: "Custom Web Applications", image: image10, alt: "web development company chennai" },
 ];
 
 const DualDirectionSlider = () => {
@@ -50,7 +65,7 @@ const DualDirectionSlider = () => {
                 <div className="card-image-wrapper" style={{ position: "relative", width: "100%", height: "100%" }}>
                   <Image
                     src={item.image}
-                    alt={item.title}
+                    alt={item.alt}
                     fill
                     sizes="(max-width: 768px) 250px, 320px"
                     priority={index < 3}
@@ -74,7 +89,7 @@ const DualDirectionSlider = () => {
                 <div className="card-image-wrapper" style={{ position: "relative", width: "100%", height: "100%" }}>
                   <Image
                     src={item.image}
-                    alt={item.title}
+                    alt={item.alt}
                     fill
                     sizes="(max-width: 768px) 250px, 320px"
                     priority={index < 3}

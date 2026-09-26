@@ -1,63 +1,63 @@
 export const websiteDevelopmentSeo = {
-  "dynamic-website-development": {
-    title: "Dynamic Website Development in Chennai | Yulanto",
+  "web-development-company-in-chennai": {
+    title: "Web Development Company in Chennai  |  Dynamic Websites",
     description:
-      "Professional dynamic website development services in Chennai for businesses looking for powerful and scalable websites.",
+      "Web development company in Chennai offering dynamic website development and custom solutions for businesses from experienced web developers in Chennai.",
     image: "/assets/img/sample/gallery/img- (1).jpg",
     imageAlt: "Dynamic Website Development in Chennai",
     serviceName: "Dynamic Website Development",
     serviceDescription:
-      "Professional dynamic website development services for businesses and organizations.",
+      "Web development company in Chennai offering dynamic website development and custom solutions for businesses from experienced web developers in Chennai.",
   },
 
-  "custom-website-development": {
-    title: "Custom Website Development in Chennai | Yulanto",
+  "website-development-company-in-chennai": {
+    title: "Website Development Company in Chennai | custom Website development services",
     description:
-      "Professional custom website development services in Chennai for businesses and startups.",
+      "Website development company in Chennai offering custom Website development services for businesses with tailored website solutions and Website developers in chennai.",
     image: "/assets/img/sample/gallery/img- (2).jpg",
     imageAlt: "Custom Website Development in Chennai",
     serviceName: "Custom Website Development",
     serviceDescription:
-      "Custom website development solutions designed around your business requirements.",
+      "Website development company in Chennai offering custom Website development services for businesses with tailored website solutions and Website developers in chennai.",
   },
 
-  "php-website-development": {
-    title: "PHP Website Development Company in Chennai | Yulanto",
+  "web-design-and-development-companies-in-chennai": {
+    title: "Web Design & Development Companies in Chennai | PHP Web Development",
     description:
-      "Reliable PHP website development services in Chennai for secure, scalable and business-focused websites.",
+      "PHP web development company in Chennai, developing websites by our PHP Developers with secure coding, code integrity, and custom PHP Web Design & Development Companies in Chennai",
     image: "/assets/img/sample/gallery/img- (3).jpg",
     imageAlt: "PHP Website Development in Chennai",
     serviceName: "PHP Website Development",
     serviceDescription:
-      "Professional PHP website development services for custom business websites and web applications.",
+      "PHP web development company in Chennai, developing websites by our PHP Developers with secure coding, code integrity, and custom PHP Web Design & Development Companies in Chennai",
   },
 
-  "react-website-development": {
-    title: "React Website Development Company in Chennai | Yulanto",
+  "web-development-services-in-chennai": {
+    title: "Web development services in chennai | React JS Website Development",
     description:
-      "Professional React website development services in Chennai for fast, modern and scalable web applications.",
+      "React JS development and web development services in chennai offering React JS web development for modern business websites.",
     image: "/assets/img/sample/gallery/img- (7).jpg",
     imageAlt: "React Website Development in Chennai",
     serviceName: "React Website Development",
     serviceDescription:
-      "Modern React website development services for fast and scalable web applications.",
+      "React JS development and web development services in chennai offering React JS web development for modern business websites.",
   },
 
-  "api-integration": {
-    title: "API Integration Services in Chennai | Yulanto",
+  "api-integration-services-in-chennai": {
+    title: "API Integration Company in Chennai | API Integration Services",
     description:
-      "Professional API integration services in Chennai for payment gateways, CRM, WhatsApp, shipping and business applications.",
+      "API integration services for Stripe, PayPal, Google Maps, WhatsApp, Shopify, Salesforce, HubSpot, and other business platforms.",
     image: "/assets/img/sample/gallery/img- (9).jpg",
     imageAlt: "API Integration Services in Chennai",
     serviceName: "API Integration",
     serviceDescription:
-      "Professional API integration services connecting websites and applications with third-party platforms.",
+      "API integration services for Stripe, PayPal, Google Maps, WhatsApp, Shopify, Salesforce, HubSpot, and other business platforms.",
   },
 } as const;
 
 export const websiteDesignSeo = {
   // startup-website-design
-  "Web-Designing-Company-in-Chennai": {
+  "web-designing-company-in-chennai": {
     title: "Web Designing Company in Chennai | Yulanto",
 
     description:
@@ -91,7 +91,7 @@ export const websiteDesignSeo = {
   },
 
   // website-redesign
-  "Website-Redesign-in-Chennai": {
+  "website-redesign-in-chennai": {
     title: "Website Redesign in Chennai | Revamp Web Design Services",
 
     description:
@@ -125,7 +125,7 @@ export const websiteDesignSeo = {
   },
 
   // ui-ux-design
-  "UI-UX-Companies-in-Chennai": {
+  "ui-ux-companies-in-chennai": {
     title: "UI/UX Designers in Chennai | Creative UI/UX Design Services",
 
     description:

@@ -42,7 +42,7 @@ const ThreeColumnFeature = () => {
               >
                 <Image
                   src={centerFeatureImage}
-                  alt="Creative Website Design and React Development"
+                  alt="Website Design and React Development in chennai"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                   priority

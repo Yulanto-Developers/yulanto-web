@@ -79,7 +79,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                             {activeImages[0] && (
                                 <Image
                                     src={resolveImageSrc(activeImages[0])}
-                                    alt="Main feature"
+                                    alt="react website development"
                                     className="collage-img img-center animate-float-up"
                                     style={{ animationDelay: '0s' }}
                                     width={800}
@@ -89,7 +89,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                             {activeImages[1] && (
                                 <Image
                                     src={resolveImageSrc(activeImages[1])}
-                                    alt="Feature 2"
+                                    alt="react web development company"
                                     className="collage-img img-top-left animate-float-up"
                                     style={{ animationDelay: '-1.2s' }}
                                     width={800}
@@ -99,7 +99,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                             {activeImages[2] && (
                                 <Image
                                     src={resolveImageSrc(activeImages[2])}
-                                    alt="Feature 3"
+                                    alt="react web development"
                                     className="collage-img img-bottom-left animate-float-up"
                                     style={{ animationDelay: '-2.5s' }}
                                     width={800}
@@ -109,7 +109,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                             {activeImages[3] && (
                                 <Image
                                     src={resolveImageSrc(activeImages[3])}
-                                    alt="Feature 4"
+                                    alt="react web developer"
                                     className="collage-img img-top-right animate-float-up"
                                     style={{ animationDelay: '-3.5s' }}
                                     width={800}
@@ -119,7 +119,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                             {activeImages[4] && (
                                 <Image
                                     src={resolveImageSrc(activeImages[4])}
-                                    alt="Feature 5"
+                                    alt="react js agency"
                                     className="collage-img img-far-right animate-float-up"
                                     style={{ animationDelay: '-4.8s' }}
                                     width={800}
@@ -129,7 +129,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                             {activeImages[5] && (
                                 <Image
                                     src={resolveImageSrc(activeImages[5])}
-                                    alt="Feature 6"
+                                    alt="react js development"
                                     className="collage-img img-bottom-right animate-float-up"
                                     style={{ animationDelay: '-5.2s' }}
                                     width={800}
@@ -139,7 +139,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                             {activeImages[6] && (
                                 <Image
                                     src={resolveImageSrc(activeImages[6])}
-                                    alt="Feature 7"
+                                    alt="react js for web development"
                                     className="collage-img img-far-left animate-float-up"
                                     style={{ animationDelay: '-6s' }}
                                     width={800}

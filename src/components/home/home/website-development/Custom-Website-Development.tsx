@@ -25,11 +25,11 @@ Our team of professional website developers in Chennai develops websites from th
 
 // Dynamic Data Definition
 const seoSlides: CoverflowSlide[] = [
-    { src: "/assets/images/website-development/custom-website-development/top-1.jpg", alt: "Off-Page Link Building Strategy" },
-    { src: "/assets/images/website-development/custom-website-development/top-2.jpg", alt: "Local Citation & Directory Submission" },
-    { src: "/assets/images/website-development/custom-website-development/top-3.jpg", alt: "Content Marketing & Guest Posting" },
-    { src: "/assets/images/website-development/custom-website-development/top-4.jpg", alt: "Brand Mention & Authority Building" },
-    { src: "/assets/images/website-development/custom-website-development/top-5.jpg", alt: "Social Signals & Digital PR" },
+    { src: "/assets/images/website-development/custom-website-development/top-1.jpg", alt: "web development company" },
+    { src: "/assets/images/website-development/custom-website-development/top-2.jpg", alt: "web dev company" },
+    { src: "/assets/images/website-development/custom-website-development/top-3.jpg", alt: "website developer near me" },
+    { src: "/assets/images/website-development/custom-website-development/top-4.jpg", alt: "near me website developer" },
+    { src: "/assets/images/website-development/custom-website-development/top-5.jpg", alt: "web development agency" },
 ];
 function CustomWebsiteDdevelopment() {
     // Use the AOS hook

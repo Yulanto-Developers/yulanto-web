@@ -21,36 +21,42 @@ const features = [
     title: "Modern & Interactive Websites",
     content:
       "Create engaging interfaces with smooth interactions and dynamic content using React JS.",
+      alt:'web dev agency',
   },
   {
     image: image2,
     title: "Responsive Across Devices",
     content:
       "Our websites are designed to provide a consistent browsing experience across desktops, tablets, and smartphones.",
+       alt:'react web dev',
   },
   {
     image: image3,
     title: "Fast & Optimized",
     content:
       "We focus on optimized code, efficient components, and performance-friendly development to provide a faster user experience.",
+      alt:'react js company',
   },
   {
     image: image4,
     title: "Scalable Architecture",
     content:
       "React's reusable component-based approach makes it easier to add new features and expand your website as your business grows.",
+       alt:'react web app development company',
   },
   {
     image: image5,
     title: "SEO-Friendly Development",
     content:
       "We follow SEO-conscious development practices, including clean structure, responsive design, performance optimization, and search-engine-friendly content implementation.",
+       alt:'react web app development company chennai',
   },
   {
     image: image6,
     title: "Business-Focused Solutions",
     content:
       "Every website is developed based on your brand, target audience, services, and business requirements rather than using a one-size-fits-all approach.",
+      alt:'react web development company chennai',
   },
 ];
 
@@ -171,7 +177,7 @@ const FeatureSliderOne = () => {
                   <div className="feature-image-wrapper">
                     <Image
                       src={item.image}
-                      alt={item.title}
+                      alt={item.alt}
                       fill
                       sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
                     />

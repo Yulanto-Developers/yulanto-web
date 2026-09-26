@@ -67,7 +67,7 @@ export default async function Page({ params }: PageProps) {
 
   switch (pages) {
     // startup-website-design
-    case "Web-Designing-Company-in-Chennai":
+    case "web-designing-company-in-chennai":
       pageContent = <Startupwebsitedesgin />;
       break;
       // corporate-website-design
@@ -83,7 +83,7 @@ export default async function Page({ params }: PageProps) {
       pageContent = <Landingpagedesgin />;
       break;
       // ui-ux-desgin
-    case "UI-UX-Companies-in-Chennai":
+    case "ui-ux-companies-in-chennai":
       pageContent = <Uiuxdesgin />;
       break;
   }
