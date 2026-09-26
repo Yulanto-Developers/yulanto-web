@@ -63,8 +63,8 @@ export const lightMenu: MenuItem[] = [
           { label: "WordPress Development", href: "/wordpress-development-company-in-Chennai" },
           { label: "WooCommerce Development", href: "/e-commerce-website-development-in-chennai" },
           { label: "Shopify E-commerce Development", href: "/shopify-development-company-in-chennai" },
-          { label: "Portal Web Development", href: "/portal-development-services" },
-          { label: "Custom E-commerce Development", href: "/ecommerce-website-development-company" },
+          { label: "Portal Web Development", href: "/portal-development-services-in-chennai" },
+          { label: "Custom E-commerce Development", href: "/ecommerce-website-development-company-in-chennai" },
         ]
       },
       {

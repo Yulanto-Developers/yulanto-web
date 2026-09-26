@@ -40,7 +40,7 @@ export const ShopifyExperience: React.FC = () => {
             >
               <Image
                 src="/assets/img/Shopify E-commerce Development/Last-img.jpg"
-                alt="Shopify Store Maintenance & Support"
+                alt="shopify development company chennai"
                 fill
                 priority
                 sizes="(max-width: 991px) 100vw, 45vw"

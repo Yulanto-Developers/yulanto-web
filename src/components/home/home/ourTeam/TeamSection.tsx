@@ -69,8 +69,8 @@ export default function TeamSlider() {
                   </div>
 
                   <div className="tm-slider-content">
-                    <h4>{member.name}</h4>
-                    <span>{member.role}</span>
+                    <h4 className="text-tenor">{member.name}</h4>
+                    <span className="text-tenor">{member.role}</span>
                   </div>
 
                     <img

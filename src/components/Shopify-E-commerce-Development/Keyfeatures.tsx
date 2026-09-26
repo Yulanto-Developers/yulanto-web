@@ -166,7 +166,7 @@ export const ShopifyKeyFeatures: React.FC = () => {
                 >
                   <Image
                     src={item.imageSrc}
-                    alt={item.title}
+                    alt='E-commerce web development company in chennai'
                     fill
                     sizes="(max-width: 768px) 100vw, 380px"
                     style={{

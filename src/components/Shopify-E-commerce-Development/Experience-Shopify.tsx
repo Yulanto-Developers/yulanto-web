@@ -91,7 +91,7 @@ export const ShopifyExperience: React.FC = () => {
             >
               <Image
                 src="/assets/img/Shopify E-commerce Development/top-1.jpg"
-                alt="Create an Engaging Shopping Experience with Shopify"
+                alt="ecommerce development company chennai"
                 fill
                 priority
                 sizes="(max-width: 991px) 100vw, 45vw"

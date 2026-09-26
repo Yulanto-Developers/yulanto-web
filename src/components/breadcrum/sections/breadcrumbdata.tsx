@@ -261,14 +261,14 @@ const data = [
   },
  
   {
-    path: "/ecommerce-website-development-company",
+    path: "/ecommerce-website-development-company-in-chennai",
     title: "Custome Ecommerce Development",
     currentPage: "Custome Ecommerce Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
  
-    path: "/portal-development-services",
+    path: "/portal-development-services-in-chennai",
     title: "Portal Web Development",
     currentPage: "Portal Web Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",

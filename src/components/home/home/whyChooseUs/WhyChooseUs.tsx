@@ -174,7 +174,7 @@ export default function WhyChooseUsGrid() {
               <h4 className="px-about-title mb-20">
                 <span className="text-blue-about">We Create Meaningful </span>Websites
               </h4>
-              <h1 className="ft-23 mt-0 mb-3 text-center text-tenor"
+              <h1 className="ft-23 mt-0 mb-3 text-tenor"
                   data-aos="text-reveal"
                   data-aos-delay="100"  style={{ lineHeight: "1.2" }}
                 >

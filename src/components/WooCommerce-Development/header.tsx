@@ -1,7 +1,12 @@
 "use client";
 
 import React, { memo, useEffect, useMemo, useRef, useState } from "react";
-import { motion, useAnimationFrame, useMotionValue, useTransform } from "framer-motion";
+import {
+  motion,
+  useAnimationFrame,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
 
 // High-quality graphic design stock images
 const graphicDesignImages = [
@@ -19,7 +24,7 @@ const graphicDesignImages = [
 
 const Auto3DCarousel = memo(() => {
   const cards = useMemo(() => graphicDesignImages, []);
-  
+
   // Increased cylinder width and radius for a larger circular 3D carousel ring
   const cylinderWidth = 2200;
   const faceCount = cards.length;
@@ -29,7 +34,7 @@ const Auto3DCarousel = memo(() => {
   const rotation = useMotionValue(0);
   const transform = useTransform(
     rotation,
-    (value) => `rotate3d(0, 1, 0, ${value}deg)`
+    (value) => `rotate3d(0, 1, 0, ${value}deg)`,
   );
 
   // Smooth continuous auto-rotation loop
@@ -88,7 +93,7 @@ const Auto3DCarousel = memo(() => {
           >
             <img
               src={imgUrl}
-              alt={`Graphic Design Portfolio ${i + 1}`}
+              alt={`ecommerce website design chennai ${i + 1}`}
               style={{
                 width: "100%",
                 borderRadius: "16px",
@@ -114,7 +119,7 @@ export default function Header() {
         <div className="row align-items-center" data-aos="fade-up">
           <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">
-                WooCommerce Development Services in Chennai
+              WooCommerce Development Services in Chennai
             </span>
           </div>
 
@@ -122,14 +127,26 @@ export default function Header() {
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
                 <span className="text-blue-about">
-                Build a Powerful Online Store with {" "}
+                  Build a Powerful Online Store with{" "}
                 </span>
                 Professional WooCommerce Development
               </h4>
+              <h1
+                className="ft-23 mt-0 mb-3 text-tenor"
+                data-aos="text-reveal"
+                data-aos-delay="100"
+                style={{ lineHeight: "1.2" }}
+              >
+                e commerce website development in chennai
+              </h1>
               <p className="text-figtree text-black mt-2">
-               Looking for reliable WooCommerce development services in Chennai? We help businesses, startups, retailers, manufacturers, and growing brands build professional, secure, and user-friendly ecommerce websites with WordPress and WooCommerce.
-
-As an experienced WooCommerce development company in Chennai, we create ecommerce websites that are designed around your business goals, products, customers, and growth plans.
+                Looking for reliable WooCommerce development services in
+                Chennai? We help businesses, startups, retailers, manufacturers,
+                and growing brands build professional, secure, and user-friendly
+                ecommerce websites with WordPress and WooCommerce. As an
+                experienced WooCommerce development company in Chennai, we
+                create ecommerce websites that are designed around your business
+                goals, products, customers, and growth plans.
               </p>
             </div>
           </div>
@@ -141,7 +158,7 @@ As an experienced WooCommerce development company in Chennai, we create ecommerc
             marginTop: "20px",
             height: "400px",
             width: "100%",
-          
+
             padding: "16px",
             position: "relative",
             overflow: "hidden",
@@ -149,9 +166,15 @@ As an experienced WooCommerce development company in Chennai, we create ecommerc
         >
           <Auto3DCarousel />
         </div>
-        <p className="text-figtree text-black mt-2">From a simple one page ecommerce website to a fully customized online store, our team provides flexible solutions that are easy to manage and scalable for future requirements.
-
-Our WooCommerce website development service covers planning, UI/UX design, development, customization, payment gateway integration, shipping configuration, product management, SEO-friendly setup, testing, deployment, and ongoing support.</p>
+        <p className="text-figtree text-black mt-2">
+          From a simple one page ecommerce website to a fully customized online
+          store, our team provides flexible solutions that are easy to manage
+          and scalable for future requirements. Our WooCommerce website
+          development service covers planning, UI/UX design, development,
+          customization, payment gateway integration, shipping configuration,
+          product management, SEO-friendly setup, testing, deployment, and
+          ongoing support.
+        </p>
       </div>
     </section>
   );

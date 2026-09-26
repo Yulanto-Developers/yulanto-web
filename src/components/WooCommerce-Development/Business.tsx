@@ -197,7 +197,7 @@ export default function WooCommerceIndustriesSection() {
                             >
                                 <img
                                     src="/assets/img/WooCommerce-Development/wooo.png"
-                                    alt="WordPress and WooCommerce"
+                                    alt="ecommerce website design company chennai"
                                     style={{
                                         width: "100%",
                                         height: "100%",

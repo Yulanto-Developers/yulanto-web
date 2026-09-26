@@ -915,3 +915,246 @@ export const faqDataAIAssPage = [
       "Absolutely. Your website goes through the same review and revision process as our other website projects.",
   },
 ] as const;
+
+export const faqDatawordpressPage = [
+  {
+    question: "Is WordPress suitable for business websites?",
+    answer:
+      "Yes. WordPress is suitable for startups, small businesses, corporate organizations, institutions, and many other types of businesses. It provides flexibility to create and manage different types of websites.",
+  },
+  {
+    question: "Can you design a completely custom WordPress website?",
+    answer:
+      "Yes. WordPress websites can be customized according to your brand identity, content structure, design requirements, and business functionality.",
+  },
+  {
+    question: "Can WordPress be used for eCommerce?",
+    answer:
+      "Yes. WordPress can be extended with eCommerce solutions such as WooCommerce to create online stores with product management, shopping carts, payment integration, order management, and other features.",
+  },
+  {
+    question: "Is WordPress SEO-friendly?",
+    answer:
+      "WordPress provides a strong foundation for SEO, but achieving good search visibility requires proper technical SEO, quality content, website performance, mobile optimization, and ongoing SEO efforts.",
+  },
+  {
+    question: "Can an existing WordPress website be redesigned?",
+    answer:
+      "Yes. We can redesign an existing WordPress website to provide a modern appearance, improved navigation, responsive layouts, better user experience, and updated functionality.",
+  },
+  {
+    question: "Can I manage the website myself after development?",
+    answer:
+      "Yes. One of the key advantages of WordPress is its easy-to-use content management system. You can manage pages, blog posts, images, products, and other content through the WordPress dashboard.",
+  },
+  {
+    question: "Do you provide WordPress maintenance and support?",
+    answer:
+      "Yes. WordPress websites may require regular updates, backups, security checks, performance monitoring, and technical support. Maintenance services can be provided based on your requirements.",
+  },
+] as const;
+
+
+export const faqDataWooCommercePage = [
+  {
+    question: "Is WordPress the Same as WooCommerce?",
+    answer:
+      "No. WordPress is a content management system, while WooCommerce is an ecommerce plugin that works with WordPress. WooCommerce adds online store functionality such as products, shopping carts, checkout, orders, payments, and inventory management.",
+  },
+  {
+    question: "Is WooCommerce Suitable for Small Businesses?",
+    answer:
+      "Yes. WooCommerce can be a suitable option for startups and small businesses because the platform is flexible and can be developed according to the size and requirements of the business.",
+  },
+  {
+    question: "Can You Develop a One Page Ecommerce Website?",
+    answer:
+      "Yes. We can create a one page ecommerce website for businesses that need a simple and focused online selling solution. The website can include product information, enquiry or purchase options, payment integration, and essential ecommerce functionality.",
+  },
+  {
+    question: "Can WooCommerce Be Customized?",
+    answer:
+      "Yes. WooCommerce supports extensive customization. Our WooCommerce custom development services can modify the design, functionality, checkout process, pricing, products, integrations, and other features according to your requirements.",
+  },
+  {
+    question: "Is WooCommerce SEO Friendly?",
+    answer:
+      "Yes. WooCommerce can support SEO-friendly ecommerce websites when the website structure, product content, technical SEO, page speed, metadata, schema, internal linking, and other SEO factors are properly optimized.",
+  },
+  {
+    question: "Do You Provide WooCommerce Website Maintenance?",
+    answer:
+      "Yes. We provide ongoing WooCommerce website maintenance and support, including updates, security checks, performance improvements, troubleshooting, content and product updates, backups, and technical assistance.",
+  },
+] as const;
+
+
+export const faqDataShopifyPage = [
+  {
+    question: "Do I need a Shopify subscription to run my online store?",
+    answer:
+      "Yes. Shopify is a hosted ecommerce platform, so you need an appropriate Shopify subscription to operate your online store. Shopify provides hosting, SSL, ecommerce infrastructure, and platform features as part of its plans.",
+  },
+  {
+    question: "How much does Shopify website development cost?",
+    answer:
+      "The cost depends on your store requirements, number of products, design complexity, theme customization, integrations, payment gateways, third-party applications, content requirements, and custom functionality.\n\nAs an experienced Shopify development partner, we can review your requirements and provide a suitable quotation based on your project scope.",
+  },
+  {
+    question: "Do you provide Shopify development services in Chennai?",
+    answer:
+      "Yes. We provide Shopify website development and ecommerce development services in Chennai for startups, small businesses, and established companies. We can also work with clients across India and international markets.",
+  },
+  {
+    question: "Can you customize an existing Shopify theme?",
+    answer:
+      "Yes. Our Shopify developers can customize an existing Shopify theme to match your brand identity and business requirements. This may include layouts, navigation, product pages, collections, banners, sections, checkout-related elements, and other supported customizations.",
+  },
+  {
+    question: "Can you develop a custom Shopify store?",
+    answer:
+      "Yes. We provide custom Shopify development for businesses that require functionality beyond standard Shopify configurations. Depending on the requirement, we can work with custom themes, Shopify apps, APIs, integrations, and other Shopify development solutions.",
+  },
+  {
+    question: "Does Shopify support SEO and digital marketing?",
+    answer:
+      "Yes. Shopify includes several built-in SEO capabilities and supports integration with various marketing, analytics, advertising, and SEO tools. However, achieving strong search visibility requires an overall SEO strategy covering technical SEO, content, keywords, website structure, performance, and ongoing optimization.",
+  },
+  {
+    question: "Do you provide Shopify maintenance and support?",
+    answer:
+      "Yes. We provide Shopify maintenance and support services for both newly developed and existing Shopify stores. Our support can include updates, modifications, troubleshooting, integrations, content changes, performance improvements, and ongoing development.",
+  },
+  {
+    question: "Can you migrate an existing ecommerce website to Shopify?",
+    answer:
+      "Yes. We can assist with ecommerce migration to Shopify, including product data, categories, customer information, website structure, design, integrations, and other migration requirements, depending on the existing platform.",
+  },
+] as const;
+
+export const faqDataPortalDevelopmentPage = [
+  {
+    question: "What is portal development?",
+    answer:
+      "Portal development is the process of building a web-based platform that connects users, data, and services in one centralized system. A portal typically includes user registration, profiles, dashboards, search, listings, payments, notifications, and administrative controls tailored to a specific business model.",
+  },
+  {
+    question: "What types of web portals do you develop?",
+    answer:
+      "We develop classified portals, business directory portals, real estate portals, job and career portals, LMS portals, magazine portals, restaurant and food listing portals, service listing portals, property listing portals, vendor and marketplace portals, membership and community portals, and custom business web portals.",
+  },
+  {
+    question: "Do you provide web portal development services in Chennai?",
+    answer:
+      "Yes. Yulanto Web Creations provides web portal development services in Chennai for startups, small businesses, and established organizations. We also work with clients across India and international markets.",
+  },
+  {
+    question: "What is job portal development?",
+    answer:
+      "Job portal development is the creation of an online recruitment platform that connects employers, recruiters, and job seekers. It typically includes candidate and employer registration, job posting, resume uploads, advanced job search filters, applications, dashboards, notifications, and admin moderation.",
+  },
+  {
+    question: "What is LMS portal development?",
+    answer:
+      "LMS portal development is the creation of a Learning Management System where administrators, instructors, and students manage courses, lessons, assessments, progress, and learning resources from a single platform. It can be built for schools, colleges, training institutes, coaching centres, and corporate training programs.",
+  },
+  {
+    question: "What is real estate portal development?",
+    answer:
+      "Real estate portal development is the creation of a property listing platform with features such as property listing management, advanced search filters, interactive maps, lead tracking and CRM, agent and builder profiles, virtual tours, and multi-admin roles.",
+  },
+  {
+    question: "What is magazine portal development?",
+    answer:
+      "Magazine portal development is the creation of a digital publishing platform where readers can explore articles, stories, interviews, images, and videos. It typically includes content management, categories, author profiles, digital archives, newsletter subscriptions, advertisement management, and SEO-friendly pages.",
+  },
+  {
+    question: "What is restaurant portal development?",
+    answer:
+      "Restaurant portal development is the creation of a restaurant discovery and listing platform where customers can search and explore restaurants, cuisines, menus, locations, offers, and reviews. It can include restaurant registration, profiles, location-based search, table booking integration, and online ordering integration.",
+  },
+  {
+    question: "Why should I choose a custom web portal instead of a ready-made solution?",
+    answer:
+      "A custom web portal is developed around your specific business process, target audience, and workflow instead of forcing your requirements into a standard template. This provides greater flexibility, scalability, better user experience, and easier long-term management.",
+  },
+  {
+    question: "Are your web portals mobile-friendly and SEO-friendly?",
+    answer:
+      "Yes. We develop portals with responsive layouts that provide a consistent experience across smartphones, tablets, laptops, and desktops. We also use SEO-friendly URLs, content structures, and technical foundations that support search engine visibility.",
+  },
+  {
+    question: "Can the portal be scaled with new features in the future?",
+    answer:
+      "Yes. We build portals with scalable architecture and future expansion in mind, allowing you to add new features, user roles, modules, and functionality as your business grows.",
+  },
+  {
+    question: "How much does web portal development cost in Chennai?",
+    answer:
+      "The cost of web portal development depends on the type of portal, number of user roles, features, integrations, database requirements, design complexity, and customization. Contact our team to discuss your requirements and receive a customized development plan and quotation.",
+  },
+] as const;
+
+
+export const faqDataEcommerceDevelopmentPage = [
+  {
+    question: "What is ecommerce website development?",
+    answer:
+      "Ecommerce website development is the process of building an online store where businesses can showcase products, accept orders, and process payments. It includes website design, product and category management, shopping cart and checkout, payment and shipping integration, order management, and mobile-responsive development.",
+  },
+  {
+    question: "What is custom ecommerce website design?",
+    answer:
+      "Custom ecommerce website design is the creation of an online store built specifically around your brand identity, products, target audience, and business goals, rather than using a generic template. It covers homepage design, product page layouts, category navigation, cart and checkout pages, and the overall customer journey.",
+  },
+  {
+    question: "Do you provide ecommerce website development services in Chennai?",
+    answer:
+      "Yes. Yulanto Web Creations is an ecommerce website design and development company in Chennai, serving startups, retailers, manufacturers, service businesses, and established brands. We provide end-to-end services from planning and UI/UX design to development, payment integration, testing, launch, and ongoing support.",
+  },
+  {
+    question: "Why is ecommerce homepage design important?",
+    answer:
+      "The homepage is often the first interaction customers have with your brand. A well-designed ecommerce homepage uses strong visuals, featured products, promotional sections, trust elements, and clear calls-to-action to guide visitors toward browsing products and completing a purchase.",
+  },
+  {
+    question: "What should an ecommerce product page include?",
+    answer:
+      "An effective ecommerce product page typically includes high-quality product images, clear descriptions, pricing and offers, product variations, size and specification options, availability information, customer reviews, related products, delivery information, and add-to-cart or buy-now options.",
+  },
+  {
+    question: "Why is responsive design important for an ecommerce website?",
+    answer:
+      "Customers shop from desktops, laptops, tablets, and smartphones, so responsive design ensures your online store adapts to different screen sizes while maintaining usability, visual consistency, and easy navigation. This provides a consistent shopping experience across all devices.",
+  },
+  {
+    question: "What industries can you develop ecommerce websites for?",
+    answer:
+      "We develop custom ecommerce websites for businesses across industries, including fashion and apparel, retail, electronics, home and lifestyle products, health and beauty, food and beverage, and other product-based and service-based businesses.",
+  },
+  {
+    question: "What is the ecommerce website development process?",
+    answer:
+      "Our ecommerce development process includes business understanding, website planning, UI/UX design, ecommerce development, integration of payment gateways and shipping, testing across devices and browsers, and launch with ongoing support.",
+  },
+  {
+    question: "Can you integrate payment gateways and shipping options?",
+    answer:
+      "Yes. We can integrate suitable payment gateways and shipping options based on your business requirements, along with analytics, communication tools, and other required third-party integrations.",
+  },
+  {
+    question: "Can you redesign an existing ecommerce website?",
+    answer:
+      "Yes. Whether you need a new online store or a complete ecommerce redesign, we can improve the design, navigation, product pages, checkout experience, and overall functionality of an existing ecommerce website to support your long-term business growth.",
+  },
+  {
+    question: "Do you provide support after the ecommerce website is launched?",
+    answer:
+      "Yes. After launch, we can assist with website maintenance, updates, performance improvements, hosting, security, and further development based on your business requirements.",
+  },
+  {
+    question: "How much does ecommerce website development cost in Chennai?",
+    answer:
+      "The cost of ecommerce website development depends on the number of products, design complexity, custom functionality, payment and shipping integrations, third-party tools, and ongoing requirements. Contact our team to discuss your requirements and receive a customized development plan and quotation.",
+  },
+] as const;

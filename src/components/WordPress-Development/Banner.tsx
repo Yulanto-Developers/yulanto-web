@@ -32,7 +32,6 @@ export default function GraphicDesignSection() {
   return (
     <section className="px-about-6-area pt-40 pb-40 pb-lg-110 overflow-hidden">
       <div className="container container-1550">
-        
         {/* Top Title Row with AOS Animation */}
         <div className="row align-items-center" data-aos="fade-up">
           <div className="col-xl-3 mb-3 mb-xl-0">
@@ -44,10 +43,26 @@ export default function GraphicDesignSection() {
           <div className="col-xl-9">
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">Build a Powerful Website with </span>Expert WordPress Development 
+                <span className="text-blue-about">
+                  Build a Powerful Website with{" "}
+                </span>
+                Expert WordPress Development
               </h4>
+
+              <h1
+                className="ft-23 mt-0 mb-3 text-tenor"
+                data-aos="text-reveal"
+                data-aos-delay="100"
+                style={{ lineHeight: "1.2" }}
+              >
+                wordpress development company in Chennai
+              </h1>
+
               <p className="text-figtree text-black mt-2">
-                Looking for a reliable WordPress website development company in Chennai? Yulanto Web Creations helps businesses build professional, responsive, and SEO-friendly WordPress websites that support long-term online growth.
+                Looking for a reliable WordPress website development company in
+                Chennai? Yulanto Web Creations helps businesses build
+                professional, responsive, and SEO-friendly WordPress websites
+                that support long-term online growth.
               </p>
             </div>
           </div>
@@ -68,11 +83,16 @@ export default function GraphicDesignSection() {
         {/* Bottom Description Paragraph */}
         <div data-aos="fade-up" data-aos-delay="300">
           <p className="text-figtree text-black mt-4">
-            From a simple business website to a feature-rich corporate portal or eCommerce store, our WordPress website design and development services are tailored to your business goals. We combine modern UI/UX, responsive design, performance optimization, and easy content management to create websites that look professional and work smoothly across devices.
-            Whether you need a new WordPress website, redesign an existing website, or require ongoing WordPress support, our experienced team can help.
+            From a simple business website to a feature-rich corporate portal or
+            eCommerce store, our WordPress website design and development
+            services are tailored to your business goals. We combine modern
+            UI/UX, responsive design, performance optimization, and easy content
+            management to create websites that look professional and work
+            smoothly across devices. Whether you need a new WordPress website,
+            redesign an existing website, or require ongoing WordPress support,
+            our experienced team can help.
           </p>
         </div>
-
       </div>
     </section>
   );
@@ -92,14 +112,14 @@ const ThreeDMarquee = ({
   const chunks = Array.from({ length: 4 }, (_, colIndex) => {
     const startIndex = (colIndex * 3) % images.length;
     const slice: string[] = [];
-    
+
     // Gather baseChunkSize items wrapping around the array seamlessly if needed
     for (let i = 0; i < baseChunkSize; i++) {
       slice.push(images[(startIndex + i) % images.length]);
     }
-    
+
     // Triple them for seamless continuous loop animation
-    return [...slice, ...slice, ...slice]; 
+    return [...slice, ...slice, ...slice];
   });
 
   // Balanced durations for each column so they scroll smoothly and consistently without lag
@@ -170,12 +190,15 @@ const ThreeDMarquee = ({
                     key={imageIndex + image + colIndex}
                     style={{ position: "relative", width: "100%" }}
                   >
-                    <GridLineHorizontal offset="20px" style={{ top: "-10px" }} />
+                    <GridLineHorizontal
+                      offset="20px"
+                      style={{ top: "-10px" }}
+                    />
                     <motion.img
                       whileHover={{ y: -6, scale: 1.02 }}
                       transition={{ duration: 0.25, ease: "easeInOut" }}
                       src={image}
-                      alt={`WordPress Design Sample ${imageIndex + 1}`}
+                      alt={`web development company in chennai ${imageIndex + 1}`}
                       style={{
                         width: "100%",
                         height: "175px",
