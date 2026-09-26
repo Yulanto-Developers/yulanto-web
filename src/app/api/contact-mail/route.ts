@@ -313,6 +313,7 @@ export async function POST(req: NextRequest) {
                     <td class="label-cell">Message Details</td>
                     <td class="value-cell"><strong>${message}</strong></td>
                 </tr>
+                </table>
 
 
                 <div class="note">⚠ Note: Do not reply directly to this automated notification.</div>
