@@ -20,6 +20,7 @@ import {
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useRouter } from "next/navigation";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
 
 export default function QuoteModal() {
     const {
@@ -96,18 +97,38 @@ export default function QuoteModal() {
        PHONE VALIDATION
     ========================================= */
 
+    /* =========================================
+    PHONE VALIDATION
+ ========================================= */
+
     const isValidPhone = (phone: string) => {
-        const digits = phone.replace(/\D/g, "");
+        try {
+            const digits = phone.replace(/\D/g, "");
 
-        // React Phone Input includes India country code 91
-        if (digits.startsWith("91")) {
-            const indianNumber = digits.substring(2);
+            /*
+             * INDIA (+91)
+             * react-phone-input-2 stores the country code
+             * together with the entered phone number.
+             * For India, require exactly 10 digits after +91.
+             */
+            if (digits.startsWith("91")) {
+                const indianNumber = digits.substring(2);
 
-            return /^\d{10}$/.test(indianNumber);
+                return /^\d{10}$/.test(indianNumber);
+            }
+
+            /*
+             * OTHER COUNTRIES
+             * Validate according to the selected country's
+             * phone-number rules using libphonenumber-js.
+             */
+            const phoneNumber =
+                parsePhoneNumberFromString(`+${digits}`);
+
+            return phoneNumber?.isValid() ?? false;
+        } catch {
+            return false;
         }
-
-        // Exactly 10 digits
-        return /^\d{10}$/.test(digits);
     };
 
     /* =========================================
