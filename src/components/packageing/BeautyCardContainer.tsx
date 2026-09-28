@@ -106,7 +106,7 @@ export const BeautyCardContainer: React.FC<BeautyCardContainerProps> = ({
                 <span className="text-blue-about">Packaging Design That</span> Connects With Customers
               </h4>
               <p className="text-figtree text-black mt-2">
-                A successful package needs to communicate the right message at a glance. We carefully consider typography, colours, imagery, product information, brand guidelines, and layout to create a consistent visual experience.
+                A successful package needs to communicate the right message at a glance. We carefully consider typography, colors, imagery, product information, brand guidelines, and layout to create a consistent visual experience.
 
                 Our packaging designers in Chennai develop designs that are not only attractive but also aligned with your marketing goals and product positioning.
               </p>

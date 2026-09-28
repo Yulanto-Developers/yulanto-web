@@ -5,27 +5,24 @@ import Whychoose from "@/components/poster-design/WhyChooseFlyerPoster";
 import Poster from "@/components/poster-design/postdesign";
 import CTA from "@/components/poster-design/Cta";
 const heroImages = [
-    "/assets/img/flyerposter/top-1.jpg",
-    "/assets/img/flyerposter/top-2.jpg",
-    "/assets/img/flyerposter/top-3.jpg",
-    "/assets/img/flyerposter/top-4.jpg",
-    "/assets/img/flyerposter/top-5.jpg",
-    "/assets/img/flyerposter/top-6.jpg",
-    "/assets/img/flyerposter/top-7.jpg",
-    
+  "/assets/img/flyerposter/top-1.jpg",
+  "/assets/img/flyerposter/top-2.jpg",
+  "/assets/img/flyerposter/top-3.jpg",
+  "/assets/img/flyerposter/top-4.jpg",
+  "/assets/img/flyerposter/top-5.jpg",
+  "/assets/img/flyerposter/top-6.jpg",
+  "/assets/img/flyerposter/top-7.jpg",
 ];
 
 const heroAlt = [
-    'flyers and brochures design',
-    'brochure flyer design',
-    'catalog flyer',
-    'design flyer brochure business card banner design',
-    'digital printing flyer',
-    'flyers and brochures design company',
-    'flyers and brochures design company in chennai',
-    
+  "flyers and brochures design",
+  "brochure flyer design",
+  "catalog flyer",
+  "design flyer brochure business card banner design",
+  "digital printing flyer",
+  "flyers and brochures design company",
+  "flyers and brochures design company in chennai",
 ];
-
 
 import type { Metadata } from "next";
 import { generateSeo } from "@/lib/seo";
@@ -47,41 +44,40 @@ export const metadata: Metadata = generateSeo({
 });
 
 export default function Page() {
-    const seo = posterpageSeo;
-    return (
-        <main>
-            {/* Breadcrumb Schema */}
-                  <BreadcrumbSchema
-                    items={[
-                      { name: "Home", url: `${SITE_URL}/` },
-                      { name: seo.serviceName, url: pageUrl },
-                    ]}
-                  />
-        
-                  {/* Service Schema */}
-                  <ServiceSchema
-                    name={seo.serviceName}
-                    description={seo.serviceDescription}
-                    url={pageUrl}
-                    image={seo.image}
-                  />
-            <Breadcrumbdata />
-            <Head
-                subtitle="Flyer & Poster Design Company in Chennai"
-                titleBlue="Creative Flyers & Posters "
-                titleBlack="That Make Your Brand Stand Out"
-                description="Looking for professional flyer and poster design in Chennai? We create eye-catching, creative, and purposeful designs that help businesses promote their products, services, offers, events, and brand messages effectively.
+  const seo = posterpageSeo;
+  return (
+    <main>
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: `${SITE_URL}/` },
+          { name: seo.serviceName, url: pageUrl },
+        ]}
+      />
 
-As a creative graphic design company in Chennai, we design flyers and posters that combine attractive visuals, clear messaging, strong branding, and compelling layouts to capture attention and encourage action."
+      {/* Service Schema */}
+      <ServiceSchema
+        name={seo.serviceName}
+        description={seo.serviceDescription}
+        url={pageUrl}
+        image={seo.image}
+      />
+      <Breadcrumbdata />
+      <Head
+        subtitle="Flyer & Poster Design Company in Chennai"
+        titleBlue="Creative Flyers & Posters "
+        titleBlack="That Make Your Brand Stand Out"
+        description="Looking for professional flyer and poster design in Chennai? We create eye-catching, creative, and purposeful designs that help businesses promote their products, services, offers, events, and brand messages effectively.
 
-                images={heroImages} alt={heroAlt}
+As a creative graphic design company in Chennai, we design flyers and posters that combine striking visuals, concise messaging, and strategic layouts that capture attention and drive conversions."
+        images={heroImages}
+        alt={heroAlt}
+      />
+      <PackagingServices />
 
-            />
-            <PackagingServices />
-           
-            <Whychoose />
-            <Poster />
-            <CTA />
-        </main>
-    );
+      <Whychoose />
+      <Poster />
+      <CTA />
+    </main>
+  );
 }

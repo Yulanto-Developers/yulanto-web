@@ -20,7 +20,7 @@ const storeFeatures: StoreFeature[] = [
   },
   {
     id: 2,
-    title: 'Product Catalogue',
+    title: 'Product catalog',
     description: 'Display products with images, descriptions, pricing, specifications, variations, availability, and related products.',
     iconClass: 'fa-solid fa-boxes-stacked',
   },

@@ -193,7 +193,7 @@ export default function FAQSection({
           data-aos-duration="900"
           data-aos-once="true"
         >
-          <span className="text-blue-about">Frequently Asked Questions </span> Off Page SEO
+          <span className="text-blue-about">Frequently Asked Questions </span> Off-Page SEO
         </h4>
 
         {/* FAQs Columns with Side-by-Side Animations */}

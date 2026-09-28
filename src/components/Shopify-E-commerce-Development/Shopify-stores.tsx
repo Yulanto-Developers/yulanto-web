@@ -24,7 +24,7 @@ interface IndustryCategory {
 
 const industryCategories: IndustryCategory[] = [
   { id: 'fashion', label: 'Fashion & Apparel', icon: <Shirt size={18} /> },
-  { id: 'jewellery', label: 'Jewellery & Accessories', icon: <Gem size={18} /> },
+  { id: 'jewellery', label: 'Jewelery & Accessories', icon: <Gem size={18} /> },
   { id: 'electronics', label: 'Electronics', icon: <Tv size={18} /> },
   { id: 'beauty', label: 'Beauty & Personal Care', icon: <Sparkles size={18} /> },
   { id: 'food', label: 'Food & Lifestyle Products', icon: <Utensils size={18} /> },

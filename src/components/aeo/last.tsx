@@ -62,7 +62,7 @@ export default function FutureSearchSection() {
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-              <span className='text-figtree'>Let's Talk our Team</span>
+              <span className='text-figtree'>Talk with Our Team</span>
               <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
             </button>
             {/* CTA Buttons */}

@@ -271,7 +271,7 @@ export default function WooCommerceIndustriesSection() {
                     </div>
                 </div>
                 <p className="text-figtree text-black mt-4" data-aos="fade-up">
-                    For businesses that require a simple online presence, we can also develop a one page ecommerce website with essential product information, enquiry or purchase functionality, payment integration, and mobile-friendly design.
+                    For businesses that require a simple online presence, we can also develop a one page ecommerce website with essential product information, inquiry or purchase functionality, payment integration, and mobile-friendly design.
                 </p>
             </div>
         </section>

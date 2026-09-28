@@ -153,7 +153,7 @@ export const SeoAboutSection: React.FC = () => {
             </p>
 
             <p className="text-figtree text-black mt-2">
-              As a best SEO company in Chennai, we focus on sustainable SEO practices rather than shortcuts. Our goal is to build a strong online foundation that can support your website's organic growth over time.
+              As a leading SEO company in Chennai, we focus on sustainable SEO practices rather than shortcuts. Our goal is to build a strong online foundation that can support your website's organic growth over time.
             </p>
 
             <p className="text-figtree text-black mt-2">

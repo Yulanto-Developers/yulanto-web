@@ -206,7 +206,7 @@ export default function HeroSection({
           }}
         >
           <motion.p className="text-figtree text-black mt-2" variants={textFadeUpVariants}>
-            Our social media marketing in Chennai strategies are customized to match your business goals, industry, audience, and marketing budget. Our team combines creative content, audience targeting, paid advertising, social media optimization, analytics, and continuous campaign monitoring to create measurable digital marketing results.
+            Our social media marketing strategies in Chennai are customized to match your business goals, industry, audience, and marketing budget. Our team combines creative content, audience targeting, paid advertising, social media optimization, analytics, and continuous campaign monitoring to create measurable digital marketing results.
           </motion.p>
         </motion.div>
       </div>
