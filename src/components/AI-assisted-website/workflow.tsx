@@ -28,7 +28,7 @@ export default function WorkflowSection() {
     { num: 2, title: 'AI Research', image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80' },
     { num: 3, title: 'Concepts', image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80' },
     { num: 4, title: 'Human Design', image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80' },
-    { num: 5, title: 'AI-Powered Functionalities and Model', image: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=600&q=80' },
+    { num: 5, title: 'AI-Powered Features & Integrations', image: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=600&q=80' },
     { num: 6, title: 'Human Development', image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80' },
     { num: 7, title: 'Human QA', image: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80' },
     { num: 8, title: 'Launch', image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80' },
@@ -62,14 +62,14 @@ export default function WorkflowSection() {
         <div className="row align-items-center mb-40" data-aos="fade-up">
           <div className="col-xl-3">
             <span className="tp-section-subtitle text-black blink-ball">
-              AI website vs traditional website
+              AI-Assisted Websites vs. Traditional Websites
             </span>
           </div>
 
           <div className="col-xl-9">
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">What's Different About an </span> AI-Assisted Website?
+                <span className="text-blue-about">What Is Different About an </span> AI-Assisted Website?
               </h4>
             </div>
           </div>
