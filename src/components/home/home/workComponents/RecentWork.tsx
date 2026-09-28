@@ -734,7 +734,7 @@ export default function RecentProject() {
                        RIGHT CARD SWAP
                     ================================================= */}
 
-                    <div className="col-lg-8 col-md-7">
+                    <div className="col-lg-8 col-md-7 mt-80 mt-md-0">
 
                         <div
                             className="
@@ -744,9 +744,11 @@ export default function RecentProject() {
                                 d-flex
                                 justify-content-center
                                 align-items-center
+                                
                             "
                             style={{
                                 height: "600px",
+                                
                             }}
                         >
 

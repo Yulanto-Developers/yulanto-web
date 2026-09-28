@@ -229,8 +229,8 @@ const ContactCard: React.FC<ContactCardProps> = ({
         backdropFilter: "blur(16px)",
         WebkitBackdropFilter: "blur(16px)",
         border: `1px solid ${isHovered
-            ? COLORS.green
-            : COLORS.borderGreen
+          ? COLORS.green
+          : COLORS.borderGreen
           }`,
         boxShadow: isHovered
           ? `0 12px 30px rgba(105, 180, 129, 0.22), 0 4px 10px rgba(5, 52, 86, 0.05)`
@@ -262,6 +262,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
           zIndex: 1,
         }}
       >
+
         <motion.div
           animate={{
             rotate: isHovered ? 12 : 0,
@@ -755,7 +756,7 @@ const InteractiveMap: React.FC<
         ========================================== */}
         <MapLogoMarker />
 
-      
+
       </motion.div>
     </motion.div>
   );
