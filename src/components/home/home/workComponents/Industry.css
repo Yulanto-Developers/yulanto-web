@@ -101,6 +101,10 @@
 .filter-card {
     background: var(--ind-card-bg);
     border: 1px solid var(--ind-border);
+    -webkit-border-radius: var(--ind-radius);
+    -moz-border-radius: var(--ind-radius);
+    -ms-border-radius: var(--ind-radius);
+    -o-border-radius: var(--ind-radius);
     border-radius: var(--ind-radius);
     padding: 0.75rem;
     box-shadow: var(--ind-shadow);
@@ -131,12 +135,20 @@
     padding: 0.65rem 1rem;
     border: none;
     background: transparent;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
     border-radius: 12px;
     color: var(--ind-text-muted);
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
+    -webkit-transition: var(--ind-transition);
+    -moz-transition: var(--ind-transition);
+    -ms-transition: var(--ind-transition);
+    -o-transition: var(--ind-transition);
     transition: var(--ind-transition);
     text-align: left;
 }
@@ -158,8 +170,16 @@
     justify-content: center;
     width: 32px;
     height: 32px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
     border-radius: 8px;
     background: rgba(0, 0, 0, 0.04);
+    -webkit-transition: var(--ind-transition);
+    -moz-transition: var(--ind-transition);
+    -ms-transition: var(--ind-transition);
+    -o-transition: var(--ind-transition);
     transition: var(--ind-transition);
 }
 
@@ -176,6 +196,10 @@
     display: none;
     width: 6px;
     height: 6px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
     border-radius: 50%;
     background-color: #ffffff;
 }
@@ -203,18 +227,30 @@
 .project-card {
     background: var(--ind-card-bg);
     border: 1px solid var(--ind-border);
+    -webkit-border-radius: var(--ind-radius);
+    -moz-border-radius: var(--ind-radius);
+    -ms-border-radius: var(--ind-radius);
+    -o-border-radius: var(--ind-radius);
     border-radius: var(--ind-radius);
     padding: 1.25rem;
     box-shadow: var(--ind-shadow);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    -webkit-transition: var(--ind-transition);
+    -moz-transition: var(--ind-transition);
+    -ms-transition: var(--ind-transition);
+    -o-transition: var(--ind-transition);
     transition: var(--ind-transition);
     position: relative;
     overflow: hidden;
 }
 
 .project-card:hover {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
     transform: translateY(-5px);
     box-shadow: var(--ind-shadow-hover);
     border-color: rgba(79, 70, 229, 0.3);
@@ -230,6 +266,10 @@
 .logo-box {
     width: 44px;
     height: 44px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
     border-radius: 12px;
     background: #f8fafc;
     border: 1px solid var(--ind-border);
@@ -263,6 +303,10 @@
     color: var(--ind-text-muted);
     background: #f1f5f9;
     padding: 0.35rem 0.65rem;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
     border-radius: 8px;
     margin-bottom: 1.25rem;
 }
@@ -285,6 +329,10 @@
     gap: 0.5rem;
     width: 100%;
     padding: 0.65rem 1rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
     border-radius: 10px;
     background: #f1f5f9;
     background: linear-gradient(135deg, #275674 0%, #53ae7d 100%);
@@ -294,12 +342,20 @@
     font-size: 0.825rem;
     font-weight: 700;
     text-decoration: none;
+    -webkit-transition: var(--ind-transition);
+    -moz-transition: var(--ind-transition);
+    -ms-transition: var(--ind-transition);
+    -o-transition: var(--ind-transition);
     transition: var(--ind-transition);
 }
 
 .btn-arrow {
     width: 16px;
     height: 16px;
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -ms-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
     transition: transform 0.2s ease;
 }
 
@@ -307,10 +363,15 @@
     background: linear-gradient(135deg, #275674 0%, #53ae7d 100%);
     -webkit-text-fill-color: #ffffff;
     color: #ffffff;
+    -webkit-background-clip: border-box;
     background-clip: border-box;
 }
 
 .btn-view-project:hover .btn-arrow {
+    -webkit-transform: translateX(3px);
+    -moz-transform: translateX(3px);
+    -ms-transform: translateX(3px);
+    -o-transform: translateX(3px);
     transform: translateX(3px);
 }
 
@@ -321,12 +382,20 @@
     padding: 4rem 1.5rem;
     background: var(--ind-card-bg);
     border: 2px dashed var(--ind-border);
+    -webkit-border-radius: var(--ind-radius);
+    -moz-border-radius: var(--ind-radius);
+    -ms-border-radius: var(--ind-radius);
+    -o-border-radius: var(--ind-radius);
     border-radius: var(--ind-radius);
 }
 
 .empty-icon-wrap {
     width: 50px;
     height: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
     border-radius: 50%;
     background: #eef2ff;
     color: var(--ind-primary);
@@ -356,6 +425,10 @@
 /* Banner Frame */
 .banner-frame {
     position: relative;
+    -webkit-border-radius: var(--ind-radius);
+    -moz-border-radius: var(--ind-radius);
+    -ms-border-radius: var(--ind-radius);
+    -o-border-radius: var(--ind-radius);
     border-radius: var(--ind-radius);
     overflow: hidden;
     border: 1px solid var(--ind-border);
@@ -368,10 +441,18 @@
     height: 260px;
     object-fit: cover;
     display: block;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
     transition: transform 0.5s ease;
 }
 
 .banner-frame:hover .banner-img {
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
     transform: scale(1.03);
 }
 
@@ -691,7 +772,7 @@
     }
 
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 14px;
     }
 

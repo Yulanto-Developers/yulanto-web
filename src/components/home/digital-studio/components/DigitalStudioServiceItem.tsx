@@ -29,8 +29,10 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({
             </div>
             <div className="bf-service-item-3-text left-title">
               <h4 className="bf-service-item-3-title">
-                <SmartLink className="common-underline" href={link ?? '/'}>
-                  {title}
+                <SmartLink className="common-underline d-flex align-items-center gap-3" href={link ?? '/'}>
+                  {title}   <span className="servicearrow d-block d-md-none ">
+                        <ServiceArrowIcon />
+                      </span>
                 </SmartLink>
               </h4>
             </div>
