@@ -11,11 +11,15 @@ interface FloatingActionsProps {
 // 1. Core Visual Layer Component
 function FloatingActions({
   whatsappNumber,
-  whatsappMessage = 'Hello! I would like to know more about your services.',
+  whatsappMessage = 'Hello, This is ',
   onChatClick,
 }: FloatingActionsProps) {
   const encodedMessage = encodeURIComponent(whatsappMessage);
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+  // Remove spaces, +, -, brackets etc. from the WhatsApp number
+  const cleanWhatsappNumber = whatsappNumber.replace(/\D/g, '');
+
+  const whatsappUrl = `https://wa.me/${cleanWhatsappNumber}?text=${encodedMessage}`;
 
   return (
     <div
@@ -36,31 +40,61 @@ function FloatingActions({
           }
         }
       `}</style>
+
       {/* WhatsApp Button */}
       <a
-        href='https://wa.me/919962157250'
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="btn btn-success d-flex align-items-center justify-content-center rounded-circle shadow-lg border-0"
-        style={{ width: '56px', height: '56px', backgroundColor: '#25D366', transition: 'transform 0.2s' }}
-        onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
-        onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+        style={{
+          width: '56px',
+          height: '56px',
+          backgroundColor: '#25D366',
+          transition: 'transform 0.2s',
+        }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.transform = 'scale(1.1)')
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.transform = 'scale(1)')
+        }
         title="Chat on WhatsApp"
       >
-        <i className="fa-brands fa-whatsapp" style={{ fontSize: '28px', color: '#fff' }}></i>
+        <i
+          className="fa-brands fa-whatsapp"
+          style={{
+            fontSize: '28px',
+            color: '#fff',
+          }}
+        ></i>
       </a>
 
-
+      {/* Mobile Phone Button */}
       <a
-        href='tel:+919962157250'
-        type="button"
+        href="tel:+919962157250"
         className="btn btn-primary d-flex align-items-center justify-content-center d-block d-md-none rounded-circle shadow-lg border-0"
-        style={{ width: '56px', height: '56px', transition: 'transform 0.2s' }}
-        onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
-        onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-        title="Open Support Chat"
+        style={{
+          width: '56px',
+          height: '56px',
+          transition: 'transform 0.2s',
+        }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.transform = 'scale(1.1)')
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.transform = 'scale(1)'
+          )
+        }
+        title="Connect With Us"
       >
-        <i className="fa-solid fa-phone" style={{ fontSize: '24px', color: '#fff' }}></i>
+        <i
+          className="fa-solid fa-phone"
+          style={{
+            fontSize: '24px',
+            color: '#fff',
+          }}
+        ></i>
       </a>
     </div>
   );
@@ -74,7 +108,8 @@ export default function FloatingActionsWrapper() {
 
   return (
     <FloatingActions
-      whatsappNumber="9962157250 "
+      whatsappNumber="919962157250"
+      whatsappMessage="Hello, This is "
       onChatClick={handleChatOpen}
     />
   );
