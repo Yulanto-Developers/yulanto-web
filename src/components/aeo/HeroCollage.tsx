@@ -59,7 +59,7 @@ const HeroCollage = React.forwardRef<HTMLDivElement, HeroCollageProps>(
                   for AI-Powered Search
                 </h4>
                 <p className="text-figtree text-black mt-2">
-                  Search is changing. People are no longer searching only with short keywords—they are asking complete questions and expecting direct answers from Google, Bing, AI search platforms and digital assistants.Answer Engine Optimization (AEO) helps your website provide clear, structured and useful answers that search engines and AI-powered platforms can better understand and potentially use when responding to relevant queries.
+                  Search is changing. People are no longer searching only with short keywords—they are asking complete questions and expecting direct answers from Google, Bing, AI search platforms and digital assistants. Answer Engine Optimization (AEO) helps your website provide clear, structured and useful answers that search engines and AI-powered platforms can better understand and potentially use when responding to relevant queries.
                 </p>
               </div>
             </div>

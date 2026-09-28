@@ -32,7 +32,7 @@ export function PulseFitHero({
 //   subtitle = "Social Media Creative Design in Chennai",
   titleBlue = "Engaging Social Media ",
   titleBlack = "Creatives for Every Platform",
-  descriptionTop = "Your brand needs more than just attractive graphics. Every creative should have a purpose — whether it is to promote a product, announce an offer, educate your audience, generate enquiries, or strengthen brand awareness.",
+  descriptionTop = "Your brand needs more than just attractive graphics. Every creative should have a purpose — whether it is to promote a product, announce an offer, educate your audience, generate inquiries, or strengthen brand awareness.",
 //   descriptionBottom = "As a creative packaging design company in Chennai, we combine visual appeal, brand identity, product information, and marketing strategy to create packaging that catches attention and communicates your product value clearly.",
   images = defaultImages,
   className = "",

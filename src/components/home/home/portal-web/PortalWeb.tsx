@@ -1298,7 +1298,7 @@ function PortalWeb() {
                         </div>
 
                     </div>
-                    <p className="text-figtree text-black mt-4 mb-0">Our LMS website development solutions can be designed for schools, colleges, training institutes, coaching centres, corporate training programs, professional educators, and online course businesses.</p>
+                    <p className="text-figtree text-black mt-4 mb-0">Our LMS website development solutions can be designed for schools, colleges, training institutes, coaching centers, corporate training programs, professional educators, and online course businesses.</p>
                 </div>
 
                 {/* Custom Hover Effects */}

@@ -104,7 +104,7 @@ export const WhyChooseShopifyPartner = () => {
                 Reliable Shopify Web Development for Growing Businesses:
               </h5>
               <p className="text-figtree text-black mt-3">
-                Selecting an experienced Shopify development company can help you create an ecommerce website that is built around your business objectives.
+                Partnering with an experienced Shopify development company ensures your store is built around your specific business objectives.
               </p>
               <p className="text-figtree mt-2">
                 We combine Shopify expertise, ecommerce knowledge, design thinking, and development experience to create online stores that are practical, attractive, and easy to manage.

@@ -80,7 +80,7 @@ export default function WooCommerceCTA(): React.ReactElement {
               >
                 <div className="d-flex align-items-center gap-2 text-muted" style={{ fontSize: '13px' }}>
                   <i className="fa-solid fa-clock" style={{ color: '#053456' }}></i>
-                  <span className="text-figtree text-black mt-2">Talk to our experts today</span>
+                  <span className="text-figtree text-black mt-2">Talk to Our Experts Today</span>
                 </div>
 
 

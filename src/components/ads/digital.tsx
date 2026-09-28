@@ -111,7 +111,7 @@ export default function OffPageSeoBanner() {
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
-            <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Let's Connect With Digital Marketing Team</span>
+            <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Let's Connect With Our Digital Marketing Team </span>
             <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px', }}></i>
           </button>
 

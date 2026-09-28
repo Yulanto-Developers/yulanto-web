@@ -45,7 +45,7 @@ const features = [
   { icon: MapPin, title: "Google Maps integration" },
   { icon: MessageSquare, title: "WhatsApp integration" },
   { icon: Search, title: "Search & filtering" },
-  { icon: ShoppingBag, title: "Product catalogues" },
+  { icon: ShoppingBag, title: "product catalogs " },
   { icon: CreditCard, title: "Payment gateway integration" },
   { icon: Cpu, title: "Third-party API integration" },
   { icon: BarChart3, title: "Analytics & conversion tracking" }

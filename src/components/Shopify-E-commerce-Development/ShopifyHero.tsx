@@ -473,7 +473,7 @@ export default function ShopifyHero() {
 
                 </h1>
               <p className="text-figtree text-black mt-2">
-                Turn your business idea into a powerful online store with professional Shopify website development services. As a Shopify development company in Chennai, we help businesses create modern, responsive, user-friendly, and conversion-focused Shopify stores designed to support long-term growth.
+                Turn your business idea into a powerful online store with professional Shopify website development services. As a shopify development company in chennai, we help businesses create modern, responsive, user-friendly, and conversion-focused Shopify stores designed to support long-term growth.
               </p>
             </div>
           </div>

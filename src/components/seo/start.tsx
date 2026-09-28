@@ -692,8 +692,7 @@ export function HeroSection({
                 As one of the trusted search engine optimization companies in
                 Chennai, we focus on ethical, data-driven SEO practices rather
                 than shortcuts. Our goal is to improve your website's visibility
-                for valuable search terms, attract targeted visitors, increase
-                enquiries, and support long-term business growth.
+                for valuable search terms, attract targeted visitors, increase inquiries, and support long-term business growth.
               </p>
               <p
                 className="text-figtree text-black mt-2"

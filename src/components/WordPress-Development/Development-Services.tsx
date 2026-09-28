@@ -45,7 +45,7 @@ const rowTwoServices = [
     icon: ShoppingCart,
     title: "WordPress eCommerce Development",
     description:
-      "We can develop WordPress-powered online stores with product catalogues, shopping carts, payment gateway integration, order management, and other essential eCommerce features.",
+      "We can develop WordPress-powered online stores with product catalogs , shopping carts, payment gateway integration, order management, and other essential eCommerce features.",
   },
   {
     icon: BookOpen,

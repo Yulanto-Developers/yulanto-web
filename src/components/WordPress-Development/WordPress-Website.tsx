@@ -162,7 +162,7 @@ export const Header: React.FC = () => {
                     e.currentTarget.style.transform = 'translateY(0)';
                   }}
                 >
-                  <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Let's Talk our Team</span>
+                  <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>Talk to Our Team </span>
                   <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px' }}></i>
                 </button>
               </div>

@@ -250,7 +250,7 @@ export const restaurantPortalFeatures = [
     },
     {
         id: 9,
-        title: "Restaurant Enquiry",
+        title: "Restaurant Inquiries",
         icon: "enquiry",
     },
     {
@@ -302,7 +302,7 @@ export const webPortalBenefits = [
         id: 4,
         title: "User-Friendly Administration",
         description:
-            "Manage users, listings, categories, enquiries, subscriptions, content, and other portal activities through an easy-to-use admin panel.",
+            "Manage users, listings, categories, inquiries, subscriptions, content, and other portal activities through an easy-to-use admin panel.",
         icon: "admin",
     },
     {

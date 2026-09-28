@@ -262,8 +262,8 @@ const data = [
  
   {
     path: "/ecommerce-website-development-company-in-chennai",
-    title: "Custome Ecommerce Development",
-    currentPage: "Custome Ecommerce Development",
+    title: "Custom Ecommerce Development",
+    currentPage: "Custom Ecommerce Development",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {

@@ -791,7 +791,7 @@ export const industryData: IndustryItem[] = [
 
     {
         id: "jewellery",
-        title: "Jewellery",
+        title: "Jewelry",
         icon: svg([
             e("ellipse", {
                 key: "bg",

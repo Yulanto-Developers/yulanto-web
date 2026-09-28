@@ -16,9 +16,9 @@ interface ServiceItem {
 const featuresList: ServiceItem[] = [
     { title: "Brochure Design", icon: "fa-solid fa-book-open" },
     { title: "Company Profile Design", icon: "fa-solid fa-building" },
-    { title: "Catalogue Design", icon: "fa-solid fa-book-bookmark" },
+    { title: "Catalog Design", icon: "fa-solid fa-book-bookmark" },
     { title: "Corporate Presentation Design", icon: "fa-solid fa-display" },
-    { title: "Product Catalogue Design", icon: "fa-solid fa-boxes-stacked" },
+    { title: "Product Catalog Design", icon: "fa-solid fa-boxes-stacked" },
     { title: "Advertisement Design", icon: "fa-solid fa-rectangle-ad" },
     { title: "Business Card Design", icon: "fa-solid fa-id-card" },
     { title: "Letterhead Design", icon: "fa-solid fa-file-signature" },

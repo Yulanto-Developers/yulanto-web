@@ -168,7 +168,7 @@ export function HeroSection({
                         }}
                       >
                         <Sparkles size={20} className="text-blue-600" />
-                        <span>AEO Answer Engine Engine</span>
+                        <span>AEO Answer Engine Optimization</span>
                       </div>
                     )}
                   </div>
@@ -302,7 +302,7 @@ export function HeroSection({
             </span>
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20" data-aos="fade-up" data-aos-delay="400">
-                <span className="text-blue-about">Answer Engine Optimization (AEO)  </span> Services in Chennai?
+                <span className="text-blue-about">Answer Engine Optimization (AEO)  </span> Services in Chennai
               </h4>
               <p className="text-figtree text-black mt-2" data-aos="fade-up" data-aos-delay="500">
                 Answer Engine Optimization (AEO) is the process of optimizing website content so that search engines and AI-powered answer systems can easily understand, extract and present relevant information from your website.

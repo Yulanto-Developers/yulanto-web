@@ -74,11 +74,11 @@ export function ImageCarouselHero({
                 Campaign Management Services
               </h4>
               <p className="text-figtree text-black mt-2" data-aos="fade-up">
-                Looking for a Google Ads agency in Chennai to generate quality
-                leads, increase website traffic, and improve your online sales?
-                Our Google Ads and PPC management services are designed to help
-                businesses reach the right customers at the right time. We
-                create, manage, monitor, and optimize high-performing Google
+                Looking for a Google Ads agency in Chennai that generates
+                quality leads, increase website traffic, and improve your online
+                sales? Our Google Ads and PPC management services are designed
+                to help businesses reach the right customers at the right time.
+                We create, manage, monitor, and optimize high-performing Google
                 advertising campaigns based on your business goals, target
                 audience, keywords, location, and budget.
               </p>
@@ -91,7 +91,8 @@ export function ImageCarouselHero({
           <div className="carousel-3d-perspective">
             {images?.map((image, index) => {
               const rotationAngles = [-4, 3, -2, 5, -3];
-              const rotation = rotationAngles[index % rotationAngles.length] || 0;
+              const rotation =
+                rotationAngles[index % rotationAngles.length] || 0;
 
               return (
                 <div
@@ -101,7 +102,7 @@ export function ImageCarouselHero({
                     transform: `rotateY(${index * 2}deg)`,
                   }}
                 >
-                  <div 
+                  <div
                     className="carousel-card-inner"
                     style={{
                       transform: `rotate(${rotation}deg)`,
