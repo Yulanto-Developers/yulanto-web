@@ -530,7 +530,7 @@ const Hero = () => {
                                                         overflow: "hidden",
                                                     }}
                                                 >
-                                                    <Link href="/">
+                                                    {/* <Link href="/"> */}
                                                         <Image
                                                             src={item.img}
                                                             alt={item.alt}
@@ -553,7 +553,7 @@ const Hero = () => {
                                                             }}
 
                                                         />
-                                                    </Link>
+                                                    {/* </Link> */}
 
                                                     {isActive && (
                                                         <div

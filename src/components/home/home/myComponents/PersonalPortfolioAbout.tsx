@@ -42,7 +42,7 @@ const PersonalPortfolioAbout = () => {
             className="px-about-6-area pt-50 pb-80 pb-lg-110"
             style={{ backgroundColor: aboutConfig.sectionBg }}
         >
-           <div className={isMobile ? "" : "container"}>
+            <div className={isMobile ? "" : "container"}>
                 <div className="row px-2 px-lg-0 py-5 align-items-center">
                     <div className="col-xl-3">
                         <span className="tp-section-subtitle text-black blink-ball">

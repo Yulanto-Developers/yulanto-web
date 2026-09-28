@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import { company } from "@/lib/company";
 import Script from "next/script";
 import favicon from "@/assets/img/logo/favicon.png"
+import Protector from "@/components/home/home/Protector/Protector";
 
 // ===============================
 // FONTS
@@ -163,8 +164,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${tenor.variable} ${figTree.variable}`}>
+        <Protector />
         {children}
-
         <ToastContainer />
 
         {/* ===============================

@@ -271,6 +271,21 @@ export async function POST(req: NextRequest) {
             color: #718096;
             border-top: 1px solid #edf2f7;
         }
+               .coy-btn {
+            border-radius: 5px;
+            background: linear-gradient(135deg, #53ae7d 0%, #2f8060 45%, #053456 100%);
+            color: #e2e8f0;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+
+        
+        .coy-btn.copied {
+            transform: scale(1.08);
+            background: linear-gradient(135deg, #2f8060 0%, #053456 100%);
+        }
     </style>
 </head>
 
@@ -324,6 +339,30 @@ export async function POST(req: NextRequest) {
             <strong>${COMPANY_NAME}</strong> Internal Notification System
         </div>
     </div>
+<script>
+        const copy = document.getElementById('copy');
+        const table = document.querySelector('.info-table');
+
+        copy.addEventListener('click', async () => {
+            try {
+
+                await navigator.clipboard.writeText(table.innerText);
+
+
+                copy.innerText = 'Copied 😊';
+                copy.classList.add('copied');
+
+                setTimeout(() => {
+                    copy.innerText = 'Copy';
+                    copy.classList.remove('copied');
+                }, 1000);
+
+            } catch (error) {
+                console.error('Error copying text:', error);
+            }
+        });
+    </script>
+   
 </body>
 
 </html>
