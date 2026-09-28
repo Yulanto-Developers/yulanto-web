@@ -9,6 +9,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({
   categories,
   subDesc,
   description,
+  link
 }) => {
   return (
     <div className="bf-service-item-3 fix">
@@ -16,7 +17,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({
         <div className="col-lg-4">
           <div className="bf-service-item-3-wrap d-flex align-items-center">
             <div className="bf-service-item-3-thumb">
-              <SmartLink href="/">
+              <SmartLink href={link ?? "/"}>
                 <Image
                   className="img-fluid"
                   width={290}
@@ -28,7 +29,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({
             </div>
             <div className="bf-service-item-3-text left-title">
               <h4 className="bf-service-item-3-title">
-                <SmartLink className="common-underline" href="/">
+                <SmartLink className="common-underline" href={link ?? '/'}>
                   {title}
                 </SmartLink>
               </h4>
@@ -50,7 +51,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({
                   <h4 className="bf-service-item-3-title">
                     <SmartLink
                       className="common-underline"
-                      href="/"
+                      href={link ?? '/'}
                     >
                       {title}{" "}
                       <span className="servicearrow">
