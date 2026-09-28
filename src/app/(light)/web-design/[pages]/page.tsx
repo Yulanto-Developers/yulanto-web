@@ -75,7 +75,7 @@ export default async function Page({ params }: PageProps) {
       pageContent = <Corporatewebistedesgin />;
       break;
       // website-redesign
-    case "Website-Redesign-in-Chennai":
+    case "website-redesign-in-chennai":
       pageContent = <Websiteredesign />;
       break;
       // landing-page-desgin
