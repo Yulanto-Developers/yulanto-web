@@ -393,15 +393,15 @@ export const ShopifyExperience: React.FC = () => {
         <div className="row align-items-center mb-20" data-aos="fade-up">
           <div className="col-xl-3" data-aos="fade-right" data-aos-delay="100">
             <span className="tp-section-subtitle text-black blink-ball">
-              AI-Assisted Website Design
+              AI-Assisted Web Design
             </span>
           </div>
 
           <div className="col-xl-9" data-aos="fade-left" data-aos-delay="200">
             <div className="px-project-title-box">
               <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">Build Better Websites. </span>
-                Faster With AI.
+                <span className="text-blue-about">Build Better Websites, </span>
+                Faster with AI.
               </h4>
               <p className="text-figtree text-black mt-2">
                 We combine AI-powered design and development tools with human
