@@ -1168,11 +1168,9 @@ function Ecommerce() {
                                 That Fits Your Brand
                             </h4>
 
-<<<<<<< Updated upstream
+
                             <h1 className="ft-23 mt-0 mb-3 text-tenor"
-=======
-                            <h1 className="ft-23 mt-0 mb-3 text-center text-tenor"
->>>>>>> Stashed changes
+
                   data-aos="text-reveal"
                   data-aos-delay="100"  style={{ lineHeight: "1.2" }}
                 >

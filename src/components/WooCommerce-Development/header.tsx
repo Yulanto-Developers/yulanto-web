@@ -167,11 +167,9 @@ export default function Header() {
           <Auto3DCarousel />
         </div>
         <p className="text-figtree text-black mt-2">
-<<<<<<< Updated upstream
+
           From a simple one-page e-commerce website to a fully customized online
-=======
-          From a simple one page ecommerce website to a fully customized online
->>>>>>> Stashed changes
+
           store, our team provides flexible solutions that are easy to manage
           and scalable for future requirements. Our WooCommerce website
           development service covers planning, UI/UX design, development,
