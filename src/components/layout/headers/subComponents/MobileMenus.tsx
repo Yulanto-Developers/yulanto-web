@@ -4,7 +4,9 @@ import { lightMenu } from "@/data/MenuRenderer/menu-light";
 import { darkMenu } from "@/data/MenuRenderer/menu-dark";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
 import { MenuItem } from "@/types/menu-dt";
-import { useState } from "react";
+// import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const MobileMenus = () => {
@@ -25,6 +27,13 @@ const MobileMenus = () => {
             setActiveSubMenu(null);
         }
     };
+
+    const pathname = usePathname();
+
+    useEffect(() => {
+        setActiveMenu(null);
+        setActiveSubMenu(null);
+    }, [pathname]);
 
     // Toggles sublink dropdown menu open/close state
     const toggleSubMenu = (key: string) => {

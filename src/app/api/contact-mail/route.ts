@@ -190,6 +190,7 @@ export async function POST(req: NextRequest) {
             margin-bottom: 14px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 8px;
         }
 
@@ -299,7 +300,9 @@ export async function POST(req: NextRequest) {
 
         <div class="content">
             <!-- Client Information Section -->
-            <div class="section-title">📋 Client Information</div>
+            <div class="section-title">📋 Client Information 
+          
+            </div>
 
             <table class="info-table">
                 <tr>
@@ -340,27 +343,7 @@ export async function POST(req: NextRequest) {
         </div>
     </div>
 <script>
-        const copy = document.getElementById('copy');
-        const table = document.querySelector('.info-table');
-
-        copy.addEventListener('click', async () => {
-            try {
-
-                await navigator.clipboard.writeText(table.innerText);
-
-
-                copy.innerText = 'Copied 😊';
-                copy.classList.add('copied');
-
-                setTimeout(() => {
-                    copy.innerText = 'Copy';
-                    copy.classList.remove('copied');
-                }, 1000);
-
-            } catch (error) {
-                console.error('Error copying text:', error);
-            }
-        });
+      
     </script>
    
 </body>

@@ -2,7 +2,7 @@
 import { Navigation, Controller, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useQuoteModal } from "../myComponents/Content/QuoteContext";
 import Link from "next/link";
@@ -23,6 +23,30 @@ const HeroSlide = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
     const [topSwiper, setTopSwiper] = useState<SwiperType | null>(null);
     const { openModal } = useQuoteModal();
+
+    useEffect(() => {
+        const updateSwipers = () => {
+            topSwiperRef.current?.update();
+            thumbsSwiperRef.current?.update();
+        };
+
+        // Initial browser layout
+        requestAnimationFrame(() => {
+            updateSwipers();
+        });
+
+        // Give mobile Safari/Chrome time to finish layout
+        const timer = setTimeout(() => {
+            updateSwipers();
+        }, 300);
+
+        window.addEventListener("resize", updateSwipers);
+
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener("resize", updateSwipers);
+        };
+    }, []);
 
     return (
         <div className="px-hero-2-slider-wrap pb-100">
@@ -105,7 +129,12 @@ const HeroSlide = () => {
                                 <SwiperSlide key={`${slide.title}-${index}`}>
                                     <div className={`px-hero-2-thumbs ${isActive ? "active" : ""}`}>
                                         <Link href="#" style={{ position: "relative", display: "block", overflow: "hidden", borderRadius: "8px" }}>
-                                            <Image width={130} height={168} src={slide.img} alt={slide.title} />
+                                            <Image width={130} height={168} src={slide.img} alt={slide.title} style={{
+                                                width: "100%",
+                                                height: "168px",
+                                                objectFit: "cover",
+                                                display: "block",
+                                            }} />
 
                                             {/* Centered Overlay Head - Rendered ONLY on the Active Slide */}
                                             {isActive && slide.head && (
