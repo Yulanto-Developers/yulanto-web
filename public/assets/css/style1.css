@@ -364,7 +364,6 @@
     padding: 20px 0 30px !important;
   }
 
-  
   .tm-slider-card {
     width: 220px;
     height: 440px;
@@ -1331,3 +1330,14 @@
 }
 
 /*  */
+
+@media only screen and (max-width: 991px) {
+  .px-about-6-area {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .hero-collage-wrapper {
+    height: 280px;
+  }
+}

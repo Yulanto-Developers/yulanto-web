@@ -44,7 +44,7 @@ export default function ChooseSeoAgencySection() {
 
           <div className="col-xl-9">
             <div className="px-project-title-box">
-              <h4 className="px-about-title mb-20">
+              <h4 className="px-about-title mb-15">
                 <span className="text-blue-about">Choose a Trusted SEO Agency </span>
                 in Chennai
               </h4>
@@ -57,8 +57,8 @@ export default function ChooseSeoAgencySection() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "2.5rem",
-            marginTop: "2rem",
+            gap: "2rem",
+            marginTop: "1rem",
             alignItems: "start",
           }}
         >
