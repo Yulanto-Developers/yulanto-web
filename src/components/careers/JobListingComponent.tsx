@@ -55,8 +55,9 @@ export default function JobListingComponent({
         position: "relative",
         backgroundColor: "#ffffff",
         padding: "60px 24px",
-        minHeight: "420px",
+        // Height: "420px",
         overflow: "hidden",
+
       }}
     >
       {/* =========================
@@ -72,13 +73,13 @@ export default function JobListingComponent({
           Team
         </h4>
 
-        
- <h1 className="ft-23 mt-0 mb-3 text-center text-tenor"
-                  data-aos="text-reveal"
-                  data-aos-delay="100"  style={{ lineHeight: "1.2" }}
-                >
-                Careers at Yulanto Web Creation
-                </h1>
+
+        <h1 className="ft-23 mt-0 mb-3 text-center text-tenor"
+          data-aos="text-reveal"
+          data-aos-delay="100" style={{ lineHeight: "1.2" }}
+        >
+          Careers at Yulanto Web Creations
+        </h1>
       </div>
 
       {/* =========================
@@ -288,11 +289,20 @@ export default function JobListingComponent({
       {/* =========================
           JOB CARDS GRID
       ========================= */}
+      <style>{`
+        @media (max-width: 767px) {
+          .job-listing-grid .job-card {
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+        }
+      `}</style>
       <div
         className="job-listing-grid"
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
           gap: "16px",
           width: "100%",
           maxWidth: "1200px",
@@ -314,7 +324,11 @@ export default function JobListingComponent({
             style={{
               backgroundColor: "#ffffff",
               display: "flex",
-              width: "100%",
+
+              // CHANGE THIS
+              width: "calc(33.333% - 11px)",
+              maxWidth: "380px",
+
               cursor: "pointer",
               flexDirection: "row",
               alignItems: "center",
@@ -367,7 +381,7 @@ export default function JobListingComponent({
                   color: "#053456",
                   fontWeight: 700,
                   fontSize: "15px",
-                  fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' ,
+                  fontFamily: '"Tenor Sans", "Tenor Sans Fallback"',
                   wordBreak: "break-word",
                   width: "100%",
                 }}
@@ -473,7 +487,12 @@ export default function JobListingComponent({
         ================================= */
         @media (max-width: 767px) {
           .job-listing-wrapper {
-            padding: 40px 15px !important;
+            padding: 100px 15px !important;
+            min-height:100% !important;
+            max-height:100% !important;
+            height:100% !important;
+            
+
           }
 
           .job-listing-grid {
@@ -512,9 +531,7 @@ export default function JobListingComponent({
            480px AND BELOW
         ================================= */
         @media (max-width: 480px) {
-          .job-listing-wrapper {
-            padding: 35px 12px !important;
-          }
+         
 
           .job-listing-grid {
             grid-template-columns: minmax(0, 1fr) !important;

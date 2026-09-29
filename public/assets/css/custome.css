@@ -1515,7 +1515,11 @@
     overflow-y: auto;
     position: relative;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    animation: popup 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    -webkit-animation: popupFade 0.25s ease-out;
+    -moz-animation: popupFade 0.25s ease-out;
+    -ms-animation: popupFade 0.25s ease-out;
+    -o-animation: popupFade 0.25s ease-out;
+    animation: popupFade 0.25s ease-out;
     top: -10px;
 }
 
@@ -3493,4 +3497,27 @@ input[name="name"].has-value+.name-next-btn {
 
 .map-image-wrapper:hover .map-overlay {
     opacity: 1;
+}
+
+.main-nav-list .menu-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main-nav-list .dropdown-icon {
+    width: 10px !important;
+    height: 10px !important;
+    min-width: 10px !important;
+    max-width: 10px !important;
+    min-height: 10px !important;
+    max-height: 10px !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+    position: static !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important;
 }

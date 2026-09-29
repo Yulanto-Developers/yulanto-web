@@ -144,7 +144,7 @@ const StartupAgencyAbout = () => {
                                         </p>
 
                                         <Link
-                                            href="/about-us"
+                                            href="/our-story"
                                             className="px-about-link px-doubble-effect"
                                         >
                                             <span>Explore Us</span>
