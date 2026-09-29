@@ -143,7 +143,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/website-development/api-integration-services",
+    path: "/website-development/api-integration-services-in-chennai",
     title: "API Integration",
     currentPage: "API Integration",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
@@ -193,7 +193,7 @@ const data = [
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
   },
   {
-    path: "/web-design/UI-UX-Companies-in-Chennai",
+    path: "/web-design/ui-ux-companies-in-chennai",
     title: " UI/UX Design",
     currentPage: "UI/UX Design",
     backgroundImage: "/assets/images/breadcrumb/Company-Overview.jpg",
