@@ -503,33 +503,26 @@ export default function ShopifyHero() {
               </span>
             </div>
 
-            <div className="col-xl-9">
-              <div className="px-project-title-box">
-                <h4 className="px-about-title mb-20">
-                  <span className="text-blue-about">
-                    Build a High-Performing{" "}
-                  </span>
-                  Online Store with Shopify
-                </h4>
-                <h1
-                  className="ft-23 mt-0 mb-3 text-tenor"
+
+          <div className="col-xl-9">
+            <div className="px-project-title-box">
+              <h4 className="px-about-title mb-20">
+                <span className="text-blue-about">Build a High-Performing </span>Online Store with Shopify
+              </h4>
+              <h1 className="ft-23 mt-0 mb-3 text-tenor"
                   data-aos="text-reveal"
-                  data-aos-delay="100"
-                  style={{ lineHeight: "1.2" }}
+                  data-aos-delay="100"  style={{ lineHeight: "1.2" }}
                 >
-                  Shopify Development Company in Chennai
+                Shopify Development Company in Chennai
+
                 </h1>
-                <p className="text-figtree text-black mt-2">
-                  Turn your business idea into a powerful online store with
-                  professional Shopify website development services. As a
-                  shopify development company in chennai, we help businesses
-                  create modern, responsive, user-friendly, and
-                  conversion-focused Shopify stores designed to support
-                  long-term growth.
-                </p>
-              </div>
+              <p className="text-figtree text-black mt-2">
+                Turn your business idea into a powerful online store with professional Shopify website development services. As a Shopify development company in Chennai, we help businesses create modern, responsive, user-friendly, and conversion-focused Shopify stores designed to support long-term growth.
+              </p>
+
             </div>
           </div>
+        </div>
 
           {/* Floating Parallax Images Displayed Below Content */}
           <div className="row mt-5">
