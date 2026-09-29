@@ -355,18 +355,16 @@
   margin-top: 70px;
 }
 
-/* .tm-slider-section .swiper-backface-hidden .swiper-slide {
+.tm-slider-section .swiper-backface-hidden .swiper-slide {
   margin-right: 40px !important;
-} */
+}
 
 @media (max-width: 991px) {
   .tm-slider-section {
     padding: 20px 0 30px !important;
   }
-  .swiper-slide {
-    margin-right: 0 !important;
-  }
 
+  
   .tm-slider-card {
     width: 220px;
     height: 440px;
