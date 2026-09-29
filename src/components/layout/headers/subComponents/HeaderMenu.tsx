@@ -25,7 +25,15 @@ export default function HeaderMenu() {
                         <a className="menu-link">
                             {item.label}
                             {item.type === "dropdown" && (
-                                <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
+                                <FontAwesomeIcon
+                                    icon={faChevronDown}
+                                    className="dropdown-icon"
+                                    style={{
+                                        width: "10px",
+                                        height: "10px",
+                                        flexShrink: 0,
+                                    }}
+                                />
                             )}
 
                         </a>
@@ -33,7 +41,15 @@ export default function HeaderMenu() {
                         <a className="menu-link" href={item.href}>
                             {item.label}
                             {item.type === "dropdown" && (
-                                <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
+                                <FontAwesomeIcon
+                                    icon={faChevronDown}
+                                    className="dropdown-icon"
+                                    style={{
+                                        width: "10px",
+                                        height: "10px",
+                                        flexShrink: 0,
+                                    }}
+                                />
                             )}
                         </a>
                     )}
@@ -53,6 +69,11 @@ export default function HeaderMenu() {
                                                         <FontAwesomeIcon
                                                             icon={faAnglesRight}
                                                             className="submenu-icon"
+                                                            style={{
+                                                                width: "10px",
+                                                                height: "10px",
+                                                                flexShrink: 0,
+                                                            }}
                                                         />
                                                         {link.label}
                                                     </span>
@@ -61,6 +82,11 @@ export default function HeaderMenu() {
                                                         <FontAwesomeIcon
                                                             icon={faChevronRight}
                                                             className="sidebar-arrow"
+                                                            style={{
+                                                                width: "10px",
+                                                                height: "10px",
+                                                                flexShrink: 0,
+                                                            }}
                                                         />
                                                     )}
                                                 </a>
@@ -75,6 +101,11 @@ export default function HeaderMenu() {
                                                         <FontAwesomeIcon
                                                             icon={faAnglesRight}
                                                             className="submenu-icon"
+                                                            style={{
+                                                                width: "10px",
+                                                                height: "10px",
+                                                                flexShrink: 0,
+                                                            }}
                                                         />
                                                         {link.label}
                                                     </span>
@@ -83,6 +114,11 @@ export default function HeaderMenu() {
                                                         <FontAwesomeIcon
                                                             icon={faChevronRight}
                                                             className="sidebar-arrow"
+                                                            style={{
+                                                                width: "10px",
+                                                                height: "10px",
+                                                                flexShrink: 0,
+                                                            }}
                                                         />
                                                     )}
                                                 </a>
@@ -106,6 +142,11 @@ export default function HeaderMenu() {
                                                                     <FontAwesomeIcon
                                                                         icon={faAnglesRight}
                                                                         className="submenu-icon"
+                                                                        style={{
+                                                                            width: "10px",
+                                                                            height: "10px",
+                                                                            flexShrink: 0,
+                                                                        }}
                                                                     />{" "}
                                                                     {subLink.label}
                                                                 </a>

@@ -1,0 +1,163 @@
+/* =========================================================
+   HEADER MOBILE FIX
+   ========================================================= */
+
+@media (max-width: 1199.98px) {
+
+    /* Prevent header columns from overflowing */
+    .px-header-6-ptb .row {
+        margin-left: 0;
+        margin-right: 0;
+        flex-wrap: nowrap;
+    }
+
+    .px-header-6-ptb .row > .col-6 {
+        width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .px-header-6-ptb .row > .col-2 {
+        width: 0;
+        flex: 0 0 0;
+        max-width: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .px-header-6-ptb .row > .col-4 {
+        width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* Mobile logo */
+    .px-header-logo.d-block.d-xl-none {
+        display: flex !important;
+        align-items: center;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .px-header-logo.d-block.d-xl-none img {
+        width: auto;
+        max-width: 150px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    /* Right side actions */
+    .px-header-6-action {
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        min-width: 0;
+    }
+
+    /* IMPORTANT:
+       Hide desktop phone/email elements completely */
+    .px-header-6-info,
+    .px-header-6-btn {
+        display: none !important;
+    }
+
+    /* Mobile menu button */
+    .px-header-action {
+        position: relative !important;
+        flex: 0 0 auto;
+        margin-left: auto;
+    }
+
+    .px-header-bar {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* =========================================================
+   HEADER PHONE BUTTON FIX
+   ========================================================= */
+
+.px-header-6-btn {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+}
+
+.px-header-6-btn .px-btn-grey {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: auto !important;
+    min-width: max-content !important;
+    max-width: none !important;
+
+    height: 42px !important;
+
+    padding: 0 16px !important;
+
+    white-space: nowrap !important;
+    flex-wrap: nowrap !important;
+
+
+
+    font-size: 14px !important;
+    line-height: 1 !important;
+
+    box-sizing: border-box !important;
+}
+
+.px-header-6-btn .px-btn-grey svg {
+    width: 15px !important;
+    height: 15px !important;
+
+    flex: 0 0 auto !important;
+}
+
+.px-header-6-action {
+    flex-wrap: nowrap !important;
+}
+
+.px-header-6-action .px-header-6-btn {
+    white-space: nowrap !important;
+}
+
+
+.px-hero-2-slider-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.px-hero-2-slider-wrap .row {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.px-hero-2-slider-wrap .col-lg-6 {
+    width: 100%;
+    max-width: 100%;
+}
+
+.px-hero-2-bottom-active {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.px-hero-2-bottom-active .swiper-wrapper {
+    width: 100%;
+}
+
+.px-hero-2-bottom-active .swiper-slide {
+    box-sizing: border-box;
+}

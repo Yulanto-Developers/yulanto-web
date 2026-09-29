@@ -10,7 +10,7 @@ const sampleJobs: Job[] = [
   {
     company: "Digital Marketing Executive",
     title: "Experience: Minimum 2 Years Experience",
-     logo: <Megaphone size={34} strokeWidth={2} />,
+    logo: <Megaphone size={34} strokeWidth={2} />,
     job_description: "Looking for a skilled Digital Marketing Executive with minimum 2 years of experience in digital marketing strategies, SEO, social media management, and content creation.",
     salary: "₹20,000 – ₹25,000 / Month",
     location: "Work from Office",

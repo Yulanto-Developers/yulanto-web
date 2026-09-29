@@ -151,7 +151,7 @@ const FloatingParticle: React.FC<{ index: number }> = ({
         backgroundColor: COLORS.green,
         opacity: 0.25,
         filter: "blur(2px)",
-        pointerEvents: "none",
+       
         zIndex: 0,
       }}
       animate={{
@@ -628,11 +628,10 @@ interface InteractiveMapProps {
   minHeight?: number | string;
 }
 
-const InteractiveMap: React.FC<
-  InteractiveMapProps
-> = ({ minHeight = 450 }) => {
-  const containerRef =
-    React.useRef<HTMLDivElement>(null);
+const InteractiveMap: React.FC<InteractiveMapProps> = ({
+  minHeight = 450,
+}) => {
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -676,6 +675,12 @@ const InteractiveMap: React.FC<
     y.set(0);
   };
 
+  // Convert minHeight to a real CSS height
+  const mapHeight =
+    typeof minHeight === "number"
+      ? `${minHeight}px`
+      : minHeight;
+
   return (
     <motion.div
       ref={containerRef}
@@ -700,8 +705,8 @@ const InteractiveMap: React.FC<
       style={{
         position: "relative",
         width: "100%",
-        height: "100%",
-        minHeight,
+        height: mapHeight,
+        minHeight: mapHeight,
         borderRadius: "24px",
         overflow: "hidden",
         perspective: "1200px",
@@ -713,9 +718,10 @@ const InteractiveMap: React.FC<
     >
       <motion.div
         style={{
+          position: "absolute",
+          inset: 0,
           width: "100%",
           height: "100%",
-          position: "relative",
           rotateX,
           rotateY,
           transformStyle: "preserve-3d",
@@ -727,13 +733,18 @@ const InteractiveMap: React.FC<
         <img
           src={map.src}
           alt="Yulanto Web Creations Location Map"
+          draggable={false}
           style={{
-            width: "100%",
-            height: "100%",
             position: "absolute",
             inset: 0,
+            width: "100%",
+            height: "100%",
+            minWidth: "100%",
+            minHeight: "100%",
             objectFit: "cover",
+            objectPosition: "center",
             display: "block",
+            zIndex: 1,
           }}
         />
 
@@ -744,9 +755,11 @@ const InteractiveMap: React.FC<
           style={{
             position: "absolute",
             inset: 0,
+            width: "100%",
+            height: "100%",
             background:
               "linear-gradient(180deg, rgba(5,52,86,0.08) 0%, rgba(5,52,86,0) 45%, rgba(5,52,86,0.08) 100%)",
-            pointerEvents: "none",
+          
             zIndex: 2,
           }}
         />
@@ -754,9 +767,16 @@ const InteractiveMap: React.FC<
         {/* ==========================================
             CLICKABLE YULANTO LOGO
         ========================================== */}
-        <MapLogoMarker />
-
-
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 3,
+           
+          }}
+        >
+          <MapLogoMarker />
+        </div>
       </motion.div>
     </motion.div>
   );

@@ -63,7 +63,7 @@ const PersonalPortfolioHeader = () => {
         >
           <div className="container-fluid container-1870 pe-3">
             <div className="row align-items-center">
-              <div className="col-6">
+              <div className="col-6 px-0">
                 <div
                   className={`px-header-6-menu tp-header-dropdown px-megamenu-style ${dropdownBackgroundCls} d-none d-xl-block`}
                 >
@@ -82,7 +82,7 @@ const PersonalPortfolioHeader = () => {
                   </Link>
                 </div>
               </div>
-              <div className="col-2">
+              <div className="col-2 px-0">
                 {/* desktop logo */}
                 <div className="px-header-logo d-none d-xl-block relative-cls-header">
                   <Link href="/">
@@ -95,7 +95,7 @@ const PersonalPortfolioHeader = () => {
                   </Link>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-4 px-0">
                 <div className="px-header-6-action d-flex align-items-center justify-content-end">
                   <div className="px-header-6-info d-none d-xl-block">
                     <Link className="px-line-lr d-flex align-items-center gap-1" href="mailto:info@yulanto.com">
@@ -105,14 +105,14 @@ const PersonalPortfolioHeader = () => {
                   </div>
                   <div className="px-header-6-btn ml-25 d-none d-xl-block relative-cls-header">
                     <SmartLink
-                      className="px-btn-grey d-flex align-items-center gap-2 "
+                      className="px-btn-grey d-flex align-items-center gap-2 text-nowrap"
                       href="tel:+919962157250"
                     >
                       <FontAwesomeIcon icon={faPhone} />
-                      +91 99621 57250
+                      <span>+91 99621 57250</span>
                     </SmartLink>
                   </div>
-                  
+
                   <div className="px-header-action relative-cls-header">
                     <button
                       type="button"
