@@ -3,9 +3,9 @@ import Header from "@/components/media/header";
 import Traffic from "@/components/media/traffic";
 import Social from "@/components/media/social";
 import Benift from "@/components/media/benefits";
-import  Card  from "@/components/media/promote";
-import Faq from "@/components/media/faq"
-import Last from "@/components/media/last"
+import Card from "@/components/media/promote";
+import Faq from "@/components/media/faq";
+import Last from "@/components/media/last";
 
 import { generateSeo } from "@/lib/seo";
 import { SocialmediaSeo } from "@/lib/seo-data";
@@ -32,6 +32,14 @@ export default function Page() {
   const faq = faqDataSocialMedia;
   return (
     <main>
+      <style>{`
+  @media only screen and (max-width: 991px) {
+    .px-about-6-area {
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+  }
+`}</style>
       {/* Breadcrumb Schema */}
       <BreadcrumbSchema
         items={[
@@ -54,11 +62,10 @@ export default function Page() {
       <Header />
       <Traffic />
       <Social />
-      <Benift/>
+      <Benift />
       <Card />
-       <Faq/>
-       <Last/>
-
+      <Faq />
+      <Last />
     </main>
   );
 }

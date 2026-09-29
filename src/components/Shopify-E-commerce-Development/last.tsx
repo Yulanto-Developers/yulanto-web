@@ -13,7 +13,7 @@ export const ShopifyCTAPartner: React.FC = () => {
           style={{
             backgroundColor: '#053456',
             borderRadius: '24px',
-            padding: '60px 40px',
+            padding: '40px 40px',
             color: '#ffffff',
             position: 'relative',
             overflow: 'hidden',

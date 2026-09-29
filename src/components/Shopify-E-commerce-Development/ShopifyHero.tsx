@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, {
   createContext,
@@ -11,7 +11,7 @@ import React, {
   useMemo,
   useRef,
   useState,
-} from "react"
+} from "react";
 import {
   AnimatePresence,
   AnimatePresenceProps,
@@ -20,56 +20,58 @@ import {
   MotionProps,
   Transition,
   useAnimationFrame,
-} from "motion/react"
+} from "motion/react";
 
 // ============================================================================
 // 1. Mouse Position & Parallax Floating Components
 // ============================================================================
 
 const useMousePositionRef = (
-  containerRef?: React.RefObject<HTMLElement | SVGElement>
+  containerRef?: React.RefObject<HTMLElement | SVGElement>,
 ) => {
-  const positionRef = useRef({ x: 0, y: 0 })
+  const positionRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     const updatePosition = (x: number, y: number) => {
       if (containerRef && containerRef.current) {
-        const rect = containerRef.current.getBoundingClientRect()
-        positionRef.current = { x: x - rect.left, y: y - rect.top }
+        const rect = containerRef.current.getBoundingClientRect();
+        positionRef.current = { x: x - rect.left, y: y - rect.top };
       } else {
-        positionRef.current = { x, y }
+        positionRef.current = { x, y };
       }
-    }
+    };
 
-    const handleMouseMove = (ev: MouseEvent) => updatePosition(ev.clientX, ev.clientY)
+    const handleMouseMove = (ev: MouseEvent) =>
+      updatePosition(ev.clientX, ev.clientY);
     const handleTouchMove = (ev: TouchEvent) => {
-      if (ev.touches[0]) updatePosition(ev.touches[0].clientX, ev.touches[0].clientY)
-    }
+      if (ev.touches[0])
+        updatePosition(ev.touches[0].clientX, ev.touches[0].clientY);
+    };
 
-    window.addEventListener("mousemove", handleMouseMove)
-    window.addEventListener("touchmove", handleTouchMove)
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove)
-      window.removeEventListener("touchmove", handleTouchMove)
-    }
-  }, [containerRef])
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, [containerRef]);
 
-  return positionRef
-}
+  return positionRef;
+};
 
 interface FloatingContextType {
-  registerElement: (id: string, element: HTMLDivElement, depth: number) => void
-  unregisterElement: (id: string) => void
+  registerElement: (id: string, element: HTMLDivElement, depth: number) => void;
+  unregisterElement: (id: string) => void;
 }
 
-const FloatingContext = createContext<FloatingContextType | null>(null)
+const FloatingContext = createContext<FloatingContextType | null>(null);
 
 interface FloatingProps {
-  children: ReactNode
-  sensitivity?: number
-  easingFactor?: number
-  style?: React.CSSProperties
+  children: ReactNode;
+  sensitivity?: number;
+  easingFactor?: number;
+  style?: React.CSSProperties;
 }
 
 const Floating = ({
@@ -78,18 +80,18 @@ const Floating = ({
   easingFactor = 0.05,
   style,
 }: FloatingProps) => {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null);
   const elementsMap = useRef(
     new Map<
       string,
       {
-        element: HTMLDivElement
-        depth: number
-        currentPosition: { x: number; y: number }
+        element: HTMLDivElement;
+        depth: number;
+        currentPosition: { x: number; y: number };
       }
-    >()
-  )
-  const mousePositionRef = useMousePositionRef(containerRef as any)
+    >(),
+  );
+  const mousePositionRef = useMousePositionRef(containerRef as any);
 
   const registerElement = useCallback(
     (id: string, element: HTMLDivElement, depth: number) => {
@@ -97,32 +99,32 @@ const Floating = ({
         element,
         depth,
         currentPosition: { x: 0, y: 0 },
-      })
+      });
     },
-    []
-  )
+    [],
+  );
 
   const unregisterElement = useCallback((id: string) => {
-    elementsMap.current.delete(id)
-  }, [])
+    elementsMap.current.delete(id);
+  }, []);
 
   useAnimationFrame(() => {
-    if (!containerRef.current) return
+    if (!containerRef.current) return;
 
     elementsMap.current.forEach((data) => {
-      const strength = (data.depth * sensitivity) / 20
-      const newTargetX = mousePositionRef.current.x * strength
-      const newTargetY = mousePositionRef.current.y * strength
+      const strength = (data.depth * sensitivity) / 20;
+      const newTargetX = mousePositionRef.current.x * strength;
+      const newTargetY = mousePositionRef.current.y * strength;
 
-      const dx = newTargetX - data.currentPosition.x
-      const dy = newTargetY - data.currentPosition.y
+      const dx = newTargetX - data.currentPosition.x;
+      const dy = newTargetY - data.currentPosition.y;
 
-      data.currentPosition.x += dx * easingFactor
-      data.currentPosition.y += dy * easingFactor
+      data.currentPosition.x += dx * easingFactor;
+      data.currentPosition.y += dy * easingFactor;
 
-      data.element.style.transform = `translate3d(${data.currentPosition.x}px, ${data.currentPosition.y}px, 0)`
-    })
-  })
+      data.element.style.transform = `translate3d(${data.currentPosition.x}px, ${data.currentPosition.y}px, 0)`;
+    });
+  });
 
   return (
     <FloatingContext.Provider value={{ registerElement, unregisterElement }}>
@@ -130,7 +132,7 @@ const Floating = ({
         ref={containerRef}
         style={{
           position: "relative",
-      
+
           minHeight: "250px",
           overflow: "hidden",
           ...style,
@@ -139,13 +141,13 @@ const Floating = ({
         {children}
       </div>
     </FloatingContext.Provider>
-  )
-}
+  );
+};
 
 interface FloatingElementProps {
-  children: ReactNode
-  depth?: number
-  style?: React.CSSProperties
+  children: ReactNode;
+  depth?: number;
+  style?: React.CSSProperties;
 }
 
 const FloatingElement = ({
@@ -153,16 +155,16 @@ const FloatingElement = ({
   depth = 1,
   style,
 }: FloatingElementProps) => {
-  const elementRef = useRef<HTMLDivElement>(null)
-  const idRef = useRef(Math.random().toString(36).substring(7))
-  const context = useContext(FloatingContext)
+  const elementRef = useRef<HTMLDivElement>(null);
+  const idRef = useRef(Math.random().toString(36).substring(7));
+  const context = useContext(FloatingContext);
 
   useEffect(() => {
-    if (!elementRef.current || !context) return
-    const nonNullDepth = depth ?? 0.01
-    context.registerElement(idRef.current, elementRef.current, nonNullDepth)
-    return () => context.unregisterElement(idRef.current)
-  }, [depth, context])
+    if (!elementRef.current || !context) return;
+    const nonNullDepth = depth ?? 0.01;
+    context.registerElement(idRef.current, elementRef.current, nonNullDepth);
+    return () => context.unregisterElement(idRef.current);
+  }, [depth, context]);
 
   return (
     <div
@@ -176,42 +178,42 @@ const FloatingElement = ({
     >
       {children}
     </div>
-  )
-}
+  );
+};
 
 // ============================================================================
 // 2. Text Rotate Component
 // ============================================================================
 
 interface TextRotateProps {
-  texts: string[]
-  rotationInterval?: number
-  initial?: MotionProps["initial"]
-  animate?: MotionProps["animate"]
-  exit?: MotionProps["exit"]
-  animatePresenceMode?: AnimatePresenceProps["mode"]
-  animatePresenceInitial?: boolean
-  staggerDuration?: number
-  staggerFrom?: "first" | "last" | "center" | number | "random"
-  transition?: Transition
-  loop?: boolean
-  auto?: boolean
-  splitBy?: "words" | "characters" | "lines" | string
-  onNext?: (index: number) => void
-  containerStyle?: React.CSSProperties
-  elementStyle?: React.CSSProperties
+  texts: string[];
+  rotationInterval?: number;
+  initial?: MotionProps["initial"];
+  animate?: MotionProps["animate"];
+  exit?: MotionProps["exit"];
+  animatePresenceMode?: AnimatePresenceProps["mode"];
+  animatePresenceInitial?: boolean;
+  staggerDuration?: number;
+  staggerFrom?: "first" | "last" | "center" | number | "random";
+  transition?: Transition;
+  loop?: boolean;
+  auto?: boolean;
+  splitBy?: "words" | "characters" | "lines" | string;
+  onNext?: (index: number) => void;
+  containerStyle?: React.CSSProperties;
+  elementStyle?: React.CSSProperties;
 }
 
 export interface TextRotateRef {
-  next: () => void
-  previous: () => void
-  jumpTo: (index: number) => void
-  reset: () => void
+  next: () => void;
+  previous: () => void;
+  jumpTo: (index: number) => void;
+  reset: () => void;
 }
 
 interface WordObject {
-  characters: string[]
-  needsSpace: boolean
+  characters: string[];
+  needsSpace: boolean;
 }
 
 const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
@@ -234,59 +236,60 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
       containerStyle,
       elementStyle,
     },
-    ref
+    ref,
   ) => {
-    const [currentTextIndex, setCurrentTextIndex] = useState(0)
+    const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
     const splitIntoCharacters = (text: string): string[] => {
       if (typeof Intl !== "undefined" && "Segmenter" in Intl) {
-        const segmenter = new Intl.Segmenter("en", { granularity: "grapheme" })
-        return Array.from(segmenter.segment(text), ({ segment }) => segment)
+        const segmenter = new Intl.Segmenter("en", { granularity: "grapheme" });
+        return Array.from(segmenter.segment(text), ({ segment }) => segment);
       }
-      return Array.from(text)
-    }
+      return Array.from(text);
+    };
 
     const elements = useMemo(() => {
-      const currentText = texts[currentTextIndex]
+      const currentText = texts[currentTextIndex];
       if (splitBy === "characters") {
-        const text = currentText.split(" ")
+        const text = currentText.split(" ");
         return text.map((word, i) => ({
           characters: splitIntoCharacters(word),
           needsSpace: i !== text.length - 1,
-        }))
+        }));
       }
       return splitBy === "words"
         ? currentText.split(" ")
         : splitBy === "lines"
-        ? currentText.split("\n")
-        : currentText.split(splitBy)
-    }, [texts, currentTextIndex, splitBy])
+          ? currentText.split("\n")
+          : currentText.split(splitBy);
+    }, [texts, currentTextIndex, splitBy]);
 
     const getStaggerDelay = useCallback(
       (index: number, totalChars: number) => {
-        const total = totalChars
-        if (staggerFrom === "first") return index * staggerDuration
-        if (staggerFrom === "last") return (total - 1 - index) * staggerDuration
+        const total = totalChars;
+        if (staggerFrom === "first") return index * staggerDuration;
+        if (staggerFrom === "last")
+          return (total - 1 - index) * staggerDuration;
         if (staggerFrom === "center") {
-          const center = Math.floor(total / 2)
-          return Math.abs(center - index) * staggerDuration
+          const center = Math.floor(total / 2);
+          return Math.abs(center - index) * staggerDuration;
         }
         if (staggerFrom === "random") {
-          const randomIndex = Math.floor(Math.random() * total)
-          return Math.abs(randomIndex - index) * staggerDuration
+          const randomIndex = Math.floor(Math.random() * total);
+          return Math.abs(randomIndex - index) * staggerDuration;
         }
-        return Math.abs(staggerFrom - index) * staggerDuration
+        return Math.abs(staggerFrom - index) * staggerDuration;
       },
-      [staggerFrom, staggerDuration]
-    )
+      [staggerFrom, staggerDuration],
+    );
 
     const handleIndexChange = useCallback(
       (newIndex: number) => {
-        setCurrentTextIndex(newIndex)
-        onNext?.(newIndex)
+        setCurrentTextIndex(newIndex);
+        onNext?.(newIndex);
       },
-      [onNext]
-    )
+      [onNext],
+    );
 
     const next = useCallback(() => {
       const nextIndex =
@@ -294,12 +297,12 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
           ? loop
             ? 0
             : currentTextIndex
-          : currentTextIndex + 1
+          : currentTextIndex + 1;
 
       if (nextIndex !== currentTextIndex) {
-        handleIndexChange(nextIndex)
+        handleIndexChange(nextIndex);
       }
-    }, [currentTextIndex, texts.length, loop, handleIndexChange])
+    }, [currentTextIndex, texts.length, loop, handleIndexChange]);
 
     const previous = useCallback(() => {
       const prevIndex =
@@ -307,40 +310,41 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
           ? loop
             ? texts.length - 1
             : currentTextIndex
-          : currentTextIndex - 1
+          : currentTextIndex - 1;
 
       if (prevIndex !== currentTextIndex) {
-        handleIndexChange(prevIndex)
+        handleIndexChange(prevIndex);
       }
-    }, [currentTextIndex, texts.length, loop, handleIndexChange])
+    }, [currentTextIndex, texts.length, loop, handleIndexChange]);
 
     const jumpTo = useCallback(
       (index: number) => {
-        const validIndex = Math.max(0, Math.min(index, texts.length - 1))
+        const validIndex = Math.max(0, Math.min(index, texts.length - 1));
         if (validIndex !== currentTextIndex) {
-          handleIndexChange(validIndex)
+          handleIndexChange(validIndex);
         }
       },
-      [texts.length, currentTextIndex, handleIndexChange]
-    )
+      [texts.length, currentTextIndex, handleIndexChange],
+    );
 
     const reset = useCallback(() => {
       if (currentTextIndex !== 0) {
-        handleIndexChange(0)
+        handleIndexChange(0);
       }
-    }, [currentTextIndex, handleIndexChange])
+    }, [currentTextIndex, handleIndexChange]);
 
-    useImperativeHandle(
-      ref,
-      () => ({ next, previous, jumpTo, reset }),
-      [next, previous, jumpTo, reset]
-    )
+    useImperativeHandle(ref, () => ({ next, previous, jumpTo, reset }), [
+      next,
+      previous,
+      jumpTo,
+      reset,
+    ]);
 
     useEffect(() => {
-      if (!auto) return
-      const intervalId = setInterval(next, rotationInterval)
-      return () => clearInterval(intervalId)
-    }, [next, rotationInterval, auto])
+      if (!auto) return;
+      const intervalId = setInterval(next, rotationInterval);
+      return () => clearInterval(intervalId);
+    }, [next, rotationInterval, auto]);
 
     return (
       <motion.span
@@ -354,9 +358,10 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
         layout
         transition={transition}
       >
-     
-
-        <AnimatePresence mode={animatePresenceMode} initial={animatePresenceInitial}>
+        <AnimatePresence
+          mode={animatePresenceMode}
+          initial={animatePresenceInitial}
+        >
           <motion.div
             key={currentTextIndex}
             style={{
@@ -376,7 +381,7 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
             ).map((wordObj, wordIndex, array) => {
               const previousCharsCount = array
                 .slice(0, wordIndex)
-                .reduce((sum, word) => sum + word.characters.length, 0)
+                .reduce((sum, word) => sum + word.characters.length, 0);
 
               return (
                 <span key={wordIndex} style={{ display: "inline-flex" }}>
@@ -392,8 +397,8 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
                           previousCharsCount + charIndex,
                           array.reduce(
                             (sum, word) => sum + word.characters.length,
-                            0
-                          )
+                            0,
+                          ),
                         ),
                       }}
                       style={{ display: "inline-block", ...elementStyle }}
@@ -401,18 +406,20 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
                       {char}
                     </motion.span>
                   ))}
-                  {wordObj.needsSpace && <span style={{ whiteSpace: "pre" }}> </span>}
+                  {wordObj.needsSpace && (
+                    <span style={{ whiteSpace: "pre" }}> </span>
+                  )}
                 </span>
-              )
+              );
             })}
           </motion.div>
         </AnimatePresence>
       </motion.span>
-    )
-  }
-)
+    );
+  },
+);
 
-TextRotate.displayName = "TextRotate"
+TextRotate.displayName = "TextRotate";
 
 // ============================================================================
 // 3. Main Hero Component
@@ -439,26 +446,63 @@ const shopifyImages = [
     url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
     title: "ecommerce development company in chennai",
   },
-]
+];
+
+// Custom hook to detect mobile viewport
+const useIsMobile = (breakpoint = 768) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < breakpoint);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, [breakpoint]);
+
+  return isMobile;
+};
 
 export default function ShopifyHero() {
+  const isMobile = useIsMobile(768);
+
   const imageStyle: React.CSSProperties = {
     objectFit: "cover",
-    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+    boxShadow:
+      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
     borderRadius: "16px",
     border: "1px solid #e5e7eb",
     transition: "transform 0.2s ease-in-out",
-  }
+  };
+
+  // Mobile-specific layout config
+  const mobileLayout = [
+    { depth: 1, top: "8%", left: "2%", width: 110, height: 120, rotate: -10 },
+    { depth: 3, top: "30%", left: "24%", width: 115, height: 120, rotate: -5 },
+    { depth: 2, top: "8%", left: "48%", width: 110, height: 120, rotate: 6 },
+    { depth: 1.5, top: "30%", left: "70%", width: 105, height: 120, rotate: 10 },
+  ];
+
+  // Desktop layout config (your existing values)
+  const desktopLayout = [
+    { depth: 1, top: "5%", left: "20%", width: 170, height: 180, rotate: -12 },
+    { depth: 3, top: "15%", left: "40%", width: 180, height: 180, rotate: -6 },
+    { depth: 2, top: "5%", left: "60%", width: 170, height: 180, rotate: 8 },
+    { depth: 1.5, top: "10%", left: "78%", width: 160, height: 180, rotate: 12 },
+  ];
+
+  const layout = isMobile ? mobileLayout : desktopLayout;
 
   return (
-    <section className="px-about-6-area pt-40 pb-40 pb-lg-110">
-      <div className="container container-1550">
-        <div className="row align-items-center" data-aos="fade-up">
-          <div className="col-xl-3">
-            <span className="tp-section-subtitle text-black blink-ball">
-              Shopify Development Company in Chennai
-            </span>
-          </div>
+    <>
+      <section className="px-about-6-area pt-40 pb-40 pb-lg-110">
+        <div className="container container-1550">
+          <div className="row align-items-center" data-aos="fade-up">
+            <div className="col-xl-3">
+              <span className="tp-section-subtitle text-black blink-ball">
+                Shopify Development Company in Chennai
+              </span>
+            </div>
+
 
           <div className="col-xl-9">
             <div className="px-project-title-box">
@@ -473,66 +517,110 @@ export default function ShopifyHero() {
 
                 </h1>
               <p className="text-figtree text-black mt-2">
-                Turn your business idea into a powerful online store with professional Shopify website development services. As a shopify development company in chennai, we help businesses create modern, responsive, user-friendly, and conversion-focused Shopify stores designed to support long-term growth.
+                Turn your business idea into a powerful online store with professional Shopify website development services. As a Shopify development company in Chennai, we help businesses create modern, responsive, user-friendly, and conversion-focused Shopify stores designed to support long-term growth.
               </p>
+
             </div>
           </div>
         </div>
 
-        {/* Floating Parallax Images Displayed Below Content */}
-        <div className="row mt-5">
-          <div className="col-12" style={{ overflow: "hidden" }}>
-            <Floating sensitivity={-0.5} style={{ minHeight: "260px", overflow: "hidden" }}>
-             
+          {/* Floating Parallax Images Displayed Below Content */}
+          <div className="row mt-5">
+            <div className="col-12" style={{ overflow: "hidden" }}>
+              <Floating
+                sensitivity={isMobile ? -0.3 : -0.5}
+                style={{
+                  minHeight: isMobile ? "200px" : "260px",
+                  overflow: "hidden",
+                }}
+              >
+                <FloatingElement
+                  depth={layout[0].depth}
+                  style={{ top: layout[0].top, left: layout[0].left }}
+                >
+                  <motion.img
+                    src={shopifyImages[1].url}
+                    alt={shopifyImages[1].title}
+                    style={{
+                      ...imageStyle,
+                      width: `${layout[0].width}px`,
+                      height: `${layout[0].height}px`,
+                      transform: `rotate(${layout[0].rotate}deg)`,
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                  />
+                </FloatingElement>
 
-              <FloatingElement depth={1} style={{ top: "5%", left: "20%" }}>
-                <motion.img
-                  src={shopifyImages[1].url}
-                  alt={shopifyImages[1].title}
-                  style={{ ...imageStyle, width: "170px", height: "180px", transform: "rotate(-12deg)" }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 }}
-                />
-              </FloatingElement>
+                <FloatingElement
+                  depth={layout[1].depth}
+                  style={{ top: layout[1].top, left: layout[1].left }}
+                >
+                  <motion.img
+                    src={shopifyImages[2].url}
+                    alt={shopifyImages[2].title}
+                    style={{
+                      ...imageStyle,
+                      width: `${layout[1].width}px`,
+                      height: `${layout[1].height}px`,
+                      transform: `rotate(${layout[1].rotate}deg)`,
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.7 }}
+                  />
+                </FloatingElement>
 
-              <FloatingElement depth={3} style={{ top: "15%", left: "40%" }}>
-                <motion.img
-                  src={shopifyImages[2].url}
-                  alt={shopifyImages[2].title}
-                  style={{ ...imageStyle, width: "180px", height: "180px", transform: "rotate(-6deg)" }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.7 }}
-                />
-              </FloatingElement>
+                <FloatingElement
+                  depth={layout[2].depth}
+                  style={{ top: layout[2].top, left: layout[2].left }}
+                >
+                  <motion.img
+                    src={shopifyImages[3].url}
+                    alt={shopifyImages[3].title}
+                    style={{
+                      ...imageStyle,
+                      width: `${layout[2].width}px`,
+                      height: `${layout[2].height}px`,
+                      transform: `rotate(${layout[2].rotate}deg)`,
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.9 }}
+                  />
+                </FloatingElement>
 
-              <FloatingElement depth={2} style={{ top: "5%", left: "60%" }}>
-                <motion.img
-                  src={shopifyImages[3].url}
-                  alt={shopifyImages[3].title}
-                  style={{ ...imageStyle, width: "170px", height: "180px", transform: "rotate(8deg)" }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.9 }}
-                />
-              </FloatingElement>
-
-              <FloatingElement depth={1.5} style={{ top: "10%", left: "78%" }}>
-                <motion.img
-                  src={shopifyImages[4].url}
-                  alt={shopifyImages[4].title}
-                  style={{ ...imageStyle, width: "160px", height: "180px", transform: "rotate(12deg)" }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.1 }}
-                />
-              </FloatingElement>
-            </Floating>
+                <FloatingElement
+                  depth={layout[3].depth}
+                  style={{ top: layout[3].top, left: layout[3].left }}
+                >
+                  <motion.img
+                    src={shopifyImages[4].url}
+                    alt={shopifyImages[4].title}
+                    style={{
+                      ...imageStyle,
+                      width: `${layout[3].width}px`,
+                      height: `${layout[3].height}px`,
+                      transform: `rotate(${layout[3].rotate}deg)`,
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.1 }}
+                  />
+                </FloatingElement>
+              </Floating>
+            </div>
           </div>
+
+          <p className="text-figtree text-black mt-2">
+            From Shopify store setup and theme customization to custom
+            development, third-party integrations, payment gateways, and ongoing
+            maintenance, our experienced Shopify developers provide end-to-end
+            solutions tailored to your business requirements.
+          </p>
         </div>
-        <p className="text-figtree text-black mt-2">From Shopify store setup and theme customization to custom development, third-party integrations, payment gateways, and ongoing maintenance, our experienced Shopify developers provide end-to-end solutions tailored to your business requirements.</p>
-      </div>
-    </section>
-  )
+      </section>
+    </>
+  );
 }

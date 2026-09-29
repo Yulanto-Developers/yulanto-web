@@ -36,7 +36,7 @@ export function HeroSection({
             display: "flex",
             flexDirection: "row-reverse",
             flexWrap: "wrap-reverse",
-            gap: "60px",
+            gap: "40px",
             alignItems: "center",
             justifyContent: "center",
             overflow: "hidden",

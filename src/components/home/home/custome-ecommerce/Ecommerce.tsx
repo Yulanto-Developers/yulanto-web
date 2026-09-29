@@ -1139,7 +1139,7 @@ function Ecommerce() {
                             </svg>
                         </div>
                     </div>
-                    <p className='pb-40'>From ecommerce website design and engaging homepage layouts to custom shopping experiences, payment integration, order management, and mobile-friendly interfaces, we create ecommerce websites that are designed around your products, customers, and business goals.</p>
+                    <p className='pb-30'>From ecommerce website design and engaging homepage layouts to custom shopping experiences, payment integration, order management, and mobile-friendly interfaces, we create ecommerce websites that are designed around your products, customers, and business goals.</p>
 
                 </div>
 
