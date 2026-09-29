@@ -20,7 +20,7 @@ const seoTopText = `Looking for a reliable website development company in Chenna
 
 const seoBottomText = `As an experienced website development company in Chennai, we combine creative design, modern technologies, intuitive navigation, and search-engine-friendly development to deliver websites that provide an engaging experience across desktops, tablets, and mobile devices.
 
-Our team of professional website developers in Chennai develops websites from the ground up based on your business requirements rather than relying entirely on generic templates. From corporate websites and business portals to customized web applications and eCommerce platforms, we create digital solutions tailored to your goals.`;
+Our team of professional website developers in Chennai develops websites from the ground up based on your business requirements rather than relying entirely on generic templates. From corporate websites and business portals to customized web applications and E-commerce platforms, we create digital solutions tailored to your goals.`;
 
 
 // Dynamic Data Definition

@@ -169,7 +169,7 @@ const ContentImage: React.FC<ContentImageProps> = ({
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Let's Talk our Team</span>
+            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Let's Talk to Our Team</span>
               <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
             </button>
             </div>

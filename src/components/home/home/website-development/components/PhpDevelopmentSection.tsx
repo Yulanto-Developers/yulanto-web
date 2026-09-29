@@ -361,7 +361,7 @@ const PhpDevelopmentSection = () => {
               As an experienced PHP development company in Chennai, we develop
               customized solutions using PHP and popular frameworks such as
               Laravel. From corporate websites and dynamic business portals to
-              eCommerce platforms and custom web applications, our team provides
+              E-commerce platforms and custom web applications, our team provides
               complete PHP website development in Chennai tailored to your
               business requirements.
             </p>

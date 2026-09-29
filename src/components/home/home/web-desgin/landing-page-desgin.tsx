@@ -32,7 +32,7 @@ function Landingpagedesgin() {
                 leftTitle="Conversion-Focused Landing Page Design"
                 rightTitle1="High-Converting Landing Pages "
                 rightTitle2="Designed to Turn Visitors into Customers "
-                description="Looking for professional landing page design services in Chennai? We create visually engaging, mobile-friendly and conversion-focused landing pages that help businesses generate leads, promote products, launch campaigns and increase enquiries.                Our website landing page design combines attractive UI, clear messaging, compelling call-to-action elements and a seamless user experience. Whether you need a campaign landing page, product page, lead-generation page or welcome page design, we build pages that are designed around your business goals."
+                description="Looking for professional landing page design services in Chennai? We create visually engaging, mobile-friendly and conversion-focused landing pages that help businesses generate leads, promote products, launch campaigns and increase inquiries.                Our website landing page design combines attractive UI, clear messaging, compelling call-to-action elements and a seamless user experience. Whether you need a campaign landing page, product page, lead-generation page or welcome page design, we build pages that are designed around your business goals."
             />
             <PhotoGallery images={startupGalleryImages} />
             <div data-aos="fade-right"

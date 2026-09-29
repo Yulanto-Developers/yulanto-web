@@ -248,7 +248,7 @@ const BusinessSelections = () => {
           >
             From planning and API connectivity to testing and deployment,
             we provide end-to-end API integration services for websites,
-            web applications, eCommerce platforms, and custom software.
+            web applications, E-commerce platforms, and custom software.
           </p>
            <button
              onClick={() => openModal()}

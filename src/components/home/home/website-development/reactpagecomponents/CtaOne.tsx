@@ -14,7 +14,7 @@ interface CtaOneProps {
 }
 
 const CtaOne: React.FC<CtaOneProps> = ({
-    title = "Looking for Website Design Chennai?",
+    title = "Looking for Website Design in Chennai?",
     description = "Whether you are launching a new website, redesigning an existing website, or developing a custom web application, our team can help you build a professional React-powered digital experience.",
     buttonText = "Get in touch with us today",
     actionText = "to discuss your React website design and development requirements in Chennai.",
