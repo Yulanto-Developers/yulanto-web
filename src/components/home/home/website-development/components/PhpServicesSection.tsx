@@ -113,7 +113,7 @@ const MinimalistMatrixPhpServices = () => {
                                     Our skilled PHP development team creates powerful and user-friendly websites with a strong focus on performance, security, scalability, and responsive design. Whether you need a new business website, an eCommerce platform, a custom web application, or an existing website upgrade, our PHP website development Chennai solutions are designed to support your business goals.
                                 </p>
                                 <p className="mb-0 text-secondary" data-aos="text-reveal-lines" data-aos-delay="200">
-                                    We follow structured development processes to deliver clean, maintainable, and efficient code. Our PHP companies in Chennai approach combines technical expertise with creative design to deliver websites that provide an engaging experience across desktops, tablets, and mobile devices.
+                                    We follow structured development processes to deliver clean, maintainable, and efficient code. Our approach as a PHP web development company in Chennai combines technical expertise with creative design to deliver websites that provide an engaging experience across desktops, tablets, and mobile devices.
                                 </p>
                             </div>
                         </div>

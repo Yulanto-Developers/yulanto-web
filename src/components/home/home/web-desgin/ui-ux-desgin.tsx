@@ -448,8 +448,8 @@ function Uiuxdesgin() {
                     </span>
 
                     <h4 className="px-about-title text-tenor text-white mb-15">
-                      Let’s Design a
-                      <span className=""> Better User Experience.</span>
+                      Let’s Design a 
+                      <span className=""> Better User Experience</span>
                     </h4>
 
                     <p className="text-white mb-0">

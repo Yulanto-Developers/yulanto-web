@@ -37,12 +37,12 @@ const sectionsData = [
     ],
     listItems: [
       "Blogs and news sections",
-      "Product & service catalogues",
+      "Product & service catalogs",
       "E-commerce functionality",
       "Online booking systems",
       "Event calendars",
       "Customer login & registration",
-      "Contact & enquiry forms",
+      "Contact & inquiry forms",
       "Membership systems",
       "Search functionality",
       "Database integration",
@@ -57,7 +57,7 @@ const sectionsData = [
     title: "SEO-Friendly Website Structure",
     paragraphs: [
       "A properly developed dynamic website can support SEO through clean website architecture, editable content, optimized page structures, mobile responsiveness, fast-loading pages, and search-engine-friendly URLs.",
-      "Our web design and development companies in Chennai approach combines design, functionality, usability, and technical SEO considerations to create websites that provide a strong foundation for digital marketing.",
+      "Our approach as a web design and development company in Chennai combines design, functionality, usability, and technical SEO considerations to create websites that provide a strong foundation for digital marketing.",
     ],
     image: image4,
     alt: "web development in chennai",

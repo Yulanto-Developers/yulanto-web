@@ -42,7 +42,7 @@ const sectionsData = [
   {
     title: "Payment Gateway Integration",
     paragraphs: [
-      "Accept online payments securely and conveniently with professional Payment Gateway Integration services. We integrate popular payment gateways with websites, eCommerce platforms, and custom applications to support smooth and reliable transactions.",
+      "Accept online payments securely and conveniently with professional Payment Gateway Integration services. We integrate popular payment gateways with websites, E-commerce platforms, and custom applications to support smooth and reliable transactions.",
     ],
     features: [
       { icon: CreditCard, label: "Online payment integration" },
@@ -89,7 +89,7 @@ const sectionsData = [
   {
     title: "Any Third Party API Integration",
     paragraphs: [
-      "Need to connect your website with an external software or service? Our Any Third Party API Integration service helps establish secure communication between your application and external platforms.",
+      "Need to connect your website with external software or services? Our Any Third Party API Integration service help establish secure, direct communication with third-party platforms.",
     ],
     features: [
       { icon: Users, label: "CRM and ERP systems" },
