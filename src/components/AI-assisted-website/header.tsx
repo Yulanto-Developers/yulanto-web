@@ -35,7 +35,7 @@ const FuturisticRobotCanvas: React.FC = () => {
 
       // --- 1. WORKSTATION & LAPTOP SETUP ---
       const deskX = width * 0.42;
-      const deskW = width * 0.30;
+      const deskW = width * 0.3;
       const deskY = baseFloorY - 110;
 
       // Desk Surface Shadow & Board
@@ -218,7 +218,7 @@ const FuturisticRobotCanvas: React.FC = () => {
           chestX + 8,
           chestY + 12 + i * 11,
           22 + Math.sin(time * 5 + i) * 16,
-          4
+          4,
         );
       }
       ctx.fillStyle = "#22c55e";
@@ -387,57 +387,76 @@ export const ShopifyExperience: React.FC = () => {
   }, []);
 
   return (
-    <section className="px-about-6-area pt-40 pb-40 pb-lg-110"  style={{overflowX:"hidden"}}>
-      <div className="container container-1550">
-        {/* Title Section */}
-        <div className="row align-items-center mb-20" data-aos="fade-up">
-          <div className="col-xl-3" data-aos="fade-right" data-aos-delay="100">
-            <span className="tp-section-subtitle text-black blink-ball">
-              AI-Assisted Web Design
-            </span>
+    <>
+      <style>{`
+  @media only screen and (max-width: 991px) {
+    .px-about-6-area {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+  }
+`}</style>
+      <section
+        className="px-about-6-area pt-40 pb-40 pb-lg-110"
+        style={{ overflowX: "hidden" }}
+      >
+        <div className="container container-1550">
+          {/* Title Section */}
+          <div className="row align-items-center mb-20" data-aos="fade-up">
+            <div
+              className="col-xl-3"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
+              <span className="tp-section-subtitle text-black blink-ball">
+                AI-Assisted Web Design
+              </span>
+            </div>
+
+            <div className="col-xl-9" data-aos="fade-left" data-aos-delay="200">
+              <div className="px-project-title-box">
+                <h4 className="px-about-title mb-20">
+                  <span className="text-blue-about">
+                    Build Better Websites,{" "}
+                  </span>
+                  Faster with AI.
+                </h4>
+                <p className="text-figtree text-black mt-2">
+                  We combine AI-powered design and development tools with human
+                  creativity and experience to create modern, responsive,
+                  high-performing websites in less time.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="col-xl-9" data-aos="fade-left" data-aos-delay="200">
-            <div className="px-project-title-box">
-              <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">Build Better Websites, </span>
-                Faster with AI.
-              </h4>
-              <p className="text-figtree text-black mt-2">
-                We combine AI-powered design and development tools with human
-                creativity and experience to create modern, responsive,
-                high-performing websites in less time.
-              </p>
+          {/* Robot Canvas Container */}
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="300"
+            style={{
+              position: "sticky",
+              top: "100px",
+              width: "100%",
+              height: "400px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "relative",
+              }}
+            >
+              <FuturisticRobotCanvas />
             </div>
           </div>
         </div>
-
-        {/* Robot Canvas Container */}
-        <div
-          data-aos="zoom-in"
-          data-aos-delay="300"
-          style={{
-            position: "sticky",
-            top: "100px",
-            width: "100%",
-            height: "400px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              position: "relative",
-            }}
-          >
-            <FuturisticRobotCanvas />
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

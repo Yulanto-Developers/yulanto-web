@@ -20,8 +20,8 @@ const toolsList: Tool[] = [
   { name: "Cursor", iconSrc: "/assets/img/AI/AI-Logo/2.png" },
   { name: "v0", iconSrc: "/assets/img/AI/AI-Logo/3.png" },
   { name: "Lovable", iconSrc: "/assets/img/AI/AI-Logo/4.png" },
-  { name: "Framer AI", iconSrc: "/assets/img/AI/framer.png" },
-  { name: "Sketch AI", iconSrc: "/assets/img/AI/sketch.png" },
+  { name: "Framer AI", iconSrc: "/assets/img/AI/AI-Logo/Frammer.png" },
+  { name: "Sketch AI", iconSrc: "/assets/img/AI/AI-Logo/Sketch.png" },
 ];
 
 const styles = `

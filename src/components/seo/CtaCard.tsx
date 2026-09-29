@@ -284,14 +284,14 @@ export function CtaCard({
               }}
             >
               <div>
-                <h4 className="px-about-title mb-20 colorh">
+                <h4 className="px-about-title mb-30 colorh">
                   Professional SEO Services in Chennai That Drive Organic Growth
                 </h4>
               </div>
             </div>
 
             {/* Center column - SEO-themed Phone Mockup */}
-            <div className="mockup-scroll-wrapper order-lg-2">
+            <div className="mockup-scroll-wrapper order-lg-2 mt-15">
               <div 
                 style={{
                   position: "relative",
