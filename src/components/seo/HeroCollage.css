@@ -121,7 +121,7 @@
 /* Responsive Scaling for Mobile Screens */
 @media (max-width: 768px) {
   .hero-collage-wrapper {
-    height: 350px;
+    height: 280px !important;
   }
   .img-center { width: 180px; height: 230px; }
   .img-top-left { width: 120px; height: 190px; left: 8%; }

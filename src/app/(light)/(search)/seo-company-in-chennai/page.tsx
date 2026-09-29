@@ -6,8 +6,8 @@ import Keyword from "@/components/seo/keyword";
 import Faq from "@/components/seo/Faq";
 import Start from "@/components/seo/start";
 import Hero from "@/components/seo/HeroCollage";
-import Services from "@/components/seo/services"
-import Last from "@/components/seo/last"
+import Services from "@/components/seo/services";
+import Last from "@/components/seo/last";
 
 import { generateSeo } from "@/lib/seo";
 import { DigitalMarketingSeo } from "@/lib/seo-data";
@@ -31,27 +31,28 @@ export const metadata: Metadata = generateSeo({
 
 export default function Page() {
   const seo = DigitalMarketingSeo;
-    const faq = faqDataSearcheagine;
+  const faq = faqDataSearcheagine;
   return (
     <main>
-       {/* Breadcrumb Schema */}
-            <BreadcrumbSchema
-              items={[
-                { name: "Home", url: `${SITE_URL}/` },
-                { name: seo.serviceName, url: pageUrl },
-              ]}
-            />
-      
-            {/* FAQ Schema */}
-            {faq && faq.length > 0 && <FAQSchema items={[...faq]} />}
-      
-            {/* Service Schema */}
-            <ServiceSchema
-              name={seo.serviceName}
-              description={seo.serviceDescription}
-              url={pageUrl}
-              image={seo.image}
-            />
+      {/* Breadcrumb Schema */}
+     
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: `${SITE_URL}/` },
+          { name: seo.serviceName, url: pageUrl },
+        ]}
+      />
+
+      {/* FAQ Schema */}
+      {faq && faq.length > 0 && <FAQSchema items={[...faq]} />}
+
+      {/* Service Schema */}
+      <ServiceSchema
+        name={seo.serviceName}
+        description={seo.serviceDescription}
+        url={pageUrl}
+        image={seo.image}
+      />
       <Breadcrumbdata />
       <Hero />
       <Start />
@@ -60,8 +61,8 @@ export default function Page() {
       <Benifit />
       <Keyword />
       <Faq />
-     <Services />
-     <Last />
+      <Services />
+      <Last />
     </main>
   );
 }

@@ -263,7 +263,7 @@ export default function WooCommerceTabSection() {
           <div className="col-lg-6">
             <div className="px-project-title-box ps-lg-4">
              
-           <h5 className="mb-3 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' }}>
+           <h5 className="mb-3 mt-2 fw-bold" style={{ fontFamily: '"Tenor Sans", "Tenor Sans Fallback"' }}>
 Our WooCommerce development services include:</h5>
 
             <ul 

@@ -131,3 +131,11 @@
 .ft-23 {
   font-size: 23px !important;
 }
+/*  */
+
+@media only screen and (max-width: 991px) {
+  .px-about-6-area {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+}

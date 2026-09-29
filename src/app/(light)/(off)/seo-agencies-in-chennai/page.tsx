@@ -58,6 +58,14 @@ export default function Page() {
   const faq = faqDataOffPage;
   return (
     <main>
+      <style>{`
+  @media only screen and (max-width: 991px) {
+    .px-about-6-area {
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+  }
+`}</style>
       {/* Breadcrumb Schema */}
       <BreadcrumbSchema
         items={[
