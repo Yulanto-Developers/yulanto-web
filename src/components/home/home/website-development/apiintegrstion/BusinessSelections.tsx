@@ -60,10 +60,9 @@ const styles = {
 
   cardText: {
     color: "#4b5563",
-    fontSize:"15px !important",
+    fontSize: "15px !important",
     lineHeight: "1.6",
   },
-
 
   iconCircle: {
     width: "40px",
@@ -88,7 +87,7 @@ const stylestwo = {
 };
 
 const BusinessSelections = () => {
-   const { openModal } = useQuoteModal();
+  const { openModal } = useQuoteModal();
   return (
     <>
       <style>{`
@@ -108,27 +107,25 @@ const BusinessSelections = () => {
           object-fit: cover;
           display: block;
         }
+       @media (max-width: 767px) {
+        .mb-img-size{
+        height: auto !important;
+        }
+      }
       `}</style>
 
       <section className="py-5">
         <div className="container">
-
           <h4
             className="px-about-title text-tenor mb-3"
             data-aos="text-reveal"
             data-aos-delay="100"
           >
             Why Choose Our{" "}
-            <span className="text-blue-about">
-              API Integration Services?
-            </span>
+            <span className="text-blue-about">API Integration Services?</span>
           </h4>
 
-          <p
-            className="mb-3"
-            data-aos="text-reveal-lines"
-            data-aos-delay="200"
-          >
+          <p className="mb-3" data-aos="text-reveal-lines" data-aos-delay="200">
             We focus on building integrations that are secure, reliable,
             scalable, and aligned with your business requirements.
           </p>
@@ -138,12 +135,8 @@ const BusinessSelections = () => {
               const IconComponent = item.icon;
 
               return (
-                <div
-                  key={index}
-                  className="col-12 col-md-6 col-lg-4"
-                >
+                <div key={index} className="col-12 col-md-6 col-lg-4">
                   <div className="card h-100 border-0 shadow-sm rounded-4 overflow-hidden custom-card">
-
                     {/* Image */}
                     <div
                       className="position-relative"
@@ -159,32 +152,26 @@ const BusinessSelections = () => {
                     {/* Card Body */}
                     <div className="card-body p-4 d-flex flex-column justify-content-between">
                       <div>
-
                         {/* Title */}
                         <div className="d-flex align-items-center mb-3">
                           <div style={styles.iconCircle} className="me-3">
-                            <IconComponent
-                              size={20}
-                              color="#3F637D"
-                            />
+                            <IconComponent size={20} color="#3F637D" />
                           </div>
 
-                          <span className="text-tenor   fw-bold m-0" style={{fontSize:"22px",color:"#000"}}>
+                          <span
+                            className="text-tenor   fw-bold m-0"
+                            style={{ fontSize: "22px", color: "#000" }}
+                          >
                             {item.title}
                           </span>
                         </div>
 
                         {/* Description */}
-                        <p
-                          className="card-text small" 
-                          style={styles.cardText }
-                        >
+                        <p className="card-text small" style={styles.cardText}>
                           {item.description}
                         </p>
-
                       </div>
                     </div>
-
                   </div>
                 </div>
               );
@@ -193,91 +180,91 @@ const BusinessSelections = () => {
         </div>
       </section>
 
-     <div className="yul-st">
-  <section
-    style={stylestwo.aboutBlueSection}
-    className="about-blue-section"
-  >
-    <div className="container">
-     
-      <div className="row align-items-center">
-        
-        {/* Left Column (6 Columns) - Added Responsive Image */}
-        <div className="col-12 col-md-6 mb-4 mb-md-0">
-          <img
-            src="/assets/img/api/image-1.jpg"
-            alt="API Integration and Business Automation"
-            className="img-fluid rounded-4 shadow-lg"
-            style={{
-              width: '100%',
-              height: '470px',
-             
-            }}
-          />
-        </div>
+      <div className="yul-st">
+        <section
+          style={stylestwo.aboutBlueSection}
+          className="about-blue-section"
+        >
+          <div className="container">
+            <div className="row align-items-center">
+              {/* Left Column (6 Columns) - Added Responsive Image */}
+              <div className="col-12 col-md-6 mb-4 mb-md-0">
+                <img
+                  src="/assets/img/api/image-1.jpg"
+                  alt="API Integration and Business Automation"
+                  className="img-fluid rounded-4 shadow-lg mb-img-size"
+                  style={{
+                    width: "100%",
+                    height: "470px",
+                  }}
+                />
+              </div>
 
-        {/* Right Column (6 Columns) */}
-        <div className="col-12 col-md-6">
-           <h4
-            className="px-about-title text-tenor"
-            data-aos="text-reveal"
-            data-aos-delay="200" 
-          >
-            <span className="text-white">
-              Automate Your Business with API Integration
-            </span>
-          </h4>
-          <p
-            className="text-figtree text-white mb-3"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            API integration can bring your different business systems
-            together and create a connected digital ecosystem. Whether
-            you need Payment Gateway Integration, SMS Gateway
-            Integration, WhatsApp Gateway Integration, Zoho CRM
-            Integration, Chat API Integration, or Any Third Party API
-            Integration, our team can help you implement the right
-            solution.
-          </p>
+              {/* Right Column (6 Columns) */}
+              <div className="col-12 col-md-6">
+                <h4
+                  className="px-about-title text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="200"
+                >
+                  <span className="text-white">
+                    Automate Your Business with API Integration
+                  </span>
+                </h4>
+                <p
+                  className="text-figtree text-white mb-3"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  API integration can bring your different business systems
+                  together and create a connected digital ecosystem. Whether you
+                  need Payment Gateway Integration, SMS Gateway Integration,
+                  WhatsApp Gateway Integration, Zoho CRM Integration, Chat API
+                  Integration, or Any Third Party API Integration, our team can
+                  help you implement the right solution.
+                </p>
 
-          <p
-            className="text-figtree text-white"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            From planning and API connectivity to testing and deployment,
-            we provide end-to-end API integration services for websites,
-            web applications, E-commerce platforms, and custom software.
-          </p>
-           <button
-             onClick={() => openModal()}
-              className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
-              style={{
-                backgroundColor: '#53ae7d',
-                color: '#ffffff',
-                fontSize: '15px',
-                transition: 'all 0.3s ease',
-                border: '1px solid #53ae7d',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#53ae7d';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#53ae7d';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-            <span style={{fontFamily: "Figtree, Figtree Fallback"}}>Let's Talk our Team</span>
-              <i className="fa-solid fa-paper-plane" style={{ fontSize: '14px'}}></i>
-            </button>
-        </div>
-
+                <p
+                  className="text-figtree text-white"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  From planning and API connectivity to testing and deployment,
+                  we provide end-to-end API integration services for websites,
+                  web applications, E-commerce platforms, and custom software.
+                </p>
+                <button
+                  onClick={() => openModal()}
+                  className="btn d-inline-flex align-items-center gap-2 py-3 px-4 rounded-3 fw-bold text-decoration-none"
+                  style={{
+                    backgroundColor: "#53ae7d",
+                    color: "#ffffff",
+                    fontSize: "15px",
+                    transition: "all 0.3s ease",
+                    border: "1px solid #53ae7d",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#53ae7d";
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "#53ae7d";
+                    e.currentTarget.style.transform = "translateY(0)";
+                  }}
+                >
+                  <span style={{ fontFamily: "Figtree, Figtree Fallback" }}>
+                    Let's Talk our Team
+                  </span>
+                  <i
+                    className="fa-solid fa-paper-plane"
+                    style={{ fontSize: "14px" }}
+                  ></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-  </section>
-</div>
     </>
   );
 };

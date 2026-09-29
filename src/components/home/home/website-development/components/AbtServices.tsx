@@ -171,6 +171,10 @@ const AbtServices = () => {
 
 @media (max-width: 991px) {
 
+    .yul-st .services-section {
+     padding: 0px 0px 30px !important;
+     }
+
     .overlap-gallery {
         padding: 15px 0 25px;
     }
@@ -204,6 +208,10 @@ const AbtServices = () => {
 ========================================= */
 
 @media (max-width: 767px) {
+
+   .yul-st .services-section {
+     padding: 0px 0px 30px !important;
+     }
 
     .overlap-gallery {
         padding: 10px 0 25px;

@@ -355,11 +355,18 @@
   margin-top: 70px;
 }
 
-.tm-slider-section .swiper-backface-hidden .swiper-slide {
+/* .tm-slider-section .swiper-backface-hidden .swiper-slide {
   margin-right: 40px !important;
-}
+} */
 
 @media (max-width: 991px) {
+  .tm-slider-section {
+    padding: 20px 0 30px !important;
+  }
+  .swiper-slide {
+    margin-right: 0 !important;
+  }
+
   .tm-slider-card {
     width: 220px;
     height: 440px;
@@ -665,68 +672,6 @@
   }
 }
 
-/* ==========================================
-   Dark Mode Support (Optional)
-   ========================================== */
-@media (prefers-color-scheme: dark) {
-  .tm-slider-section {
-    background: #0f172a;
-  }
-
-  .tm-slider-content h4 {
-    color: #f1f5f9;
-  }
-
-  .tm-slider-content span {
-    color: #94a3b8;
-  }
-
-  .tm-slider-shade-pink {
-    background: #831843;
-  }
-
-  .tm-slider-shade-yellow {
-    background: #78350f;
-  }
-
-  .tm-slider-shade-slate {
-    background: #1e293b;
-  }
-
-  .tm-slider-shade-cream {
-    background: #713f12;
-  }
-
-  .tm-slider-skill {
-    background: #1e293b;
-  }
-
-  .tm-slider-skill img {
-    filter: brightness(0) invert(1);
-  }
-
-  .tm-slider-skill .skill-text {
-    color: #f1f5f9;
-  }
-
-  .tm-slider-skill:hover {
-    background: #f1f5f9;
-  }
-
-  /* .tm-slider-skill:hover img {
-    filter: brightness(0) invert(0);
-  } */
-
-  .tm-slider-skill:hover .skill-text {
-    color: #d6ccc6;
-  }
-
-  .tm-slider-card {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-  }
-}
-
 /* End Team Member */
 
 /* ==========================
@@ -851,7 +796,7 @@
 
 @media (max-width: 991px) {
   .md-profile {
-    padding: 70px 0;
+    padding: 35px 0;
   }
 
   .md-profile .container {
