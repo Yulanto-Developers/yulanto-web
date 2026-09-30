@@ -510,7 +510,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
 
       <div className="professional-section">
         <div className="container">
-          <div className="row align-items-center pt-50">
+          <div className="row align-items-center pt-30">
             <div className="col-12 mb-4">
               <span className="tp-section-subtitle text-black blink-ball">
                 Professional Web Design
@@ -613,7 +613,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
         data-aos="fade-right"
         data-aos-delay={400}
         data-aos-once={true}
-        style={{ backgroundColor: "#053456", margin: "100px auto" }}
+        style={{ backgroundColor: "#053456", margin: "50px auto" }}
       >
         <div className="container py-5">
           <div className="row align-items-center mt-30">
@@ -788,7 +788,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
         </div>
       </div>
 
-      <div className="container mb-80">
+      <div className="container mb-50">
         <div className="row justify-content-start mb-5">
           <div className="col-lg-12">
             <span className="tp-section-subtitle text-black blink-ball">
@@ -1038,7 +1038,7 @@ function CorporateWebsiteDesign({ featuresList }: WhyChooseUsProps) {
           </div>
 
           {/* TRUSTED PARTNER & CTA BANNER */}
-          <div className="trusted-partner-banner mb-80">
+          <div className="trusted-partner-banner mb-50">
             <div className="row align-item-between">
               <div className="col-lg-8 mb-4 mb-lg-0">
                 <span className="partner-badge">Your Trusted Partner</span>

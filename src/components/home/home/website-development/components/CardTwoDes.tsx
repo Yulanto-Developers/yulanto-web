@@ -137,7 +137,7 @@ export default function StickyProcessSection() {
         <div className="row mb-5">
           <div className="col-xl-3">
             <span
-              className="tp-section-subtitle text-black blink-ball mt-40"
+              className="tp-section-subtitle text-black blink-ball mt-1 mt-md-4"
               style={{ lineHeight: "25px" }}
             >
               Our Website <br />

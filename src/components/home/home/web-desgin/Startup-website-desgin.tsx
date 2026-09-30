@@ -118,7 +118,7 @@ function Startupwebsitedesign() {
       name: "Retail and Ecommerce",
       icon: <FaCartShopping />,
       image: v1.src,
-      alt: 'web dev company',
+      alt: "web dev company",
       description:
         "High-converting websites designed for modern retail and eCommerce businesses.",
     },
@@ -127,7 +127,7 @@ function Startupwebsitedesign() {
       name: "Clothing and Fashion",
       icon: <FaShirt />,
       image: v2.src,
-      alt: 'website design company',
+      alt: "website design company",
       description:
         "Modern digital experiences for fashion and clothing brands.",
     },
@@ -136,7 +136,7 @@ function Startupwebsitedesign() {
       name: "FMCG and Consumer Products",
       icon: <FaBoxOpen />,
       image: v3.src,
-      alt: 'website design firm',
+      alt: "website design firm",
       description: "Professional websites for consumer product businesses.",
     },
     {
@@ -144,7 +144,7 @@ function Startupwebsitedesign() {
       name: "Automotive",
       icon: <FaCar />,
       image: v4.src,
-      alt: 'near me website developer',
+      alt: "near me website developer",
       description: "Powerful websites for automotive businesses and brands.",
     },
     {
@@ -152,7 +152,7 @@ function Startupwebsitedesign() {
       name: "Beauty and Lifestyle",
       icon: <FaStar />,
       image: v5.src,
-      alt: 'website design for company',
+      alt: "website design for company",
       description: "Elegant websites for beauty and lifestyle businesses.",
     },
     {
@@ -160,7 +160,7 @@ function Startupwebsitedesign() {
       name: "Real Estate",
       icon: <FaBuilding />,
       image: v6.src,
-      alt: 'near me website developer',
+      alt: "near me website developer",
       description: "Property-focused websites built to generate quality leads.",
     },
     {
@@ -168,7 +168,7 @@ function Startupwebsitedesign() {
       name: "Interior Design",
       icon: <FaCouch />,
       image: v7.src,
-      alt: 'web dev company',
+      alt: "web dev company",
       description: "Visual-first websites for interior designers and studios.",
     },
     {
@@ -176,7 +176,7 @@ function Startupwebsitedesign() {
       name: "Engineering",
       icon: <FaGears />,
       image: v8.src,
-      alt: 'website design firm',
+      alt: "website design firm",
       description: "Professional digital platforms for engineering businesses.",
     },
     {
@@ -191,7 +191,7 @@ function Startupwebsitedesign() {
       name: "Travel and Tourism",
       icon: <FaPlane />,
       image: v10.src,
-      alt: 'near me website developer',
+      alt: "near me website developer",
       description:
         "Engaging websites designed for travel and tourism businesses.",
     },
@@ -200,7 +200,7 @@ function Startupwebsitedesign() {
       name: "Professional Services",
       icon: <FaBriefcase />,
       image: v11.src,
-      alt: 'website developer',
+      alt: "website developer",
       description:
         "Credibility-focused websites for professional service providers.",
     },
@@ -209,7 +209,7 @@ function Startupwebsitedesign() {
       name: "Education and Institutions",
       icon: <FaGraduationCap />,
       image: v12.src,
-      alt: 'website design firm',
+      alt: "website design firm",
       description:
         "Informative and accessible websites for educational institutions.",
     },
@@ -218,7 +218,7 @@ function Startupwebsitedesign() {
       name: "Manufacturing & Industrial",
       icon: <FaIndustry />,
       image: v13.src,
-      alt: 'website design',
+      alt: "website design",
       description:
         "Strong digital presence for manufacturing and industrial companies.",
     },
@@ -267,7 +267,6 @@ function Startupwebsitedesign() {
       type: "intro",
       content:
         "A professionally designed website acts as your startup's digital storefront. It gives customers a clear understanding of your business and creates a strong foundation for your online marketing activities.",
-
     },
 
     {
@@ -276,7 +275,7 @@ function Startupwebsitedesign() {
       title: "Build a Strong Brand Identity",
       icon: Palette,
       image: en1.src,
-      alt: 'website designer near me',
+      alt: "website designer near me",
       content:
         "Your website should communicate your startup's personality and values. We use consistent typography, colors, imagery, layouts, and visual elements to create a recognizable digital identity.",
     },
@@ -287,7 +286,7 @@ function Startupwebsitedesign() {
       title: "Improve User Experience",
       icon: UsersRound,
       image: en2.src,
-      alt: 'web design firms',
+      alt: "web design firms",
       content: (
         <>
           Our <strong>web designers in Chennai</strong> create clean and
@@ -303,7 +302,7 @@ function Startupwebsitedesign() {
       title: "Generate More Business Opportunities",
       icon: TrendingUp,
       image: en3.src,
-      alt: 'web designer near me',
+      alt: "web designer near me",
       content:
         "Strategic page structures, clear calls-to-action, enquiry forms, contact options, and conversion-focused layouts help turn website visitors into potential customers.",
     },
@@ -314,7 +313,7 @@ function Startupwebsitedesign() {
       title: "Support Search Engine Visibility",
       icon: SearchCheck,
       image: en4.src,
-      alt: 'web development company in chennai',
+      alt: "web development company in chennai",
       content:
         "Our websites are developed with SEO considerations in mind, providing a strong technical foundation for future search engine optimization and digital marketing campaigns.",
     },
@@ -389,7 +388,7 @@ function Startupwebsitedesign() {
         "We begin by understanding your startup, products or services, target audience, competitors, business objectives, and long-term goals.",
 
       image: sc1.src,
-      alt: 'best web design firms'
+      alt: "best web design firms",
     },
 
     {
@@ -399,7 +398,7 @@ function Startupwebsitedesign() {
         "Your website should clearly communicate who you are, what you offer, and why customers should choose you. We structure your content to communicate your startup's story and value proposition effectively.",
 
       image: sc2.src,
-      alt: 'top web design firms'
+      alt: "top web design firms",
     },
 
     {
@@ -409,7 +408,7 @@ function Startupwebsitedesign() {
         "We design the website around your brand identity using appropriate colors, typography, imagery, icons, graphics, and layouts to create a consistent visual experience.",
 
       image: sc3.src,
-      alt: 'website creation company'
+      alt: "website creation company",
     },
 
     {
@@ -424,7 +423,7 @@ function Startupwebsitedesign() {
       ),
 
       image: sc4.src,
-      alt: 'website creation company'
+      alt: "website creation company",
     },
 
     {
@@ -434,7 +433,7 @@ function Startupwebsitedesign() {
         "We strategically structure website pages with clear calls-to-action to encourage visitors to enquire, call, submit a form, request a quotation, or purchase a product.",
 
       image: sc5.src,
-      alt: 'top web design firms'
+      alt: "top web design firms",
     },
 
     {
@@ -444,7 +443,7 @@ function Startupwebsitedesign() {
         "We consider technical and on-page SEO requirements during the website design and development process to create a solid foundation for future search engine optimization.",
 
       image: sc6.src,
-      alt: 'best web design firms'
+      alt: "best web design firms",
     },
 
     {
@@ -454,7 +453,7 @@ function Startupwebsitedesign() {
         "Before launch, we review the website across devices and screen sizes, check functionality, and make necessary improvements. After launch, the website can be continuously enhanced based on business requirements and user behavior.",
 
       image: sc7.src,
-      alt: 'website creation company'
+      alt: "website creation company",
     },
   ];
 
@@ -575,7 +574,7 @@ function Startupwebsitedesign() {
   useAOS();
   return (
     <div>
-      <div className="mb-50">
+      <div className="">
         <BreadcurmbData />
       </div>
       <style>{`
@@ -594,6 +593,15 @@ function Startupwebsitedesign() {
           font-size: 25px !important;
         }
 
+        .my-section {
+  margin: 40px 0 50px 0 !important;
+}
+
+@media (max-width: 768px) {
+  .my-section {
+    margin: 40px 0 35px 0 !important;
+  }
+}
         
       `}</style>
       <style>{`
@@ -737,7 +745,7 @@ function Startupwebsitedesign() {
       <PhotoGallery images={startupGalleryImages} />
 
       <div
-        className="container mt-5 mb-50"
+        className="container"
         data-aos="fade-up"
         data-aos-delay={400}
         data-aos-once={true}
@@ -750,7 +758,7 @@ function Startupwebsitedesign() {
               <span className="tp-section-subtitle text-black blink-ball">
                 Start Your Design
               </span>
-              <h4 className="px-about-title mb-20">
+              <h4 className="px-about-title  mb-20">
                 <span className="text-blue-about">Web Designing Company </span>{" "}
                 in Chennai for Startups
               </h4>
@@ -792,7 +800,7 @@ function Startupwebsitedesign() {
         style={{ backgroundColor: "rgb(245 245 245)" }}
       >
         <div className="container">
-          <div className="row align-items-center pt-50 pb-50">
+          <div className="row align-items-center pt-40 pb-50">
             <div className="col-12">
               <span className="tp-section-subtitle text-black blink-ball">
                 Startup Web Design Services
@@ -803,11 +811,15 @@ function Startupwebsitedesign() {
               </h4>
             </div>
             <div className="col-md-4">
-              <img src={img1.src} alt="web dev company" className="img-border-cls" />
+              <img
+                src={img1.src}
+                alt="web dev company"
+                className="img-border-cls"
+              />
             </div>
             <div className="col-md-8">
               <h1
-                className="ft-23 mt-0 mb-2 text-tenor"
+                className="ft-23 mt-4 mt-md-0 mb-2 text-tenor"
                 data-aos="text-reveal"
                 data-aos-delay="100"
               >
@@ -833,7 +845,7 @@ function Startupwebsitedesign() {
       </div>
       <div style={{ backgroundColor: "#053456" }}>
         <div
-          className="container pb-50 pt-50"
+          className="container pb-40 pt-40"
           data-aos="fade-right"
           data-aos-delay={400}
           data-aos-once={true}
@@ -895,7 +907,7 @@ function Startupwebsitedesign() {
       </div>
 
       <div
-        className="container pt-50 mb-100"
+        className="container pt-50 mb-40"
         data-aos="fade-up"
         data-aos-delay={400}
         data-aos-once={true}
@@ -966,7 +978,7 @@ function Startupwebsitedesign() {
         </div>
       </div>
 
-      <div className="container mt-50 mb-100">
+      <div className="container mt-50 mb-50">
         <div className="startup-benefits">
           {/* Header */}
           <div className="startup-benefits-header">
@@ -998,8 +1010,9 @@ function Startupwebsitedesign() {
                 return (
                   <div
                     key={index}
-                    className={`startup-benefit-item  ${isReverse ? "startup-benefit-item-reverse" : ""
-                      }`}
+                    className={`startup-benefit-item  ${
+                      isReverse ? "startup-benefit-item-reverse" : ""
+                    }`}
                   >
                     {/* Content */}
                     <div className="startup-benefit-content-wrapper">
@@ -1034,7 +1047,7 @@ function Startupwebsitedesign() {
             })}
           </div>
           <div>
-            <div className="container mt-50 mb-20">
+            <div className="container mt-40 mb-20">
               <h5
                 className=" mb-20 text-blue-about text-tenor"
                 style={{ fontWeight: 700 }}
@@ -1092,7 +1105,9 @@ function Startupwebsitedesign() {
                     ))}
                   <div className="d-flex justify-content-center">
                     <button
-                      onClick={() => { openModal('manual') }}
+                      onClick={() => {
+                        openModal("manual");
+                      }}
                       className="mt-2 bg-white rounded-md py-2 px-3 text-tenor"
                       style={{ borderRadius: "10px", color: "#053456" }}
                     >
@@ -1115,7 +1130,7 @@ function Startupwebsitedesign() {
         data-aos-delay={400}
         data-aos-once={true}
       >
-        <div className="container mt-50">
+        <div className="container">
           <div className="row align-items-center pt-50">
             {/* Main content */}
             <div className="col-12">
@@ -1178,7 +1193,7 @@ function Startupwebsitedesign() {
                 );
               })}
             </div>
-            <div className="py-5">
+            <div className="pt-30 pb-10">
               <h5 className="text-tenor fw-bold" style={{ color: "#053456" }}>
                 Looking for a Website Design Agency in Chennai?
               </h5>
@@ -1226,13 +1241,13 @@ function Startupwebsitedesign() {
         <StickyScrollReveal content={startupProcessContent} />
       </div>
       <div
+        className="my-section"
         style={{
           backgroundColor: "#053456",
-          margin: "100px 0px 50px 0px !important",
         }}
       >
         <div className="container">
-          <div className="row align-items-center pb-50 pt-50">
+          <div className="row align-items-center pb-30 pt-50">
             <div
               className="col-12"
               data-ao="fade-right"
@@ -1240,7 +1255,11 @@ function Startupwebsitedesign() {
               data-aos-once={true}
             ></div>
             <div className="col-md-4">
-              <img src={b1.src} alt="best website design firms" className="img-border-cls" />
+              <img
+                src={b1.src}
+                alt="best website design firms"
+                className="img-border-cls"
+              />
             </div>
             <div className="col-md-8">
               <span className="tp-section-subtitle text-white blink-ball">
@@ -1376,7 +1395,7 @@ function Startupwebsitedesign() {
       <div style={{ background: "#f5f5f5" }}>
         <div className="container mt-50 pt-30 pb-30">
           <h4 className="px-about-title mb-20">
-            <span className="text-blue-about">Why </span>
+            <span className="text-blue-about"> Why </span>
             Yulanto?
           </h4>
           <p>
@@ -1389,7 +1408,12 @@ function Startupwebsitedesign() {
             complete digital presence, our team can develop a solution around
             your business requirements.
           </p>
-          <div className="ambassador-card" onClick={()=>{openModal('manual')}}>
+          <div
+            className="ambassador-card"
+            onClick={() => {
+              openModal("manual");
+            }}
+          >
             {/* Default Content */}
             <div className="ambassador-card-content ambassador-card-default">
               <span className="ambassador-card-label">OUR WORK</span>
