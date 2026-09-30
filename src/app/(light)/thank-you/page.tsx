@@ -5,15 +5,9 @@ import { useRouter } from "next/navigation";
 import "@/assets/css/ThankYou.css";
 import { useEffect, useState } from "react";
 
-import { generateSeo } from "@/lib/seo";
+
 import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 import GoogleAdsConversion from "@/components/analytics/GoogleAdsConversion";
-
-export const metadata = generateSeo({
-  title: "Thank You for Contacting Yulanto | Chennai",
-  description:
-    "Thank you for contacting Yulanto Web Creations. Your enquiry has been received, and our team will contact you shortly.",
-});
 
 export default function Page() {
   const router = useRouter();
