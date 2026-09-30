@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://yulanto-web.vercel.app";
+const baseUrl = "https://yulanto.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const mainPages = [
