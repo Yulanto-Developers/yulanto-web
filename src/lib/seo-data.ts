@@ -3,7 +3,7 @@
 //     title: "Web Development Company in Chennai  |  Dynamic Websites",
 //     description:
 //       "Web development company in Chennai offering dynamic website development and custom solutions for businesses from experienced web developers in Chennai.",
-//     image: "/assets/image/website-design-company-in-chennai.jpg",
+//     image: "/assets/images/website-design-company-in-chennai.jpg",
 //     imageAlt: "Dynamic Website Development in Chennai",
 //     serviceName: "Dynamic Website Development",
 //     serviceDescription:
@@ -63,7 +63,7 @@
 //     description:
 //       "Leading web designing company in Chennai for startup website design with modern, responsive, SEO-friendly and conversion-focused websites tailored to your business goals.",
 
-//     image: "/assets/image/website-design-company-in-chennai.jpg",
+//     image: "/assets/images/website-design-company-in-chennai.jpg",
 
 //     imageAlt: "Startup Website Design Services in Chennai",
 
@@ -147,7 +147,7 @@
 //   title: "Dynamic Website Development in Chennai | Yulanto",
 //   description:
 //     "Professional dynamic website development services in Chennai for businesses looking for powerful and scalable websites.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "Dynamic Website Development in Chennai",
 //   serviceName: "Dynamic Website Development",
 //   serviceDescription:
@@ -158,7 +158,7 @@
 //   title: "SEO Company in Chennai in Chennai | Chennai seo services",
 //   description:
 //     "SEO Company in Chennai for better search visibility, local SEO, on-page and off-page optimization, technical SEO and qualified organic traffic growth.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "SEO Company in Chennai",
 //   serviceName: "SEO Services",
 //   serviceDescription:
@@ -169,7 +169,7 @@
 //   title: "Google Ads Agency in Chennai  | PPC | Google Ads Services",
 //   description:
 //     "Google Ads Agency in Chennai for PPC campaigns, remarketing, conversion tracking & ongoing optimization that improve paid search results.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "Google Ads Agency in Chennai",
 //   serviceName: "Google Ads Services",
 //   serviceDescription:
@@ -180,7 +180,7 @@
 //   title: "Best Social Media Marketing Agency in Chennai | SMM Services ",
 //   description:
 //     "Grow your brand with Chennai's top Social Media Marketing Agency. Meta ads, Instagram & Facebook campaigns that convert. Get a free strategy call.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "Social Media Marketing Agency",
 //   serviceName: "social media marketing",
 //   serviceDescription:
@@ -191,7 +191,7 @@
 //   title: "Seo Agencies in Chennai | Off Page SEO Chennai",
 //   description:
 //     "Seo Agencies in Chennai using SEO optimization & off-page authority. off-page SEO, link building & local citations that rank your business on Google.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "Off Page Service",
 //   serviceDescription:
@@ -202,7 +202,7 @@
 //   title: "Logo Designers in Chennai | Logo Design Company | Logo Design Firms",
 //   description:
 //     "Company logo design company and logo design firms in Chennai offering branding & logo design and professional logo designers in chennai for businesses.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "logo design Service",
 //   serviceDescription:
@@ -213,7 +213,7 @@
 //   title: "Graphic Design Company and Brochure Design Company | Yulanto",
 //   description:
 //     "Graphic Design Company in Chennai for standout branding. As a brochure design company, we craft visuals that help your business grow. Get a free quote today.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "Brochure Design Service",
 //   serviceDescription:
@@ -224,7 +224,7 @@
 //   title: "Graphic Design Company | Advertisement Poster Design | Flyers Maker",
 //   description:
 //     "Looking for advertisement poster design or a reliable flyers maker? Our graphic design company creates posters, flyers & brochures that help your brand stand out.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: " Advertisement Poster Design Service",
 //   serviceDescription:
@@ -235,7 +235,7 @@
 //   title: "Packaging Design Agency | Design Packaging for Product | Yulanto",
 //   description:
 //     "Need packaging design for your product? Our packaging design agency creates brand & packaging design that helps your product sell. Get a quote.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "Packaging Design Service",
 //   serviceDescription:
@@ -246,7 +246,7 @@
 //   title: "Creative Social Media Post Design | Graphic Design Company",
 //   description:
 //     "Need creative social media post design? Our graphic design company delivers social media creative design that helps your brand stand out. Get a free quote.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "ocial Media Post Design Service",
 //   serviceDescription:
@@ -258,7 +258,7 @@
 //   title: "Answer Engine Optimization Services | AEO Company in Chennai",
 //   description:
 //     "Answer engine optimization services (AEO) to improve how your business content appears in AI search results, answer engines, and search platforms.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "AEO Service",
 //   serviceDescription:
@@ -269,7 +269,7 @@
 //   title: "AI Web Design & Create Website using ai | Yulanto",
 //   description:
 //     "Create website using AI with a website designer ai from a web design and development company in Chennai for modern business websites.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "AI Web Design & Create Website using Service",
 //   serviceDescription:
@@ -280,7 +280,7 @@
 //   title: "wordpress development company in Chennai | wordpress developers in chennai",
 //   description:
 //     "wordpress development services from a wordpress development company for businesses seeking CMS website development company in chennai.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "wordpress development Service",
 //   serviceDescription:
@@ -292,7 +292,7 @@
 //   title: "e commerce website development in chennai | e commerce companies in chennai",
 //   description:
 //     "e commerce development services from a WooCommerce development company for scalable online stores, e commerce website development Company in Chennai.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "e commerce development services ",
 //   serviceDescription:
@@ -304,7 +304,7 @@
 //   title: "Shopify Development Company in Chennai | shopify Developer",
 //   description:
 //     "Shopify web design company offering ecommerce website development company in chennai and ecommerce web development firm services for online stores.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "Shopify web design company",
 //   serviceDescription:
@@ -316,7 +316,7 @@
 //   title: "web portal development services | web development services in chennai",
 //   description:
 //     "web portal development services for custom ecommerce web development and custom shopify development. web development services in chennai .",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "web portal development services",
 //   serviceDescription:
@@ -328,7 +328,7 @@
 //   title: "Ecommerce Website Development Company | Custom Ecommerce Website Development Services",
 //   description:
 //     "Custom ecommerce website development services from an ecommerce web development firm for businesses seeking professional online stores.",
-//   image: "/assets/image/website-design-company-in-chennai.jpg",
+//   image: "/assets/images/website-design-company-in-chennai.jpg",
 //   imageAlt: "seo agencies in chennai",
 //   serviceName: "Ecommerce Website Development services",
 //   serviceDescription:
@@ -339,7 +339,7 @@ export const websiteDevelopmentSeo = {
     title: "Web development company in Chennai  |  Dynamic websites",
     description:
       "Web development company in Chennai offering dynamic website development and custom solutions for businesses from experienced web developers in Chennai.",
-    image: "/assets/image/website-design-company-in-chennai.jpg",
+    image: "/assets/images/website-design-company-in-chennai.jpg",
     imageAlt: "Dynamic Website Development in Chennai",
     serviceName: "Dynamic website development",
     serviceDescription:
@@ -399,7 +399,7 @@ export const websiteDesignSeo = {
     description:
       "Leading web designing company in Chennai for startup website design with modern, responsive, SEO-friendly and conversion-focused websites tailored to your business goals.",
 
-    image: "/assets/image/website-design-company-in-chennai.jpg",
+    image: "/assets/images/website-design-company-in-chennai.jpg",
 
     imageAlt: "Startup Website Design Services in Chennai",
 
@@ -483,7 +483,7 @@ export const customEcommerceSeo = {
   title: "Dynamic website development in Chennai | Yulanto",
   description:
     "Professional dynamic website development services in Chennai for businesses looking for powerful and scalable websites.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "Dynamic Website Development in Chennai",
   serviceName: "Dynamic website development",
   serviceDescription:
@@ -494,7 +494,7 @@ export const DigitalMarketingSeo = {
   title: "SEO company in Chennai in Chennai | Chennai seo services",
   description:
     "SEO Company in Chennai for better search visibility, local SEO, on-page and off-page optimization, technical SEO and qualified organic traffic growth.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "SEO Company in Chennai",
   serviceName: "SEO services",
   serviceDescription:
@@ -505,7 +505,7 @@ export const googleadsSeo = {
   title: "Google ads agency in Chennai  | PPC | Google ads services",
   description:
     "Google Ads Agency in Chennai for PPC campaigns, remarketing, conversion tracking & ongoing optimization that improve paid search results.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "Google Ads Agency in Chennai",
   serviceName: "Google ads services",
   serviceDescription:
@@ -516,7 +516,7 @@ export const SocialmediaSeo = {
   title: "Best social media marketing agency in Chennai | SMM services ",
   description:
     "Grow your brand with Chennai's top Social Media Marketing Agency. Meta ads, Instagram & Facebook campaigns that convert. Get a free strategy call.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "Social Media Marketing Agency",
   serviceName: "Social media marketing",
   serviceDescription:
@@ -527,7 +527,7 @@ export const offpageSeo = {
   title: "Seo agencies in Chennai | Off page SEO Chennai",
   description:
     "Seo Agencies in Chennai using SEO optimization & off-page authority. off-page SEO, link building & local citations that rank your business on Google.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "Off page service",
   serviceDescription:
@@ -538,7 +538,7 @@ export const logopageSeo = {
   title: "Logo designers in Chennai | Logo design company | Logo design firms",
   description:
     "Company logo design company and logo design firms in Chennai offering branding & logo design and professional logo designers in chennai for businesses.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "Logo design service",
   serviceDescription:
@@ -549,7 +549,7 @@ export const BrochurepageSeo = {
   title: "Graphic design company and brochure design company | Yulanto",
   description:
     "Graphic Design Company in Chennai for standout branding. As a brochure design company, we craft visuals that help your business grow. Get a free quote today.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "Brochure design service",
   serviceDescription:
@@ -560,7 +560,7 @@ export const posterpageSeo = {
   title: "Graphic design company | Advertisement poster design | Flyers maker",
   description:
     "Looking for advertisement poster design or a reliable flyers maker? Our graphic design company creates posters, flyers & brochures that help your brand stand out.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: " Advertisement poster design service",
   serviceDescription:
@@ -571,7 +571,7 @@ export const packagingpageSeo = {
   title: "Packaging design agency | Design packaging for product | Yulanto",
   description:
     "Need packaging design for your product? Our packaging design agency creates brand & packaging design that helps your product sell. Get a quote.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "Packaging design service",
   serviceDescription:
@@ -582,7 +582,7 @@ export const socialmediacerpageSeo = {
   title: "Creative social media post design | Graphic design company",
   description:
     "Need creative social media post design? Our graphic design company delivers social media creative design that helps your brand stand out. Get a free quote.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "Ocial media post design service",
   serviceDescription:
@@ -594,7 +594,7 @@ export const aeopageSeo = {
   title: "Answer engine optimization services | AEO company in Chennai",
   description:
     "Answer engine optimization services (AEO) to improve how your business content appears in AI search results, answer engines, and search platforms.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "AEO service",
   serviceDescription:
@@ -605,7 +605,7 @@ export const AIwebsitepageSeo = {
   title: "AI web design & create website using ai | Yulanto",
   description:
     "Create website using AI with a website designer ai from a web design and development company in Chennai for modern business websites.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "AI web design & create website using service",
   serviceDescription:
@@ -616,7 +616,7 @@ export const wordpresspageSeo = {
   title: "Wordpress development company in Chennai | wordpress developers in chennai",
   description:
     "wordpress development services from a wordpress development company for businesses seeking CMS website development company in chennai.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "Wordpress development service",
   serviceDescription:
@@ -628,7 +628,7 @@ export const wocommercepageSeo = {
   title: "E commerce website development in chennai | e commerce companies in chennai",
   description:
     "e commerce development services from a WooCommerce development company for scalable online stores, e commerce website development Company in Chennai.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "E commerce development services ",
   serviceDescription:
@@ -640,7 +640,7 @@ export const shopfypageSeo = {
   title: "Shopify development company in Chennai | shopify developer",
   description:
     "Shopify web design company offering ecommerce website development company in chennai and ecommerce web development firm services for online stores.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "Shopify web design company",
   serviceDescription:
@@ -652,7 +652,7 @@ export const portalpageSeo = {
   title: "Web portal development services | web development services in chennai",
   description:
     "web portal development services for custom ecommerce web development and custom shopify development. web development services in chennai .",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "Web portal development services",
   serviceDescription:
@@ -664,7 +664,7 @@ export const cusEcommerceswocpageSeo = {
   title: "Ecommerce website development company | Custom ecommerce website development services",
   description:
     "Custom ecommerce website development services from an ecommerce web development firm for businesses seeking professional online stores.",
-  image: "/assets/image/website-design-company-in-chennai.jpg",
+  image: "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt: "seo agencies in chennai",
   serviceName: "Ecommerce website development services",
   serviceDescription:
