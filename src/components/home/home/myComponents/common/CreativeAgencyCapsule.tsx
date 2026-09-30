@@ -14,7 +14,7 @@ const CreativeAgencyCapsule = () => {
                     }`
                 }
             </style>
-            <div className="container container-1550">
+            <div className="container container-1550 mt-4">
                 <div className="row">
                     <div className="col-xl-12">
                         <div className="px-capsule-inner p-relative">

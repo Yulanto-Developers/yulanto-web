@@ -129,7 +129,7 @@ const FAQA1: React.FC<NewProps> = ({
               margin: "0 auto",
               display: "flex",
               flexDirection: "column",
-              gap: "3rem",
+              gap: "2rem",
             }}
           >
             {/* Dynamic Heading */}

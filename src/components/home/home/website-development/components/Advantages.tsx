@@ -107,7 +107,7 @@ const Advantages = ({ items }: { items: AdvantageItem[] }) => {
 
         @media (max-width: 767px) {
           .advantages-section {
-            padding: 40px 0;
+            padding: 0px 0 30px !important;
           }
 
           .advantages-card-container {
