@@ -607,7 +607,7 @@ function Websiteredesign() {
         description={
           "Your website is often the first interaction customers have with your business. An outdated design can affect credibility, user engagement, search visibility, and conversions."
         }
-        css="mt-50"
+        css=""
       />
       <div className="container">
         <div className="row my-3 align-items-center">
@@ -686,7 +686,7 @@ function Websiteredesign() {
             </div> */}
 
       <div data-aos="fade-down" data-aos-delay={400} data-aos-once={true}>
-        <div className="container mt-100">
+        <div className="container mt-40">
           <div className="row align-items-start">
             <div className="col-12">
               <span className="tp-section-subtitle text-black blink-ball">
@@ -747,7 +747,7 @@ function Websiteredesign() {
         }}
       >
         <div className="container">
-          <div className="row align-items-center pt-100 pb-50">
+          <div className="row align-items-center pt-50 pb-30">
             <div className="col-md-4">
               <img src={img0.src} alt="web redesign company" className="img-border-cls" />
             </div>
@@ -909,13 +909,13 @@ function Websiteredesign() {
           backgroundColor: "#053456",
         }}
       >
-        <div className="mb-50 mt-50">
+        <div className="mb-50 mt-20">
           <SafariContentTabs data={redesignServices} />
         </div>
       </div>
 
       <div className="container">
-        <div className="row align-items-center pt-50">
+        <div className="row align-items-center pt-20">
           <div className="col-12">
             <span className="tp-section-subtitle text-black blink-ball">
               Key Benefits of Website Redesign
@@ -960,7 +960,7 @@ function Websiteredesign() {
       <div
         style={{
           backgroundColor: "rgb(245 245 245)",
-          margin: "100px 0px 20px 0px",
+          margin: "40px 0px 20px 0px",
         }}
       >
         <div className="container my-20">
@@ -1071,7 +1071,7 @@ function Websiteredesign() {
       </div>
 
       <div className="container">
-        <div className="row align-items-center pt-50">
+        <div className="row align-items-center pt-30">
           <div className="col-md-7">
             <span className="tp-section-subtitle text-black blink-ball">
               Website Redesign Near Me
@@ -1190,7 +1190,7 @@ function Websiteredesign() {
     ========================================= */}
       </div>
 
-      <div data-aos="fade-right" data-aos-delay={400} data-aos-once={true}>
+      <div className="mt-40 mb-40" data-aos="fade-right" data-aos-delay={400} data-aos-once={true}>
         <div className="container">
           <div className="why-yulanto-header">
             <span className="tp-section-subtitle text-black blink-ball">
@@ -1228,7 +1228,7 @@ function Websiteredesign() {
       </div>
 
       <div data-aos="fade-right" data-aos-delay={400} data-aos-once={true}>
-        <div className="container mt-80">
+        <div className="container mt-60 mb-30">
           <div className="website-audit-card">
             <div className="audit-decoration"></div>
 
@@ -1329,7 +1329,7 @@ function Websiteredesign() {
       <div data-aos="fade-right"
         data-aos-delay={400}
         data-aos-once={true}>
-        <div className="container mt-80">
+        <div className="container mt-50">
 
           <div className="website-audit-card">
 
