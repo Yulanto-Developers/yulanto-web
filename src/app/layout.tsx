@@ -9,7 +9,7 @@ import { company } from "@/lib/company";
 import Script from "next/script";
 import favicon from "@/assets/img/logo/favicon.png"
 import Protector from "@/components/home/home/Protector/Protector";
-
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics"
 // ===============================
 // FONTS
 // ===============================
@@ -164,6 +164,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${tenor.variable} ${figTree.variable}`}>
+        <GoogleAnalytics />
         <Protector />
         {children}
         <ToastContainer />

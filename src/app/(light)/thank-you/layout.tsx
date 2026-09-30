@@ -8,6 +8,14 @@ import QuoteModal from "@/components/home/home/myComponents/Pop";
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
 import "@/assets/css/style.css";
 import "@/assets/css/custome.css";
+
+import { generateSeo } from "@/lib/seo";
+export const metadata = generateSeo({
+  title: "Thank You for Contacting Yulanto | Chennai",
+  description:
+    "Thank you for contacting Yulanto Web Creations. Your enquiry has been received, and our team will contact you shortly.",
+});
+
 export default function DesignStudioLayout({
   children,
 }: {
