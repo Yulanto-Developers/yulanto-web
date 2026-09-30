@@ -1,9 +1,19 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import '@/assets/css/ThankYou.css';
-import { useEffect, useState } from 'react';
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import "@/assets/css/ThankYou.css";
+import { useEffect, useState } from "react";
+
+import { generateSeo } from "@/lib/seo";
+import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
+import GoogleAdsConversion from "@/components/analytics/GoogleAdsConversion";
+
+export const metadata = generateSeo({
+  title: "Thank You for Contacting Yulanto | Chennai",
+  description:
+    "Thank you for contacting Yulanto Web Creations. Your enquiry has been received, and our team will contact you shortly.",
+});
 
 export default function Page() {
   const router = useRouter();
@@ -15,7 +25,7 @@ export default function Page() {
       setCountdown((prev) => {
         if (prev <= 1) {
           clearInterval(interval);
-          router.push('/home');
+          router.push("/home");
           return 1;
         }
 
@@ -33,76 +43,82 @@ export default function Page() {
   }, [router]);
 
   return (
-    <main className="thankyou-page">
-      <div className="container thankyou-container">
-        <div className="row align-items-center">
+    <>
+      <GoogleAdsConversion />
+      <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://yulanto.com/",
+          },
+          {
+            name: "Thank You",
+            url: "https://yulanto.com/thank-you",
+          },
+        ]}
+      />
 
-          {/* Left - Image */}
-          <div className="col-lg-6 col-md-6">
-            <div className="thankyou-image">
-              <Image
-                src="/assets/img/thank-you/yulanto-web-creation.png"
-                alt="Thank you"
-                width={600}
-                height={500}
-                priority
-              />
-            </div>
-          </div>
-
-          {/* Right - Content */}
-          <div className="col-lg-6 col-md-6">
-            <div className="thankyou-content">
-
-              <span className="tp-section-subtitle text-black blink-ball">
-                Thank You!
-              </span>
-
-              <h4 className="px-about-title mb-20">
-                <span className="text-blue-about">
-                  Thank You for{" "}
-                </span>
-                Reaching Us
-              </h4>
-
-              <p className="text-black">
-                Thank you for reaching out to us. We have received your
-                enquiry successfully.
-              </p>
-
-              <p className="text-black">
-                Our team will review your request and get in touch with you
-                soon.
-              </p>
-
-              <div className="thankyou-line"></div>
-
-              {/* Countdown */}
-              <div className="processing-message">
-
-                <span className="loading-spinner"></span>
-
-                <span className="contact-text">
-                  Back to Home in{' '}
-
-                  <span
-                    className={`countdown-number ${
-                      animate ? 'countdown-animate' : ''
-                    }`}
-                  >
-                    {countdown}
-                  </span>
-
-                  {' '}seconds
-                </span>
-
+      <main className="thankyou-page">
+        <div className="container thankyou-container">
+          <div className="row align-items-center">
+            {/* Left - Image */}
+            <div className="col-lg-6 col-md-6">
+              <div className="thankyou-image">
+                <Image
+                  src="/assets/img/thank-you/yulanto-web-creation.png"
+                  alt="Thank you"
+                  width={600}
+                  height={500}
+                  priority
+                />
               </div>
+            </div>
 
+            {/* Right - Content */}
+            <div className="col-lg-6 col-md-6">
+              <div className="thankyou-content">
+                <span className="tp-section-subtitle text-black blink-ball">
+                  Thank You!
+                </span>
+
+                <h4 className="px-about-title mb-20">
+                  <span className="text-blue-about">Thank You for </span>
+                  Reaching Us
+                </h4>
+
+                <p className="text-black">
+                  Thank you for reaching out to us. We have received your
+                  enquiry successfully.
+                </p>
+
+                <p className="text-black">
+                  Our team will review your request and get in touch with you
+                  soon.
+                </p>
+
+                <div className="thankyou-line"></div>
+
+                {/* Countdown */}
+                <div className="processing-message">
+                  <span className="loading-spinner"></span>
+
+                  <span className="contact-text">
+                    Back to Home in{" "}
+                    <span
+                      className={`countdown-number ${
+                        animate ? "countdown-animate" : ""
+                      }`}
+                    >
+                      {countdown}
+                    </span>{" "}
+                    seconds
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
-
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
