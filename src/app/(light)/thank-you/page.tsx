@@ -31,7 +31,7 @@ export default function Page() {
 
         return prev - 1;
       });
-    }, 100000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [router]);

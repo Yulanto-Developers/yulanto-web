@@ -254,7 +254,7 @@ export const INDUSTRIES: IndustryCategory[] = [
     label: 'Hospitality & Solar',
     icon: Sun,
     image: true,
-    industryImg: '/assets/img/all-works/head-img/solar.jpg',
+    industryImg: '/assets/img/industry/solar.jpg',
     industryDesc: [
       "We provide professional website design and website development solutions for Hospitality and Solar businesses, helping companies in these industries build a strong digital presence, showcase their services, and connect with customers through modern and engaging websites. ",
       "Our expertise includes hospitality website design, hotel website development, resort website design, restaurant website development, tourism website solutions, solar company website design, solar energy website development, renewable energy website design, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
