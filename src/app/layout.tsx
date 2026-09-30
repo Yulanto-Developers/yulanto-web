@@ -164,7 +164,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${tenor.variable} ${figTree.variable}`}>
-        <GoogleAnalytics />
+        {/* <GoogleAnalytics /> */}
         <Protector />
         {children}
         <ToastContainer />

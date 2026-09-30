@@ -254,7 +254,7 @@ export const INDUSTRIES: IndustryCategory[] = [
     label: 'Hospitality & Solar',
     icon: Sun,
     image: true,
-    industryImg: '/assets/img/all-works/head-img/ecommerce.jpg',
+    industryImg: '/assets/img/all-works/head-img/solar.jpg',
     industryDesc: [
       "We provide professional website design and website development solutions for Hospitality and Solar businesses, helping companies in these industries build a strong digital presence, showcase their services, and connect with customers through modern and engaging websites. ",
       "Our expertise includes hospitality website design, hotel website development, resort website design, restaurant website development, tourism website solutions, solar company website design, solar energy website development, renewable energy website design, responsive web design, WordPress development, UI/UX design, and SEO-friendly website development. ",
@@ -341,6 +341,14 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         borderClass: 'brb'
       },
       {
+        id: 'JPR Steels',
+        name: 'JPR Steels',
+        logo: '/assets/img/all-works/new/jpr.png',
+        location: 'Chennai, India',
+        url: 'https://www.jprsteels.com/',
+        borderClass: 'brlb'
+      },
+      {
         id: 'typhoonelec',
         name: 'Typhoon Electronics',
         logo: '/assets/img/all-works/new/typhoonelec.png',
@@ -379,14 +387,6 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         location: 'Chennai, India',
         url: 'https://www.bmceramics.in/',
         borderClass: 'brlb'
-      },
-      {
-        id: 'myglobalstudies',
-        name: 'My Global Studies',
-        logo: '/assets/img/all-works/mgs-logo.png',
-        location: 'Chennai, India',
-        url: 'https://www.myglobalstudies.com/',
-        borderClass: ''
       },
       {
         id: 'grayeyeit',
@@ -717,6 +717,14 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     bannerImg: '/assets/img/all-works/head-img/software.jpg',
     projects: [
       {
+        id: 'solsticesolutions',
+        name: 'Solstice Solutions',
+        logo: '/assets/img/all-works/solstice-logo.png',
+        location: 'United States',
+        url: 'https://solstice6.com/',
+        borderClass: 'brlb'
+      },
+      {
         id: 'jdscarercm',
         name: 'JDS Care RCM',
         logo: '/assets/img/all-works/2026/jds.png',
@@ -772,14 +780,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'https://www.intrahoptechnologies.com/',
         borderClass: 'brb'
       },
-      {
-        id: 'solsticesolutions',
-        name: 'Solstice Solutions',
-        logo: '/assets/img/all-works/solstice-logo.png',
-        location: 'United States',
-        url: 'https://solstice6.com/',
-        borderClass: 'brlb'
-      },
+
       {
         id: 'sigillieum',
         name: 'Sigillieum',
@@ -916,30 +917,6 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     bannerImg: '/assets/img/all-works/head-img/import.jpg',
     projects: [
       {
-        id: 'oortecloud',
-        name: 'Oorte Cloud',
-        logo: '/assets/img/all-works/2026/Oort-e-cloud.png',
-        location: 'Bengaluru',
-        url: 'https://www.oortecloud.com/',
-        borderClass: 'brb'
-      },
-      // {
-      //   id: 'ams',
-      //   name: 'AMS',
-      //   logo: '/assets/img/all-works/new/asianic.png',
-      //   location: 'Singapore',
-      //   url: 'http://asianic.sg/',
-      //   borderClass: 'brlb'
-      // },
-      {
-        id: 'flavoyageexport',
-        name: 'Flavoyage Export',
-        logo: '/assets/img/all-works/new/flavoyageexport.png',
-        location: 'Tuticorin, India.',
-        url: 'https://www.flavoyageexport.in/',
-        borderClass: 'brlb'
-      },
-      {
         id: 'astrobridge',
         name: 'Astro Bridge',
         logo: '/assets/img/all-works/astrobridge-logo.png',
@@ -955,6 +932,24 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         url: 'https://www.zaikexports.com/',
         borderClass: 'brlb'
       },
+      {
+        id: 'oortecloud',
+        name: 'Oorte Cloud',
+        logo: '/assets/img/all-works/2026/Oort-e-cloud.png',
+        location: 'Bengaluru',
+        url: 'https://www.oortecloud.com/',
+        borderClass: 'brb'
+      },
+
+      {
+        id: 'flavoyageexport',
+        name: 'Flavoyage Export',
+        logo: '/assets/img/all-works/new/flavoyageexport.png',
+        location: 'Tuticorin, India.',
+        url: 'https://www.flavoyageexport.in/',
+        borderClass: 'brlb'
+      },
+
 
     ]
   },
@@ -1031,12 +1026,12 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         borderClass: 'brlb'
       },
       {
-        id: 'amalametric',
-        name: 'Amala Metric',
-        logo: '/assets/img/all-works/new/amalimatric.png',
-        location: 'Madurai, India.',
-        url: 'https://amalimatric.com/',
-        borderClass: 'brlb'
+        id: 'myglobalstudies',
+        name: 'My Global Studies',
+        logo: '/assets/img/all-works/mgs-logo.png',
+        location: 'Chennai, India',
+        url: 'https://www.myglobalstudies.com/',
+        borderClass: ''
       },
       {
         id: 'margvidhyalaya',
@@ -1236,10 +1231,26 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     bannerImg: '/assets/img/all-works/head-img/consultancy.jpg',
     projects: [
       {
-        id: 'chennaipublishing',
-        name: 'Chennai Publishing',
-        logo: '/assets/img/all-works/cp-logo.png',
-        location: 'Chennai, India.',
+        id: 'JPR Steels',
+        name: 'JPR Steels',
+        logo: '/assets/img/all-works/new/jpr.png',
+        location: 'Chennai, India',
+        url: 'https://www.jprsteels.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'suntech',
+        name: 'Sun Tech',
+        logo: '/assets/img/all-works/new/sun.png',
+        location: 'Chennai, India',
+        url: 'http://suntechtmt.com/',
+        borderClass: 'brlb'
+      },
+      {
+        id: 'ralago',
+        name: 'Ralago',
+        logo: '/assets/img/all-works/new/ralago.png',
+        location: 'Chennai, India',
         url: 'https://www.ralago.in/',
         borderClass: 'brlb'
       },
@@ -1300,11 +1311,11 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         borderClass: 'brb'
       },
       {
-        id: 'jayarajtimber',
-        name: 'Jayaraj Timber',
-        logo: '/assets/img/all-works/new/jayarajtimber.png',
+        id: 'jpr',
+        name: 'JPR Steels',
+        logo: '/assets/img/all-works/new/jpr.png',
         location: 'Chennai, India.',
-        url: 'https://jayarajtimber.com/',
+        url: 'https://www.jprsteels.com/',
         borderClass: 'brlb'
       },
       {
