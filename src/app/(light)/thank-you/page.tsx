@@ -31,14 +31,14 @@ export default function Page() {
 
         return prev - 1;
       });
-    }, 1000);
+    }, 100000);
 
     return () => clearInterval(interval);
   }, [router]);
 
   return (
     <>
-      <GoogleAdsConversion />
+      {/* <GoogleAdsConversion /> */}
       <BreadcrumbSchema
         items={[
           {
@@ -61,7 +61,7 @@ export default function Page() {
                 <Image
                   src="/assets/img/thank-you/yulanto-web-creation.png"
                   alt="Thank you"
-                  width={600}
+                  width={400}
                   height={500}
                   priority
                 />

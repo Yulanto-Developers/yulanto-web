@@ -57,21 +57,21 @@ export default function Protector() {
         }
 
 
-        // document.addEventListener('copy', handleCopy);
-        // document.addEventListener('cut', handleCut);
-        // document.addEventListener('paste', handlePaste);
-        // document.addEventListener('contextmenu', handleContextMenu);
-        // document.addEventListener('keydown', keyshift);
-        // document.addEventListener('keydown', keyshiftU);
+        document.addEventListener('copy', handleCopy);
+        document.addEventListener('cut', handleCut);
+        document.addEventListener('paste', handlePaste);
+        document.addEventListener('contextmenu', handleContextMenu);
+        document.addEventListener('keydown', keyshift);
+        document.addEventListener('keydown', keyshiftU);
 
-  
-        // return () => {
-        //     document.removeEventListener('copy', handleCopy);
-        //     document.removeEventListener('cut', handleCut);
-        //     document.removeEventListener('paste', handlePaste);
-        //     document.removeEventListener('contextmenu', handleContextMenu);
-        //     document.removeEventListener('keydown', keyshiftU);
-        // };
+
+        return () => {
+            document.removeEventListener('copy', handleCopy);
+            document.removeEventListener('cut', handleCut);
+            document.removeEventListener('paste', handlePaste);
+            document.removeEventListener('contextmenu', handleContextMenu);
+            document.removeEventListener('keydown', keyshiftU);
+        };
     }, []);
 
     return null;

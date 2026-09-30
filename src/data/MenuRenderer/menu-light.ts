@@ -10,11 +10,11 @@ export const lightMenu: MenuItem[] = [
     href: "#",
     active: false,
     links: [
-      { label: "Our Story", href: "/our-story" },
-      { label: "Vision & Mission", href: "/our-mission-vision" },
-      { label: "Our Philosophy", href: "/our-philosophy" },
-      { label: "Why Choose Us", href: "/why-choose-us" },
-      { label: "Meet Our Team", href: "/our-team" },
+      { label: "Our Story", href: "/our-story", active: true, },
+      { label: "Vision & Mission", href: "/our-mission-vision", active: true, },
+      { label: "Our Philosophy", href: "/our-philosophy", active: true, },
+      { label: "Why Choose Us", href: "/why-choose-us", active: true, },
+      { label: "Meet Our Team", href: "/our-team", active: true, },
     ],
   },
   {
@@ -24,11 +24,12 @@ export const lightMenu: MenuItem[] = [
     sublinkTrue: true,
     label: "Services",
     href: "#",
-    active: false,
+    active: true,
     links: [
       {
         label: "Website Design",
         href: "#",
+        active: false,
         subLinks: [
           // { label: "Startup Website Design", href: "/web-design/startup-website-design" },
           // { label: "Corporate Website Design", href: "/web-design/corporate-website-design" },
@@ -45,6 +46,7 @@ export const lightMenu: MenuItem[] = [
       },
       {
         label: "Website Development", href: "/",
+        active: false,
         subLinks: [
           { label: "Dynamic Website Development", href: "/website-development/web-development-company-in-chennai" },
           { label: "Custom Website Development", href: "/website-development/website-development-company-in-chennai" },
@@ -58,6 +60,7 @@ export const lightMenu: MenuItem[] = [
       },
       {
         label: "CMS & E-commerce", href: "/",
+        active: false,
         sublabel: 'CMS & E-commerce Development',
         subLinks: [
           { label: "WordPress Development", href: "/wordpress-development-company-in-Chennai" },
@@ -69,6 +72,7 @@ export const lightMenu: MenuItem[] = [
       },
       {
         label: "Graphic Design", href: "/",
+        active: false,
         subLinks: [
           { label: "Logo Design & Branding", href: "/logo-designers-in-chennai" },
           { label: "Brochure & Company Profile Design", href: "/brochure-design-company-in-chennai" },
@@ -80,6 +84,7 @@ export const lightMenu: MenuItem[] = [
       },
       {
         label: "Digital Marketing", href: "/",
+        active: false,
         subLinks: [
           { label: "Search Engine Optimization (SEO)", href: "/seo-company-in-chennai" },
           { label: "Google Ads Management (PPC)", href: "/google-ads-agency-in-chennai" },
@@ -90,6 +95,7 @@ export const lightMenu: MenuItem[] = [
       },
       {
         label: "AI-Enhanced Web Design", href: "/create-website-using-ai-in-chennai",
+        active: true,
         // subLinks: [
         //   { label: "Search Engine Optimization (SEO)", href: "/seo" },
         //   { label: "Google Ads Management (PPC)", href: "/ads" },
@@ -108,10 +114,10 @@ export const lightMenu: MenuItem[] = [
     href: "#",
     active: false,
     links: [
-      { label: "Recent Projects", href: "/recent-projects" },
-      { label: "Portfolio", href: "/our-portfolio" },
-      { label: "Case Studies", href: "/case-studies" },
-      { label: "Industries We Serve", href: "/yulanto-works" },
+      { label: "Recent Projects", href: "/recent-projects", active: true, },
+      { label: "Portfolio", href: "/our-portfolio", active: true, },
+      { label: "Case Studies", href: "/case-studies", active: true, },
+      { label: "Industries We Serve", href: "/yulanto-works", active: true, },
       // { label: "Industry Wise", href: "/" },
     ],
   },

@@ -22,7 +22,8 @@ import {
   faPhone,
   faLocationDot
 } from "@fortawesome/free-solid-svg-icons";
-import M1 from '@/assets/img/map/m1.png'
+// import M1 from '@/assets/img/map/m1.png'.
+import { useEffect } from "react";
 
 const galleryImages: ImageDT[] = [
   { id: 1, imgSrc: "/assets/img/offcanvas/offcanvas-1.jpg" },
@@ -32,8 +33,16 @@ const galleryImages: ImageDT[] = [
 ];
 
 const PrimaryOffCanvas = () => {
-  const { isMainSidebarOpen, toggleMainSidebar } = useGlobalContext();
+  const {
+    isMainSidebarOpen,
+    toggleMainSidebar,
+    setMainSidebarOpen,
+  } = useGlobalContext();
   const pathname = usePathname();
+
+  useEffect(() => {
+    setMainSidebarOpen(false);
+  }, [pathname, setMainSidebarOpen]);
 
   // Detect dark version route
   const isDark = pathname?.startsWith("/dark") ?? false;

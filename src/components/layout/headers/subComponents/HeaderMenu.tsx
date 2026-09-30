@@ -93,9 +93,9 @@ export default function HeaderMenu() {
                                             ) : (
                                                 <a
                                                     data-href={link.href}
-                                                    href={link.href}
                                                     tabIndex={0}
                                                     className="sidebar-link"
+                                                    style={{cursor:'pointer'}}
                                                 >
                                                     <span className="sidebar-link-content">
                                                         <FontAwesomeIcon
