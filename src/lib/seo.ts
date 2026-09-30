@@ -15,7 +15,7 @@ export function generateSeo({
   title,
   description,
   slug = "",
-  image = "/assets/img/sample/gallery/img- (1).jpg",
+  image = "/assets/image/website-design-company-in-chennai.jpg",
   imageAlt = title,
 }: SEOProps): Metadata {
   // Remove / from beginning and ending

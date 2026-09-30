@@ -44,7 +44,7 @@ function Uiuxdesgin() {
         </div>
       </div>
       <div data-aos="fade-right" data-aos-delay={400} data-aos-once={true}>
-        <div className="container  mt-100 mb-20">
+        <div className="container  mt-60 mb-20">
           <div className="row">
             <div className="col-md-7">
               <span className="tp-section-subtitle text-black blink-ball">
@@ -128,9 +128,9 @@ function Uiuxdesgin() {
         </div >
       </div >
       <div data-aos="fade-down" data-aos-delay={400} data-aos-once={true}>
-        <div className="container mt-100 mb-50">
+        <div className="container mt-50 mb-40">
           <div className="row">
-            <div className="col-12 mb-4">
+            <div className="col-12 mb-0 mb-md-4">
               <span className="tp-section-subtitle text-black blink-ball">
                 What Sets Our UI/UX Designers Apart
               </span>
@@ -142,7 +142,7 @@ function Uiuxdesgin() {
             </div>
           </div>
 
-          <div className="row pt-20">
+          <div className="row pt-10">
             {whyChooseItems.map((item, index) => (
               <div className="col-lg-3 col-md-6 col-12 mb-20" key={index}>
                 <div className="why-choose-item">
@@ -163,9 +163,9 @@ function Uiuxdesgin() {
         data-aos-once={true}
         style={{ background: "#f5f5f5" }}
       >
-        <div className="container mt-30 mb-20">
+        <div className="container mt-20 mb-20">
           .{/* UI/UX DESIGN - INTRO */}
-          <div className="row align-items-center pt-50">
+          <div className="row align-items-center pt-30">
             <div className="col-12 d-block d-lg-none">
               <span className="tp-section-subtitle text-black blink-ball">
                 UI/UX Design That Supports Business Growth

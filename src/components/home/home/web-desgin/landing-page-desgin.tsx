@@ -168,7 +168,7 @@ function Landingpagedesgin() {
                 data-aos-delay={400}
                 data-aos-once={true}
             >
-                <div className="container mt-80 mb-60">
+                <div className="container mt-40 mb-50">
                     <div className="row">
 
                         <div className="col-12">
@@ -255,7 +255,7 @@ function Landingpagedesgin() {
                 data-aos-delay={400}
                 data-aos-once={true}
             >
-                <div className="container mt-100 mb-50">
+                <div className="container mt-40 mb-50">
                     <div className="row">
                         <div className="col-12 mb-2">
                             <span className="tp-section-subtitle text-black blink-ball">
@@ -283,7 +283,7 @@ function Landingpagedesgin() {
             <div data-aos="fade-down"
                 data-aos-delay={400}
                 data-aos-once={true}>
-                <div className="container mt-100  mb-50">
+                <div className="container mt-40  mb-50">
                     <div className="row">
                         <div className="col-12">
                             <span className="tp-section-subtitle blink-ball">
@@ -310,7 +310,7 @@ function Landingpagedesgin() {
             <div data-aos="fade-down"
                 data-aos-delay={400}
                 data-aos-once={true}>
-                <div className="container mt-20 mb-50">
+                <div className="container mt-20 ">
                     <div className="row">
                         <div className="col-12">
                             <span className="tp-section-subtitle blink-ball">
@@ -582,7 +582,7 @@ function Landingpagedesgin() {
                 data-aos-delay={400}
                 data-aos-once={true}
             >
-                <div className="container mt-50 mb-50">
+                <div className="container mt-20 mb-50">
 
                     <div className="row">
 
