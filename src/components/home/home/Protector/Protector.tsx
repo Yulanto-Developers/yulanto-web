@@ -15,7 +15,7 @@ export default function Protector() {
 
         const handleCut = (e: ClipboardEvent) => {
             e.preventDefault();
-            toast.error("Functions are Disable", {
+            toast.error("Function is disabled", {
                 position: "top-right",
                 autoClose: 3000,
             });
