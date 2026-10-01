@@ -1546,28 +1546,12 @@ export default function QuoteModal() {
 
                                     <div className="mobile-get-started d-block d-lg-none">
                                         <div className="badge text-tenor">
-                                            Let's Get
-                                            Started
+                                            Let's Get Started
                                         </div>
 
                                         <h2 className="text-tenor text-white mt-1">
-                                            Your Digital
-                                            Success
-                                            Starts Here
+                                            Your Digital Success Starts Here
                                         </h2>
-
-                                        <p className="text-figtree text-white mt-2 opacity-75 d-md-block hidden">
-                                            Tell us about
-                                            your project
-                                            or business
-                                            requirements.
-                                            Fill out the
-                                            form, and our
-                                            team will
-                                            contact you
-                                            within 24
-                                            hours.
-                                        </p>
                                     </div>
                                 </>
                             ) : (
