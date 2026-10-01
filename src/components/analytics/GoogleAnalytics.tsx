@@ -5,9 +5,9 @@ import Script from "next/script";
 export default function GoogleAnalytics() {
   return (
     <>
-      {/* <Script
+      <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-PNHK1XBGGS"
+        src="https://www.googletagmanager.com/gtag/js?id=G-HD5QYLKTJH"
         strategy="afterInteractive"
       />
 
@@ -17,9 +17,9 @@ export default function GoogleAnalytics() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-PNHK1XBGGS');
+          gtag('config', 'G-HD5QYLKTJH');
         `}
-      </Script> */}
+      </Script>
       {<p>some ga4 and ad's script</p>}
     </>
   );

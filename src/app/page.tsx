@@ -1,13 +1,10 @@
-import { redirect } from "next/navigation";
+import HomeLayoutWrapper from "@/components/layout/HomeLayoutWrapper";
+import HomePage from "./(light)/home/page";
 
 export default function RootPage() {
-  try {
-    redirect("/home");
-  } catch (error) {
-    // Next.js redirect intentionally throws an error
-    if (error instanceof Error && error.message.includes("NEXT_REDIRECT")) {
-      throw error; // Re-throw redirect error
-    }
-    throw error;
-  }
+  return (
+    <HomeLayoutWrapper>
+      <HomePage />
+    </HomeLayoutWrapper>
+  );
 }
