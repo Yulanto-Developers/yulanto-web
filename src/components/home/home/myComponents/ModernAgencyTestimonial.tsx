@@ -29,7 +29,7 @@ const AnimatedCounter = ({ value }: { value: number }) => {
     useEffect(() => {
         return springValue.on("change", (latest) => {
             if (ref.current) {
-                ref.current.textContent = Math.floor(latest).toLocaleString();
+                ref.current.textContent = Math.round(latest).toLocaleString();
             }
         });
     }, [springValue]);

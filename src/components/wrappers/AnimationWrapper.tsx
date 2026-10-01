@@ -20,11 +20,18 @@ const AnimationWrapper = ({ children }: { children: React.ReactNode }) => {
             // Global animations
             fadeAnimation();
 
-            //Route-based animations
+            // Route-based animations
             Object.entries(animationConfig).forEach(([route, animations]) => {
-                if (pathname === route || pathname.startsWith(`${route}/`)) {
+
+                const isRouteMatch =
+                    route === "/"
+                        ? pathname === "/"
+                        : pathname === route || pathname.startsWith(`${route}/`);
+
+                if (isRouteMatch) {
                     animations.forEach((fn) => {
                         const cleanup = fn();
+
                         if (typeof cleanup === "function") {
                             cleanups.push(cleanup);
                         }
@@ -32,7 +39,7 @@ const AnimationWrapper = ({ children }: { children: React.ReactNode }) => {
                 }
             });
 
-            //Refresh ScrollTrigger
+            // Refresh ScrollTrigger
             ScrollTrigger.refresh();
         };
 
@@ -41,7 +48,7 @@ const AnimationWrapper = ({ children }: { children: React.ReactNode }) => {
 
         return () => {
             cancelAnimationFrame(id);
-            
+
             // CLEAN ALL ROUTE CLEANUPS
             cleanups.forEach((fn) => fn());
 

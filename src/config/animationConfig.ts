@@ -10,6 +10,7 @@ export const animationConfig: Record<string, (() => void)[]> = {
     //Light page animation
     "/startup-agency": [aboutSkewAnimation, brandSkewAnimation, initScrollSkewParallaxSections, textEffectAnimation],
     "/home": [portfolioPanelAnimation, textEffectAnimation],
+    "/": [portfolioPanelAnimation, textEffectAnimation],
     "/modern-agency": [textEffectAnimation],
     "/creative-agency": [headerLogoAnimAnimation, textEffectAnimation, stepScrollPinAnimation],
     "/personal-portfolio": [initHoverImageAnimation],

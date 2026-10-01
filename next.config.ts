@@ -10,7 +10,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  allowedDevOrigins: ["192.168.29.207"],
+  allowedDevOrigins: [
+    "http://192.168.29.207:3000",
+    "http://10.48.163.143:3000",
+  ],
 };
 
 export default nextConfig;
