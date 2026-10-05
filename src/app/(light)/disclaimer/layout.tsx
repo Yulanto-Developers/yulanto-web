@@ -14,6 +14,7 @@ export const metadata = generateSeo({
   title: "Disclaimer | Yulanto Web Creations",
   description:
     "Read the Disclaimer of Yulanto Web Creations for important information about the accuracy, reliability, and use of the content on our website.",
+    slug:"disclaimer"
 });
 export default function AboutUsLayout({ children }: {
 

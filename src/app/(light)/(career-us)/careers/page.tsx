@@ -25,11 +25,11 @@ export default function CareersPage() {
               items={[
                 {
                   name: "Home",
-                  url: "https://yulanto.com/",
+                  url: "https://www.yulanto.com/",
                 },
                 {
                   name: "Our Story",
-                  url: "https://yulanto.com/uae",
+                  url: "https://www.yulanto.com/uae",
                 },
               ]}
             />

@@ -14,6 +14,7 @@ export const metadata = generateSeo({
   title: "Terms & Conditions | Yulanto Web Creations",
   description:
     "Read the Terms & Conditions of Yulanto Web Creations to understand the rules, rights, and responsibilities when using our website and services.",
+    slug:"terms-conditions",
 });
 export default function AboutUsLayout({ children }: {
 

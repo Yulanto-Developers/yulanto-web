@@ -16,7 +16,7 @@ import ServiceSchema from "@/components/seo-sechama/ServiceSchema";
 import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 import FAQSchema from "@/components/seo-sechama/FAQSchema";
 
-const SITE_URL = "https://yulanto.com";
+const SITE_URL = "https://www.yulanto.com";
 const SLUG = "AI-assisted-website";
 const pageUrl = `${SITE_URL}/${SLUG}`;
 

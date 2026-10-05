@@ -23,11 +23,11 @@ export default function USAClientsPage() {
             items={[
               {
                 name: "Home",
-                url: "https://yulanto.com/",
+                url: "https://www.yulanto.com/",
               },
               {
                 name: "Our Clients",
-                url: "https://yulanto.com/europe",
+                url: "https://www.yulanto.com/our-clients/web-design-services-for-europe"
               },
             ]}
           />

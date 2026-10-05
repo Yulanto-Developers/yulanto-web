@@ -14,6 +14,8 @@ export const metadata = generateSeo({
   title: "Our Clients | Global Website Design & Development Services | Yulanto",
   description:
     "We serve clients across the USA, UAE, Singapore, UK, Europe and Worldwide with professional website design, development and digital solutions.",
+    slug: "our-clients",
+    
 });
 export default function DesignStudioLayout({
   children,

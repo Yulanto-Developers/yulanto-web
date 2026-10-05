@@ -4,26 +4,23 @@ import Breadcrumbdata from "@/components/breadcrum/sections/breadcrumbdata";
 import LicenseCopyright from "@/components/license/License";
 import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 
-
-
 export default function CareersPage() {
   return (
     <main>
       <BreadcrumbSchema
-              items={[
-                {
-                  name: "Home",
-                  url: "https://yulanto.com/",
-                },
-                {
-                  name: "Our Story",
-                  url: "https://yulanto.com/license-copyright",
-                },
-              ]}
-            />
+        items={[
+          {
+            name: "Home",
+            url: "https://www.yulanto.com/",
+          },
+          {
+            name: "Our Story",
+            url: "https://www.yulanto.com/license-copyright",
+          },
+        ]}
+      />
       <Breadcrumbdata />
-      <LicenseCopyright/>
-    
+      <LicenseCopyright />
     </main>
   );
 }

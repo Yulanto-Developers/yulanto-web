@@ -2,9 +2,11 @@ import { generateSeo } from "@/lib/seo";
 import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 
 export const metadata = generateSeo({
-  title: "Web Design & Development Companies in Chennai for All Industries | Yulanto",
+  title:
+    "Web Design & Development Companies in Chennai for All Industries | Yulanto",
   description:
     "Explore Yulanto’s web design, development and digital solutions for companies across diverse industries, from IT and real estate to healthcare, engineering, electronics and more.",
+  slug: "yulanto-works",
 });
 
 export default function DesignStudioLayout({
@@ -18,16 +20,15 @@ export default function DesignStudioLayout({
         items={[
           {
             name: "Home",
-            url: "https://yulanto.com/",
+            url: "https://www.yulanto.com/",
           },
           {
             name: "Our Mission & Vision",
-            url: "https://yulanto.com/industry-we-serve",
+            url: "https://www.yulanto.com/industry-we-serve",
           },
         ]}
       />
-          {children}
+      {children}
     </>
   );
 }
-

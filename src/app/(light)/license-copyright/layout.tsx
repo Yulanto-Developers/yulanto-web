@@ -14,6 +14,7 @@ export const metadata = generateSeo({
   title: "License & Copyright | Yulanto Web Creations",
   description:
     "Read the License & Copyright information for Yulanto Web Creations. Learn how our website content, designs, code, and materials are protected and may be used.",
+    slug:"license-copyright"
 });
 
 export default function AboutUsLayout({ children }: {

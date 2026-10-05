@@ -1,32 +1,22 @@
 export const company = {
   name: "Yulanto Web Creations",
 
-  url: "https://yulanto.com",
+  url: "https://www.yulanto.com",
 
-  logo:
-    "https://yulanto.com/home-assets/img/logo/yulanto-logo-green.png",
+  logo: "https://www.yulanto.com/home-assets/img/logo/yulanto-logo-green.png",
 
-  email: [
-    "info@yulanto.com",
-    "operations@yulanto.com",
-  ],
+  email: ["info@yulanto.com", "operations@yulanto.com"],
 
   phone: {
-    enquiry: [
-      "+91 99621 57250",
-      "+91 44 3100 0651",
-    ],
+    enquiry: ["+91 99621 57250", "+91 44 3100 0651"],
 
-    support: [
-      "+91 99621 57250",
-    ],
+    support: ["+91 99621 57250"],
   },
 
   office: {
     title: "Corporate Office",
 
-    streetAddress:
-      "F3, #4/608, First Floor, V.O.C Street, Kottivakkam, OMR",
+    streetAddress: "F3, #4/608, First Floor, V.O.C Street, Kottivakkam, OMR",
 
     city: "Chennai",
 

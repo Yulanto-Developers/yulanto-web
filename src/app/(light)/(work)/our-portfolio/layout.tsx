@@ -5,6 +5,7 @@ export const metadata = generateSeo({
   title: "Portfolio | Web Design Services & Creative Work | Yulanto",
   description:
     "Discover Web Design Services & creative work in yulanto across website design, branding, business cards, brochures and flyers, crafted for businesses across different industries.",
+  slug: "our-portfolio",
 });
 
 export default function DesignStudioLayout({
@@ -18,16 +19,15 @@ export default function DesignStudioLayout({
         items={[
           {
             name: "Home",
-            url: "https://yulanto.com/",
+            url: "https://www.yulanto.com/",
           },
           {
             name: "Our Mission & Vision",
-            url: "https://yulanto.com/portfolio",
+            url: "https://www.yulanto.com/portfolio",
           },
         ]}
       />
-          {children}
+      {children}
     </>
   );
 }
-

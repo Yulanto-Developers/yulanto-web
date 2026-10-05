@@ -11,6 +11,7 @@ export const metadata = generateSeo({
     "best web design firms from Chennai for Europe & East Windsor | Yulanto",
   description:
     "best web design firms for Europe & East Windsor, delivering modern website design, custom development and digital solutions for growth.",
+    slug:"web-design-services-for-europe",
 });
 export default function DesignStudioLayout({
   children,

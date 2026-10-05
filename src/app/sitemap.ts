@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://yulanto.com";
+const baseUrl = "https://www.yulanto.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const mainPages = [
-    "home",
+    // "home" removed — handled separately below as "/"
     "our-story",
     "our-mission-vision",
     "our-philosophy",
@@ -74,12 +74,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return [
+    // Home page → https://www.yulanto.com/
+    {
+      url: `${baseUrl}/`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 1,
+    },
+
     // Main pages
     ...mainPages.map((page) => ({
       url: `${baseUrl}/${page}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
-      priority: page === "home" ? 1 : 0.8,
+      priority: 0.8,
     })),
 
     // Client pages
@@ -90,7 +98,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     })),
 
-    // Web Design [pages]
+    // Web Design pages
     ...webDesignPages.map((page) => ({
       url: `${baseUrl}/web-design/${page}`,
       lastModified: new Date(),
@@ -98,7 +106,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     })),
 
-    // Website Development [pages]
+    // Website Development pages
     ...websiteDevelopmentPages.map((page) => ({
       url: `${baseUrl}/website-development/${page}`,
       lastModified: new Date(),

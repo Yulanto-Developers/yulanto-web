@@ -24,11 +24,11 @@ export default function USAClientsPage() {
         items={[
           {
             name: "Home",
-            url: "https://yulanto.com/",
+            url: "https://www.yulanto.com/",
           },
           {
             name: "Our Story",
-            url: "https://yulanto.com/usa",
+            url: "https://www.yulanto.com/our-clients/web-design-services-for-usa",
           },
         ]}
       />

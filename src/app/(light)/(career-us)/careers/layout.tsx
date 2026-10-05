@@ -11,6 +11,7 @@ export const metadata = generateSeo({
   title: "Careers at Yulanto Web Creations | Join Our Growing Team",
   description:
     "Explore career opportunities at Yulanto Web Creations and join a growing team working on web design, development, SEO and digital solutions.",
+  slug: "careers",
 });
 export default function DesignStudioLayout({
   children,
@@ -18,7 +19,6 @@ export default function DesignStudioLayout({
   children: React.ReactNode;
 }) {
   return (
-
     <ClientProviders>
       <PersonalPortfolioHeader />
 
@@ -26,14 +26,11 @@ export default function DesignStudioLayout({
         <div id="smooth-content">
           {children}
 
-
           <MainFooter />
         </div>
       </div>
 
       {/* Renders perfectly outside the scroll wrapper track */}
-
     </ClientProviders>
-
   );
 }

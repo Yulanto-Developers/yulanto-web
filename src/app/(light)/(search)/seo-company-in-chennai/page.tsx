@@ -17,7 +17,7 @@ import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 import FAQSchema from "@/components/seo-sechama/FAQSchema";
 import type { Metadata } from "next";
 
-const SITE_URL = "https://yulanto.com";
+const SITE_URL = "https://www.yulanto.com";
 const SLUG = "seo";
 const pageUrl = `${SITE_URL}/${SLUG}`;
 
@@ -35,7 +35,7 @@ export default function Page() {
   return (
     <main>
       {/* Breadcrumb Schema */}
-     
+
       <BreadcrumbSchema
         items={[
           { name: "Home", url: `${SITE_URL}/` },

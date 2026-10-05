@@ -10,6 +10,7 @@ export const metadata = generateSeo({
   title: "Web Designing & Development from Chennai for UK Companies | Yulanto",
   description:
     "Yulanto provides professional Web Designing & Develop solutions for UK companies, with custom websites and reliable digital solutions built around business needs.",
+    slug:"web-design-services-for-uk",
 });
 export default function DesignStudioLayout({
   children,
