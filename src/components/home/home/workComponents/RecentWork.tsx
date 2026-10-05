@@ -592,12 +592,12 @@ export default function RecentProject() {
                             </h4>
 
                             <h1
-              className="ft-23 mt-0 mb-2  text-tenor"
-              data-aos="text-reveal"
-              data-aos-delay="100"
-            >
-              Our Recent Web Design & Development Projects
-            </h1>
+                                className="ft-23 mt-0 mb-2  text-tenor"
+                                data-aos="text-reveal"
+                                data-aos-delay="100"
+                            >
+                                Our Recent Web Design & Development Projects
+                            </h1>
 
                             <p className="text-figtree text-dark mt-2 font-paragraph-cls">
                                 Explore our latest work, where creativity, innovation, and functionality come together to create exceptional digital experiences. As a professional web design and website development company, we create modern, responsive, and user-friendly websites that help businesses strengthen their online presence.
@@ -708,8 +708,8 @@ export default function RecentProject() {
                                     activeCard.links ??
                                     "#"
                                 }
-                                target="_blank"
-                                className="fd-btn text-white" 
+                                target="_blank" rel="noopener"
+                                className="fd-btn text-white"
                                 aria-label={`Visit ${activeCard.title} website`}
                                 title={`Visit ${activeCard.title} website`}
                             >
@@ -748,7 +748,7 @@ export default function RecentProject() {
                             "
                             style={{
                                 height: "600px",
-                                
+
                             }}
                         >
 

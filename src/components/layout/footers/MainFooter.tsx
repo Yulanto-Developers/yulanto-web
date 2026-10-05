@@ -114,8 +114,8 @@ const MainFooter: React.FC<footerPropsDt> = ({
                                 <div className="px-footer-widget-social mt-3">
                                     <a
                                         href="assets/brochure/Yulanto-Corporate-Profile.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                        target="_blank" rel="noopener"
+                                      
                                         className="pdf-link d-flex gap-2 align-items-center"
                                     >
                                         <FontAwesomeIcon
@@ -239,7 +239,7 @@ const MainFooter: React.FC<footerPropsDt> = ({
                                 <div className="px-footer-widget-info mb-3">
                                     <Link
                                         href="https://maps.app.goo.gl/dgzUBaL7ZPhhDwA97"
-                                        target="_blank"
+                                        target="_blank" rel="noopener"
                                         className="d-flex align-items-start"
                                     >
                                         <FontAwesomeIcon
@@ -262,7 +262,7 @@ const MainFooter: React.FC<footerPropsDt> = ({
                                 <div className="px-footer-widget-info">
                                     <Link
                                         href="https://www.google.com/maps/dir/?api=1&destination=12.9724698,80.2510529"
-                                        target="_blank"
+                                        target="_blank" rel="noopener"
                                         className="map-btn"
                                     >
                                         <span className="icon">

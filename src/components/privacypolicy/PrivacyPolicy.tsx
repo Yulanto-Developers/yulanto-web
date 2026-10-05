@@ -109,7 +109,7 @@ const PrivacyPolicy = () => {
         Yulanto Web Creations Pvt. Ltd. (&quot;Yulanto&quot;, &quot;we&quot;, &quot;us&quot;, or
         &quot;our&quot;) respects your privacy and is committed to protecting the
         personal information you provide when using our website{' '}
-        <a href="http://www.yulanto.com/" target="_blank" rel="noopener noreferrer">
+        <a href="http://www.yulanto.com/" target="_blank" rel="noopener" >
           www.yulanto.com
         </a>{' '}
         (&quot;Website&quot;).
@@ -418,7 +418,7 @@ const PrivacyPolicy = () => {
       <div className="address-block">
         <p data-aos="fade-up" data-aos-delay="250">
           Website:{' '}
-          <a href="http://www.yulanto.com/" target="_blank" rel="noopener noreferrer">
+          <a href="http://www.yulanto.com/" target="_blank" rel="noopener">
             www.yulanto.com
           </a>
         </p>

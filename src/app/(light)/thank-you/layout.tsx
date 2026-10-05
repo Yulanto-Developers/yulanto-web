@@ -14,7 +14,7 @@ export const metadata = generateSeo({
   title: "Thank You for Contacting Yulanto | Chennai",
   description:
     "Thank you for contacting Yulanto Web Creations. Your enquiry has been received, and our team will contact you shortly.",
-    slug:"thank-you",
+  slug: "thank-you",
 });
 
 export default function DesignStudioLayout({

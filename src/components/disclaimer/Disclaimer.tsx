@@ -372,7 +372,7 @@ const Disclaimer = () => {
       <div className="address-block">
         <p data-aos="fade-up" data-aos-delay="200">
           Website:{' '}
-          <a href="http://www.yulanto.com/" target="_blank" rel="noopener noreferrer">
+          <a href="http://www.yulanto.com/" target="_blank" rel="noopener">
             www.yulanto.com
           </a>
         </p>
@@ -397,7 +397,7 @@ const Disclaimer = () => {
       </div>
 
       <p className="copyright" data-aos="fade-up" data-aos-delay="100">
-         © 2015-{new Date().getFullYear()}{" "} Yulanto Web Creations Pvt. Ltd. All Rights Reserved.
+        © 2015-{new Date().getFullYear()}{" "} Yulanto Web Creations Pvt. Ltd. All Rights Reserved.
       </p>
     </div>
   );

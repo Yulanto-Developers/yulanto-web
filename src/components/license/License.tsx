@@ -112,8 +112,8 @@ const LicenseCopyright = () => {
         Unless otherwise stated, all content and materials available on{" "}
         <a
           href="http://www.yulanto.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+          target="_blank" rel="noopener"
+          
         >
           www.yulanto.com
         </a>{" "}
@@ -389,8 +389,8 @@ const LicenseCopyright = () => {
           Website:{" "}
           <a
             href="http://www.yulanto.com/"
-            target="_blank"
-            rel="noopener noreferrer"
+            target="_blank" rel="noopener"
+            
           >
             www.yulanto.com
           </a>

@@ -1551,8 +1551,8 @@ export default function QuoteModal() {
 
                                         <a
                                             href="https://maps.app.goo.gl/sHp8T3KXGXav9GuT9"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
+                                            target="_blank" rel="noopener"
+                                            
                                             className="contact-card"
                                         >
                                             <div className="contact-icon">

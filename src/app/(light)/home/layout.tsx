@@ -20,7 +20,7 @@ export default function DesignStudioLayout({
 
         <div id="smooth-wrapper" style={{ backgroundColor: "#f5f5f5" }}>
           <div id="smooth-content">
-          
+
             {children}
 
             <MainFooter />
