@@ -172,8 +172,24 @@ export default function QuoteModal() {
        MAIL REQUEST
     ========================================= */
 
+    type ContactFormData = typeof formData;
+    type UTMData = {
+        utm_source: string;
+        utm_medium: string;
+        utm_campaign: string;
+        utm_content: string;
+        utm_keyword: string;
+        utm_matchtype: string;
+        utm_term: string;
+        utm_creative_format: string;
+    };
+
+    type ContactPayload = typeof formData & {
+        utmvalue?: UTMData | null;
+    };
+
     const mailRequest = async (
-        data: typeof formData
+        data: ContactPayload
     ) => {
         const response = await fetch(
             "/api/contact-mail",
@@ -793,8 +809,32 @@ export default function QuoteModal() {
         /*
          * SEND EMAIL
          */
+        const keyUtm = process.env.NEXT_PUBLIC_STORAGE_KEY ?? "utm_tracking_data";
+        const storedUTm = sessionStorage.getItem(
+            keyUtm
+        );
 
-        mutate(formData);
+        let utmvalue: UTMData | null = null;
+
+        if (storedUTm) {
+            try {
+                const parsed = JSON.parse(storedUTm);
+
+                if (
+                    parsed &&
+                    typeof parsed === "object"
+                ) {
+                    utmvalue = parsed as UTMData;
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        mutate({
+            ...formData,
+            utmvalue,
+        });
     };
 
     /* =========================================
@@ -1511,8 +1551,8 @@ export default function QuoteModal() {
 
                                         <a
                                             href="https://maps.app.goo.gl/sHp8T3KXGXav9GuT9"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
+                                            target="_blank" rel="noopener"
+                                            
                                             className="contact-card"
                                         >
                                             <div className="contact-icon">

@@ -151,7 +151,7 @@ const FloatingParticle: React.FC<{ index: number }> = ({
         backgroundColor: COLORS.green,
         opacity: 0.25,
         filter: "blur(2px)",
-       
+
         zIndex: 0,
       }}
       animate={{
@@ -482,8 +482,8 @@ const MapLogoMarker: React.FC = () => {
   return (
     <motion.a
       href={GOOGLE_MAPS_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      target="_blank" rel="noopener"
+     
       initial={{
         opacity: 0,
         y: -15,
@@ -759,7 +759,7 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
             height: "100%",
             background:
               "linear-gradient(180deg, rgba(5,52,86,0.08) 0%, rgba(5,52,86,0) 45%, rgba(5,52,86,0.08) 100%)",
-          
+
             zIndex: 2,
           }}
         />
@@ -772,7 +772,7 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
             position: "absolute",
             inset: 0,
             zIndex: 3,
-           
+
           }}
         >
           <MapLogoMarker />

@@ -1,8 +1,8 @@
 "use client";
 
 import { lightMenu } from "@/data/MenuRenderer/menu-light";
-import { darkMenu } from "@/data/MenuRenderer/menu-dark";
-import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
+// import { darkMenu } from "@/data/MenuRenderer/menu-dark";
+// import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
 import { MenuItem } from "@/types/menu-dt";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -19,8 +19,8 @@ const MobileMenus: React.FC<MobileMenusProps> = ({ closeSidebar }) => {
     const pathname = usePathname();
 
     // Retrieves dynamically selected header menu
-    const isDark = useIsDarkRoute();
-    const menuItems: MenuItem[] = isDark ? darkMenu : lightMenu;
+    const isDark = false;
+    const menuItems: MenuItem[] = lightMenu;
 
     // ==========================================================
     // CLOSE EVERYTHING
@@ -127,11 +127,10 @@ const MobileMenus: React.FC<MobileMenusProps> = ({ closeSidebar }) => {
                                 aria-expanded={isActive}
                             >
                                 <i
-                                    className={`fa-solid ${
-                                        isActive
-                                            ? "fa-minus"
-                                            : "fa-plus"
-                                    }`}
+                                    className={`fa-solid ${isActive
+                                        ? "fa-minus"
+                                        : "fa-plus"
+                                        }`}
                                     aria-hidden="true"
                                 />
                             </button>
@@ -224,15 +223,13 @@ const MobileMenus: React.FC<MobileMenusProps> = ({ closeSidebar }) => {
                                         return (
                                             <li
                                                 key={`${sub.href}-${i}`}
-                                                className={`has-dropdown ${
-                                                    hasSubLinks
-                                                        ? "has-sub-dropdown"
-                                                        : ""
-                                                } ${
-                                                    isSubActive
+                                                className={`has-dropdown ${hasSubLinks
+                                                    ? "has-sub-dropdown"
+                                                    : ""
+                                                    } ${isSubActive
                                                         ? "active"
                                                         : ""
-                                                }`}
+                                                    }`}
                                             >
                                                 {/* ==================================================
                                                     SUB MENU LINK
@@ -289,11 +286,10 @@ const MobileMenus: React.FC<MobileMenusProps> = ({ closeSidebar }) => {
                                                         }
                                                     >
                                                         <i
-                                                            className={`fa-solid ${
-                                                                isSubActive
-                                                                    ? "fa-minus"
-                                                                    : "fa-plus"
-                                                            }`}
+                                                            className={`fa-solid ${isSubActive
+                                                                ? "fa-minus"
+                                                                : "fa-plus"
+                                                                }`}
                                                             aria-hidden="true"
                                                         />
                                                     </button>

@@ -229,9 +229,9 @@ export const MajorClientPopups: React.FC<MajorClientPopupsProps> = ({
 
                                 <h4 className="h6 mt-4">Follow Us</h4>
                                 <div className="d-flex gap-3 fs-5">
-                                    <a href="https://www.linkedin.com/company/yulanto-web-creations" target="_blank" className="text-white" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
-                                    <a href="https://www.facebook.com/yulantowebcreations" target="_blank" className="text-white" rel="noreferrer"><i className="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/yulantoweb/" target="_blank" className="text-white" rel="noreferrer"><i className="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/company/yulanto-web-creations" target="_blank" rel="noopener" className="text-white" ><i className="fab fa-linkedin"></i></a>
+                                    <a href="https://www.facebook.com/yulantowebcreations" target="_blank" rel="noopener" className="text-white" ><i className="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/yulantoweb/" target="_blank" rel="noopener" className="text-white" ><i className="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -266,9 +266,9 @@ export const MajorClientPopups: React.FC<MajorClientPopupsProps> = ({
                                     {item.websiteUrl && (
                                         <a
                                             href={item.websiteUrl}
-                                            target="_blank"
+                                            target="_blank" rel="noopener"
                                             className={styles.caseSiteLink}
-                                            rel="noreferrer"
+                                          
                                         >
                                             View Website <i className="fa fa-paper-plane ms-1"></i>
                                         </a>

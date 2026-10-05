@@ -257,17 +257,17 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
   })[] =
     clientGroups && clientGroups.length > 0
       ? clientGroups.flatMap((g) =>
-          g.clients.map((c) => ({
-            ...c,
-            _countryLabel: g.countryLabel,
-            _countryFlag: g.countryFlag,
-          })),
-        )
-      : (clients || []).map((c) => ({
+        g.clients.map((c) => ({
           ...c,
-          _countryLabel: countryLabel || "",
-          _countryFlag: countryFlag,
-        }));
+          _countryLabel: g.countryLabel,
+          _countryFlag: g.countryFlag,
+        })),
+      )
+      : (clients || []).map((c) => ({
+        ...c,
+        _countryLabel: countryLabel || "",
+        _countryFlag: countryFlag,
+      }));
 
   useEffect(() => {
     AOS.init({
@@ -688,8 +688,8 @@ export default function ClientsShowcasePage(props: ClientsShowcasePageProps) {
                   <span style={styles.badgeCompleted}>Completed</span>
                   <a
                     href={c.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target="_blank" rel="noopener"
+                    
                     aria-label={`Yulanto Client ${c.name} website (opens in a new tab)`}
                     style={styles.visitLink}
                   >

@@ -18,7 +18,7 @@ export default function Page() {
       setCountdown((prev) => {
         if (prev <= 1) {
           clearInterval(interval);
-          router.push("/home");
+          router.push("/");
           return 1;
         }
 
@@ -98,9 +98,8 @@ export default function Page() {
                   <span className="contact-text">
                     Back to Home in{" "}
                     <span
-                      className={`countdown-number ${
-                        animate ? "countdown-animate" : ""
-                      }`}
+                      className={`countdown-number ${animate ? "countdown-animate" : ""
+                        }`}
                     >
                       {countdown}
                     </span>{" "}

@@ -251,21 +251,21 @@ export function CardStack<T extends CardStackItem>({
 
               const dragProps = isActive
                 ? {
-                    drag: "x" as const,
-                    dragConstraints: { left: 0, right: 0 },
-                    dragElastic: 0.18,
-                    onDragEnd: (
-                      _e: any,
-                      info: { offset: { x: number }; velocity: { x: number } },
-                    ) => {
-                      if (reduceMotion) return;
-                      const travel = info.offset.x;
-                      const v = info.velocity.x;
-                      const threshold = Math.min(160, cardWidth * 0.22);
-                      if (travel > threshold || v > 650) prev();
-                      else if (travel < -threshold || v < -650) next();
-                    },
-                  }
+                  drag: "x" as const,
+                  dragConstraints: { left: 0, right: 0 },
+                  dragElastic: 0.18,
+                  onDragEnd: (
+                    _e: any,
+                    info: { offset: { x: number }; velocity: { x: number } },
+                  ) => {
+                    if (reduceMotion) return;
+                    const travel = info.offset.x;
+                    const v = info.velocity.x;
+                    const threshold = Math.min(160, cardWidth * 0.22);
+                    if (travel > threshold || v > 650) prev();
+                    else if (travel < -threshold || v < -650) next();
+                  },
+                }
                 : {};
 
               return (
@@ -359,8 +359,8 @@ export function CardStack<T extends CardStackItem>({
           {activeItem.href ? (
             <Link
               href={activeItem.href}
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener"
+              
               style={{ color: "#666", display: "flex" }}
               aria-label="Open link"
             >
@@ -425,7 +425,7 @@ function DefaultFanCard({ item }: { item: CardStackItem; active: boolean }) {
           {item.title}
         </div>
         {item.description ? (
-          <div 
+          <div
             style={{
               marginTop: "4px",
               fontSize: "14px",

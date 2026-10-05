@@ -11,7 +11,7 @@ interface FloatingActionsProps {
 // 1. Core Visual Layer Component
 function FloatingActions({
   whatsappNumber,
-  whatsappMessage = 'Hello, This is ',
+  whatsappMessage = 'New WhatsApp Enquiry from Website',
   onChatClick,
 }: FloatingActionsProps) {
   const encodedMessage = encodeURIComponent(whatsappMessage);
@@ -44,8 +44,7 @@ function FloatingActions({
       {/* WhatsApp Button */}
       <a
         href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+        target="_blank" rel="noopener"
         className="btn btn-success d-flex align-items-center justify-content-center rounded-circle shadow-lg border-0"
         style={{
           width: '56px',
@@ -83,8 +82,8 @@ function FloatingActions({
           (e.currentTarget.style.transform = 'scale(1.1)')
         }
         onMouseLeave={(e) =>
-          (e.currentTarget.style.transform = 'scale(1)'
-          )
+        (e.currentTarget.style.transform = 'scale(1)'
+        )
         }
         title="Connect With Us"
       >

@@ -34,7 +34,7 @@ const ContactCard = ({
                         <Link
                             className={`tp-btn-yellow-green w-100 ${isActive ? "active" : ""
                                 }`}
-                            target="_blank"
+                            target="_blank" rel="noopener"
                             href={mapLink}
                         >
                             <span>

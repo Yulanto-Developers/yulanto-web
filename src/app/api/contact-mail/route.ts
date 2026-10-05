@@ -8,27 +8,30 @@ const SENDER_NAME = "Noreply - Yulanto";
 const SENDER_EMAIL = "enquiry@yulanto.in";
 
 // const COMPANY_NAME = "Yulanto Web Creations";
-const COMPANY_EMAIL = "info@yulanto.com";
+const COMPANY_EMAIL = "operations@yulanto.com";
 const CC_EMAIL = "yulantodevelopers@gmail.com";
 const WEBSITE_URL = "https://www.yulanto.com";
 const COMPANY_PHONE = "+91 99621 57250";
 const COMPANY_WHATSAPP = "+91 99621 57250";
 // const COMPANY_EMAIL = "yulantodevelopers@gmail.com";
 const COMPANY_ADDRESS =
-  "Yulanto Web Creations Pvt Ltd, F3, #4/608, First Floor, V.O.C Street,Kottivakkam, OMR, Chennai - 600 041, India.";
+    "Yulanto Web Creations Pvt Ltd, F3, #4/608, First Floor, V.O.C Street,Kottivakkam, OMR, Chennai - 600 041, India.";
 const COMPANY_LOGO = `${WEBSITE_URL}/assets/img/logo/L2.png`;
 
 // ==========================================
 // ESCAPE HTML
 // ==========================================
 
+
+
+
 function escapeHtml(value: string = "") {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+    return value
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 }
 
 // ==========================================
@@ -36,30 +39,30 @@ function escapeHtml(value: string = "") {
 // ==========================================
 
 async function sendMail(data: any) {
-  if (!MAIL_API || !MAIL_API_KEY) {
-    throw new Error("Mail API configuration is missing");
-  }
+    if (!MAIL_API || !MAIL_API_KEY) {
+        throw new Error("Mail API configuration is missing");
+    }
 
-  const response = await fetch(MAIL_API, {
-    method: "POST",
+    const response = await fetch(MAIL_API, {
+        method: "POST",
 
-    headers: {
-      accept: "application/json",
-      "api-key": MAIL_API_KEY,
-      "content-type": "application/json",
-    },
+        headers: {
+            accept: "application/json",
+            "api-key": MAIL_API_KEY,
+            "content-type": "application/json",
+        },
 
-    body: JSON.stringify(data),
-  });
+        body: JSON.stringify(data),
+    });
 
-  const result = await response.text();
+    const result = await response.text();
 
-  if (!response.ok) {
-    console.error("Brevo API Error:", result);
-    throw new Error("Failed to send email");
-  }
+    if (!response.ok) {
+        console.error("Brevo API Error:", result);
+        throw new Error("Failed to send email");
+    }
 
-  return result;
+    return result;
 }
 
 // ==========================================
@@ -67,68 +70,80 @@ async function sendMail(data: any) {
 // ==========================================
 
 export async function POST(req: NextRequest) {
-  try {
-    const data = await req.json();
+    try {
+        const data = await req.json();
 
-    console.log("Mail Data:", data);
+        console.log("Mail Data:", data);
 
-    // ==========================================
-    // FRONTEND DATA
-    // ==========================================
+        // ==========================================
+        // FRONTEND DATA
+        // ==========================================
 
-    const {
-      name: rawName,
-      phone: rawPhone,
-      email: rawEmail,
-      lookingFor: rawLookingFor,
-      message: rawMessage,
-    } = data;
+        const {
+            name: rawName,
+            phone: rawPhone,
+            email: rawEmail,
+            lookingFor: rawLookingFor,
+            message: rawMessage,
+            utmvalue: rawUtmValue,
+        } = data;
 
-    // ==========================================
-    // REQUIRED FIELD VALIDATION
-    // ==========================================
+        const utmvalue =
+            rawUtmValue && typeof rawUtmValue === "object" ? rawUtmValue : {};
 
-    if (!rawName?.trim() || !rawPhone?.trim() || !rawEmail?.trim()) {
-      return NextResponse.json(
-        {
-          status: false,
-          message: "Please fill all required fields.",
-        },
-        {
-          status: 400,
-        },
-      );
-    }
+        // ==========================================
+        // REQUIRED FIELD VALIDATION
+        // ==========================================
 
-    // ==========================================
-    // SANITIZE DATA
-    // ==========================================
+        if (!rawName?.trim() || !rawPhone?.trim() || !rawEmail?.trim()) {
+            return NextResponse.json(
+                {
+                    status: false,
+                    message: "Please fill all required fields.",
+                },
+                {
+                    status: 400,
+                },
+            );
+        }
 
-    const name = escapeHtml(rawName.trim());
-    const phone = escapeHtml(rawPhone.trim());
-    const customerEmail = escapeHtml(rawEmail.trim());
-    const lookingFor = escapeHtml(rawLookingFor?.trim() || "Not specified");
-    const message = escapeHtml(rawMessage?.trim() || " ");
+        // ==========================================
+        // SANITIZE DATA
+        // ==========================================
 
-    // ==========================================
-    // DATE & TIME
-    // ==========================================
+        const name = escapeHtml(rawName.trim());
+        const phone = escapeHtml(rawPhone.trim());
+        const customerEmail = escapeHtml(rawEmail.trim());
+        const lookingFor = escapeHtml(rawLookingFor?.trim() || "Not specified");
+        const message = escapeHtml(rawMessage?.trim() || " ");
+        const utmSource = escapeHtml(String(utmvalue.utm_source ?? ""));
+        const utmMedium = escapeHtml(String(utmvalue.utm_medium ?? ""));
+        const utmCampaign = escapeHtml(String(utmvalue.utm_campaign ?? ""));
+        const utmContent = escapeHtml(String(utmvalue.utm_content ?? ""));
+        const utmKeyword = escapeHtml(String(utmvalue.utm_keyword ?? ""));
+        const utmMatchType = escapeHtml(String(utmvalue.utm_matchtype ?? ""));
+        const utmTerm = escapeHtml(String(utmvalue.utm_term ?? ""));
+        const utmCreativeFormat = escapeHtml(String(utmvalue.utm_creative_format ?? ""));
 
-    const datetime = new Date().toLocaleString("en-IN", {
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: true,
-      timeZone: "Asia/Kolkata",
-    });
+        // ==========================================
+        // DATE & TIME
+        // ==========================================
 
-    // ==========================================
-    // ADMIN EMAIL
-    // ==========================================
+        const datetime = new Date().toLocaleString("en-IN", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: true,
+            timeZone: "Asia/Kolkata",
+        });
 
-    const adminMail = `
+        // ==========================================
+        // ADMIN EMAIL
+        // ==========================================
+
+        const adminMail = `
     <!DOCTYPE html>
 <html>
 
@@ -332,6 +347,45 @@ export async function POST(req: NextRequest) {
                     <td class="value-cell"><strong>${message}</strong></td>
                 </tr>
                 </table>
+  <div>
+                <h2>UTM Details</h2>
+            </div>
+            <table class="info-table">
+                <tr>
+                    <td class="label-cell">UTM Source</td>
+                    <td class="value-cell">${utmSource}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Medium</td>
+                    <td class="value-cell">${utmMedium}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Campaign</td>
+                    <td class="value-cell">${utmCampaign}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Content</td>
+                    <td class="value-cell">${utmContent}</td>
+                </tr>
+
+
+                <tr>
+                    <td class="label-cell">UTM Keyword</td>
+                    <td class="value-cell">${utmKeyword}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Matchtype</td>
+                    <td class="value-cell">${utmMatchType}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Term</td>
+                    <td class="value-cell">${utmTerm}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Creative Format</td>
+                    <td class="value-cell">${utmCreativeFormat}</td>
+                </tr>
+            </table>
 
 
                 <div class="note">⚠ Note: Do not reply directly to this automated notification.</div>
@@ -351,11 +405,11 @@ export async function POST(req: NextRequest) {
 </html>
     `;
 
-    // ==========================================
-    // CUSTOMER THANK YOU EMAIL
-    // ==========================================
+        // ==========================================
+        // CUSTOMER THANK YOU EMAIL
+        // ==========================================
 
-    const thankMail = `
+        const thankMail = `
 <!DOCTYPE html>
 <html>
 
@@ -1084,7 +1138,7 @@ export async function POST(req: NextRequest) {
                             WhatsApp:
                         </strong>
 
-                        <a href="https://wa.me/${COMPANY_WHATSAPP.replace(/[^0-9]/g, "")}" target="_blank">
+                        <a href="https://wa.me/${COMPANY_WHATSAPP.replace(/[^0-9]/g, "")}" target="_blank"  rel="noopener" >
                             ${COMPANY_WHATSAPP}
                         </a>
 
@@ -1168,7 +1222,7 @@ Chennai - 600 041, India.
 
         <div class="btn-container">
 
-            <a href="${WEBSITE_URL}" target="_blank" class="btn-website">
+            <a href="${WEBSITE_URL}" target="_blank"  rel="noopener" class="btn-website">
                 Explore Our Website
             </a>
 
@@ -1211,77 +1265,77 @@ Chennai - 600 041, India.
 </html>
 `;
 
-    // ==========================================
-    // ADMIN MAIL DATA
-    // ==========================================
+        // ==========================================
+        // ADMIN MAIL DATA
+        // ==========================================
 
-    const adminData = {
-      sender: {
-        name: SENDER_NAME,
-        email: SENDER_EMAIL,
-      },
-      to: [
-        {
-          email: COMPANY_EMAIL,
-        },
-      ],
-      cc: [
-        {
-          email: CC_EMAIL,
-        },
-      ],
-      subject: `New Enquiry from Yulanto Website`,
-      htmlContent: adminMail,
-    };
+        const adminData = {
+            sender: {
+                name: SENDER_NAME,
+                email: SENDER_EMAIL,
+            },
+            to: [
+                {
+                    email: COMPANY_EMAIL,
+                },
+            ],
+            cc: [
+                {
+                    email: CC_EMAIL,
+                },
+            ],
+            subject: `New Enquiry from Yulanto Website`,
+            htmlContent: adminMail,
+        };
 
-    // ==========================================
-    // CUSTOMER MAIL DATA
-    // ==========================================
+        // ==========================================
+        // CUSTOMER MAIL DATA
+        // ==========================================
 
-    const customerData = {
-      sender: {
-        name: SENDER_NAME,
-        email: SENDER_EMAIL,
-      },
-      to: [
-        {
-          email: rawEmail.trim(),
-        },
-      ],
-      subject: `Thank You for Your Enquiry – ${COMPANY_NAME}`,
-      htmlContent: thankMail,
-    };
+        const customerData = {
+            sender: {
+                name: SENDER_NAME,
+                email: SENDER_EMAIL,
+            },
+            to: [
+                {
+                    email: rawEmail.trim(),
+                },
+            ],
+            subject: `Thank You for Your Enquiry – ${COMPANY_NAME}`,
+            htmlContent: thankMail,
+        };
 
-    // ==========================================
-    // SEND BOTH EMAILS
-    // ==========================================
+        // ==========================================
+        // SEND BOTH EMAILS
+        // ==========================================
 
-    await Promise.all([sendMail(adminData), sendMail(customerData)]);
+        await Promise.all([sendMail(adminData), sendMail(customerData)]);
 
-    // ==========================================
-    // SUCCESS
-    // ==========================================
+        // ==========================================
+        // SUCCESS
+        // ==========================================
 
-    return NextResponse.json(
-      {
-        status: true,
-        message: "Email sent successfully.",
-      },
-      {
-        status: 200,
-      },
-    );
-  } catch (error) {
-    console.error("Mail Error:", error);
+        return NextResponse.json(
+            {
+                status: true,
+                message: "Email sent successfully.",
+            },
+            {
+                status: 200,
+            },
+        );
+    } catch (error) {
+        console.error("Mail Error:", error);
 
-    return NextResponse.json(
-      {
-        status: false,
-        message: "Failed to send email.",
-      },
-      {
-        status: 500,
-      },
-    );
-  }
+        return NextResponse.json(
+            {
+                status: false,
+                message: "Failed to send email.",
+            },
+            {
+                status: 500,
+            },
+        );
+    }
 }

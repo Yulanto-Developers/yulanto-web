@@ -9,7 +9,9 @@ import { company } from "@/lib/company";
 import Script from "next/script";
 import favicon from "@/assets/img/logo/favicon.png";
 import Protector from "@/components/home/home/Protector/Protector";
-import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics"
+import UTMTracker from "@/components/UTMTracker";
+
 // ===============================
 // FONTS
 // ===============================
@@ -172,6 +174,7 @@ export default function RootLayout({
       <body className={`${tenor.variable} ${figTree.variable}`}>
         <GoogleAnalytics />
         <Protector />
+        <UTMTracker />
         {children}
         <ToastContainer />
 
