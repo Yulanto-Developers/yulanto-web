@@ -168,6 +168,7 @@ export default function RootLayout({
         name="google-site-verification"
         content="ZOU34Y9s0J3zwyJuicIDoz_s3fksUJSkkkwyBfvaafw"
       />
+      <meta name="ahrefs-site-verification" content="16d14868c0183e17e1d774306cb32dd6b4165d993c141875f89a163a7daab621"></meta>
       <body className={`${tenor.variable} ${figTree.variable}`}>
         <GoogleAnalytics />
         <Protector />

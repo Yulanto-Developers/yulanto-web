@@ -7,7 +7,7 @@ export default function Protector() {
     useEffect(() => {
         const handleCopy = (e: ClipboardEvent) => {
             e.preventDefault();
-            toast.error("Functions are Disable", {
+            toast.error("Function is Disabled", {
                 position: "top-right",
                 autoClose: 3000,
             });
@@ -23,7 +23,7 @@ export default function Protector() {
 
         const handlePaste = (e: ClipboardEvent) => {
             e.preventDefault();
-            toast.error("Functions are Disable", {
+            toast.error("Function is Disabled", {
                 position: "top-right",
                 autoClose: 3000,
             });
@@ -31,7 +31,7 @@ export default function Protector() {
 
         const handleContextMenu = (e: MouseEvent) => {
             e.preventDefault();
-            toast.error("Functions are Disable", {
+            toast.error("Function is Disabled", {
                 position: "top-right",
                 autoClose: 3000,
             });
@@ -40,7 +40,7 @@ export default function Protector() {
         const keyshift = (e: KeyboardEvent) => {
             if (e.ctrlKey && e.shiftKey && ['I', 'C', 'J', 'U'].includes(e.key.toUpperCase())) {
                 e.preventDefault();
-                toast.error("Functions are Disable", {
+                toast.error("Function is Disabled", {
                     position: "top-right",
                     autoClose: 3000,
                 });
@@ -49,7 +49,7 @@ export default function Protector() {
         const keyshiftU = (e: KeyboardEvent) => {
             if (e.ctrlKey && ['U'].includes(e.key.toUpperCase())) {
                 e.preventDefault();
-                toast.error("Functions are Disable", {
+                toast.error("Function is Disabled", {
                     position: "top-right",
                     autoClose: 3000,
                 });
