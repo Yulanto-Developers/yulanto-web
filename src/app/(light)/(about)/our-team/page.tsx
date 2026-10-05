@@ -14,6 +14,7 @@ export const metadata = generateSeo({
   title: "Meet Our Team | Website Designers & Developers in Chennai | Yulanto",
   description:
     "Meet the Yulanto team of website designers and developers creating creative, user-friendly and high-performance digital solutions for businesses.",
+    slug: "our-team",
 });
 
 const HomePage = () => {
@@ -23,11 +24,11 @@ const HomePage = () => {
         items={[
           {
             name: "Home",
-            url: "https://yulanto.com/",
+            url: "https://www.yulanto.com/",
           },
           {
             name: "Meet Our Team",
-            url: "https://yulanto.com/our-team",
+            url: "https://www.yulanto.com/our-team",
           },
         ]}
       />

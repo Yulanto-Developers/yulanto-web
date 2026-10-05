@@ -4,26 +4,23 @@ import Breadcrumbdata from "@/components/breadcrum/sections/breadcrumbdata";
 import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 import TermsConditions from "@/components/termsconditions/TermsConditions";
 
-
-
 export default function CareersPage() {
   return (
     <main>
       <BreadcrumbSchema
-              items={[
-                {
-                  name: "Home",
-                  url: "https://yulanto.com/",
-                },
-                {
-                  name: "Our Story",
-                  url: "https://yulanto.com/uae",
-                },
-              ]}
-            />
+        items={[
+          {
+            name: "Home",
+            url: "https://www.yulanto.com/",
+          },
+          {
+            name: "Our Story",
+            url: "https://www.yulanto.com/uae",
+          },
+        ]}
+      />
       <Breadcrumbdata />
-      <TermsConditions/>
-    
+      <TermsConditions />
     </main>
   );
 }

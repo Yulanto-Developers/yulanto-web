@@ -11,6 +11,7 @@ export const metadata = generateSeo({
     "Web Design and development Company Near me | Contact Yulanto",
   description:
     "Contact Yulanto Web Creations for professional web design, web development, SEO and digital marketing solutions tailored to your business needs.",
+    slug:"contact-us",
 });
 
 export default function Page() {
@@ -20,11 +21,11 @@ export default function Page() {
                     items={[
                       {
                         name: "Home",
-                        url: "https://yulanto.com/",
+                        url: "https://www.yulanto.com/",
                       },
                       {
                         name: "Our Story",
-                        url: "https://yulanto.com/tocontact",
+                        url: "https://www.yulanto.com/tocontact",
                       },
                     ]}
                   />

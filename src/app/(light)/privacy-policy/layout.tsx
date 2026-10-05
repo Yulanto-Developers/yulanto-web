@@ -14,6 +14,7 @@ export const metadata = generateSeo({
   title: "Privacy Policy | Yulanto Web Creations",
   description:
     "Learn how Yulanto Web Creations collects, uses, stores, and protects your personal information in our Privacy Policy.",
+    slug:"privacy-policy",
 });
 export default function AboutUsLayout({ children }: {
 

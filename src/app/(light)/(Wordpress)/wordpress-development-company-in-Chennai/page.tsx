@@ -17,7 +17,7 @@ import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 import FAQSchema from "@/components/seo-sechama/FAQSchema";
 import type { Metadata } from "next";
 
-const SITE_URL = "https://yulanto.com";
+const SITE_URL = "https://www.yulanto.com";
 const SLUG = "wordpress-development-company-in-Chennai";
 const pageUrl = `${SITE_URL}/${SLUG}`;
 
@@ -28,7 +28,6 @@ export const metadata: Metadata = generateSeo({
   image: wordpresspageSeo.image,
   imageAlt: wordpresspageSeo.imageAlt,
 });
-
 
 const wordpressFaqData: FaqSectionData = {
   mainTitleBlue: "Frequently Asked ",
@@ -98,24 +97,24 @@ export default function Page() {
   const faq = faqDatawordpressPage;
   return (
     <main>
-       {/* Breadcrumb Schema */}
-            <BreadcrumbSchema
-              items={[
-                { name: "Home", url: `${SITE_URL}/` },
-                { name: seo.serviceName, url: pageUrl },
-              ]}
-            />
-      
-            {/* FAQ Schema */}
-            {faq && faq.length > 0 && <FAQSchema items={[...faq]} />}
-      
-            {/* Service Schema */}
-            <ServiceSchema
-              name={seo.serviceName}
-              description={seo.serviceDescription}
-              url={pageUrl}
-              image={seo.image}
-            />
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: `${SITE_URL}/` },
+          { name: seo.serviceName, url: pageUrl },
+        ]}
+      />
+
+      {/* FAQ Schema */}
+      {faq && faq.length > 0 && <FAQSchema items={[...faq]} />}
+
+      {/* Service Schema */}
+      <ServiceSchema
+        name={seo.serviceName}
+        description={seo.serviceDescription}
+        url={pageUrl}
+        image={seo.image}
+      />
       <Breadcrumbdata />
       <Banner />
       <Header />
@@ -124,9 +123,8 @@ export default function Page() {
       <Why />
       <Benifits />
       <Faq data={wordpressFaqData} />
-        <DevlopmentCompany />
+      <DevlopmentCompany />
       <Website />
-    
     </main>
   );
 }

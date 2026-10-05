@@ -7,9 +7,9 @@ import "./globals.scss";
 import type { Metadata } from "next";
 import { company } from "@/lib/company";
 import Script from "next/script";
-import favicon from "@/assets/img/logo/favicon.png"
+import favicon from "@/assets/img/logo/favicon.png";
 import Protector from "@/components/home/home/Protector/Protector";
-import GoogleAnalytics from "@/components/analytics/GoogleAnalytics"
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 // ===============================
 // FONTS
 // ===============================
@@ -38,7 +38,7 @@ const tenor = Tenor_Sans({
 // SITE URL
 // ===============================
 
-const SITE_URL = "https://yulanto.com";
+const SITE_URL = "https://www.yulanto.com";
 
 // ===============================
 // GLOBAL SEO METADATA
@@ -83,6 +83,7 @@ export const metadata: Metadata = {
     "geo.region": "IN-TN",
     "geo.placename": "Chennai",
   },
+
 };
 
 // ===============================
@@ -163,7 +164,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta name="google-site-verification" content="ZOU34Y9s0J3zwyJuicIDoz_s3fksUJSkkkwyBfvaafw" />
+      <meta
+        name="google-site-verification"
+        content="ZOU34Y9s0J3zwyJuicIDoz_s3fksUJSkkkwyBfvaafw"
+      />
       <body className={`${tenor.variable} ${figTree.variable}`}>
         <GoogleAnalytics />
         <Protector />

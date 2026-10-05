@@ -13,6 +13,7 @@ export const metadata = generateSeo({
   title: "Our Philosophy | Yulanto Building Trust Through Better Web Designing in Chennai",
   description:
     "Explore Yulanto's philosophy of honesty, transparency, customer satisfaction and excellence, guiding how we create meaningful website design solutions.",
+     slug: "our-philosophy",
 });
 
 
@@ -23,11 +24,11 @@ const HomePage = () => {
         items={[
           {
             name: "Home",
-            url: "https://yulanto.com/",
+            url: "https://www.yulanto.com/",
           },
           {
             name: "Our Philosophy",
-            url: "https://yulanto.com/our-philosophy",
+            url: "https://www.yulanto.com/our-philosophy",
           },
         ]}
       />

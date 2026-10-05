@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_URL = "https://yulanto.com";
+const SITE_URL = "https://www.yulanto.com";   // ← add www
 const SITE_NAME = "Yulanto Web Creations";
 
 interface SEOProps {
@@ -9,6 +9,7 @@ interface SEOProps {
   slug?: string;
   image?: string;
   imageAlt?: string;
+  keywords?: string[];   // optional
 }
 
 export function generateSeo({
@@ -17,31 +18,23 @@ export function generateSeo({
   slug = "",
   image = "/assets/images/website-design-company-in-chennai.jpg",
   imageAlt = title,
+  keywords,
 }: SEOProps): Metadata {
-  // Remove / from beginning and ending
+  // Remove leading/trailing slashes
   const cleanSlug = slug.replace(/^\/+|\/+$/g, "");
 
-  // Create canonical URL
-  const canonical = cleanSlug
-    ? `${SITE_URL}/${cleanSlug}`
-    : SITE_URL;
+  // Create canonical URL (home → SITE_URL, others → SITE_URL/slug)
+  const canonical = cleanSlug ? `${SITE_URL}/${cleanSlug}` : SITE_URL;
 
   // Convert relative image path to absolute URL
-  const ogImage = image.startsWith("http")
-    ? image
-    : `${SITE_URL}${image}`;
+  const ogImage = image.startsWith("http") ? image : `${SITE_URL}${image}`;
 
   return {
     title,
-
     description,
+    keywords,
 
-    authors: [
-      {
-        name: SITE_NAME,
-      },
-    ],
-
+    authors: [{ name: SITE_NAME }],
     publisher: SITE_NAME,
 
     alternates: {
@@ -50,17 +43,11 @@ export function generateSeo({
 
     openGraph: {
       type: "website",
-
       title,
-
       description,
-
       url: canonical,
-
       siteName: SITE_NAME,
-
       locale: "en_IN",
-
       images: [
         {
           url: ogImage,
@@ -73,11 +60,8 @@ export function generateSeo({
 
     twitter: {
       card: "summary_large_image",
-
       title,
-
       description,
-
       images: [
         {
           url: ogImage,
@@ -89,7 +73,6 @@ export function generateSeo({
     robots: {
       index: true,
       follow: true,
-
       googleBot: {
         index: true,
         follow: true,

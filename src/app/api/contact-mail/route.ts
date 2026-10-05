@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const MAIL_API = process.env.MAIL_API;
 const MAIL_API_KEY = process.env.MAIL_API_KEY;
-const noreplymail = '';
+const noreplymail = "";
 const COMPANY_NAME = "Yulanto Web Creations";
 const SENDER_NAME = "Noreply - Yulanto";
 const SENDER_EMAIL = "enquiry@yulanto.in";
@@ -10,25 +10,25 @@ const SENDER_EMAIL = "enquiry@yulanto.in";
 // const COMPANY_NAME = "Yulanto Web Creations";
 const COMPANY_EMAIL = "info@yulanto.com";
 const CC_EMAIL = "yulantodevelopers@gmail.com";
-const WEBSITE_URL = "https://yulanto.com";
+const WEBSITE_URL = "https://www.yulanto.com";
 const COMPANY_PHONE = "+91 99621 57250";
 const COMPANY_WHATSAPP = "+91 99621 57250";
 // const COMPANY_EMAIL = "yulantodevelopers@gmail.com";
 const COMPANY_ADDRESS =
-    "Yulanto Web Creations Pvt Ltd, F3, #4/608, First Floor, V.O.C Street,Kottivakkam, OMR, Chennai - 600 041, India.";
-const COMPANY_LOGO = `${WEBSITE_URL}/assets/img/logo/L2.png`
+  "Yulanto Web Creations Pvt Ltd, F3, #4/608, First Floor, V.O.C Street,Kottivakkam, OMR, Chennai - 600 041, India.";
+const COMPANY_LOGO = `${WEBSITE_URL}/assets/img/logo/L2.png`;
 
 // ==========================================
 // ESCAPE HTML
 // ==========================================
 
 function escapeHtml(value: string = "") {
-    return value
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 // ==========================================
@@ -36,30 +36,30 @@ function escapeHtml(value: string = "") {
 // ==========================================
 
 async function sendMail(data: any) {
-    if (!MAIL_API || !MAIL_API_KEY) {
-        throw new Error("Mail API configuration is missing");
-    }
+  if (!MAIL_API || !MAIL_API_KEY) {
+    throw new Error("Mail API configuration is missing");
+  }
 
-    const response = await fetch(MAIL_API, {
-        method: "POST",
+  const response = await fetch(MAIL_API, {
+    method: "POST",
 
-        headers: {
-            accept: "application/json",
-            "api-key": MAIL_API_KEY,
-            "content-type": "application/json",
-        },
+    headers: {
+      accept: "application/json",
+      "api-key": MAIL_API_KEY,
+      "content-type": "application/json",
+    },
 
-        body: JSON.stringify(data),
-    });
+    body: JSON.stringify(data),
+  });
 
-    const result = await response.text();
+  const result = await response.text();
 
-    if (!response.ok) {
-        console.error("Brevo API Error:", result);
-        throw new Error("Failed to send email");
-    }
+  if (!response.ok) {
+    console.error("Brevo API Error:", result);
+    throw new Error("Failed to send email");
+  }
 
-    return result;
+  return result;
 }
 
 // ==========================================
@@ -67,68 +67,68 @@ async function sendMail(data: any) {
 // ==========================================
 
 export async function POST(req: NextRequest) {
-    try {
-        const data = await req.json();
+  try {
+    const data = await req.json();
 
-        console.log("Mail Data:", data);
+    console.log("Mail Data:", data);
 
-        // ==========================================
-        // FRONTEND DATA
-        // ==========================================
+    // ==========================================
+    // FRONTEND DATA
+    // ==========================================
 
-        const {
-            name: rawName,
-            phone: rawPhone,
-            email: rawEmail,
-            lookingFor: rawLookingFor,
-            message: rawMessage,
-        } = data;
+    const {
+      name: rawName,
+      phone: rawPhone,
+      email: rawEmail,
+      lookingFor: rawLookingFor,
+      message: rawMessage,
+    } = data;
 
-        // ==========================================
-        // REQUIRED FIELD VALIDATION
-        // ==========================================
+    // ==========================================
+    // REQUIRED FIELD VALIDATION
+    // ==========================================
 
-        if (!rawName?.trim() || !rawPhone?.trim() || !rawEmail?.trim()) {
-            return NextResponse.json(
-                {
-                    status: false,
-                    message: "Please fill all required fields.",
-                },
-                {
-                    status: 400,
-                }
-            );
-        }
+    if (!rawName?.trim() || !rawPhone?.trim() || !rawEmail?.trim()) {
+      return NextResponse.json(
+        {
+          status: false,
+          message: "Please fill all required fields.",
+        },
+        {
+          status: 400,
+        },
+      );
+    }
 
-        // ==========================================
-        // SANITIZE DATA
-        // ==========================================
+    // ==========================================
+    // SANITIZE DATA
+    // ==========================================
 
-        const name = escapeHtml(rawName.trim());
-        const phone = escapeHtml(rawPhone.trim());
-        const customerEmail = escapeHtml(rawEmail.trim());
-        const lookingFor = escapeHtml(rawLookingFor?.trim() || "Not specified");
-        const message = escapeHtml(rawMessage?.trim() || " ");
+    const name = escapeHtml(rawName.trim());
+    const phone = escapeHtml(rawPhone.trim());
+    const customerEmail = escapeHtml(rawEmail.trim());
+    const lookingFor = escapeHtml(rawLookingFor?.trim() || "Not specified");
+    const message = escapeHtml(rawMessage?.trim() || " ");
 
-        // ==========================================
-        // DATE & TIME
-        // ==========================================
+    // ==========================================
+    // DATE & TIME
+    // ==========================================
 
-        const datetime = new Date().toLocaleString("en-IN", {
-            day: "2-digit",
-            month: "short",
-            year: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-            hour12: true,
-            timeZone: "Asia/Kolkata",
-        });
+    const datetime = new Date().toLocaleString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+      timeZone: "Asia/Kolkata",
+    });
 
-        // ==========================================
-        // ADMIN EMAIL
-        // ==========================================
+    // ==========================================
+    // ADMIN EMAIL
+    // ==========================================
 
-        const adminMail = `
+    const adminMail = `
     <!DOCTYPE html>
 <html>
 
@@ -351,11 +351,11 @@ export async function POST(req: NextRequest) {
 </html>
     `;
 
-        // ==========================================
-        // CUSTOMER THANK YOU EMAIL
-        // ==========================================
+    // ==========================================
+    // CUSTOMER THANK YOU EMAIL
+    // ==========================================
 
-        const thankMail = `
+    const thankMail = `
 <!DOCTYPE html>
 <html>
 
@@ -1053,7 +1053,7 @@ export async function POST(req: NextRequest) {
                             Phone:
                         </strong>
 
-                        <a href="tel:${COMPANY_PHONE.replace(/\s+/g, '')}">
+                        <a href="tel:${COMPANY_PHONE.replace(/\s+/g, "")}">
                             ${COMPANY_PHONE}
                         </a>
 
@@ -1084,7 +1084,7 @@ export async function POST(req: NextRequest) {
                             WhatsApp:
                         </strong>
 
-                        <a href="https://wa.me/${COMPANY_WHATSAPP.replace(/[^0-9]/g, '')}" target="_blank">
+                        <a href="https://wa.me/${COMPANY_WHATSAPP.replace(/[^0-9]/g, "")}" target="_blank">
                             ${COMPANY_WHATSAPP}
                         </a>
 
@@ -1211,77 +1211,77 @@ Chennai - 600 041, India.
 </html>
 `;
 
-        // ==========================================
-        // ADMIN MAIL DATA
-        // ==========================================
+    // ==========================================
+    // ADMIN MAIL DATA
+    // ==========================================
 
-        const adminData = {
-            sender: {
-                name: SENDER_NAME,
-                email: SENDER_EMAIL,
-            },
-            to: [
-                {
-                    email: COMPANY_EMAIL,
-                },
-            ],
-            cc: [
-                {
-                    email: CC_EMAIL,
-                },
-            ],
-            subject: `New Enquiry from Yulanto Website`,
-            htmlContent: adminMail,
-        };
+    const adminData = {
+      sender: {
+        name: SENDER_NAME,
+        email: SENDER_EMAIL,
+      },
+      to: [
+        {
+          email: COMPANY_EMAIL,
+        },
+      ],
+      cc: [
+        {
+          email: CC_EMAIL,
+        },
+      ],
+      subject: `New Enquiry from Yulanto Website`,
+      htmlContent: adminMail,
+    };
 
-        // ==========================================
-        // CUSTOMER MAIL DATA
-        // ==========================================
+    // ==========================================
+    // CUSTOMER MAIL DATA
+    // ==========================================
 
-        const customerData = {
-            sender: {
-                name: SENDER_NAME,
-                email: SENDER_EMAIL,
-            },
-            to: [
-                {
-                    email: rawEmail.trim(),
-                },
-            ],
-            subject: `Thank You for Your Enquiry – ${COMPANY_NAME}`,
-            htmlContent: thankMail,
-        };
+    const customerData = {
+      sender: {
+        name: SENDER_NAME,
+        email: SENDER_EMAIL,
+      },
+      to: [
+        {
+          email: rawEmail.trim(),
+        },
+      ],
+      subject: `Thank You for Your Enquiry – ${COMPANY_NAME}`,
+      htmlContent: thankMail,
+    };
 
-        // ==========================================
-        // SEND BOTH EMAILS
-        // ==========================================
+    // ==========================================
+    // SEND BOTH EMAILS
+    // ==========================================
 
-        await Promise.all([sendMail(adminData), sendMail(customerData)]);
+    await Promise.all([sendMail(adminData), sendMail(customerData)]);
 
-        // ==========================================
-        // SUCCESS
-        // ==========================================
+    // ==========================================
+    // SUCCESS
+    // ==========================================
 
-        return NextResponse.json(
-            {
-                status: true,
-                message: "Email sent successfully.",
-            },
-            {
-                status: 200,
-            }
-        );
-    } catch (error) {
-        console.error("Mail Error:", error);
+    return NextResponse.json(
+      {
+        status: true,
+        message: "Email sent successfully.",
+      },
+      {
+        status: 200,
+      },
+    );
+  } catch (error) {
+    console.error("Mail Error:", error);
 
-        return NextResponse.json(
-            {
-                status: false,
-                message: "Failed to send email.",
-            },
-            {
-                status: 500,
-            }
-        );
-    }
+    return NextResponse.json(
+      {
+        status: false,
+        message: "Failed to send email.",
+      },
+      {
+        status: 500,
+      },
+    );
+  }
 }

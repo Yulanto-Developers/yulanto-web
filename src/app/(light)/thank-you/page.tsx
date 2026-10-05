@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import "@/assets/css/ThankYou.css";
 import { useEffect, useState } from "react";
 
-
 import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 import GoogleAdsConversion from "@/components/analytics/GoogleAdsConversion";
 
@@ -43,11 +42,11 @@ export default function Page() {
         items={[
           {
             name: "Home",
-            url: "https://yulanto.com/",
+            url: "https://www.yulanto.com/",
           },
           {
             name: "Thank You",
-            url: "https://yulanto.com/thank-you",
+            url: "https://www.yulanto.com/thank-you",
           },
         ]}
       />

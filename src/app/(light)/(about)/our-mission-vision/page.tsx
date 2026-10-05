@@ -14,6 +14,7 @@ export const metadata = generateSeo({
   title: "Yulanto Mission & Vision, Core Values | Web Design Chennai",
   description:
     "Discover Yulanto Web Creations' core values, mission and vision, shaping our commitment to creative web design, development and SEO Friendly website in Chennai.",
+    slug: "our-mission-vision",
 });
 
 
@@ -24,11 +25,11 @@ const HomePage = () => {
         items={[
           {
             name: "Home",
-            url: "https://yulanto.com/",
+            url: "https://www.yulanto.com/",
           },
           {
             name: "Our Mission & Vision",
-            url: "https://yulanto.com/our-mission-vision",
+            url: "https://www.yulanto.com/our-mission-vision",
           },
         ]}
       />

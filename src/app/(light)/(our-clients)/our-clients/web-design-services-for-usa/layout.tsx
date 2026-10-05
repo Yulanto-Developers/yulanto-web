@@ -10,6 +10,7 @@ export const metadata = generateSeo({
   title: "Web Design & Development from Chennai for USA Companies | Yulanto",
   description:
     "Yulanto partners with USA companies to create professional web design, development and digital experiences designed to support business growth.",
+    slug:"web-design-services-for-usa"
 });
 export default function DesignStudioLayout({
   children,

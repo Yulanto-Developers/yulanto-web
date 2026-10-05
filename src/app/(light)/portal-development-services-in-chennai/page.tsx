@@ -13,7 +13,7 @@ import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 import FAQSchema from "@/components/seo-sechama/FAQSchema";
 import type { Metadata } from "next";
 
-const SITE_URL = "https://yulanto.com";
+const SITE_URL = "https://www.yulanto.com";
 const SLUG = "portal-development-services-in-Chennai";
 const pageUrl = `${SITE_URL}/${SLUG}`;
 

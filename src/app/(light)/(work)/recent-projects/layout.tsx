@@ -5,6 +5,7 @@ export const metadata = generateSeo({
   title: "Recent Web Design Projects | Recent Web Design Works | Yulanto",
   description:
     "Explore Yulanto's recent web design and development projects in Chennai for our clients across the India, USA, UAE, Singapore, UK, and Europe.",
+  slug: "recent-projects",
 });
 
 export default function DesignStudioLayout({
@@ -18,16 +19,15 @@ export default function DesignStudioLayout({
         items={[
           {
             name: "Home",
-            url: "https://yulanto.com/",
+            url: "https://www.yulanto.com/",
           },
           {
             name: "Our Mission & Vision",
-            url: "https://yulanto.com/recent-project",
+            url: "https://www.yulanto.com/recent-project",
           },
         ]}
       />
-          {children}
+      {children}
     </>
   );
 }
-

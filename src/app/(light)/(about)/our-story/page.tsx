@@ -17,6 +17,7 @@ export const metadata = generateSeo({
   title: "Our Story | Web Designing Company in Chennai Since 2015",
   description:
     "Yulanto Web Creations is a leading web designing and development company in Chennai since 2015, creating custom web design and SEO-friendly websites.",
+     slug: "our-story",
 });
 // end seo
 
@@ -29,11 +30,11 @@ const HomePage = () => {
         items={[
           {
             name: "Home",
-            url: "https://yulanto.com/",
+            url: "https://www.yulanto.com/",
           },
           {
             name: "Our Story",
-            url: "https://yulanto.com/our-story",
+            url: "https://www.yulanto.com/our-story",
           },
         ]}
       />

@@ -61,7 +61,7 @@ export default async function Page({ params }: PageProps) {
   // Get FAQ for current page
   const faq = faqData[pages as keyof typeof faqData];
 
-  const pageUrl = `https://yulanto.com/web-design/${pages}`;
+  const pageUrl = `https://www.yulanto.com/web-design/${pages}`;
 
   let pageContent;
 
@@ -70,19 +70,19 @@ export default async function Page({ params }: PageProps) {
     case "web-designing-company-in-chennai":
       pageContent = <Startupwebsitedesgin />;
       break;
-      // corporate-website-design
+    // corporate-website-design
     case "website-creation-company-in-Chennai":
       pageContent = <Corporatewebistedesgin />;
       break;
-      // website-redesign
+    // website-redesign
     case "website-redesign-in-chennai":
       pageContent = <Websiteredesign />;
       break;
-      // landing-page-desgin
+    // landing-page-desgin
     case "landing-page-design-chennai":
       pageContent = <Landingpagedesgin />;
       break;
-      // ui-ux-desgin
+    // ui-ux-desgin
     case "ui-ux-companies-in-chennai":
       pageContent = <Uiuxdesgin />;
       break;
@@ -95,7 +95,7 @@ export default async function Page({ params }: PageProps) {
         items={[
           {
             name: "Home",
-            url: "https://yulanto.com/",
+            url: "https://www.yulanto.com/",
           },
           {
             name: seo.serviceName,
