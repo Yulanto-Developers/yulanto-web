@@ -12,7 +12,6 @@ export default function GoogleAdsConversion() {
         });
       `}
     </Script> */}
-    <p> trackin link script</p>
     </>
   );
 }

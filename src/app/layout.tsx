@@ -163,8 +163,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta name="google-site-verification" content="ZOU34Y9s0J3zwyJuicIDoz_s3fksUJSkkkwyBfvaafw" />
       <body className={`${tenor.variable} ${figTree.variable}`}>
-        {/* <GoogleAnalytics /> */}
+        <GoogleAnalytics />
         <Protector />
         {children}
         <ToastContainer />

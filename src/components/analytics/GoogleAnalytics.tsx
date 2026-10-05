@@ -16,11 +16,9 @@ export default function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'G-HD5QYLKTJH');
         `}
       </Script>
-      {<p>some ga4 and ad's script</p>}
     </>
   );
 }
