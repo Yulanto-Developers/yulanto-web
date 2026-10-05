@@ -6,6 +6,7 @@ import FloatingActionsWrapper from "@/components/home/home/components/FloatingIc
 
 import FloatingQuoteButton from "@/components/home/home/myComponents/common/FloatingButton";
 import QuoteModal from "@/components/home/home/myComponents/Pop";
+import UTMTracker from "@/components/UTMTracker";
 
 export default function DesignStudioLayout({
   children,
@@ -19,6 +20,7 @@ export default function DesignStudioLayout({
 
         <div id="smooth-wrapper" style={{ backgroundColor: "#f5f5f5" }}>
           <div id="smooth-content">
+          
             {children}
 
             <MainFooter />

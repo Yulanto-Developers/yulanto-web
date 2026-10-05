@@ -993,7 +993,7 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
         name: 'El Shaddai',
         logo: '/assets/img/all-works/elshaddai-logo.png',
         location: 'Chennai, India.',
-        url: 'https://aerovonexpress.com/',
+        url: 'http://elshaddaiforwarders.com/',
         borderClass: 'brl'
       }
     ]

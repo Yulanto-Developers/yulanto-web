@@ -8,12 +8,12 @@ const SENDER_NAME = "Noreply - Yulanto";
 const SENDER_EMAIL = "enquiry@yulanto.in";
 
 // const COMPANY_NAME = "Yulanto Web Creations";
-const COMPANY_EMAIL = "info@yulanto.com";
+// const COMPANY_EMAIL = "info@yulanto.com";
 const CC_EMAIL = "yulantodevelopers@gmail.com";
 const WEBSITE_URL = "https://www.yulanto.com";
 const COMPANY_PHONE = "+91 99621 57250";
 const COMPANY_WHATSAPP = "+91 99621 57250";
-// const COMPANY_EMAIL = "yulantodevelopers@gmail.com";
+const COMPANY_EMAIL = "yulantodevelopers@gmail.com";
 const COMPANY_ADDRESS =
   "Yulanto Web Creations Pvt Ltd, F3, #4/608, First Floor, V.O.C Street,Kottivakkam, OMR, Chennai - 600 041, India.";
 const COMPANY_LOGO = `${WEBSITE_URL}/assets/img/logo/L2.png`;
@@ -21,6 +21,9 @@ const COMPANY_LOGO = `${WEBSITE_URL}/assets/img/logo/L2.png`;
 // ==========================================
 // ESCAPE HTML
 // ==========================================
+
+
+
 
 function escapeHtml(value: string = "") {
   return value
@@ -76,6 +79,7 @@ export async function POST(req: NextRequest) {
     // FRONTEND DATA
     // ==========================================
 
+<<<<<<< Updated upstream
     const {
       name: rawName,
       phone: rawPhone,
@@ -87,6 +91,23 @@ export async function POST(req: NextRequest) {
     // ==========================================
     // REQUIRED FIELD VALIDATION
     // ==========================================
+=======
+        const {
+            name: rawName,
+            phone: rawPhone,
+            email: rawEmail,
+            lookingFor: rawLookingFor,
+            message: rawMessage,
+            utmvalue: rawUtmValue,
+        } = data;
+
+        const utmvalue =
+            rawUtmValue && typeof rawUtmValue === "object" ? rawUtmValue : {};
+
+        // ==========================================
+        // REQUIRED FIELD VALIDATION
+        // ==========================================
+>>>>>>> Stashed changes
 
     if (!rawName?.trim() || !rawPhone?.trim() || !rawEmail?.trim()) {
       return NextResponse.json(
@@ -104,11 +125,27 @@ export async function POST(req: NextRequest) {
     // SANITIZE DATA
     // ==========================================
 
+<<<<<<< Updated upstream
     const name = escapeHtml(rawName.trim());
     const phone = escapeHtml(rawPhone.trim());
     const customerEmail = escapeHtml(rawEmail.trim());
     const lookingFor = escapeHtml(rawLookingFor?.trim() || "Not specified");
     const message = escapeHtml(rawMessage?.trim() || " ");
+=======
+        const name = escapeHtml(rawName.trim());
+        const phone = escapeHtml(rawPhone.trim());
+        const customerEmail = escapeHtml(rawEmail.trim());
+        const lookingFor = escapeHtml(rawLookingFor?.trim() || "Not specified");
+        const message = escapeHtml(rawMessage?.trim() || " ");
+        const utmSource = escapeHtml(String(utmvalue.utm_source ?? ""));
+        const utmMedium = escapeHtml(String(utmvalue.utm_medium ?? ""));
+        const utmCampaign = escapeHtml(String(utmvalue.utm_campaign ?? ""));
+        const utmContent = escapeHtml(String(utmvalue.utm_content ?? ""));
+        const utmKeyword = escapeHtml(String(utmvalue.utm_keyword ?? ""));
+        const utmMatchType = escapeHtml(String(utmvalue.utm_matchtype ?? ""));
+        const utmTerm = escapeHtml(String(utmvalue.utm_term ?? ""));
+        const utmCreativeFormat = escapeHtml(String(utmvalue.utm_creative_format ?? ""));
+>>>>>>> Stashed changes
 
     // ==========================================
     // DATE & TIME
@@ -332,6 +369,45 @@ export async function POST(req: NextRequest) {
                     <td class="value-cell"><strong>${message}</strong></td>
                 </tr>
                 </table>
+  <div>
+                <h2>UTM Details</h2>
+            </div>
+            <table class="info-table">
+                <tr>
+                    <td class="label-cell">UTM Source</td>
+                    <td class="value-cell">${utmSource}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Medium</td>
+                    <td class="value-cell">${utmMedium}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Campaign</td>
+                    <td class="value-cell">${utmCampaign}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Content</td>
+                    <td class="value-cell">${utmContent}</td>
+                </tr>
+
+
+                <tr>
+                    <td class="label-cell">UTM Keyword</td>
+                    <td class="value-cell">${utmKeyword}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Matchtype</td>
+                    <td class="value-cell">${utmMatchType}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Term</td>
+                    <td class="value-cell">${utmTerm}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">UTM Creative Format</td>
+                    <td class="value-cell">${utmCreativeFormat}</td>
+                </tr>
+            </table>
 
 
                 <div class="note">⚠ Note: Do not reply directly to this automated notification.</div>

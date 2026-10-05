@@ -1,15 +1,15 @@
 "use client";
 
-import { darkMenu } from "@/data/MenuRenderer/menu-dark";
+// import { darkMenu } from "@/data/MenuRenderer/menu-dark";
 import { lightMenu } from "@/data/MenuRenderer/menu-light";
-import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
+// import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
 import { MenuItem } from "@/types/menu-dt";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronRight, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function HeaderMenu() {
-    const isDark = useIsDarkRoute();
-    const rawMenu: MenuItem[] = isDark ? darkMenu : lightMenu;
+    const isDark = false;
+    const rawMenu: MenuItem[] =  lightMenu;
 
     // Filter out items where mobileV is true (mobileV: true means hide on desktop)
     const menu = rawMenu.filter((item) => !item.mobileV);
@@ -95,7 +95,7 @@ export default function HeaderMenu() {
                                                     data-href={link.href}
                                                     tabIndex={0}
                                                     className="sidebar-link"
-                                                    style={{cursor:'pointer'}}
+                                                    style={{ cursor: 'pointer' }}
                                                 >
                                                     <span className="sidebar-link-content">
                                                         <FontAwesomeIcon
