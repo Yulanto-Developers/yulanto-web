@@ -108,7 +108,7 @@ export default function FloatingActionsWrapper() {
   return (
     <FloatingActions
       whatsappNumber="919962157250"
-      whatsappMessage="Hello, This is "
+      whatsappMessage="New WhatsApp Enquiry from Website"
       onChatClick={handleChatOpen}
     />
   );
