@@ -15,25 +15,36 @@ export default function Page() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCountdown((prev) => {
-        if (prev <= 1) {
-          clearInterval(interval);
-          router.push("/");
-          return 1;
-        }
+        setCountdown((prev) => {
+            if (prev <= 1) {
+                clearInterval(interval);
+                return 0;
+            }
 
-        setAnimate(true);
-
-        setTimeout(() => {
-          setAnimate(false);
-        }, 300);
-
-        return prev - 1;
-      });
+            return prev - 1;
+        });
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [router]);
+}, []);
+
+useEffect(() => {
+    if (countdown === 0) {
+        router.push("/");
+    }
+}, [countdown, router]);
+
+useEffect(() => {
+    if (countdown === 0) return;
+
+    setAnimate(true);
+
+    const timeout = setTimeout(() => {
+        setAnimate(false);
+    }, 300);
+
+    return () => clearTimeout(timeout);
+}, [countdown]);
 
   return (
     <>
