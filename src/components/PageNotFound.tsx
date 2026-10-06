@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 export default function PageNotFound() {
-    const [counter, setCounter] = useState(15);
+    const [counter, setCounter] = useState(5);
     const router = useRouter();
 
     useEffect(() => {
