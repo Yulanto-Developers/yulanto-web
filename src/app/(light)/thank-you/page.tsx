@@ -10,7 +10,7 @@ import GoogleAdsConversion from "@/components/analytics/GoogleAdsConversion";
 
 export default function Page() {
   const router = useRouter();
-  const [countdown, setCountdown] = useState(15);
+  const [countdown, setCountdown] = useState(5);
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
