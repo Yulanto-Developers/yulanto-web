@@ -1141,7 +1141,6 @@ export async function POST(req: NextRequest) {
                         <a href="https://wa.me/${COMPANY_WHATSAPP.replace(/[^0-9]/g, "")}" target="_blank"  rel="noopener" >
                             ${COMPANY_WHATSAPP}
                         </a>
-
                     </td>
 
                 </tr>

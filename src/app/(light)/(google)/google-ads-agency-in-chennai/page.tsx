@@ -18,7 +18,7 @@ import FAQSchema from "@/components/seo-sechama/FAQSchema";
 import type { Metadata } from "next";
 
 const SITE_URL = "https://www.yulanto.com";
-const SLUG = "ads";
+const SLUG = "google-ads-agency-in-chennai";
 const pageUrl = `${SITE_URL}/${SLUG}`;
 
 export const metadata: Metadata = generateSeo({

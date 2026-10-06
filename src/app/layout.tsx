@@ -81,7 +81,6 @@ export const metadata: Metadata = {
   },
 
   other: {
-    language: "English",
     "geo.region": "IN-TN",
     "geo.placename": "Chennai",
   },
