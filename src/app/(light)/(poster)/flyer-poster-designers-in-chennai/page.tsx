@@ -32,7 +32,7 @@ import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 import FAQSchema from "@/components/seo-sechama/FAQSchema";
 
 const SITE_URL = "https://www.yulanto.com";
-const SLUG = "flyer-poster-design";
+const SLUG = "flyer-poster-designers-in-chennai";
 const pageUrl = `${SITE_URL}/${SLUG}`;
 
 export const metadata: Metadata = generateSeo({

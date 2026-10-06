@@ -113,7 +113,7 @@ const MainFooter: React.FC<footerPropsDt> = ({
 
                                 <div className="px-footer-widget-social mt-3">
                                     <a
-                                        href="assets/brochure/Yulanto-Corporate-Profile.pdf"
+                                        href="https://yulanto.com/assets/brochure/Yulanto-Corporate-Profile.pdf"
                                         target="_blank" rel="noopener"
                                       
                                         className="pdf-link d-flex gap-2 align-items-center"

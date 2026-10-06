@@ -18,7 +18,7 @@ import BreadcrumbSchema from "@/components/seo-sechama/BreadcrumbSchema";
 import FAQSchema from "@/components/seo-sechama/FAQSchema";
 
 const SITE_URL = "https://www.yulanto.com/";
-const SLUG = "company-profile-design";
+const SLUG = "brochure-design-company-in-chennai";
 const pageUrl = `${SITE_URL}/${SLUG}`;
 
 export const metadata: Metadata = generateSeo({

@@ -10,7 +10,7 @@ export const metadata = generateSeo({
   title: "Top Web Design Firms from Chennai for Singapore & Malaysia Companies | Yulanto",
   description:
     "Yulanto is among the top web design firms helping Singapore and Malaysia companies build fast, user-focused websites and strengthen their online presence.",
-    slug:"web-design-services-for-singapore-and-malaysia"
+    slug:"/our-clients/web-design-services-for-singapore-and-malaysia"
 });
 
 export default function DesignStudioLayout({
