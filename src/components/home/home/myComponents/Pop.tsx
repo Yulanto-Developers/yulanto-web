@@ -858,7 +858,7 @@ export default function QuoteModal() {
                 <img
                     src={web_development.src}
                     className=""
-                    alt="web-desgin company in chennai"
+                    alt="web-Design company in chennai"
                 />
             )}
 
@@ -1257,7 +1257,7 @@ export default function QuoteModal() {
                                             Select Option
                                         </option>
 
-                                        <option value="Website Deign">
+                                        <option value="Website Design">
                                             Website Design
                                         </option>
 
