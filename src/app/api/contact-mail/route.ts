@@ -1278,11 +1278,11 @@ Chennai - 600 041, India.
                     email: COMPANY_EMAIL,
                 },
             ],
-            cc: [
-                {
-                    email: CC_EMAIL,
-                },
-            ],
+            // cc: [
+            //     {
+            //         email: CC_EMAIL,
+            //     },
+            // ],
             subject: `New Enquiry from Yulanto Website`,
             htmlContent: adminMail,
         };
