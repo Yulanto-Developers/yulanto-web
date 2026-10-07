@@ -111,7 +111,7 @@ const LicenseCopyright = () => {
       <p data-aos="fade-up" data-aos-delay="300">
         Unless otherwise stated, all content and materials available on{" "}
         <a
-          href="http://www.yulanto.com/"
+          href="https://www.yulanto.com/"
           target="_blank" rel="noopener"
           
         >
@@ -388,7 +388,7 @@ const LicenseCopyright = () => {
         <p data-aos="fade-up" data-aos-delay="200">
           Website:{" "}
           <a
-            href="http://www.yulanto.com/"
+            href="https://www.yulanto.com/"
             target="_blank" rel="noopener"
             
           >

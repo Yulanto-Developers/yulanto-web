@@ -372,7 +372,7 @@ const Disclaimer = () => {
       <div className="address-block">
         <p data-aos="fade-up" data-aos-delay="200">
           Website:{' '}
-          <a href="http://www.yulanto.com/" target="_blank" rel="noopener">
+          <a href="https://www.yulanto.com/" target="_blank" rel="noopener">
             www.yulanto.com
           </a>
         </p>

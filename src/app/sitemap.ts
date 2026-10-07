@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "careers",
     "contact-us",
     "our-clients",
-    "thank-you",
+    // "thank-you",
   ];
 
   const clientPages = [
