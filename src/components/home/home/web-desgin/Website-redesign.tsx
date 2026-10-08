@@ -894,6 +894,7 @@ function Websiteredesign() {
                   title={item.title}
                   description={item.description}
                   icon={item.icon}
+                  alt={item.alt}
                 />
               </SwiperSlide>
             ))}

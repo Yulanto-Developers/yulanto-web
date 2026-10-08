@@ -34,11 +34,10 @@
   padding: 130px 0 50px;
 }
 
-.breadcrumb-content h1 {
+.breadcrumb-content span {
   color: #fff;
   font-size: 55px;
   font-weight: 700;
-  margin-bottom: 20px;
   line-height: 1.1;
 }
 
@@ -92,7 +91,7 @@
     min-height: 300px;
   }
 
-  .breadcrumb-content h1 {
+  .breadcrumb-content span {
     font-size: 42px;
   }
 }
@@ -112,7 +111,7 @@
     left: -100px !important;
   }
 
-  .breadcrumb-content h1 {
+  .breadcrumb-content span {
     font-size: 32px;
   }
 

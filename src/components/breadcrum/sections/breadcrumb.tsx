@@ -29,9 +29,9 @@ export default function BreadcrumbBanner({
 
       <div className="container">
         <div className="breadcrumb-content">
-          <h1>{title}</h1>
+          <span>{title}</span>
 
-          <nav>
+          <nav className="mt-3">
             <ul className="breadcrumb-list">
               <li>
                 <Link href="/">Home</Link>
