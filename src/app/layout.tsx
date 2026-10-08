@@ -7,9 +7,9 @@ import "./globals.scss";
 import type { Metadata } from "next";
 import { company } from "@/lib/company";
 import Script from "next/script";
-import favicon from "@/assets/img/logo/favicon.png";
+// import favicon from "@/assets/img/logo/favicon.png";
 import Protector from "@/components/home/home/Protector/Protector";
-import GoogleAnalytics from "@/components/analytics/GoogleAnalytics"
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import UTMTracker from "@/components/UTMTracker";
 
 // ===============================
@@ -48,8 +48,29 @@ const SITE_URL = "https://www.yulanto.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  icons: favicon.src,
-
+  // icons: favicon.src,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      {
+        url: "/android-chrome-192x192.png",
+        type: "image/png",
+        sizes: "192x192",
+      },
+      {
+        url: "/android-chrome-512x512.png",
+        type: "image/png",
+        sizes: "512x512",
+      },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
+  manifest: "/site.webmanifest",
   // Default title.
   // Individual pages can override this.
   title: "Yulanto Web Creations",
@@ -84,7 +105,6 @@ export const metadata: Metadata = {
     "geo.region": "IN-TN",
     "geo.placename": "Chennai",
   },
-
 };
 
 // ===============================
@@ -169,7 +189,10 @@ export default function RootLayout({
         name="google-site-verification"
         content="ZOU34Y9s0J3zwyJuicIDoz_s3fksUJSkkkwyBfvaafw"
       />
-      <meta name="ahrefs-site-verification" content="16d14868c0183e17e1d774306cb32dd6b4165d993c141875f89a163a7daab621"></meta>
+      <meta
+        name="ahrefs-site-verification"
+        content="16d14868c0183e17e1d774306cb32dd6b4165d993c141875f89a163a7daab621"
+      ></meta>
       <body className={`${tenor.variable} ${figTree.variable}`}>
         <GoogleAnalytics />
         <Protector />
