@@ -258,7 +258,7 @@ export const Floatstyle = React.forwardRef<HTMLDivElement, IndustryHeroProps>(
             gap: "20px",
           }}
         >
-          <h1 className="px-about-title mb-20">{title}</h1>
+          <h2 className="px-about-title mb-20">{title}</h2>
           <p className="text-figtree text-black">{subtitle}</p>
         </div>
       </section>
