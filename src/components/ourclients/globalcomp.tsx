@@ -3,6 +3,8 @@
 import { useRef, useState, MouseEvent } from "react";
 import Link from "next/link";
 import "@/assets/css/style1.css";
+import { usePathname } from "next/navigation";
+
 
 interface ClientFlag {
   code: string;
@@ -61,23 +63,14 @@ function FlagCard({ item }: FlagCardProps) {
     y: 0,
   });
 
-  const handleMouseMove = (
-    e: MouseEvent<HTMLDivElement>
-  ) => {
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
 
-    const rect =
-      cardRef.current.getBoundingClientRect();
+    const rect = cardRef.current.getBoundingClientRect();
 
-    const x =
-      (e.clientX - rect.left) /
-        rect.width -
-      0.5;
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
 
-    const y =
-      (e.clientY - rect.top) /
-        rect.height -
-      0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
 
     setRotate({
       x: -y * 22,
@@ -123,11 +116,7 @@ function FlagCard({ item }: FlagCardProps) {
             height: 150,
             borderRadius: 20,
             backgroundColor: "#ffffff",
-            border: `1px solid ${
-              hovered
-                ? GREEN
-                : `${NAVY}18`
-            }`,
+            border: `1px solid ${hovered ? GREEN : `${NAVY}18`}`,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -159,8 +148,7 @@ function FlagCard({ item }: FlagCardProps) {
               justifyContent: "center",
               width: "100%",
               flex: 1,
-              transition:
-                "transform 0.2s ease-out",
+              transition: "transform 0.2s ease-out",
             }}
           >
             <img
@@ -172,8 +160,7 @@ function FlagCard({ item }: FlagCardProps) {
                 height: 75,
                 // objectFit: "contain",
                 borderRadius: 6,
-                boxShadow:
-                  "0 4px 8px rgba(0,0,0,0.15)",
+                boxShadow: "0 4px 8px rgba(0,0,0,0.15)",
                 display: "block",
               }}
             />
@@ -187,13 +174,10 @@ function FlagCard({ item }: FlagCardProps) {
               textAlign: "center",
               fontSize: 13,
               fontWeight: 600,
-              color: hovered
-                ? GREEN
-                : NAVY,
+              color: hovered ? GREEN : NAVY,
               letterSpacing: "0.01em",
               lineHeight: 1.3,
-              transition:
-                "color 0.2s ease-out, transform 0.2s ease-out",
+              transition: "color 0.2s ease-out, transform 0.2s ease-out",
               wordBreak: "break-word",
             }}
           >
@@ -206,12 +190,11 @@ function FlagCard({ item }: FlagCardProps) {
 }
 
 export default function GlobalTrustDock() {
+  const pathname = usePathname();
   return (
     <section className="container mb-60">
-
       {/* Header */}
       <div className="row py-5 align-items-center">
-
         <div className="col-xl-3">
           <span className="tp-section-subtitle text-black blink-ball">
             Global Reach
@@ -220,33 +203,29 @@ export default function GlobalTrustDock() {
 
         <div className="col-xl-9">
           <div className="px-project-title-box">
-
             <h4 className="px-about-title mb-20">
-              <span className="text-blue-about">
-                Trusted by Clients
-              </span>{" "}
-              Across the World
+              <span className="text-blue-about">Trusted by Clients</span> Across
+              the World
             </h4>
 
-             <h1
-                  className="ft-23 mt-0 mb-2 text-start text-tenor"
-                  data-aos="text-reveal"
-                  data-aos-delay="100"
-                >
+            {pathname == "/our-clients" ? (
+              <h1
+                className="ft-23 mt-0 mb-2 text-start text-tenor"
+                data-aos="text-reveal"
+                data-aos-delay="100"
+              >
                 Trusted by Clients Worldwide for Website Design & Development
-                </h1>
+              </h1>
+            ) : null}
 
             <p className="text-figtree text-black mt-2 font-paragraph-cls">
-              We proudly partner with companies and
-              enterprises worldwide, delivering high-impact
-              web design, custom web development, digital
-              solutions, and strategic digital services across
-              key international markets.
+              We proudly partner with companies and enterprises worldwide,
+              delivering high-impact web design, custom web development, digital
+              solutions, and strategic digital services across key international
+              markets.
             </p>
-
           </div>
         </div>
-
       </div>
 
       {/* Cards */}
@@ -263,13 +242,9 @@ export default function GlobalTrustDock() {
         }}
       >
         {CLIENTS.map((item) => (
-          <FlagCard
-            key={item.code}
-            item={item}
-          />
+          <FlagCard key={item.code} item={item} />
         ))}
       </div>
-
     </section>
   );
 }

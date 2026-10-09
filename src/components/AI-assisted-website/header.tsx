@@ -421,6 +421,16 @@ export const ShopifyExperience: React.FC = () => {
                   </span>
                   Faster with AI.
                 </h4>
+
+                <h1
+                  className="ft-23 mt-0 mb-3  text-tenor"
+                  data-aos="text-reveal"
+                  data-aos-delay="100"
+                  style={{ lineHeight: "1.2" }}
+                >
+                  Create website using AI with a website designer
+                </h1>
+                
                 <p className="text-figtree text-black mt-2">
                   We combine AI-powered design and development tools with human
                   creativity and experience to create modern, responsive,
